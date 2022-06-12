@@ -1,0 +1,55 @@
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+history.db
+
+*.zip
+*.love
+*.exe
+*.dll
+*.so
+*.dylib
+*.AppImage
+*.AppDir
+*.app
+*.deb
+*.jar
+*.apk
+*.tar.*
+squashfs-root
+bin*/
+love-apk-src/
+game-apk/
+apktool
+appimagetool
+
+**/ignore/**/*
+
+version
+.DS_Store
+pat
+
+steam/buildoutput/
+steamcmd/
+
+*.tiled-session
+
+/config.lua
+
+# LibreOffice temp
+.~lock*
+
+*.log

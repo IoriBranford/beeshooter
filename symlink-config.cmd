@@ -1,0 +1,1 @@
+mklink config.lua %APPDATA%\LOVE\BeeShooter\config.lua

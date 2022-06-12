@@ -1,0 +1,11 @@
+{
+    "Lua.workspace.checkThirdParty": false,
+    "Lua.runtime.path": [
+        "?.lua",
+        "?/init.lua",
+        "libraries/?.lua",
+        "libraries/?/init.lua",
+        "code/?.lua",
+        "code/?/init.lua"
+    ],
+}

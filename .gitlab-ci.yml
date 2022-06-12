@@ -1,0 +1,308 @@
+# LOVE Multiplatform GitLab CI
+
+# Fill in the project info
+variables:
+        PROJECT: beeshooter
+        PROJECT_TITLE: "Bee Shooter"
+        PROJECT_TITLE_NOSPACE: Bee_Shooter
+        DESCRIPTION: "Caravan shooting"
+        COPYRIGHT: "© 2022 IoriBranford"
+        APPLICATION_ID_BASE: "io.itch.ioribranford.beeshooter"
+        LOVE_VERSION: "11.4"
+        SCREEN_ORIENTATION: "sensorPortrait"
+        GAME_TYPE: full
+        VERSION: "${CI_COMMIT_REF_NAME}"
+        GIT_DEPTH: "1"
+        GIT_SUBMODULE_STRATEGY: recursive
+
+# Fill in the demo info if providing a demo
+.demo:
+  <<: &demo
+    rules:
+      - if: '$ONLY_JOB != null && $ONLY_JOB != $CI_JOB_NAME'
+        when: never
+      - if: '$CI_PIPELINE_SOURCE == "web"'
+      - if: '$CI_COMMIT_TAG =~ /demo/'
+  variables:
+    <<: &demo-variables
+      PROJECT_TITLE: "BeeShooter Demo"
+      PROJECT_TITLE_NOSPACE: "Bee_Shooter_Demo"
+      GAME_TYPE: demo
+  artifacts:
+    <<: &demo-artifacts-exclude
+      exclude:
+        - "**/libsteam_api.so"
+        - "**/luasteam.so"
+        - "**/steam_api*.dll"
+        - "**/luasteam.dll"
+
+.full:
+  <<: &full
+    rules:
+      - if: '$ONLY_JOB != null && $ONLY_JOB != $CI_JOB_NAME'
+        when: never
+      - if: '$CI_PIPELINE_SOURCE == "web"'
+      - if: '$CI_COMMIT_TAG != null && $CI_COMMIT_TAG !~ /demo/'
+
+stages:
+        - build
+
+image: alpine:latest
+
+before_script:
+        - apk add --update git zip luajit
+
+.debian:
+        <<: &debian
+                before_script:
+                  - apt-get update
+                  - apt-get install -y -qq git zip luajit
+
+.build-data: &build-data
+        stage: build
+        script:
+                - apk add wget xz
+                - ./make-game.sh
+        artifacts:
+                name: "${PROJECT}-${VERSION}-data"
+                paths:
+                        - "${GAME_ASSET}"
+
+.build-linux: &build-linux
+        <<: *debian
+        stage: build
+        image: debian:stretch-slim
+        script:
+                - apt-get install -y -qq file wget fuse libglib2.0-0 curl
+                - ./make-linux.sh
+        cache:
+                key: "${PROJECT}-linux-${ARCH}"
+                paths:
+                        - "love-${LOVE_VERSION}-${ARCH}.AppImage"
+                        - "appimagetool"
+                        - "*.deb"
+        artifacts:
+                <<: &build-linux-artifacts
+                    name: "${PROJECT}-${VERSION}-linux-${ARCH}"
+                    paths:
+                        - ${PROJECT_TITLE_NOSPACE}-${ARCH}
+
+.build-windows: &build-windows
+        <<: *debian
+        image: tianon/wine
+        stage: build
+        variables:
+                ARCH_BITS: "64"
+                <<: &build-windows-variables
+                        ICO: "appicon.ico"
+                        WINEPREFIX: "${CI_PROJECT_DIR}/.wine${ARCH_BITS}"
+        script:
+                - apt-get install -y -qq wget curl
+                - ./make-windows.sh
+        cache:
+                key: "${PROJECT}-win-${ARCH_BITS}"
+                paths:
+                        - "love-${LOVE_VERSION}-win${ARCH_BITS}"
+                        - "bin"
+                        - "rcedit-x64.exe"
+                        - ".wine${ARCH_BITS}"
+        artifacts:
+                <<: &build-windows-artifacts
+                    name: "${PROJECT}-${VERSION}-win-${ARCH_BITS}"
+                    paths:
+                        - "${PROJECT_TITLE}"
+
+.build-dev-windows: &build-dev-windows
+        stage: build
+        variables:
+                ARCH_BITS: "64"
+        script:
+                - apk add wget
+                - ./make-dev-windows.sh
+        cache:
+                key: "${PROJECT}-win-${ARCH_BITS}"
+                paths:
+                        - "love-${LOVE_VERSION}-win${ARCH_BITS}"
+                        - "bin"
+        artifacts:
+                name: "${PROJECT}-dev-win-${ARCH_BITS}"
+                paths:
+                        - "${PROJECT_TITLE}"
+
+.build-osx: &build-osx
+        <<: *debian
+        stage: build
+        image: fzwoch/osxcross
+        variables:
+                CFBundleIdentifier: "${APPLICATION_ID_BASE}"
+                <<: &build-osx-variables
+                        NSHumanReadableCopyright: "${COPYRIGHT}"
+                        INSTALL_NAME_TOOL: x86_64-apple-darwin12-install_name_tool
+        script:
+                - apt-get install -y -qq wget
+                - ./make-macosx.sh
+        cache:
+                key: "${PROJECT}-osx"
+                paths:
+                        - "love.app"
+                        - "game-music-emu"
+        artifacts:
+                name: "${PROJECT}-${VERSION}-osx"
+                paths:
+                        - "${PROJECT_TITLE}.app"
+
+.build-android: &build-android
+        <<: *debian
+        stage: build
+        image: mingc/android-build-box:1.20.0
+        variables:
+                APPLICATION_ID: "${APPLICATION_ID_BASE}"
+                GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
+                GAME_TYPE: "4kids"
+        before_script:
+          - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+          - apt-get update
+          - apt-get install -y -qq git zip luajit make file
+        script:
+                - ./make-android.sh
+        cache:
+                key: "${PROJECT}-android"
+                paths:
+                        - love-apk-src
+                        - apktool.jar
+                        - uber-apk-signer.jar
+                        - apktool
+                        - .gradle
+        artifacts:
+                name: "${PROJECT}-${VERSION}-android"
+                paths:
+                        - "${PROJECT_TITLE_NOSPACE}.apk"
+
+data:
+        variables:
+                GAME_ASSET: "${PROJECT}-${GAME_TYPE}.love"
+        <<: *build-data
+        <<: *full
+
+linux-x86_64:
+        <<: *build-linux
+        <<: *full
+        variables:
+                ARCH: "x86_64"
+
+linux-i686:
+        <<: *build-linux
+        <<: *full
+        image: i386/debian:stretch-slim
+        variables:
+                ARCH: "i686"
+
+.linux-armhf:
+        <<: *build-linux
+        <<: *full
+        image: arm32v7/debian:stretch-slim
+        variables:
+                ARCH: "armhf"
+
+win-64:
+        <<: *build-windows
+        <<: *full
+
+win-32:
+        <<: *build-windows
+        <<: *full
+        variables:
+                <<: *build-windows-variables
+                ARCH_BITS: "32"
+
+osx:
+        <<: *build-osx
+        <<: *full
+
+android:
+        <<: *build-android
+        <<: *full
+
+demo-data:
+        variables:
+                <<: *demo-variables
+                GAME_ASSET: "${PROJECT}-${GAME_TYPE}.love"
+        <<: *build-data
+        <<: *demo
+
+demo-linux-x86_64:
+        <<: *build-linux
+        <<: *demo
+        variables:
+                ARCH: "x86_64"
+                <<: *demo-variables
+        artifacts:
+          <<: *build-linux-artifacts
+          <<: *demo-artifacts-exclude
+
+demo-linux-i686:
+        <<: *build-linux
+        <<: *demo
+        image: i386/debian:stretch-slim
+        variables:
+                ARCH: "i686"
+                <<: *demo-variables
+        artifacts:
+          <<: *build-linux-artifacts
+          <<: *demo-artifacts-exclude
+
+.demo-linux-armhf:
+        <<: *build-linux
+        <<: *demo
+        image: arm32v7/debian:stretch-slim
+        variables:
+                ARCH: "armhf"
+                <<: *demo-variables
+
+demo-win-64:
+        <<: *build-windows
+        <<: *demo
+        variables:
+                <<: *demo-variables
+                <<: *build-windows-variables
+                ARCH_BITS: "64"
+        artifacts:
+          <<: *build-windows-artifacts
+          <<: *demo-artifacts-exclude
+
+demo-win-32:
+        <<: *build-windows
+        <<: *demo
+        variables:
+                <<: *demo-variables
+                <<: *build-windows-variables
+                ARCH_BITS: "32"
+        artifacts:
+          <<: *build-windows-artifacts
+          <<: *demo-artifacts-exclude
+
+demo-osx:
+        <<: *build-osx
+        <<: *demo
+        variables:
+                <<: *demo-variables
+                <<: *build-osx-variables
+                CFBundleIdentifier: "${APPLICATION_ID_BASE}demo"
+
+demo-android:
+        <<: *build-android
+        <<: *demo
+        variables:
+                <<: *demo-variables
+                GAME_TYPE: "4kids-demo"
+                APPLICATION_ID: "${APPLICATION_ID_BASE}demo"
+
+dev-win-64:
+        <<: *build-dev-windows
+        <<: *full
+
+dev-win-32:
+        <<: *build-dev-windows
+        <<: *full
+        variables:
+                ARCH_BITS: "32"
