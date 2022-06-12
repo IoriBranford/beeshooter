@@ -1,4 +1,118 @@
+local Script = require "Component.Script"
+local Sprite = require "Component.Sprite"
+
+local huge = math.huge
+local testrects = math.testrects
+
 ---@class Character
+---@field tile table Tiled tile structure
+---@field lifetime number die at this age
+---@field script string the require string of the script module
+---@field scriptstart string|function the first script function to run
+---@field team string cannot have whitespace
+---@field enemyteams string list of teams separated by whitespace
+---@field camera table camera reference for convenience
+---@field enemies table array of characters that do damage
 local Character = {}
+Character.__index = Character
+
+local function initHitbox(self)
+    local tile = self.tile
+    local shapes = tile and tile.shapes
+    local hitbox = shapes and shapes.hitbox
+    self.hitbox = hitbox
+end
+
+function Character:init()
+    self = self or {}
+    setmetatable(self, Character)
+    self.age = 0                                    -- in fixedupdates
+    self.lifetime = self.lifetime or 0              -- die at this age, immortal if <= 0
+    self.health = self.health or 1
+    self.damage = self.damage or 1
+    self.maxhealth = self.maxhealth or self.health
+    self.width = self.width or 1    -- graphic width
+    self.height = self.height or 1  -- graphic height
+    self.x = self.x or 0
+    self.y = self.y or 0
+    self.z = self.z or 0
+    self.velx = self.velx or 0
+    self.vely = self.vely or 0
+    self.velz = self.velz or 0
+    initHitbox(self)
+    Script.load(self, self.script)
+    Script.start(self, self.scriptstart or "start")
+    return self
+end
+
+---@param scene Scene
+function Character:addToScene(scene)
+    self.sprite = Sprite.newTileSprite(self, scene)
+        or Sprite.newAseprite(self, scene)
+        or scene:addObject(self)
+end
+
+function Character:isSpriteOnScreen()
+    local x, y, w, h = self.x, self.y, self.width, self.height
+    local sprite = self.sprite
+    local ox, oy = 0, 0
+    if sprite then
+        ox, oy = sprite.ox, sprite.oy
+    end
+    local camera = self.camera
+    local cx, cy, cw, ch = camera.x, camera.y, camera.width, camera.height
+    return testrects(x - ox, y - oy, w, h, cx, cy, cw, ch)
+end
+
+---@param self Character
+local function defaultDefeat(self)
+    self:markDisappear()
+end
+
+local function fixedupdateDamage(self)
+    local damage = 0
+    local hitbox = self.hitbox
+    local enemies = self.enemies
+    if enemies and hitbox then
+        local hitx, hity, hitwidth, hitheight = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
+        for i, enemy in pairs(enemies) do
+            local enemyhitbox = enemy.hitbox
+            if enemyhitbox then
+                local ehitx, ehity, ehitwidth, ehitheight =
+                    enemyhitbox.x + enemy.x,
+                    enemyhitbox.y + enemy.y,
+                    enemyhitbox.width, enemyhitbox.height
+                if testrects(hitx, hity, hitwidth, hitheight, ehitx, ehity, ehitwidth, ehitheight) then
+                    damage = damage + enemy.damage
+                end
+            end
+        end
+    end
+    self.health = self.health - damage
+    if self.health < 1 then
+        Script.start(self, self.scriptdefeat or defaultDefeat)
+    end
+end
+
+function Character:fixedupdate()
+    self.age = self.age + 1
+    fixedupdateDamage(self)
+    Script.run(self)
+    if self.lifetime > 0 and self.age >= self.lifetime then
+        self:markDisappear()
+    end
+end
+
+function Character:willDisappear()
+    return self.age < 0
+end
+
+function Character:markDisappear()
+    self.age = -huge
+end
+
+function Character:disappear()
+    Sprite.remove(self, "sprite")
+end
 
 return Character
