@@ -1,6 +1,7 @@
 local SceneObject = require "System.SceneObject"
 local Color       = require "Data.Color"
 
+---@class Scene
 local Scene = {}
 Scene.__index = Scene
 
