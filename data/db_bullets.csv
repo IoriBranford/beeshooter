@@ -1,0 +1,3 @@
+type,team,speed,lifetime,hitdamageenemy,hitdamageself,z,sound
+JennyShot,PlayerShot,16,16,1,1,99,
+JennySting,PlayerShot,0,1,1,0,99,
