@@ -1,18 +1,24 @@
 local Script = require "Component.Script"
 local Sprite = require "Component.Sprite"
+local Database = require "Data.Database"
+local Body     = require "BeeShooter.Character.Body"
 
+local max = math.max
 local huge = math.huge
 local testrects = math.testrects
 
 ---@class Character
+---@field type string
 ---@field tile table Tiled tile structure
 ---@field lifetime number die at this age
 ---@field script string the require string of the script module
 ---@field scriptstart string|function the first script function to run
+---@field scriptdefeat string|function the script function to start when out of health
 ---@field team string cannot have whitespace
 ---@field enemyteams string list of teams separated by whitespace
 ---@field camera table camera reference for convenience
 ---@field enemies table array of characters that do damage
+---@field invincibletime number
 local Character = {}
 Character.__index = Character
 
@@ -25,11 +31,16 @@ end
 
 function Character:init()
     self = self or {}
+    local type = self.type
+    if type then
+        Database.fillBlanks(self, type)
+    end
     setmetatable(self, Character)
     self.age = 0                                    -- in fixedupdates
     self.lifetime = self.lifetime or 0              -- die at this age, immortal if <= 0
     self.health = self.health or 1
-    self.damage = self.damage or 1
+    self.hitdamageenemy = self.hitdamageenemy or 1
+    self.hitdamageself = self.hitdamageself or 0
     self.maxhealth = self.maxhealth or self.health
     self.width = self.width or 1    -- graphic width
     self.height = self.height or 1  -- graphic height
@@ -70,10 +81,15 @@ local function defaultDefeat(self)
 end
 
 local function fixedupdateDamage(self)
+    local invincibletime = self.invincibletime or huge
+    if invincibletime > 0 then
+        return
+    end
     local damage = 0
     local hitbox = self.hitbox
     local enemies = self.enemies
     if enemies and hitbox then
+        local hitdamageself = self.hitdamageself or 0
         local hitx, hity, hitwidth, hitheight = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
         for i, enemy in pairs(enemies) do
             local enemyhitbox = enemy.hitbox
@@ -83,7 +99,7 @@ local function fixedupdateDamage(self)
                     enemyhitbox.y + enemy.y,
                     enemyhitbox.width, enemyhitbox.height
                 if testrects(hitx, hity, hitwidth, hitheight, ehitx, ehity, ehitwidth, ehitheight) then
-                    damage = damage + enemy.damage
+                    damage = damage + enemy.hitdamageenemy + hitdamageself
                 end
             end
         end
@@ -96,11 +112,16 @@ end
 
 function Character:fixedupdate()
     self.age = self.age + 1
+    Body.fixedupdateBody(self)
     fixedupdateDamage(self)
     Script.run(self)
     if self.lifetime > 0 and self.age >= self.lifetime then
         self:markDisappear()
     end
+end
+
+function Character:update(dsecs, fixedfrac)
+    Sprite.update(self, self.sprite, fixedfrac)
 end
 
 function Character:willDisappear()
