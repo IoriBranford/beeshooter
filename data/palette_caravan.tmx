@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#4d2706" nextlayerid="4" nextobjectid="1">
+ <editorsettings>
+  <chunksize width="16" height="14"/>
+ </editorsettings>
+ <tileset firstgid="1" source="Beehive.tsx"/>
+ <layer id="1" name="palette" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="-28" width="16" height="14">
+   eJxjYBgFo2AUkAsmM0LoqVB6GpSewUicPACsSAS1
+  </chunk>
+   <chunk x="0" y="-14" width="16" height="14">
+   eJzNkkkKAjEQRRNBXdkOW1GE1pXjNRyv0XoQ9TztdB3Hazi8xlqFhFq4MfCovPyChFCpNWYHe8jWgXqEk3iq5AksYfVVs4YNbMWvkp/FH5LfAu72v+ECT/Ec996zjfW729/g/EWtS96iWmgG3O3/95XnnQUoWr/H1DZ0Al6CCMrG7xWoQi3gY5jAVLwLPeiLz2AOC/EBDGEkrs2HlmvzoeXafGj5r///AdPAN6U=
+  </chunk>
+   <chunk x="0" y="0" width="16" height="14">
+   eJzFkUkOwjAMRR32ZZJgg6jYAwUJLlGmawAHAY7J1GtA+VFsyalSyI5IT8m3rSyeEyJqgha5k1RyG3RAtybnYAXWnMdgAqacN2ALdpwzMANzzntwAEfOJ3AGl8h+wfnB+c7z1x99+a9hiJ72YVwuwQ28Ivsj1A1IuT/E/cY9MHH9HjnfQp++1xfk/Au5mrUzeg+6LvvI1B9L9qF3KF4K8nepfesdluQ719489yZctz60U+1Nu09r6iGncqruQ/V/+/8As683hQ==
+  </chunk>
+   <chunk x="16" y="0" width="16" height="14">
+   eJxjYBgFAwlMoLQxEAsiYULiMGAApX2Q1ILU+BEQh4F2KP0QqtYXqiaTgDgcMEKo/1C1GVA1fxnwi8OAHFS/LCNE7QOoGmkC4tgASO0/LGpwiYMAseGMCxAKf0IAAKltGs4=
+  </chunk>
+   <chunk x="0" y="14" width="16" height="14">
+   eJztkssNwkAMRG3aQCDuQKANoJBNCiEpJPzaAAJt8G2Dz6x2IllABEgcsfQOHs94fVgnIgMwBCOQSKgxaIMO6ILM6BHogT44AwdiZo/0HehNmd1V6DUNO9Iyq8F3ozdm9iLPun+vpWHHidkm8w0N3j2z9QpduENNtizvvZrsO/1f35f9C77sX/pknoMJmLJfghVYsy/ABmzZz8AcLH54v70pMzP3cH/yYnYHrsQzvg==
+  </chunk>
+   <chunk x="16" y="14" width="16" height="14">
+   eJxrZ4CAdCD2AWJfIPYD4kwG4gBM3ROoGRlQsUdE6v8LpZkYIWa0wfQyEqdfGqpOgRFixmOoXjki9SMDkBmMZOodBSMT5ABxOwPx+QUdAAC8OgvU
+  </chunk>
+   <chunk x="0" y="28" width="16" height="14">
+   eJxbzMDA0ArEbUDcDsRLGRDgIBCnA3EGEGcC8WEscnxAvBiIl0D18iGp4YOqOwTVi01uFIyCkQwARdkL+A==
+  </chunk>
+   <chunk x="16" y="28" width="16" height="14">
+   eJzrZ2BgyATiwwzkgbVQvXxk6h8Fo2AkAwDg3gM6
+  </chunk>
+  </data>
+ </layer>
+</map>
