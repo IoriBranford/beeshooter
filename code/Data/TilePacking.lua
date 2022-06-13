@@ -63,8 +63,8 @@ function TilePacking.pack(map)
     local maxtileheight = 0
     for i = 1, #tilesets do
         local tileset = tilesets[i]
-        local tilewidth = tileset.tilewidth + 2
-        local tileheight = tileset.tileheight + 2
+        local tilewidth = tileset.tilewidth *1.5
+        local tileheight = tileset.tileheight *1.5
         if maxtilewidth < tilewidth then
             maxtilewidth = tilewidth
         end
