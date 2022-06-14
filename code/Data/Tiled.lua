@@ -489,7 +489,7 @@ function Tiled.load(mapfile)
 
     if map.backgroundcolor then
         for i, c in ipairs(map.backgroundcolor) do
-            map.backgroundcolor[i] = (1+c) / 256
+            map.backgroundcolor[i] = c / 256
         end
     end
 
@@ -523,8 +523,12 @@ function Tiled.load(mapfile)
         end
     end
 
-    local packimagedata = TilePacking.pack(map)
-    -- TilePacking.save(map, mapfile..".quads", mapfile..".png", packimagedata)
+    local packimagedata, packimageerr = TilePacking.pack(map)
+    if packimagedata then
+        -- TilePacking.save(map, mapfile..".quads", mapfile..".png", packimagedata)
+    else
+        print(packimageerr)
+    end
 
     local cellwidth = map.tilewidth
     local cellheight = map.tileheight
@@ -555,6 +559,8 @@ function Tiled.load(mapfile)
             local chunks = layer.chunks
             local encoding = layer.encoding
             local compression = layer.compression
+            layer.tilewidth = cellwidth
+            layer.tileheight = cellheight
             if chunks then
                 for i = 1, #chunks do
                     local chunk = chunks[i]
@@ -568,8 +574,6 @@ function Tiled.load(mapfile)
             else
                 local gids = decodeGids(layer.data, encoding, compression)
                 layer.data = gids
-                layer.tilewidth = cellwidth
-                layer.tileheight = cellheight
                 layer.tilebatch, layer.batchanimations = Tiled.newTileBatch(maptiles, gids, cellwidth, cellheight, cols, rows)
             end
         elseif layertype == "objectgroup" then
