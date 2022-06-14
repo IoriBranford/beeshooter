@@ -83,6 +83,14 @@ local function defaultDefeat(self)
     self:markDisappear()
 end
 
+function Character:defeat()
+    if self.defeated then
+        return
+    end
+    self.defeated = true
+    Script.start(self, self.scriptdefeat or defaultDefeat)
+end
+
 local function fixedupdateDamage(self)
     local invincibletime = self.invincibletime or huge
     if invincibletime > 0 then
@@ -109,7 +117,7 @@ local function fixedupdateDamage(self)
     end
     self.health = self.health - damage
     if self.health < 1 then
-        Script.start(self, self.scriptdefeat or defaultDefeat)
+        self:defeat()
     end
 end
 
