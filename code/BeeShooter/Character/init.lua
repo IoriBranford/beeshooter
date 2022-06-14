@@ -22,6 +22,13 @@ local testrects = math.testrects
 local Character = {}
 Character.__index = Character
 
+local DefaultHitbox = {
+    x = 0,
+    y = 0,
+    width = 0,
+    height = 0
+}
+
 local function initHitbox(self)
     local tile = self.tile
     local shapes = tile and tile.shapes
@@ -97,21 +104,19 @@ local function fixedupdateDamage(self)
         return
     end
     local damage = 0
-    local hitbox = self.hitbox
     local enemies = self.enemies
-    if enemies and hitbox then
+    if enemies then
+        local hitbox = self.hitbox or DefaultHitbox
         local hitdamageself = self.hitdamageself or 0
         local hitx, hity, hitwidth, hitheight = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
-        for i, enemy in pairs(enemies) do
-            local enemyhitbox = enemy.hitbox
-            if enemyhitbox then
-                local ehitx, ehity, ehitwidth, ehitheight =
-                    enemyhitbox.x + enemy.x,
-                    enemyhitbox.y + enemy.y,
-                    enemyhitbox.width, enemyhitbox.height
-                if testrects(hitx, hity, hitwidth, hitheight, ehitx, ehity, ehitwidth, ehitheight) then
-                    damage = damage + enemy.hitdamageenemy + hitdamageself
-                end
+        for i, enemy in ipairs(enemies) do
+            local enemyhitbox = enemy.hitbox or DefaultHitbox
+            local ehitx, ehity, ehitwidth, ehitheight =
+                enemyhitbox.x + enemy.x,
+                enemyhitbox.y + enemy.y,
+                enemyhitbox.width, enemyhitbox.height
+            if testrects(hitx, hity, hitwidth, hitheight, ehitx, ehity, ehitwidth, ehitheight) then
+                damage = damage + enemy.hitdamageenemy + hitdamageself
             end
         end
     end
