@@ -1,5 +1,8 @@
 local Scene    = require "System.Scene"
 local Character    = require "BeeShooter.Character"
+local Body         = require "BeeShooter.Character.Body"
+
+local t_sort = table.sort
 local Stage = {}
 
 local scene
@@ -7,10 +10,12 @@ local camera
 
 local player
 local teams
+local everyone
 
 function Stage.init()
     scene = Scene.new()
     camera = {x = 0, y = 0, width = 256, height = 224}
+    everyone = {}
     teams = {
         PlayerShip = {},
         EnemyShip = {},
@@ -40,6 +45,7 @@ function Stage.addCharacter(object)
         team[#team+1] = character
         character.enemies = team.enemies
     end
+    everyone[#everyone+1] = character
     return character
 end
 local addCharacter = Stage.addCharacter
@@ -55,32 +61,40 @@ function Stage.quit()
     camera       = nil
     player       = nil
     teams = nil
+    everyone = nil
 end
 
 function Stage.restart()
     love.event.loadphase("BeeShooter.GamePhase")
 end
 
+local function prune(chars)
+    local n = #chars
+    for i = n, 1, -1 do
+        local char = chars[i]
+        if char:willDisappear() then
+            char:disappear()
+            chars[i] = chars[n]
+            chars[n] = nil
+            n = n - 1
+        end
+    end
+end
+
 function Stage.fixedupdate()
     scene:animate(1)
-    for _, teamchars in pairs(teams) do
-        for _, char in ipairs(teamchars) do
-            char:fixedupdate()
-        end
+    t_sort(everyone)
+    for i = 1, #everyone do
+        Body.fixedupdateBody(everyone[i])
+    end
+    for i = 1, #everyone do
+        everyone[i]:fixedupdate()
     end
 
     for _, teamchars in pairs(teams) do
-        local n = #teamchars
-        for i = n, 1, -1 do
-            local char = teamchars[i]
-            if char:willDisappear() then
-                char:disappear()
-                teamchars[i] = teamchars[n]
-                teamchars[n] = nil
-                n = n - 1
-            end
-        end
+        prune(teamchars)
     end
+    prune(everyone)
 end
 
 function Stage.update(dsecs, fixedfrac)

@@ -117,7 +117,6 @@ end
 
 function Character:fixedupdate()
     self.age = self.age + 1
-    Body.fixedupdateBody(self)
     fixedupdateDamage(self)
     Script.run(self)
     if self.lifetime > 0 and self.age >= self.lifetime then
