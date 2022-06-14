@@ -1,6 +1,7 @@
 local Scene    = require "System.Scene"
 local Character    = require "BeeShooter.Character"
 local Body         = require "BeeShooter.Character.Body"
+local Script       = require "Component.Script"
 
 local t_sort = table.sort
 local Stage = {}
@@ -46,6 +47,8 @@ function Stage.addCharacter(object)
         character.enemies = team.enemies
     end
     everyone[#everyone+1] = character
+    Script.load(character, character.script)
+    Script.start(character, character.scriptstart or "start")
     return character
 end
 local addCharacter = Stage.addCharacter
