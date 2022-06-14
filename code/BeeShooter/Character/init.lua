@@ -52,8 +52,6 @@ function Character:init()
     self.velz = self.velz or 0
     self.fixedupdateorder = self.fixedupdateorder or 0
     initHitbox(self)
-    Script.load(self, self.script)
-    Script.start(self, self.scriptstart or "start")
     return self
 end
 
