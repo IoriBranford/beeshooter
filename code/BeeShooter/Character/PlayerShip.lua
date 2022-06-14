@@ -159,6 +159,13 @@ function PlayerShip:die()
     end
     self.sprite:setHidden(true)
     wait(60)
+
+    if self.lives <= 0 then
+        return
+    end
+
+    self.lives = self.lives - 1
+    self.defeated = false
     Audio.play(self.respawnsound)
     self.sprite:setHidden(false)
     self.health = 1
