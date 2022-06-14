@@ -2,13 +2,14 @@ local Scene    = require "System.Scene"
 local Character    = require "BeeShooter.Character"
 local Body         = require "BeeShooter.Character.Body"
 local Script       = require "Component.Script"
+local Tiled        = require "Data.Tiled"
 
 local t_sort = table.sort
 local Stage = {}
 
 local scene
 local camera
-
+local map
 local player
 local teams
 local everyone
@@ -16,6 +17,10 @@ local everyone
 function Stage.init()
     scene = Scene.new()
     camera = {x = 0, y = 0, width = 256, height = 224}
+
+    map = Tiled.load("data/stage_caravan.lua")
+    scene:addMap(map, "group,tilelayer,imagelayer")
+
     everyone = {}
     teams = {
         PlayerShip = {},
@@ -62,6 +67,7 @@ end
 function Stage.quit()
     scene = nil
     camera       = nil
+    map = nil
     player       = nil
     teams = nil
     everyone = nil
@@ -109,7 +115,10 @@ function Stage.update(dsecs, fixedfrac)
 end
 
 function Stage.draw(fixedfrac)
-    love.graphics.clear(.25, .25, .25)
+    local backgroundcolor = map.backgroundcolor
+    if backgroundcolor then
+        love.graphics.clear(backgroundcolor[1], backgroundcolor[2], backgroundcolor[3])
+    end
     scene:draw()
 end
 
