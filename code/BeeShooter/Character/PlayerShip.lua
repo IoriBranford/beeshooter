@@ -126,6 +126,18 @@ function PlayerShip:fight()
         end
         inputMovement(self)
         firetime = inputShooting(self, firetime, firebutton)
+
+        local stingrate = self.stingrate or 3
+        if self.age % stingrate == 0 then
+            local x, y = Body.getPosition(self)
+            local sting = self.sting
+            Stage.addCharacter({
+                type = "JennySting",
+                x = sting.x + x,
+                y = sting.y + y
+            })
+        end
+
         yield()
     end
 end
