@@ -39,6 +39,9 @@ return {
       tiles = {
         {
           id = 0,
+          properties = {
+            ["name"] = "flyfast"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -90,6 +93,22 @@ return {
             {
               tileid = 1,
               duration = 50
+            }
+          }
+        },
+        {
+          id = 1,
+          properties = {
+            ["name"] = "flyslow"
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
             }
           }
         },
@@ -579,7 +598,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 1,
+          gid = 2,
           visible = true,
           properties = {}
         }

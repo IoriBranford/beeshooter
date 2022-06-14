@@ -116,7 +116,13 @@ function PlayerShip:fight()
         if speedbutton then
             local fastspeed = self.fastspeed or 4
             local slowspeed = self.slowspeed or 2
-            self.speed = self.speed == fastspeed and slowspeed or fastspeed
+            if self.speed == fastspeed then
+                self.speed = slowspeed
+                self.sprite:changeTile("flyslow")
+            else
+                self.speed = fastspeed
+                self.sprite:changeTile("flyfast")
+            end
         end
         inputMovement(self)
         firetime = inputShooting(self, firetime, firebutton)
