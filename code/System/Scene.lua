@@ -7,6 +7,7 @@ Scene.__index = Scene
 
 local insert = table.insert
 
+---@return Scene
 function Scene.new()
     local scene = {
         animating = {}
@@ -144,7 +145,7 @@ function Scene:addMap(map, layerfilter)
             local layer = layers[i]
             local layertype = layer.type
             if not layerfilter or layerfilter:find(layertype) then
-                if layer.type == "group" then
+                if layertype == "group" then
                     addLayers(layer)
                 elseif layertype == "tilelayer" then
                     layer.sprites = self:addTileLayer(layer)
