@@ -50,10 +50,15 @@ function Character:init()
     self.velx = self.velx or 0
     self.vely = self.vely or 0
     self.velz = self.velz or 0
+    self.fixedupdateorder = self.fixedupdateorder or 0
     initHitbox(self)
     Script.load(self, self.script)
     Script.start(self, self.scriptstart or "start")
     return self
+end
+
+function Character:__lt(other)
+    return self.fixedupdateorder < other.fixedupdateorder
 end
 
 ---@param scene Scene
