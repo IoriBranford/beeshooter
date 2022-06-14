@@ -50,10 +50,10 @@ local function inputMovement(self)
     local camera = self.camera
     local cameraw = camera.width
     local camerah = camera.height
-    local camerax = camera.x
-    local cameray = camera.y
-    local camerax2 = camerax + cameraw
-    local cameray2 = cameray + camerah
+    local camerax = camera.x + 8
+    local cameray = camera.y + 8
+    local camerax2 = camerax + cameraw - 16
+    local cameray2 = cameray + camerah - 16
     local vx, vy = dirx * speed, diry * speed
     local x, y = self.x, self.y
     if x + vx < camerax then
