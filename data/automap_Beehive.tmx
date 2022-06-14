@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="20" nextobjectid="1">
+ <tileset firstgid="1" source="Beehive.tsx"/>
+ <layer id="8" name="regions_input" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="0" width="16" height="16">
+   eJybwsiAAqYwotLo4ugAJI6shxAblxn47MSnl1JArJ3D1f+DAVDif2qEPyVgqMc/APwRIJk=
+  </chunk>
+   <chunk x="0" y="16" width="16" height="16">
+   eJxjYBg8YAojaeLocsSwqWEnLvXY9OASpzYYaPtHwdAEABE2CVE=
+  </chunk>
+  </data>
+ </layer>
+ <layer id="2" name="input_floor" width="30" height="20">
+  <properties>
+   <property name="StrictEmpty" type="bool" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="0" width="16" height="16">
+   eJzjY0AFfFBaEE0cnY9NDx+auCAaTSv9lAB0OwfC/6OAMjDQ4T/Q9lMCAHpcAbM=
+  </chunk>
+   <chunk x="0" y="16" width="16" height="16">
+   eJxjYBjagA8HWxAHm15uQQb0sH8g7R4FQxcAAF5PAH0=
+  </chunk>
+  </data>
+ </layer>
+ <layer id="7" name="regions_output" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYGBgEGWAADEGVGAMpU0Y8ANeKM2PJi4ApYUI6B9oQKn/taG0Lpq4HpQ2IKD/CZR+RKQ4OmBihDIYiRNHBwpQeTlG4sQHG2CFuo8dzZ3KUL4qjd0/lOMfAK0eCs8=
+  </chunk>
+   <chunk x="0" y="16" width="16" height="16">
+   eJxjYGBgUGBkAAM5KA0DuMQHE9BBYrMhuVMfSVwFj/vbSBRHB4+R2Lw4xAXw6GfE4TZc4rgAPw5xIdKMGQUjDAAAKHAEHA==
+  </chunk>
+  </data>
+ </layer>
+ <layer id="19" name="output_underfloor" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYBgFAw2eQOlHRIqjAyZGKIOROHF0oACVl2MkTnwUUBcMZPwDACPJB6k=
+  </chunk>
+   <chunk x="0" y="16" width="16" height="16">
+   eJxjYGBgUGBkAAM5KA0DuMSHE2gjURwdPCZRHB0w4ghbXOKjYBRQEwAA5wkDVw==
+  </chunk>
+  </data>
+ </layer>
+ <layer id="3" name="output_floor" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   <chunk x="0" y="0" width="16" height="16">
+   eJxjYGBgEGWAADEGVGAMpU0Y8ANeKM2PJi4ApYUI6B9oQKn/taG0Lpq4HpQ2INNdo4A4wMoIodkZUcWVoXxVNHFqg6Ec/wCNVQMn
+  </chunk>
+   <chunk x="0" y="16" width="16" height="16">
+   eJxjYBjaQAeJzcaIYOsjiasgidMS8OIQF6CD3fw4xIXoYPcoGLoAAEVYAMY=
+  </chunk>
+  </data>
+ </layer>
+</map>
