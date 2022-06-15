@@ -3,23 +3,62 @@ local Character    = require "BeeShooter.Character"
 local Body         = require "BeeShooter.Character.Body"
 local Script       = require "Component.Script"
 local Tiled        = require "Data.Tiled"
+local Timeline     = require "Data.Timeline"
 
 local t_sort = table.sort
 local Stage = {}
 
-local scene
-local camera
-local map
-local player
-local teams
-local everyone
+local scene ---@type Scene
+local camera = {x = 0, y = 0, width = 256, height = 224}
+local map ---@type Map
+local player ---@type Character
+local teams  ---@type table
+local everyone ---@type table
+local flyingspawntimeline ---@type Timeline
+local currentflyers
+local stagespawntimeline ---@type Timeline
+
+local function readMapObjectLayer(objectlayer)
+    local paths, characters
+    for i, object in ipairs(objectlayer) do
+        local objecttype = object.type
+        if objecttype == "Trigger" then
+            objectlayer.trigger = object
+        elseif objecttype == "Path" then
+            paths = paths or {}
+            paths[#paths+1] = object
+        else
+            characters = characters or {}
+            characters[#characters+1] = object
+        end
+    end
+    objectlayer.paths = paths
+    objectlayer.characters = characters
+    return objectlayer
+end
+
+local function doFlyingSpawn(flyingspawn)
+    currentflyers = flyingspawn.characters
+    Stage.addCharacters(flyingspawn.characters)
+end
 
 function Stage.init()
     scene = Scene.new()
     camera = {x = 0, y = 0, width = 256, height = 224}
 
+    stagespawntimeline = Timeline.new()
+    flyingspawntimeline = Timeline.new()
+
     map = Tiled.load("data/stage_caravan.lua")
     scene:addMap(map, "group,tilelayer,imagelayer")
+
+    local flyingspawns = map.layers.flyingspawns
+    if flyingspawns then
+        for i, flyingspawn in ipairs(flyingspawns) do
+            readMapObjectLayer(flyingspawn)
+            flyingspawntimeline:addEvent(i, doFlyingSpawn, flyingspawn)
+        end
+    end
 
     everyone = {}
     teams = {
@@ -71,6 +110,9 @@ function Stage.quit()
     player       = nil
     teams = nil
     everyone = nil
+    stagespawntimeline = nil
+    flyingspawntimeline = nil
+    currentflyers = nil
 end
 
 function Stage.restart()
@@ -100,10 +142,16 @@ function Stage.fixedupdate()
         everyone[i]:fixedupdate()
     end
 
+    prune(everyone)
     for _, teamchars in pairs(teams) do
         prune(teamchars)
     end
-    prune(everyone)
+    if currentflyers then
+        prune(currentflyers)
+    end
+    if not currentflyers or #currentflyers <= 0 then
+        flyingspawntimeline:advance(1)
+    end
 end
 
 function Stage.update(dsecs, fixedfrac)
