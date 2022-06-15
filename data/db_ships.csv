@@ -1,6 +1,6 @@
 type,script,scriptstart,team,speed,health,z
 Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,100
-Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,3,1,0
-AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,16,0
+Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,0
+AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,0
 AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,4,10
 AntBigAbdomen,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,5,10
