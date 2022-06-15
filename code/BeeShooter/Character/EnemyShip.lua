@@ -1,0 +1,38 @@
+local Movement = require "Component.Movement"
+local Body     = require "BeeShooter.Character.Body"
+local EnemyShip = {}
+
+local yield = coroutine.yield
+
+---@param self Character
+local function waitUntilOffscreen(self)
+    while self:isSpriteOnScreen() do
+        yield()
+    end
+end
+
+---@param self Character
+local function walkPath(self, path)
+    if not path then
+        return
+    end
+    local pathx, pathy = path.x, path.y
+    local points = path.points
+    for i = 2, #points, 2 do
+        repeat
+            local destx, desty = pathx + points[i-1], pathy + points[i]
+            local velx, vely = Movement.getVelocity_speed(self.x, self.y, destx, desty, self.speed or 1)
+            Body.setVelocity(self, velx, vely)
+            yield()
+        until self.x == destx and self.y == desty
+    end
+end
+
+---@param self Character
+function EnemyShip:Ant()
+    walkPath(self, self.path)
+    waitUntilOffscreen(self)
+    self:markDisappear()
+end
+
+return EnemyShip
