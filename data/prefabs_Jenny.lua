@@ -19,8 +19,11 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 0,
-      objectalignment = "unspecified",
+      columns = 3,
+      image = "tilesets/Jenny.png",
+      imagewidth = 96,
+      imageheight = 32,
+      objectalignment = "center",
       tileoffset = {
         x = 0,
         y = 0
@@ -32,8 +35,117 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 0,
-      tiles = {}
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          properties = {
+            ["name"] = "flyfast"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 3,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 2,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 12,
+                y = 12,
+                width = 8,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["ishitbox"] = true
+                }
+              },
+              {
+                id = 3,
+                name = "sting",
+                type = "",
+                shape = "point",
+                x = 16,
+                y = 28,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 1,
+          properties = {
+            ["name"] = "flyslow"
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 2,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 10,
+                y = 10,
+                width = 12,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["ishitbox"] = true
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   layers = {
