@@ -18,6 +18,8 @@ function GamePhase.loadphase(stage, startpoint)
     Database.addMapObjects(prefabs_Jenny.objects)
     Stage.init()
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
+    local music = Audio.playMusic("music/Funkbuster.ogg")
+    music:setLooping(true)
 end
 
 function GamePhase.quitphase()
