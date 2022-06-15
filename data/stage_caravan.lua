@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 12,
+  nextobjectid = 17,
   backgroundcolor = { 77, 39, 6 },
   properties = {},
   tilesets = {
@@ -360,7 +360,6 @@ return {
       tiles = {
         {
           id = 0,
-          type = "Ant",
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -399,10 +398,6 @@ return {
               duration = 100
             }
           }
-        },
-        {
-          id = 1,
-          type = "Ant"
         }
       }
     },
@@ -433,7 +428,6 @@ return {
       tiles = {
         {
           id = 0,
-          type = "AntBig",
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -653,129 +647,7 @@ return {
           parallaxx = 1,
           parallaxy = 1,
           properties = {},
-          layers = {
-            {
-              type = "objectgroup",
-              draworder = "topdown",
-              id = 11,
-              name = "ants1",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 1,
-                  name = "",
-                  type = "",
-                  shape = "polyline",
-                  x = 0,
-                  y = 64,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -8, y = 0 },
-                    { x = 16, y = 0 },
-                    { x = 32, y = -16 },
-                    { x = 136, y = -16 },
-                    { x = 152, y = -32 },
-                    { x = 240, y = -32 },
-                    { x = 256, y = -48 },
-                    { x = 272, y = -48 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 2,
-                  name = "",
-                  type = "",
-                  shape = "rectangle",
-                  x = -8,
-                  y = 64,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 3,
-                  name = "",
-                  type = "",
-                  shape = "rectangle",
-                  x = -24,
-                  y = 64,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 4,
-                  name = "",
-                  type = "",
-                  shape = "rectangle",
-                  x = -40,
-                  y = 64,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 5,
-                  name = "",
-                  type = "",
-                  shape = "rectangle",
-                  x = -56,
-                  y = 64,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 6,
-                  name = "",
-                  type = "",
-                  shape = "rectangle",
-                  x = -72,
-                  y = 64,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 11,
-                  name = "",
-                  type = "Trigger",
-                  shape = "point",
-                  x = -88,
-                  y = 64,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                }
-              }
-            }
-          }
+          layers = {}
         }
       }
     },
@@ -790,7 +662,139 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      layers = {}
+      layers = {
+        {
+          type = "objectgroup",
+          draworder = "topdown",
+          id = 11,
+          name = "ants1",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {},
+          objects = {
+            {
+              id = 1,
+              name = "",
+              type = "Path",
+              shape = "polyline",
+              x = 0,
+              y = 64,
+              width = 0,
+              height = 0,
+              rotation = 0,
+              visible = true,
+              polyline = {
+                { x = -8, y = 0 },
+                { x = 8, y = 0 },
+                { x = 40, y = -16 },
+                { x = 128, y = -16 },
+                { x = 160, y = -32 },
+                { x = 224, y = -32 },
+                { x = 256, y = -48 },
+                { x = 272, y = -48 }
+              },
+              properties = {}
+            },
+            {
+              id = 2,
+              name = "",
+              type = "Ant",
+              shape = "rectangle",
+              x = -8,
+              y = 64,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 481,
+              visible = true,
+              properties = {
+                ["path"] = { id = 1 }
+              }
+            },
+            {
+              id = 3,
+              name = "",
+              type = "Ant",
+              shape = "rectangle",
+              x = -24,
+              y = 64,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 481,
+              visible = true,
+              properties = {
+                ["path"] = { id = 1 }
+              }
+            },
+            {
+              id = 4,
+              name = "",
+              type = "Ant",
+              shape = "rectangle",
+              x = -40,
+              y = 64,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 481,
+              visible = true,
+              properties = {
+                ["path"] = { id = 1 }
+              }
+            },
+            {
+              id = 5,
+              name = "",
+              type = "Ant",
+              shape = "rectangle",
+              x = -56,
+              y = 64,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 481,
+              visible = true,
+              properties = {
+                ["path"] = { id = 1 }
+              }
+            },
+            {
+              id = 6,
+              name = "",
+              type = "Ant",
+              shape = "rectangle",
+              x = -72,
+              y = 64,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 481,
+              visible = true,
+              properties = {
+                ["path"] = { id = 1 }
+              }
+            },
+            {
+              id = 11,
+              name = "",
+              type = "Trigger",
+              shape = "point",
+              x = -88,
+              y = 64,
+              width = 0,
+              height = 0,
+              rotation = 0,
+              visible = true,
+              properties = {}
+            }
+          }
+        }
+      }
     },
     {
       type = "group",
