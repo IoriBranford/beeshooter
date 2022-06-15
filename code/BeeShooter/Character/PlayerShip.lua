@@ -21,7 +21,9 @@ function PlayerShip:start()
     self.score = 0
     self.lives = 2
     self.power = 1
-    self.speed = self.slowspeed or 2
+    self.fastspeed = self.fastspeed or 4
+    self.slowspeed = self.slowspeed or 2
+    self.speed = self.slowspeed
     self.weapon = "A"
     return PlayerShip.recenter
 end
@@ -116,8 +118,8 @@ function PlayerShip:fight()
             self.weapon = self.weapon == "A" and "B" or "A"
         end
         if speedbutton then
-            local fastspeed = self.fastspeed or 4
-            local slowspeed = self.slowspeed or 2
+            local fastspeed = self.fastspeed
+            local slowspeed = self.slowspeed
             if self.speed == fastspeed then
                 self.speed = slowspeed
                 self.sprite:changeTile("flyslow")
@@ -170,6 +172,12 @@ function PlayerShip:die()
     self.sprite:setHidden(false)
     self.health = 1
     return PlayerShip.fight
+end
+
+function PlayerShip:drawStatus()
+    local status = string.format("%07dpts   ♥ %02d   Speed %s",
+        0, self.lives, string.rep("▶", self.speed == self.fastspeed and 2 or 1))
+    love.graphics.printf(status, 8, 208, 240, "left")
 end
 
 return PlayerShip
