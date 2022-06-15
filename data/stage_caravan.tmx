@@ -1,54 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#4d2706" nextlayerid="9" nextobjectid="1">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#4d2706" nextlayerid="14" nextobjectid="12">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
  </editorsettings>
- <tileset firstgid="1" source="Beehive.tsx"/>
- <group id="3" name="background">
+ <tileset firstgid="1" source="tilesets/Beehive.tsx"/>
+ <tileset firstgid="481" source="tilesets/Ant.tsx"/>
+ <tileset firstgid="483" source="tilesets/AntBig.tsx"/>
+ <tileset firstgid="486" source="tilesets/AntBigParts.tsx"/>
+ <group id="3" name="stage">
   <layer id="8" name="underfloor" width="30" height="20">
    <data encoding="base64" compression="zlib">
     <chunk x="-16" y="0" width="16" height="14">
-   eJxjYBgFo2AUkAOeUKifiZGBAQBAGwDo
+   eJxjYBgFAwWeUKifiZEy/QoU6h8FlAMABnwBCQ==
   </chunk>
     <chunk x="0" y="0" width="16" height="14">
-   eJxjYBgFo2DwgzYcmBg1j4D4MQ5MjBoGRiDCgYlRI8eI218At4IVvA==
+   eJxjYBgZoA0HJkbNIyB+jAMTo4aBEYhwYGLUyDHi9hcxakbB4AUA/TkV3w==
   </chunk>
     <chunk x="16" y="0" width="16" height="14">
-   eJxjYBgFo2DgwCNKDWCkTLschfopBQD1vgED
-  </chunk>
-    <chunk x="-16" y="14" width="16" height="14">
-   eJxjYCAfKDBSoHkUjHjwhEL9TBSmv8GQfgFqMAEq
-  </chunk>
-    <chunk x="0" y="14" width="16" height="14">
-   eJxjZGRgYARiOSAeBUMLtJGgDh0/AuLHROp/jAUzQNMNNrPR7WFkxMSw9IbNbHR78AFsZmOzZ7ACACQ4FgI=
-  </chunk>
-    <chunk x="16" y="14" width="16" height="14">
-   eJxjYBgFAwnagPgRBfofgwhG8vUzAvXKUaB/FFAGAJAxAm4=
+   eJxjYBja4BGlBjBSpl2OQv2jYGQDALlcAQM=
   </chunk>
    </data>
   </layer>
   <layer id="1" name="floor" width="30" height="20">
    <data encoding="base64" compression="zlib">
     <chunk x="-16" y="0" width="16" height="14">
-   eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg==
+   eJxjYBi5gJWRMv3a1HHGKBjBAAB0AwAy
   </chunk>
     <chunk x="0" y="0" width="16" height="14">
-   eJxjYBgFIxGwMjIwsDGSphYZ8zFAMC55ZCwGVKODA8PMwqdGF4/biFEzmAEAe5kDhg==
+   eJxjYCAPsDIyMLAxkqYWGfMxQDAueWQsBlSjgwPDzMKnRheP24hRMwpGAa0AAKSzA4Y=
   </chunk>
     <chunk x="16" y="0" width="16" height="14">
-   eJxjYBgFQxmwM1Kmn59C+3Up1D/SAQBgPwBF
-  </chunk>
-    <chunk x="-16" y="14" width="16" height="14">
-   eJxjYBgFQxUoM1KmX4BC+/Uo1D8KGBgAlYcAYw==
-  </chunk>
-    <chunk x="0" y="14" width="16" height="14">
-   eJxjYBhZQJmRgUEFCROjBhkLMqBibHrQ1WDDJkCsz0BYD0wdOjaA2kvIHiEC4YHNbGz2jALaAACZXgeF
-  </chunk>
-    <chunk x="16" y="14" width="16" height="14">
-   eJxjYBjaQIWRgUGVkXz9gkAsRIH9+kBsQIH+UTCyAQD9bQDO
+   eJxjZ2SgCPBTpp1Bl0L9o2AUDGUAANc/AEU=
   </chunk>
    </data>
   </layer>
+  <group id="9" name="spawns">
+   <objectgroup id="11" name="ants1">
+    <object id="1" x="0" y="64">
+     <polyline points="-8,0 16,0 32,-16 136,-16 152,-32 240,-32 256,-48 272,-48"/>
+    </object>
+    <object id="2" gid="481" x="-8" y="64" width="16" height="16"/>
+    <object id="3" gid="481" x="-24" y="64" width="16" height="16"/>
+    <object id="4" gid="481" x="-40" y="64" width="16" height="16"/>
+    <object id="5" gid="481" x="-56" y="64" width="16" height="16"/>
+    <object id="6" gid="481" x="-72" y="64" width="16" height="16"/>
+    <object id="11" type="Trigger" x="-88" y="64">
+     <point/>
+    </object>
+   </objectgroup>
+  </group>
+ </group>
+ <group id="10" name="flyingspawns"/>
+ <group id="13" name="prefabs">
+  <objectgroup id="12" name="remains">
+   <object id="7" name="AntBigCorpse" gid="485" x="0" y="0" width="60" height="40"/>
+   <object id="9" name="AntBigHead" gid="486" x="24" y="-8" width="24" height="24"/>
+   <object id="10" name="AntBigAbdomen" gid="487" x="-24" y="-8" width="24" height="24"/>
+  </objectgroup>
  </group>
 </map>
