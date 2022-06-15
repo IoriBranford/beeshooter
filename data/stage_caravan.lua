@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 15,
-  nextobjectid = 24,
+  nextobjectid = 44,
   backgroundcolor = { 77, 39, 6 },
   properties = {},
   tilesets = {
@@ -741,11 +741,75 @@ return {
                   }
                 },
                 {
+                  id = 38,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -168,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 28,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -88,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
                   id = 3,
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
                   x = -24,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 36,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -184,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 27,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -104,
                   y = 544,
                   width = 16,
                   height = 16,
@@ -773,11 +837,75 @@ return {
                   }
                 },
                 {
+                  id = 34,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -200,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 26,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -120,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
                   id = 5,
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
                   x = -56,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 32,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -216,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 25,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -136,
                   y = 544,
                   width = 16,
                   height = 16,
@@ -805,143 +933,44 @@ return {
                   }
                 },
                 {
+                  id = 30,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -232,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
+                  id = 24,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -152,
+                  y = 544,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 1 }
+                  }
+                },
+                {
                   id = 11,
                   name = "",
                   type = "Trigger",
                   shape = "point",
-                  x = -88,
-                  y = 472,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
-              id = 14,
-              name = "Copy of ants1",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 17,
-                  name = "",
-                  type = "Path",
-                  shape = "polyline",
-                  x = 0,
-                  y = 232,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -8, y = 0 },
-                    { x = 8, y = 0 },
-                    { x = 40, y = -16 },
-                    { x = 128, y = -16 },
-                    { x = 160, y = -32 },
-                    { x = 224, y = -32 },
-                    { x = 256, y = -48 },
-                    { x = 272, y = -48 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 18,
-                  name = "",
-                  type = "Ant",
-                  shape = "rectangle",
-                  x = -8,
-                  y = 232,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 17 }
-                  }
-                },
-                {
-                  id = 19,
-                  name = "",
-                  type = "Ant",
-                  shape = "rectangle",
-                  x = -24,
-                  y = 232,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 17 }
-                  }
-                },
-                {
-                  id = 20,
-                  name = "",
-                  type = "Ant",
-                  shape = "rectangle",
-                  x = -40,
-                  y = 232,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 17 }
-                  }
-                },
-                {
-                  id = 21,
-                  name = "",
-                  type = "Ant",
-                  shape = "rectangle",
-                  x = -56,
-                  y = 232,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 17 }
-                  }
-                },
-                {
-                  id = 22,
-                  name = "",
-                  type = "Ant",
-                  shape = "rectangle",
-                  x = -72,
-                  y = 232,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 481,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 17 }
-                  }
-                },
-                {
-                  id = 23,
-                  name = "",
-                  type = "Trigger",
-                  shape = "point",
-                  x = -88,
-                  y = 232,
+                  x = -16,
+                  y = 536,
                   width = 0,
                   height = 0,
                   rotation = 0,
