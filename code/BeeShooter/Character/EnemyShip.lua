@@ -16,15 +16,15 @@ local function walkPath(self, path)
     if not path then
         return
     end
-    local pathx, pathy = path.x, path.y
     local points = path.points
+    local stage = self.stage
     for i = 2, #points, 2 do
         repeat
-            local destx, desty = pathx + points[i-1], pathy + points[i]
-            local velx, vely = Movement.getVelocity_speed(self.x, self.y, destx, desty, self.speed or 1)
-            Body.setVelocity(self, velx, vely)
+            local destx, desty = points[i-1], points[i]
+            local velx, vely = Movement.getVelocity_speed(self.x, self.y - stage.y, destx, desty, self.speed or 1)
+            Body.setVelocity(self, velx, vely + stage.vely)
             yield()
-        until self.x == destx and self.y == desty
+        until self.x == destx and self.y - stage.y == desty
     end
 end
 

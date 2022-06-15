@@ -6,17 +6,20 @@ local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
 
 local t_sort = table.sort
+local min = math.min
+
 local Stage = {}
 
 local scene ---@type Scene
 local camera = {x = 0, y = 0, width = 256, height = 224}
-local map ---@type Map
+local stage
 local player ---@type Character
 local teams  ---@type table
 local everyone ---@type table
 local flyingspawntimeline ---@type Timeline
 local currentflyers
 local stagespawntimeline ---@type Timeline
+local clearred, cleargreen, clearblue = 0, 0, 0
 
 local function readMapObjectLayer(objectlayer)
     local paths, characters
@@ -42,6 +45,15 @@ local function doFlyingSpawn(flyingspawn)
     Stage.addCharacters(flyingspawn.characters)
 end
 
+local function doStageSpawn(stagespawn)
+    local stagey = stage.y
+    local characters = stagespawn.characters
+    for _, character in ipairs(characters) do
+        character.y = character.y + stagey
+    end
+    Stage.addCharacters(stagespawn.characters)
+end
+
 function Stage.init()
     scene = Scene.new()
     camera = {x = 0, y = 0, width = 256, height = 224}
@@ -49,8 +61,31 @@ function Stage.init()
     stagespawntimeline = Timeline.new()
     flyingspawntimeline = Timeline.new()
 
-    map = Tiled.load("data/stage_caravan.lua")
+    local map = Tiled.load("data/stage_caravan.lua")
+    local backgroundcolor = map.backgroundcolor
+    if backgroundcolor then
+        clearred, cleargreen, clearblue = backgroundcolor[1], backgroundcolor[2], backgroundcolor[3]
+    else
+        clearred, cleargreen, clearblue = 0, 0, 0
+    end
     scene:addMap(map, "group,tilelayer,imagelayer")
+
+    stage = map.layers.stage
+    if stage then
+        stage.vely = stage.vely or 1
+        local stagespawns = stage.spawns
+        if stagespawns then
+            local stagey = stage.y
+            for _, stagespawn in ipairs(stagespawns) do
+                readMapObjectLayer(stagespawn)
+                local trigger = stagespawn.trigger
+                local characters = stagespawn.characters
+                if trigger and characters then
+                    stagespawntimeline:addEvent(-stagey - trigger.y, doStageSpawn, stagespawn)
+                end
+            end
+        end
+    end
 
     local flyingspawns = map.layers.flyingspawns
     if flyingspawns then
@@ -83,6 +118,7 @@ function Stage.addCharacter(object)
         object.player = player
     end
     object.camera = camera
+    object.stage = stage
     local character = Character.init(object)
     character:addToScene(scene)
     local team = teams[character.team]
@@ -106,7 +142,7 @@ end
 function Stage.quit()
     scene = nil
     camera       = nil
-    map = nil
+    stage = nil
     player       = nil
     teams = nil
     everyone = nil
@@ -133,6 +169,12 @@ local function prune(chars)
 end
 
 function Stage.fixedupdate()
+    local stagey = stage.y
+    local stagevely = min(-stagey, stage.vely)
+    stagey = stagey + stagevely
+    stage.vely = stagevely
+    stage.y = stagey
+
     scene:animate(1)
     t_sort(everyone)
     for i = 1, #everyone do
@@ -149,24 +191,35 @@ function Stage.fixedupdate()
     if currentflyers then
         prune(currentflyers)
     end
+    stagespawntimeline:advance(stagevely)
     if not currentflyers or #currentflyers <= 0 then
         flyingspawntimeline:advance(1)
     end
 end
 
 function Stage.update(dsecs, fixedfrac)
-    for _, teamchars in pairs(teams) do
-        for _, char in ipairs(teamchars) do
-            char:update(dsecs, fixedfrac)
+    for i = 1, #everyone do
+        everyone[i]:update(dsecs, fixedfrac)
+    end
+
+    local stagevely = stage.vely
+    local stagey = stage.y + stagevely*fixedfrac
+    for _, layer in ipairs(stage) do
+        local layertype = layer.type
+        if layertype == "tilelayer" then
+            local chunks = layer.chunks
+            for _, chunk in ipairs(chunks) do
+                local vy = stagevely
+                local y = stagey + chunk.y*chunk.tileheight
+                local sprite = chunk.sprite
+                sprite.y = y + vy * fixedfrac
+            end
         end
     end
 end
 
 function Stage.draw(fixedfrac)
-    local backgroundcolor = map.backgroundcolor
-    if backgroundcolor then
-        love.graphics.clear(backgroundcolor[1], backgroundcolor[2], backgroundcolor[3])
-    end
+    love.graphics.clear(clearred, cleargreen, clearblue)
     scene:draw()
 end
 
