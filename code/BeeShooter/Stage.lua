@@ -4,6 +4,7 @@ local Body         = require "BeeShooter.Character.Body"
 local Script       = require "Component.Script"
 local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
+local PlayerShip
 
 local t_sort = table.sort
 local min = math.min
@@ -58,6 +59,7 @@ local function doStageSpawn(stagespawn)
 end
 
 function Stage.init()
+    PlayerShip   = require "BeeShooter.Character.PlayerShip"
     scene = Scene.new()
     camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 
@@ -224,6 +226,7 @@ end
 function Stage.draw(fixedfrac)
     love.graphics.clear(clearred, cleargreen, clearblue)
     scene:draw()
+    PlayerShip.drawStatus(player)
 end
 
 return Stage
