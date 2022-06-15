@@ -13,6 +13,7 @@ function GamePhase.loadphase(stage, startpoint)
     paused = false
     Database.load("data/db_ships.csv")
     Database.load("data/db_bullets.csv")
+    Database.load("data/db_statics.csv")
     local prefabs_Jenny = Tiled.load("data/prefabs_Jenny.lua")
     Database.addMapObjects(prefabs_Jenny.objects)
     Stage.init()
