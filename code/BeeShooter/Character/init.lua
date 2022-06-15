@@ -1,7 +1,6 @@
 local Script = require "Component.Script"
 local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
-local Body     = require "BeeShooter.Character.Body"
 
 local max = math.max
 local huge = math.huge
@@ -99,7 +98,7 @@ function Character:defeat()
 end
 
 local function fixedupdateDamage(self)
-    local invincibletime = self.invincibletime or huge
+    local invincibletime = self.invincibletime or 0
     if invincibletime > 0 then
         return
     end
