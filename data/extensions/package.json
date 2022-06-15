@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@mapeditor/tiled-api": "^1.8.2"
+  }
+}
