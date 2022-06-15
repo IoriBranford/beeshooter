@@ -35,6 +35,7 @@ function love.load(args)
 
     Tiled.animationtimeunit = "fixedupdates"
     Tiled.setFontPath("data/fonts/")
+    love.graphics.setNewFont("data/fonts/Press Start 2P 8.fnt")
     love.graphics.setLineStyle("rough")
 
     -- Wallpaper.load()
