@@ -8,10 +8,13 @@ local Timeline     = require "Data.Timeline"
 local t_sort = table.sort
 local min = math.min
 
-local Stage = {}
+local Stage = {
+    CameraWidth = 256,
+    CameraHeight = 224
+}
 
 local scene ---@type Scene
-local camera = {x = 0, y = 0, width = 256, height = 224}
+local camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 local stage
 local player ---@type Character
 local teams  ---@type table
@@ -56,7 +59,7 @@ end
 
 function Stage.init()
     scene = Scene.new()
-    camera = {x = 0, y = 0, width = 256, height = 224}
+    camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 
     stagespawntimeline = Timeline.new()
     flyingspawntimeline = Timeline.new()

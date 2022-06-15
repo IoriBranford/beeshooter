@@ -17,7 +17,7 @@ function GamePhase.loadphase(stage, startpoint)
     local prefabs_Jenny = Tiled.load("data/prefabs_Jenny.lua")
     Database.addMapObjects(prefabs_Jenny.objects)
     Stage.init()
-    Canvas.init(Config.basewindowwidth, Config.basewindowheight)
+    Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
 end
 
 function GamePhase.quitphase()
