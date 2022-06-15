@@ -3,7 +3,7 @@
  <editorsettings>
   <export target="prefabs_Jenny.lua" format="lua"/>
  </editorsettings>
- <tileset firstgid="1" source="Jenny.tsx"/>
+ <tileset firstgid="1" source="tilesets/Jenny.tsx"/>
  <objectgroup id="3" name="JennyShotA1">
   <object id="2" name="JennyShotA11" type="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="-90"/>
   <object id="3" name="JennyShotA12" type="JennyShot" gid="3" x="6" y="0" width="32" height="32" rotation="-90"/>

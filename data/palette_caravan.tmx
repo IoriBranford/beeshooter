@@ -3,7 +3,7 @@
  <editorsettings>
   <chunksize width="16" height="14"/>
  </editorsettings>
- <tileset firstgid="1" source="Beehive.tsx"/>
+ <tileset firstgid="1" source="tilesets/Beehive.tsx"/>
  <layer id="1" name="palette" width="30" height="20">
   <data encoding="base64" compression="zlib">
    <chunk x="0" y="-28" width="16" height="14">

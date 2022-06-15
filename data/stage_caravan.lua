@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 9,
-  nextobjectid = 1,
+  nextlayerid = 14,
+  nextobjectid = 12,
   backgroundcolor = { 77, 39, 6 },
   properties = {},
   tilesets = {
@@ -21,7 +21,7 @@ return {
       spacing = 0,
       margin = 0,
       columns = 30,
-      image = "Beehive.png",
+      image = "tilesets/Beehive.png",
       imagewidth = 480,
       imageheight = 256,
       objectalignment = "unspecified",
@@ -332,13 +332,244 @@ return {
       },
       tilecount = 480,
       tiles = {}
+    },
+    {
+      name = "Ant",
+      firstgid = 481,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/Ant.png",
+      imagewidth = 32,
+      imageheight = 16,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 16
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          type = "Ant",
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 2,
+                width = 16,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 1,
+          type = "Ant"
+        }
+      }
+    },
+    {
+      name = "AntBig",
+      firstgid = 483,
+      tilewidth = 60,
+      tileheight = 40,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/AntBig.png",
+      imagewidth = 180,
+      imageheight = 40,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 60,
+        height = 40
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          type = "AntBig",
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 6,
+                y = 8,
+                width = 48,
+                height = 24,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "AntBigParts",
+      firstgid = 486,
+      tilewidth = 24,
+      tileheight = 24,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/AntBigParts.png",
+      imagewidth = 48,
+      imageheight = 24,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 24
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 4,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 1,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 4,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   layers = {
     {
       type = "group",
       id = 3,
-      name = "background",
+      name = "stage",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -367,27 +598,15 @@ return {
           chunks = {
             {
               x = -16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2AUkAOeUKifiZGBAQBAGwDo"
+              data = "eJxjYBgFAwWeUKifiZEy/QoU6h8FlAMABnwBCQ=="
             },
             {
               x = 0, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2DwgzYcmBg1j4D4MQ5MjBoGRiDCgYlRI8eI218At4IVvA=="
+              data = "eJxjYBgZoA0HJkbNIyB+jAMTo4aBEYhwYGLUyDHi9hcxakbB4AUA/TkV3w=="
             },
             {
               x = 16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2DgwCNKDWCkTLschfopBQD1vgED"
-            },
-            {
-              x = -16, y = 14, width = 16, height = 14,
-              data = "eJxjYCAfKDBSoHkUjHjwhEL9TBSmv8GQfgFqMAEq"
-            },
-            {
-              x = 0, y = 14, width = 16, height = 14,
-              data = "eJxjZGRgYARiOSAeBUMLtJGgDh0/AuLHROp/jAUzQNMNNrPR7WFkxMSw9IbNbHR78AFsZmOzZ7ACACQ4FgI="
-            },
-            {
-              x = 16, y = 14, width = 16, height = 14,
-              data = "eJxjYBgFAwnagPgRBfofgwhG8vUzAvXKUaB/FFAGAJAxAm4="
+              data = "eJxjYBja4BGlBjBSpl2OQv2jYGQDALlcAQM="
             }
           }
         },
@@ -411,27 +630,234 @@ return {
           chunks = {
             {
               x = -16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg=="
+              data = "eJxjYBi5gJWRMv3a1HHGKBjBAAB0AwAy"
             },
             {
               x = 0, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFIxGwMjIwsDGSphYZ8zFAMC55ZCwGVKODA8PMwqdGF4/biFEzmAEAe5kDhg=="
+              data = "eJxjYCAPsDIyMLAxkqYWGfMxQDAueWQsBlSjgwPDzMKnRheP24hRMwpGAa0AAKSzA4Y="
             },
             {
               x = 16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFQxmwM1Kmn59C+3Up1D/SAQBgPwBF"
+              data = "eJxjZ2SgCPBTpp1Bl0L9o2AUDGUAANc/AEU="
+            }
+          }
+        },
+        {
+          type = "group",
+          id = 9,
+          name = "spawns",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {},
+          layers = {
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 11,
+              name = "ants1",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1,
+                  name = "",
+                  type = "",
+                  shape = "polyline",
+                  x = 0,
+                  y = 64,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -8, y = 0 },
+                    { x = 16, y = 0 },
+                    { x = 32, y = -16 },
+                    { x = 136, y = -16 },
+                    { x = 152, y = -32 },
+                    { x = 240, y = -32 },
+                    { x = 256, y = -48 },
+                    { x = 272, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2,
+                  name = "",
+                  type = "",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 64,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 3,
+                  name = "",
+                  type = "",
+                  shape = "rectangle",
+                  x = -24,
+                  y = 64,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 4,
+                  name = "",
+                  type = "",
+                  shape = "rectangle",
+                  x = -40,
+                  y = 64,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 5,
+                  name = "",
+                  type = "",
+                  shape = "rectangle",
+                  x = -56,
+                  y = 64,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 6,
+                  name = "",
+                  type = "",
+                  shape = "rectangle",
+                  x = -72,
+                  y = 64,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 11,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -88,
+                  y = 64,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      type = "group",
+      id = 10,
+      name = "flyingspawns",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      layers = {}
+    },
+    {
+      type = "group",
+      id = 13,
+      name = "prefabs",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      layers = {
+        {
+          type = "objectgroup",
+          draworder = "topdown",
+          id = 12,
+          name = "remains",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {},
+          objects = {
+            {
+              id = 7,
+              name = "AntBigCorpse",
+              type = "",
+              shape = "rectangle",
+              x = 0,
+              y = 0,
+              width = 60,
+              height = 40,
+              rotation = 0,
+              gid = 485,
+              visible = true,
+              properties = {}
             },
             {
-              x = -16, y = 14, width = 16, height = 14,
-              data = "eJxjYBgFQxUoM1KmX4BC+/Uo1D8KGBgAlYcAYw=="
+              id = 9,
+              name = "AntBigHead",
+              type = "",
+              shape = "rectangle",
+              x = 24,
+              y = -8,
+              width = 24,
+              height = 24,
+              rotation = 0,
+              gid = 486,
+              visible = true,
+              properties = {}
             },
             {
-              x = 0, y = 14, width = 16, height = 14,
-              data = "eJxjYBhZQJmRgUEFCROjBhkLMqBibHrQ1WDDJkCsz0BYD0wdOjaA2kvIHiEC4YHNbGz2jALaAACZXgeF"
-            },
-            {
-              x = 16, y = 14, width = 16, height = 14,
-              data = "eJxjYBjaQIWRgUGVkXz9gkAsRIH9+kBsQIH+UTCyAQD9bQDO"
+              id = 10,
+              name = "AntBigAbdomen",
+              type = "",
+              shape = "rectangle",
+              x = -24,
+              y = -8,
+              width = 24,
+              height = 24,
+              rotation = 0,
+              gid = 487,
+              visible = true,
+              properties = {}
             }
           }
         }
