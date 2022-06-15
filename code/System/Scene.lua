@@ -105,7 +105,9 @@ function Scene:addTileLayer(tilelayer)
             local h = chunk.height * cellheight
             local cx = chunk.x * cellwidth
             local cy = chunk.y * cellheight
-            sceneobjects[i] = self:addAnimatedChunk(chunk, layerx+cx, layery+cy, layerz)
+            local spritebatch = self:addAnimatedChunk(chunk, layerx+cx, layery+cy, layerz)
+            chunk.sprite = spritebatch
+            sceneobjects[i] = spritebatch
         end
         return sceneobjects
     end
