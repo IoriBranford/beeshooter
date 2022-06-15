@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Ant.tsx"/>
+ <object type="Ant" gid="1" width="16" height="16">
+  <properties>
+   <property name="path" type="object" value="0"/>
+  </properties>
+ </object>
+</template>
