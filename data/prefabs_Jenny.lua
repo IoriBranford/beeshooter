@@ -101,6 +101,48 @@ return {
           properties = {
             ["name"] = "flyslow"
           },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "sting",
+                type = "",
+                shape = "point",
+                x = 16,
+                y = 28,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 12,
+                y = 12,
+                width = 8,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {
+                  ["ishitbox"] = true
+                }
+              }
+            }
+          },
           animation = {
             {
               tileid = 0,
