@@ -39,18 +39,13 @@ function Config.isPortraitDimensions()
 	return w < h
 end
 
-function Config.applyDisplayMode()
+function Config.applyDisplayMode(basew, baseh)
 	local w, h, flags = love.window.getMode()
 	local modes = love.window.getFullscreenModes()
 	local exclusive = Config.exclusive
 	local fullscreen = Config.fullscreen
-	local basew, baseh
 	if Config.isPortraitRotation() then
-		basew = Config.basewindowheight
-		baseh = Config.basewindowwidth
-	else
-		basew = Config.basewindowwidth
-		baseh = Config.basewindowheight
+		basew, baseh = baseh, basew
 	end
 	local bestmode
 	local maxscale = 1

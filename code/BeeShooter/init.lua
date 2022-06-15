@@ -1,6 +1,7 @@
 local Tiled = require "Data.Tiled"
 local Config = require "System.Config"
 local Wallpaper             = require "System.Wallpaper"
+local Stage                 = require "BeeShooter.Stage"
 
 local firstphase = "BeeShooter.GamePhase"
 local firstmap = "data/stage_caravan.lua"
@@ -29,7 +30,7 @@ function love.load(args)
     elseif args.windowed then
         Config.fullscreen = false
     end
-    Config.applyDisplayMode()
+    Config.applyDisplayMode(Stage.CameraWidth, Stage.CameraHeight)
     love.window.setTitle(love.filesystem.getIdentity())
 
     Tiled.animationtimeunit = "fixedupdates"
