@@ -175,9 +175,9 @@ end
 
 function Stage.fixedupdate()
     local stagey = stage.y
-    local stagevely = min(-stagey, stage.vely)
+    local stagevely = stage.vely
     stagey = stagey + stagevely
-    stage.vely = stagevely
+    stage.vely = min(-stagey, stagevely)
     stage.y = stagey
 
     scene:animate(1)
