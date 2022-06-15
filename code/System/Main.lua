@@ -178,6 +178,8 @@ function love.run()
             dsecs = love.timer.step()
         end
 
+        variableupdate = Config.variableupdate
+
         -- Call update and draw
         if love.fixedupdate then
             dfixed = dsecs * fixedrate

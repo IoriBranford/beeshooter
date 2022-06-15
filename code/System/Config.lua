@@ -3,16 +3,31 @@ local pl_pretty = require "pl.pretty"
 
 local filename = "config.lua"
 
-local config = {}
+local config
 
 function Config.reset(defaultconfig)
-	config = {}
+	config = {
+        debug = false,
+        fullscreen = false,
+        exclusive = false,
+        vsync = false,
+        usedpiscale = false,
+        canvasscaleint = true,
+        canvasscalesoft = false,
+        musicvolume = 0.5,
+        soundvolume = 0.5,
+        resizable = false,
+        drawstats = false,
+        rotation = 0,
+		variableupdate = false
+	}
 	if defaultconfig then
 		for k,v in pairs(defaultconfig) do
 			config[k] = v
 		end
 	end
 end
+Config.reset()
 
 function Config.load(defaultconfig)
 	Config.reset(defaultconfig)
@@ -81,6 +96,9 @@ function Config.applyDisplayMode(basew, baseh)
 	flags.x = nil
 	flags.y = nil
 	love.window.setMode(w, h, flags)
+	w, h, flags = love.window.getMode()
+	local refreshrate = flags.refreshrate or 0
+	Config.variableupdate = refreshrate == 0 or refreshrate % 15 ~= 0
 end
 
 setmetatable(Config, {
