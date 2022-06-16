@@ -157,6 +157,7 @@ function PlayerShip:die()
     wait(60)
 
     if self.lives <= 0 then
+        Audio.fadeMusic()
         return
     end
 
