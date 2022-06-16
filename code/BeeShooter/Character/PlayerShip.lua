@@ -107,7 +107,6 @@ local function inputShooting(self, firetime, firebutton)
 end
 
 function PlayerShip:fight()
-    self.scriptdefeat = PlayerShip.die
     local firetime = 0
     while true do
         self.invincibletime = max(0, self.invincibletime - 1)
@@ -149,7 +148,7 @@ function PlayerShip:fight()
     end
 end
 
-function PlayerShip:die()
+function PlayerShip:defeat()
     Body.setVelocity(self, 0, 0)
     Audio.play(self.defeatsound)
     self:dropDefeatObjects()
