@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="4" nextobjectid="6">
+ <tileset firstgid="1" source="tilesets/AntBigParts.tsx"/>
+ <tileset firstgid="3" source="tilesets/AntBig.tsx"/>
+ <tileset firstgid="6" source="tilesets/BeehiveObjects.tsx"/>
+ <objectgroup id="2" name="defeatdrops_AntBig">
+  <object id="1" name="AntBigCorpse" gid="5" x="0" y="0" width="60" height="40">
+   <properties>
+    <property name="z" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="2" name="AntBigHead" gid="1" x="24" y="-8" width="24" height="24">
+   <properties>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="3" name="AntBigAbdomen" gid="2" x="-24" y="-8" width="24" height="24">
+   <properties>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="defeatdrops_HoneyPot">
+  <object id="4" name="HoneyPotOpen" gid="7" x="0" y="0" width="16" height="32">
+   <properties>
+    <property name="z" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="5" name="PowerUp" gid="10" x="0" y="0" width="16" height="32"/>
+ </objectgroup>
+</map>
