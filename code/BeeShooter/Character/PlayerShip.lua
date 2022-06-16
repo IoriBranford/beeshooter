@@ -151,17 +151,8 @@ end
 
 function PlayerShip:die()
     Body.setVelocity(self, 0, 0)
-    Audio.play(self.deathsound)
-    local deathbullet = Database.get(self.deathbullet)
-    local x, y, z = self.x, self.y, self.z
-    if deathbullet then
-        Stage.addCharacter({
-            type = deathbullet.type,
-            x = x,
-            y = y,
-            z = z
-        })
-    end
+    Audio.play(self.defeatsound)
+    self:dropDefeatObjects()
     self.sprite:setHidden(true)
     wait(60)
 

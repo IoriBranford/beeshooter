@@ -1,5 +1,5 @@
 type,script,scriptstart,team,speed,health,collidable,defeatsound,defeatdrops
-Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,TRUE,,
+Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,TRUE,sounds/playerkill.mp3,
 Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,TRUE,sounds/bugkill1.mp3,
 AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,TRUE,sounds/bugkill2.mp3,AntBigCorpse AntBigHead AntBigAbdomen
 AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE,sounds/bugkill1.mp3,
