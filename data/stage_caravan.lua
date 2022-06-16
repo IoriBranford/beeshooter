@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 18,
-  nextobjectid = 97,
+  nextlayerid = 19,
+  nextobjectid = 100,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -557,6 +557,32 @@ return {
           }
         }
       }
+    },
+    {
+      name = "BeehiveObjects",
+      firstgid = 488,
+      tilewidth = 16,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 12,
+      image = "tilesets/BeehiveObjects.png",
+      imagewidth = 192,
+      imageheight = 32,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 12,
+      tiles = {}
     }
   },
   layers = {
@@ -964,11 +990,11 @@ return {
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgF5IInFOpnYqRMvwKF+kcBZYAa8Q8AhRcB8A=="
+              data = "eJxjYBgFAwWeUKifiZEy/QoU6h/pgBrxBwBDFwHw"
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYBjZoI1C/Y+B+AnUHFwYH2BkZGBgYoSYgwtjMx8ZKDBCzMGFsZlPCsBmPjUAMWGPK0wfMSD8QUgNNswA9QcxarBhOVgYEKMGDwAAHnQoaw=="
+              data = "eJxjYBgc4AkQtwHxIzL1MzEyMDwGMRjJ068A1McIxHIk6m8jEuMCj4nEuAAjI3F4sAFC4YJNLQyD0gh6uOAKd2S1cD1I4YJLDTa1jFjSCC412NRiAwB48Sb4"
             },
             {
               x = 16, y = 238, width = 16, height = 14,
@@ -980,7 +1006,7 @@ return {
             },
             {
               x = 0, y = 252, width = 16, height = 14,
-              data = "eJyTY2QYBaNgFAwQAABv/wAg"
+              data = "eJxjZGRgkAPiUTAKRgH9AQB2ggAi"
             },
             {
               x = -16, y = 280, width = 16, height = 14,
@@ -1054,11 +1080,11 @@ return {
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBg4wMpImX5eCu3XplD/KKAMjMY/AwMAy+4AfQ=="
+              data = "eJxjYBi5gJWRMv3a1HHGkAWUhh8vhfZTqn8wxB8AqO4AfQ=="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYKAMsDNSpp8PiNkYcWNC5usAsSjUHFyYkJnaUHNwYWzmw8wiBmAzH2YmuYCXSP2sOMIV5g98apDVoWMxqD+IUYMN60LtJkYNPkCMmsEMAAuECBM="
+              data = "eJxjYIAAVkYGBjYgZmdkIAtoA7EOEOuSp51swMZIOkb2ow6RWBSI+ZAwzCxiAS+afhimln5WAn7GphfZH7jksWExpHAhRS0MI6cRXGqwqcUGBiLNURMAAH4hCF4="
             },
             {
               x = 16, y = 238, width = 16, height = 14,
@@ -1428,20 +1454,16 @@ return {
                   type = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3896,
+                  y = 3888,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = -16, y = 0 },
-                    { x = -48, y = -16 },
-                    { x = -112, y = -16 },
-                    { x = -144, y = -32 },
-                    { x = -232, y = -32 },
-                    { x = -264, y = -48 },
-                    { x = -280, y = -48 }
+                    { x = -24, y = 0 },
+                    { x = -56, y = -16 },
+                    { x = -280, y = -16 }
                   },
                   properties = {}
                 },
@@ -1451,7 +1473,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1483,7 +1505,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 424,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1515,7 +1537,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 344,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1547,7 +1569,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 280,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1579,7 +1601,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 440,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1611,7 +1633,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 360,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1643,7 +1665,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 296,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1675,7 +1697,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 456,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1707,7 +1729,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 376,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1739,7 +1761,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 312,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1771,7 +1793,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 472,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1803,7 +1825,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 392,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1835,7 +1857,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 328,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1867,7 +1889,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 488,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1899,7 +1921,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = 408,
-                  y = 3896,
+                  y = 3888,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1951,14 +1973,28 @@ return {
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = -16, y = 0 },
-                    { x = -48, y = 16 },
-                    { x = -112, y = 16 },
-                    { x = -144, y = 32 },
+                    { x = -24, y = 0 },
+                    { x = -56, y = 16 },
+                    { x = -128, y = 16 },
+                    { x = -160, y = 32 },
                     { x = -232, y = 32 },
                     { x = -264, y = 48 },
                     { x = -280, y = 48 }
                   },
+                  properties = {}
+                },
+                {
+                  id = 97,
+                  name = "",
+                  type = "HoneyPot",
+                  shape = "rectangle",
+                  x = 56,
+                  y = 3816,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 488,
+                  visible = true,
                   properties = {}
                 }
               }
@@ -2052,6 +2088,51 @@ return {
               properties = {
                 ["z"] = 10
               }
+            },
+            {
+              id = 99,
+              name = "HoneyPotOpen",
+              type = "",
+              shape = "rectangle",
+              x = 0,
+              y = 0,
+              width = 16,
+              height = 32,
+              rotation = 0,
+              gid = 489,
+              visible = true,
+              properties = {
+                ["z"] = 1
+              }
+            }
+          }
+        },
+        {
+          type = "objectgroup",
+          draworder = "topdown",
+          id = 18,
+          name = "items",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {},
+          objects = {
+            {
+              id = 98,
+              name = "PowerUp",
+              type = "",
+              shape = "rectangle",
+              x = 0,
+              y = 0,
+              width = 16,
+              height = 32,
+              rotation = 0,
+              gid = 492,
+              visible = true,
+              properties = {}
             }
           }
         }
