@@ -35,6 +35,23 @@ local function walkPath(self, path)
     end
 end
 
+---@param self Character
+local function flyPath(self, path)
+    if not path then
+        return
+    end
+    local points = path.points
+    local pathy = path.y
+    for i = 2, #points, 2 do
+        repeat
+            local destx, desty = points[i-1], points[i]
+            local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
+            Body.setVelocity(self, velx, vely)
+            yield()
+        until self.x == destx and self.y - pathy == desty
+    end
+end
+
 function EnemyShip:Idler()
     Body.setVelocity(self, 0, self.stage.vely)
     waitUntilOnscreen(self)
@@ -45,6 +62,12 @@ end
 ---@param self Character
 function EnemyShip:Ant()
     walkPath(self, self.path)
+    waitUntilOffscreen(self)
+    self:markDisappear()
+end
+
+function EnemyShip:Flyer()
+    flyPath(self, self.path)
     waitUntilOffscreen(self)
     self:markDisappear()
 end
