@@ -36,7 +36,7 @@ local function walkPath(self, path)
 end
 
 function EnemyShip:Idler()
-    Body.setVelocity(0, self.stage.vely)
+    Body.setVelocity(self, 0, self.stage.vely)
     waitUntilOnscreen(self)
     waitUntilOffscreen(self)
     self:markDisappear()
