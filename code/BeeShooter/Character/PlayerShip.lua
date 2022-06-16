@@ -165,7 +165,11 @@ function PlayerShip:defeat()
     Audio.play(self.respawnsound)
     self.sprite:setHidden(false)
     self.health = 1
-    return PlayerShip.fight
+    local camera = self.camera
+    local destx = camera.x + camera.width/2
+    local desty = camera.y + camera.height + 16
+    Body.setPosition(self, destx, desty)
+    return PlayerShip.recenter
 end
 
 function PlayerShip:incPowerLevel()
