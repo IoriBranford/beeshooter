@@ -141,29 +141,33 @@ function Scene:addObject(object)
     return self:addShapeObject(object)
 end
 
-function Scene:addMap(map, layerfilter)
-    local function addLayers(layers)
-        for i = 1, #layers do
-            local layer = layers[i]
-            local layertype = layer.type
-            if not layerfilter or layerfilter:find(layertype) then
-                if layertype == "group" then
-                    addLayers(layer)
-                elseif layertype == "tilelayer" then
-                    layer.sprites = self:addTileLayer(layer)
-                elseif layertype == "objectgroup" then
-                    for i = 1, #layer do
-                        local object = layer[i]
-                        object.sprite = self:addObject(object)
-                    end
-                elseif layertype == "imagelayer" then
-                    layer.sprite = self:addImageLayer(layer)
-                end
-            end
+function Scene:addLayer(layer, layerfilter)
+    local layertype = layer.type
+    if layertype == "group" then
+        self:addLayers(layer, layerfilter)
+    elseif layertype == "tilelayer" then
+        layer.sprites = self:addTileLayer(layer)
+    elseif layertype == "objectgroup" then
+        for i = 1, #layer do
+            local object = layer[i]
+            object.sprite = self:addObject(object)
+        end
+    elseif layertype == "imagelayer" then
+        layer.sprite = self:addImageLayer(layer)
+    end
+end
+
+function Scene:addLayers(layers, layerfilter)
+    for i = 1, #layers do
+        local layer = layers[i]
+        if not layerfilter or layerfilter:find(layer.type) then
+            self:addLayer(layers[i], layerfilter)
         end
     end
+end
 
-    addLayers(map.layers)
+function Scene:addMap(map, layerfilter)
+    self:addLayers(map.layers, layerfilter)
 end
 
 function Scene:addTileParticles(tile, z)
