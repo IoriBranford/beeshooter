@@ -1,0 +1,2 @@
+type,script,scriptstart,team,hitdamageself,collidable,scriptdefeat
+Powerup,BeeShooter.Character.Item,Powerup,EnemyShot,1,TRUE,PowerupPickedUp

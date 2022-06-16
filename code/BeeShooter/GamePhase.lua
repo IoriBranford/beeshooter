@@ -13,6 +13,7 @@ function GamePhase.loadphase(stage, startpoint)
     paused = false
     Database.load("data/db_ships.csv")
     Database.load("data/db_bullets.csv")
+    Database.load("data/db_items.csv")
     Database.load("data/db_statics.csv")
     Database.loadMapObjects("data/prefabs_Jenny.lua")
     Database.loadMapObjects("data/prefabs_caravan.lua")
