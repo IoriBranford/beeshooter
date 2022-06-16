@@ -19,6 +19,7 @@ local testrects = math.testrects
 ---@field enemies table array of characters that do damage
 ---@field invincibletime number
 ---@field collidable boolean otherwise cannot hit or be hit
+---@field defeatdrops string list of items to drop, separated by non-word chars
 local Character = {}
 Character.__index = Character
 
@@ -85,8 +86,27 @@ function Character:isSpriteOnScreen()
     return testrects(x - ox, y - oy, w, h, cx, cy, cw, ch)
 end
 
+function Character:dropDefeatObjects()
+    local defeatdrops = self.defeatdrops
+    if not defeatdrops then
+        return
+    end
+    local Stage = require "BeeShooter.Stage"
+    for droptype in string.gmatch(defeatdrops, "%w+") do
+        local dropprefab = Database.get(droptype)
+        if dropprefab then
+            Stage.addCharacter({
+                type = droptype,
+                x = self.x + dropprefab.x,
+                y = self.y + dropprefab.y
+            })
+        end
+    end
+end
+
 ---@param self Character
 local function defaultDefeat(self)
+    self:dropDefeatObjects()
     self:markDisappear()
 end
 
