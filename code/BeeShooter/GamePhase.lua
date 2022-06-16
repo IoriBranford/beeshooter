@@ -10,6 +10,8 @@ local GamePhase = {}
 local paused
 
 function GamePhase.loadphase(stage, startpoint)
+    local isAsset = Assets.isAsset
+    local getAsset = Assets.get
     paused = false
     Database.load("data/db_ships.csv")
     Database.load("data/db_bullets.csv")
@@ -17,6 +19,13 @@ function GamePhase.loadphase(stage, startpoint)
     Database.load("data/db_statics.csv")
     Database.loadMapObjects("data/prefabs_Jenny.lua")
     Database.loadMapObjects("data/prefabs_caravan.lua")
+    Database.forEach(function(_, properties)
+        for k,v in pairs(properties) do
+            if isAsset(v) then
+                getAsset(v)
+            end
+        end
+    end)
     Stage.init()
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
     local music = Audio.playMusic("music/Funkbuster.ogg")
