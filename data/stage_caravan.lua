@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 19,
-  nextobjectid = 100,
+  nextlayerid = 20,
+  nextobjectid = 105,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -582,7 +582,225 @@ return {
       properties = {},
       wangsets = {},
       tilecount = 12,
-      tiles = {}
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 12,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 2,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 16,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 4,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 16,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "Fly",
+      firstgid = 500,
+      tilewidth = 32,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 16,
+      image = "tilesets/Fly.png",
+      imagewidth = 512,
+      imageheight = 32,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 16,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 6,
+                width = 24,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 4,
+              duration = 50
+            },
+            {
+              tileid = 5,
+              duration = 50
+            },
+            {
+              tileid = 6,
+              duration = 50
+            },
+            {
+              tileid = 7,
+              duration = 50
+            },
+            {
+              tileid = 8,
+              duration = 50
+            },
+            {
+              tileid = 9,
+              duration = 50
+            },
+            {
+              tileid = 10,
+              duration = 50
+            },
+            {
+              tileid = 11,
+              duration = 50
+            },
+            {
+              tileid = 12,
+              duration = 50
+            },
+            {
+              tileid = 13,
+              duration = 50
+            },
+            {
+              tileid = 14,
+              duration = 50
+            },
+            {
+              tileid = 15,
+              duration = 50
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1995,6 +2213,102 @@ return {
                   rotation = 0,
                   gid = 488,
                   visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 19,
+              name = "room2fly1",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 100,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 101,
+                  name = "",
+                  type = "Fly",
+                  shape = "rectangle",
+                  x = 16,
+                  y = 3760,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 500,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 102 }
+                  }
+                },
+                {
+                  id = 104,
+                  name = "",
+                  type = "Fly",
+                  shape = "rectangle",
+                  x = 240,
+                  y = 3760,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 2147484148,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 103 }
+                  }
+                },
+                {
+                  id = 102,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 0,
+                  y = 3744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 16, y = 16 },
+                    { x = 96, y = 96 },
+                    { x = 16, y = 176 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 103,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 3744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 16, y = 16 },
+                    { x = -64, y = 96 },
+                    { x = 16, y = 176 }
+                  },
                   properties = {}
                 }
               }
