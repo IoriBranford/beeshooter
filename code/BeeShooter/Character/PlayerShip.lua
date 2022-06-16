@@ -8,6 +8,7 @@ local Movement = require "Component.Movement"
 local cos = math.cos
 local sin = math.sin
 local max = math.max
+local min = math.min
 local abs = math.abs
 local yield = coroutine.yield
 local wait = coroutine.wait
@@ -170,6 +171,10 @@ function PlayerShip:die()
     self.sprite:setHidden(false)
     self.health = 1
     return PlayerShip.fight
+end
+
+function PlayerShip:incPowerLevel()
+    self.power = min(self.power + 1, 3)
 end
 
 function PlayerShip:drawStatus()
