@@ -50,9 +50,9 @@ end
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu then
         paused = not paused
-        if paused then
-            Audio.play("sounds/pause.ogg")
-        end
+        -- if paused then
+        --     Audio.play("sounds/pause.ogg")
+        -- end
     elseif key == "f2" then
         Stage.restart()
     end
