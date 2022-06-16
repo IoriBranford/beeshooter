@@ -76,7 +76,6 @@ local function inputShooting(self, firetime, firebutton)
         firetime = max(0, firetime - 1)
         if firetime <= 0 then
             local x, y = Body.getPosition(self)
-            local z = self.z
             local weapon = self.weapon
             local power = self.power
             local i = 1
@@ -89,8 +88,7 @@ local function inputShooting(self, firetime, firebutton)
                 local bullet = Stage.addCharacter({
                     type = bullettype,
                     x = bulletprefab.x + x,
-                    y = bulletprefab.y + y,
-                    z = z - 1
+                    y = bulletprefab.y + y
                 })
                 local angle = bullet.rotation or 0
                 local speed = bullet.speed or 1

@@ -1,6 +1,6 @@
-type,script,scriptstart,team,speed,health,z,collidable
-Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,100,TRUE
-Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,0,TRUE
-AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,0,TRUE
-AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,10,TRUE
-AntBigAbdomen,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,10,TRUE
+type,script,scriptstart,team,speed,health,collidable
+Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,TRUE
+Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,TRUE
+AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,TRUE
+AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE
+AntBigAbdomen,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE
