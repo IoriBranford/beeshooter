@@ -47,7 +47,7 @@ function Character:init()
     self.age = 0                                    -- in fixedupdates
     self.lifetime = self.lifetime or 0              -- die at this age, immortal if <= 0
     self.health = self.health or 1
-    self.hitdamageenemy = self.hitdamageenemy or 1
+    self.hitdamageenemy = self.hitdamageenemy or 0
     self.hitdamageself = self.hitdamageself or 0
     self.maxhealth = self.maxhealth or self.health
     self.width = self.width or 1    -- graphic width
