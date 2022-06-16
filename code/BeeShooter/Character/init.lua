@@ -1,8 +1,8 @@
 local Script = require "Component.Script"
 local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
+local Audio    = require "System.Audio"
 
-local max = math.max
 local huge = math.huge
 local testrects = math.testrects
 
@@ -20,6 +20,8 @@ local testrects = math.testrects
 ---@field invincibletime number
 ---@field collidable boolean otherwise cannot hit or be hit
 ---@field defeatdrops string list of items to drop, separated by non-word chars
+---@field spawnsound string
+---@field defeatsound string
 local Character = {}
 Character.__index = Character
 
@@ -60,6 +62,7 @@ function Character:init()
     self.velz = self.velz or 0
     self.fixedupdateorder = self.fixedupdateorder or 0
     initHitbox(self)
+    Audio.play(self.spawnsound)
     return self
 end
 
@@ -105,7 +108,8 @@ function Character:dropDefeatObjects()
 end
 
 ---@param self Character
-local function defaultDefeat(self)
+function Character:defaultDefeat()
+    Audio.play(self.defeatsound)
     self:dropDefeatObjects()
     self:markDisappear()
 end
@@ -115,7 +119,7 @@ function Character:defeat()
         return
     end
     self.defeated = true
-    Script.start(self, self.scriptdefeat or defaultDefeat)
+    Script.start(self, self.scriptdefeat or Character.defaultDefeat)
 end
 
 local function respondToCollisions(self, others, collide)
