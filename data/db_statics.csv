@@ -1,2 +1,3 @@
-type,lifetime
-AntBigCorpse,512
+type,script,scriptstart
+AntBigCorpse,BeeShooter.Character.EnemyShip,Idler
+HoneyPotOpen,BeeShooter.Character.EnemyShip,Idler
