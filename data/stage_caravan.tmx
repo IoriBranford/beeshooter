@@ -77,6 +77,9 @@ A brief chance to practice controls</text>
    <property name="starty" type="float" value="-4256"/>
   </properties>
   <layer id="8" name="underfloor" width="30" height="20">
+   <properties>
+    <property name="z" type="float" value="-0.5"/>
+   </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="16" y="0" width="16" height="14">
    eJxjYBgFo2AUkAvaoPgRmfoBddgB7w==
@@ -126,6 +129,9 @@ A brief chance to practice controls</text>
    </data>
   </layer>
   <layer id="1" name="floor" width="30" height="20">
+   <properties>
+    <property name="z" type="float" value="0"/>
+   </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="-16" y="0" width="16" height="14">
    eJxjYBgFo2AUDARQZmRgAAAEDwAl
@@ -194,6 +200,9 @@ A brief chance to practice controls</text>
   </layer>
   <group id="9" name="spawns">
    <objectgroup id="11" name="room1ants1">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
     <object id="1" type="Path" x="0" y="3960">
      <polyline points="-8,0 8,0 40,-16 128,-16 160,-32 224,-32 256,-48 272,-48"/>
     </object>
@@ -277,10 +286,10 @@ A brief chance to practice controls</text>
     </object>
    </objectgroup>
    <objectgroup id="16" name="room1ants2">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
     <object id="64" type="Path" x="264" y="3896">
-     <properties>
-      <property name="path" type="object" value="64"/>
-     </properties>
      <polyline points="0,0 -16,0 -48,-16 -112,-16 -144,-32 -232,-32 -264,-48 -280,-48"/>
     </object>
     <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3896" rotation="0">
@@ -433,7 +442,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="80" type="Trigger" x="-32" y="3848">
+    <object id="80" type="Trigger" x="-32" y="3880">
      <point/>
     </object>
     <object id="81" type="Path" x="272" y="3928">
@@ -445,9 +454,21 @@ A brief chance to practice controls</text>
  <group id="10" name="flyingspawns"/>
  <group id="13" name="prefabs">
   <objectgroup id="12" name="remains">
-   <object id="7" name="AntBigCorpse" gid="485" x="0" y="0" width="60" height="40"/>
-   <object id="9" name="AntBigHead" gid="486" x="24" y="-8" width="24" height="24"/>
-   <object id="10" name="AntBigAbdomen" gid="487" x="-24" y="-8" width="24" height="24"/>
+   <object id="7" name="AntBigCorpse" gid="485" x="0" y="0" width="60" height="40">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="9" name="AntBigHead" gid="486" x="24" y="-8" width="24" height="24">
+    <properties>
+     <property name="z" type="float" value="10"/>
+    </properties>
+   </object>
+   <object id="10" name="AntBigAbdomen" gid="487" x="-24" y="-8" width="24" height="24">
+    <properties>
+     <property name="z" type="float" value="10"/>
+    </properties>
+   </object>
   </objectgroup>
  </group>
 </map>

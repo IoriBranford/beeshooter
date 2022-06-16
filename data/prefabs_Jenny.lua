@@ -202,7 +202,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 2,
@@ -245,7 +247,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 8,
@@ -316,7 +320,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 16,
@@ -415,7 +421,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 6,
@@ -458,7 +466,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 12,
@@ -529,7 +539,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 22,
@@ -628,7 +640,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 100
+      },
       objects = {
         {
           id = 1,

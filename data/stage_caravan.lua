@@ -928,7 +928,9 @@ return {
           offsety = 0,
           parallaxx = 1,
           parallaxy = 1,
-          properties = {},
+          properties = {
+            ["z"] = -0.5
+          },
           encoding = "base64",
           compression = "zlib",
           chunks = {
@@ -1008,7 +1010,9 @@ return {
           offsety = 0,
           parallaxx = 1,
           parallaxy = 1,
-          properties = {},
+          properties = {
+            ["z"] = 0
+          },
           encoding = "base64",
           compression = "zlib",
           chunks = {
@@ -1121,7 +1125,9 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["z"] = 1
+              },
               objects = {
                 {
                   id = 1,
@@ -1412,7 +1418,9 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["z"] = 1
+              },
               objects = {
                 {
                   id = 64,
@@ -1435,9 +1443,7 @@ return {
                     { x = -264, y = -48 },
                     { x = -280, y = -48 }
                   },
-                  properties = {
-                    ["path"] = { id = 64 }
-                  }
+                  properties = {}
                 },
                 {
                   id = 65,
@@ -1925,7 +1931,7 @@ return {
                   type = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 3848,
+                  y = 3880,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2011,7 +2017,9 @@ return {
               rotation = 0,
               gid = 485,
               visible = true,
-              properties = {}
+              properties = {
+                ["z"] = 1
+              }
             },
             {
               id = 9,
@@ -2025,7 +2033,9 @@ return {
               rotation = 0,
               gid = 486,
               visible = true,
-              properties = {}
+              properties = {
+                ["z"] = 10
+              }
             },
             {
               id = 10,
@@ -2039,7 +2049,9 @@ return {
               rotation = 0,
               gid = 487,
               visible = true,
-              properties = {}
+              properties = {
+                ["z"] = 10
+              }
             }
           }
         }
