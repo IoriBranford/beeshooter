@@ -18,6 +18,7 @@ local testrects = math.testrects
 ---@field camera table camera reference for convenience
 ---@field enemies table array of characters that do damage
 ---@field invincibletime number
+---@field collidable boolean otherwise cannot hit or be hit
 local Character = {}
 Character.__index = Character
 
@@ -97,28 +98,40 @@ function Character:defeat()
     Script.start(self, self.scriptdefeat or defaultDefeat)
 end
 
+local function respondToCollisions(self, others, collide)
+    if not others or not self.collidable then
+        return
+    end
+    local hitbox = self.hitbox or DefaultHitbox
+    local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
+    for _, other in ipairs(others) do
+        if other.collidable then
+            local hitbox2 = other.hitbox or DefaultHitbox
+            local x2, y2, w2, h2 =
+                hitbox2.x + other.x,
+                hitbox2.y + other.y,
+                hitbox2.width, hitbox2.height
+            if testrects(x, y, w, h, x2, y2, w2, h2) then
+                collide(self, other)
+            end
+        end
+    end
+end
+
 local function fixedupdateDamage(self)
     local invincibletime = self.invincibletime or 0
     if invincibletime > 0 then
         return
     end
-    local damage = 0
     local enemies = self.enemies
-    if enemies then
-        local hitbox = self.hitbox or DefaultHitbox
-        local hitdamageself = self.hitdamageself or 0
-        local hitx, hity, hitwidth, hitheight = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
-        for i, enemy in ipairs(enemies) do
-            local enemyhitbox = enemy.hitbox or DefaultHitbox
-            local ehitx, ehity, ehitwidth, ehitheight =
-                enemyhitbox.x + enemy.x,
-                enemyhitbox.y + enemy.y,
-                enemyhitbox.width, enemyhitbox.height
-            if testrects(hitx, hity, hitwidth, hitheight, ehitx, ehity, ehitwidth, ehitheight) then
-                damage = damage + enemy.hitdamageenemy + hitdamageself
-            end
-        end
+    if not enemies then
+        return
     end
+    local damage = 0
+    local hitdamageself = self.hitdamageself or 0
+    respondToCollisions(self, enemies, function(_, enemy)
+        damage = damage + enemy.hitdamageenemy + hitdamageself
+    end)
     self.health = self.health - damage
     if self.health < 1 then
         self:defeat()
