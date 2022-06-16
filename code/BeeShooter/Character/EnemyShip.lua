@@ -5,6 +5,13 @@ local EnemyShip = {}
 local yield = coroutine.yield
 
 ---@param self Character
+local function waitUntilOnscreen(self)
+    while not self:isSpriteOnScreen() do
+        yield()
+    end
+end
+
+---@param self Character
 local function waitUntilOffscreen(self)
     while self:isSpriteOnScreen() do
         yield()
@@ -26,6 +33,13 @@ local function walkPath(self, path)
             yield()
         until self.x == destx and self.y - stage.y == desty
     end
+end
+
+function EnemyShip:Idler()
+    Body.setVelocity(0, self.stage.vely)
+    waitUntilOnscreen(self)
+    waitUntilOffscreen(self)
+    self:markDisappear()
 end
 
 ---@param self Character
