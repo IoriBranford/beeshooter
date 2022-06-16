@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="15" nextobjectid="44">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="18" nextobjectid="97">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -8,7 +8,74 @@
  <tileset firstgid="481" source="tilesets/Ant.tsx"/>
  <tileset firstgid="483" source="tilesets/AntBig.tsx"/>
  <tileset firstgid="486" source="tilesets/AntBigParts.tsx"/>
- <group id="3" name="stage" offsetx="0" offsety="-640">
+ <objectgroup id="15" name="comments">
+  <object id="44" x="-256" y="0" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">18</text>
+  </object>
+  <object id="45" x="-256" y="224" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">17</text>
+  </object>
+  <object id="46" x="-256" y="448" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">16</text>
+  </object>
+  <object id="47" x="-256" y="672" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">15</text>
+  </object>
+  <object id="48" x="-256" y="896" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">14</text>
+  </object>
+  <object id="49" x="-256" y="1120" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">13</text>
+  </object>
+  <object id="50" x="-256" y="1344" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">12</text>
+  </object>
+  <object id="51" x="-256" y="1568" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">11</text>
+  </object>
+  <object id="52" x="-256" y="1792" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">10</text>
+  </object>
+  <object id="53" x="-256" y="2016" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">9</text>
+  </object>
+  <object id="54" x="-256" y="2240" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">8</text>
+  </object>
+  <object id="55" x="-256" y="2464" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">7</text>
+  </object>
+  <object id="56" x="-256" y="2688" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">6</text>
+  </object>
+  <object id="57" x="-256" y="2912" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">5</text>
+  </object>
+  <object id="58" x="-256" y="3136" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">4</text>
+  </object>
+  <object id="59" x="-256" y="3360" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">3</text>
+  </object>
+  <object id="60" x="-256" y="3584" width="256" height="224">
+   <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">2</text>
+  </object>
+  <object id="61" x="-256" y="3808" width="256" height="224">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 1
+
+Easy kills
+Teach how to use Lv1 weapons</text>
+  </object>
+  <object id="62" x="-256" y="4032" width="256" height="224">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start Room
+
+A brief chance to practice controls</text>
+  </object>
+ </objectgroup>
+ <group id="3" name="stage">
+  <properties>
+   <property name="starty" type="float" value="-4256"/>
+  </properties>
   <layer id="8" name="underfloor" width="30" height="20">
    <data encoding="base64" compression="zlib">
     <chunk x="16" y="0" width="16" height="14">
@@ -31,6 +98,30 @@
   </chunk>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED
+  </chunk>
+    <chunk x="-16" y="238" width="16" height="14">
+   eJxjYBgF5IInFOpnYqRMvwKF+kcBZYAa8Q8AhRcB8A==
+  </chunk>
+    <chunk x="0" y="238" width="16" height="14">
+   eJxjYBjZoI1C/Y+B+AnUHFwYH2BkZGBgYoSYgwtjMx8ZKDBCzMGFsZlPCsBmPjUAMWGPK0wfMSD8QUgNNswA9QcxarBhOVgYEKMGDwAAHnQoaw==
+  </chunk>
+    <chunk x="16" y="238" width="16" height="14">
+   eJxjYBgFo4B88IhSAxgp0y5Hof6BBgA2TQED
+  </chunk>
+    <chunk x="-16" y="252" width="16" height="14">
+   eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg==
+  </chunk>
+    <chunk x="0" y="252" width="16" height="14">
+   eJyTY2QYBaNgFAwQAABv/wAg
+  </chunk>
+    <chunk x="-16" y="280" width="16" height="14">
+   eJxjYBg48IRC/UyMlOlXoFD/KBgFlAIADosBCQ==
+  </chunk>
+    <chunk x="0" y="280" width="16" height="14">
+   eJxjYKAMtFGIH1OIGRkpw6NgFAwkAAB+vRax
+  </chunk>
+    <chunk x="16" y="280" width="16" height="14">
+   eJxjYKAMPKJQPwMjZdrlKNQ/CkbBQAIAOmsBAw==
   </chunk>
    </data>
   </layer>
@@ -63,90 +154,290 @@
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ==
   </chunk>
+    <chunk x="-16" y="238" width="16" height="14">
+   eJxjYBg4wMpImX5eCu3XplD/KKAMjMY/AwMAy+4AfQ==
+  </chunk>
+    <chunk x="0" y="238" width="16" height="14">
+   eJxjYKAMsDNSpp8PiNkYcWNC5usAsSjUHFyYkJnaUHNwYWzmw8wiBmAzH2YmuYCXSP2sOMIV5g98apDVoWMxqD+IUYMN60LtJkYNPkCMmsEMAAuECBM=
+  </chunk>
+    <chunk x="16" y="238" width="16" height="14">
+   eJxjYBjZgJ2RMv38FNo/0Pp1KdQ/CigDALT/AGM=
+  </chunk>
+    <chunk x="-16" y="252" width="16" height="14">
+   eJxjYBgFo2BoAlZGyvTzUmg/NfQDABJzAC4=
+  </chunk>
+    <chunk x="0" y="252" width="16" height="14">
+   eJxjYBgFo2DgADsj+XpZgXr5KbCbl2Hg9QMAMPIAYw==
+  </chunk>
+    <chunk x="16" y="252" width="16" height="14">
+   eJxjYBgFo2DgADsjZfr5KbR/oPUDACH/ADY=
+  </chunk>
+    <chunk x="-16" y="266" width="16" height="14">
+   eJxjYCAf8FKgd1T/qP5R/QwMAC4nALc=
+  </chunk>
+    <chunk x="0" y="266" width="16" height="14">
+   eJytj0EOABAQA+uAE/7/W0QkIqytrKQ3s51mANGBfr4xGSOFx5Fgx/cwG1b3H4e924LXbji5Mw63bgv+tUFy1zi8uiUHTfftBsvOBDci/anv6wX3
+  </chunk>
+    <chunk x="16" y="266" width="16" height="14">
+   eJzjZ6AM8I/qH9U/qp9sAACNTwDT
+  </chunk>
+    <chunk x="-16" y="280" width="16" height="14">
+   eJxjYCAfaFOgdxSMglHAwAAAj+wALA==
+  </chunk>
+    <chunk x="0" y="280" width="16" height="14">
+   eJzTYWBg0KEAj4JRMArIBwBRhwLB
+  </chunk>
+    <chunk x="16" y="280" width="16" height="14">
+   eJzTZRgFo2AUDBQAAKEAAC4=
+  </chunk>
    </data>
   </layer>
   <group id="9" name="spawns">
-   <objectgroup id="11" name="ants1">
-    <object id="1" type="Path" x="0" y="544">
+   <objectgroup id="11" name="room1ants1">
+    <object id="1" type="Path" x="0" y="3960">
      <polyline points="-8,0 8,0 40,-16 128,-16 160,-32 224,-32 256,-48 272,-48"/>
     </object>
-    <object id="2" template="enemies/Ant.tx" x="-8" y="544">
+    <object id="2" template="enemies/Ant.tx" x="-8" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="38" template="enemies/Ant.tx" x="-168" y="544">
+    <object id="38" template="enemies/Ant.tx" x="-168" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="28" template="enemies/Ant.tx" x="-88" y="544">
+    <object id="28" template="enemies/Ant.tx" x="-88" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="3" template="enemies/Ant.tx" x="-24" y="544">
+    <object id="3" template="enemies/Ant.tx" x="-24" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="36" template="enemies/Ant.tx" x="-184" y="544">
+    <object id="36" template="enemies/Ant.tx" x="-184" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="27" template="enemies/Ant.tx" x="-104" y="544">
+    <object id="27" template="enemies/Ant.tx" x="-104" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="4" template="enemies/Ant.tx" x="-40" y="544">
+    <object id="4" template="enemies/Ant.tx" x="-40" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="34" template="enemies/Ant.tx" x="-200" y="544">
+    <object id="34" template="enemies/Ant.tx" x="-200" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="26" template="enemies/Ant.tx" x="-120" y="544">
+    <object id="26" template="enemies/Ant.tx" x="-120" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="5" template="enemies/Ant.tx" x="-56" y="544">
+    <object id="5" template="enemies/Ant.tx" x="-56" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="32" template="enemies/Ant.tx" x="-216" y="544">
+    <object id="32" template="enemies/Ant.tx" x="-216" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="25" template="enemies/Ant.tx" x="-136" y="544">
+    <object id="25" template="enemies/Ant.tx" x="-136" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="6" template="enemies/Ant.tx" x="-72" y="544">
+    <object id="6" template="enemies/Ant.tx" x="-72" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="30" template="enemies/Ant.tx" x="-232" y="544">
+    <object id="30" template="enemies/Ant.tx" x="-232" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="24" template="enemies/Ant.tx" x="-152" y="544">
+    <object id="24" template="enemies/Ant.tx" x="-152" y="3960">
      <properties>
       <property name="path" type="object" value="1"/>
      </properties>
     </object>
-    <object id="11" type="Trigger" x="-16" y="536">
+    <object id="11" type="Trigger" x="-32" y="3952">
      <point/>
+    </object>
+   </objectgroup>
+   <objectgroup id="16" name="room1ants2">
+    <object id="64" type="Path" x="264" y="3896">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+     <polyline points="0,0 -16,0 -48,-16 -112,-16 -144,-32 -232,-32 -264,-48 -280,-48"/>
+    </object>
+    <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="96" template="enemies/Ant.tx" gid="2147484129" x="272" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="66" template="enemies/Ant.tx" gid="2147484129" x="424" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="95" template="enemies/Ant.tx" gid="2147484129" x="432" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="67" template="enemies/Ant.tx" gid="2147484129" x="344" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="94" template="enemies/Ant.tx" gid="2147484129" x="352" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="68" template="enemies/Ant.tx" gid="2147484129" x="280" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="93" template="enemies/Ant.tx" gid="2147484129" x="288" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="69" template="enemies/Ant.tx" gid="2147484129" x="440" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="92" template="enemies/Ant.tx" gid="2147484129" x="448" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="70" template="enemies/Ant.tx" gid="2147484129" x="360" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="91" template="enemies/Ant.tx" gid="2147484129" x="368" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="71" template="enemies/Ant.tx" gid="2147484129" x="296" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="90" template="enemies/Ant.tx" gid="2147484129" x="304" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="72" template="enemies/Ant.tx" gid="2147484129" x="456" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="89" template="enemies/Ant.tx" gid="2147484129" x="464" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="73" template="enemies/Ant.tx" gid="2147484129" x="376" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="88" template="enemies/Ant.tx" gid="2147484129" x="384" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="74" template="enemies/Ant.tx" gid="2147484129" x="312" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="87" template="enemies/Ant.tx" gid="2147484129" x="320" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="75" template="enemies/Ant.tx" gid="2147484129" x="472" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="86" template="enemies/Ant.tx" gid="2147484129" x="480" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="76" template="enemies/Ant.tx" gid="2147484129" x="392" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="85" template="enemies/Ant.tx" gid="2147484129" x="400" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="77" template="enemies/Ant.tx" gid="2147484129" x="328" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="84" template="enemies/Ant.tx" gid="2147484129" x="336" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="78" template="enemies/Ant.tx" gid="2147484129" x="488" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="83" template="enemies/Ant.tx" gid="2147484129" x="496" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="79" template="enemies/Ant.tx" gid="2147484129" x="408" y="3896" rotation="0">
+     <properties>
+      <property name="path" type="object" value="64"/>
+     </properties>
+    </object>
+    <object id="82" template="enemies/Ant.tx" gid="2147484129" x="416" y="3928" rotation="0">
+     <properties>
+      <property name="path" type="object" value="81"/>
+     </properties>
+    </object>
+    <object id="80" type="Trigger" x="-32" y="3848">
+     <point/>
+    </object>
+    <object id="81" type="Path" x="272" y="3928">
+     <polyline points="0,0 -16,0 -48,16 -112,16 -144,32 -232,32 -264,48 -280,48"/>
     </object>
    </objectgroup>
   </group>
