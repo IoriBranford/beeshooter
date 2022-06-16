@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Fly.tsx"/>
+ <object type="Fly" gid="1" width="32" height="32">
+  <properties>
+   <property name="path" type="object" value="0"/>
+  </properties>
+ </object>
+</template>
