@@ -454,31 +454,4 @@ A brief chance to practice controls</text>
   </group>
  </group>
  <group id="10" name="flyingspawns"/>
- <group id="13" name="prefabs">
-  <objectgroup id="12" name="remains">
-   <object id="7" name="AntBigCorpse" gid="485" x="0" y="0" width="60" height="40">
-    <properties>
-     <property name="z" type="float" value="1"/>
-    </properties>
-   </object>
-   <object id="9" name="AntBigHead" gid="486" x="24" y="-8" width="24" height="24">
-    <properties>
-     <property name="z" type="float" value="10"/>
-    </properties>
-   </object>
-   <object id="10" name="AntBigAbdomen" gid="487" x="-24" y="-8" width="24" height="24">
-    <properties>
-     <property name="z" type="float" value="10"/>
-    </properties>
-   </object>
-   <object id="99" name="HoneyPotOpen" gid="489" x="0" y="0" width="16" height="32">
-    <properties>
-     <property name="z" type="float" value="1"/>
-    </properties>
-   </object>
-  </objectgroup>
-  <objectgroup id="18" name="items">
-   <object id="98" name="PowerUp" gid="492" x="0" y="0" width="16" height="32"/>
-  </objectgroup>
- </group>
 </map>
