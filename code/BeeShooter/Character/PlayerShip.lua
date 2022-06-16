@@ -111,10 +111,12 @@ function PlayerShip:fight()
     local firetime = 0
     while true do
         self.invincibletime = max(0, self.invincibletime - 1)
+        self.sprite.hidden = self.invincibletime % 4 >= 2
         local firebutton = Controls.getButtonsDown()
         local _, weaponbutton, speedbutton = Controls.getButtonsPressed()
         if weaponbutton then
             self.weapon = self.weapon == "A" and "B" or "A"
+            Audio.play(self.changeweaponsound)
         end
         if speedbutton then
             local fastspeed = self.fastspeed
@@ -122,9 +124,11 @@ function PlayerShip:fight()
             if self.speed == fastspeed then
                 self.speed = slowspeed
                 self.sprite:changeTile("flyslow")
+                Audio.play(self.slowsound)
             else
                 self.speed = fastspeed
                 self.sprite:changeTile("flyfast")
+                Audio.play(self.fastsound)
             end
         end
         inputMovement(self)
@@ -174,6 +178,7 @@ function PlayerShip:die()
 end
 
 function PlayerShip:incPowerLevel()
+    self.invincibletime = self.powerupinvincibletime or 60
     self.power = min(self.power + 1, 3)
 end
 
