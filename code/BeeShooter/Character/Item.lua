@@ -29,7 +29,7 @@ end
 
 function Item:PowerupPickedUp()
     PlayerShip.incPowerLevel(self.player)
-    self:markDisappear()
+    self:defaultDefeat()
 end
 
 return Item
