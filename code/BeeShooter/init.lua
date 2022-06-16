@@ -17,10 +17,8 @@ function love.load(args)
         end
     end
 
-    Config.exhibit = args.exhibit
     Config.drawbodies = args.drawbodies
     Config.drawstats = args.drawstats
-    Config.drawai = args.drawai
     Config.exclusive = args.exclusive
     if args.rotation ~= -1 then
         Config.rotation = args.rotation
@@ -58,50 +56,27 @@ return {
     defaultconfig = {
         _version = 1,
         drawbodies = false,
-        drawai = false,
-        exhibit = false,
-        canvasresolution = "HIGH",
-    
+
         key_left = "left",
         key_right = "right",
         key_up = "up",
         key_down = "down",
         key_fire = "z",
-        key_focus = "x",
-        key_bomb = "c",
+        key_changeweapon = "x",
+        key_changespeed = "c",
         key_pause = "pause",
         key_pausemenu = "escape",
         key_restart = "none",
-    
-        game_rules = "ORIGINAL",
-        game_difficulty = "NORMAL",
-        game_dialogue = true,
-        player_character = "Amy",
-        player_hitbox = "FOCUSFIRE",
-        player_burst = 4,
-        practice_lives = 2,
-        practice_bombs = 1,
-        practice_wingmen = 0,
-        practice_powerlevel = 0,
-        practice_stage = "DEMONREALM",
-    
+
         joy_deadzone = 0.25,
         joy_move1 = "left",
         joy_move2 = "dp",
         joy_startbackrestart = false,
-        joy_fire = "x",
-        joy_focus = "a",
-        joy_bomb = "b",
+        joy_fire = "a",
+        joy_changeweapon = "b",
+        joy_changespeed = "x",
         joy_pause = "back",
         joy_pausemenu = "start",
-        joy_namingscheme = "XBOX",
-    
-        hud_inner = "AUTO",
-        hud_outer = true,
-    
-        backgroundstyle = "ART2",
-        highscores_difficulty = "NORMAL",
-        highscores_character = "Amy",
-        highscores_onlineposition = "TOP",
+        joy_namingscheme = "XBOX"
     }
 }

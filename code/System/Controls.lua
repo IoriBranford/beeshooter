@@ -73,30 +73,30 @@ end
 
 function Controls.getButtonsDown()
 	local fire = love.keyboard.isDown(Config.key_fire)
-	local focus = love.keyboard.isDown(Config.key_focus)
-	local bomb = love.keyboard.isDown(Config.key_bomb)
+	local changeweapon = love.keyboard.isDown(Config.key_changeweapon)
+	local changespeed = love.keyboard.isDown(Config.key_changespeed)
 
 	local joysticks = love.joystick:getJoysticks()
 	for i = 1, #joysticks do
 		local joystick = joysticks[i]
 		fire  = fire  or joystick:isGamepadDown(Config.joy_fire)
-		focus = focus or joystick:isGamepadDown(Config.joy_focus)
-		bomb  = bomb  or joystick:isGamepadDown(Config.joy_bomb)
+		changeweapon = changeweapon or joystick:isGamepadDown(Config.joy_changeweapon)
+		changespeed  = changespeed  or joystick:isGamepadDown(Config.joy_changespeed)
 	end
-	return fire, focus, bomb
+	return fire, changeweapon, changespeed
 end
 
 function Controls.getButtonsPressed()
-	return buttonspressed.fire, buttonspressed.focus, buttonspressed.bomb, buttonspressed.pause
+	return buttonspressed.fire, buttonspressed.changeweapon, buttonspressed.changespeed, buttonspressed.pause
 end
 
 function Controls.keypressed(key)
 	if key == Config.key_fire then
 		buttonspressed.fire = true
-	elseif key == Config.key_focus then
-		buttonspressed.focus = true
-	elseif key == Config.key_bomb then
-		buttonspressed.bomb = true
+	elseif key == Config.key_changeweapon then
+		buttonspressed.changeweapon = true
+	elseif key == Config.key_changespeed then
+		buttonspressed.changespeed = true
 	elseif key == Config.key_pausemenu then
 		buttonspressed.pause = true
 	end
@@ -105,10 +105,10 @@ end
 function Controls.gamepadpressed(joystick, button)
 	if button == Config.joy_fire then
 		buttonspressed.fire = true
-	elseif button == Config.joy_focus then
-		buttonspressed.focus = true
-	elseif button == Config.joy_bomb then
-		buttonspressed.bomb = true
+	elseif button == Config.joy_changeweapon then
+		buttonspressed.changeweapon = true
+	elseif button == Config.joy_changespeed then
+		buttonspressed.changespeed = true
 	elseif button == Config.joy_pausemenu then
 		buttonspressed.pause = true
 	end
@@ -124,11 +124,11 @@ function Controls.updateDialogueState(dialoguestate)
 	if not Config.game_dialogue or dialoguestate == "skip" then
 		return "skip"
 	end
-	local fire, focus, bomb, pause = Controls.getButtonsPressed()
+	local fire, changeweapon, changespeed, pause = Controls.getButtonsPressed()
 	if pause then
 		return "skip"
 	end
-	if fire or focus or bomb then
+	if fire or changeweapon or changespeed then
 		return "advance"
 	end
 end
