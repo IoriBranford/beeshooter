@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 15,
-  nextobjectid = 44,
+  nextlayerid = 18,
+  nextobjectid = 97,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -561,16 +561,358 @@ return {
   },
   layers = {
     {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 15,
+      name = "comments",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 44,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 0,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "18",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 45,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 224,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "17",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 448,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "16",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 47,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 672,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "15",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 48,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 896,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "14",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 49,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 1120,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "13",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 50,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 1344,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "12",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 1568,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "11",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 52,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 1792,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "10",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 53,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 2016,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "9",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 54,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 2240,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "8",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 55,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 2464,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "7",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 2688,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "6",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 2912,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "5",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 3136,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "4",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 59,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 3360,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "3",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 60,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 3584,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "2",
+          fontfamily = "Press Start 2P",
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 61,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 3808,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "Room 1\n\nEasy kills\nTeach how to use Lv1 weapons",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        },
+        {
+          id = 62,
+          name = "",
+          type = "",
+          shape = "text",
+          x = -256,
+          y = 4032,
+          width = 256,
+          height = 224,
+          rotation = 0,
+          visible = true,
+          text = "Start Room\n\nA brief chance to practice controls",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {}
+        }
+      }
+    },
+    {
       type = "group",
       id = 3,
       name = "stage",
       visible = true,
       opacity = 1,
       offsetx = 0,
-      offsety = -640,
+      offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["starty"] = -4256
+      },
       layers = {
         {
           type = "tilelayer",
@@ -617,6 +959,38 @@ return {
             {
               x = 16, y = 28, width = 16, height = 14,
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
+            },
+            {
+              x = -16, y = 238, width = 16, height = 14,
+              data = "eJxjYBgF5IInFOpnYqRMvwKF+kcBZYAa8Q8AhRcB8A=="
+            },
+            {
+              x = 0, y = 238, width = 16, height = 14,
+              data = "eJxjYBjZoI1C/Y+B+AnUHFwYH2BkZGBgYoSYgwtjMx8ZKDBCzMGFsZlPCsBmPjUAMWGPK0wfMSD8QUgNNswA9QcxarBhOVgYEKMGDwAAHnQoaw=="
+            },
+            {
+              x = 16, y = 238, width = 16, height = 14,
+              data = "eJxjYBgFo4B88IhSAxgp0y5Hof6BBgA2TQED"
+            },
+            {
+              x = -16, y = 252, width = 16, height = 14,
+              data = "eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg=="
+            },
+            {
+              x = 0, y = 252, width = 16, height = 14,
+              data = "eJyTY2QYBaNgFAwQAABv/wAg"
+            },
+            {
+              x = -16, y = 280, width = 16, height = 14,
+              data = "eJxjYBg48IRC/UyMlOlXoFD/KBgFlAIADosBCQ=="
+            },
+            {
+              x = 0, y = 280, width = 16, height = 14,
+              data = "eJxjYKAMtFGIH1OIGRkpw6NgFAwkAAB+vRax"
+            },
+            {
+              x = 16, y = 280, width = 16, height = 14,
+              data = "eJxjYKAMPKJQPwMjZdrlKNQ/CkbBQAIAOmsBAw=="
             }
           }
         },
@@ -673,6 +1047,54 @@ return {
             {
               x = 16, y = 28, width = 16, height = 14,
               data = "eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ=="
+            },
+            {
+              x = -16, y = 238, width = 16, height = 14,
+              data = "eJxjYBg4wMpImX5eCu3XplD/KKAMjMY/AwMAy+4AfQ=="
+            },
+            {
+              x = 0, y = 238, width = 16, height = 14,
+              data = "eJxjYKAMsDNSpp8PiNkYcWNC5usAsSjUHFyYkJnaUHNwYWzmw8wiBmAzH2YmuYCXSP2sOMIV5g98apDVoWMxqD+IUYMN60LtJkYNPkCMmsEMAAuECBM="
+            },
+            {
+              x = 16, y = 238, width = 16, height = 14,
+              data = "eJxjYBjZgJ2RMv38FNo/0Pp1KdQ/CigDALT/AGM="
+            },
+            {
+              x = -16, y = 252, width = 16, height = 14,
+              data = "eJxjYBgFo2BoAlZGyvTzUmg/NfQDABJzAC4="
+            },
+            {
+              x = 0, y = 252, width = 16, height = 14,
+              data = "eJxjYBgFo2DgADsj+XpZgXr5KbCbl2Hg9QMAMPIAYw=="
+            },
+            {
+              x = 16, y = 252, width = 16, height = 14,
+              data = "eJxjYBgFo2DgADsjZfr5KbR/oPUDACH/ADY="
+            },
+            {
+              x = -16, y = 266, width = 16, height = 14,
+              data = "eJxjYCAf8FKgd1T/qP5R/QwMAC4nALc="
+            },
+            {
+              x = 0, y = 266, width = 16, height = 14,
+              data = "eJytj0EOABAQA+uAE/7/W0QkIqytrKQ3s51mANGBfr4xGSOFx5Fgx/cwG1b3H4e924LXbji5Mw63bgv+tUFy1zi8uiUHTfftBsvOBDci/anv6wX3"
+            },
+            {
+              x = 16, y = 266, width = 16, height = 14,
+              data = "eJzjZ6AM8I/qH9U/qp9sAACNTwDT"
+            },
+            {
+              x = -16, y = 280, width = 16, height = 14,
+              data = "eJxjYCAfaFOgdxSMglHAwAAAj+wALA=="
+            },
+            {
+              x = 0, y = 280, width = 16, height = 14,
+              data = "eJzTYWBg0KEAj4JRMArIBwBRhwLB"
+            },
+            {
+              x = 16, y = 280, width = 16, height = 14,
+              data = "eJzTZRgFo2AUDBQAAKEAAC4="
             }
           }
         },
@@ -692,7 +1114,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 11,
-              name = "ants1",
+              name = "room1ants1",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -707,7 +1129,7 @@ return {
                   type = "Path",
                   shape = "polyline",
                   x = 0,
-                  y = 544,
+                  y = 3960,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -730,7 +1152,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -746,7 +1168,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -168,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -762,7 +1184,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -88,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -778,7 +1200,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -24,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -794,7 +1216,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -184,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -810,7 +1232,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -104,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -826,7 +1248,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -40,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -842,7 +1264,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -200,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -858,7 +1280,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -120,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -874,7 +1296,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -56,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -890,7 +1312,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -216,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -906,7 +1328,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -136,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -922,7 +1344,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -72,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -938,7 +1360,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -232,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -954,7 +1376,7 @@ return {
                   type = "Ant",
                   shape = "rectangle",
                   x = -152,
-                  y = 544,
+                  y = 3960,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -969,12 +1391,568 @@ return {
                   name = "",
                   type = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 536,
+                  x = -32,
+                  y = 3952,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 16,
+              name = "room1ants2",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 64,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3896,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -16, y = 0 },
+                    { x = -48, y = -16 },
+                    { x = -112, y = -16 },
+                    { x = -144, y = -32 },
+                    { x = -232, y = -32 },
+                    { x = -264, y = -48 },
+                    { x = -280, y = -48 }
+                  },
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 65,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 96,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 66,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 424,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 95,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 67,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 344,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 94,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 68,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 280,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 93,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 69,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 440,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 92,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 448,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 70,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 360,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 91,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 368,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 71,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 296,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 90,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 72,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 456,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 89,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 464,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 73,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 376,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 88,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 74,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 312,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 87,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 320,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 75,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 472,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 86,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 480,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 76,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 392,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 85,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 400,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 77,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 328,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 84,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 78,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 488,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 83,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 496,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 79,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 408,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 64 }
+                  }
+                },
+                {
+                  id = 82,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 416,
+                  y = 3928,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 81 }
+                  }
+                },
+                {
+                  id = 80,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 3848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 81,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 3928,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -16, y = 0 },
+                    { x = -48, y = 16 },
+                    { x = -112, y = 16 },
+                    { x = -144, y = 32 },
+                    { x = -232, y = 32 },
+                    { x = -264, y = 48 },
+                    { x = -280, y = 48 }
+                  },
                   properties = {}
                 }
               }

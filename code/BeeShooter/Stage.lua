@@ -77,10 +77,11 @@ function Stage.init()
 
     stage = map.layers.stage
     if stage then
-        stage.vely = stage.vely or 1
+        local stagey = stage.starty or stage.y
+        stage.y = stagey
+        stage.vely = stage.vely or .75
         local stagespawns = stage.spawns
         if stagespawns then
-            local stagey = stage.y
             for _, stagespawn in ipairs(stagespawns) do
                 readMapObjectLayer(stagespawn)
                 local trigger = stagespawn.trigger
