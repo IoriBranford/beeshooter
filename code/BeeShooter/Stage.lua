@@ -4,6 +4,7 @@ local Body         = require "BeeShooter.Character.Body"
 local Script       = require "Component.Script"
 local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
+local Database     = require "Data.Database"
 local PlayerShip
 
 local t_sort = table.sort
@@ -72,6 +73,15 @@ function Stage.init()
         clearred, cleargreen, clearblue = backgroundcolor[1], backgroundcolor[2], backgroundcolor[3]
     else
         clearred, cleargreen, clearblue = 0, 0, 0
+    end
+
+    local prefablayers = map.layers.prefabs
+    if prefablayers then
+        for i, prefablayer in ipairs(prefablayers) do
+            if prefablayer.type == "objectgroup" then
+                Database.addMapObjectGroup(prefablayer)
+            end
+        end
     end
 
     stage = map.layers.stage
