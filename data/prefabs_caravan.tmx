@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="4" nextobjectid="6">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="5" nextobjectid="7">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/AntBigParts.tsx"/>
  <tileset firstgid="3" source="tilesets/AntBig.tsx"/>
  <tileset firstgid="6" source="tilesets/BeehiveObjects.tsx"/>
+ <tileset firstgid="18" source="tilesets/FlyBullet.tsx"/>
  <objectgroup id="2" name="defeatdrops_AntBig">
   <object id="1" name="AntBigCorpse" gid="5" x="0" y="0" width="60" height="40">
    <properties>
@@ -30,5 +31,8 @@
    </properties>
   </object>
   <object id="5" name="Powerup" gid="10" x="0" y="0" width="16" height="32"/>
+ </objectgroup>
+ <objectgroup id="4" name="enemybullets">
+  <object id="6" name="FlyBullet" gid="18" x="0" y="0" width="16" height="8"/>
  </objectgroup>
 </map>

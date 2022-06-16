@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 4,
-  nextobjectid = 6,
+  nextlayerid = 5,
+  nextobjectid = 7,
   properties = {},
   tilesets = {
     {
@@ -288,6 +288,74 @@ return {
           }
         }
       }
+    },
+    {
+      name = "FlyBullet",
+      firstgid = 18,
+      tilewidth = 16,
+      tileheight = 8,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/FlyBullet.png",
+      imagewidth = 32,
+      imageheight = 8,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 8
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 6,
+                y = 2,
+                width = 4,
+                height = 4,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -394,6 +462,35 @@ return {
           height = 32,
           rotation = 0,
           gid = 10,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 4,
+      name = "enemybullets",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 6,
+          name = "FlyBullet",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 18,
           visible = true,
           properties = {}
         }
