@@ -16,6 +16,24 @@ local EnvMetatable = {}
 setmetatable(Env, EnvMetatable)
 local self
 
+function Env.setScaleX(sx)
+    local sprite = self.sprite
+    if sprite then
+        sprite.sx = sx
+    end
+end
+
+function Env.setCollidable(collidable)
+    self.collidable = collidable
+end
+
+function Env.setAlpha(alpha)
+    local sprite = self.sprite
+    if sprite then
+        sprite.alpha = alpha
+    end
+end
+
 local Commands = {}
 
 function Commands.setEnvOn(commandscript)
