@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="18" nextobjectid="97">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="19" nextobjectid="100">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -8,6 +8,7 @@
  <tileset firstgid="481" source="tilesets/Ant.tsx"/>
  <tileset firstgid="483" source="tilesets/AntBig.tsx"/>
  <tileset firstgid="486" source="tilesets/AntBigParts.tsx"/>
+ <tileset firstgid="488" source="tilesets/BeehiveObjects.tsx"/>
  <objectgroup id="15" name="comments">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">18</text>
@@ -103,10 +104,10 @@ A brief chance to practice controls</text>
    eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBgF5IInFOpnYqRMvwKF+kcBZYAa8Q8AhRcB8A==
+   eJxjYBgFAwWeUKifiZEy/QoU6h/pgBrxBwBDFwHw
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJxjYBjZoI1C/Y+B+AnUHFwYH2BkZGBgYoSYgwtjMx8ZKDBCzMGFsZlPCsBmPjUAMWGPK0wfMSD8QUgNNswA9QcxarBhOVgYEKMGDwAAHnQoaw==
+   eJxjYBgc4AkQtwHxIzL1MzEyMDwGMRjJ068A1McIxHIk6m8jEuMCj4nEuAAjI3F4sAFC4YJNLQyD0gh6uOAKd2S1cD1I4YJLDTa1jFjSCC412NRiAwB48Sb4
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
    eJxjYBgFo4B88IhSAxgp0y5Hof6BBgA2TQED
@@ -115,7 +116,7 @@ A brief chance to practice controls</text>
    eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg==
   </chunk>
     <chunk x="0" y="252" width="16" height="14">
-   eJyTY2QYBaNgFAwQAABv/wAg
+   eJxjZGRgkAPiUTAKRgH9AQB2ggAi
   </chunk>
     <chunk x="-16" y="280" width="16" height="14">
    eJxjYBg48IRC/UyMlOlXoFD/KBgFlAIADosBCQ==
@@ -161,10 +162,10 @@ A brief chance to practice controls</text>
    eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ==
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBg4wMpImX5eCu3XplD/KKAMjMY/AwMAy+4AfQ==
+   eJxjYBi5gJWRMv3a1HHGkAWUhh8vhfZTqn8wxB8AqO4AfQ==
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJxjYKAMsDNSpp8PiNkYcWNC5usAsSjUHFyYkJnaUHNwYWzmw8wiBmAzH2YmuYCXSP2sOMIV5g98apDVoWMxqD+IUYMN60LtJkYNPkCMmsEMAAuECBM=
+   eJxjYIAAVkYGBjYgZmdkIAtoA7EOEOuSp51swMZIOkb2ow6RWBSI+ZAwzCxiAS+afhimln5WAn7GphfZH7jksWExpHAhRS0MI6cRXGqwqcUGBiLNURMAAH4hCF4=
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
    eJxjYBjZgJ2RMv38FNo/0Pp1KdQ/CigDALT/AGM=
@@ -289,10 +290,10 @@ A brief chance to practice controls</text>
     <properties>
      <property name="z" type="float" value="1"/>
     </properties>
-    <object id="64" type="Path" x="264" y="3896">
-     <polyline points="0,0 -16,0 -48,-16 -112,-16 -144,-32 -232,-32 -264,-48 -280,-48"/>
+    <object id="64" type="Path" x="264" y="3888">
+     <polyline points="0,0 -24,0 -56,-16 -280,-16"/>
     </object>
-    <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3896" rotation="0">
+    <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -302,7 +303,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="66" template="enemies/Ant.tx" gid="2147484129" x="424" y="3896" rotation="0">
+    <object id="66" template="enemies/Ant.tx" gid="2147484129" x="424" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -312,7 +313,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="67" template="enemies/Ant.tx" gid="2147484129" x="344" y="3896" rotation="0">
+    <object id="67" template="enemies/Ant.tx" gid="2147484129" x="344" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -322,7 +323,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="68" template="enemies/Ant.tx" gid="2147484129" x="280" y="3896" rotation="0">
+    <object id="68" template="enemies/Ant.tx" gid="2147484129" x="280" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -332,7 +333,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="69" template="enemies/Ant.tx" gid="2147484129" x="440" y="3896" rotation="0">
+    <object id="69" template="enemies/Ant.tx" gid="2147484129" x="440" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -342,7 +343,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="70" template="enemies/Ant.tx" gid="2147484129" x="360" y="3896" rotation="0">
+    <object id="70" template="enemies/Ant.tx" gid="2147484129" x="360" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -352,7 +353,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="71" template="enemies/Ant.tx" gid="2147484129" x="296" y="3896" rotation="0">
+    <object id="71" template="enemies/Ant.tx" gid="2147484129" x="296" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -362,7 +363,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="72" template="enemies/Ant.tx" gid="2147484129" x="456" y="3896" rotation="0">
+    <object id="72" template="enemies/Ant.tx" gid="2147484129" x="456" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -372,7 +373,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="73" template="enemies/Ant.tx" gid="2147484129" x="376" y="3896" rotation="0">
+    <object id="73" template="enemies/Ant.tx" gid="2147484129" x="376" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -382,7 +383,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="74" template="enemies/Ant.tx" gid="2147484129" x="312" y="3896" rotation="0">
+    <object id="74" template="enemies/Ant.tx" gid="2147484129" x="312" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -392,7 +393,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="75" template="enemies/Ant.tx" gid="2147484129" x="472" y="3896" rotation="0">
+    <object id="75" template="enemies/Ant.tx" gid="2147484129" x="472" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -402,7 +403,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="76" template="enemies/Ant.tx" gid="2147484129" x="392" y="3896" rotation="0">
+    <object id="76" template="enemies/Ant.tx" gid="2147484129" x="392" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -412,7 +413,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="77" template="enemies/Ant.tx" gid="2147484129" x="328" y="3896" rotation="0">
+    <object id="77" template="enemies/Ant.tx" gid="2147484129" x="328" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -422,7 +423,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="78" template="enemies/Ant.tx" gid="2147484129" x="488" y="3896" rotation="0">
+    <object id="78" template="enemies/Ant.tx" gid="2147484129" x="488" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -432,7 +433,7 @@ A brief chance to practice controls</text>
       <property name="path" type="object" value="81"/>
      </properties>
     </object>
-    <object id="79" template="enemies/Ant.tx" gid="2147484129" x="408" y="3896" rotation="0">
+    <object id="79" template="enemies/Ant.tx" gid="2147484129" x="408" y="3888" rotation="0">
      <properties>
       <property name="path" type="object" value="64"/>
      </properties>
@@ -446,8 +447,9 @@ A brief chance to practice controls</text>
      <point/>
     </object>
     <object id="81" type="Path" x="272" y="3928">
-     <polyline points="0,0 -16,0 -48,16 -112,16 -144,32 -232,32 -264,48 -280,48"/>
+     <polyline points="0,0 -24,0 -56,16 -128,16 -160,32 -232,32 -264,48 -280,48"/>
     </object>
+    <object id="97" template="enemies/HoneyPot.tx" x="56" y="3816"/>
    </objectgroup>
   </group>
  </group>
@@ -469,6 +471,14 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="10"/>
     </properties>
    </object>
+   <object id="99" name="HoneyPotOpen" gid="489" x="0" y="0" width="16" height="32">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="18" name="items">
+   <object id="98" name="PowerUp" gid="492" x="0" y="0" width="16" height="32"/>
   </objectgroup>
  </group>
 </map>
