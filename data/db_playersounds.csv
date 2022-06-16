@@ -1,0 +1,2 @@
+type,fastsound,slowsound,changeweaponsound
+Jenny,sounds/fast.mp3,sounds/slow.mp3,sounds/changeweapon.mp3
