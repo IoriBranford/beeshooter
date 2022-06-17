@@ -61,8 +61,10 @@ local function doStageSpawn(stagespawn)
         character.y = character.y + stagey
     end
     local paths = stagespawn.paths
-    for _, path in ipairs(paths) do
-        path.y = path.y + stagey
+    if paths then
+        for _, path in ipairs(paths) do
+            path.y = path.y + stagey
+        end
     end
     Stage.addCharacters(stagespawn.characters)
 end
