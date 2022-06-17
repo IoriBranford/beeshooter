@@ -10,6 +10,8 @@ local sin = math.sin
 local max = math.max
 local min = math.min
 local abs = math.abs
+local s_format = string.format
+local s_rep = string.rep
 local yield = coroutine.yield
 local wait = coroutine.wait
 
@@ -178,9 +180,20 @@ function PlayerShip:incPowerLevel()
 end
 
 function PlayerShip:drawStatus()
-    local status = string.format("%07dpts   ♥ %02d   Speed %s",
-        0, self.lives, string.rep("▶", self.speed == self.fastspeed and 2 or 1))
-    love.graphics.printf(status, 8, 208, 240, "left")
+    local score = s_format("%07d", self.score)
+    love.graphics.printf(score, 8, 8, 120, "right")
+
+    local lives = self.lives
+    local livesstring
+    if lives > 9 then
+        livesstring = "♥"..lives
+    else
+        livesstring = s_rep("♥", lives)
+    end
+    love.graphics.printf(livesstring, 8, 208, 120, "left")
+
+    local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
+    love.graphics.printf(speedstring, 256-8-64, 208, 64, "left")
 end
 
 return PlayerShip
