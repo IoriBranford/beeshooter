@@ -4,7 +4,8 @@ local Body         = require "BeeShooter.Character.Body"
 local Script       = require "Component.Script"
 local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
-local Database     = require "Data.Database"
+local PathPoint    = require "Object.PathPoint"
+local Path         = require "Object.Path"
 local PlayerShip
 
 local t_sort = table.sort
@@ -31,7 +32,7 @@ local gametimer
 local gametimerrunning
 
 local function readMapObjectLayer(objectlayer)
-    local paths, characters
+    local paths, pointdatas, characters
     for i, object in ipairs(objectlayer) do
         local objecttype = object.type
         if objecttype == "Trigger" then
@@ -39,10 +40,31 @@ local function readMapObjectLayer(objectlayer)
         elseif objecttype == "Path" then
             paths = paths or {}
             paths[#paths+1] = object
+        elseif objecttype == "PathPoint" then
+            pointdatas = pointdatas or {}
+            pointdatas[#pointdatas+1] = object
         else
             characters = characters or {}
             characters[#characters+1] = object
             object.layer = objectlayer
+        end
+    end
+    if paths and pointdatas then
+        for _, pointdata in ipairs(pointdatas) do
+            local datapath = pointdata.path
+            if datapath then
+                Path.addPointData(datapath, pointdata)
+            else
+                for _, path in ipairs(paths) do
+                    if Path.addPointData(path, pointdata) then
+                        datapath = path
+                        break
+                    end
+                end
+            end
+            if datapath then
+                PathPoint.init(pointdata)
+            end
         end
     end
     objectlayer.paths = paths
