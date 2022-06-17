@@ -121,7 +121,10 @@ function Stage.init()
                 local trigger = stagespawn.trigger
                 local characters = stagespawn.characters
                 if trigger and characters then
-                    stagespawntimeline:addEvent(-stagey - trigger.y, doStageSpawn, stagespawn)
+                    local timelinepos = -stagey - trigger.y
+                    if timelinepos >= 0 then
+                        stagespawntimeline:addEvent(timelinepos, doStageSpawn, stagespawn)
+                    end
                 end
             end
         end
