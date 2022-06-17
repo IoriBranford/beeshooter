@@ -85,12 +85,14 @@ end
 ---@param self Character
 function EnemyShip:Ant()
     walkPath(self, self.path or findPath(self))
+    Body.setVelocity(self, 0, self.stage.vely)
     waitUntilOffscreen(self)
     self:markDisappear()
 end
 
 function EnemyShip:Flyer()
     flyPath(self, self.path or findPath(self))
+    Body.setVelocity(self, 0, self.stage.vely)
     waitUntilOffscreen(self)
     self:markDisappear()
 end
