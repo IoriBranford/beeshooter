@@ -167,6 +167,14 @@ function PlayerShip:fight()
 end
 
 function PlayerShip:defeat()
+    if self.power > 1 then
+        self.power = self.power - 1
+        self.defeated = false
+        self.health = 1
+        self.invincibletime = 60
+        Audio.play(self.hurtsound)
+        return PlayerShip.fight
+    end
     Body.setVelocity(self, 0, 0)
     Audio.play(self.defeatsound)
     self:dropDefeatObjects()
