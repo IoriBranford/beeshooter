@@ -9,6 +9,8 @@ local PlayerShip
 
 local t_sort = table.sort
 local min = math.min
+local floor = math.floor
+local s_format = string.format
 
 local Stage = {
     CameraWidth = 256,
@@ -25,6 +27,7 @@ local flyingspawntimeline ---@type Timeline
 local currentflyers
 local stagespawntimeline ---@type Timeline
 local clearred, cleargreen, clearblue = 0, 0, 0
+local gametimer = 60*120
 
 local function readMapObjectLayer(objectlayer)
     local paths, characters
@@ -206,6 +209,13 @@ function Stage.fixedupdate()
     if not currentflyers or #currentflyers <= 0 then
         flyingspawntimeline:advance(1)
     end
+
+    if gametimer > 0 then
+        gametimer = gametimer - 1
+    end
+    if gametimer <= 0 then
+        -- time out
+    end
 end
 
 function Stage.update(dsecs, fixedfrac)
@@ -229,9 +239,18 @@ function Stage.update(dsecs, fixedfrac)
     end
 end
 
+local function drawTimer()
+    local timerminutes = floor(gametimer/3600)
+    local timerseconds = floor(gametimer / 60) % 60
+    local timerframes = gametimer % 60
+    local timerstring = s_format("%d:%02d:%02d", timerminutes, timerseconds, timerframes)
+    love.graphics.printf(timerstring, 128, 8, 120, "right")
+end
+
 function Stage.draw(fixedfrac)
     love.graphics.clear(clearred, cleargreen, clearblue)
     scene:draw()
+    drawTimer()
     PlayerShip.drawStatus(player)
 end
 
