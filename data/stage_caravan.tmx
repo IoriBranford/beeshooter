@@ -327,15 +327,41 @@ A brief chance to practice controls</text>
     <object id="127" template="enemies/PathPoint.tx" x="40" y="3808">
      <properties>
       <property name="commandscript">setSpeed(0)
--- shoot
-setSpeed(fastspeed)</property>
+
+for _=1,3 do
+
+local angle = -pi*3/16
+for _=1,3 do
+ wait(6)
+ shootTargetAS(bullettype, player, angle, bulletspeed or 3)
+ angle = angle + pi/16
+end
+wait(12)
+
+end
+
+wait(30)
+setSpeed(fastspeed or 2)</property>
      </properties>
     </object>
     <object id="128" template="enemies/PathPoint.tx" x="216" y="3808">
      <properties>
       <property name="commandscript">setSpeed(0)
--- shoot
-setSpeed(fastspeed)</property>
+
+for _=1,3 do
+
+local angle = pi*3/16
+for _=1,3 do
+ wait(6)
+ shootTargetAS(bullettype, player, angle, bulletspeed or 3)
+ angle = angle - pi/16
+end
+wait(12)
+
+end
+
+wait(30)
+setSpeed(fastspeed or 2)</property>
      </properties>
     </object>
    </objectgroup>
