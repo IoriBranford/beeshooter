@@ -107,10 +107,16 @@ function Character:dropDefeatObjects()
     end
 end
 
+function Character:giveDefeatPoints()
+    local PlayerShip = require "BeeShooter.Character.PlayerShip"
+    PlayerShip.scorePoints(self.player, self.defeatpoints or 0)
+end
+
 ---@param self Character
 function Character:defaultDefeat()
     Audio.play(self.defeatsound)
     self:dropDefeatObjects()
+    self:giveDefeatPoints()
     self:markDisappear()
 end
 

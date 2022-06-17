@@ -1,8 +1,8 @@
-type,script,scriptstart,team,speed,health,collidable,defeatsound,defeatdrops
-Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,TRUE,sounds/playerkill.mp3,
-Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,TRUE,sounds/bugkill1.mp3,
-AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,TRUE,sounds/bugkill2.mp3,AntBigCorpse AntBigHead AntBigAbdomen
-AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE,sounds/bugkill1.mp3,
-AntBigAbdomen,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE,sounds/bugkill1.mp3,
-HoneyPot,BeeShooter.Character.EnemyShip,Idler,EnemyShip,,1,TRUE,sounds/breakpot.mp3,HoneyPotOpen Powerup
-Fly,BeeShooter.Character.EnemyShip,Flyer,EnemyShip,2,8,TRUE,sounds/bugkill2.mp3,
+type,script,scriptstart,team,speed,health,collidable,defeatsound,defeatpoints,defeatdrops
+Jenny,BeeShooter.Character.PlayerShip,,PlayerShip,,,TRUE,sounds/playerkill.mp3,,
+Ant,BeeShooter.Character.EnemyShip,Ant,EnemyShip,2,1,TRUE,sounds/bugkill1.mp3,100,
+AntBig,BeeShooter.Character.EnemyShip,Ant,EnemyShip,1,16,TRUE,sounds/bugkill2.mp3,1000,AntBigCorpse AntBigHead AntBigAbdomen
+AntBigHead,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE,sounds/bugkill1.mp3,250,
+AntBigAbdomen,BeeShooter.Character.EnemyShip,FallingDebris,EnemyShip,,8,TRUE,sounds/bugkill1.mp3,250,
+HoneyPot,BeeShooter.Character.EnemyShip,Idler,EnemyShip,,1,TRUE,sounds/breakpot.mp3,,HoneyPotOpen Powerup
+Fly,BeeShooter.Character.EnemyShip,Flyer,EnemyShip,2,8,TRUE,sounds/bugkill2.mp3,500,
