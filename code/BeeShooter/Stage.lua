@@ -42,6 +42,7 @@ local function readMapObjectLayer(objectlayer)
         else
             characters = characters or {}
             characters[#characters+1] = object
+            object.layer = objectlayer
         end
     end
     objectlayer.paths = paths
