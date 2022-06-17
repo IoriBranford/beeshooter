@@ -2,6 +2,8 @@ local Movement = require "Component.Movement"
 local Body     = require "BeeShooter.Character.Body"
 local EnemyShip = {}
 
+local huge = math.huge
+local distsq = math.distsq
 local yield = coroutine.yield
 
 ---@param self Character
@@ -59,15 +61,36 @@ function EnemyShip:Idler()
     self:markDisappear()
 end
 
+local function findPath(self)
+    local paths = self.layer and self.layer.paths
+    if not paths then
+        return
+    end
+    local closestpath
+    local closestdsq = huge
+    local x, y = self.x, self.y
+    for i, path in ipairs(paths) do
+        local points = path.points
+        local pathx = points[1] + path.x
+        local pathy = points[2] + path.y
+        local dsq = distsq(x, y, pathx, pathy)
+        if dsq < closestdsq then
+            closestpath = path
+            closestdsq = dsq
+        end
+    end
+    return closestpath
+end
+
 ---@param self Character
 function EnemyShip:Ant()
-    walkPath(self, self.path)
+    walkPath(self, self.path or findPath(self))
     waitUntilOffscreen(self)
     self:markDisappear()
 end
 
 function EnemyShip:Flyer()
-    flyPath(self, self.path)
+    flyPath(self, self.path or findPath(self))
     waitUntilOffscreen(self)
     self:markDisappear()
 end
