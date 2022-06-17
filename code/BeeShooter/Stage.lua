@@ -110,7 +110,12 @@ function Stage.init()
 
     stage = map.layers.stage
     if stage then
-        local stagey = stage.starty or stage.y
+        local stagey = stage.starty
+        if stagey then
+            stagey = -stagey
+        else
+            stagey = stage.y
+        end
         stage.y = stagey
         stage.vely = stage.vely or .75
         scene:addLayers(stage, "group,tilelayer,imagelayer")

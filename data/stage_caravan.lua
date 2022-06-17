@@ -1156,7 +1156,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {
-        ["starty"] = -4256
+        ["starty"] = 4256
       },
       layers = {
         {
