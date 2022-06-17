@@ -17,6 +17,21 @@ local wait = coroutine.wait
 
 local PlayerShip = {}
 
+local NextLifeScores = {
+    10000,
+    50000,
+    100000,
+    150000,
+    250000,
+    350000,
+    500000,
+    650000,
+    800000,
+    1000000,
+    1200000,
+    1500000
+}
+
 function PlayerShip:start()
     local tile = self.tile
     local shapes = tile and tile.shapes
@@ -28,6 +43,7 @@ function PlayerShip:start()
     self.slowspeed = self.slowspeed or 2
     self.speed = self.slowspeed
     self.weapon = "A"
+    self.nextlifeindex = 1
     return PlayerShip.recenter
 end
 
@@ -172,6 +188,19 @@ function PlayerShip:defeat()
     local desty = camera.y + camera.height + 16
     Body.setPosition(self, destx, desty)
     return PlayerShip.recenter
+end
+
+function PlayerShip:scorePoints(points)
+    local newscore = self.score + points
+    local nextlifescore = NextLifeScores[self.nextlifeindex]
+    if nextlifescore then
+        if newscore >= nextlifescore  then
+            self.nextlifeindex = self.nextlifeindex + 1
+            self.lives = self.lives + 1
+            Audio.play(self.lifesound)
+        end
+    end
+    self.score = newscore
 end
 
 function PlayerShip:incPowerLevel()
