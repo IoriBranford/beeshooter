@@ -123,7 +123,7 @@ function Character:defeat()
 end
 
 local function respondToCollisions(self, others, collide)
-    if not others or not self.collidable then
+    if not others or not self.collidable or not self:isSpriteOnScreen() then
         return
     end
     local hitbox = self.hitbox or DefaultHitbox
