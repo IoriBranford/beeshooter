@@ -79,7 +79,7 @@ A brief chance to practice controls</text>
  </objectgroup>
  <group id="3" name="stage">
   <properties>
-   <property name="starty" type="float" value="-4256"/>
+   <property name="starty" type="float" value="4256"/>
   </properties>
   <layer id="8" name="underfloor" width="30" height="20">
    <properties>
