@@ -210,7 +210,7 @@ end
 
 function PlayerShip:drawStatus()
     local score = s_format("%07d", self.score)
-    love.graphics.printf(score, 8, 8, 120, "right")
+    love.graphics.printf(score, 8, 8, 112, "right")
 
     local lives = self.lives
     local livesstring
