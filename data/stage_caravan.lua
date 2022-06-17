@@ -2359,6 +2359,7 @@ return {
                   gid = 500,
                   visible = true,
                   properties = {
+                    ["bullettype"] = "FlyBullet",
                     ["z"] = 10
                   }
                 },
@@ -2375,6 +2376,7 @@ return {
                   gid = 2147484148,
                   visible = true,
                   properties = {
+                    ["bullettype"] = "FlyBullet",
                     ["z"] = 10
                   }
                 },
@@ -2426,7 +2428,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(0)\n-- shoot\nsetSpeed(fastspeed)"
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = -pi*3/16\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
                   }
                 },
                 {
@@ -2441,7 +2443,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(0)\n-- shoot\nsetSpeed(fastspeed)"
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = pi*3/16\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
                   }
                 }
               }
