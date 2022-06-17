@@ -3,7 +3,7 @@
  <tileset firstgid="1" source="../tilesets/Ant.tsx"/>
  <object type="Ant" gid="1" width="16" height="16">
   <properties>
-   <property name="path" type="object" value="0"/>
+   <property name="z" type="float" value="1"/>
   </properties>
  </object>
 </template>

@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 20,
-  nextobjectid = 105,
+  nextlayerid = 25,
+  nextobjectid = 151,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -1100,8 +1100,9 @@ return {
           height = 224,
           rotation = 0,
           visible = true,
-          text = "2",
+          text = "Room 2\n\nIntroduce enemies that shoot back\nTeach Lv2 weapons",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1117,7 +1118,7 @@ return {
           height = 224,
           rotation = 0,
           visible = true,
-          text = "Room 1\n\nEasy kills\nTeach how to use Lv1 weapons",
+          text = "Room 1\n\nEasy kills\nTeach Lv1 weapons",
           fontfamily = "Press Start 2P",
           pixelsize = 8,
           wrap = true,
@@ -1207,40 +1208,60 @@ return {
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
             },
             {
+              x = -16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFIw08oVA/EyNl+hUo1D+cAACKrQEJ"
+            },
+            {
+              x = 0, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFo2BkgzY8mBB4BMSP8eAnBMwDAEKtDTg="
+            },
+            {
+              x = 16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFo4A64BGlBjBSpl2OQv0DAQAqNQED"
+            },
+            {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFo4A88IRC/UyMlOlXoFD/YAAAQG0BCQ=="
+              data = "eJxjYCAfPKJALxgwkqftCdRuOTL1MzGSbzcIKDCSbzc1wRMK9TNR6AeFAQwDkN/bKNAP8vtjCvSD/M5IBf8DACftBog="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYBgF1ABPgLgNiB+RqZ+JkYHhMYjBSJ5+BaA+RiCWI1F/G5EYF3hMJMYFGBmJw4MNEAoXbGphGJRGYOECANjcF3A="
+              data = "eJydklEKwDAIQ2MPMnZaD9r2IOtgoxJE3QLvo1BtNIUAEtAWA5u50IdbhyDUGfSbcWnar9Hb1lsv9rKy3pDMlXnL9vJK8yuhvEy+yMtEA7zMOBP7Xxiu56z4v3jw/H+ysvNXs2Lf6pwrdOx9XGyTKrM="
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFo2DkgkeUGsBImXYAdL8A5A=="
+              data = "eJxjYKAMtFGo/zEQPwHiR2TqZ2RkYGBiBDHId4MCUK8cBfpHwdAF5KY7OKAw3QAAyCAEWQ=="
             },
             {
               x = -16, y = 252, width = 16, height = 14,
-              data = "eJxjYBg48IRC/UyMlOlXoFD/KBgFlAIADosBCQ=="
+              data = "eJxjYCAfPKFALwgwMVKmX4FC/aNgFFACWinUnw7EAHV7AfU="
             },
             {
               x = 0, y = 252, width = 16, height = 14,
-              data = "eJxjYICANhz4ERA/RsMMjEAExbjUYFMLw3KMDHCASw02tdgAMWpGwSgYrAAAIg4Pqg=="
+              data = "eJxrY2BgeATEj0nADIxABMXofGKwHCMDHKDzR8EooCdoA+J2CvRnAHEmGfpaoXYDALlwD1I="
             },
             {
               x = 16, y = 252, width = 16, height = 14,
-              data = "eJyTY2QYBaNgFAwQAABv/wAg"
+              data = "eJyTY2QYBaNgFJAJ2oC4nQL9ALEjAS0="
+            },
+            {
+              x = -16, y = 266, width = 16, height = 14,
+              data = "eJxjYCAftFKgFwTSKdRPKRho9490+59QqJ+JkTL9ChTqp4b7AWpABaA="
+            },
+            {
+              x = 0, y = 266, width = 16, height = 14,
+              data = "eJxrY2BgaGcgHaQDcQYUZ5KhvxWI28jQh25/GxST6geY/eT6YSjbD7ObXPuR4x5mziMy7X8MxQyM5NnPyAjBciTof4JkP6luBwEmRoS7SXU7CCgwItwNAG3WIDI="
+            },
+            {
+              x = 16, y = 266, width = 16, height = 14,
+              data = "eJzLYGBgyGQgH7QBcTsF+jNG7R+1n0L7H1Gg/zGIYCRfPyNQrxwF+gFMeQyV"
             },
             {
               x = -16, y = 280, width = 16, height = 14,
-              data = "eJxjYBg48IRC/UyMlOlXoFD/KBgFlAIADosBCQ=="
+              data = "eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg=="
             },
             {
               x = 0, y = 280, width = 16, height = 14,
-              data = "eJxjYKAMtFGIH1OIGRkpw6NgFAwkAAB+vRax"
-            },
-            {
-              x = 16, y = 280, width = 16, height = 14,
-              data = "eJxjYKAMPKJQPwMjZdrlKNQ/CkbBQAIAOmsBAw=="
+              data = "eJxjZGRgkANiYsETIG6D4kfEa4MDJqBdjxkgmIEEe2FAAaiHEYpJcfcoGAWDEQAA68EFAg=="
             }
           }
         },
@@ -1301,52 +1322,102 @@ return {
               data = "eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ=="
             },
             {
+              x = -16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFpAJWRgYGdkby9fMCMR8Qs5FphjYQi0LNoNQNo/pJB6D456NAP8huMSDWBWIAia8BeA=="
+            },
+            {
+              x = 0, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFlAA2RgRmZyRdPx8aJsUsVkZM/djMwoXx6R0qWAyIdfBgUQL6dQmEsTYB80gFyOaBzAIAi2YHLg=="
+            },
+            {
+              x = 16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFIMDKyMDAzki+Xj4gzU+GXjaoXnL18zFQR78YEOtSoJ8cu0f1MzAAAGHiAdM="
+            },
+            {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFQxWwMlKmX5s6zhiygNLw46XQfpB+AFYCAFI="
+              data = "eJxjYCAd8AIxPxn6YEAbiHUp0D9YACsjZfq1qeOMAQEgv7NR4H+Q33Wo5hryAKXxx0uh/aAwAABAKgFI"
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYBgegJWRgYENiNkZydOvDcQ6QKxLTUcRAdgYScfIftQhEosCMR8ShplFLOBF0w/D1NLPSsDP2PQi+wOXPDYshhQupKiFYeQ0gksNNrXYAAA4uwgF"
+              data = "eJxjYCAfaKPxWRkZGNigmJ2RPPN0oFiXAneRAihxLwiA3CoKxHwUmIXsb3SzsGF85iObhQ1jM58U92ojmcHHQHpcgdIITC8fAXXY/I6sF184oatDxmIMiPBA5xODkf1LaVoFAD9+CL8="
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFQxmwM1Kmn59C+wdavy6F+gcaAABrfwBj"
+              data = "eJzTYWBgEAVifgbygTYQ61KgfxSQD9gZKdNPSbwPBv1DPd0BAJ69AQs="
             },
             {
               x = -16, y = 252, width = 16, height = 14,
-              data = "eJxjYCAfaFOgdxSMAkoBKyNl+nkptJ8a+gGe3wBZ"
+              data = "eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg=="
             },
             {
               x = 0, y = 252, width = 16, height = 14,
-              data = "eJzTYWBg0GUYBaNgYAA7I/l6WYF6+Smwm5dh4PUDAGfNALw="
+              data = "eJxjYBgFo2DgABsjAwM7I/n6dYBYlwx9rIwQu8kF2lC7KQUAcvwAzQ=="
             },
             {
               x = 16, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2DgADsjZfr5KbR/oPUDACH/ADY="
+              data = "eJxjYBgFo2DoAjZGBgZ2RvL16wCxLtVcQzoAADpqAGk="
             },
             {
               x = -16, y = 266, width = 16, height = 14,
-              data = "eJxjYCAf8FKgd1T/qP5R/QwMAC4nALc="
+              data = "eJxjYBg4wMpImX5t6jhjFAxRMBzSDwCnRgBj"
             },
             {
               x = 0, y = 266, width = 16, height = 14,
-              data = "eJytj0EOABAQA+uAE/7/W0QkIqytrKQ3s51mANGBfr4xGSOFx5Fgx/cwG1b3H4e924LXbji5Mw63bgv+tUFy1zi8uiUHTfftBsvOBDci/anv6wX3"
+              data = "eJxjYKAMsDFCMDsjefp1oFiXQncMJcDKiAg3coA2AyLchjqgJO2AAL3TDnLckeNu5LgDuRsASWkCZw=="
             },
             {
               x = 16, y = 266, width = 16, height = 14,
-              data = "eJzjZ6AM8I/qH9U/qp9sAACNTwDT"
+              data = "eJxjYBgFlAA2RgYGdkby9esAsS7VXDMKhhoAANZqAGk="
+            }
+          }
+        },
+        {
+          type = "tilelayer",
+          x = 0,
+          y = 0,
+          width = 30,
+          height = 20,
+          id = 22,
+          name = "onfloor",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {
+            ["z"] = 0.5
+          },
+          encoding = "base64",
+          compression = "zlib",
+          chunks = {
+            {
+              x = 0, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFgw04MjIwODOSrz8eqFcJiJ3QMDFmguxWBOIEIDZEw4lE6I+Hqk1Aww5AXE+kfmS7E0iwGwRqgerqkLA91Axi9eMyjxi3kwMAMuQNtQ=="
             },
             {
-              x = -16, y = 280, width = 16, height = 14,
-              data = "eJxjYCAfaFOgdxSMglHAwAAAj+wALA=="
+              x = -16, y = 238, width = 16, height = 14,
+              data = "eJxjYBgFo4B04MjIwODESL7+WqDeOgr0DxcAAK/TAYM="
             },
             {
-              x = 0, y = 280, width = 16, height = 14,
-              data = "eJzTYWBg0KEAj4JRMArIBwBRhwLB"
+              x = 0, y = 238, width = 16, height = 14,
+              data = "eJxjYKAucGRkYHBmJF9/LVBvPQX6RwFpwInC+KobjS+KAACcMgML"
             },
             {
-              x = 16, y = 280, width = 16, height = 14,
-              data = "eJzTZRgFo2AUDBQAAKEAAC4="
+              x = 0, y = 252, width = 16, height = 14,
+              data = "eJxjYBgFo2DkAUdGBgYnRvL11wL11lGgHwYAjkQBgw=="
+            },
+            {
+              x = 16, y = 252, width = 16, height = 14,
+              data = "eJxjYBgFo2DoAidGBgZnRvL11wH11lOgn1IAAOUsAYc="
+            },
+            {
+              x = -16, y = 266, width = 16, height = 14,
+              data = "eJxjYBg44MhImf5aCvWPglEw0AAAJxwAwQ=="
+            },
+            {
+              x = 0, y = 266, width = 16, height = 14,
+              data = "eJxjYKAMODFCsDMjefrrGCG4nkz9o2AU0BM4MlKW5msZUdM8AGZrBVE="
             }
           }
         },
@@ -1373,9 +1444,7 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {
-                ["z"] = 1
-              },
+              properties = {},
               objects = {
                 {
                   id = 1,
@@ -1391,11 +1460,11 @@ return {
                   polyline = {
                     { x = -8, y = 0 },
                     { x = 8, y = 0 },
-                    { x = 40, y = -16 },
-                    { x = 112, y = -16 },
-                    { x = 144, y = -32 },
-                    { x = 208, y = -32 },
-                    { x = 240, y = -48 },
+                    { x = 24, y = -8 },
+                    { x = 88, y = -8 },
+                    { x = 136, y = -32 },
+                    { x = 200, y = -32 },
+                    { x = 232, y = -48 },
                     { x = 272, y = -48 }
                   },
                   properties = {}
@@ -1413,7 +1482,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1429,7 +1498,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1445,7 +1514,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1461,7 +1530,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1477,7 +1546,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1493,7 +1562,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1509,7 +1578,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1525,7 +1594,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1541,7 +1610,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1557,7 +1626,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1573,7 +1642,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1589,7 +1658,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1605,7 +1674,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1621,7 +1690,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1637,7 +1706,7 @@ return {
                   gid = 481,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 1 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1666,9 +1735,7 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {
-                ["z"] = 1
-              },
+              properties = {},
               objects = {
                 {
                   id = 64,
@@ -1683,9 +1750,11 @@ return {
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = -24, y = 0 },
-                    { x = -56, y = -16 },
-                    { x = -280, y = -16 }
+                    { x = -32, y = 0 },
+                    { x = -64, y = -16 },
+                    { x = -168, y = -16 },
+                    { x = -232, y = -48 },
+                    { x = -280, y = -48 }
                   },
                   properties = {}
                 },
@@ -1702,7 +1771,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1710,7 +1779,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 272,
+                  x = 264,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1718,7 +1787,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1734,7 +1803,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1742,7 +1811,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 432,
+                  x = 424,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1750,7 +1819,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1766,7 +1835,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1774,7 +1843,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 352,
+                  x = 344,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1782,7 +1851,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1798,7 +1867,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1806,7 +1875,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 288,
+                  x = 280,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1814,7 +1883,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1830,7 +1899,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1838,7 +1907,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 448,
+                  x = 440,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1846,7 +1915,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1862,7 +1931,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1870,7 +1939,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 368,
+                  x = 360,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1878,7 +1947,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1894,7 +1963,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1902,7 +1971,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 304,
+                  x = 296,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1910,7 +1979,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1926,7 +1995,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1934,7 +2003,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 464,
+                  x = 456,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1942,7 +2011,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1958,7 +2027,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1966,7 +2035,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 384,
+                  x = 376,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -1974,7 +2043,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1990,7 +2059,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -1998,7 +2067,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 320,
+                  x = 312,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2006,7 +2075,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2022,7 +2091,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2030,7 +2099,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 480,
+                  x = 472,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2038,7 +2107,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2054,7 +2123,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2062,7 +2131,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 400,
+                  x = 392,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2070,7 +2139,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2086,7 +2155,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2094,7 +2163,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 336,
+                  x = 328,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2102,7 +2171,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2118,7 +2187,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2126,7 +2195,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 496,
+                  x = 488,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2134,7 +2203,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2150,7 +2219,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 64 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2158,7 +2227,7 @@ return {
                   name = "",
                   type = "Ant",
                   shape = "rectangle",
-                  x = 416,
+                  x = 408,
                   y = 3976,
                   width = 16,
                   height = 16,
@@ -2166,7 +2235,7 @@ return {
                   gid = 2147484129,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 81 }
+                    ["z"] = 1
                   }
                 },
                 {
@@ -2194,28 +2263,58 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = -32, y = 0 },
-                    { x = -64, y = 16 },
-                    { x = -128, y = 16 },
-                    { x = -160, y = 32 },
-                    { x = -232, y = 32 },
-                    { x = -264, y = 48 },
-                    { x = -280, y = 48 }
+                    { x = -8, y = 0 },
+                    { x = -40, y = 0 },
+                    { x = -72, y = 16 },
+                    { x = -144, y = 16 },
+                    { x = -160, y = 24 },
+                    { x = -248, y = 24 },
+                    { x = -264, y = 32 },
+                    { x = -280, y = 32 }
                   },
                   properties = {}
-                },
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 21,
+              name = "room1powerup",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
                 {
                   id = 97,
                   name = "",
                   type = "HoneyPot",
                   shape = "rectangle",
-                  x = 56,
-                  y = 3864,
+                  x = 80,
+                  y = 3832,
                   width = 16,
                   height = 32,
                   rotation = 0,
                   gid = 488,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 105,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 3848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
                   visible = true,
                   properties = {}
                 }
@@ -2240,7 +2339,7 @@ return {
                   type = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3824,
+                  y = 3768,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2252,15 +2351,15 @@ return {
                   name = "",
                   type = "Fly",
                   shape = "rectangle",
-                  x = 16,
-                  y = 3808,
+                  x = -8,
+                  y = 3760,
                   width = 32,
                   height = 32,
                   rotation = 0,
                   gid = 500,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 102 }
+                    ["z"] = 10
                   }
                 },
                 {
@@ -2268,15 +2367,15 @@ return {
                   name = "",
                   type = "Fly",
                   shape = "rectangle",
-                  x = 240,
-                  y = 3808,
+                  x = 264,
+                  y = 3760,
                   width = 32,
                   height = 32,
                   rotation = 0,
                   gid = 2147484148,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 103 }
+                    ["z"] = 10
                   }
                 },
                 {
@@ -2285,15 +2384,15 @@ return {
                   type = "Path",
                   shape = "polyline",
                   x = 0,
-                  y = 3792,
+                  y = 3720,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 16, y = 16 },
-                    { x = 96, y = 96 },
-                    { x = 16, y = 176 }
+                    { x = -8, y = 40 },
+                    { x = 40, y = 88 },
+                    { x = -32, y = 160 }
                   },
                   properties = {}
                 },
@@ -2303,19 +2402,779 @@ return {
                   type = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 3792,
+                  y = 3720,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 16, y = 16 },
-                    { x = -64, y = 96 },
-                    { x = 16, y = 176 }
+                    { x = 40, y = 40 },
+                    { x = -8, y = 88 },
+                    { x = 64, y = 160 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 127,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 3808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(0)\n-- shoot\nsetSpeed(fastspeed)"
+                  }
+                },
+                {
+                  id = 128,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 3808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(0)\n-- shoot\nsetSpeed(fastspeed)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 23,
+              name = "room2ants1",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 106,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3696,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 124,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3672,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 122,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3736,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 126,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3712,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 110,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3720,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 121,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3760,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 112,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3744,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 120,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3784,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 114,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3768,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 119,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3808,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 107,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 108,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 80, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 123,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3680,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -8 },
+                    { x = 88, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 118,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -72, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 125,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -8 },
+                    { x = -72, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 109,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = 72, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 117,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3752,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = -88, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 111,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 16 },
+                    { x = 72, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 116,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 16 },
+                    { x = -88, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 113,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 24 },
+                    { x = 80, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 115,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3784,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 24 },
+                    { x = -88, y = -8 }
                   },
                   properties = {}
                 }
               }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 24,
+              name = "room2ants2",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 130,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3688,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 131,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3664,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 132,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3728,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 133,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3704,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 134,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3712,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 135,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3752,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 136,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3736,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 137,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3776,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 138,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 3760,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 139,
+                  name = "",
+                  type = "Ant",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 3800,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 140,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3656,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 141,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3688,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 88, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 142,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3672,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -8 },
+                    { x = 88, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 143,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -72, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 144,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -8 },
+                    { x = -72, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 145,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3704,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = 72, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 146,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = -80, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 147,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 16 },
+                    { x = 72, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 148,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 16 },
+                    { x = -88, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 149,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 3736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 24 },
+                    { x = 72, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 150,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 264,
+                  y = 3776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 24 },
+                    { x = -88, y = -8 }
+                  },
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 20,
+              name = "room2fly2",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {}
             }
           }
         }
