@@ -254,7 +254,7 @@ local function drawTimer()
     local timerseconds = floor(gametimer / 60) % 60
     local timerframes = gametimer % 60
     local timerstring = s_format("%d:%02d:%02d", timerminutes, timerseconds, timerframes)
-    love.graphics.printf(timerstring, 128, 8, 120, "right")
+    love.graphics.printf(timerstring, 136, 8, 112, "left")
 end
 
 function Stage.draw(fixedfrac)
