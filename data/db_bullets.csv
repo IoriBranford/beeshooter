@@ -1,3 +1,3 @@
 type,team,speed,lifetime,hitdamageenemy,hitdamageself,spawnsound,collidable
-JennyShot,PlayerShot,16,16,1,1,sounds/shootarrow.mp3,TRUE
+JennyShot,PlayerShot,16,24,1,1,sounds/shootarrow.mp3,TRUE
 JennySting,PlayerShot,0,1,6,0,,TRUE
