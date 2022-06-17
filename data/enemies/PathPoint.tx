@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object type="PathPoint">
+  <properties>
+   <property name="commandscript" value=""/>
+  </properties>
+  <point/>
+ </object>
+</template>
