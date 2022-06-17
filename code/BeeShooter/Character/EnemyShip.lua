@@ -1,5 +1,6 @@
 local Movement = require "Component.Movement"
 local Body     = require "BeeShooter.Character.Body"
+local CommandScript = require "BeeShooter.Character.CommandScript"
 local EnemyShip = {}
 
 local huge = math.huge
@@ -7,15 +8,9 @@ local distsq = math.distsq
 local yield = coroutine.yield
 
 ---@param self Character
-local function waitUntilOnscreen(self)
-    while not self:isSpriteOnScreen() do
-        yield()
-    end
-end
-
----@param self Character
-local function waitUntilOffscreen(self)
-    while self:isSpriteOnScreen() do
+local function waitForOnscreenState(self, onscreenstate)
+    while self:isSpriteOnScreen() ~= onscreenstate do
+        CommandScript.run(self)
         yield()
     end
 end
@@ -26,14 +21,20 @@ local function walkPath(self, path)
         return
     end
     local points = path.points
+    local pointsdata = path.pointsdata
     local stage = self.stage
     for i = 2, #points, 2 do
         repeat
+            CommandScript.run(self)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - stage.y, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely + stage.vely)
             yield()
         until self.x == destx and self.y - stage.y == desty
+        local pointdata = pointsdata and pointsdata[i]
+        if pointdata then
+            CommandScript.start(self, pointdata.commandscript)
+        end
     end
 end
 
@@ -44,20 +45,26 @@ local function flyPath(self, path)
     end
     local points = path.points
     local pathy = path.y
+    local pointsdata = path.pointsdata
     for i = 2, #points, 2 do
         repeat
+            CommandScript.run(self)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely)
             yield()
         until self.x == destx and self.y - pathy == desty
+        local pointdata = pointsdata and pointsdata[i]
+        if pointdata then
+            CommandScript.start(self, pointdata.commandscript)
+        end
     end
 end
 
 function EnemyShip:Idler()
     Body.setVelocity(self, 0, self.stage.vely)
-    waitUntilOnscreen(self)
-    waitUntilOffscreen(self)
+    waitForOnscreenState(self, true)
+    waitForOnscreenState(self, false)
     self:markDisappear()
 end
 
@@ -86,14 +93,14 @@ end
 function EnemyShip:Ant()
     walkPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
-    waitUntilOffscreen(self)
+    waitForOnscreenState(self, false)
     self:markDisappear()
 end
 
 function EnemyShip:Flyer()
     flyPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
-    waitUntilOffscreen(self)
+    waitForOnscreenState(self, false)
     self:markDisappear()
 end
 
