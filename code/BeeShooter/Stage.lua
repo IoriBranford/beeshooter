@@ -27,7 +27,8 @@ local flyingspawntimeline ---@type Timeline
 local currentflyers
 local stagespawntimeline ---@type Timeline
 local clearred, cleargreen, clearblue = 0, 0, 0
-local gametimer = 60*120
+local gametimer
+local gametimerrunning
 
 local function readMapObjectLayer(objectlayer)
     local paths, characters
@@ -125,6 +126,9 @@ function Stage.init()
         x = 128,
         y = 240
     })
+
+    gametimer = 60*120
+    gametimerrunning = false
 end
 
 function Stage.addCharacter(object)
@@ -139,6 +143,9 @@ function Stage.addCharacter(object)
     if team then
         team[#team+1] = character
         character.enemies = team.enemies
+    end
+    if character.team == "EnemyShip" then
+        gametimerrunning = true
     end
     everyone[#everyone+1] = character
     Script.load(character, character.script)
@@ -210,7 +217,7 @@ function Stage.fixedupdate()
         flyingspawntimeline:advance(1)
     end
 
-    if gametimer > 0 then
+    if gametimerrunning and gametimer > 0 then
         gametimer = gametimer - 1
     end
     if gametimer <= 0 then
