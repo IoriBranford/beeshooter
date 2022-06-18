@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/BeehiveObjects.tsx"/>
+ <object type="AntHole" gid="7" width="16" height="32">
+  <properties>
+   <property name="spawncount" type="float" value="1"/>
+   <property name="spawninterval" type="float" value="1"/>
+   <property name="spawntype" value="Ant"/>
+   <property name="z" type="float" value="0.75"/>
+  </properties>
+ </object>
+</template>
