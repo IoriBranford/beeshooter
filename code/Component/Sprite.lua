@@ -67,6 +67,8 @@ function Sprite:update(sprite, fixedfrac)
         sprite.x = x + vx * fixedfrac
         sprite.y = y + vy * fixedfrac
         sprite.z = z + vz * fixedfrac
+        sprite.sx = self.scalex
+        sprite.sy = self.scaley
         sprite.r = angle
         -- sprite.oy = (self.spriteoriginy or 0) + z
     end
