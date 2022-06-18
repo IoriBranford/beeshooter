@@ -68,10 +68,7 @@ function Env.shootTargetAS(bullettype, target, angle, speed)
 end
 
 function Env.setScaleX(sx)
-    local sprite = self.sprite
-    if sprite then
-        sprite.sx = sx
-    end
+    self.scalex = sx
 end
 
 function Env.setCollidable(collidable)
