@@ -12,7 +12,8 @@ local Env = {
     wait = wait,
     waitfor = waitfor,
     yield = yield,
-    abs = math.abs
+    abs = math.abs,
+    atan2 = math.atan2
 }
 local EnvMetatable = {}
 setmetatable(Env, EnvMetatable)
@@ -73,6 +74,13 @@ end
 
 function Env.setCollidable(collidable)
     self.collidable = collidable
+end
+
+function Env.changeTile(tileid)
+    local sprite = self.sprite
+    if sprite then
+        sprite:changeTile(tileid)
+    end
 end
 
 function Env.setAlpha(alpha)
