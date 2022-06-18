@@ -18,13 +18,13 @@ local stop = Script.stop
 
 local start
 
-function Script:run()
+function Script:run(...)
     local thread = self.thread
     if thread then
-        local ok, nextaction = co_resume(thread, self)
+        local ok, nextaction, a, b, c, d, e, f, g = co_resume(thread, self, ...)
         assert(ok, nextaction)
         if nextaction then
-            start(self, nextaction)
+            start(self, nextaction, a, b, c, d, e, f, g)
         elseif co_status(thread) == "dead" then
             stop(self)
         end
@@ -32,14 +32,14 @@ function Script:run()
 end
 local run = Script.run
 
-function Script:start(action)
+function Script:start(action, ...)
     if type(action) ~= "function" then
         local script = self.script
         action = script and script[action]
     end
     if action then
         self.thread = co_create(action)
-        run(self)
+        run(self, ...)
     end
 end
 start = Script.start
