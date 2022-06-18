@@ -116,7 +116,7 @@ function Stage.init(startpoint)
         else
             stagey = stage.y
         end
-        stage.vely = stage.vely or .75
+        stage.vely = 0
         scene:addLayers(stage, "group,tilelayer,imagelayer")
         local stagespawns = stage.spawns
         if stagespawns then
@@ -125,7 +125,7 @@ function Stage.init(startpoint)
             end
             local startspawn = startpoint and stagespawns[startpoint]
             if startspawn and startspawn.trigger then
-                stagey = -startspawn.trigger.y
+                stagey = -startspawn.trigger.y - 1
             end
             for _, stagespawn in ipairs(stagespawns) do
                 local trigger = stagespawn.trigger
@@ -168,6 +168,11 @@ function Stage.init(startpoint)
 
     gametimer = 60*120
     gametimerrunning = false
+end
+
+function Stage.startGame()
+    stage.vely = stage.startvely or .75
+    Script.start(player, PlayerShip.recenter)
 end
 
 function Stage.addCharacter(object)

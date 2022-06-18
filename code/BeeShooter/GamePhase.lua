@@ -9,12 +9,30 @@ local GamePhase = {}
 
 local paused
 local music
-local result
+local status
+
+local TitleStatus = [[
+HONEY GUARDIAN
+
+
+FIRE
+Z key / A button
+
+CHANGE WEAPON
+X key / B button
+
+CHANGE SPEED
+C key / X button
+
+
+PRESS FIRE
+]]
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
+    status = TitleStatus
     Database.load("data/db_ships.csv")
     Database.load("data/db_bullets.csv")
     Database.load("data/db_items.csv")
@@ -35,7 +53,7 @@ function GamePhase.loadphase(startpoint)
 end
 
 function GamePhase.quitphase()
-    result = nil
+    status = nil
     music = nil
     Audio.stop()
     Stage.quit()
@@ -46,10 +64,6 @@ end
 
 function GamePhase.fixedupdate()
     if not paused then
-        if not music then
-            music = Audio.playMusic("music/Funkbuster.ogg")
-            music:setLooping(true)
-        end
         Stage.fixedupdate()
     end
 end
@@ -58,7 +72,7 @@ function GamePhase.gamepadpressed(joystick, button)
     if button == "start" and joystick:isGamepadDown("back")
     or button == "back" and joystick:isGamepadDown("start")
     then
-        if paused then
+        if status == TitleStatus then
             love.event.quit()
         else
             Stage.restart()
@@ -67,13 +81,26 @@ function GamePhase.gamepadpressed(joystick, button)
     end
 
     if button == "start" then
-        paused = not paused
+        if status == TitleStatus then
+            GamePhase.startGame()
+        elseif status then
+            Stage.restart()
+        else
+            paused = not paused
+        end
+        return
+    elseif button == Config.joy_fire then
+        if status == TitleStatus then
+            GamePhase.startGame()
+        end
     end
 end
 
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu then
-        if result then
+        if status == TitleStatus then
+            love.event.quit()
+        elseif status then
             Stage.restart()
         else
             paused = not paused
@@ -83,7 +110,18 @@ function GamePhase.keypressed(key)
         -- end
     elseif key == "f2" then
         Stage.restart()
+    elseif key == Config.key_fire then
+        if status == TitleStatus then
+            GamePhase.startGame()
+        end
     end
+end
+
+function GamePhase.startGame()
+    status = nil
+    music = Audio.playMusic("music/Funkbuster.ogg")
+    music:setLooping(true)
+    Stage.startGame()
 end
 
 function GamePhase.update(dsecs, fixedfrac)
@@ -95,13 +133,13 @@ end
 
 function GamePhase.win()
     Audio.fadeMusic()
-    result = "COMPLETE!"
+    status = "COMPLETE!"
     Stage.win()
 end
 
 function GamePhase.lose(reason)
     Audio.fadeMusic()
-    result = reason or "GAME OVER\n\nPress F2 to retry"
+    status = reason or "GAME OVER\n\nPress F2 to retry"
     Stage.lose()
 end
 
@@ -111,10 +149,10 @@ function GamePhase.draw(fixedfrac)
     end
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
-        if result then
-            love.graphics.printf(result, 0, 104, 256, "center")
+        if status then
+            love.graphics.printf(status, 0, 64, 256, "center")
         elseif paused then
-            love.graphics.printf("PAUSE!", 0, 104, 256, "center")
+            love.graphics.printf("PAUSE!", 0, 64, 256, "center")
         end
     end)
     Canvas.drawCanvas()
