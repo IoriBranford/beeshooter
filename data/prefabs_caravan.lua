@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 5,
-  nextobjectid = 7,
+  nextlayerid = 6,
+  nextobjectid = 10,
   properties = {},
   tilesets = {
     {
@@ -356,6 +356,74 @@ return {
           }
         }
       }
+    },
+    {
+      name = "Ant",
+      firstgid = 20,
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/Ant.png",
+      imagewidth = 32,
+      imageheight = 16,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 16
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 2,
+                width = 16,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -492,7 +560,59 @@ return {
           rotation = 0,
           gid = 18,
           visible = true,
-          properties = {}
+          properties = {
+            ["z"] = 20
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "enemies",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 9,
+          name = "",
+          type = "AntHole",
+          shape = "rectangle",
+          x = 0,
+          y = 48,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 12,
+          visible = true,
+          properties = {
+            ["spawncount"] = 1,
+            ["spawninterval"] = 1,
+            ["spawntype"] = "Ant",
+            ["z"] = 0.75
+          }
+        },
+        {
+          id = 8,
+          name = "Ant",
+          type = "Ant",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 20,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
         }
       }
     }
