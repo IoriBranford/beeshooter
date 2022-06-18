@@ -126,4 +126,15 @@ function EnemyShip:Spawner()
     self:markDisappear()
 end
 
+function EnemyShip:FallingDebris()
+    while true do
+        local accely = self.accely or (1/8)
+        self.vely = self.vely + accely
+        yield()
+        if not self:isSpriteOnScreen() then
+            self:markDisappear()
+        end
+    end
+end
+
 return EnemyShip
