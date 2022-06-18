@@ -89,6 +89,10 @@ function Env.setZ(z)
     self.z = z
 end
 
+function Env.disappear()
+    self:markDisappear()
+end
+
 local Commands = {}
 
 function Commands.setEnvOn(commandscript)
