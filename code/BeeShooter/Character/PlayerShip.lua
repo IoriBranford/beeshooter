@@ -45,7 +45,6 @@ function PlayerShip:start()
     self.speed = self.slowspeed
     self.weapon = "A"
     self.nextlifeindex = 1
-    return PlayerShip.recenter
 end
 
 function PlayerShip:recenter(nextaction)
