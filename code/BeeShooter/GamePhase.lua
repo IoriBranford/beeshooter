@@ -53,14 +53,18 @@ function GamePhase.fixedupdate()
 end
 
 function GamePhase.gamepadpressed(joystick, button)
-    if button == "start" then
-        if joystick:isGamepadDown("back") then
+    if button == "start" and joystick:isGamepadDown("back")
+    or button == "back" and joystick:isGamepadDown("start")
+    then
             if paused then
                 love.event.quit()
             else
                 Stage.restart()
             end
-        else
+        return
+    end
+
+    if button == "start" then
             paused = not paused
         end
     end
