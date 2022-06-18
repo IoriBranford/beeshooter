@@ -4,6 +4,7 @@ local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 local Stage    = require "BeeShooter.Stage"
 local Movement = require "Component.Movement"
+local GamePhase= require "BeeShooter.GamePhase"
 
 local cos = math.cos
 local sin = math.sin
@@ -128,7 +129,7 @@ function PlayerShip:fight()
     local firetime = 0
     while true do
         self.invincibletime = max(0, self.invincibletime - 1)
-        self.sprite.hidden = self.invincibletime % 4 >= 2
+        self.sprite:setHidden(self.invincibletime % 4 >= 2)
         local firebutton = Controls.getButtonsDown()
         local _, weaponbutton, speedbutton = Controls.getButtonsPressed()
         if weaponbutton then
@@ -182,7 +183,7 @@ function PlayerShip:defeat()
     wait(60)
 
     if self.lives <= 0 then
-        Audio.fadeMusic()
+        GamePhase.lose()
         return
     end
 
@@ -196,6 +197,30 @@ function PlayerShip:defeat()
     local desty = camera.y + camera.height + 16
     Body.setPosition(self, destx, desty)
     return PlayerShip.recenter
+end
+
+local function tallyBonuses(self, timeleft)
+    while self.lives > 0 do
+        self.lives = self.lives - 1
+        self.score = self.score + (self.bonusperlife or 1000)
+        wait(15)
+    end
+    timeleft = math.floor(timeleft / 60) * 60
+    while timeleft > 0 do
+        timeleft = timeleft - 60
+        Stage.setTime(timeleft)
+        self.score = self.score + (self.bonuspersecond or 10)
+        yield()
+    end
+end
+
+function PlayerShip:win(timeleft)
+    self.collidable = false
+    self.defeated = false
+    self.health = 1
+    self.sprite:setHidden(false)
+    PlayerShip.recenter(self)
+    tallyBonuses(self, timeleft)
 end
 
 function PlayerShip:scorePoints(points)
