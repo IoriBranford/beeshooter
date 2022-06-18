@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="31" nextobjectid="279">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="34" nextobjectid="357">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -112,6 +112,15 @@ A brief chance to practice controls</text>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED
   </chunk>
+    <chunk x="-16" y="196" width="16" height="14">
+   eJxjYBgFIxU8oVA/EyNl+hUo1D8cAACCbQEJ
+  </chunk>
+    <chunk x="0" y="196" width="16" height="14">
+   eJxjYBgFMNAGxeTIPwLix1D8hER5kBwDIxBBMRMjFgPQ5J+g6ZVD0qPAiGoHSA26PNwMNL0wAJOHmY8OYGZg04ssj8t8mBp8QAGP3uECAN67Eek=
+  </chunk>
+    <chunk x="16" y="196" width="16" height="14">
+   eJxjYBgFQxk8otQARsq0y1Gof6QDALdNAQM=
+  </chunk>
     <chunk x="0" y="210" width="16" height="14">
    eJxjYBgeoBWI26C4nQz5dCDOgOJMMuSpYX8WEGfjsR+fPMj8DiDuxGM/Pnla+/8JkvyjUfvhAACeQiuj
   </chunk>
@@ -185,6 +194,18 @@ A brief chance to practice controls</text>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ==
   </chunk>
+    <chunk x="0" y="182" width="16" height="14">
+   eJxjYBgFo2AUUAOwMjIwsEExOyNhcRAAAArQADk=
+  </chunk>
+    <chunk x="-16" y="196" width="16" height="14">
+   eJxjYBi5gJWRMv28FNpPqX5tCvWPgoEHAJYrAEw=
+  </chunk>
+    <chunk x="0" y="196" width="16" height="14">
+   eJxjYIAAVkYGBj4GVMzGCMHo4uyMDCgAm15CGGYGOXqRzYCxxYBYB4pFsaglJK+L5B9tNDViWORxycEAL5IafizyMDuw6UWWx2U+TA0+oI1H7ygYHAAA2wgGqA==
+  </chunk>
+    <chunk x="16" y="196" width="16" height="14">
+   eJxjYBjagJ2RMv38FNpPqX5dCvWPgqENALq/AFQ=
+  </chunk>
     <chunk x="0" y="210" width="16" height="14">
    eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk=
   </chunk>
@@ -234,6 +255,9 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0.5"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="0" y="196" width="16" height="14">
+   eJxjYMANHBkZGJwZ8SggAOKBehPJ1A+yWxGIlch0Qy1Qjz0QOwBxPZluqKVA7ygYBcQAAL/eBJE=
+  </chunk>
     <chunk x="0" y="210" width="16" height="14">
    eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ==
   </chunk>
@@ -805,50 +829,26 @@ setAlpha(1)</property>
     </object>
     <object id="234" name="turnX" type="PathPoint" x="152" y="3496">
      <properties>
-      <property name="commandscript">setScaleX(-1)
-setSpeed(slowspeed or 2)</property>
+      <property name="commandscript" value="setScaleX(-1)"/>
      </properties>
      <point/>
     </object>
     <object id="235" template="enemies/PathPoint.tx" x="128" y="3520">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
-     </properties>
-    </object>
-    <object id="236" template="enemies/PathPoint.tx" x="112" y="3536">
-     <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
-     </properties>
-    </object>
-    <object id="237" template="enemies/PathPoint.tx" x="104" y="3552">
-     <properties>
-      <property name="commandscript">setScaleX(1)
+      <property name="commandscript">for i=1,5 do
+
 for i=1,3 do
- yield()
+ wait(2)
  shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end
+
+wait(10)
 end</property>
      </properties>
     </object>
-    <object id="238" template="enemies/PathPoint.tx" x="104" y="3568">
+    <object id="279" template="enemies/PathPoint.tx" x="104" y="3464">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
-     </properties>
-    </object>
-    <object id="239" template="enemies/PathPoint.tx" x="112" y="3584">
-     <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript" value="setSpeed(slowspeed or 2)"/>
      </properties>
     </object>
    </objectgroup>
@@ -856,6 +856,130 @@ end</property>
     <object id="276" template="enemies/AntBig.tx" x="64" y="3384"/>
     <object id="277" template="enemies/AntBig.tx" gid="2147484131" x="192" y="3384" rotation="0"/>
     <object id="278" template="enemies/Trigger.tx" x="-16" y="3400"/>
+   </objectgroup>
+   <objectgroup id="31" name="room4alien1">
+    <object id="280" template="enemies/Trigger.tx" x="-56" y="3208"/>
+    <object id="281" template="enemies/AlienGunner.tx" x="112" y="3200"/>
+    <object id="282" type="Path" x="112" y="3200">
+     <polyline points="0,0 8,16 16,40"/>
+    </object>
+    <object id="283" template="enemies/PathPoint.tx" x="128" y="3240">
+     <properties>
+      <property name="commandscript">changeTile(&quot;gun_stand&quot;)
+for i = 1,5 do
+ setScaleX(player.x &lt; x and -1 or 1)
+ local angle = atan2(player.y - y, player.x - x)
+ if angle == angle then
+  for i = 1,5 do
+   shootAS(bullettype, angle, bulletspeed or 4)
+   yield()
+  end
+ end
+ wait(20)
+end</property>
+     </properties>
+    </object>
+    <object id="356" template="enemies/HoneyPot.tx" x="128" y="3176"/>
+   </objectgroup>
+   <objectgroup id="32" name="room4alien2">
+    <object id="284" template="enemies/Trigger.tx" x="-80" y="3152"/>
+    <object id="293" template="enemies/AlienGunner.tx" x="48" y="3144"/>
+    <object id="296" template="enemies/AlienGunner.tx" gid="0" x="208" y="3144" rotation="0"/>
+    <object id="292" type="Path" x="48" y="3144">
+     <polyline points="0,0 8,16 16,40"/>
+    </object>
+    <object id="295" type="Path" x="176" y="3144">
+     <polyline points="32,0 24,16 16,40"/>
+    </object>
+    <object id="291" template="enemies/PathPoint.tx" x="64" y="3184">
+     <properties>
+      <property name="commandscript">changeTile(&quot;gun_stand&quot;)
+for i = 1,5 do
+ setScaleX(player.x &lt; x and -1 or 1)
+ local angle = atan2(player.y - y, player.x - x)
+ if angle == angle then
+  for i = 1,5 do
+   shootAS(bullettype, angle, bulletspeed or 4)
+   yield()
+  end
+ end
+ wait(20)
+end</property>
+     </properties>
+    </object>
+    <object id="294" template="enemies/PathPoint.tx" x="192" y="3184">
+     <properties>
+      <property name="commandscript">changeTile(&quot;gun_stand&quot;)
+for i = 1,5 do
+ setScaleX(player.x &lt; x and -1 or 1)
+ local angle = atan2(player.y - y, player.x - x)
+ if angle == angle then
+  for i = 1,5 do
+   shootAS(bullettype, angle, bulletspeed or 4)
+   yield()
+  end
+ end
+ wait(20)
+end</property>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="33" name="room4alien3">
+    <object id="298" template="enemies/Trigger.tx" x="-56" y="3136"/>
+    <object id="338" template="enemies/AlienPillager.tx" x="-8" y="3200"/>
+    <object id="343" template="enemies/AlienPillager.tx" gid="0" x="264" y="3200" rotation="0"/>
+    <object id="339" template="enemies/AlienPillager.tx" x="-16" y="3216"/>
+    <object id="342" template="enemies/AlienPillager.tx" gid="0" x="272" y="3216" rotation="0"/>
+    <object id="340" template="enemies/AlienPillager.tx" x="-24" y="3232"/>
+    <object id="341" template="enemies/AlienPillager.tx" gid="0" x="280" y="3232" rotation="0"/>
+    <object id="344" type="Path" x="-24" y="3232">
+     <polyline points="0,0 72,-64 104,-64 120,-48"/>
+    </object>
+    <object id="345" type="Path" x="-16" y="3216">
+     <polyline points="0,0 72,-64 104,-64 120,-48"/>
+    </object>
+    <object id="346" type="Path" x="-8" y="3200">
+     <polyline points="0,0 72,-64 104,-64 120,-48"/>
+    </object>
+    <object id="347" type="Path" x="24" y="3200">
+     <polyline points="240,0 168,-64 136,-64 120,-48"/>
+    </object>
+    <object id="348" type="Path" x="32" y="3216">
+     <polyline points="240,0 168,-64 136,-64 120,-48"/>
+    </object>
+    <object id="349" type="Path" x="40" y="3232">
+     <polyline points="240,0 168,-64 136,-64 120,-48"/>
+    </object>
+    <object id="350" template="enemies/PathPoint.tx" x="96" y="3184">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
+    <object id="351" template="enemies/PathPoint.tx" x="112" y="3152">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
+    <object id="352" template="enemies/PathPoint.tx" x="104" y="3168">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
+    <object id="353" template="enemies/PathPoint.tx" x="144" y="3152">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
+    <object id="354" template="enemies/PathPoint.tx" x="152" y="3168">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
+    <object id="355" template="enemies/PathPoint.tx" x="160" y="3184">
+     <properties>
+      <property name="commandscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+     </properties>
+    </object>
    </objectgroup>
   </group>
  </group>
