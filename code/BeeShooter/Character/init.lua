@@ -98,10 +98,20 @@ function Character:dropDefeatObjects()
     for droptype in string.gmatch(defeatdrops, "%w+") do
         local dropprefab = Database.get(droptype)
         if dropprefab then
+            local scalex = self.scalex or 1
+            local scaley = self.scaley or 1
+            local offsetx = dropprefab.x * scalex
+            local offsety = dropprefab.y * scaley
+            local velx = (dropprefab.velx or 0) * scalex
+            local vely = (dropprefab.vely or 0) * scaley
             Stage.addCharacter({
                 type = droptype,
-                x = self.x + dropprefab.x,
-                y = self.y + dropprefab.y
+                x = self.x + offsetx,
+                y = self.y + offsety,
+                scalex = scalex,
+                scaley = scaley,
+                velx = velx,
+                vely = vely
             })
         end
     end
