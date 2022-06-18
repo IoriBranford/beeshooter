@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="26" nextobjectid="175">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="30" nextobjectid="276">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -56,8 +56,11 @@
   <object id="58" x="-256" y="3136" width="256" height="224">
    <text fontfamily="Press Start 2P" wrap="1" color="#ffffff">4</text>
   </object>
-  <object id="59" x="-256" y="3360" width="256" height="224">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 3</text>
+  <object id="59" x="-240" y="3368" width="256" height="224">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 3
+
+Introduce enemies going into cover
+Teach Lv3 weapons</text>
   </object>
   <object id="60" x="-256" y="3584" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 2
@@ -107,23 +110,20 @@ A brief chance to practice controls</text>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED
   </chunk>
-    <chunk x="-16" y="224" width="16" height="14">
-   eJxjYBgFIw08oVA/EyNl+hUo1D+cAACKrQEJ
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYBgeoBWI26C4nQz5dCDOgOJMMuSpYX8WEGfjsR+fPMj8DiDuxGM/Pnla+/8JkvyjUfvhAACeQiuj
   </chunk>
     <chunk x="0" y="224" width="16" height="14">
-   eJxjYBjcoBWI26C4nQz96UCcAcWZQ9D+J0j2PyJDPxMjA8NjBghmYCRdvwJQDyMUy5GhfyiANjyYEADFyWM8GDn+sJkHAD/QGYg=
-  </chunk>
-    <chunk x="16" y="224" width="16" height="14">
-   eJxjYBgFo4A64BGlBjBSpl2OQv0DAQAqNQED
+   eJzVkssNgCAQRHctxNCdvzpEbVMoxDFAJLgCevMl78ICMwkQOTo4wgkOdKc0t3CFG9w/zBsmMuQkdmsz1HDx+b1Xylc4w96Wr85hv/V36Yd8iThf6lcizpf6lQida/umhM61fVPUy75/RWcscb6NyRj/O+m+A+AxJ8c=
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYCAfPKJALxgwkqftCdRuOTL1MzGSbzcIKDCSbzc1wRMK9TNR6AeFAQwDkN/bKNAP8vtjCvSD/M5IBf8DACftBog=
+   eJxjYCAfPKJALxgwUqZdjkL9Qx08oVA/E4XhpzDA4d9Gof7HFOpnpIL/AduaA3Y=
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
    eJydklEKwDAIQ2MPMnZaD9r2IOtgoxJE3QLvo1BtNIUAEtAWA5u50IdbhyDUGfSbcWnar9Hb1lsv9rKy3pDMlXnL9vJK8yuhvEy+yMtEA7zMOBP7Xxiu56z4v3jw/H+ysvNXs2Lf6pwrdOx9XGyTKrM=
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
-   eJxjYKAMtFGo/zEQPwHiR2TqZ2RkYGBiBDHId4MCUK8cBfpHwdAF5KY7OKAw3QAAyCAEWQ==
+   eJxjYKAMtFGo/zGF+hkZKTRgFIxo8IhSAyhMfwDW+gJP
   </chunk>
     <chunk x="-16" y="252" width="16" height="14">
    eJxjYCAfPKFALwgwMVKmX4FC/aNgFFACWinUnw7EAHV7AfU=
@@ -138,10 +138,10 @@ A brief chance to practice controls</text>
    eJxjYCAftFKgFwTSKdRPKRho9490+59QqJ+JkTL9ChTqp4b7AWpABaA=
   </chunk>
     <chunk x="0" y="266" width="16" height="14">
-   eJy1kGEKgCAUg7cOEt2uOkh2T+0g+cIHagb6oMH+PBzfnANwYlxr9Ja8G/JHtDPkar5LHv2D8q1/+It/ob2L3HwHfyIQGvnnxpLd4i/xDfnOy21myc75/h35VM4PVbce5Xyy7NYj3djSXaQbW7qLdGPxDQfrJRI=
+   eJytUlsKgCAQ3O0g0e2yOodW16wO0k4orGmg0sD8LA7zQEdEK9VjFM5CI5wa9Fa4Nei0P7ydZ20H63WG2jr85Y8NF+V/+fsbuB0Zf2y4K/+Oic6M/rlx7J3rP8gb5lSPW8+xt+5/pJJPaP/zla0E4e8tPpfOVgJsHHarzQ6EjVuyA2Fj8AYtmyUq
   </chunk>
     <chunk x="16" y="266" width="16" height="14">
-   eJzLYGBgyGQgH7QBcTsF+jNG7R+1n0L7H1Gg/zGIYCRfPyNQrxwF+gFMeQyV
+   eJzLZmBgyGQgH3QCcTsF+jMotL9t1P4Rb/8jCvQ/BhGM5OtnBOqVo0A/AGC5DJs=
   </chunk>
     <chunk x="-16" y="280" width="16" height="14">
    eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg==
@@ -183,23 +183,26 @@ A brief chance to practice controls</text>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ==
   </chunk>
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk=
+  </chunk>
     <chunk x="-16" y="224" width="16" height="14">
-   eJxjYBgFpAJWRgYGdkby9fMCMR8Qs5FphjYQi0LNoNQNo/pJB6D456NAP8huMSDWBWIAia8BeA==
+   eJxjYBgFAwXYGCnTz0uh/aP6B1a/LhADAG67AJA=
   </chunk>
     <chunk x="0" y="224" width="16" height="14">
-   eJxjYMAPWBkZGNigmJ2RgGIsQBuIdaBYl3Ttgx6wURg+fGiYFLNAcYOuH5tZuDA+vUMFizEg0hc2LEpAP6E0iZx+sZlHKkA2D2QWAAsvB/o=
+   eJxjYMANWBkZGNiAmJ0RjyI8QBuIdYBYlzztQwKwMSIwOeHEh4ZJMQsUP+j6sZmFC+PTO1SwGAMkjeHCogT0E0qbsDSMyzxSAbJ5ILMAbtEHxw==
   </chunk>
     <chunk x="16" y="224" width="16" height="14">
-   eJxjYBgFIMDKyMDAzki+Xj4gzU+GXjaoXnL18zFQR78YEOtSoJ8cu0f1MzAAAGHiAdM=
+   eJxjYBgFAwnYGCnTz0+h/aP6B1Y/AHp/AHE=
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYCAd8AIxPxn6YEAbiHUp0D9YACsjZfq1qeOMAQEgv7NR4H+Q33Wo5hryAKXxx0uh/aAwAABAKgFI
+   eJxjYBgF5AJWRsr0a1PHGQMG2Cj0vw51nEE2oDT+eCm0HxT/AKSFAKM=
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
    eJxjYCAfaKPxWRkZGNigmJ2RPPN0oFiXAneRAihxLwiA3CoKxHwUmIXsb3SzsGF85iObhQ1jM58U92ojmcHHQHpcgdIITC8fAXXY/I6sF184oatDxmIMiPBA5xODkf1LaVoFAD9+CL8=
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
-   eJzTYWBgEAVifgbygTYQ61KgfxSQD9gZKdNPSbwPBv1DPd0BAJ69AQs=
+   eJzTYRgFQxmwM1Kmn59C+wdavy6F+gcaAAAFjgCP
   </chunk>
     <chunk x="-16" y="252" width="16" height="14">
    eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg==
@@ -229,11 +232,14 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0.5"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ==
+  </chunk>
     <chunk x="0" y="224" width="16" height="14">
-   eJxjYCAMHBkZGJwZiVCIA9QC9dZToH+kAUrDOx6oVwmIndAwMWaC7FYE4gQgNkTDiUToj4eqTUDDDkSmgXg0uxNIsBsEQGmtDgnbQ80gVj8u82iVfgEICw85
+   eJxjYMANHBkZGJyA2JkRjyI8oBaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTsQmQ7i0exOIMFuEIClORi2h5pBrH5c5tEqDQMAgDcP+w==
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBgFo4B04MjIwODESL7+WqDeOgr0DxcAAK/TAYM=
+   eJxjYBgFo4A84MRImf46CvUPBwAA2UYAww==
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
    eJxjYKAucGRkYHBmJF9/LVBvPQX6RwFpwInC+KobjS+KAACcMgML
@@ -613,8 +619,236 @@ end</property>
     </object>
    </objectgroup>
    <objectgroup id="25" name="room2powerup">
-    <object id="173" template="enemies/HoneyPot.tx" x="160" y="3584"/>
+    <object id="173" template="enemies/HoneyPot.tx" x="136" y="3584"/>
     <object id="174" template="enemies/Trigger.tx" x="-80" y="3592"/>
+   </objectgroup>
+   <objectgroup id="26" name="room3columnants1">
+    <object id="175" template="enemies/Trigger.tx" x="-40" y="3568"/>
+    <object id="176" template="enemies/AntHole.tx" x="64" y="3600">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
+      <property name="spawninterval" type="float" value="10"/>
+     </properties>
+    </object>
+    <object id="206" template="enemies/AntHole.tx" x="192" y="3600">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
+      <property name="spawninterval" type="float" value="10"/>
+     </properties>
+    </object>
+    <object id="177" type="Path" x="64" y="3592">
+     <polyline points="0,8 16,0 40,-24 40,-32 16,-56 -16,-72 -40,-96 -40,-104 -16,-128 16,-144 40,-168 40,-176 16,-200"/>
+    </object>
+    <object id="244" type="Path" x="192" y="3592">
+     <polyline points="0,8 -16,0 -40,-24 -40,-32 -16,-56 16,-72 40,-96 40,-104 16,-128 -16,-144 -40,-168 -40,-176 -16,-200"/>
+    </object>
+    <object id="241" name="toBack" type="PathPoint" x="104" y="3568">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="247" name="toBack" type="PathPoint" x="152" y="3568">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="243" name="toBack" type="PathPoint" x="104" y="3424">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="246" name="toBack" type="PathPoint" x="152" y="3424">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="242" name="toFront" type="PathPoint" x="24" y="3496">
+     <properties>
+      <property name="commandscript">setZ(abs(z))
+setCollidable(true)
+setAlpha(1)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="245" name="toFront" type="PathPoint" x="232" y="3496">
+     <properties>
+      <property name="commandscript">setZ(abs(z))
+setCollidable(true)
+setAlpha(1)</property>
+     </properties>
+     <point/>
+    </object>
+   </objectgroup>
+   <objectgroup id="29" name="room3columnants2">
+    <object id="224" template="enemies/AntHole.tx" x="64" y="3472">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
+      <property name="spawninterval" type="float" value="10"/>
+     </properties>
+    </object>
+    <object id="225" template="enemies/AntHole.tx" x="192" y="3472">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
+      <property name="spawninterval" type="float" value="10"/>
+     </properties>
+    </object>
+    <object id="263" type="Path" x="64" y="3472">
+     <polyline points="0,0 -16,8 -40,32 -40,40 -16,64 16,80 40,104 40,112 16,136 -16,152 -40,176 -40,184"/>
+    </object>
+    <object id="264" type="Path" x="192" y="3472">
+     <polyline points="0,0 16,8 40,32 40,40 16,64 -16,80 -40,104 -40,112 -16,136 16,152 40,176 40,184"/>
+    </object>
+    <object id="273" template="enemies/Trigger.tx" x="-40" y="3520"/>
+    <object id="274" name="toBack" type="PathPoint" x="24" y="3504">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="275" name="toFront" type="PathPoint" x="104" y="3576">
+     <properties>
+      <property name="commandscript">setZ(abs(z))
+setCollidable(true)
+setAlpha(1)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="272" name="toBack" type="PathPoint" x="24" y="3648">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="270" template="enemies/PathPoint.tx" name="disappear" x="24" y="3656">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
+    </object>
+    <object id="268" name="toBack" type="PathPoint" x="232" y="3504">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="269" name="toBack" type="PathPoint" x="232" y="3648">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="267" name="toFront" type="PathPoint" x="152" y="3576">
+     <properties>
+      <property name="commandscript">setZ(abs(z))
+setCollidable(true)
+setAlpha(1)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="271" template="enemies/PathPoint.tx" name="disappear" x="232" y="3656">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="28" name="room3flies1">
+    <object id="228" template="enemies/Trigger.tx" x="-40" y="3456"/>
+    <object id="229" type="Path" x="-16" y="3432">
+     <polyline points="0,88 48,48 88,32 120,32 144,40 160,48 168,64 168,72 160,80 144,88 128,104 120,120 120,136 128,152 152,168 200,192 264,200 296,200"/>
+    </object>
+    <object id="230" template="enemies/Fly.tx" x="-16" y="3512"/>
+    <object id="232" name="toBack" type="PathPoint" x="-16" y="3520">
+     <properties>
+      <property name="commandscript">setZ(-abs(z))
+setCollidable(false)
+setAlpha(0.5)
+setSpeed(fastspeed or 4)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="233" name="toFront" type="PathPoint" x="144" y="3480">
+     <properties>
+      <property name="commandscript">setZ(abs(z))
+setCollidable(true)
+setAlpha(1)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="234" name="turnX" type="PathPoint" x="152" y="3496">
+     <properties>
+      <property name="commandscript">setScaleX(-1)
+setSpeed(slowspeed or 2)</property>
+     </properties>
+     <point/>
+    </object>
+    <object id="235" template="enemies/PathPoint.tx" x="128" y="3520">
+     <properties>
+      <property name="commandscript">for i=1,3 do
+ yield()
+ shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end</property>
+     </properties>
+    </object>
+    <object id="236" template="enemies/PathPoint.tx" x="112" y="3536">
+     <properties>
+      <property name="commandscript">for i=1,3 do
+ yield()
+ shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end</property>
+     </properties>
+    </object>
+    <object id="237" template="enemies/PathPoint.tx" x="104" y="3552">
+     <properties>
+      <property name="commandscript">setScaleX(1)
+for i=1,3 do
+ yield()
+ shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end</property>
+     </properties>
+    </object>
+    <object id="238" template="enemies/PathPoint.tx" x="104" y="3568">
+     <properties>
+      <property name="commandscript">for i=1,3 do
+ yield()
+ shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end</property>
+     </properties>
+    </object>
+    <object id="239" template="enemies/PathPoint.tx" x="112" y="3584">
+     <properties>
+      <property name="commandscript">for i=1,3 do
+ yield()
+ shootTargetAS(bullettype, player, 0, bulletspeed or 3)
+end</property>
+     </properties>
+    </object>
    </objectgroup>
   </group>
  </group>
