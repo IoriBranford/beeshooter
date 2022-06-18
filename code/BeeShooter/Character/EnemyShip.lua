@@ -92,7 +92,7 @@ local function findPath(self)
 end
 
 ---@param self Character
-function EnemyShip:Ant()
+function EnemyShip:Walker()
     walkPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
     waitForOnscreenState(self, false)
@@ -126,7 +126,7 @@ function EnemyShip:Spawner()
     self:markDisappear()
 end
 
-function EnemyShip:FallingDebris()
+function EnemyShip:Faller()
     while true do
         local accely = self.accely or (1/8)
         self.vely = self.vely + accely
