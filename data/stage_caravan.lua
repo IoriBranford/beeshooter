@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 30,
-  nextobjectid = 276,
+  nextlayerid = 31,
+  nextobjectid = 279,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -830,6 +830,7 @@ return {
           visible = true,
           text = "18",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -847,6 +848,7 @@ return {
           visible = true,
           text = "17",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -864,6 +866,7 @@ return {
           visible = true,
           text = "16",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -881,6 +884,7 @@ return {
           visible = true,
           text = "15",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -898,6 +902,7 @@ return {
           visible = true,
           text = "14",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -915,6 +920,7 @@ return {
           visible = true,
           text = "13",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -932,6 +938,7 @@ return {
           visible = true,
           text = "12",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -949,6 +956,7 @@ return {
           visible = true,
           text = "11",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -966,6 +974,7 @@ return {
           visible = true,
           text = "10",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -983,6 +992,7 @@ return {
           visible = true,
           text = "9",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1000,6 +1010,7 @@ return {
           visible = true,
           text = "8",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1017,6 +1028,7 @@ return {
           visible = true,
           text = "7",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1034,6 +1046,7 @@ return {
           visible = true,
           text = "6",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1051,6 +1064,7 @@ return {
           visible = true,
           text = "5",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1066,8 +1080,9 @@ return {
           height = 224,
           rotation = 0,
           visible = true,
-          text = "4",
+          text = "Room 4\n\n",
           fontfamily = "Press Start 2P",
+          pixelsize = 8,
           wrap = true,
           color = { 255, 255, 255 },
           properties = {}
@@ -1077,8 +1092,8 @@ return {
           name = "",
           type = "",
           shape = "text",
-          x = -240,
-          y = 3368,
+          x = -256,
+          y = 3360,
           width = 256,
           height = 224,
           rotation = 0,
@@ -4229,6 +4244,66 @@ return {
                   properties = {
                     ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
                   }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 30,
+              name = "room3bigant",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 276,
+                  name = "",
+                  type = "AntBig",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 3384,
+                  width = 60,
+                  height = 40,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 277,
+                  name = "",
+                  type = "AntBig",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 3384,
+                  width = 60,
+                  height = 40,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 278,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 3400,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
                 }
               }
             }
