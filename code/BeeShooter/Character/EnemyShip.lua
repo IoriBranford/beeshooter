@@ -1,11 +1,13 @@
 local Movement = require "Component.Movement"
 local Body     = require "BeeShooter.Character.Body"
 local CommandScript = require "BeeShooter.Character.CommandScript"
+local Stage         = require "BeeShooter.Stage"
 local EnemyShip = {}
 
 local huge = math.huge
 local distsq = math.distsq
 local yield = coroutine.yield
+local wait = coroutine.wait
 
 ---@param self Character
 local function waitForOnscreenState(self, onscreenstate)
@@ -100,6 +102,26 @@ end
 function EnemyShip:Flyer()
     flyPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
+    waitForOnscreenState(self, false)
+    self:markDisappear()
+end
+
+
+function EnemyShip:Spawner()
+    Body.setVelocity(self, 0, self.stage.vely)
+    local spawntype = self.spawntype
+    local spawninterval = self.spawninterval or 1
+    local spawncount = self.spawncount or 1
+    local layer = self.layer
+    for _ = 1, spawncount do
+        wait(spawninterval)
+        Stage.addCharacter({
+            type = spawntype,
+            x = self.x,
+            y = self.y,
+            layer = layer
+        })
+    end
     waitForOnscreenState(self, false)
     self:markDisappear()
 end
