@@ -89,6 +89,15 @@ function Character:isSpriteOnScreen()
     return testrects(x - ox, y - oy, w, h, cx, cy, cw, ch)
 end
 
+function Character:isSpriteOffScreenBottom()
+    local y = self.y
+    local sprite = self.sprite
+    local oy = sprite and sprite.oy or 0
+    local camera = self.camera
+    local cy, ch = camera.y, camera.height
+    return y - oy > cy + ch
+end
+
 function Character:dropDefeatObjects()
     local defeatdrops = self.defeatdrops
     if not defeatdrops then

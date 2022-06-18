@@ -131,7 +131,7 @@ function EnemyShip:Faller()
         local accely = self.accely or (1/8)
         self.vely = self.vely + accely
         yield()
-        if not self:isSpriteOnScreen() then
+        if self:isSpriteOffScreenBottom() then
             self:markDisappear()
         end
     end
