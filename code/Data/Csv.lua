@@ -14,10 +14,7 @@ local function parseValue(v)
     elseif vlower == "false" then
         v = false
     else
-        local tileset, tile = s_match(v, "^tile/(%w+)/(%w+)$")
-        tileset = tileset and Tiled.tilesets[tileset]
-        tile = tileset and tileset[tile]
-        v = tile or tonumber(v) or v or ""
+        v = tonumber(v) or v or ""
     end
     return v
 end
