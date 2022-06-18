@@ -41,7 +41,6 @@
   </object>
  </objectgroup>
  <objectgroup id="5" name="enemies">
-  <object id="9" template="enemies/AntHole.tx" x="0" y="48"/>
   <object id="8" template="enemies/Ant.tx" name="Ant" x="0" y="0"/>
  </objectgroup>
 </map>
