@@ -469,6 +469,8 @@ return {
           gid = 1,
           visible = true,
           properties = {
+            ["velx"] = 1,
+            ["vely"] = -3,
             ["z"] = 10
           }
         },
@@ -485,6 +487,8 @@ return {
           gid = 2,
           visible = true,
           properties = {
+            ["velx"] = -1,
+            ["vely"] = -3,
             ["z"] = 10
           }
         }
