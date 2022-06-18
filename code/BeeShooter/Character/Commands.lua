@@ -11,7 +11,8 @@ local Env = {
     print = print,
     wait = wait,
     waitfor = waitfor,
-    yield = yield
+    yield = yield,
+    abs = math.abs
 }
 local EnvMetatable = {}
 setmetatable(Env, EnvMetatable)
@@ -82,6 +83,10 @@ function Env.setAlpha(alpha)
     if sprite then
         sprite.alpha = alpha
     end
+end
+
+function Env.setZ(z)
+    self.z = z
 end
 
 local Commands = {}
