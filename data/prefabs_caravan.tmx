@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="6" nextobjectid="12">
+<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="6" nextobjectid="13">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
@@ -9,6 +9,7 @@
  <tileset firstgid="18" source="tilesets/FlyBullet.tsx"/>
  <tileset firstgid="20" source="tilesets/Ant.tsx"/>
  <tileset firstgid="22" source="tilesets/Aliens.tsx"/>
+ <tileset firstgid="34" source="tilesets/AlienMind.tsx"/>
  <objectgroup id="2" name="defeatdrops_AntBig">
   <object id="1" name="AntBigCorpse" gid="5" x="0" y="0" width="60" height="40">
    <properties>
@@ -49,5 +50,6 @@
   <object id="8" template="enemies/Ant.tx" name="Ant" x="0" y="0"/>
   <object id="10" template="enemies/AlienGunner.tx" name="AlienGunner" x="0" y="0"/>
   <object id="11" template="enemies/AlienPillager.tx" name="AlienPillager" x="0" y="0"/>
+  <object id="12" template="enemies/AlienMind.tx" name="AlienMind" x="0" y="0"/>
  </objectgroup>
 </map>

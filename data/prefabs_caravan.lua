@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 6,
-  nextobjectid = 12,
+  nextobjectid = 13,
   properties = {},
   tilesets = {
     {
@@ -640,6 +640,82 @@ return {
           }
         }
       }
+    },
+    {
+      name = "AlienMind",
+      firstgid = 34,
+      tilewidth = 32,
+      tileheight = 48,
+      spacing = 0,
+      margin = 0,
+      columns = 4,
+      image = "tilesets/AlienMind.png",
+      imagewidth = 128,
+      imageheight = 48,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 48
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 4,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 8,
+                width = 24,
+                height = 32,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
+              duration = 100
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -840,6 +916,20 @@ return {
           height = 16,
           rotation = 0,
           gid = 28,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 12,
+          name = "AlienMind",
+          type = "AlienMind",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 48,
+          rotation = 0,
+          gid = 34,
           visible = true,
           properties = {}
         }
