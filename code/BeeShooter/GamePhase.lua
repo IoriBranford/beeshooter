@@ -71,6 +71,9 @@ function GamePhase.draw(fixedfrac)
     end
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
+        if paused then
+            love.graphics.printf("PAUSE!", 0, 104, 256, "center")
+        end
     end)
     Canvas.drawCanvas()
 end
