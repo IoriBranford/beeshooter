@@ -92,7 +92,7 @@ local function doStageSpawn(stagespawn)
     Stage.addCharacters(stagespawn.characters)
 end
 
-function Stage.init()
+function Stage.init(startpoint)
     PlayerShip   = require "BeeShooter.Character.PlayerShip"
     scene = Scene.new()
     camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
@@ -116,13 +116,18 @@ function Stage.init()
         else
             stagey = stage.y
         end
-        stage.y = stagey
         stage.vely = stage.vely or .75
         scene:addLayers(stage, "group,tilelayer,imagelayer")
         local stagespawns = stage.spawns
         if stagespawns then
             for _, stagespawn in ipairs(stagespawns) do
                 readMapObjectLayer(stagespawn)
+            end
+            local startspawn = startpoint and stagespawns[startpoint]
+            if startspawn and startspawn.trigger then
+                stagey = -startspawn.trigger.y
+            end
+            for _, stagespawn in ipairs(stagespawns) do
                 local trigger = stagespawn.trigger
                 local characters = stagespawn.characters
                 if trigger and characters then
@@ -133,6 +138,7 @@ function Stage.init()
                 end
             end
         end
+        stage.y = stagey
     end
 
     local flyingspawns = map.layers.flyingspawns

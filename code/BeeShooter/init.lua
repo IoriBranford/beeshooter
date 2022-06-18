@@ -39,20 +39,20 @@ function love.load(args)
     -- Wallpaper.load()
 
     local startpoint = args.startpoint
-    love.event.loadphase(firstphase, firstmap, startpoint)
+    love.event.loadphase(firstphase, startpoint)
 end
 
 return {
     cli = [[
         --rotation                              (number default -1)	Screen orientation in degrees clockwise
+        --startpoint (optional string)          Name of stage start point
+    ]],
         --drawbodies                            Draw physical bodies
         --drawai                                Draw AI information
         --exhibit                               Exhibit mode - disable options menu and quit
         --buildmegatilesets	(optional string)   Build megatilesets for all maps in the given text file
         --stage (optional string)               Name of stage to start
         --test (optional string)                Name of test to start
-        --startpoint (optional string)          Name of stage start point
-    ]],
     defaultconfig = {
         _version = 1,
         drawbodies = false,

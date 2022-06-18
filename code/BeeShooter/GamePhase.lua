@@ -9,7 +9,7 @@ local GamePhase = {}
 
 local paused
 
-function GamePhase.loadphase(stage, startpoint)
+function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
@@ -27,7 +27,7 @@ function GamePhase.loadphase(stage, startpoint)
             end
         end
     end)
-    Stage.init()
+    Stage.init(startpoint)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
     local music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
