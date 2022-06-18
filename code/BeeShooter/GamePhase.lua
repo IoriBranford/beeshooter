@@ -8,6 +8,7 @@ local Database = require "Data.Database"
 local GamePhase = {}
 
 local paused
+local music
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
@@ -29,11 +30,11 @@ function GamePhase.loadphase(startpoint)
     end)
     Stage.init(startpoint)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
-    local music = Audio.playMusic("music/Funkbuster.ogg")
-    music:setLooping(true)
+    Assets.get("music/Funkbuster.ogg")
 end
 
 function GamePhase.quitphase()
+    music = nil
     Audio.stop()
     Stage.quit()
     Tiled.clearCache()
@@ -43,7 +44,25 @@ end
 
 function GamePhase.fixedupdate()
     if not paused then
+        if not music then
+            music = Audio.playMusic("music/Funkbuster.ogg")
+            music:setLooping(true)
+        end
         Stage.fixedupdate()
+    end
+end
+
+function GamePhase.gamepadpressed(joystick, button)
+    if button == "start" then
+        if joystick:isGamepadDown("back") then
+            if paused then
+                love.event.quit()
+            else
+                Stage.restart()
+            end
+        else
+            paused = not paused
+        end
     end
 end
 
