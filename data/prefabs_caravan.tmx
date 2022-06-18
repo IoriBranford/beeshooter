@@ -18,14 +18,14 @@
   <object id="2" name="AntBigHead" gid="1" x="24" y="-8" width="24" height="24">
    <properties>
     <property name="velx" type="float" value="0.125"/>
-    <property name="vely" type="float" value="-3"/>
+    <property name="vely" type="float" value="-4"/>
     <property name="z" type="float" value="10"/>
    </properties>
   </object>
   <object id="3" name="AntBigAbdomen" gid="2" x="-24" y="-8" width="24" height="24">
    <properties>
     <property name="velx" type="float" value="-0.125"/>
-    <property name="vely" type="float" value="-3"/>
+    <property name="vely" type="float" value="-4"/>
     <property name="z" type="float" value="10"/>
    </properties>
   </object>

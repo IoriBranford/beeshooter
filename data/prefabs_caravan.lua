@@ -686,7 +686,7 @@ return {
           visible = true,
           properties = {
             ["velx"] = 0.125,
-            ["vely"] = -3,
+            ["vely"] = -4,
             ["z"] = 10
           }
         },
@@ -704,7 +704,7 @@ return {
           visible = true,
           properties = {
             ["velx"] = -0.125,
-            ["vely"] = -3,
+            ["vely"] = -4,
             ["z"] = 10
           }
         }
