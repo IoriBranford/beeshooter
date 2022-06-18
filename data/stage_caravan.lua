@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 26,
-  nextobjectid = 175,
+  nextlayerid = 30,
+  nextobjectid = 276,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -1077,13 +1077,13 @@ return {
           name = "",
           type = "",
           shape = "text",
-          x = -256,
-          y = 3360,
+          x = -240,
+          y = 3368,
           width = 256,
           height = 224,
           rotation = 0,
           visible = true,
-          text = "Room 3",
+          text = "Room 3\n\nIntroduce enemies going into cover\nTeach Lv3 weapons",
           fontfamily = "Press Start 2P",
           pixelsize = 8,
           wrap = true,
@@ -1209,20 +1209,16 @@ return {
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
             },
             {
-              x = -16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFIw08oVA/EyNl+hUo1D+cAACKrQEJ"
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYBgeoBWI26C4nQz5dCDOgOJMMuSpYX8WEGfjsR+fPMj8DiDuxGM/Pnla+/8JkvyjUfvhAACeQiuj"
             },
             {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYBjcoBWI26C4nQz96UCcAcWZQ9D+J0j2PyJDPxMjA8NjBghmYCRdvwJQDyMUy5GhfyiANjyYEADFyWM8GDn+sJkHAD/QGYg="
-            },
-            {
-              x = 16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFo4A64BGlBjBSpl2OQv0DAQAqNQED"
+              data = "eJzVkssNgCAQRHctxNCdvzpEbVMoxDFAJLgCevMl78ICMwkQOTo4wgkOdKc0t3CFG9w/zBsmMuQkdmsz1HDx+b1Xylc4w96Wr85hv/V36Yd8iThf6lcizpf6lQida/umhM61fVPUy75/RWcscb6NyRj/O+m+A+AxJ8c="
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYCAfPKJALxgwkqftCdRuOTL1MzGSbzcIKDCSbzc1wRMK9TNR6AeFAQwDkN/bKNAP8vtjCvSD/M5IBf8DACftBog="
+              data = "eJxjYCAfPKJALxgwUqZdjkL9Qx08oVA/E4XhpzDA4d9Gof7HFOpnpIL/AduaA3Y="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
@@ -1230,7 +1226,7 @@ return {
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJxjYKAMtFGo/zEQPwHiR2TqZ2RkYGBiBDHId4MCUK8cBfpHwdAF5KY7OKAw3QAAyCAEWQ=="
+              data = "eJxjYKAMtFGo/zGF+hkZKTRgFIxo8IhSAyhMfwDW+gJP"
             },
             {
               x = -16, y = 252, width = 16, height = 14,
@@ -1250,11 +1246,11 @@ return {
             },
             {
               x = 0, y = 266, width = 16, height = 14,
-              data = "eJy1kGEKgCAUg7cOEt2uOkh2T+0g+cIHagb6oMH+PBzfnANwYlxr9Ja8G/JHtDPkar5LHv2D8q1/+It/ob2L3HwHfyIQGvnnxpLd4i/xDfnOy21myc75/h35VM4PVbce5Xyy7NYj3djSXaQbW7qLdGPxDQfrJRI="
+              data = "eJytUlsKgCAQ3O0g0e2yOodW16wO0k4orGmg0sD8LA7zQEdEK9VjFM5CI5wa9Fa4Nei0P7ydZ20H63WG2jr85Y8NF+V/+fsbuB0Zf2y4K/+Oic6M/rlx7J3rP8gb5lSPW8+xt+5/pJJPaP/zla0E4e8tPpfOVgJsHHarzQ6EjVuyA2Fj8AYtmyUq"
             },
             {
               x = 16, y = 266, width = 16, height = 14,
-              data = "eJzLYGBgyGQgH7QBcTsF+jNG7R+1n0L7H1Gg/zGIYCRfPyNQrxwF+gFMeQyV"
+              data = "eJzLZmBgyGQgH3QCcTsF+jMotL9t1P4Rb/8jCvQ/BhGM5OtnBOqVo0A/AGC5DJs="
             },
             {
               x = -16, y = 280, width = 16, height = 14,
@@ -1323,20 +1319,24 @@ return {
               data = "eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ=="
             },
             {
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk="
+            },
+            {
               x = -16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFpAJWRgYGdkby9fMCMR8Qs5FphjYQi0LNoNQNo/pJB6D456NAP8huMSDWBWIAia8BeA=="
+              data = "eJxjYBgFAwXYGCnTz0uh/aP6B1a/LhADAG67AJA="
             },
             {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYMAPWBkZGNigmJ2RgGIsQBuIdaBYl3Ttgx6wURg+fGiYFLNAcYOuH5tZuDA+vUMFizEg0hc2LEpAP6E0iZx+sZlHKkA2D2QWAAsvB/o="
+              data = "eJxjYMANWBkZGNiAmJ0RjyI8QBuIdYBYlzztQwKwMSIwOeHEh4ZJMQsUP+j6sZmFC+PTO1SwGAMkjeHCogT0E0qbsDSMyzxSAbJ5ILMAbtEHxw=="
             },
             {
               x = 16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFIMDKyMDAzki+Xj4gzU+GXjaoXnL18zFQR78YEOtSoJ8cu0f1MzAAAGHiAdM="
+              data = "eJxjYBgFAwnYGCnTz0+h/aP6B1Y/AHp/AHE="
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYCAd8AIxPxn6YEAbiHUp0D9YACsjZfq1qeOMAQEgv7NR4H+Q33Wo5hryAKXxx0uh/aAwAABAKgFI"
+              data = "eJxjYBgF5AJWRsr0a1PHGQMG2Cj0vw51nEE2oDT+eCm0HxT/AKSFAKM="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
@@ -1344,7 +1344,7 @@ return {
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJzTYWBgEAVifgbygTYQ61KgfxSQD9gZKdNPSbwPBv1DPd0BAJ69AQs="
+              data = "eJzTYRgFQxmwM1Kmn59C+wdavy6F+gcaAAAFjgCP"
             },
             {
               x = -16, y = 252, width = 16, height = 14,
@@ -1397,12 +1397,16 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ=="
+            },
+            {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYCAMHBkZGJwZiVCIA9QC9dZToH+kAUrDOx6oVwmIndAwMWaC7FYE4gQgNkTDiUToj4eqTUDDDkSmgXg0uxNIsBsEQGmtDgnbQ80gVj8u82iVfgEICw85"
+              data = "eJxjYMANHBkZGJyA2JkRjyI8oBaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTsQmQ7i0exOIMFuEIClORi2h5pBrH5c5tEqDQMAgDcP+w=="
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFo4B04MjIwODESL7+WqDeOgr0DxcAAK/TAYM="
+              data = "eJxjYBgFo4A84MRImf46CvUPBwAA2UYAww=="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
@@ -3552,7 +3556,7 @@ return {
                   name = "",
                   type = "HoneyPot",
                   shape = "rectangle",
-                  x = 160,
+                  x = 136,
                   y = 3584,
                   width = 16,
                   height = 32,
@@ -3575,6 +3579,656 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 26,
+              name = "room3columnants1",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 175,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 3568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 176,
+                  name = "",
+                  type = "AntHole",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 3600,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 50,
+                    ["spawninterval"] = 10,
+                    ["spawntype"] = "Ant",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 206,
+                  name = "",
+                  type = "AntHole",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 3600,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 50,
+                    ["spawninterval"] = 10,
+                    ["spawntype"] = "Ant",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 177,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 64,
+                  y = 3592,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = 16, y = 0 },
+                    { x = 40, y = -24 },
+                    { x = 40, y = -32 },
+                    { x = 16, y = -56 },
+                    { x = -16, y = -72 },
+                    { x = -40, y = -96 },
+                    { x = -40, y = -104 },
+                    { x = -16, y = -128 },
+                    { x = 16, y = -144 },
+                    { x = 40, y = -168 },
+                    { x = 40, y = -176 },
+                    { x = 16, y = -200 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 244,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 192,
+                  y = 3592,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = -16, y = 0 },
+                    { x = -40, y = -24 },
+                    { x = -40, y = -32 },
+                    { x = -16, y = -56 },
+                    { x = 16, y = -72 },
+                    { x = 40, y = -96 },
+                    { x = 40, y = -104 },
+                    { x = 16, y = -128 },
+                    { x = -16, y = -144 },
+                    { x = -40, y = -168 },
+                    { x = -40, y = -176 },
+                    { x = -16, y = -200 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 241,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 247,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 3568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 243,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3424,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 246,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 3424,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 242,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                },
+                {
+                  id = 245,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 29,
+              name = "room3columnants2",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 224,
+                  name = "",
+                  type = "AntHole",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 3472,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 50,
+                    ["spawninterval"] = 10,
+                    ["spawntype"] = "Ant",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 225,
+                  name = "",
+                  type = "AntHole",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 3472,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 50,
+                    ["spawninterval"] = 10,
+                    ["spawntype"] = "Ant",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 263,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 64,
+                  y = 3472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -16, y = 8 },
+                    { x = -40, y = 32 },
+                    { x = -40, y = 40 },
+                    { x = -16, y = 64 },
+                    { x = 16, y = 80 },
+                    { x = 40, y = 104 },
+                    { x = 40, y = 112 },
+                    { x = 16, y = 136 },
+                    { x = -16, y = 152 },
+                    { x = -40, y = 176 },
+                    { x = -40, y = 184 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 264,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 192,
+                  y = 3472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 16, y = 8 },
+                    { x = 40, y = 32 },
+                    { x = 40, y = 40 },
+                    { x = 16, y = 64 },
+                    { x = -16, y = 80 },
+                    { x = -40, y = 104 },
+                    { x = -40, y = 112 },
+                    { x = -16, y = 136 },
+                    { x = 16, y = 152 },
+                    { x = 40, y = 176 },
+                    { x = 40, y = 184 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 273,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 3520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 274,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 3504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 275,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                },
+                {
+                  id = 272,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 3648,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 270,
+                  name = "disappear",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 3656,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
+                  }
+                },
+                {
+                  id = 268,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 269,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3648,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 267,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 3576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                },
+                {
+                  id = 271,
+                  name = "disappear",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3656,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 28,
+              name = "room3flies1",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 228,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 3456,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 229,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -16,
+                  y = 3432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 88 },
+                    { x = 48, y = 48 },
+                    { x = 88, y = 32 },
+                    { x = 120, y = 32 },
+                    { x = 144, y = 40 },
+                    { x = 160, y = 48 },
+                    { x = 168, y = 64 },
+                    { x = 168, y = 72 },
+                    { x = 160, y = 80 },
+                    { x = 144, y = 88 },
+                    { x = 128, y = 104 },
+                    { x = 120, y = 120 },
+                    { x = 120, y = 136 },
+                    { x = 128, y = 152 },
+                    { x = 152, y = 168 },
+                    { x = 200, y = 192 },
+                    { x = 264, y = 200 },
+                    { x = 296, y = 200 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 230,
+                  name = "",
+                  type = "Fly",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 3512,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 500,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 10
+                  }
+                },
+                {
+                  id = 232,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = -16,
+                  y = 3520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 233,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 144,
+                  y = 3480,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                },
+                {
+                  id = 234,
+                  name = "turnX",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(-1)\nsetSpeed(slowspeed or 2)"
+                  }
+                },
+                {
+                  id = 235,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 3520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 236,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 112,
+                  y = 3536,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 237,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(1)\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 238,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 239,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 112,
+                  y = 3584,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
                 }
               }
             }
