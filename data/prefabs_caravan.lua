@@ -580,25 +580,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 9,
-          name = "",
-          type = "AntHole",
-          shape = "rectangle",
-          x = 0,
-          y = 48,
-          width = 16,
-          height = 32,
-          rotation = 0,
-          gid = 12,
-          visible = true,
-          properties = {
-            ["spawncount"] = 1,
-            ["spawninterval"] = 1,
-            ["spawntype"] = "Ant",
-            ["z"] = 0.75
-          }
-        },
-        {
           id = 8,
           name = "Ant",
           type = "Ant",
