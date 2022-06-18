@@ -2,6 +2,7 @@ local Movement = require "Component.Movement"
 local Body     = require "BeeShooter.Character.Body"
 local CommandScript = require "BeeShooter.Character.CommandScript"
 local Stage         = require "BeeShooter.Stage"
+local GamePhase     = require "BeeShooter.GamePhase"
 local EnemyShip = {}
 
 local huge = math.huge
@@ -135,6 +136,13 @@ function EnemyShip:Faller()
             self:markDisappear()
         end
     end
+end
+
+function EnemyShip:defeatBoss()
+    self:defaultDefeat()
+    Stage.killTeam("EnemyShip")
+    Stage.killTeam("EnemyShot")
+    GamePhase.win()
 end
 
 return EnemyShip

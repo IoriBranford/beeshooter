@@ -285,6 +285,30 @@ function Stage.update(dsecs, fixedfrac)
     end
 end
 
+function Stage.killTeam(teamname)
+    local team = teams[teamname]
+    if team then
+        for _, character in ipairs(team) do
+            character:defeat()
+        end
+    end
+end
+
+function Stage.setTime(time)
+    gametimer = time
+end
+
+function Stage.win()
+    gametimerrunning = false
+    stage.vely = 0
+    Script.start(player, PlayerShip.win, gametimer)
+end
+
+function Stage.lose()
+    gametimerrunning = false
+    stage.vely = 0
+end
+
 local function drawTimer()
     local timerminutes = floor(gametimer/3600)
     local timerseconds = floor(gametimer / 60) % 60

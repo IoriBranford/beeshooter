@@ -9,6 +9,7 @@ local GamePhase = {}
 
 local paused
 local music
+local result
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
@@ -34,6 +35,7 @@ function GamePhase.loadphase(startpoint)
 end
 
 function GamePhase.quitphase()
+    result = nil
     music = nil
     Audio.stop()
     Stage.quit()
@@ -56,23 +58,26 @@ function GamePhase.gamepadpressed(joystick, button)
     if button == "start" and joystick:isGamepadDown("back")
     or button == "back" and joystick:isGamepadDown("start")
     then
-            if paused then
-                love.event.quit()
-            else
-                Stage.restart()
-            end
+        if paused then
+            love.event.quit()
+        else
+            Stage.restart()
+        end
         return
     end
 
     if button == "start" then
-            paused = not paused
-        end
+        paused = not paused
     end
 end
 
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu then
-        paused = not paused
+        if result then
+            Stage.restart()
+        else
+            paused = not paused
+        end
         -- if paused then
         --     Audio.play("sounds/pause.ogg")
         -- end
@@ -88,13 +93,27 @@ function GamePhase.update(dsecs, fixedfrac)
     Audio.update(dsecs)
 end
 
+function GamePhase.win()
+    Audio.fadeMusic()
+    result = "COMPLETE!"
+    Stage.win()
+end
+
+function GamePhase.lose(reason)
+    Audio.fadeMusic()
+    result = reason or "GAME OVER\n\nPress F2 to retry"
+    Stage.lose()
+end
+
 function GamePhase.draw(fixedfrac)
     if paused then
         fixedfrac = 0
     end
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
-        if paused then
+        if result then
+            love.graphics.printf(result, 0, 104, 256, "center")
+        elseif paused then
             love.graphics.printf("PAUSE!", 0, 104, 256, "center")
         end
     end)
