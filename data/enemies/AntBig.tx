@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/AntBig.tsx"/>
+ <object type="AntBig" gid="1" width="60" height="40">
+  <properties>
+   <property name="z" type="float" value="1"/>
+  </properties>
+ </object>
+</template>
