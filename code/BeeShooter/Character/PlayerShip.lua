@@ -16,7 +16,9 @@ local s_rep = string.rep
 local yield = coroutine.yield
 local wait = coroutine.wait
 
-local PlayerShip = {}
+local PlayerShip = {
+    InstantKillDamage = 0x1000000
+}
 
 local NextLifeScores = {
     10000,
@@ -167,14 +169,15 @@ function PlayerShip:fight()
 end
 
 function PlayerShip:defeat()
-    if self.power > 1 then
-        self.power = self.power - 1
+    self.power = self.power - 1
+    if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
         self.defeated = false
-        self.health = 1
+        self.health = self.maxhealth
         self.invincibletime = 60
         Audio.play(self.hurtsound)
         return PlayerShip.fight
     end
+    self.power = max(1, self.power)
     Body.setVelocity(self, 0, 0)
     Audio.play(self.defeatsound)
     self:dropDefeatObjects()
@@ -186,11 +189,11 @@ function PlayerShip:defeat()
         return
     end
 
+    Audio.play(self.respawnsound)
     self.lives = self.lives - 1
     self.defeated = false
-    Audio.play(self.respawnsound)
     self.sprite:setHidden(false)
-    self.health = 1
+    self.health = self.maxhealth
     local camera = self.camera
     local destx = camera.x + camera.width/2
     local desty = camera.y + camera.height + 16
