@@ -166,7 +166,7 @@ function Stage.init(startpoint)
         y = 240
     })
 
-    gametimer = 60*120
+    gametimer = 60*60
     gametimerrunning = false
 end
 
