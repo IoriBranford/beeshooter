@@ -61,7 +61,9 @@ function Character:init()
     self.vely = self.vely or 0
     self.velz = self.velz or 0
     self.fixedupdateorder = self.fixedupdateorder or 0
-    initHitbox(self)
+    if not self.hitbox then
+        initHitbox(self)
+    end
     Audio.play(self.spawnsound)
     return self
 end
