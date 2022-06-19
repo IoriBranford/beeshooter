@@ -137,6 +137,7 @@ function Stage.init(startpoint)
                     end
                 end
             end
+            stagespawntimeline:sort()
         end
         stage.y = stagey
     end
