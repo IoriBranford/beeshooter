@@ -237,7 +237,11 @@ end
 
 function PlayerShip:incPowerLevel()
     self.invincibletime = self.powerupinvincibletime or 60
-    self.power = min(self.power + 1, 3)
+    if self.power >= 3 then
+        PlayerShip.scorePoints(self, 1000)
+    else
+        self.power = self.power + 1
+    end
 end
 
 function PlayerShip:drawStatus()
