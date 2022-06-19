@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 6,
-  nextobjectid = 13,
+  nextobjectid = 19,
   properties = {},
   tilesets = {
     {
@@ -246,13 +246,64 @@ return {
                 type = "",
                 shape = "rectangle",
                 x = 0,
-                y = 16,
+                y = 12,
                 width = 16,
                 height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
               }
+            }
+          },
+          animation = {
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 0,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 3,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 12,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
             }
           }
         },
@@ -689,7 +740,20 @@ return {
                 x = 4,
                 y = 8,
                 width = 24,
-                height = 32,
+                height = 24,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "brain",
+                type = "",
+                shape = "point",
+                x = 16,
+                y = 10,
+                width = 0,
+                height = 0,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -712,6 +776,130 @@ return {
             {
               tileid = 3,
               duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "Fly",
+      firstgid = 38,
+      tilewidth = 32,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 16,
+      image = "tilesets/Fly.png",
+      imagewidth = 512,
+      imageheight = 32,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 16,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 6,
+                width = 24,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 4,
+              duration = 50
+            },
+            {
+              tileid = 5,
+              duration = 50
+            },
+            {
+              tileid = 6,
+              duration = 50
+            },
+            {
+              tileid = 7,
+              duration = 50
+            },
+            {
+              tileid = 8,
+              duration = 50
+            },
+            {
+              tileid = 9,
+              duration = 50
+            },
+            {
+              tileid = 10,
+              duration = 50
+            },
+            {
+              tileid = 11,
+              duration = 50
+            },
+            {
+              tileid = 12,
+              duration = 50
+            },
+            {
+              tileid = 13,
+              duration = 50
+            },
+            {
+              tileid = 14,
+              duration = 50
+            },
+            {
+              tileid = 15,
+              duration = 50
             }
           }
         }
@@ -903,7 +1091,27 @@ return {
           rotation = 0,
           gid = 22,
           visible = true,
-          properties = {}
+          properties = {
+            ["bullettype"] = "FlyBullet",
+            ["z"] = 1
+          }
+        },
+        {
+          id = 17,
+          name = "AlienGunnerLeft",
+          type = "AlienGunner",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 16,
+          rotation = 0,
+          gid = 2147483670,
+          visible = true,
+          properties = {
+            ["bullettype"] = "FlyBullet",
+            ["z"] = 1
+          }
         },
         {
           id = 11,
@@ -917,21 +1125,79 @@ return {
           rotation = 0,
           gid = 28,
           visible = true,
-          properties = {}
+          properties = {
+            ["z"] = 1
+          }
         },
         {
-          id = 12,
-          name = "AlienMind",
-          type = "AlienMind",
+          id = 18,
+          name = "AlienPillagerLeft",
+          type = "AlienPillager",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 16,
+          rotation = 0,
+          gid = 2147483676,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 13,
+          name = "FlyBehind",
+          type = "Fly",
           shape = "rectangle",
           x = 0,
           y = 0,
           width = 32,
-          height = 48,
+          height = 32,
           rotation = 0,
-          gid = 34,
+          gid = 38,
           visible = true,
-          properties = {}
+          properties = {
+            ["bullettype"] = "FlyBullet",
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
+            ["z"] = -10
+          }
+        },
+        {
+          id = 14,
+          name = "InfiniteHoneyPotOpen",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 9,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 16,
+          name = "FlyBehindLeft",
+          type = "Fly",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 2147483686,
+          visible = true,
+          properties = {
+            ["bullettype"] = "FlyBullet",
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
+            ["z"] = -10
+          }
         }
       }
     }
