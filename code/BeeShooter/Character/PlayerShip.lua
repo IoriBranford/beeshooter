@@ -204,14 +204,14 @@ end
 local function tallyBonuses(self, timeleft)
     while self.lives > 0 do
         self.lives = self.lives - 1
-        self.score = self.score + (self.bonusperlife or 1000)
+        self.score = self.score + (self.bonusperlife or 10000)
         wait(15)
     end
     timeleft = math.floor(timeleft / 60) * 60
     while timeleft > 0 do
         timeleft = timeleft - 60
         Stage.setTime(timeleft)
-        self.score = self.score + (self.bonuspersecond or 10)
+        self.score = self.score + (self.bonuspersecond or 100)
         yield()
     end
 end
