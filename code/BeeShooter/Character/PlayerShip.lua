@@ -5,6 +5,7 @@ local Audio    = require "System.Audio"
 local Stage    = require "BeeShooter.Stage"
 local Movement = require "Component.Movement"
 local GamePhase= require "BeeShooter.GamePhase"
+local Script   = require "Component.Script"
 
 local cos = math.cos
 local sin = math.sin
@@ -168,6 +169,17 @@ function PlayerShip:fight()
     end
 end
 
+local function die(self)
+    Body.setVelocity(self, 0, 0)
+    Audio.play(self.defeatsound)
+    self:dropDefeatObjects()
+    self.sprite:setHidden(true)
+end
+
+function PlayerShip:timeout()
+    die(self)
+end
+
 function PlayerShip:defeat()
     self.power = self.power - 1
     if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
@@ -178,10 +190,7 @@ function PlayerShip:defeat()
         return PlayerShip.fight
     end
     self.power = max(1, self.power)
-    Body.setVelocity(self, 0, 0)
-    Audio.play(self.defeatsound)
-    self:dropDefeatObjects()
-    self.sprite:setHidden(true)
+    die(self)
     wait(60)
 
     if self.lives <= 0 then
