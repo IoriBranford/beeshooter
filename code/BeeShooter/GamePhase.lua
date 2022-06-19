@@ -52,6 +52,10 @@ function GamePhase.loadphase(startpoint)
     Assets.get("music/Funkbuster.ogg")
 end
 
+function GamePhase.resize()
+    Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
+end
+
 function GamePhase.quitphase()
     status = nil
     music = nil
