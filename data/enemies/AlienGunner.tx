@@ -4,6 +4,7 @@
  <object type="AlienGunner" gid="1" width="24" height="16">
   <properties>
    <property name="bullettype" value="FlyBullet"/>
+   <property name="z" type="float" value="1"/>
   </properties>
  </object>
 </template>
