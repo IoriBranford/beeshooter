@@ -3,7 +3,10 @@
  <image source="AlienMind.png" width="128" height="48"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="4" y="8" width="24" height="32"/>
+   <object id="1" name="hitbox" x="4" y="8" width="24" height="24"/>
+   <object id="2" name="brain" x="16" y="10">
+    <point/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="100"/>
