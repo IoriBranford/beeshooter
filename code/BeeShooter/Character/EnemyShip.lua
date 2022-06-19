@@ -3,6 +3,7 @@ local Body     = require "BeeShooter.Character.Body"
 local CommandScript = require "BeeShooter.Character.CommandScript"
 local Stage         = require "BeeShooter.Stage"
 local GamePhase     = require "BeeShooter.GamePhase"
+local Audio         = require "System.Audio"
 local EnemyShip = {}
 
 local huge = math.huge
@@ -66,7 +67,7 @@ end
 
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
-    Body.setVelocity(self, 0, self.stage.vely)
+        Body.setVelocity(self, 0, self.stage.vely)
         yield()
     end
     while self:isSpriteOnScreen() do
@@ -143,10 +144,75 @@ function EnemyShip:Faller()
     end
 end
 
+local function alienMindSpawnReinforcement(self, name, typ, path)
+    local reinforcement = self[name]
+    if not reinforcement or reinforcement:willDisappear() then
+        self[name] = Stage.addCharacter({
+            type = typ,
+            x = self.x,
+            y = self.y,
+            layer = self.layer,
+            path = path
+        })
+    end
+end
+
+function EnemyShip:AlienMind()
+    Stage.setVelY(0)
+    self.collidable = false
+    flyPath(self, self.path or findPath(self))
+    Body.setVelocity(self, 0, 0)
+    self.collidable = true
+    local t = 0
+    local reinforcements = {
+        [15] = {name = "leftgunner", type = "AlienGunnerLeft", path = self.leftgunnerpath},
+        [30] = {name = "rightgunner", type = "AlienGunner", path = self.rightgunnerpath},
+        [75] = {name = "rightfly", type = "FlyBehind", path = self.rightflypath},
+        [120] = {name = "leftfly", type = "FlyBehindLeft", path = self.leftflypath},
+    }
+    while true do
+        yield()
+        t = t + 1
+        local reinforcement = reinforcements[t % 180]
+
+        if t % 20 == 0 then
+            Stage.addCharacter({
+                type = "AlienPillagerLeft",
+                x = self.x,
+                y = self.y,
+                layer = self.layer,
+                path = self.leftpillagerpath
+            })
+        elseif t % 20 == 10 then
+            Stage.addCharacter({
+                type = "AlienPillager",
+                x = self.x,
+                y = self.y,
+                layer = self.layer,
+                path = self.rightpillagerpath
+            })
+        end
+
+        if reinforcement then
+            alienMindSpawnReinforcement(self, reinforcement.name, reinforcement.type, reinforcement.path)
+        end
+    end
+end
+
+function EnemyShip:defeatAlienMind()
+    EnemyShip.defeatBoss(self)
+end
+
 function EnemyShip:defeatBoss()
-    self:defaultDefeat()
+    self.collidable = false
     Stage.killTeam("EnemyShip")
     Stage.killTeam("EnemyShot")
+    Body.setVelocity(self, 0, .125)
+    for i = 1, 6 do
+        Audio.play(self.dyingsound)
+        wait(10)
+    end
+    self:defaultDefeat()
     GamePhase.win()
 end
 
