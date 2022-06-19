@@ -65,9 +65,14 @@ local function flyPath(self, path)
 end
 
 function EnemyShip:Idler()
+    while not self:isSpriteOnScreen() do
     Body.setVelocity(self, 0, self.stage.vely)
-    waitForOnscreenState(self, true)
-    waitForOnscreenState(self, false)
+        yield()
+    end
+    while self:isSpriteOnScreen() do
+        Body.setVelocity(self, 0, self.stage.vely)
+        yield()
+    end
     self:markDisappear()
 end
 
