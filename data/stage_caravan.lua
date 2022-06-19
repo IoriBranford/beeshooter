@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 34,
-  nextobjectid = 357,
+  nextlayerid = 37,
+  nextobjectid = 395,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -635,13 +635,64 @@ return {
                 type = "",
                 shape = "rectangle",
                 x = 0,
-                y = 16,
+                y = 12,
                 width = 16,
                 height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
               }
+            }
+          },
+          animation = {
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 0,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 3,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 0,
+                y = 12,
+                width = 16,
+                height = 16,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
             }
           }
         },
@@ -1012,6 +1063,95 @@ return {
             },
             {
               tileid = 11,
+              duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "AlienMind",
+      firstgid = 528,
+      tilewidth = 32,
+      tileheight = 48,
+      spacing = 0,
+      margin = 0,
+      columns = 4,
+      image = "tilesets/AlienMind.png",
+      imagewidth = 128,
+      imageheight = 48,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 48
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 4,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 4,
+                y = 8,
+                width = 24,
+                height = 24,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "brain",
+                type = "",
+                shape = "point",
+                x = 16,
+                y = 10,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
               duration = 100
             }
           }
@@ -1440,16 +1580,28 @@ return {
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
             },
             {
+              x = -16, y = 182, width = 16, height = 14,
+              data = "eJxjYBgF5IInFOpnYqRMvwKF+kfBwAMASHwBCQ=="
+            },
+            {
+              x = 0, y = 182, width = 16, height = 14,
+              data = "eJzlUUEKwDAI0z6k+No9tO1D1gxlIt3m2HGBQAUTYyX6N7aP+j45JtsLzdC5IDNRYTzy2dDfdTYgs65B31y26IN+Vq5w7MJnNvPJwLSWR5xPymOxi/mUi7we9WaOJPRAzIr/e7qv7xe3r91hdV9gB6/gFy0="
+            },
+            {
+              x = 16, y = 182, width = 16, height = 14,
+              data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
+            },
+            {
               x = -16, y = 196, width = 16, height = 14,
-              data = "eJxjYBgFIxU8oVA/EyNl+hUo1D8cAACCbQEJ"
+              data = "eJxjYBgFo4B08ASIH1Ggn4kRSDCSr18BqFeOAv2DBQAAe2ICCw=="
             },
             {
               x = 0, y = 196, width = 16, height = 14,
-              data = "eJxjYBgFMNAGxeTIPwLix1D8hER5kBwDIxBBMRMjFgPQ5J+g6ZVD0qPAiGoHSA26PNwMNL0wAJOHmY8OYGZg04ssj8t8mBp8QAGP3uECAN67Eek="
+              data = "eJxjYIAAJkYGFKDACBUDYkYglkOTRwcKWOQViNA3WEAbGiZF/hEQP0bD6ABd/gmSXlgYI2N0gC4PipsnUL3YwvgJEvsRFvfA4hdX/MDMh7kPG8AW5+jm43IfMWAopR9yAQA6HhQr"
             },
             {
               x = 16, y = 196, width = 16, height = 14,
-              data = "eJxjYBgFQxk8otQARsq0y1Gof6QDALdNAQM="
+              data = "eJxjYBgFwwE8IlPfE5heRvL0MzFC9MqRqV+BAr3DAQAAmV4DDQ=="
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -1562,20 +1714,28 @@ return {
               data = "eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ=="
             },
             {
+              x = -16, y = 182, width = 16, height = 14,
+              data = "eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg=="
+            },
+            {
               x = 0, y = 182, width = 16, height = 14,
-              data = "eJxjYBgFo2AUUAOwMjIwsEExOyNhcRAAAArQADk="
+              data = "eJzFkcEOgCAMQ+GAngYn+Qng/3/PEWmyLFvEkyS96F67Qgj/niM+OuM+k8R8Z12s8iGTWHllz9NYw8jwdmsrtzu7TaaK3ZD11nGyec1jH2TBx/MAW40u8IG35UGKTUb3Fvy7JvFd9tDdaYNHjvQoxpzHy754h+HM6W66r75Lj8e/nTeS/A2OTwdE"
+            },
+            {
+              x = 16, y = 182, width = 16, height = 14,
+              data = "eJxjYBjagJ2RMv261HHGKBgFZAEAif8ANg=="
             },
             {
               x = -16, y = 196, width = 16, height = 14,
-              data = "eJxjYBi5gJWRMv28FNpPqX5tCvWPgoEHAJYrAEw="
+              data = "eJxjYBi5gJWRMr18FNjNC8RiFOrnp0C/NhDrUqB/FFAHAAA+fQCy"
             },
             {
               x = 0, y = 196, width = 16, height = 14,
-              data = "eJxjYIAAVkYGBj4GVMzGCMHo4uyMDCgAm15CGGYGOXqRzYCxxYBYB4pFsaglJK+L5B9tNDViWORxycEAL5IafizyMDuw6UWWx2U+TA0+oI1H7ygYHAAA2wgGqA=="
+              data = "eJxjYIAAVkYGBj4GBGZjxMTI8uyMDHCArpdYDDKDXL3IWAyIddCwKAnyugyYgBdJnh+LvDYevcToh5mBC2hD3SiGxw5CQJsCvaOAPgAA/1MGJw=="
             },
             {
               x = 16, y = 196, width = 16, height = 14,
-              data = "eJxjYBjagJ2RMv38FNpPqX5dCvWPgqENALq/AFQ="
+              data = "eJxjYBhYwM5ImX5+Cu3no9ANohSawQvEYkCsS6b92hToHQUDDwATjwEB"
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -1656,8 +1816,12 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 182, width = 16, height = 14,
+              data = "eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh"
+            },
+            {
               x = 0, y = 196, width = 16, height = 14,
-              data = "eJxjYMANHBkZGJwZ8SggAOKBehPJ1A+yWxGIlch0Qy1Qjz0QOwBxPZluqKVA7ygYBcQAAL/eBJE="
+              data = "eJxjYMANHBkZGJwZ8SggAOKBehPJ1A+yWxGIlch0Qy1QTx0Q21PgBpg59RToHwWjAB8AABFpBLE="
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -3439,371 +3603,6 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 20,
-              name = "room2fly2",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 151,
-                  name = "",
-                  type = "Trigger",
-                  shape = "point",
-                  x = -56,
-                  y = 3600,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 152,
-                  name = "",
-                  type = "Path",
-                  shape = "polyline",
-                  x = -16,
-                  y = 3632,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 160, y = 0 },
-                    { x = 192, y = 8 },
-                    { x = 224, y = 24 },
-                    { x = 248, y = 48 },
-                    { x = 256, y = 80 },
-                    { x = 248, y = 56 },
-                    { x = 224, y = 32 },
-                    { x = 192, y = 16 },
-                    { x = 160, y = 8 },
-                    { x = 128, y = 8 },
-                    { x = 96, y = 16 },
-                    { x = 64, y = 32 },
-                    { x = 40, y = 56 },
-                    { x = 32, y = 80 },
-                    { x = 40, y = 48 },
-                    { x = 64, y = 24 },
-                    { x = 96, y = 8 },
-                    { x = 128, y = 0 },
-                    { x = 288, y = 0 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 153,
-                  name = "",
-                  type = "Fly",
-                  shape = "rectangle",
-                  x = -16,
-                  y = 3632,
-                  width = 32,
-                  height = 32,
-                  rotation = 0,
-                  gid = 500,
-                  visible = true,
-                  properties = {
-                    ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
-                  }
-                },
-                {
-                  id = 154,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 240,
-                  y = 3712,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 155,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 232,
-                  y = 3688,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 156,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 208,
-                  y = 3664,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 157,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 176,
-                  y = 3648,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 165,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 176,
-                  y = 3640,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 166,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 208,
-                  y = 3656,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 167,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 232,
-                  y = 3680,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 158,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 144,
-                  y = 3640,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 172,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 144,
-                  y = 3632,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "setScaleX(-1)\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 159,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 112,
-                  y = 3640,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "setScaleX(1)\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 171,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 112,
-                  y = 3632,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 160,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 80,
-                  y = 3648,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 170,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 80,
-                  y = 3640,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 161,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 48,
-                  y = 3664,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 169,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 48,
-                  y = 3656,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 162,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 24,
-                  y = 3688,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 168,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 24,
-                  y = 3680,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 163,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = 16,
-                  y = 3712,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 164,
-                  name = "",
-                  type = "PathPoint",
-                  shape = "point",
-                  x = -16,
-                  y = 3632,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "setSpeed(fastspeed or 4)"
-                  }
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
               id = 25,
               name = "room2powerup",
               visible = true,
@@ -4315,8 +4114,8 @@ return {
                   name = "",
                   type = "Trigger",
                   shape = "point",
-                  x = -40,
-                  y = 3456,
+                  x = -56,
+                  y = 3504,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4329,7 +4128,7 @@ return {
                   type = "Path",
                   shape = "polyline",
                   x = -16,
-                  y = 3432,
+                  y = 3480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4345,14 +4144,14 @@ return {
                     { x = 168, y = 72 },
                     { x = 160, y = 80 },
                     { x = 144, y = 88 },
-                    { x = 128, y = 104 },
-                    { x = 120, y = 120 },
-                    { x = 120, y = 136 },
-                    { x = 128, y = 152 },
-                    { x = 152, y = 168 },
-                    { x = 200, y = 192 },
-                    { x = 264, y = 200 },
-                    { x = 296, y = 200 }
+                    { x = 104, y = 96 },
+                    { x = 72, y = 112 },
+                    { x = 48, y = 144 },
+                    { x = 40, y = 184 },
+                    { x = 40, y = 224 },
+                    { x = 56, y = 264 },
+                    { x = 88, y = 296 },
+                    { x = 160, y = 336 }
                   },
                   properties = {}
                 },
@@ -4362,7 +4161,7 @@ return {
                   type = "Fly",
                   shape = "rectangle",
                   x = -16,
-                  y = 3512,
+                  y = 3560,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -4379,7 +4178,7 @@ return {
                   type = "PathPoint",
                   shape = "point",
                   x = -16,
-                  y = 3520,
+                  y = 3568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4394,7 +4193,7 @@ return {
                   type = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 3480,
+                  y = 3528,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4409,7 +4208,7 @@ return {
                   type = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 3496,
+                  y = 3544,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4424,7 +4223,7 @@ return {
                   type = "PathPoint",
                   shape = "point",
                   x = 128,
-                  y = 3520,
+                  y = 3568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4439,13 +4238,527 @@ return {
                   type = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 3464,
+                  y = 3512,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
                     ["commandscript"] = "setSpeed(slowspeed or 2)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 36,
+              name = "room3flies2",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 385,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 3472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 386,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 3512,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 88 },
+                    { x = -32, y = 72 },
+                    { x = -80, y = 64 },
+                    { x = -120, y = 56 },
+                    { x = -160, y = 32 },
+                    { x = -168, y = 16 },
+                    { x = -160, y = -8 },
+                    { x = -136, y = -16 },
+                    { x = -88, y = -8 },
+                    { x = -56, y = 24 },
+                    { x = -40, y = 64 },
+                    { x = -24, y = 112 },
+                    { x = -24, y = 168 },
+                    { x = -16, y = 208 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 387,
+                  name = "",
+                  type = "Fly",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 3600,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 2147484148,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 10
+                  }
+                },
+                {
+                  id = 388,
+                  name = "toBack",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 272,
+                  y = 3600,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 389,
+                  name = "toFront",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 112,
+                  y = 3504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                  }
+                },
+                {
+                  id = 390,
+                  name = "turnX",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 3528,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(1)"
+                  }
+                },
+                {
+                  id = 391,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,5 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                  }
+                },
+                {
+                  id = 392,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 3568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(slowspeed or 2)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 20,
+              name = "room2fly2",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 151,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3408,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 152,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 3440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -160, y = 0 },
+                    { x = -192, y = 8 },
+                    { x = -224, y = 24 },
+                    { x = -248, y = 48 },
+                    { x = -256, y = 80 },
+                    { x = -248, y = 56 },
+                    { x = -224, y = 32 },
+                    { x = -192, y = 16 },
+                    { x = -160, y = 8 },
+                    { x = -128, y = 8 },
+                    { x = -96, y = 16 },
+                    { x = -64, y = 32 },
+                    { x = -40, y = 56 },
+                    { x = -32, y = 80 },
+                    { x = -40, y = 48 },
+                    { x = -64, y = 24 },
+                    { x = -96, y = 8 },
+                    { x = -128, y = 0 },
+                    { x = -288, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 153,
+                  name = "",
+                  type = "Fly",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 3440,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 2147484148,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 10
+                  }
+                },
+                {
+                  id = 154,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 280,
+                  y = 3544,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 155,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 156,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 208,
+                  y = 3472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 157,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 3456,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 165,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 296,
+                  y = 3560,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 166,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 288,
+                  y = 3560,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 167,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 296,
+                  y = 3560,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 158,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 144,
+                  y = 3448,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 172,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 16,
+                  y = 3520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(abs(scalex))\n\nsetCollidable(true)\nsetAlpha(1)\nsetZ(abs(z))\n\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 159,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 112,
+                  y = 3448,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(1)\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 171,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 144,
+                  y = 3440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 160,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 3456,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 170,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 3448,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 161,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 48,
+                  y = 3472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 169,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 208,
+                  y = 3464,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 162,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 3496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 168,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 3488,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 163,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 240,
+                  y = 3520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                  }
+                },
+                {
+                  id = 164,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 272,
+                  y = 3440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setCollidable(false)\nsetAlpha(0.5)\nsetZ(-abs(z))\nsetSpeed(fastspeed or 4)"
                   }
                 }
               }
@@ -4549,7 +4862,8 @@ return {
                   gid = 516,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet"
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
                   }
                 },
                 {
@@ -4642,7 +4956,8 @@ return {
                   gid = 516,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet"
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
                   }
                 },
                 {
@@ -4658,7 +4973,8 @@ return {
                   gid = 2147484164,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet"
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
                   }
                 },
                 {
@@ -4767,7 +5083,9 @@ return {
                   rotation = 0,
                   gid = 522,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 343,
@@ -4781,7 +5099,9 @@ return {
                   rotation = 0,
                   gid = 2147484170,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 339,
@@ -4795,7 +5115,9 @@ return {
                   rotation = 0,
                   gid = 522,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 342,
@@ -4809,7 +5131,9 @@ return {
                   rotation = 0,
                   gid = 2147484170,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 340,
@@ -4823,7 +5147,9 @@ return {
                   rotation = 0,
                   gid = 522,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 341,
@@ -4837,7 +5163,9 @@ return {
                   rotation = 0,
                   gid = 2147484170,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["z"] = 1
+                  }
                 },
                 {
                   id = 344,
@@ -5041,6 +5369,443 @@ return {
                   visible = true,
                   properties = {
                     ["commandscript"] = "changeTile(\"claw_scrape\")"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 35,
+              name = "room5powerup",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 373,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 3080,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 374,
+                  name = "",
+                  type = "HoneyPot",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 3056,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 488,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 375,
+                  name = "",
+                  type = "HoneyPot",
+                  shape = "rectangle",
+                  x = 144,
+                  y = 3064,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 488,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 376,
+                  name = "",
+                  type = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 3072,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 488,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 34,
+              name = "room5alienmind",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 357,
+                  name = "",
+                  type = "AlienMind",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 2880,
+                  width = 32,
+                  height = 48,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {
+                    ["leftflypath"] = { id = 371 },
+                    ["leftgunnerpath"] = { id = 367 },
+                    ["leftpillagerpath"] = { id = 365 },
+                    ["rightflypath"] = { id = 372 },
+                    ["rightgunnerpath"] = { id = 369 },
+                    ["rightpillagerpath"] = { id = 366 },
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 358,
+                  name = "",
+                  type = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 2912,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 363,
+                  name = "center",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 128,
+                  y = 2936,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -56 },
+                    { x = 0, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 365,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 96,
+                  y = 2992,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 24, y = -56 },
+                    { x = 16, y = -56 },
+                    { x = 8, y = -40 },
+                    { x = 0, y = 8 },
+                    { x = -16, y = 16 },
+                    { x = -40, y = 40 },
+                    { x = -48, y = 72 },
+                    { x = -48, y = 112 },
+                    { x = -32, y = 128 },
+                    { x = -32, y = 160 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 366,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 160,
+                  y = 2992,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -24, y = -56 },
+                    { x = -16, y = -56 },
+                    { x = -8, y = -40 },
+                    { x = 0, y = 8 },
+                    { x = 16, y = 16 },
+                    { x = 40, y = 40 },
+                    { x = 48, y = 72 },
+                    { x = 48, y = 128 },
+                    { x = 32, y = 144 },
+                    { x = 32, y = 160 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 367,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 2968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 112, y = -32 },
+                    { x = 88, y = -48 },
+                    { x = 64, y = -48 },
+                    { x = 48, y = -24 },
+                    { x = 48, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 369,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 256,
+                  y = 2944,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -104, y = -8 },
+                    { x = -80, y = -24 },
+                    { x = -56, y = -24 },
+                    { x = -40, y = 0 },
+                    { x = -40, y = 24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 371,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = -16,
+                  y = 3152,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 120, y = -232 },
+                    { x = 96, y = -216 },
+                    { x = 80, y = -176 },
+                    { x = 80, y = -48 },
+                    { x = 72, y = -40 },
+                    { x = 56, y = -32 },
+                    { x = 40, y = -40 },
+                    { x = 32, y = -64 },
+                    { x = 32, y = -112 },
+                    { x = 32, y = -48 },
+                    { x = 24, y = -24 },
+                    { x = 0, y = -16 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 372,
+                  name = "",
+                  type = "Path",
+                  shape = "polyline",
+                  x = 208,
+                  y = 3152,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -56, y = -232 },
+                    { x = -32, y = -216 },
+                    { x = -16, y = -176 },
+                    { x = -16, y = -48 },
+                    { x = -8, y = -40 },
+                    { x = 8, y = -32 },
+                    { x = 24, y = -40 },
+                    { x = 32, y = -64 },
+                    { x = 32, y = -112 },
+                    { x = 32, y = -48 },
+                    { x = 40, y = -24 },
+                    { x = 64, y = -16 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 377,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 2968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nwhile true do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                  }
+                },
+                {
+                  id = 378,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 2968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nwhile true do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                  }
+                },
+                {
+                  id = 379,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 16,
+                  y = 3040,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                  }
+                },
+                {
+                  id = 380,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 240,
+                  y = 3040,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "for i=1,3 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                  }
+                },
+                {
+                  id = 381,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 240,
+                  y = 3088,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(0.75)"
+                  }
+                },
+                {
+                  id = 382,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 16,
+                  y = 3088,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(0.75)"
+                  }
+                },
+                {
+                  id = 383,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 3120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(1)"
+                  }
+                },
+                {
+                  id = 384,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 3120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setScaleX(-1)"
+                  }
+                },
+                {
+                  id = 393,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 2936,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(fastspeed or 4)"
+                  }
+                },
+                {
+                  id = 394,
+                  name = "",
+                  type = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 2936,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(fastspeed or 4)"
                   }
                 }
               }
