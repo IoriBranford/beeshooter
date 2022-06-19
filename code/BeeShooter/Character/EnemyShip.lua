@@ -4,6 +4,7 @@ local CommandScript = require "BeeShooter.Character.CommandScript"
 local Stage         = require "BeeShooter.Stage"
 local GamePhase     = require "BeeShooter.GamePhase"
 local Audio         = require "System.Audio"
+local PlayerShip    = require "BeeShooter.Character.PlayerShip"
 local EnemyShip = {}
 
 local huge = math.huge
@@ -42,7 +43,7 @@ local function walkPath(self, path)
     end
 end
 
-local function meleeAttack(self)
+local function meleeAttack(self, damage)
     if not self.collidable then
         return
     end
@@ -54,13 +55,14 @@ local function meleeAttack(self)
             y = self.y + hitbox.y,
             width = hitbox.width,
             height = hitbox.height,
-            hitbox = hitbox
+            hitbox = hitbox,
+            hitdamageenemy = damage
         })
     end
 end
 
 ---@param self Character
-local function flyPath(self, path)
+local function flyPath(self, path, meleedamage)
     if not path then
         return
     end
@@ -73,7 +75,7 @@ local function flyPath(self, path)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely)
-            meleeAttack(self)
+            meleeAttack(self, meleedamage)
             yield()
         until self.x == destx and self.y - pathy == desty
         local pointdata = pointsdata and pointsdata[i]
@@ -177,10 +179,10 @@ end
 
 function EnemyShip:AlienMind()
     Stage.setVelY(0)
-    self.collidable = false
-    flyPath(self, self.path or findPath(self))
+    self.invincibletime = huge
+    flyPath(self, self.path or findPath(self), PlayerShip.InstantKillDamage)
     Body.setVelocity(self, 0, 0)
-    self.collidable = true
+    self.invincibletime = 0
     local t = 0
     local reinforcements = {
         [15] = {name = "leftgunner", type = "AlienGunnerLeft", path = self.leftgunnerpath},
@@ -190,7 +192,7 @@ function EnemyShip:AlienMind()
     }
     while true do
         yield()
-        meleeAttack(self)
+        meleeAttack(self, PlayerShip.InstantKillDamage)
         t = t + 1
         local reinforcement = reinforcements[t % 180]
 
