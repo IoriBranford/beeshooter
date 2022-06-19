@@ -16,7 +16,7 @@ function Config.reset(defaultconfig)
         canvasscalesoft = false,
         musicvolume = 0.5,
         soundvolume = 0.5,
-        resizable = false,
+        resizable = true,
         drawstats = false,
         rotation = 0,
 		variableupdate = false
