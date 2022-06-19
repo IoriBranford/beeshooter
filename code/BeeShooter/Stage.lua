@@ -299,6 +299,10 @@ function Stage.killTeam(teamname)
     end
 end
 
+function Stage.setVelY(vely)
+    stage.vely = vely
+end
+
 function Stage.setTime(time)
     gametimer = time
 end
