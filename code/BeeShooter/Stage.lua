@@ -264,9 +264,11 @@ function Stage.fixedupdate()
 
     if gametimerrunning and gametimer > 0 then
         gametimer = gametimer - 1
-    end
-    if gametimer <= 0 then
-        -- time out
+        if gametimer <= 0 then
+            Script.start(player, "timeout")
+            local GamePhase = require "BeeShooter.GamePhase"
+            GamePhase.lose("TIME UP!")
+        end
     end
 end
 
