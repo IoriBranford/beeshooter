@@ -42,6 +42,23 @@ local function walkPath(self, path)
     end
 end
 
+local function meleeAttack(self)
+    if not self.collidable then
+        return
+    end
+    local hitbox = self.hitbox
+    if hitbox then
+        Stage.addCharacter({
+            type = "EnemyMelee",
+            x = self.x + hitbox.x,
+            y = self.y + hitbox.y,
+            width = hitbox.width,
+            height = hitbox.height,
+            hitbox = hitbox
+        })
+    end
+end
+
 ---@param self Character
 local function flyPath(self, path)
     if not path then
@@ -56,6 +73,7 @@ local function flyPath(self, path)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely)
+            meleeAttack(self)
             yield()
         until self.x == destx and self.y - pathy == desty
         local pointdata = pointsdata and pointsdata[i]
@@ -172,6 +190,7 @@ function EnemyShip:AlienMind()
     }
     while true do
         yield()
+        meleeAttack(self)
         t = t + 1
         local reinforcement = reinforcements[t % 180]
 
