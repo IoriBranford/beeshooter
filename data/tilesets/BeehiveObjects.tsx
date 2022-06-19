@@ -8,8 +8,21 @@
  </tile>
  <tile id="2">
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="0" y="16" width="16" height="16"/>
+   <object id="1" name="hitbox" x="0" y="12" width="16" height="16"/>
   </objectgroup>
+  <animation>
+   <frame tileid="2" duration="50"/>
+   <frame tileid="0" duration="50"/>
+  </animation>
+ </tile>
+ <tile id="3">
+  <objectgroup draworder="index" id="2">
+   <object id="1" name="hitbox" x="0" y="12" width="16" height="16"/>
+  </objectgroup>
+  <animation>
+   <frame tileid="3" duration="50"/>
+   <frame tileid="1" duration="50"/>
+  </animation>
  </tile>
  <tile id="4">
   <objectgroup draworder="index" id="2">
