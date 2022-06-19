@@ -9,6 +9,6 @@ Fly,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp
 AntHole,BeeShooter.Character.EnemyShip,Spawner,,,,,,,,,
 AlienGunner,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp3,500,
 AlienPillager,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,4,TRUE,,sounds/bugkill1.mp3,250,
-AlienMind,BeeShooter.Character.EnemyShip,AlienMind,defeatAlienMind,EnemyShip,1,64,TRUE,sounds/bugkill1.mp3,sounds/bugkill2.mp3,2500,
+AlienMind,BeeShooter.Character.EnemyShip,AlienMind,defeatAlienMind,EnemyShip,1,128,TRUE,sounds/bugkill1.mp3,sounds/bugkill2.mp3,5000,
 InfiniteHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
 InfiniteHoneyPotOpen,BeeShooter.Character.EnemyShip,Idler,openInfiniteHoneyPot,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
