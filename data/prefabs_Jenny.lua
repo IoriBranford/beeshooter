@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 9,
-  nextobjectid = 30,
+  nextobjectid = 31,
   properties = {},
   tilesets = {
     {
@@ -19,9 +19,9 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 3,
+      columns = 9,
       image = "tilesets/Jenny.png",
-      imagewidth = 96,
+      imagewidth = 288,
       imageheight = 32,
       objectalignment = "center",
       tileoffset = {
@@ -35,12 +35,12 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 3,
+      tilecount = 9,
       tiles = {
         {
           id = 0,
           properties = {
-            ["name"] = "flyfast"
+            ["name"] = "flyfastA"
           },
           objectGroup = {
             type = "objectgroup",
@@ -99,7 +99,7 @@ return {
         {
           id = 1,
           properties = {
-            ["name"] = "flyslow"
+            ["name"] = "flyslowA"
           },
           objectGroup = {
             type = "objectgroup",
@@ -184,6 +184,62 @@ return {
                   ["ishitbox"] = true
                 }
               }
+            }
+          }
+        },
+        {
+          id = 3,
+          properties = {
+            ["name"] = "die"
+          },
+          animation = {
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 4,
+              duration = 50
+            },
+            {
+              tileid = 5,
+              duration = 50
+            },
+            {
+              tileid = 6,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 7,
+          properties = {
+            ["name"] = "flyfastB"
+          },
+          animation = {
+            {
+              tileid = 7,
+              duration = 50
+            },
+            {
+              tileid = 8,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 8,
+          properties = {
+            ["name"] = "flyslowB"
+          },
+          animation = {
+            {
+              tileid = 7,
+              duration = 100
+            },
+            {
+              tileid = 8,
+              duration = 100
             }
           }
         }
@@ -644,6 +700,22 @@ return {
         ["z"] = 100
       },
       objects = {
+        {
+          id = 30,
+          name = "JennyKilled",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 4,
+          visible = true,
+          properties = {
+            ["lifetime"] = 12
+          }
+        },
         {
           id = 1,
           name = "Jenny",
