@@ -187,7 +187,10 @@ function PlayerShip:defeat()
     if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
         self.defeated = false
         self.health = self.maxhealth
-        self.invincibletime = 60
+        local hurtinvincibletime = self.hurtinvincibletime or 60
+        if self.invincibletime < hurtinvincibletime then
+            self.invincibletime = hurtinvincibletime
+        end
         Audio.play(self.hurtsound)
         return PlayerShip.fight
     end
@@ -251,7 +254,10 @@ function PlayerShip:scorePoints(points)
 end
 
 function PlayerShip:incPowerLevel()
-    self.invincibletime = self.powerupinvincibletime or 60
+    local powerupinvincibletime = self.powerupinvincibletime or 60
+    if self.invincibletime < powerupinvincibletime then
+        self.invincibletime = powerupinvincibletime
+    end
     if self.power >= 3 then
         PlayerShip.scorePoints(self, 1000)
     else
