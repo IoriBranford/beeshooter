@@ -340,9 +340,9 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      columns = 2,
+      columns = 4,
       image = "tilesets/Ant.png",
-      imagewidth = 32,
+      imagewidth = 64,
       imageheight = 16,
       objectalignment = "center",
       tileoffset = {
@@ -356,7 +356,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 2,
+      tilecount = 4,
       tiles = {
         {
           id = 0,
@@ -398,12 +398,25 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 2,
+          animation = {
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            }
+          }
         }
       }
     },
     {
       name = "AntBig",
-      firstgid = 483,
+      firstgid = 485,
       tilewidth = 60,
       tileheight = 40,
       spacing = 0,
@@ -471,7 +484,7 @@ return {
     },
     {
       name = "AntBigParts",
-      firstgid = 486,
+      firstgid = 488,
       tilewidth = 24,
       tileheight = 24,
       spacing = 0,
@@ -560,7 +573,7 @@ return {
     },
     {
       name = "BeehiveObjects",
-      firstgid = 488,
+      firstgid = 490,
       tilewidth = 16,
       tileheight = 32,
       spacing = 0,
@@ -731,7 +744,7 @@ return {
     },
     {
       name = "Fly",
-      firstgid = 500,
+      firstgid = 502,
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
@@ -855,7 +868,7 @@ return {
     },
     {
       name = "Aliens",
-      firstgid = 516,
+      firstgid = 518,
       tilewidth = 24,
       tileheight = 16,
       spacing = 0,
@@ -863,7 +876,7 @@ return {
       columns = 6,
       image = "tilesets/Aliens.png",
       imagewidth = 144,
-      imageheight = 32,
+      imageheight = 48,
       objectalignment = "center",
       tileoffset = {
         x = 0,
@@ -876,7 +889,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 12,
+      tilecount = 18,
       tiles = {
         {
           id = 0,
@@ -1066,12 +1079,52 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "gun_die"
+          },
+          animation = {
+            {
+              tileid = 12,
+              duration = 50
+            },
+            {
+              tileid = 13,
+              duration = 50
+            },
+            {
+              tileid = 14,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 15,
+          properties = {
+            ["name"] = "claw_die"
+          },
+          animation = {
+            {
+              tileid = 15,
+              duration = 50
+            },
+            {
+              tileid = 16,
+              duration = 50
+            },
+            {
+              tileid = 17,
+              duration = 50
+            }
+          }
         }
       }
     },
     {
       name = "AlienMind",
-      firstgid = 528,
+      firstgid = 536,
       tilewidth = 32,
       tileheight = 48,
       spacing = 0,
@@ -2735,7 +2788,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -2792,7 +2845,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 500,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -2809,7 +2862,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484148,
+                  gid = 2147484150,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -3623,7 +3676,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -3680,7 +3733,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 494,
+                  gid = 496,
                   visible = true,
                   properties = {
                     ["spawncount"] = 50,
@@ -3699,7 +3752,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 494,
+                  gid = 496,
                   visible = true,
                   properties = {
                     ["spawncount"] = 50,
@@ -3879,7 +3932,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 494,
+                  gid = 496,
                   visible = true,
                   properties = {
                     ["spawncount"] = 50,
@@ -3898,7 +3951,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 494,
+                  gid = 496,
                   visible = true,
                   properties = {
                     ["spawncount"] = 50,
@@ -4165,7 +4218,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 500,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -4314,7 +4367,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484148,
+                  gid = 2147484150,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -4469,7 +4522,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484148,
+                  gid = 2147484150,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -4786,7 +4839,7 @@ return {
                   width = 60,
                   height = 40,
                   rotation = 0,
-                  gid = 483,
+                  gid = 485,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -4802,7 +4855,7 @@ return {
                   width = 60,
                   height = 40,
                   rotation = 0,
-                  gid = 2147484131,
+                  gid = 2147484133,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -4859,7 +4912,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 516,
+                  gid = 518,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -4909,7 +4962,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -4953,7 +5006,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 516,
+                  gid = 518,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -4970,7 +5023,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484164,
+                  gid = 518,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -5081,7 +5134,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 522,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5097,7 +5150,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484170,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5113,7 +5166,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 522,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5129,7 +5182,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484170,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5145,7 +5198,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 522,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5161,7 +5214,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484170,
+                  gid = 524,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5409,7 +5462,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5425,7 +5478,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5441,7 +5494,7 @@ return {
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 488,
+                  gid = 490,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5472,7 +5525,7 @@ return {
                   width = 32,
                   height = 48,
                   rotation = 0,
-                  gid = 528,
+                  gid = 536,
                   visible = true,
                   properties = {
                     ["leftflypath"] = { id = 371 },
