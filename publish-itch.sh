@@ -29,19 +29,19 @@ publish() {
 	fi
 }
 
-publish win-32
+# publish win-32
 publish win-64
-publish osx
-publish android
-publish linux-x86_64
-publish linux-i686
-publish linux-armhf
+# publish osx
+# publish android
+# publish linux-x86_64
+# publish linux-i686
+# publish linux-armhf
 publish data
-publish demo-win-32
-publish demo-win-64
-publish demo-osx
-publish demo-android
-publish demo-linux-x86_64
-publish demo-linux-i686
-publish demo-linux-armhf
-publish demo-data
+# publish demo-win-32
+# publish demo-win-64
+# publish demo-osx
+# publish demo-android
+# publish demo-linux-x86_64
+# publish demo-linux-i686
+# publish demo-linux-armhf
+# publish demo-data
