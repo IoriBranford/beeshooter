@@ -9,7 +9,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 23,
+  nextobjectid = 24,
   properties = {},
   tilesets = {
     {
@@ -957,6 +957,70 @@ return {
           }
         }
       }
+    },
+    {
+      name = "KillSmall",
+      firstgid = 62,
+      tilewidth = 32,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 8,
+      image = "tilesets/KillSmall.png",
+      imagewidth = 256,
+      imageheight = 32,
+      objectalignment = "center",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 8,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 16
+            },
+            {
+              tileid = 1,
+              duration = 16
+            },
+            {
+              tileid = 2,
+              duration = 16
+            },
+            {
+              tileid = 3,
+              duration = 16
+            },
+            {
+              tileid = 4,
+              duration = 16
+            },
+            {
+              tileid = 5,
+              duration = 16
+            },
+            {
+              tileid = 6,
+              duration = 16
+            },
+            {
+              tileid = 7,
+              duration = 16
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1019,6 +1083,22 @@ return {
           visible = true,
           properties = {
             ["lifetime"] = 9
+          }
+        },
+        {
+          id = 23,
+          name = "KillSmall",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 62,
+          visible = true,
+          properties = {
+            ["lifetime"] = 8
           }
         }
       }
