@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.5" name="Aliens" tilewidth="24" tileheight="16" tilecount="12" columns="6" objectalignment="center">
- <image source="Aliens.png" width="144" height="32"/>
+<tileset version="1.8" tiledversion="1.8.5" name="Aliens" tilewidth="24" tileheight="16" tilecount="18" columns="6" objectalignment="center">
+ <image source="Aliens.png" width="144" height="48"/>
  <tile id="0">
   <properties>
    <property name="name" value="gun_walk"/>
@@ -51,6 +51,26 @@
   <animation>
    <frame tileid="10" duration="100"/>
    <frame tileid="11" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="12">
+  <properties>
+   <property name="name" value="gun_die"/>
+  </properties>
+  <animation>
+   <frame tileid="12" duration="50"/>
+   <frame tileid="13" duration="50"/>
+   <frame tileid="14" duration="50"/>
+  </animation>
+ </tile>
+ <tile id="15">
+  <properties>
+   <property name="name" value="claw_die"/>
+  </properties>
+  <animation>
+   <frame tileid="15" duration="50"/>
+   <frame tileid="16" duration="50"/>
+   <frame tileid="17" duration="50"/>
   </animation>
  </tile>
 </tileset>

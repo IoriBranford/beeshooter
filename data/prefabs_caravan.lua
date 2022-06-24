@@ -8,8 +8,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 6,
-  nextobjectid = 19,
+  nextlayerid = 7,
+  nextobjectid = 23,
   properties = {},
   tilesets = {
     {
@@ -415,9 +415,9 @@ return {
       tileheight = 16,
       spacing = 0,
       margin = 0,
-      columns = 2,
+      columns = 4,
       image = "tilesets/Ant.png",
-      imagewidth = 32,
+      imagewidth = 64,
       imageheight = 16,
       objectalignment = "center",
       tileoffset = {
@@ -431,7 +431,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 2,
+      tilecount = 4,
       tiles = {
         {
           id = 0,
@@ -473,12 +473,25 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 2,
+          animation = {
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            }
+          }
         }
       }
     },
     {
       name = "Aliens",
-      firstgid = 22,
+      firstgid = 24,
       tilewidth = 24,
       tileheight = 16,
       spacing = 0,
@@ -486,7 +499,7 @@ return {
       columns = 6,
       image = "tilesets/Aliens.png",
       imagewidth = 144,
-      imageheight = 32,
+      imageheight = 48,
       objectalignment = "center",
       tileoffset = {
         x = 0,
@@ -499,7 +512,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 12,
+      tilecount = 18,
       tiles = {
         {
           id = 0,
@@ -689,12 +702,52 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 12,
+          properties = {
+            ["name"] = "gun_die"
+          },
+          animation = {
+            {
+              tileid = 12,
+              duration = 50
+            },
+            {
+              tileid = 13,
+              duration = 50
+            },
+            {
+              tileid = 14,
+              duration = 50
+            }
+          }
+        },
+        {
+          id = 15,
+          properties = {
+            ["name"] = "claw_die"
+          },
+          animation = {
+            {
+              tileid = 15,
+              duration = 50
+            },
+            {
+              tileid = 16,
+              duration = 50
+            },
+            {
+              tileid = 17,
+              duration = 50
+            }
+          }
         }
       }
     },
     {
       name = "AlienMind",
-      firstgid = 34,
+      firstgid = 42,
       tilewidth = 32,
       tileheight = 48,
       spacing = 0,
@@ -783,7 +836,7 @@ return {
     },
     {
       name = "Fly",
-      firstgid = 38,
+      firstgid = 46,
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
@@ -907,6 +960,69 @@ return {
     }
   },
   layers = {
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "defeatdrops",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 19,
+          name = "AntKilled",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {
+            ["lifetime"] = 6
+          }
+        },
+        {
+          id = 21,
+          name = "AlienGunnerKilled",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 16,
+          rotation = 0,
+          gid = 36,
+          visible = true,
+          properties = {
+            ["lifetime"] = 9
+          }
+        },
+        {
+          id = 22,
+          name = "AlienPillagerKilled",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 16,
+          rotation = 0,
+          gid = 39,
+          visible = true,
+          properties = {
+            ["lifetime"] = 9
+          }
+        }
+      }
+    },
     {
       type = "objectgroup",
       draworder = "topdown",
@@ -1089,7 +1205,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 22,
+          gid = 24,
           visible = true,
           properties = {
             ["bullettype"] = "FlyBullet",
@@ -1106,7 +1222,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483670,
+          gid = 2147483672,
           visible = true,
           properties = {
             ["bullettype"] = "FlyBullet",
@@ -1123,7 +1239,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 28,
+          gid = 30,
           visible = true,
           properties = {
             ["z"] = 1
@@ -1139,7 +1255,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483676,
+          gid = 2147483678,
           visible = true,
           properties = {
             ["z"] = 1
@@ -1155,7 +1271,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 38,
+          gid = 46,
           visible = true,
           properties = {
             ["bullettype"] = "FlyBullet",
@@ -1190,7 +1306,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 2147483686,
+          gid = 2147483694,
           visible = true,
           properties = {
             ["bullettype"] = "FlyBullet",
