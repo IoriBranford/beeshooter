@@ -170,6 +170,8 @@ function PlayerShip:fight()
 end
 
 local function die(self)
+    self.collidable = false
+    self.defeated = true
     Body.setVelocity(self, 0, 0)
     Audio.play(self.defeatsound)
     self:dropDefeatObjects()
@@ -200,6 +202,7 @@ function PlayerShip:defeat()
 
     Audio.play(self.respawnsound)
     self.lives = self.lives - 1
+    self.collidable = true
     self.defeated = false
     self.sprite:setHidden(false)
     self.health = self.maxhealth
