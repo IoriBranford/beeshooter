@@ -138,18 +138,21 @@ function PlayerShip:fight()
             self.weapon = self.weapon == "A" and "B" or "A"
             Audio.play(self.changeweaponsound)
         end
+        local fastspeed = self.fastspeed
+        local slowspeed = self.slowspeed
         if speedbutton then
-            local fastspeed = self.fastspeed
-            local slowspeed = self.slowspeed
             if self.speed == fastspeed then
                 self.speed = slowspeed
-                self.sprite:changeTile("flyslow")
                 Audio.play(self.slowsound)
             else
                 self.speed = fastspeed
-                self.sprite:changeTile("flyfast")
                 Audio.play(self.fastsound)
             end
+        end
+        if self.speed == fastspeed then
+            self.sprite:changeTile("flyfast"..self.weapon)
+        else
+            self.sprite:changeTile("flyslow"..self.weapon)
         end
         inputMovement(self)
         firetime = inputShooting(self, firetime, firebutton)
