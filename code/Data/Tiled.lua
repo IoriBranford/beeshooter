@@ -71,6 +71,7 @@ local AnimationTimeUnitToSecs = {
     objectgroup[i]                      Each object in the object group
     objectgroup[name]                   You can access the object by name if it has one
     object.z                            Drawing order, default is objectgroup's z, set with object property "z" (float)
+    object.type                         Copy of Tiled 1.9's object.class for backward compatibility
     object.tile                         Object tile from gid
     object.rotation                     Converted from degrees to radians, LOVE's standard rotation unit
     object.scalex                       Object scale x from gid flipx and tile width
@@ -585,6 +586,7 @@ function Tiled.load(mapfile)
                 if objectname ~= "" then
                     addIfNew(layer, objectname, object)
                 end
+                local objecttype = object.class or object.type
                 local gid = object.gid
                 if gid then
                     local sx, sy
@@ -594,11 +596,11 @@ function Tiled.load(mapfile)
                     object.scalex = sx * object.width / tile.width
                     object.scaley = sy * object.height / tile.height
 
-                    local objecttype = object.type
                     if objecttype == "" then
-                        object.type = tile.type
+                        objecttype = tile.type
                     end
                 end
+                object.type = objecttype
                 processPoly(object)
                 local text = object.text
                 if text then
