@@ -1,21 +1,23 @@
 return {
-  version = "1.5",
+  version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.8.5",
+  tiledversion = "1.9.0",
+  class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 30,
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 37,
-  nextobjectid = 395,
+  nextlayerid = 38,
+  nextobjectid = 411,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
     {
       name = "Beehive",
       firstgid = 1,
+      class = "",
       tilewidth = 16,
       tileheight = 16,
       spacing = 0,
@@ -25,6 +27,8 @@ return {
       imagewidth = 480,
       imageheight = 256,
       objectalignment = "unspecified",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -38,12 +42,14 @@ return {
       wangsets = {
         {
           name = "Unnamed Set",
+          class = "",
           tile = -1,
           properties = {},
           colors = {
             {
               color = { 255, 0, 0 },
               name = "Floor",
+              class = "",
               probability = 1,
               tile = -1,
               properties = {}
@@ -51,6 +57,7 @@ return {
             {
               color = { 0, 255, 0 },
               name = "Honey",
+              class = "",
               probability = 1,
               tile = -1,
               properties = {}
@@ -58,6 +65,7 @@ return {
             {
               color = { 0, 0, 255 },
               name = "Light floor",
+              class = "",
               probability = 1,
               tile = -1,
               properties = {}
@@ -65,6 +73,7 @@ return {
             {
               color = { 255, 119, 0 },
               name = "Dark floor",
+              class = "",
               probability = 1,
               tile = -1,
               properties = {}
@@ -336,6 +345,7 @@ return {
     {
       name = "Ant",
       firstgid = 481,
+      class = "",
       tilewidth = 16,
       tileheight = 16,
       spacing = 0,
@@ -345,6 +355,8 @@ return {
       imagewidth = 64,
       imageheight = 16,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -365,6 +377,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -376,7 +389,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 2,
@@ -417,6 +430,7 @@ return {
     {
       name = "AntBig",
       firstgid = 485,
+      class = "",
       tilewidth = 60,
       tileheight = 40,
       spacing = 0,
@@ -426,6 +440,8 @@ return {
       imagewidth = 180,
       imageheight = 40,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -446,6 +462,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -457,7 +474,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 6,
                 y = 8,
@@ -485,6 +502,7 @@ return {
     {
       name = "AntBigParts",
       firstgid = 488,
+      class = "",
       tilewidth = 24,
       tileheight = 24,
       spacing = 0,
@@ -494,6 +512,8 @@ return {
       imagewidth = 48,
       imageheight = 24,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -514,6 +534,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -525,7 +546,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -545,6 +566,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -556,7 +578,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -574,6 +596,7 @@ return {
     {
       name = "BeehiveObjects",
       firstgid = 490,
+      class = "",
       tilewidth = 16,
       tileheight = 32,
       spacing = 0,
@@ -583,6 +606,8 @@ return {
       imagewidth = 192,
       imageheight = 32,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -603,6 +628,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -614,7 +640,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -634,6 +660,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -645,7 +672,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -675,6 +702,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -686,7 +714,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -716,6 +744,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -727,7 +756,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 6,
@@ -745,6 +774,7 @@ return {
     {
       name = "Fly",
       firstgid = 502,
+      class = "",
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
@@ -754,6 +784,8 @@ return {
       imagewidth = 512,
       imageheight = 32,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -774,6 +806,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -785,7 +818,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 6,
@@ -869,6 +902,7 @@ return {
     {
       name = "Aliens",
       firstgid = 518,
+      class = "",
       tilewidth = 24,
       tileheight = 16,
       spacing = 0,
@@ -878,6 +912,8 @@ return {
       imagewidth = 144,
       imageheight = 48,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -901,6 +937,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -912,7 +949,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -952,6 +989,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -963,7 +1001,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -995,6 +1033,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -1006,7 +1045,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -1046,6 +1085,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -1057,7 +1097,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -1125,6 +1165,7 @@ return {
     {
       name = "AlienMind",
       firstgid = 536,
+      class = "",
       tilewidth = 32,
       tileheight = 48,
       spacing = 0,
@@ -1134,6 +1175,8 @@ return {
       imagewidth = 128,
       imageheight = 48,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -1154,6 +1197,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -1165,7 +1209,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 8,
@@ -1178,7 +1222,7 @@ return {
               {
                 id = 2,
                 name = "brain",
-                type = "",
+                class = "",
                 shape = "point",
                 x = 16,
                 y = 10,
@@ -1218,6 +1262,7 @@ return {
       draworder = "topdown",
       id = 15,
       name = "comments",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1229,7 +1274,7 @@ return {
         {
           id = 44,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 0,
@@ -1247,7 +1292,7 @@ return {
         {
           id = 45,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 224,
@@ -1265,7 +1310,7 @@ return {
         {
           id = 46,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 448,
@@ -1283,7 +1328,7 @@ return {
         {
           id = 47,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 672,
@@ -1301,7 +1346,7 @@ return {
         {
           id = 48,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 896,
@@ -1319,7 +1364,7 @@ return {
         {
           id = 49,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 1120,
@@ -1337,7 +1382,7 @@ return {
         {
           id = 50,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 1344,
@@ -1355,7 +1400,7 @@ return {
         {
           id = 51,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 1568,
@@ -1373,7 +1418,7 @@ return {
         {
           id = 52,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 1792,
@@ -1391,7 +1436,7 @@ return {
         {
           id = 53,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 2016,
@@ -1409,7 +1454,7 @@ return {
         {
           id = 54,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 2240,
@@ -1427,7 +1472,7 @@ return {
         {
           id = 55,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 2464,
@@ -1445,7 +1490,7 @@ return {
         {
           id = 56,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 2688,
@@ -1463,7 +1508,7 @@ return {
         {
           id = 57,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 2912,
@@ -1481,7 +1526,7 @@ return {
         {
           id = 58,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 3136,
@@ -1499,7 +1544,7 @@ return {
         {
           id = 59,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 3360,
@@ -1517,7 +1562,7 @@ return {
         {
           id = 60,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 3584,
@@ -1535,7 +1580,7 @@ return {
         {
           id = 61,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 3808,
@@ -1553,7 +1598,7 @@ return {
         {
           id = 62,
           name = "",
-          type = "",
+          class = "",
           shape = "text",
           x = -256,
           y = 4032,
@@ -1574,6 +1619,7 @@ return {
       type = "group",
       id = 3,
       name = "stage",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1592,6 +1638,7 @@ return {
           height = 20,
           id = 8,
           name = "underfloor",
+          class = "",
           visible = true,
           opacity = 1,
           offsetx = 0,
@@ -1605,56 +1652,36 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = 16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2AUkAvaoPgRmfoBddgB7w=="
-            },
-            {
-              x = -16, y = 14, width = 16, height = 14,
-              data = "eJxjYBg48IRC/UyMlOlXoFD/QAJqhB0lZoDCbiSHP7UAAFKUAxk="
-            },
-            {
-              x = 0, y = 14, width = 16, height = 14,
-              data = "eJzdklEKgDAMQxsPIj3tDup2EBlGLEFXZX8GQn6SMsYz+65Cb8ysV2RTacORLelV2YBemQvGPchG5S97f1Sb3Pe/n7nhuG6MWLrT2ffAQGTpaRP5iu9QlpRLZRcJS8qlstu1A+h2KLw="
-            },
-            {
-              x = 16, y = 14, width = 16, height = 14,
-              data = "eJx7zMDA8BiIGRgZyAKMjBAsR6b+UYAAbUD8iEy9IH2UxCMDBfEIspvc+H8EtZtsQGHaG+h0CwDl9Qde"
-            },
-            {
-              x = -16, y = 28, width = 16, height = 14,
-              data = "eJxjYBgFIxU8oVA/EyNl+hUo1D8cAACCbQEJ"
-            },
-            {
-              x = 0, y = 28, width = 16, height = 14,
-              data = "eJxjYMANFBgZGBiRsBwjHsWjAC9ow4GJUfMIiB/jwMSoYUCLR2RMjBp88T6aNigDAPjWFiU="
-            },
-            {
-              x = 16, y = 28, width = 16, height = 14,
-              data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
-            },
-            {
-              x = -16, y = 182, width = 16, height = 14,
+              x = -16, y = 126, width = 16, height = 14,
               data = "eJxjYBgF5IInFOpnYqRMvwKF+kfBwAMASHwBCQ=="
             },
             {
-              x = 0, y = 182, width = 16, height = 14,
+              x = 0, y = 126, width = 16, height = 14,
               data = "eJzlUUEKwDAI0z6k+No9tO1D1gxlIt3m2HGBQAUTYyX6N7aP+j45JtsLzdC5IDNRYTzy2dDfdTYgs65B31y26IN+Vq5w7MJnNvPJwLSWR5xPymOxi/mUi7we9WaOJPRAzIr/e7qv7xe3r91hdV9gB6/gFy0="
             },
             {
-              x = 16, y = 182, width = 16, height = 14,
+              x = 16, y = 126, width = 16, height = 14,
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
             },
             {
-              x = -16, y = 196, width = 16, height = 14,
+              x = -16, y = 140, width = 16, height = 14,
               data = "eJxjYBgFo4B08ASIH1Ggn4kRSDCSr18BqFeOAv2DBQAAe2ICCw=="
             },
             {
-              x = 0, y = 196, width = 16, height = 14,
+              x = 0, y = 140, width = 16, height = 14,
               data = "eJxjYIAAJkYGFKDACBUDYkYglkOTRwcKWOQViNA3WEAbGiZF/hEQP0bD6ABd/gmSXlgYI2N0gC4PipsnUL3YwvgJEvsRFvfA4hdX/MDMh7kPG8AW5+jm43IfMWAopR9yAQA6HhQr"
             },
             {
-              x = 16, y = 196, width = 16, height = 14,
+              x = 16, y = 140, width = 16, height = 14,
               data = "eJxjYBgFwwE8IlPfE5heRvL0MzFC9MqRqV+BAr3DAQAAmV4DDQ=="
+            },
+            {
+              x = 0, y = 182, width = 16, height = 14,
+              data = "eJxjYBgFo2AU4AKZFOhtBeJ2AmoATnQBdg=="
+            },
+            {
+              x = 0, y = 196, width = 16, height = 14,
+              data = "eJxjYMAN0oE4E488IdAKxO0U6KeG/Y9G7R+x9j+h0H4mRiDBSL5+BaBeOQL6AWhfDZM="
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -1718,6 +1745,7 @@ return {
           height = 20,
           id = 1,
           name = "floor",
+          class = "",
           visible = true,
           opacity = 1,
           offsetx = 0,
@@ -1731,64 +1759,32 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = -16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2AUDARQZmRgAAAEDwAl"
-            },
-            {
-              x = 0, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo4B2QJmRgUEFCasykqZHkAET4zJLGY8eXJiQXfiwCYnqYXr0odgAiAEprQXt"
-            },
-            {
-              x = 16, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2DoAhVGCFZlJE+/PhQbUNNRJAAAmn0A/w=="
-            },
-            {
-              x = -16, y = 14, width = 16, height = 14,
-              data = "eJxjYCAf6FGgd6gDVkYGBjZG8vVrA7EohW7QplD/KBh4AACE6QCn"
-            },
-            {
-              x = 0, y = 14, width = 16, height = 14,
-              data = "eJzTZ2BgMAZiQTRsAsT6WLABAybQI1LdYATsjJTp5wNiNkbyzeFDwsSaw8oIUQvC2kC+KBHmIOtBVgsC2mj6kc3BpgddP8wMHSxuwYXFoOrRAcwcbGaJIcnpEg4mFLOI1UNvAAB6kAh4"
-            },
-            {
-              x = 16, y = 14, width = 16, height = 14,
-              data = "eJxjYBg+gJWRgYGdkXy9fECanwx9bEAsBmTrALEuifpBdoqRoQ9ZP6luRgaU2M1Aod5RwMAAAP8tAYw="
-            },
-            {
-              x = -16, y = 28, width = 16, height = 14,
-              data = "eJxjYBgFAwVYGSnTr00dZ4yCAQQAW4MAMg=="
-            },
-            {
-              x = 0, y = 28, width = 16, height = 14,
-              data = "eJxjYBiagJWRgYGNkTS1yJiPAYJxySNjMaAaHRwYZhY+Nbp43EaMmlEwfAEA4hUDhg=="
-            },
-            {
-              x = 16, y = 28, width = 16, height = 14,
-              data = "eJxjYBhYwM5ImX5+Cu3XpVD/KBgFlAAAtT8ARQ=="
-            },
-            {
-              x = -16, y = 182, width = 16, height = 14,
+              x = -16, y = 126, width = 16, height = 14,
               data = "eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg=="
             },
             {
-              x = 0, y = 182, width = 16, height = 14,
+              x = 0, y = 126, width = 16, height = 14,
               data = "eJzFkcEOgCAMQ+GAngYn+Qng/3/PEWmyLFvEkyS96F67Qgj/niM+OuM+k8R8Z12s8iGTWHllz9NYw8jwdmsrtzu7TaaK3ZD11nGyec1jH2TBx/MAW40u8IG35UGKTUb3Fvy7JvFd9tDdaYNHjvQoxpzHy754h+HM6W66r75Lj8e/nTeS/A2OTwdE"
             },
             {
-              x = 16, y = 182, width = 16, height = 14,
+              x = 16, y = 126, width = 16, height = 14,
               data = "eJxjYBjagJ2RMv261HHGKBgFZAEAif8ANg=="
             },
             {
-              x = -16, y = 196, width = 16, height = 14,
+              x = -16, y = 140, width = 16, height = 14,
               data = "eJxjYBi5gJWRMr18FNjNC8RiFOrnp0C/NhDrUqB/FFAHAAA+fQCy"
             },
             {
-              x = 0, y = 196, width = 16, height = 14,
+              x = 0, y = 140, width = 16, height = 14,
               data = "eJxjYIAAVkYGBj4GBGZjxMTI8uyMDHCArpdYDDKDXL3IWAyIddCwKAnyugyYgBdJnh+LvDYevcToh5mBC2hD3SiGxw5CQJsCvaOAPgAA/1MGJw=="
             },
             {
-              x = 16, y = 196, width = 16, height = 14,
+              x = 16, y = 140, width = 16, height = 14,
               data = "eJxjYBhYwM5ImX5+Cu3no9ANohSawQvEYkCsS6b92hToHQUDDwATjwEB"
+            },
+            {
+              x = 0, y = 182, width = 16, height = 14,
+              data = "eJxjYBgFo2B4AlZGBgZ2RvL1awOxLtVcgx0AAC4CAGc="
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -1856,6 +1852,7 @@ return {
           height = 20,
           id = 22,
           name = "onfloor",
+          class = "",
           visible = true,
           opacity = 1,
           offsetx = 0,
@@ -1869,12 +1866,16 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = 0, y = 182, width = 16, height = 14,
+              x = 0, y = 126, width = 16, height = 14,
               data = "eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh"
             },
             {
-              x = 0, y = 196, width = 16, height = 14,
+              x = 0, y = 140, width = 16, height = 14,
               data = "eJxjYMANHBkZGJwZ8SggAOKBehPJ1A+yWxGIlch0Qy1QTx0Q21PgBpg59RToHwWjAB8AABFpBLE="
+            },
+            {
+              x = 0, y = 182, width = 16, height = 14,
+              data = "eJxjYBgFo2B4AkdGBgZnRvL11wL11lOgnxgAALl8AYU="
             },
             {
               x = 0, y = 210, width = 16, height = 14,
@@ -1914,6 +1915,7 @@ return {
           type = "group",
           id = 9,
           name = "spawns",
+          class = "",
           visible = true,
           opacity = 1,
           offsetx = 0,
@@ -1927,6 +1929,7 @@ return {
               draworder = "topdown",
               id = 11,
               name = "room1ants1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -1938,7 +1941,7 @@ return {
                 {
                   id = 1,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 0,
                   y = 4008,
@@ -1961,7 +1964,7 @@ return {
                 {
                   id = 2,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 4008,
@@ -1977,7 +1980,7 @@ return {
                 {
                   id = 38,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -168,
                   y = 4008,
@@ -1993,7 +1996,7 @@ return {
                 {
                   id = 28,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -88,
                   y = 4008,
@@ -2009,7 +2012,7 @@ return {
                 {
                   id = 3,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -24,
                   y = 4008,
@@ -2025,7 +2028,7 @@ return {
                 {
                   id = 36,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -184,
                   y = 4008,
@@ -2041,7 +2044,7 @@ return {
                 {
                   id = 27,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -104,
                   y = 4008,
@@ -2057,7 +2060,7 @@ return {
                 {
                   id = 4,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -40,
                   y = 4008,
@@ -2073,7 +2076,7 @@ return {
                 {
                   id = 34,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -200,
                   y = 4008,
@@ -2089,7 +2092,7 @@ return {
                 {
                   id = 26,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -120,
                   y = 4008,
@@ -2105,7 +2108,7 @@ return {
                 {
                   id = 5,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -56,
                   y = 4008,
@@ -2121,7 +2124,7 @@ return {
                 {
                   id = 32,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -216,
                   y = 4008,
@@ -2137,7 +2140,7 @@ return {
                 {
                   id = 25,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -136,
                   y = 4008,
@@ -2153,7 +2156,7 @@ return {
                 {
                   id = 6,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -72,
                   y = 4008,
@@ -2169,7 +2172,7 @@ return {
                 {
                   id = 30,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -232,
                   y = 4008,
@@ -2185,7 +2188,7 @@ return {
                 {
                   id = 24,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -152,
                   y = 4008,
@@ -2201,7 +2204,7 @@ return {
                 {
                   id = 11,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 4000,
@@ -2218,6 +2221,7 @@ return {
               draworder = "topdown",
               id = 16,
               name = "room1ants2",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -2229,7 +2233,7 @@ return {
                 {
                   id = 64,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3936,
@@ -2250,7 +2254,7 @@ return {
                 {
                   id = 65,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3936,
@@ -2266,7 +2270,7 @@ return {
                 {
                   id = 96,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3976,
@@ -2282,7 +2286,7 @@ return {
                 {
                   id = 66,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 424,
                   y = 3936,
@@ -2298,7 +2302,7 @@ return {
                 {
                   id = 95,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 424,
                   y = 3976,
@@ -2314,7 +2318,7 @@ return {
                 {
                   id = 67,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 344,
                   y = 3936,
@@ -2330,7 +2334,7 @@ return {
                 {
                   id = 94,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 344,
                   y = 3976,
@@ -2346,7 +2350,7 @@ return {
                 {
                   id = 68,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 280,
                   y = 3936,
@@ -2362,7 +2366,7 @@ return {
                 {
                   id = 93,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 280,
                   y = 3976,
@@ -2378,7 +2382,7 @@ return {
                 {
                   id = 69,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 440,
                   y = 3936,
@@ -2394,7 +2398,7 @@ return {
                 {
                   id = 92,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 440,
                   y = 3976,
@@ -2410,7 +2414,7 @@ return {
                 {
                   id = 70,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 360,
                   y = 3936,
@@ -2426,7 +2430,7 @@ return {
                 {
                   id = 91,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 360,
                   y = 3976,
@@ -2442,7 +2446,7 @@ return {
                 {
                   id = 71,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 296,
                   y = 3936,
@@ -2458,7 +2462,7 @@ return {
                 {
                   id = 90,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 296,
                   y = 3976,
@@ -2474,7 +2478,7 @@ return {
                 {
                   id = 72,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 456,
                   y = 3936,
@@ -2490,7 +2494,7 @@ return {
                 {
                   id = 89,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 456,
                   y = 3976,
@@ -2506,7 +2510,7 @@ return {
                 {
                   id = 73,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 376,
                   y = 3936,
@@ -2522,7 +2526,7 @@ return {
                 {
                   id = 88,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 376,
                   y = 3976,
@@ -2538,7 +2542,7 @@ return {
                 {
                   id = 74,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 312,
                   y = 3936,
@@ -2554,7 +2558,7 @@ return {
                 {
                   id = 87,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 312,
                   y = 3976,
@@ -2570,7 +2574,7 @@ return {
                 {
                   id = 75,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 472,
                   y = 3936,
@@ -2586,7 +2590,7 @@ return {
                 {
                   id = 86,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 472,
                   y = 3976,
@@ -2602,7 +2606,7 @@ return {
                 {
                   id = 76,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 392,
                   y = 3936,
@@ -2618,7 +2622,7 @@ return {
                 {
                   id = 85,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 392,
                   y = 3976,
@@ -2634,7 +2638,7 @@ return {
                 {
                   id = 77,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 328,
                   y = 3936,
@@ -2650,7 +2654,7 @@ return {
                 {
                   id = 84,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 328,
                   y = 3976,
@@ -2666,7 +2670,7 @@ return {
                 {
                   id = 78,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 488,
                   y = 3936,
@@ -2682,7 +2686,7 @@ return {
                 {
                   id = 83,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 488,
                   y = 3976,
@@ -2698,7 +2702,7 @@ return {
                 {
                   id = 79,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 408,
                   y = 3936,
@@ -2714,7 +2718,7 @@ return {
                 {
                   id = 82,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 408,
                   y = 3976,
@@ -2730,7 +2734,7 @@ return {
                 {
                   id = 80,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3928,
@@ -2743,7 +2747,7 @@ return {
                 {
                   id = 81,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 3976,
@@ -2770,6 +2774,7 @@ return {
               draworder = "topdown",
               id = 21,
               name = "room1powerup",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -2781,7 +2786,7 @@ return {
                 {
                   id = 97,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 80,
                   y = 3832,
@@ -2797,7 +2802,7 @@ return {
                 {
                   id = 105,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3848,
@@ -2814,6 +2819,7 @@ return {
               draworder = "topdown",
               id = 19,
               name = "room2fly1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -2825,7 +2831,7 @@ return {
                 {
                   id = 100,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3768,
@@ -2838,7 +2844,7 @@ return {
                 {
                   id = 101,
                   name = "",
-                  type = "Fly",
+                  class = "Fly",
                   shape = "rectangle",
                   x = -8,
                   y = 3760,
@@ -2855,7 +2861,7 @@ return {
                 {
                   id = 104,
                   name = "",
-                  type = "Fly",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 264,
                   y = 3760,
@@ -2872,7 +2878,7 @@ return {
                 {
                   id = 102,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 0,
                   y = 3720,
@@ -2890,7 +2896,7 @@ return {
                 {
                   id = 103,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 3720,
@@ -2908,7 +2914,7 @@ return {
                 {
                   id = 127,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 3808,
@@ -2917,13 +2923,13 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = -pi*3/16\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = -pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
                   }
                 },
                 {
                   id = 128,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 3808,
@@ -2932,7 +2938,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = pi*3/16\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
                   }
                 }
               }
@@ -2942,6 +2948,7 @@ return {
               draworder = "topdown",
               id = 23,
               name = "room2ants1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -2953,7 +2960,7 @@ return {
                 {
                   id = 106,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3696,
@@ -2969,7 +2976,7 @@ return {
                 {
                   id = 124,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3672,
@@ -2985,7 +2992,7 @@ return {
                 {
                   id = 122,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3736,
@@ -3001,7 +3008,7 @@ return {
                 {
                   id = 126,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3712,
@@ -3017,7 +3024,7 @@ return {
                 {
                   id = 110,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3720,
@@ -3033,7 +3040,7 @@ return {
                 {
                   id = 121,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3760,
@@ -3049,7 +3056,7 @@ return {
                 {
                   id = 112,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3744,
@@ -3065,7 +3072,7 @@ return {
                 {
                   id = 120,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3784,
@@ -3081,7 +3088,7 @@ return {
                 {
                   id = 114,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3768,
@@ -3097,7 +3104,7 @@ return {
                 {
                   id = 119,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3808,
@@ -3113,7 +3120,7 @@ return {
                 {
                   id = 107,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3696,
@@ -3126,7 +3133,7 @@ return {
                 {
                   id = 108,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3696,
@@ -3143,7 +3150,7 @@ return {
                 {
                   id = 123,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3680,
@@ -3160,7 +3167,7 @@ return {
                 {
                   id = 118,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3736,
@@ -3177,7 +3184,7 @@ return {
                 {
                   id = 125,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3720,
@@ -3194,7 +3201,7 @@ return {
                 {
                   id = 109,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3712,
@@ -3211,7 +3218,7 @@ return {
                 {
                   id = 117,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3752,
@@ -3228,7 +3235,7 @@ return {
                 {
                   id = 111,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3728,
@@ -3245,7 +3252,7 @@ return {
                 {
                   id = 116,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3768,
@@ -3262,7 +3269,7 @@ return {
                 {
                   id = 113,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3744,
@@ -3279,7 +3286,7 @@ return {
                 {
                   id = 115,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3784,
@@ -3300,6 +3307,7 @@ return {
               draworder = "topdown",
               id = 24,
               name = "room2ants2",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -3311,7 +3319,7 @@ return {
                 {
                   id = 130,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3688,
@@ -3327,7 +3335,7 @@ return {
                 {
                   id = 131,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3664,
@@ -3343,7 +3351,7 @@ return {
                 {
                   id = 132,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3728,
@@ -3359,7 +3367,7 @@ return {
                 {
                   id = 133,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3704,
@@ -3375,7 +3383,7 @@ return {
                 {
                   id = 134,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3712,
@@ -3391,7 +3399,7 @@ return {
                 {
                   id = 135,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3752,
@@ -3407,7 +3415,7 @@ return {
                 {
                   id = 136,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3736,
@@ -3423,7 +3431,7 @@ return {
                 {
                   id = 137,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3776,
@@ -3439,7 +3447,7 @@ return {
                 {
                   id = 138,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3760,
@@ -3455,7 +3463,7 @@ return {
                 {
                   id = 139,
                   name = "",
-                  type = "Ant",
+                  class = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3800,
@@ -3471,7 +3479,7 @@ return {
                 {
                   id = 140,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3656,
@@ -3484,7 +3492,7 @@ return {
                 {
                   id = 141,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3688,
@@ -3501,7 +3509,7 @@ return {
                 {
                   id = 142,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3672,
@@ -3518,7 +3526,7 @@ return {
                 {
                   id = 143,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3728,
@@ -3535,7 +3543,7 @@ return {
                 {
                   id = 144,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3712,
@@ -3552,7 +3560,7 @@ return {
                 {
                   id = 145,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3704,
@@ -3569,7 +3577,7 @@ return {
                 {
                   id = 146,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3744,
@@ -3586,7 +3594,7 @@ return {
                 {
                   id = 147,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3720,
@@ -3603,7 +3611,7 @@ return {
                 {
                   id = 148,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3760,
@@ -3620,7 +3628,7 @@ return {
                 {
                   id = 149,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3736,
@@ -3637,7 +3645,7 @@ return {
                 {
                   id = 150,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3776,
@@ -3656,8 +3664,138 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 37,
+              name = "room2fly2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 395,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3616,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 396,
+                  name = "",
+                  class = "Fly",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 3792,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 502,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 10
+                  }
+                },
+                {
+                  id = 397,
+                  name = "",
+                  class = "Fly",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 3792,
+                  width = 32,
+                  height = 32,
+                  rotation = 0,
+                  gid = 2147484150,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 10
+                  }
+                },
+                {
+                  id = 398,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -32,
+                  y = 3808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 16, y = -16 },
+                    { x = 72, y = -72 },
+                    { x = 8, y = -136 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 399,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 288,
+                  y = 3808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -16, y = -16 },
+                    { x = -72, y = -72 },
+                    { x = -8, y = -136 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 400,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 3736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = -pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
+                  }
+                },
+                {
+                  id = 401,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 3736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(0)\n\nfor _=1,3 do\n\nlocal angle = pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, angle, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend\n\nwait(30)\nsetSpeed(fastspeed or 2)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 25,
               name = "room2powerup",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -3669,7 +3807,7 @@ return {
                 {
                   id = 173,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 136,
                   y = 3584,
@@ -3685,7 +3823,7 @@ return {
                 {
                   id = 174,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -80,
                   y = 3592,
@@ -3702,6 +3840,7 @@ return {
               draworder = "topdown",
               id = 26,
               name = "room3columnants1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -3713,7 +3852,7 @@ return {
                 {
                   id = 175,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 3568,
@@ -3726,7 +3865,7 @@ return {
                 {
                   id = 176,
                   name = "",
-                  type = "AntHole",
+                  class = "AntHole",
                   shape = "rectangle",
                   x = 64,
                   y = 3600,
@@ -3745,7 +3884,7 @@ return {
                 {
                   id = 206,
                   name = "",
-                  type = "AntHole",
+                  class = "AntHole",
                   shape = "rectangle",
                   x = 192,
                   y = 3600,
@@ -3764,7 +3903,7 @@ return {
                 {
                   id = 177,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 64,
                   y = 3592,
@@ -3792,7 +3931,7 @@ return {
                 {
                   id = 244,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 192,
                   y = 3592,
@@ -3820,7 +3959,7 @@ return {
                 {
                   id = 241,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3568,
@@ -3835,7 +3974,7 @@ return {
                 {
                   id = 247,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3568,
@@ -3850,7 +3989,7 @@ return {
                 {
                   id = 243,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3424,
@@ -3865,7 +4004,7 @@ return {
                 {
                   id = 246,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3424,
@@ -3880,7 +4019,7 @@ return {
                 {
                   id = 242,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3496,
@@ -3895,7 +4034,7 @@ return {
                 {
                   id = 245,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3496,
@@ -3914,6 +4053,7 @@ return {
               draworder = "topdown",
               id = 29,
               name = "room3columnants2",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -3925,7 +4065,7 @@ return {
                 {
                   id = 224,
                   name = "",
-                  type = "AntHole",
+                  class = "AntHole",
                   shape = "rectangle",
                   x = 64,
                   y = 3472,
@@ -3944,7 +4084,7 @@ return {
                 {
                   id = 225,
                   name = "",
-                  type = "AntHole",
+                  class = "AntHole",
                   shape = "rectangle",
                   x = 192,
                   y = 3472,
@@ -3963,7 +4103,7 @@ return {
                 {
                   id = 263,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 64,
                   y = 3472,
@@ -3990,7 +4130,7 @@ return {
                 {
                   id = 264,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 192,
                   y = 3472,
@@ -4017,7 +4157,7 @@ return {
                 {
                   id = 273,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 3520,
@@ -4030,7 +4170,7 @@ return {
                 {
                   id = 274,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3504,
@@ -4045,7 +4185,7 @@ return {
                 {
                   id = 275,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3576,
@@ -4060,7 +4200,7 @@ return {
                 {
                   id = 272,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3648,
@@ -4075,7 +4215,7 @@ return {
                 {
                   id = 270,
                   name = "disappear",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3656,
@@ -4090,7 +4230,7 @@ return {
                 {
                   id = 268,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3504,
@@ -4105,7 +4245,7 @@ return {
                 {
                   id = 269,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3648,
@@ -4120,7 +4260,7 @@ return {
                 {
                   id = 267,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3576,
@@ -4135,7 +4275,7 @@ return {
                 {
                   id = 271,
                   name = "disappear",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3656,
@@ -4154,6 +4294,7 @@ return {
               draworder = "topdown",
               id = 28,
               name = "room3flies1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4165,7 +4306,7 @@ return {
                 {
                   id = 228,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3504,
@@ -4178,7 +4319,7 @@ return {
                 {
                   id = 229,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 3480,
@@ -4211,7 +4352,7 @@ return {
                 {
                   id = 230,
                   name = "",
-                  type = "Fly",
+                  class = "Fly",
                   shape = "rectangle",
                   x = -16,
                   y = 3560,
@@ -4228,7 +4369,7 @@ return {
                 {
                   id = 232,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = -16,
                   y = 3568,
@@ -4243,7 +4384,7 @@ return {
                 {
                   id = 233,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 3528,
@@ -4258,7 +4399,7 @@ return {
                 {
                   id = 234,
                   name = "turnX",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3544,
@@ -4273,7 +4414,7 @@ return {
                 {
                   id = 235,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 3568,
@@ -4288,7 +4429,7 @@ return {
                 {
                   id = 279,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3512,
@@ -4307,6 +4448,7 @@ return {
               draworder = "topdown",
               id = 36,
               name = "room3flies2",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4318,10 +4460,10 @@ return {
                 {
                   id = 385,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -40,
-                  y = 3472,
+                  y = 3464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4331,10 +4473,10 @@ return {
                 {
                   id = 386,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 272,
-                  y = 3512,
+                  y = 3504,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4360,10 +4502,10 @@ return {
                 {
                   id = 387,
                   name = "",
-                  type = "Fly",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 272,
-                  y = 3600,
+                  y = 3592,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -4377,10 +4519,10 @@ return {
                 {
                   id = 388,
                   name = "toBack",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 272,
-                  y = 3600,
+                  y = 3592,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4392,10 +4534,10 @@ return {
                 {
                   id = 389,
                   name = "toFront",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 3504,
+                  y = 3496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4407,10 +4549,10 @@ return {
                 {
                   id = 390,
                   name = "turnX",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 3528,
+                  y = 3520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4422,10 +4564,10 @@ return {
                 {
                   id = 391,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 136,
-                  y = 3496,
+                  y = 3488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4437,10 +4579,10 @@ return {
                 {
                   id = 392,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 3568,
+                  y = 3560,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4455,7 +4597,8 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 20,
-              name = "room2fly2",
+              name = "room3fly3",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4467,10 +4610,10 @@ return {
                 {
                   id = 151,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3408,
+                  y = 3136,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4480,10 +4623,10 @@ return {
                 {
                   id = 152,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 272,
-                  y = 3440,
+                  y = 3168,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4515,10 +4658,10 @@ return {
                 {
                   id = 153,
                   name = "",
-                  type = "Fly",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 272,
-                  y = 3440,
+                  y = 3168,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -4532,10 +4675,10 @@ return {
                 {
                   id = 154,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 280,
-                  y = 3544,
+                  y = 3272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4547,10 +4690,10 @@ return {
                 {
                   id = 155,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 3496,
+                  y = 3224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4562,10 +4705,10 @@ return {
                 {
                   id = 156,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 3472,
+                  y = 3200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4577,10 +4720,10 @@ return {
                 {
                   id = 157,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 176,
-                  y = 3456,
+                  y = 3184,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4592,10 +4735,10 @@ return {
                 {
                   id = 165,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 296,
-                  y = 3560,
+                  y = 3288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4607,10 +4750,10 @@ return {
                 {
                   id = 166,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 288,
-                  y = 3560,
+                  y = 3288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4622,10 +4765,10 @@ return {
                 {
                   id = 167,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 296,
-                  y = 3560,
+                  y = 3288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4637,10 +4780,10 @@ return {
                 {
                   id = 158,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 3448,
+                  y = 3176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4652,10 +4795,10 @@ return {
                 {
                   id = 172,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 3520,
+                  y = 3248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4667,10 +4810,10 @@ return {
                 {
                   id = 159,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 3448,
+                  y = 3176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4682,10 +4825,10 @@ return {
                 {
                   id = 171,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 3440,
+                  y = 3168,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4697,10 +4840,10 @@ return {
                 {
                   id = 160,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 80,
-                  y = 3456,
+                  y = 3184,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4712,10 +4855,10 @@ return {
                 {
                   id = 170,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 176,
-                  y = 3448,
+                  y = 3176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4727,10 +4870,10 @@ return {
                 {
                   id = 161,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 3472,
+                  y = 3200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4742,10 +4885,10 @@ return {
                 {
                   id = 169,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 3464,
+                  y = 3192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4757,10 +4900,10 @@ return {
                 {
                   id = 162,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 3496,
+                  y = 3224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4772,10 +4915,10 @@ return {
                 {
                   id = 168,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 3488,
+                  y = 3216,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4787,10 +4930,10 @@ return {
                 {
                   id = 163,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 3520,
+                  y = 3248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4802,10 +4945,10 @@ return {
                 {
                   id = 164,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 272,
-                  y = 3440,
+                  y = 3168,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4821,6 +4964,7 @@ return {
               draworder = "topdown",
               id = 30,
               name = "room3bigant",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4832,7 +4976,7 @@ return {
                 {
                   id = 276,
                   name = "",
-                  type = "AntBig",
+                  class = "AntBig",
                   shape = "rectangle",
                   x = 64,
                   y = 3384,
@@ -4848,7 +4992,7 @@ return {
                 {
                   id = 277,
                   name = "",
-                  type = "AntBig",
+                  class = "AntBig",
                   shape = "rectangle",
                   x = 192,
                   y = 3384,
@@ -4864,7 +5008,7 @@ return {
                 {
                   id = 278,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 3400,
@@ -4881,6 +5025,7 @@ return {
               draworder = "topdown",
               id = 31,
               name = "room4alien1",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4892,10 +5037,10 @@ return {
                 {
                   id = 280,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3208,
+                  y = 2312,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4905,10 +5050,10 @@ return {
                 {
                   id = 281,
                   name = "",
-                  type = "AlienGunner",
+                  class = "AlienGunner",
                   shape = "rectangle",
                   x = 112,
-                  y = 3200,
+                  y = 2304,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -4922,10 +5067,10 @@ return {
                 {
                   id = 282,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 112,
-                  y = 3200,
+                  y = 2304,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4940,10 +5085,10 @@ return {
                 {
                   id = 283,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 128,
-                  y = 3240,
+                  y = 2344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4955,10 +5100,10 @@ return {
                 {
                   id = 356,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 3176,
+                  y = 2280,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -4975,6 +5120,7 @@ return {
               draworder = "topdown",
               id = 32,
               name = "room4alien2",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -4986,10 +5132,10 @@ return {
                 {
                   id = 284,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -80,
-                  y = 3152,
+                  y = 2256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4999,10 +5145,10 @@ return {
                 {
                   id = 293,
                   name = "",
-                  type = "AlienGunner",
+                  class = "AlienGunner",
                   shape = "rectangle",
                   x = 48,
-                  y = 3144,
+                  y = 2248,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5016,10 +5162,10 @@ return {
                 {
                   id = 296,
                   name = "",
-                  type = "AlienGunner",
+                  class = "AlienGunner",
                   shape = "rectangle",
                   x = 208,
-                  y = 3144,
+                  y = 2248,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5033,10 +5179,10 @@ return {
                 {
                   id = 292,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 48,
-                  y = 3144,
+                  y = 2248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5051,10 +5197,10 @@ return {
                 {
                   id = 295,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 176,
-                  y = 3144,
+                  y = 2248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5069,10 +5215,10 @@ return {
                 {
                   id = 291,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 64,
-                  y = 3184,
+                  y = 2288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5084,10 +5230,10 @@ return {
                 {
                   id = 294,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 192,
-                  y = 3184,
+                  y = 2288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5103,6 +5249,7 @@ return {
               draworder = "topdown",
               id = 33,
               name = "room4alien3",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -5114,10 +5261,10 @@ return {
                 {
                   id = 298,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3136,
+                  y = 2240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5127,10 +5274,10 @@ return {
                 {
                   id = 338,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = -8,
-                  y = 3200,
+                  y = 2304,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5143,10 +5290,10 @@ return {
                 {
                   id = 343,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = 264,
-                  y = 3200,
+                  y = 2304,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5159,10 +5306,10 @@ return {
                 {
                   id = 339,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = -16,
-                  y = 3216,
+                  y = 2320,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5175,10 +5322,10 @@ return {
                 {
                   id = 342,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = 272,
-                  y = 3216,
+                  y = 2320,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5191,10 +5338,10 @@ return {
                 {
                   id = 340,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = -24,
-                  y = 3232,
+                  y = 2336,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5207,10 +5354,10 @@ return {
                 {
                   id = 341,
                   name = "",
-                  type = "AlienPillager",
+                  class = "AlienPillager",
                   shape = "rectangle",
                   x = 280,
-                  y = 3232,
+                  y = 2336,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5223,10 +5370,10 @@ return {
                 {
                   id = 344,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -24,
-                  y = 3232,
+                  y = 2336,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5242,10 +5389,10 @@ return {
                 {
                   id = 345,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -16,
-                  y = 3216,
+                  y = 2320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5261,10 +5408,10 @@ return {
                 {
                   id = 346,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3200,
+                  y = 2304,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5280,10 +5427,10 @@ return {
                 {
                   id = 347,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 24,
-                  y = 3200,
+                  y = 2304,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5299,10 +5446,10 @@ return {
                 {
                   id = 348,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 3216,
+                  y = 2320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5318,10 +5465,10 @@ return {
                 {
                   id = 349,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 40,
-                  y = 3232,
+                  y = 2336,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5337,10 +5484,10 @@ return {
                 {
                   id = 350,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 96,
-                  y = 3184,
+                  y = 2288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5352,10 +5499,10 @@ return {
                 {
                   id = 351,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 3152,
+                  y = 2256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5367,10 +5514,10 @@ return {
                 {
                   id = 352,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 3168,
+                  y = 2272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5382,10 +5529,10 @@ return {
                 {
                   id = 353,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 3152,
+                  y = 2256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5397,10 +5544,10 @@ return {
                 {
                   id = 354,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 3168,
+                  y = 2272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5412,10 +5559,10 @@ return {
                 {
                   id = 355,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 160,
-                  y = 3184,
+                  y = 2288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5431,6 +5578,7 @@ return {
               draworder = "topdown",
               id = 35,
               name = "room5powerup",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -5442,10 +5590,10 @@ return {
                 {
                   id = 373,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 3080,
+                  y = 2184,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5455,10 +5603,10 @@ return {
                 {
                   id = 374,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
-                  y = 3056,
+                  y = 2160,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -5471,10 +5619,10 @@ return {
                 {
                   id = 375,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 144,
-                  y = 3064,
+                  y = 2168,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -5487,10 +5635,10 @@ return {
                 {
                   id = 376,
                   name = "",
-                  type = "HoneyPot",
+                  class = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 3072,
+                  y = 2176,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -5507,6 +5655,7 @@ return {
               draworder = "topdown",
               id = 34,
               name = "room5alienmind",
+              class = "",
               visible = true,
               opacity = 1,
               offsetx = 0,
@@ -5518,10 +5667,10 @@ return {
                 {
                   id = 357,
                   name = "",
-                  type = "AlienMind",
+                  class = "AlienMind",
                   shape = "rectangle",
                   x = 128,
-                  y = 2880,
+                  y = 1984,
                   width = 32,
                   height = 48,
                   rotation = 0,
@@ -5540,10 +5689,10 @@ return {
                 {
                   id = 358,
                   name = "",
-                  type = "Trigger",
+                  class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 2912,
+                  y = 2016,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5553,10 +5702,10 @@ return {
                 {
                   id = 363,
                   name = "center",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 128,
-                  y = 2936,
+                  y = 2040,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5570,10 +5719,10 @@ return {
                 {
                   id = 365,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 96,
-                  y = 2992,
+                  y = 2096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5595,10 +5744,10 @@ return {
                 {
                   id = 366,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 160,
-                  y = 2992,
+                  y = 2096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5620,10 +5769,10 @@ return {
                 {
                   id = 367,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 2968,
+                  y = 2072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5640,10 +5789,10 @@ return {
                 {
                   id = 369,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 256,
-                  y = 2944,
+                  y = 2048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5660,10 +5809,10 @@ return {
                 {
                   id = 371,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = -16,
-                  y = 3152,
+                  y = 2256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5687,10 +5836,10 @@ return {
                 {
                   id = 372,
                   name = "",
-                  type = "Path",
+                  class = "Path",
                   shape = "polyline",
                   x = 208,
-                  y = 3152,
+                  y = 2256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5714,10 +5863,10 @@ return {
                 {
                   id = 377,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 2968,
+                  y = 2072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5729,10 +5878,10 @@ return {
                 {
                   id = 378,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 2968,
+                  y = 2072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5744,10 +5893,10 @@ return {
                 {
                   id = 379,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 3040,
+                  y = 2144,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5759,10 +5908,10 @@ return {
                 {
                   id = 380,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 3040,
+                  y = 2144,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5774,10 +5923,10 @@ return {
                 {
                   id = 381,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 3088,
+                  y = 2192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5789,10 +5938,10 @@ return {
                 {
                   id = 382,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 3088,
+                  y = 2192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5804,10 +5953,10 @@ return {
                 {
                   id = 383,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 3120,
+                  y = 2224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5819,10 +5968,10 @@ return {
                 {
                   id = 384,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 3120,
+                  y = 2224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5834,10 +5983,10 @@ return {
                 {
                   id = 393,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 2936,
+                  y = 2040,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5849,10 +5998,10 @@ return {
                 {
                   id = 394,
                   name = "",
-                  type = "PathPoint",
+                  class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 2936,
+                  y = 2040,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5871,6 +6020,7 @@ return {
       type = "group",
       id = 10,
       name = "flyingspawns",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
