@@ -48,6 +48,11 @@ function Character:init()
     setmetatable(self, Character)
     self.age = 0                                    -- in fixedupdates
     self.lifetime = self.lifetime or 0              -- die at this age, immortal if <= 0
+    if self.lifetime == "animation" then
+        local tile = self.tile
+        local animation = tile and tile.animation
+        self.lifetime = animation and animation.duration or 60
+    end
     self.health = self.health or 1
     self.hitdamageenemy = self.hitdamageenemy or 0
     self.hitdamageself = self.hitdamageself or 0
