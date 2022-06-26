@@ -1,7 +1,8 @@
 return {
-  version = "1.5",
+  version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.8.5",
+  tiledversion = "1.9.0",
+  class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 30,
@@ -9,12 +10,13 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 24,
+  nextobjectid = 25,
   properties = {},
   tilesets = {
     {
       name = "AntBigParts",
       firstgid = 1,
+      class = "",
       tilewidth = 24,
       tileheight = 24,
       spacing = 0,
@@ -24,6 +26,8 @@ return {
       imagewidth = 48,
       imageheight = 24,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -44,6 +48,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -55,7 +60,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -75,6 +80,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -86,7 +92,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -104,6 +110,7 @@ return {
     {
       name = "AntBig",
       firstgid = 3,
+      class = "",
       tilewidth = 60,
       tileheight = 40,
       spacing = 0,
@@ -113,6 +120,8 @@ return {
       imagewidth = 180,
       imageheight = 40,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -133,6 +142,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -144,7 +154,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 6,
                 y = 8,
@@ -172,6 +182,7 @@ return {
     {
       name = "BeehiveObjects",
       firstgid = 6,
+      class = "",
       tilewidth = 16,
       tileheight = 32,
       spacing = 0,
@@ -181,6 +192,8 @@ return {
       imagewidth = 192,
       imageheight = 32,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -201,6 +214,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -212,7 +226,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -232,6 +246,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -243,7 +258,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -273,6 +288,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -284,7 +300,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -314,6 +330,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -325,7 +342,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 6,
@@ -343,6 +360,7 @@ return {
     {
       name = "FlyBullet",
       firstgid = 18,
+      class = "",
       tilewidth = 16,
       tileheight = 8,
       spacing = 0,
@@ -352,6 +370,8 @@ return {
       imagewidth = 32,
       imageheight = 8,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -372,6 +392,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -383,7 +404,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 6,
                 y = 2,
@@ -411,6 +432,7 @@ return {
     {
       name = "Ant",
       firstgid = 20,
+      class = "",
       tilewidth = 16,
       tileheight = 16,
       spacing = 0,
@@ -420,6 +442,8 @@ return {
       imagewidth = 64,
       imageheight = 16,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -440,6 +464,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -451,7 +476,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 0,
                 y = 2,
@@ -492,6 +517,7 @@ return {
     {
       name = "Aliens",
       firstgid = 24,
+      class = "",
       tilewidth = 24,
       tileheight = 16,
       spacing = 0,
@@ -501,6 +527,8 @@ return {
       imagewidth = 144,
       imageheight = 48,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -524,6 +552,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -535,7 +564,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -575,6 +604,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -586,7 +616,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -618,6 +648,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -629,7 +660,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -669,6 +700,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -680,7 +712,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -748,6 +780,7 @@ return {
     {
       name = "AlienMind",
       firstgid = 42,
+      class = "",
       tilewidth = 32,
       tileheight = 48,
       spacing = 0,
@@ -757,6 +790,8 @@ return {
       imagewidth = 128,
       imageheight = 48,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -777,6 +812,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -788,7 +824,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 8,
@@ -801,7 +837,7 @@ return {
               {
                 id = 2,
                 name = "brain",
-                type = "",
+                class = "",
                 shape = "point",
                 x = 16,
                 y = 10,
@@ -837,6 +873,7 @@ return {
     {
       name = "Fly",
       firstgid = 46,
+      class = "",
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
@@ -846,6 +883,8 @@ return {
       imagewidth = 512,
       imageheight = 32,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -866,6 +905,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -877,7 +917,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 4,
                 y = 6,
@@ -961,15 +1001,18 @@ return {
     {
       name = "KillSmall",
       firstgid = 62,
+      class = "",
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 8,
+      columns = 15,
       image = "tilesets/KillSmall.png",
-      imagewidth = 256,
+      imagewidth = 480,
       imageheight = 32,
-      objectalignment = "center",
+      objectalignment = "bottom",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -981,42 +1024,169 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 8,
+      tilecount = 15,
       tiles = {
         {
           id = 0,
           animation = {
             {
               tileid = 0,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 1,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 2,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 3,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 4,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 5,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 6,
-              duration = 16
+              duration = 33
             },
             {
               tileid = 7,
-              duration = 16
+              duration = 33
+            },
+            {
+              tileid = 8,
+              duration = 33
+            },
+            {
+              tileid = 9,
+              duration = 33
+            },
+            {
+              tileid = 10,
+              duration = 33
+            },
+            {
+              tileid = 11,
+              duration = 33
+            },
+            {
+              tileid = 12,
+              duration = 33
+            },
+            {
+              tileid = 13,
+              duration = 33
+            },
+            {
+              tileid = 14,
+              duration = 33
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "KillMedium",
+      firstgid = 77,
+      class = "",
+      tilewidth = 64,
+      tileheight = 64,
+      spacing = 0,
+      margin = 0,
+      columns = 16,
+      image = "tilesets/KillMedium.png",
+      imagewidth = 1024,
+      imageheight = 64,
+      objectalignment = "bottom",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 64,
+        height = 64
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 16,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 4,
+              duration = 50
+            },
+            {
+              tileid = 5,
+              duration = 50
+            },
+            {
+              tileid = 6,
+              duration = 50
+            },
+            {
+              tileid = 7,
+              duration = 50
+            },
+            {
+              tileid = 8,
+              duration = 50
+            },
+            {
+              tileid = 9,
+              duration = 50
+            },
+            {
+              tileid = 10,
+              duration = 50
+            },
+            {
+              tileid = 11,
+              duration = 50
+            },
+            {
+              tileid = 12,
+              duration = 50
+            },
+            {
+              tileid = 13,
+              duration = 50
+            },
+            {
+              tileid = 14,
+              duration = 50
+            },
+            {
+              tileid = 15,
+              duration = 50
             }
           }
         }
@@ -1029,6 +1199,7 @@ return {
       draworder = "topdown",
       id = 6,
       name = "defeatdrops",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1038,67 +1209,35 @@ return {
       properties = {},
       objects = {
         {
-          id = 19,
-          name = "AntKilled",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 22,
-          visible = true,
-          properties = {
-            ["lifetime"] = 6
-          }
-        },
-        {
-          id = 21,
-          name = "AlienGunnerKilled",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 24,
-          height = 16,
-          rotation = 0,
-          gid = 36,
-          visible = true,
-          properties = {
-            ["lifetime"] = 9
-          }
-        },
-        {
-          id = 22,
-          name = "AlienPillagerKilled",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 24,
-          height = 16,
-          rotation = 0,
-          gid = 39,
-          visible = true,
-          properties = {
-            ["lifetime"] = 9
-          }
-        },
-        {
           id = 23,
           name = "KillSmall",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
-          y = 0,
+          y = 8,
           width = 32,
           height = 32,
           rotation = 0,
           gid = 62,
           visible = true,
           properties = {
-            ["lifetime"] = 8
+            ["lifetime"] = "animation"
+          }
+        },
+        {
+          id = 24,
+          name = "KillMedium",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 8,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 77,
+          visible = true,
+          properties = {
+            ["lifetime"] = "animation"
           }
         }
       }
@@ -1108,6 +1247,7 @@ return {
       draworder = "topdown",
       id = 2,
       name = "defeatdrops_AntBig",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1119,7 +1259,7 @@ return {
         {
           id = 1,
           name = "AntBigCorpse",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1135,7 +1275,7 @@ return {
         {
           id = 2,
           name = "AntBigHead",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 24,
           y = -8,
@@ -1153,7 +1293,7 @@ return {
         {
           id = 3,
           name = "AntBigAbdomen",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = -24,
           y = -8,
@@ -1175,6 +1315,7 @@ return {
       draworder = "topdown",
       id = 3,
       name = "defeatdrops_HoneyPot",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1186,7 +1327,7 @@ return {
         {
           id = 4,
           name = "HoneyPotOpen",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1202,7 +1343,7 @@ return {
         {
           id = 5,
           name = "Powerup",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1220,6 +1361,7 @@ return {
       draworder = "topdown",
       id = 4,
       name = "enemybullets",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1231,7 +1373,7 @@ return {
         {
           id = 6,
           name = "FlyBullet",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1251,6 +1393,7 @@ return {
       draworder = "topdown",
       id = 5,
       name = "enemies",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -1262,7 +1405,7 @@ return {
         {
           id = 8,
           name = "Ant",
-          type = "Ant",
+          class = "Ant",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1278,7 +1421,7 @@ return {
         {
           id = 10,
           name = "AlienGunner",
-          type = "AlienGunner",
+          class = "AlienGunner",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1295,7 +1438,7 @@ return {
         {
           id = 17,
           name = "AlienGunnerLeft",
-          type = "AlienGunner",
+          class = "AlienGunner",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1312,7 +1455,7 @@ return {
         {
           id = 11,
           name = "AlienPillager",
-          type = "AlienPillager",
+          class = "AlienPillager",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1328,7 +1471,7 @@ return {
         {
           id = 18,
           name = "AlienPillagerLeft",
-          type = "AlienPillager",
+          class = "AlienPillager",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1344,7 +1487,7 @@ return {
         {
           id = 13,
           name = "FlyBehind",
-          type = "Fly",
+          class = "Fly",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1363,7 +1506,7 @@ return {
         {
           id = 14,
           name = "InfiniteHoneyPotOpen",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -1379,7 +1522,7 @@ return {
         {
           id = 16,
           name = "FlyBehindLeft",
-          type = "Fly",
+          class = "Fly",
           shape = "rectangle",
           x = 0,
           y = 0,
