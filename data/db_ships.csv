@@ -1,14 +1,14 @@
 type,script,scriptstart,scriptdefeat,team,speed,health,collidable,dyingsound,defeatsound,defeatpoints,defeatdrops
 Jenny,BeeShooter.Character.PlayerShip,,defeat,PlayerShip,,,TRUE,,sounds/playerkill.mp3,,JennyKilled
 Ant,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,1,TRUE,,sounds/bugkill1.mp3,100,KillSmall
-AntBig,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,1,16,TRUE,,sounds/bugkill2.mp3,1000,KillSmall AntBigCorpse AntBigHead AntBigAbdomen
-AntBigHead,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall
-AntBigAbdomen,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall
+AntBig,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,1,16,TRUE,,sounds/bugkill2.mp3,1000,KillSmall KillMedium AntBigCorpse AntBigHead AntBigAbdomen
+AntBigHead,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall KillMedium
+AntBigAbdomen,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall KillMedium
 HoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,HoneyPotOpen Powerup
-Fly,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp3,500,KillSmall
+Fly,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp3,500,KillSmall KillMedium
 AntHole,BeeShooter.Character.EnemyShip,Spawner,,,,,,,,,
-AlienGunner,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp3,500,KillSmall
+AlienGunner,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,8,TRUE,,sounds/bugkill2.mp3,500,KillSmall KillMedium
 AlienPillager,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,4,TRUE,,sounds/bugkill1.mp3,250,KillSmall
-AlienMind,BeeShooter.Character.EnemyShip,AlienMind,defeatAlienMind,EnemyShip,1,128,TRUE,sounds/bugkill1.mp3,sounds/bugkill2.mp3,5000,KillSmall
+AlienMind,BeeShooter.Character.EnemyShip,AlienMind,defeatAlienMind,EnemyShip,1,128,TRUE,sounds/bugkill1.mp3,sounds/bugkill2.mp3,5000,KillSmall KillMedium
 InfiniteHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
 InfiniteHoneyPotOpen,BeeShooter.Character.EnemyShip,Idler,openInfiniteHoneyPot,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
