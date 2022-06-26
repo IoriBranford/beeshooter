@@ -1,7 +1,8 @@
 return {
-  version = "1.5",
+  version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.8.5",
+  tiledversion = "1.9.0",
+  class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 30,
@@ -9,12 +10,13 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 9,
-  nextobjectid = 31,
+  nextobjectid = 32,
   properties = {},
   tilesets = {
     {
       name = "Jenny",
       firstgid = 1,
+      class = "",
       tilewidth = 32,
       tileheight = 32,
       spacing = 0,
@@ -24,6 +26,8 @@ return {
       imagewidth = 288,
       imageheight = 32,
       objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
       tileoffset = {
         x = 0,
         y = 0
@@ -47,6 +51,7 @@ return {
             draworder = "index",
             id = 3,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -58,7 +63,7 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 12,
                 y = 12,
@@ -73,7 +78,7 @@ return {
               {
                 id = 3,
                 name = "sting",
-                type = "",
+                class = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -105,6 +110,7 @@ return {
             type = "objectgroup",
             draworder = "topdown",
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -116,7 +122,7 @@ return {
               {
                 id = 1,
                 name = "sting",
-                type = "",
+                class = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -129,7 +135,7 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 12,
                 y = 12,
@@ -161,6 +167,7 @@ return {
             draworder = "index",
             id = 2,
             name = "",
+            class = "",
             visible = true,
             opacity = 1,
             offsetx = 0,
@@ -172,7 +179,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                type = "",
+                class = "",
                 shape = "rectangle",
                 x = 10,
                 y = 10,
@@ -244,6 +251,93 @@ return {
           }
         }
       }
+    },
+    {
+      name = "JennyKill",
+      firstgid = 10,
+      class = "",
+      tilewidth = 64,
+      tileheight = 64,
+      spacing = 0,
+      margin = 0,
+      columns = 13,
+      image = "tilesets/JennyKill.png",
+      imagewidth = 832,
+      imageheight = 64,
+      objectalignment = "bottom",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 64,
+        height = 64
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 13,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            },
+            {
+              tileid = 3,
+              duration = 50
+            },
+            {
+              tileid = 4,
+              duration = 50
+            },
+            {
+              tileid = 5,
+              duration = 50
+            },
+            {
+              tileid = 6,
+              duration = 50
+            },
+            {
+              tileid = 7,
+              duration = 50
+            },
+            {
+              tileid = 8,
+              duration = 50
+            },
+            {
+              tileid = 9,
+              duration = 50
+            },
+            {
+              tileid = 10,
+              duration = 50
+            },
+            {
+              tileid = 11,
+              duration = 50
+            },
+            {
+              tileid = 12,
+              duration = 50
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -252,6 +346,7 @@ return {
       draworder = "topdown",
       id = 3,
       name = "JennyShotA1",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -265,7 +360,7 @@ return {
         {
           id = 2,
           name = "JennyShotA11",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = 0,
@@ -279,7 +374,7 @@ return {
         {
           id = 3,
           name = "JennyShotA12",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = 0,
@@ -297,6 +392,7 @@ return {
       draworder = "topdown",
       id = 5,
       name = "JennyShotA2",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -310,7 +406,7 @@ return {
         {
           id = 8,
           name = "JennyShotA22",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = 0,
@@ -324,7 +420,7 @@ return {
         {
           id = 11,
           name = "JennyShotA21",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -338,7 +434,7 @@ return {
         {
           id = 9,
           name = "JennyShotA23",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = 0,
@@ -352,7 +448,7 @@ return {
         {
           id = 10,
           name = "JennyShotA24",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -370,6 +466,7 @@ return {
       draworder = "topdown",
       id = 7,
       name = "JennyShotA3",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -383,7 +480,7 @@ return {
         {
           id = 16,
           name = "JennyShotA31",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = 0,
@@ -397,7 +494,7 @@ return {
         {
           id = 17,
           name = "JennyShotA32",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -411,7 +508,7 @@ return {
         {
           id = 21,
           name = "JennyShotA33",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -425,7 +522,7 @@ return {
         {
           id = 18,
           name = "JennyShotA34",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = 0,
@@ -439,7 +536,7 @@ return {
         {
           id = 19,
           name = "JennyShotA35",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -453,7 +550,7 @@ return {
         {
           id = 20,
           name = "JennyShotA36",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -471,6 +568,7 @@ return {
       draworder = "topdown",
       id = 4,
       name = "JennyShotB1",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -484,7 +582,7 @@ return {
         {
           id = 6,
           name = "JennyShotB11",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -498,7 +596,7 @@ return {
         {
           id = 7,
           name = "JennyShotB12",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -516,6 +614,7 @@ return {
       draworder = "topdown",
       id = 6,
       name = "JennyShotB2",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -529,7 +628,7 @@ return {
         {
           id = 12,
           name = "JennyShotB21",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -543,7 +642,7 @@ return {
         {
           id = 15,
           name = "JennyShotB22",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -557,7 +656,7 @@ return {
         {
           id = 13,
           name = "JennyShotB23",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -571,7 +670,7 @@ return {
         {
           id = 14,
           name = "JennyShotB24",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -589,6 +688,7 @@ return {
       draworder = "topdown",
       id = 8,
       name = "JennyShotB3",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -602,7 +702,7 @@ return {
         {
           id = 22,
           name = "JennyShotB31",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -616,7 +716,7 @@ return {
         {
           id = 23,
           name = "JennyShotB32",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -630,7 +730,7 @@ return {
         {
           id = 24,
           name = "JennyShotB33",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -644,7 +744,7 @@ return {
         {
           id = 25,
           name = "JennyShotB34",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -658,7 +758,7 @@ return {
         {
           id = 28,
           name = "JennyShotB35",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -672,7 +772,7 @@ return {
         {
           id = 29,
           name = "JennyShotB36",
-          type = "JennyShot",
+          class = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -690,6 +790,7 @@ return {
       draworder = "topdown",
       id = 2,
       name = "Jenny",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -703,7 +804,7 @@ return {
         {
           id = 30,
           name = "JennyKilled",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -713,13 +814,13 @@ return {
           gid = 4,
           visible = true,
           properties = {
-            ["lifetime"] = 12
+            ["lifetime"] = "animation"
           }
         },
         {
           id = 1,
           name = "Jenny",
-          type = "",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -729,6 +830,22 @@ return {
           gid = 2,
           visible = true,
           properties = {}
+        },
+        {
+          id = 31,
+          name = "JennyKilledSplat",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 8,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 10,
+          visible = true,
+          properties = {
+            ["lifetime"] = "animation"
+          }
         }
       }
     }
