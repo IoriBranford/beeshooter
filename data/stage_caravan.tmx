@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="38" nextobjectid="415">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="39" nextobjectid="426">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -121,35 +121,41 @@ A brief chance to practice controls</text>
     <chunk x="0" y="196" width="16" height="14">
    eJxjYICAdCDOgOJMBkxASP4JELdB8SMy5EftH9n2MzEyMDxmgGAGRtLlFYBijFAsR4b8QAEAZ74wkQ==
   </chunk>
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYBgFgxW0AnEbELeTqT8diDOAOHOI2v8Eav8jMvUzMTIwPAYxGMnTrwDUxwjEcmTqJwYAACQ4CQo=
+  </chunk>
+    <chunk x="-16" y="224" width="16" height="14">
+   eJxjYBgF5IJHlBrASJl2OQr1D3XwhEL9TBSGnwIVwh8A9UICCw==
+  </chunk>
     <chunk x="0" y="224" width="16" height="14">
-   eJxjYBi8oBWI24C4nUz96UCcAcSZQ9T+J1D7H5Gpn4mRgeExiMFInn4FoD5GIJYjU/9QAW14MCEAipvHeDAsDnGZBwBs7BZB
+   eJzFksENQCEIQ8FBjNM6qN9B1IMJMfwWT77Yay0UkfdUIEab+oA689P5gJL++y2y4nwF+PXAfMgvHX/bbC3oZbHZhMzFsrG9bCIdI7xObvA6QffodXZ2wu7RMgCdKSvW
+  </chunk>
+    <chunk x="16" y="224" width="16" height="14">
+   eJxjYBgFlIA2CvU/plA/IyOFBoyCAQUA+p0BbA==
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYCAfPKJALxgwUqZdjkL9Qx08oVA/E4XhpzDA4d9Gof7HFOpnpIL/AduaA3Y=
+   eJxjYCAftFGgFwQeU6ifkZFCAygETyjUz0Sh+xUG2P9DHQyG+AMAJ1ADfA==
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJydklEKwDAIQ2MPMnZaD9r2IOtgoxJE3QLvo1BtNIUAEtAWA5u50IdbhyDUGfSbcWnar9Hb1lsv9rKy3pDMlXnL9vJK8yuhvEy+yMtEA7zMOBP7Xxiu56z4v3jw/H+ysvNXs2Lf6pwrdOx9XGyTKrM=
+   eJydUgkKwCAMi3vI2Gt9qO4hQygsloqxgQgRe6S2Amj48RSgbMjo43B3Jxj57kR8NXqtsFnfPdAKQbPwWiH7zfpXZtN2DwPwLFL/uvCp1j6Nmbwm+mWvq9ov5l1jKF4v25MozwdoRyXr
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
-   eJxjYKAMtFGo/zGF+hkZKTRgFIxo8IhSAyhMfwDW+gJP
-  </chunk>
-    <chunk x="-16" y="252" width="16" height="14">
-   eJxjYCAfPKFALwgwMVKmX4FC/aNgFFACWinUnw7EAHV7AfU=
+   eJxjYBhY8IhSAxgp0y5Hof5RMAooAQD53AED
   </chunk>
     <chunk x="0" y="252" width="16" height="14">
-   eJxrY2BgeATEj0nADIxABMXofGKwHCMDHKDzR8EooCdoA+J2CvRnAHEmGfpaoXYDALlwD1I=
+   eJxjYCAMFBgZGBiBmAmIHwP5T4jQQ8gccs2AmUMtMygBChTqHwWjAAAMZARF
   </chunk>
     <chunk x="16" y="252" width="16" height="14">
-   eJyTY2QYBaNgFJAJ2oC4nQL9ALEjAS0=
+   eJxjYBhY8IhSAxgp0y5Hof5RMAooAQD53AED
   </chunk>
     <chunk x="-16" y="266" width="16" height="14">
-   eJxjYCAftFKgFwTSKdRPKRho9490+59QqJ+JkTL9ChTqp4b7AWpABaA=
+   eJxjYBi5oJVC/emj9lMEnlCon4mRMv0KFOqnhvsBgSMEtA==
   </chunk>
     <chunk x="0" y="266" width="16" height="14">
-   eJytUlsKgCAQ3O0g0e2yOodW16wO0k4orGmg0sD8LA7zQEdEK9VjFM5CI5wa9Fa4Nei0P7ydZ20H63WG2jr85Y8NF+V/+fsbuB0Zf2y4K/+Oic6M/rlx7J3rP8gb5lSPW8+xt+5/pJJPaP/zla0E4e8tPpfOVgJsHHarzQ6EjVuyA2Fj8AYtmyUq
+   eJxjYBjaoA2K28nUnwHFmQNkfxYQZyPZ/wRqHjZ7HmER7wDiTiT7mRgZGB5jUQcWY4SwWxkQ7kb3vwJQDSMjpn6QmBxUPB1JH8wcbG7DBZDtf4zmNmIAyH5YuDEyorqNGAAKY1i4kep2EICFMTluBwFYGIMwAMASHOs=
   </chunk>
     <chunk x="16" y="266" width="16" height="14">
-   eJzLZmBgyGQgH3QCcTsF+jMotL9t1P4Rb/8jCvQ/BhGM5OtnBOqVo0A/AGC5DJs=
+   eJxjYBgFQxm0AXE7BfozgDhziNv/iAL9j0EEI/n6GYF65SjQDwCyDwYq
   </chunk>
     <chunk x="-16" y="280" width="16" height="14">
    eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg==
@@ -188,32 +194,38 @@ A brief chance to practice controls</text>
     <chunk x="0" y="182" width="16" height="14">
    eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk=
   </chunk>
+    <chunk x="-16" y="210" width="16" height="14">
+   eJxjYBgFo2BgABsjZfp5KbR/MOgHAB7rADw=
+  </chunk>
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYBgFuAArIwMDGxCzM5KnXxuIdYBYl5qOGmSAjRGByQknPjRMilmg+EHXj80sXBifXnphAKFjA3M=
+  </chunk>
+    <chunk x="16" y="210" width="16" height="14">
+   eJxjYBgFo2DgABsjZfr5KbR/oPUDACD/ADU=
+  </chunk>
     <chunk x="-16" y="224" width="16" height="14">
-   eJxjYBgFAwXYGCnTz0uh/aP6B1a/LhADAG67AJA=
+   eJxjYCAf8FKgdzDo16VQ/0gHrIyU6demjjMGDLBR6H8dIAYAIC0AuQ==
   </chunk>
     <chunk x="0" y="224" width="16" height="14">
-   eJxjYMANWBkZGNiAmJ0RjyI8QBuIdYBYlzztQwKwMSIwOeHEh4ZJMQsUP+j6sZmFC+PTO1SwGAMkjeHCogT0E0qbsDSMyzxSAbJ5ILMAbtEHxw==
+   eJzjY2Bg4KMAiwGxDh4sSkC/LgN+oE3APFIBsnmiZOhHNwsZsDIyMLBBMTsjZW4jFC7UApS4FwSQ44Rcs9DjBNksbBif+ejpBVd6JNY8bOYjp0FS4wqURpDTLwDC+Akq
   </chunk>
     <chunk x="16" y="224" width="16" height="14">
-   eJxjYBgFAwnYGCnTz0+h/aP6B1Y/AHp/AHE=
+   eJzjZ6AM8A9x/ToU6h8FAwvYGSnTP9DpDwA+TgCP
   </chunk>
     <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBgF5AJWRsr0a1PHGQMG2Cj0vw51nEE2oDT+eCm0HxT/AKSFAKM=
+   eJxjYBg4wMpImX5eCu3XplD/KKAMUBr/wyH+AMy6AHA=
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJxjYCAfaKPxWRkZGNigmJ2RPPN0oFiXAneRAihxLwiA3CoKxHwUmIXsb3SzsGF85iObhQ1jM58U92ojmcHHQHpcgdIITC8fAXXY/I6sF184oatDxmIMiPBA5xODkf1LaVoFAD9+CL8=
+   eJydUkEKgDAMyw7Tk3pyn1D//z09rBBLBu0CORTSNukGaNQCLII7/lQapWO2j3enryN8yKevZ+HzriXXq3JGZ2zQt4nmsv6W6DGw9yOo5/uw79HuKv6F7Ypk5ftkvBquvuPE3PuM5mQ8+Dnm4QUvlAiu
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
-   eJzTYRgFQxmwM1Kmn59C+wdavy6F+gcaAAAFjgCP
-  </chunk>
-    <chunk x="-16" y="252" width="16" height="14">
-   eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg==
+   eJzjZ6AM6FKofxSMgqEM2Bkp0w8AzD8ARQ==
   </chunk>
     <chunk x="0" y="252" width="16" height="14">
-   eJxjYBgFo2DgABsjAwM7I/n6dYBYlwx9rIwQu8kF2lC7KQUAcvwAzQ==
+   eJxjYCAPaAOxKJl6kc0YBaNgJAMAVucAbA==
   </chunk>
     <chunk x="16" y="252" width="16" height="14">
-   eJxjYBgFo2DoAjZGBgZ2RvL16wCxLtVcQzoAADpqAGk=
+   eJzjZ6AM6FKofxSMgpEMAMpAAD0=
   </chunk>
     <chunk x="-16" y="266" width="16" height="14">
    eJxjYBg4wMpImX5t6jhjFAxRMBzSDwCnRgBj
@@ -246,20 +258,17 @@ A brief chance to practice controls</text>
     <chunk x="0" y="182" width="16" height="14">
    eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ==
   </chunk>
-    <chunk x="0" y="224" width="16" height="14">
-   eJxjYMANHBkZGJyA2JkRjyI8oBaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTsQmQ7i0exOIMFuEIClORi2h5pBrH5c5tEqDQMAgDcP+w==
+    <chunk x="0" y="210" width="16" height="14">
+   eJxjYBgFuIAjIwODExA7M5Knvxaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTvgSAcAw9IJZg==
   </chunk>
-    <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBgFo4A84MRImf46CvUPBwAA2UYAww==
+    <chunk x="-16" y="224" width="16" height="14">
+   eJxjYBgFo2AUkAOcGCnTXwfUDwAXRgDD
+  </chunk>
+    <chunk x="0" y="224" width="16" height="14">
+   eJxjYEAF8YwMDAlAbAjFMHYiIwNRoBaorg4J20PNIFY/LvPqydRPb+AIdKczBW6tHUJ+HQ7AicL4ojRtAgBeUwmg
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJxjYKAucGRkYHBmJF9/LVBvPQX6RwFpwInC+KobjS+KAACcMgML
-  </chunk>
-    <chunk x="0" y="252" width="16" height="14">
-   eJxjYBgFo2DkAUdGBgYnRvL11wL11lGgHwYAjkQBgw==
-  </chunk>
-    <chunk x="16" y="252" width="16" height="14">
-   eJxjYBgFo2DoAidGBgZnRvL11wH11lOgn1IAAOUsAYc=
+   eJxjYBgFIODIyMDgBMTOjBA2iCYF1ALV1wFxPRDHA7ESGWZgM2uwAeRwIkcPOX4DhacDBeFRO0jDEgQA+1UKPw==
   </chunk>
     <chunk x="-16" y="266" width="16" height="14">
    eJxjYBg44MhImf5aCvWPglEw0AAAJxwAwQ==
@@ -270,81 +279,94 @@ A brief chance to practice controls</text>
    </data>
   </layer>
   <group id="9" name="spawns">
+   <objectgroup id="38" name="room0ants1">
+    <object id="415" template="enemies/Trigger.tx" x="-32" y="3984"/>
+    <object id="416" template="enemies/Ant.tx" gid="2147484129" x="168" y="3976"/>
+    <object id="417" template="enemies/Ant.tx" gid="2147484129" x="176" y="3968"/>
+    <object id="418" template="enemies/Ant.tx" gid="2147484129" x="184" y="3960"/>
+    <object id="419" template="enemies/Ant.tx" gid="481" x="200" y="3944"/>
+    <object id="422" template="enemies/Ant.tx" gid="481" x="88" y="3896"/>
+    <object id="425" template="enemies/Ant.tx" gid="481" x="80" y="3888"/>
+    <object id="424" template="enemies/Ant.tx" gid="481" x="40" y="3880"/>
+    <object id="420" template="enemies/Ant.tx" gid="481" x="208" y="3952"/>
+    <object id="421" template="enemies/Ant.tx" gid="481" x="96" y="3904"/>
+    <object id="423" template="enemies/Ant.tx" gid="481" x="48" y="3888"/>
+   </objectgroup>
    <objectgroup id="11" name="room1ants1">
-    <object id="1" class="Path" x="0" y="4008">
+    <object id="1" class="Path" x="0" y="3848">
      <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
     </object>
-    <object id="2" template="enemies/Ant.tx" x="-8" y="4008"/>
-    <object id="38" template="enemies/Ant.tx" x="-168" y="4008"/>
-    <object id="28" template="enemies/Ant.tx" x="-88" y="4008"/>
-    <object id="3" template="enemies/Ant.tx" x="-24" y="4008"/>
-    <object id="36" template="enemies/Ant.tx" x="-184" y="4008"/>
-    <object id="27" template="enemies/Ant.tx" x="-104" y="4008"/>
-    <object id="4" template="enemies/Ant.tx" x="-40" y="4008"/>
-    <object id="34" template="enemies/Ant.tx" x="-200" y="4008"/>
-    <object id="26" template="enemies/Ant.tx" x="-120" y="4008"/>
-    <object id="5" template="enemies/Ant.tx" x="-56" y="4008"/>
-    <object id="32" template="enemies/Ant.tx" x="-216" y="4008"/>
-    <object id="25" template="enemies/Ant.tx" x="-136" y="4008"/>
-    <object id="6" template="enemies/Ant.tx" x="-72" y="4008"/>
-    <object id="30" template="enemies/Ant.tx" x="-232" y="4008"/>
-    <object id="24" template="enemies/Ant.tx" x="-152" y="4008"/>
-    <object id="11" template="enemies/Trigger.tx" x="-32" y="4000"/>
+    <object id="2" template="enemies/Ant.tx" x="-8" y="3848"/>
+    <object id="38" template="enemies/Ant.tx" x="-168" y="3848"/>
+    <object id="28" template="enemies/Ant.tx" x="-88" y="3848"/>
+    <object id="3" template="enemies/Ant.tx" x="-24" y="3848"/>
+    <object id="36" template="enemies/Ant.tx" x="-184" y="3848"/>
+    <object id="27" template="enemies/Ant.tx" x="-104" y="3848"/>
+    <object id="4" template="enemies/Ant.tx" x="-40" y="3848"/>
+    <object id="34" template="enemies/Ant.tx" x="-200" y="3848"/>
+    <object id="26" template="enemies/Ant.tx" x="-120" y="3848"/>
+    <object id="5" template="enemies/Ant.tx" x="-56" y="3848"/>
+    <object id="32" template="enemies/Ant.tx" x="-216" y="3848"/>
+    <object id="25" template="enemies/Ant.tx" x="-136" y="3848"/>
+    <object id="6" template="enemies/Ant.tx" x="-72" y="3848"/>
+    <object id="30" template="enemies/Ant.tx" x="-232" y="3848"/>
+    <object id="24" template="enemies/Ant.tx" x="-152" y="3848"/>
+    <object id="11" template="enemies/Trigger.tx" x="-32" y="3840"/>
    </objectgroup>
    <objectgroup id="16" name="room1ants2">
-    <object id="64" class="Path" x="264" y="3936">
+    <object id="64" class="Path" x="264" y="3776">
      <polyline points="0,0 -32,0 -64,-16 -168,-16 -232,-48 -280,-48"/>
     </object>
-    <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3936" rotation="0"/>
-    <object id="96" template="enemies/Ant.tx" gid="2147484129" x="264" y="3976" rotation="0"/>
-    <object id="66" template="enemies/Ant.tx" gid="2147484129" x="424" y="3936" rotation="0"/>
-    <object id="95" template="enemies/Ant.tx" gid="2147484129" x="424" y="3976" rotation="0"/>
-    <object id="67" template="enemies/Ant.tx" gid="2147484129" x="344" y="3936" rotation="0"/>
-    <object id="94" template="enemies/Ant.tx" gid="2147484129" x="344" y="3976" rotation="0"/>
-    <object id="68" template="enemies/Ant.tx" gid="2147484129" x="280" y="3936" rotation="0"/>
-    <object id="93" template="enemies/Ant.tx" gid="2147484129" x="280" y="3976" rotation="0"/>
-    <object id="69" template="enemies/Ant.tx" gid="2147484129" x="440" y="3936" rotation="0"/>
-    <object id="92" template="enemies/Ant.tx" gid="2147484129" x="440" y="3976" rotation="0"/>
-    <object id="70" template="enemies/Ant.tx" gid="2147484129" x="360" y="3936" rotation="0"/>
-    <object id="91" template="enemies/Ant.tx" gid="2147484129" x="360" y="3976" rotation="0"/>
-    <object id="71" template="enemies/Ant.tx" gid="2147484129" x="296" y="3936" rotation="0"/>
-    <object id="90" template="enemies/Ant.tx" gid="2147484129" x="296" y="3976" rotation="0"/>
-    <object id="72" template="enemies/Ant.tx" gid="2147484129" x="456" y="3936" rotation="0"/>
-    <object id="89" template="enemies/Ant.tx" gid="2147484129" x="456" y="3976" rotation="0"/>
-    <object id="73" template="enemies/Ant.tx" gid="2147484129" x="376" y="3936" rotation="0"/>
-    <object id="88" template="enemies/Ant.tx" gid="2147484129" x="376" y="3976" rotation="0"/>
-    <object id="74" template="enemies/Ant.tx" gid="2147484129" x="312" y="3936" rotation="0"/>
-    <object id="87" template="enemies/Ant.tx" gid="2147484129" x="312" y="3976" rotation="0"/>
-    <object id="75" template="enemies/Ant.tx" gid="2147484129" x="472" y="3936" rotation="0"/>
-    <object id="86" template="enemies/Ant.tx" gid="2147484129" x="472" y="3976" rotation="0"/>
-    <object id="76" template="enemies/Ant.tx" gid="2147484129" x="392" y="3936" rotation="0"/>
-    <object id="85" template="enemies/Ant.tx" gid="2147484129" x="392" y="3976" rotation="0"/>
-    <object id="77" template="enemies/Ant.tx" gid="2147484129" x="328" y="3936" rotation="0"/>
-    <object id="84" template="enemies/Ant.tx" gid="2147484129" x="328" y="3976" rotation="0"/>
-    <object id="78" template="enemies/Ant.tx" gid="2147484129" x="488" y="3936" rotation="0"/>
-    <object id="83" template="enemies/Ant.tx" gid="2147484129" x="488" y="3976" rotation="0"/>
-    <object id="79" template="enemies/Ant.tx" gid="2147484129" x="408" y="3936" rotation="0"/>
-    <object id="82" template="enemies/Ant.tx" gid="2147484129" x="408" y="3976" rotation="0"/>
-    <object id="80" template="enemies/Trigger.tx" x="-32" y="3928"/>
-    <object id="81" class="Path" x="272" y="3976">
+    <object id="65" template="enemies/Ant.tx" gid="2147484129" x="264" y="3776" rotation="0"/>
+    <object id="96" template="enemies/Ant.tx" gid="2147484129" x="264" y="3816" rotation="0"/>
+    <object id="66" template="enemies/Ant.tx" gid="2147484129" x="424" y="3776" rotation="0"/>
+    <object id="95" template="enemies/Ant.tx" gid="2147484129" x="424" y="3816" rotation="0"/>
+    <object id="67" template="enemies/Ant.tx" gid="2147484129" x="344" y="3776" rotation="0"/>
+    <object id="94" template="enemies/Ant.tx" gid="2147484129" x="344" y="3816" rotation="0"/>
+    <object id="68" template="enemies/Ant.tx" gid="2147484129" x="280" y="3776" rotation="0"/>
+    <object id="93" template="enemies/Ant.tx" gid="2147484129" x="280" y="3816" rotation="0"/>
+    <object id="69" template="enemies/Ant.tx" gid="2147484129" x="440" y="3776" rotation="0"/>
+    <object id="92" template="enemies/Ant.tx" gid="2147484129" x="440" y="3816" rotation="0"/>
+    <object id="70" template="enemies/Ant.tx" gid="2147484129" x="360" y="3776" rotation="0"/>
+    <object id="91" template="enemies/Ant.tx" gid="2147484129" x="360" y="3816" rotation="0"/>
+    <object id="71" template="enemies/Ant.tx" gid="2147484129" x="296" y="3776" rotation="0"/>
+    <object id="90" template="enemies/Ant.tx" gid="2147484129" x="296" y="3816" rotation="0"/>
+    <object id="72" template="enemies/Ant.tx" gid="2147484129" x="456" y="3776" rotation="0"/>
+    <object id="89" template="enemies/Ant.tx" gid="2147484129" x="456" y="3816" rotation="0"/>
+    <object id="73" template="enemies/Ant.tx" gid="2147484129" x="376" y="3776" rotation="0"/>
+    <object id="88" template="enemies/Ant.tx" gid="2147484129" x="376" y="3816" rotation="0"/>
+    <object id="74" template="enemies/Ant.tx" gid="2147484129" x="312" y="3776" rotation="0"/>
+    <object id="87" template="enemies/Ant.tx" gid="2147484129" x="312" y="3816" rotation="0"/>
+    <object id="75" template="enemies/Ant.tx" gid="2147484129" x="472" y="3776" rotation="0"/>
+    <object id="86" template="enemies/Ant.tx" gid="2147484129" x="472" y="3816" rotation="0"/>
+    <object id="76" template="enemies/Ant.tx" gid="2147484129" x="392" y="3776" rotation="0"/>
+    <object id="85" template="enemies/Ant.tx" gid="2147484129" x="392" y="3816" rotation="0"/>
+    <object id="77" template="enemies/Ant.tx" gid="2147484129" x="328" y="3776" rotation="0"/>
+    <object id="84" template="enemies/Ant.tx" gid="2147484129" x="328" y="3816" rotation="0"/>
+    <object id="78" template="enemies/Ant.tx" gid="2147484129" x="488" y="3776" rotation="0"/>
+    <object id="83" template="enemies/Ant.tx" gid="2147484129" x="488" y="3816" rotation="0"/>
+    <object id="79" template="enemies/Ant.tx" gid="2147484129" x="408" y="3776" rotation="0"/>
+    <object id="82" template="enemies/Ant.tx" gid="2147484129" x="408" y="3816" rotation="0"/>
+    <object id="80" template="enemies/Trigger.tx" x="-32" y="3768"/>
+    <object id="81" class="Path" x="272" y="3816">
      <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
     </object>
    </objectgroup>
    <objectgroup id="21" name="room1powerup">
-    <object id="97" template="enemies/HoneyPot.tx" x="80" y="3832"/>
-    <object id="105" template="enemies/Trigger.tx" x="-32" y="3848"/>
+    <object id="97" template="enemies/HoneyPot.tx" x="80" y="3672"/>
+    <object id="105" template="enemies/Trigger.tx" x="-32" y="3688"/>
    </objectgroup>
    <objectgroup id="19" name="room2fly1">
-    <object id="100" template="enemies/Trigger.tx" x="-56" y="3768"/>
-    <object id="101" template="enemies/Fly.tx" x="-8" y="3760"/>
-    <object id="104" template="enemies/Fly.tx" gid="2147484150" x="264" y="3760"/>
-    <object id="102" class="Path" x="0" y="3720">
+    <object id="100" template="enemies/Trigger.tx" x="-56" y="3448"/>
+    <object id="101" template="enemies/Fly.tx" x="-8" y="3440"/>
+    <object id="104" template="enemies/Fly.tx" gid="2147484150" x="264" y="3440"/>
+    <object id="102" class="Path" x="0" y="3400">
      <polyline points="-8,40 40,88 -32,160"/>
     </object>
-    <object id="103" class="Path" x="224" y="3720">
+    <object id="103" class="Path" x="224" y="3400">
      <polyline points="40,40 -8,88 64,160"/>
     </object>
-    <object id="127" template="enemies/PathPoint.tx" x="40" y="3808">
+    <object id="127" template="enemies/PathPoint.tx" x="40" y="3488">
      <properties>
       <property name="commandscript">setSpeed(0)
 
@@ -364,7 +386,7 @@ wait(30)
 setSpeed(fastspeed or 2)</property>
      </properties>
     </object>
-    <object id="128" template="enemies/PathPoint.tx" x="216" y="3808">
+    <object id="128" template="enemies/PathPoint.tx" x="216" y="3488">
      <properties>
       <property name="commandscript">setSpeed(0)
 
@@ -386,102 +408,102 @@ setSpeed(fastspeed or 2)</property>
     </object>
    </objectgroup>
    <objectgroup id="23" name="room2ants1">
-    <object id="106" template="enemies/Ant.tx" x="-8" y="3696"/>
-    <object id="124" template="enemies/Ant.tx" x="-8" y="3672"/>
-    <object id="122" template="enemies/Ant.tx" gid="2147484129" x="264" y="3736" rotation="0"/>
-    <object id="126" template="enemies/Ant.tx" gid="2147484129" x="264" y="3712" rotation="0"/>
-    <object id="110" template="enemies/Ant.tx" x="-8" y="3720"/>
-    <object id="121" template="enemies/Ant.tx" gid="2147484129" x="264" y="3760" rotation="0"/>
-    <object id="112" template="enemies/Ant.tx" x="-8" y="3744"/>
-    <object id="120" template="enemies/Ant.tx" gid="2147484129" x="264" y="3784" rotation="0"/>
-    <object id="114" template="enemies/Ant.tx" x="-8" y="3768"/>
-    <object id="119" template="enemies/Ant.tx" gid="2147484129" x="264" y="3808" rotation="0"/>
-    <object id="107" template="enemies/Trigger.tx" x="-56" y="3696"/>
-    <object id="108" class="Path" x="-8" y="3696">
+    <object id="106" template="enemies/Ant.tx" x="-8" y="3536"/>
+    <object id="124" template="enemies/Ant.tx" x="-8" y="3512"/>
+    <object id="122" template="enemies/Ant.tx" gid="2147484129" x="264" y="3576" rotation="0"/>
+    <object id="126" template="enemies/Ant.tx" gid="2147484129" x="264" y="3552" rotation="0"/>
+    <object id="110" template="enemies/Ant.tx" x="-8" y="3560"/>
+    <object id="121" template="enemies/Ant.tx" gid="2147484129" x="264" y="3600" rotation="0"/>
+    <object id="112" template="enemies/Ant.tx" x="-8" y="3584"/>
+    <object id="120" template="enemies/Ant.tx" gid="2147484129" x="264" y="3624" rotation="0"/>
+    <object id="114" template="enemies/Ant.tx" x="-8" y="3608"/>
+    <object id="119" template="enemies/Ant.tx" gid="2147484129" x="264" y="3648" rotation="0"/>
+    <object id="107" template="enemies/Trigger.tx" x="-56" y="3560"/>
+    <object id="108" class="Path" x="-8" y="3536">
      <polyline points="0,0 80,24"/>
     </object>
-    <object id="123" class="Path" x="-8" y="3680">
+    <object id="123" class="Path" x="-8" y="3520">
      <polyline points="0,-8 88,24"/>
     </object>
-    <object id="118" class="Path" x="264" y="3736">
+    <object id="118" class="Path" x="264" y="3576">
      <polyline points="0,0 -72,-8"/>
     </object>
-    <object id="125" class="Path" x="264" y="3720">
+    <object id="125" class="Path" x="264" y="3560">
      <polyline points="0,-8 -72,-8"/>
     </object>
-    <object id="109" class="Path" x="-8" y="3712">
+    <object id="109" class="Path" x="-8" y="3552">
      <polyline points="0,8 72,24"/>
     </object>
-    <object id="117" class="Path" x="264" y="3752">
+    <object id="117" class="Path" x="264" y="3592">
      <polyline points="0,8 -88,-8"/>
     </object>
-    <object id="111" class="Path" x="-8" y="3728">
+    <object id="111" class="Path" x="-8" y="3568">
      <polyline points="0,16 72,24"/>
     </object>
-    <object id="116" class="Path" x="264" y="3768">
+    <object id="116" class="Path" x="264" y="3608">
      <polyline points="0,16 -88,-8"/>
     </object>
-    <object id="113" class="Path" x="-8" y="3744">
+    <object id="113" class="Path" x="-8" y="3584">
      <polyline points="0,24 80,24"/>
     </object>
-    <object id="115" class="Path" x="264" y="3784">
+    <object id="115" class="Path" x="264" y="3624">
      <polyline points="0,24 -88,-8"/>
     </object>
    </objectgroup>
    <objectgroup id="24" name="room2ants2">
-    <object id="130" template="enemies/Ant.tx" x="-8" y="3688"/>
-    <object id="131" template="enemies/Ant.tx" x="-8" y="3664"/>
-    <object id="132" template="enemies/Ant.tx" gid="2147484129" x="264" y="3728" rotation="0"/>
-    <object id="133" template="enemies/Ant.tx" gid="2147484129" x="264" y="3704" rotation="0"/>
-    <object id="134" template="enemies/Ant.tx" x="-8" y="3712"/>
-    <object id="135" template="enemies/Ant.tx" gid="2147484129" x="264" y="3752" rotation="0"/>
-    <object id="136" template="enemies/Ant.tx" x="-8" y="3736"/>
-    <object id="137" template="enemies/Ant.tx" gid="2147484129" x="264" y="3776" rotation="0"/>
-    <object id="138" template="enemies/Ant.tx" x="-8" y="3760"/>
-    <object id="139" template="enemies/Ant.tx" gid="2147484129" x="264" y="3800" rotation="0"/>
-    <object id="140" template="enemies/Trigger.tx" x="-56" y="3656"/>
-    <object id="141" class="Path" x="-8" y="3688">
+    <object id="130" template="enemies/Ant.tx" x="-8" y="3528"/>
+    <object id="131" template="enemies/Ant.tx" x="-8" y="3504"/>
+    <object id="132" template="enemies/Ant.tx" gid="2147484129" x="264" y="3568" rotation="0"/>
+    <object id="133" template="enemies/Ant.tx" gid="2147484129" x="264" y="3544" rotation="0"/>
+    <object id="134" template="enemies/Ant.tx" x="-8" y="3552"/>
+    <object id="135" template="enemies/Ant.tx" gid="2147484129" x="264" y="3592" rotation="0"/>
+    <object id="136" template="enemies/Ant.tx" x="-8" y="3576"/>
+    <object id="137" template="enemies/Ant.tx" gid="2147484129" x="264" y="3616" rotation="0"/>
+    <object id="138" template="enemies/Ant.tx" x="-8" y="3600"/>
+    <object id="139" template="enemies/Ant.tx" gid="2147484129" x="264" y="3640" rotation="0"/>
+    <object id="140" template="enemies/Trigger.tx" x="-56" y="3496"/>
+    <object id="141" class="Path" x="-8" y="3528">
      <polyline points="0,0 88,24"/>
     </object>
-    <object id="142" class="Path" x="-8" y="3672">
+    <object id="142" class="Path" x="-8" y="3512">
      <polyline points="0,-8 88,24"/>
     </object>
-    <object id="143" class="Path" x="264" y="3728">
+    <object id="143" class="Path" x="264" y="3568">
      <polyline points="0,0 -72,-8"/>
     </object>
-    <object id="144" class="Path" x="264" y="3712">
+    <object id="144" class="Path" x="264" y="3552">
      <polyline points="0,-8 -72,-8"/>
     </object>
-    <object id="145" class="Path" x="-8" y="3704">
+    <object id="145" class="Path" x="-8" y="3544">
      <polyline points="0,8 72,24"/>
     </object>
-    <object id="146" class="Path" x="264" y="3744">
+    <object id="146" class="Path" x="264" y="3584">
      <polyline points="0,8 -80,-8"/>
     </object>
-    <object id="147" class="Path" x="-8" y="3720">
+    <object id="147" class="Path" x="-8" y="3560">
      <polyline points="0,16 72,24"/>
     </object>
-    <object id="148" class="Path" x="264" y="3760">
+    <object id="148" class="Path" x="264" y="3600">
      <polyline points="0,16 -88,-8"/>
     </object>
-    <object id="149" class="Path" x="-8" y="3736">
+    <object id="149" class="Path" x="-8" y="3576">
      <polyline points="0,24 72,24"/>
     </object>
-    <object id="150" class="Path" x="264" y="3776">
+    <object id="150" class="Path" x="264" y="3616">
      <polyline points="0,24 -88,-8"/>
     </object>
    </objectgroup>
    <objectgroup id="37" name="room2fly2">
-    <object id="395" template="enemies/Trigger.tx" x="-56" y="3616"/>
-    <object id="396" template="enemies/Fly.tx" x="-16" y="3792"/>
-    <object id="397" template="enemies/Fly.tx" gid="2147484150" x="272" y="3792"/>
-    <object id="398" class="Path" x="-32" y="3808">
+    <object id="395" template="enemies/Trigger.tx" x="-56" y="3400"/>
+    <object id="396" template="enemies/Fly.tx" x="-16" y="3576"/>
+    <object id="397" template="enemies/Fly.tx" gid="2147484150" x="272" y="3576"/>
+    <object id="398" class="Path" x="-32" y="3592">
      <polyline points="16,-16 72,-72 8,-136"/>
     </object>
-    <object id="399" class="Path" x="288" y="3808">
+    <object id="399" class="Path" x="288" y="3592">
      <polyline points="-16,-16 -72,-72 -8,-136"/>
     </object>
-    <object id="400" template="enemies/PathPoint.tx" x="40" y="3736">
+    <object id="400" template="enemies/PathPoint.tx" x="40" y="3520">
      <properties>
       <property name="commandscript">setSpeed(0)
 
@@ -501,7 +523,7 @@ wait(30)
 setSpeed(fastspeed or 2)</property>
      </properties>
     </object>
-    <object id="401" template="enemies/PathPoint.tx" x="216" y="3736">
+    <object id="401" template="enemies/PathPoint.tx" x="216" y="3520">
      <properties>
       <property name="commandscript">setSpeed(0)
 
@@ -523,10 +545,10 @@ setSpeed(fastspeed or 2)</property>
     </object>
    </objectgroup>
    <objectgroup id="25" name="room2powerup">
-    <object id="173" template="enemies/HoneyPot.tx" x="136" y="3584"/>
-    <object id="174" template="enemies/Trigger.tx" x="-80" y="3592"/>
+    <object id="173" template="enemies/HoneyPot.tx" x="136" y="3424"/>
+    <object id="174" template="enemies/Trigger.tx" x="-80" y="3432"/>
    </objectgroup>
-   <objectgroup id="26" name="room3columnants1"/>
+   <objectgroup id="26" name="room3columnants1" visible="0"/>
    <objectgroup id="29" name="room3columnants2" visible="0">
     <object id="263" class="Path" x="64" y="3016">
      <polyline points="0,0 -16,8 -40,32 -40,40 -16,64 16,80 40,104 40,112 16,136 -16,152 -40,176 -40,184"/>
@@ -862,17 +884,19 @@ setSpeed(fastspeed or 4)</property>
    <objectgroup id="30" name="room3bigant">
     <object id="276" template="enemies/AntBig.tx" x="64" y="2928">
      <properties>
-      <property name="spawncount" type="float" value="100"/>
-      <property name="spawninterval" type="float" value="10"/>
+      <property name="spawncount" type="float" value="150"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="z" type="float" value="2"/>
      </properties>
     </object>
     <object id="277" template="enemies/AntBig.tx" gid="2147484133" x="192" y="2928" rotation="0">
      <properties>
-      <property name="spawncount" type="float" value="100"/>
-      <property name="spawninterval" type="float" value="10"/>
+      <property name="spawncount" type="float" value="150"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="z" type="float" value="2"/>
      </properties>
     </object>
-    <object id="278" template="enemies/Trigger.tx" x="-16" y="3328"/>
+    <object id="278" template="enemies/Trigger.tx" x="-16" y="3344"/>
     <object id="177" class="Path" x="208" y="2936">
      <polyline points="0,0 24,24 24,32 0,56 -32,64 -56,88 -56,96 -32,120 0,128 24,152 24,160 0,184 -32,192 -56,216 -56,224 -32,248 0,256 24,280 24,288 0,312 -32,320 -56,344 -56,352 -32,376"/>
     </object>
@@ -883,8 +907,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
@@ -892,8 +915,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
@@ -901,8 +923,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
@@ -910,8 +931,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
@@ -919,8 +939,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
@@ -928,8 +947,7 @@ setSpeed(fastspeed or 4)</property>
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
-setAlpha(0.5)
-setSpeed(fastspeed or 4)</property>
+setAlpha(0.5)</property>
      </properties>
      <point/>
     </object>
