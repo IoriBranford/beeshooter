@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 38,
-  nextobjectid = 415,
+  nextlayerid = 39,
+  nextobjectid = 426,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -1692,44 +1692,52 @@ return {
               data = "eJxjYICAdCDOgOJMBkxASP4JELdB8SMy5EftH9n2MzEyMDxmgGAGRtLlFYBijFAsR4b8QAEAZ74wkQ=="
             },
             {
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYBgFgxW0AnEbELeTqT8diDOAOHOI2v8Eav8jMvUzMTIwPAYxGMnTrwDUxwjEcmTqJwYAACQ4CQo="
+            },
+            {
+              x = -16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgF5IJHlBrASJl2OQr1D3XwhEL9TBSGnwIVwh8A9UICCw=="
+            },
+            {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYBi8oBWI24C4nUz96UCcAcSZQ9T+J1D7H5Gpn4mRgeExiMFInn4FoD5GIJYjU/9QAW14MCEAipvHeDAsDnGZBwBs7BZB"
+              data = "eJzFksENQCEIQ8FBjNM6qN9B1IMJMfwWT77Yay0UkfdUIEab+oA689P5gJL++y2y4nwF+PXAfMgvHX/bbC3oZbHZhMzFsrG9bCIdI7xObvA6QffodXZ2wu7RMgCdKSvW"
+            },
+            {
+              x = 16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFlIA2CvU/plA/IyOFBoyCAQUA+p0BbA=="
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYCAfPKJALxgwUqZdjkL9Qx08oVA/E4XhpzDA4d9Gof7HFOpnpIL/AduaA3Y="
+              data = "eJxjYCAftFGgFwQeU6ifkZFCAygETyjUz0Sh+xUG2P9DHQyG+AMAJ1ADfA=="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJydklEKwDAIQ2MPMnZaD9r2IOtgoxJE3QLvo1BtNIUAEtAWA5u50IdbhyDUGfSbcWnar9Hb1lsv9rKy3pDMlXnL9vJK8yuhvEy+yMtEA7zMOBP7Xxiu56z4v3jw/H+ysvNXs2Lf6pwrdOx9XGyTKrM="
+              data = "eJydUgkKwCAMi3vI2Gt9qO4hQygsloqxgQgRe6S2Amj48RSgbMjo43B3Jxj57kR8NXqtsFnfPdAKQbPwWiH7zfpXZtN2DwPwLFL/uvCp1j6Nmbwm+mWvq9ov5l1jKF4v25MozwdoRyXr"
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJxjYKAMtFGo/zGF+hkZKTRgFIxo8IhSAyhMfwDW+gJP"
-            },
-            {
-              x = -16, y = 252, width = 16, height = 14,
-              data = "eJxjYCAfPKFALwgwMVKmX4FC/aNgFFACWinUnw7EAHV7AfU="
+              data = "eJxjYBhY8IhSAxgp0y5Hof5RMAooAQD53AED"
             },
             {
               x = 0, y = 252, width = 16, height = 14,
-              data = "eJxrY2BgeATEj0nADIxABMXofGKwHCMDHKDzR8EooCdoA+J2CvRnAHEmGfpaoXYDALlwD1I="
+              data = "eJxjYCAMFBgZGBiBmAmIHwP5T4jQQ8gccs2AmUMtMygBChTqHwWjAAAMZARF"
             },
             {
               x = 16, y = 252, width = 16, height = 14,
-              data = "eJyTY2QYBaNgFJAJ2oC4nQL9ALEjAS0="
+              data = "eJxjYBhY8IhSAxgp0y5Hof5RMAooAQD53AED"
             },
             {
               x = -16, y = 266, width = 16, height = 14,
-              data = "eJxjYCAftFKgFwTSKdRPKRho9490+59QqJ+JkTL9ChTqp4b7AWpABaA="
+              data = "eJxjYBi5oJVC/emj9lMEnlCon4mRMv0KFOqnhvsBgSMEtA=="
             },
             {
               x = 0, y = 266, width = 16, height = 14,
-              data = "eJytUlsKgCAQ3O0g0e2yOodW16wO0k4orGmg0sD8LA7zQEdEK9VjFM5CI5wa9Fa4Nei0P7ydZ20H63WG2jr85Y8NF+V/+fsbuB0Zf2y4K/+Oic6M/rlx7J3rP8gb5lSPW8+xt+5/pJJPaP/zla0E4e8tPpfOVgJsHHarzQ6EjVuyA2Fj8AYtmyUq"
+              data = "eJxjYBjaoA2K28nUnwHFmQNkfxYQZyPZ/wRqHjZ7HmER7wDiTiT7mRgZGB5jUQcWY4SwWxkQ7kb3vwJQDSMjpn6QmBxUPB1JH8wcbG7DBZDtf4zmNmIAyH5YuDEyorqNGAAKY1i4kep2EICFMTluBwFYGIMwAMASHOs="
             },
             {
               x = 16, y = 266, width = 16, height = 14,
-              data = "eJzLZmBgyGQgH3QCcTsF+jMotL9t1P4Rb/8jCvQ/BhGM5OtnBOqVo0A/AGC5DJs="
+              data = "eJxjYBgFQxm0AXE7BfozgDhziNv/iAL9j0EEI/n6GYF65SjQDwCyDwYq"
             },
             {
               x = -16, y = 280, width = 16, height = 14,
@@ -1795,40 +1803,48 @@ return {
               data = "eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk="
             },
             {
+              x = -16, y = 210, width = 16, height = 14,
+              data = "eJxjYBgFo2BgABsjZfp5KbR/MOgHAB7rADw="
+            },
+            {
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYBgFuAArIwMDGxCzM5KnXxuIdYBYl5qOGmSAjRGByQknPjRMilmg+EHXj80sXBifXnphAKFjA3M="
+            },
+            {
+              x = 16, y = 210, width = 16, height = 14,
+              data = "eJxjYBgFo2DgABsjZfr5KbR/oPUDACD/ADU="
+            },
+            {
               x = -16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFAwXYGCnTz0uh/aP6B1a/LhADAG67AJA="
+              data = "eJxjYCAf8FKgdzDo16VQ/0gHrIyU6demjjMGDLBR6H8dIAYAIC0AuQ=="
             },
             {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYMANWBkZGNiAmJ0RjyI8QBuIdYBYlzztQwKwMSIwOeHEh4ZJMQsUP+j6sZmFC+PTO1SwGAMkjeHCogT0E0qbsDSMyzxSAbJ5ILMAbtEHxw=="
+              data = "eJzjY2Bg4KMAiwGxDh4sSkC/LgN+oE3APFIBsnmiZOhHNwsZsDIyMLBBMTsjZW4jFC7UApS4FwSQ44Rcs9DjBNksbBif+ejpBVd6JNY8bOYjp0FS4wqURpDTLwDC+Akq"
             },
             {
               x = 16, y = 224, width = 16, height = 14,
-              data = "eJxjYBgFAwnYGCnTz0+h/aP6B1Y/AHp/AHE="
+              data = "eJzjZ6AM8A9x/ToU6h8FAwvYGSnTP9DpDwA+TgCP"
             },
             {
               x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgF5AJWRsr0a1PHGQMG2Cj0vw51nEE2oDT+eCm0HxT/AKSFAKM="
+              data = "eJxjYBg4wMpImX5eCu3XplD/KKAMUBr/wyH+AMy6AHA="
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYCAfaKPxWRkZGNigmJ2RPPN0oFiXAneRAihxLwiA3CoKxHwUmIXsb3SzsGF85iObhQ1jM58U92ojmcHHQHpcgdIITC8fAXXY/I6sF184oatDxmIMiPBA5xODkf1LaVoFAD9+CL8="
+              data = "eJydUkEKgDAMyw7Tk3pyn1D//z09rBBLBu0CORTSNukGaNQCLII7/lQapWO2j3enryN8yKevZ+HzriXXq3JGZ2zQt4nmsv6W6DGw9yOo5/uw79HuKv6F7Ypk5ftkvBquvuPE3PuM5mQ8+Dnm4QUvlAiu"
             },
             {
               x = 16, y = 238, width = 16, height = 14,
-              data = "eJzTYRgFQxmwM1Kmn59C+wdavy6F+gcaAAAFjgCP"
-            },
-            {
-              x = -16, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2BoAlZGyvRrU8cZFAEAHkMAMg=="
+              data = "eJzjZ6AM6FKofxSMgqEM2Bkp0w8AzD8ARQ=="
             },
             {
               x = 0, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2DgABsjAwM7I/n6dYBYlwx9rIwQu8kF2lC7KQUAcvwAzQ=="
+              data = "eJxjYCAPaAOxKJl6kc0YBaNgJAMAVucAbA=="
             },
             {
               x = 16, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2DoAjZGBgZ2RvL16wCxLtVcQzoAADpqAGk="
+              data = "eJzjZ6AM6FKofxSMgpEMAMpAAD0="
             },
             {
               x = -16, y = 266, width = 16, height = 14,
@@ -1886,24 +1902,20 @@ return {
               data = "eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ=="
             },
             {
-              x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYMANHBkZGJyA2JkRjyI8oBaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTsQmQ7i0exOIMFuEIClORi2h5pBrH5c5tEqDQMAgDcP+w=="
+              x = 0, y = 210, width = 16, height = 14,
+              data = "eJxjYBgFuIAjIwODExA7M5Knvxaorw6I68nUP1KBIwVhDgLxQL1K0LhDxsSYCbJbEYgTgNgQDScSoT8eqjYBDTvgSAcAw9IJZg=="
             },
             {
-              x = -16, y = 238, width = 16, height = 14,
-              data = "eJxjYBgFo4A84MRImf46CvUPBwAA2UYAww=="
+              x = -16, y = 224, width = 16, height = 14,
+              data = "eJxjYBgFo2AUkAOcGCnTXwfUDwAXRgDD"
+            },
+            {
+              x = 0, y = 224, width = 16, height = 14,
+              data = "eJxjYEAF8YwMDAlAbAjFMHYiIwNRoBaorg4J20PNIFY/LvPqydRPb+AIdKczBW6tHUJ+HQ7AicL4ojRtAgBeUwmg"
             },
             {
               x = 0, y = 238, width = 16, height = 14,
-              data = "eJxjYKAucGRkYHBmJF9/LVBvPQX6RwFpwInC+KobjS+KAACcMgML"
-            },
-            {
-              x = 0, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2DkAUdGBgYnRvL11wL11lGgHwYAjkQBgw=="
-            },
-            {
-              x = 16, y = 252, width = 16, height = 14,
-              data = "eJxjYBgFo2DoAidGBgZnRvL11wH11lOgn1IAAOUsAYc="
+              data = "eJxjYBgFIODIyMDgBMTOjBA2iCYF1ALV1wFxPRDHA7ESGWZgM2uwAeRwIkcPOX4DhacDBeFRO0jDEgQA+1UKPw=="
             },
             {
               x = -16, y = 266, width = 16, height = 14,
@@ -1931,6 +1943,195 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 38,
+              name = "room0ants1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 415,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 3984,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 416,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 168,
+                  y = 3976,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 417,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 176,
+                  y = 3968,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 418,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 184,
+                  y = 3960,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484129,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 419,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 3944,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 422,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 88,
+                  y = 3896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 425,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 80,
+                  y = 3888,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 424,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 40,
+                  y = 3880,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 420,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 208,
+                  y = 3952,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 421,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 96,
+                  y = 3904,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 423,
+                  name = "",
+                  class = "Ant",
+                  shape = "rectangle",
+                  x = 48,
+                  y = 3888,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 481,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 11,
               name = "room1ants1",
               class = "",
@@ -1948,7 +2149,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 0,
-                  y = 4008,
+                  y = 3848,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -1971,7 +2172,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -1987,7 +2188,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -168,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2003,7 +2204,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -88,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2019,7 +2220,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -24,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2035,7 +2236,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -184,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2051,7 +2252,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -104,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2067,7 +2268,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -40,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2083,7 +2284,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -200,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2099,7 +2300,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -120,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2115,7 +2316,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -56,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2131,7 +2332,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -216,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2147,7 +2348,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -136,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2163,7 +2364,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -72,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2179,7 +2380,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -232,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2195,7 +2396,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -152,
-                  y = 4008,
+                  y = 3848,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2211,7 +2412,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 4000,
+                  y = 3840,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2240,7 +2441,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3936,
+                  y = 3776,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2261,7 +2462,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2277,7 +2478,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2293,7 +2494,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 424,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2309,7 +2510,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 424,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2325,7 +2526,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 344,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2341,7 +2542,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 344,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2357,7 +2558,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 280,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2373,7 +2574,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 280,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2389,7 +2590,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 440,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2405,7 +2606,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 440,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2421,7 +2622,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 360,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2437,7 +2638,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 360,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2453,7 +2654,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 296,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2469,7 +2670,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 296,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2485,7 +2686,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 456,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2501,7 +2702,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 456,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2517,7 +2718,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 376,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2533,7 +2734,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 376,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2549,7 +2750,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 312,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2565,7 +2766,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 312,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2581,7 +2782,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 472,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2597,7 +2798,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 472,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2613,7 +2814,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 392,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2629,7 +2830,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 392,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2645,7 +2846,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 328,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2661,7 +2862,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 328,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2677,7 +2878,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 488,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2693,7 +2894,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 488,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2709,7 +2910,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 408,
-                  y = 3936,
+                  y = 3776,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2725,7 +2926,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 408,
-                  y = 3976,
+                  y = 3816,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2741,7 +2942,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 3928,
+                  y = 3768,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2754,7 +2955,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 272,
-                  y = 3976,
+                  y = 3816,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2793,7 +2994,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 80,
-                  y = 3832,
+                  y = 3672,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -2809,7 +3010,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 3848,
+                  y = 3688,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2838,7 +3039,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3768,
+                  y = 3448,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2851,7 +3052,7 @@ return {
                   class = "Fly",
                   shape = "rectangle",
                   x = -8,
-                  y = 3760,
+                  y = 3440,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -2868,7 +3069,7 @@ return {
                   class = "Fly",
                   shape = "rectangle",
                   x = 264,
-                  y = 3760,
+                  y = 3440,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -2885,7 +3086,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 0,
-                  y = 3720,
+                  y = 3400,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2903,7 +3104,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 3720,
+                  y = 3400,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2921,7 +3122,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 3808,
+                  y = 3488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2936,7 +3137,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 3808,
+                  y = 3488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -2967,7 +3168,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3696,
+                  y = 3536,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2983,7 +3184,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3672,
+                  y = 3512,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -2999,7 +3200,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3736,
+                  y = 3576,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3015,7 +3216,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3712,
+                  y = 3552,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3031,7 +3232,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3720,
+                  y = 3560,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3047,7 +3248,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3760,
+                  y = 3600,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3063,7 +3264,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3744,
+                  y = 3584,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3079,7 +3280,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3784,
+                  y = 3624,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3095,7 +3296,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3768,
+                  y = 3608,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3111,7 +3312,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3808,
+                  y = 3648,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3127,7 +3328,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3696,
+                  y = 3560,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3140,7 +3341,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3696,
+                  y = 3536,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3157,7 +3358,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3680,
+                  y = 3520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3174,7 +3375,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3736,
+                  y = 3576,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3191,7 +3392,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3720,
+                  y = 3560,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3208,7 +3409,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3712,
+                  y = 3552,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3225,7 +3426,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3752,
+                  y = 3592,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3242,7 +3443,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3728,
+                  y = 3568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3259,7 +3460,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3768,
+                  y = 3608,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3276,7 +3477,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3744,
+                  y = 3584,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3293,7 +3494,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3784,
+                  y = 3624,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3326,7 +3527,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3688,
+                  y = 3528,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3342,7 +3543,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3664,
+                  y = 3504,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3358,7 +3559,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3728,
+                  y = 3568,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3374,7 +3575,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3704,
+                  y = 3544,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3390,7 +3591,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3712,
+                  y = 3552,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3406,7 +3607,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3752,
+                  y = 3592,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3422,7 +3623,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3736,
+                  y = 3576,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3438,7 +3639,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3776,
+                  y = 3616,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3454,7 +3655,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = -8,
-                  y = 3760,
+                  y = 3600,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3470,7 +3671,7 @@ return {
                   class = "Ant",
                   shape = "rectangle",
                   x = 264,
-                  y = 3800,
+                  y = 3640,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -3486,7 +3687,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3656,
+                  y = 3496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3499,7 +3700,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3688,
+                  y = 3528,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3516,7 +3717,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3672,
+                  y = 3512,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3533,7 +3734,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3728,
+                  y = 3568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3550,7 +3751,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3712,
+                  y = 3552,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3567,7 +3768,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3704,
+                  y = 3544,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3584,7 +3785,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3744,
+                  y = 3584,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3601,7 +3802,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3720,
+                  y = 3560,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3618,7 +3819,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3760,
+                  y = 3600,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3635,7 +3836,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 3736,
+                  y = 3576,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3652,7 +3853,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 264,
-                  y = 3776,
+                  y = 3616,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3685,7 +3886,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 3616,
+                  y = 3400,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3698,7 +3899,7 @@ return {
                   class = "Fly",
                   shape = "rectangle",
                   x = -16,
-                  y = 3792,
+                  y = 3576,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -3715,7 +3916,7 @@ return {
                   class = "Fly",
                   shape = "rectangle",
                   x = 272,
-                  y = 3792,
+                  y = 3576,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -3732,7 +3933,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -32,
-                  y = 3808,
+                  y = 3592,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3750,7 +3951,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 288,
-                  y = 3808,
+                  y = 3592,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3768,7 +3969,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 3736,
+                  y = 3520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3783,7 +3984,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 3736,
+                  y = 3520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3814,7 +4015,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 136,
-                  y = 3584,
+                  y = 3424,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -3830,7 +4031,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -80,
-                  y = 3592,
+                  y = 3432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -3845,7 +4046,7 @@ return {
               id = 26,
               name = "room3columnants1",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -4741,11 +4942,11 @@ return {
                   gid = 485,
                   visible = true,
                   properties = {
-                    ["spawncount"] = 100,
-                    ["spawninterval"] = 10,
+                    ["spawncount"] = 150,
+                    ["spawninterval"] = 6,
                     ["spawnpath"] = { id = 0 },
-                    ["spawntype"] = "Ant",
-                    ["z"] = 1
+                    ["spawntype"] = "AntFromBigAnt",
+                    ["z"] = 2
                   }
                 },
                 {
@@ -4761,11 +4962,11 @@ return {
                   gid = 2147484133,
                   visible = true,
                   properties = {
-                    ["spawncount"] = 100,
-                    ["spawninterval"] = 10,
+                    ["spawncount"] = 150,
+                    ["spawninterval"] = 6,
                     ["spawnpath"] = { id = 0 },
-                    ["spawntype"] = "Ant",
-                    ["z"] = 1
+                    ["spawntype"] = "AntFromBigAnt",
+                    ["z"] = 2
                   }
                 },
                 {
@@ -4774,7 +4975,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 3328,
+                  y = 3344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -4871,7 +5072,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
@@ -4886,7 +5087,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
@@ -4901,7 +5102,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
@@ -4916,7 +5117,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
@@ -4931,7 +5132,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
@@ -4946,7 +5147,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
                   }
                 },
                 {
