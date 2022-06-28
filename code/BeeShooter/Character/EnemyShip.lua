@@ -122,6 +122,7 @@ end
 function EnemyShip:Walker()
     walkPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
+    waitForOnscreenState(self, true)
     waitForOnscreenState(self, false)
     self:markDisappear()
 end
