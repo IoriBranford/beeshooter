@@ -6,7 +6,7 @@
    <property name="spawncount" type="float" value="1"/>
    <property name="spawninterval" type="float" value="1"/>
    <property name="spawnpath" type="object" value="0"/>
-   <property name="spawntype" value="Ant"/>
+   <property name="spawntype" value="AntFromBigAnt"/>
    <property name="z" type="float" value="1"/>
   </properties>
  </object>
