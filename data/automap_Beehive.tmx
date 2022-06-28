@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="20" nextobjectid="1">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="20" nextobjectid="1">
+ <properties>
+  <property name="MatchInOrder" type="bool" value="true"/>
+ </properties>
  <tileset firstgid="1" source="tilesets/Beehive.tsx"/>
  <layer id="8" name="regions_input" width="30" height="20">
   <data encoding="base64" compression="zlib">
