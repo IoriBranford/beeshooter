@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 25,
+  nextobjectid = 26,
   properties = {},
   tilesets = {
     {
@@ -1408,6 +1408,22 @@ return {
           class = "Ant",
           shape = "rectangle",
           x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 20,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 25,
+          name = "AntFromBigAnt",
+          class = "Ant",
+          shape = "rectangle",
+          x = -16,
           y = 0,
           width = 16,
           height = 16,
