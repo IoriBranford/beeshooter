@@ -139,15 +139,9 @@ function EnemyShip:Spawner()
     local spawntype = self.spawntype
     local spawninterval = self.spawninterval or 1
     local spawncount = self.spawncount or 1
-    local layer = self.layer
     for _ = 1, spawncount do
         wait(spawninterval)
-        Stage.addCharacter({
-            type = spawntype,
-            x = self.x,
-            y = self.y,
-            layer = layer
-        })
+        self:dropObject(spawntype)
     end
     waitForOnscreenState(self, false)
     self:markDisappear()
