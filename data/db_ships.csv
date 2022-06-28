@@ -1,7 +1,7 @@
 type,script,scriptstart,scriptdefeat,team,speed,health,collidable,dyingsound,defeatsound,defeatpoints,defeatdrops
 Jenny,BeeShooter.Character.PlayerShip,,defeat,PlayerShip,,,TRUE,,sounds/playerkill.mp3,,JennyKilled JennyKilledSplat
 Ant,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,1,TRUE,,sounds/bugkill1.mp3,100,KillSmall
-AntBig,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,1,16,TRUE,,sounds/bugkill2.mp3,1000,KillSmall KillMedium AntBigCorpse AntBigHead AntBigAbdomen
+AntBig,BeeShooter.Character.EnemyShip,Spawner,,EnemyShip,1,16,TRUE,,sounds/bugkill2.mp3,1000,KillSmall KillMedium AntBigCorpse AntBigHead AntBigAbdomen
 AntBigHead,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall KillMedium
 AntBigAbdomen,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,sounds/bugkill2.mp3,250,KillSmall KillMedium
 HoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,sounds/breakpot.mp3,,HoneyPotOpen Powerup
