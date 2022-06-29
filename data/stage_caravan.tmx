@@ -61,6 +61,7 @@
   <object id="59" x="-256" y="3360" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 3
 
+Introduce enemies shooting back
 Teach Lv3 weapons</text>
   </object>
   <object id="60" x="-256" y="3584" width="256" height="224">
@@ -129,7 +130,7 @@ A brief chance to practice controls</text>
    eJxjYCAfPKFALwgwMVKmX4FC/ZSCNgr1P6ZQP+MA+3+kxz+lABR+AI3gBGA=
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJydk1EKwCAMQ9MdZOy0PajzIFMmWELdshXeR8HGJqJj1mGADXaDVGejNnzwtfpdm906rJVRE424d9TK4PmuWRZaK9g/xKxW/tWseW9PeoWCmQf3CghZcK8Q/f71r2RT3g4mczEL5V05UyQ+n/7HBREFNJo=
+   eJydk1EOgCAMQzsPYjwtB0UOIkQMSx2kuuR9LEBHS0gYdRhgnd0g1VkpldT5Wm3WZrcOa0WUQMPf22tF8PmmmSdaM9g/xKxm/tWs+d4p6BUyRh7cK8Blwb2C9/vXv5JNXuyJ1jiL5bvaexZn8fiK/sezdgGKUzWc
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
    eJxjYBgFAwkeUWoAI2Xa5SjUPwooAwD3zQED
@@ -211,10 +212,10 @@ A brief chance to practice controls</text>
    eJxjYBi6gI2RMv061HEG2YCVQvfzUmi/NoX6BxoMh/ADAACIALA=
   </chunk>
     <chunk x="0" y="238" width="16" height="14">
-   eJyVk8EOgCAMQ8sBPclNf0L5/99zJhCWWWCQvAPJ2tACAHALT+EUkrCFPrvQW9qLwfxHfsy/eqTimf1yxNC0aTLHsmvtqCc7p7nQ+rB7Dzrvan5v3pU7+daBf07mEY2/7Ut3kY3G9sp0rAt2Nv1+Zh2y/zF7P16vF+FgC6c=
+   eJyVk8EOgCAMQ8sBPYkn+Qnl/3/PkUBY6kBY8g6EtbE1AMAtPIVLCMLm+uxCb7SXheU/8rP8q0conmleDu+aNvzsWdm1dtQT72kiWh98nkHnXc0/m3fln+Q58M1peXjy5750F4k0dS+qO9ZZXfC3nerO6pRn9D5Wh71e6KsLng==
   </chunk>
     <chunk x="16" y="238" width="16" height="14">
-   eJxjYKAMsDNSpp+fQvsHWr8uhfpHOhjp6QcAHQ0AmA==
+   eJxjYKAMsDNSpp+fQvsHWr8uhfpHwcCCgU4/AAnOAIE=
   </chunk>
     <chunk x="0" y="252" width="16" height="14">
    eJxjYCAfaFOgdxQMfcDKiMpmA2J2Rtzq0fXyIbHFgLQOEOsSaTco7YkisYnVh27GQAMAvE0Bkw==
@@ -486,16 +487,16 @@ A brief chance to practice controls</text>
     </object>
    </objectgroup>
    <objectgroup id="40" name="room3fly1">
-    <object id="446" template="enemies/Trigger.tx" x="-56" y="3480"/>
-    <object id="447" template="enemies/Fly.tx" x="64" y="3552"/>
-    <object id="448" template="enemies/Fly.tx" gid="2147484150" x="192" y="3552"/>
-    <object id="449" class="Path" x="0" y="3440">
-     <polyline points="64,112 104,72 104,128 -24,0"/>
+    <object id="446" template="enemies/Trigger.tx" x="-56" y="3544"/>
+    <object id="447" template="enemies/Fly.tx" x="64" y="3616"/>
+    <object id="448" template="enemies/Fly.tx" gid="2147484150" x="192" y="3616"/>
+    <object id="449" class="Path" x="0" y="3504">
+     <polyline points="64,112 64,96 72,80 88,72 104,80 112,96 104,120 88,136 64,144 16,96 -24,0"/>
     </object>
-    <object id="450" class="Path" x="224" y="3432">
-     <polyline points="-32,120 -72,80 -72,136 56,8"/>
+    <object id="450" class="Path" x="224" y="3496">
+     <polyline points="-32,120 -32,104 -40,88 -56,80 -72,88 -80,104 -72,128 -56,144 -32,152 16,104 56,8"/>
     </object>
-    <object id="451" template="enemies/PathPoint.tx" x="104" y="3512">
+    <object id="451" template="enemies/PathPoint.tx" x="88" y="3576">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -514,7 +515,7 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="452" template="enemies/PathPoint.tx" x="152" y="3512">
+    <object id="452" template="enemies/PathPoint.tx" x="168" y="3576">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -533,7 +534,7 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="453" name="toBack" class="PathPoint" x="64" y="3552">
+    <object id="453" name="toBack" class="PathPoint" x="64" y="3616">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -542,7 +543,7 @@ setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
-    <object id="454" name="toBack" class="PathPoint" x="192" y="3552">
+    <object id="454" name="toBack" class="PathPoint" x="192" y="3616">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -551,28 +552,28 @@ setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
-    <object id="455" template="enemies/PathPoint.tx" x="104" y="3568">
+    <object id="455" template="enemies/PathPoint.tx" x="64" y="3648">
      <properties>
       <property name="commandscript" value="setSpeed(fastspeed or 2)"/>
      </properties>
     </object>
-    <object id="456" template="enemies/PathPoint.tx" x="152" y="3568">
+    <object id="456" template="enemies/PathPoint.tx" x="192" y="3648">
      <properties>
       <property name="commandscript" value="setSpeed(fastspeed or 2)"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="19" name="room3fly3">
-    <object id="100" template="enemies/Trigger.tx" x="-56" y="3400"/>
-    <object id="101" template="enemies/Fly.tx" x="104" y="3448"/>
-    <object id="104" template="enemies/Fly.tx" gid="2147484150" x="152" y="3448"/>
-    <object id="102" class="Path" x="0" y="3360">
-     <polyline points="104,88 88,72 24,72 -48,0"/>
+    <object id="100" template="enemies/Trigger.tx" x="-56" y="3448"/>
+    <object id="101" template="enemies/Fly.tx" x="104" y="3496"/>
+    <object id="104" template="enemies/Fly.tx" gid="2147484150" x="152" y="3496"/>
+    <object id="102" class="Path" x="0" y="3408">
+     <polyline points="104,88 88,72 80,72 72,88 64,112 56,120 48,112 40,88 32,72 -40,0"/>
     </object>
-    <object id="103" class="Path" x="224" y="3352">
-     <polyline points="-72,96 -56,80 8,80 80,8"/>
+    <object id="103" class="Path" x="224" y="3400">
+     <polyline points="-72,96 -56,80 -48,80 -40,96 -32,120 -24,128 -16,120 -8,96 0,80 72,8"/>
     </object>
-    <object id="127" template="enemies/PathPoint.tx" x="88" y="3432">
+    <object id="127" template="enemies/PathPoint.tx" x="88" y="3480">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -591,7 +592,7 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="128" template="enemies/PathPoint.tx" x="168" y="3432">
+    <object id="128" template="enemies/PathPoint.tx" x="168" y="3480">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -610,7 +611,7 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="442" name="toBack" class="PathPoint" x="104" y="3448">
+    <object id="442" name="toBack" class="PathPoint" x="104" y="3496">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -619,7 +620,7 @@ setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
-    <object id="443" name="toBack" class="PathPoint" x="152" y="3448">
+    <object id="443" name="toBack" class="PathPoint" x="152" y="3496">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -630,16 +631,16 @@ setSpeed(slowspeed or 1)</property>
     </object>
    </objectgroup>
    <objectgroup id="37" name="room3fly4">
-    <object id="395" template="enemies/Trigger.tx" x="-56" y="3360"/>
-    <object id="396" template="enemies/Fly.tx" x="-16" y="3536"/>
-    <object id="397" template="enemies/Fly.tx" gid="2147484150" x="272" y="3536"/>
-    <object id="398" class="Path" x="-32" y="3552">
-     <polyline points="16,-16 72,-72 72,-136 8,-200"/>
+    <object id="395" template="enemies/Trigger.tx" x="-56" y="3352"/>
+    <object id="396" template="enemies/Fly.tx" x="40" y="3544"/>
+    <object id="397" template="enemies/Fly.tx" gid="2147484150" x="216" y="3544"/>
+    <object id="398" class="Path" x="-32" y="3560">
+     <polyline points="72,-16 64,-32 64,-56 72,-72 80,-88 88,-112 80,-128 72,-136 8,-200"/>
     </object>
-    <object id="399" class="Path" x="288" y="3552">
-     <polyline points="-16,-16 -72,-72 -72,-136 -8,-200"/>
+    <object id="399" class="Path" x="288" y="3560">
+     <polyline points="-72,-16 -64,-32 -64,-56 -72,-72 -80,-88 -88,-112 -80,-128 -72,-136 -8,-200"/>
     </object>
-    <object id="400" template="enemies/PathPoint.tx" x="40" y="3480">
+    <object id="400" template="enemies/PathPoint.tx" x="32" y="3504">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -659,7 +660,7 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="401" template="enemies/PathPoint.tx" x="216" y="3480">
+    <object id="401" template="enemies/PathPoint.tx" x="224" y="3504">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -679,17 +680,17 @@ wait(12)
 end</property>
      </properties>
     </object>
-    <object id="440" template="enemies/PathPoint.tx" x="40" y="3416">
+    <object id="440" template="enemies/PathPoint.tx" x="40" y="3424">
      <properties>
       <property name="commandscript" value="setSpeed(fastspeed or 2)"/>
      </properties>
     </object>
-    <object id="441" template="enemies/PathPoint.tx" x="216" y="3416">
+    <object id="441" template="enemies/PathPoint.tx" x="216" y="3424">
      <properties>
       <property name="commandscript" value="setSpeed(fastspeed or 2)"/>
      </properties>
     </object>
-    <object id="444" name="toBack" class="PathPoint" x="-16" y="3536">
+    <object id="444" name="toBack" class="PathPoint" x="40" y="3544">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -698,7 +699,7 @@ setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
-    <object id="445" name="toBack" class="PathPoint" x="272" y="3536">
+    <object id="445" name="toBack" class="PathPoint" x="216" y="3544">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -713,12 +714,12 @@ setSpeed(slowspeed or 1)</property>
     <object id="174" template="enemies/Trigger.tx" x="-80" y="3576"/>
    </objectgroup>
    <objectgroup id="28" name="room4fly1">
-    <object id="228" template="enemies/Trigger.tx" x="-56" y="3200"/>
-    <object id="229" class="Path" x="-16" y="3176">
+    <object id="228" template="enemies/Trigger.tx" x="-56" y="3168"/>
+    <object id="229" class="Path" x="-16" y="3144">
      <polyline points="0,88 48,48 88,32 120,32 144,40 160,48 168,64 168,72 160,80 144,88 104,96 72,112 48,144 40,184 40,224 56,264 88,296 160,336"/>
     </object>
-    <object id="230" template="enemies/Fly.tx" x="-16" y="3256"/>
-    <object id="232" name="toBack" class="PathPoint" x="-16" y="3264">
+    <object id="230" template="enemies/Fly.tx" x="-16" y="3224"/>
+    <object id="232" name="toBack" class="PathPoint" x="-16" y="3232">
      <properties>
       <property name="commandscript">setZ(-abs(z))
 setCollidable(false)
@@ -727,7 +728,7 @@ setSpeed(fastspeed or 4)</property>
      </properties>
      <point/>
     </object>
-    <object id="233" name="toFront" class="PathPoint" x="144" y="3224">
+    <object id="233" name="toFront" class="PathPoint" x="144" y="3192">
      <properties>
       <property name="commandscript">setZ(abs(z))
 setCollidable(true)
@@ -735,13 +736,13 @@ setAlpha(1)</property>
      </properties>
      <point/>
     </object>
-    <object id="234" name="turnX" class="PathPoint" x="152" y="3240">
+    <object id="234" name="turnX" class="PathPoint" x="152" y="3208">
      <properties>
       <property name="commandscript" value="setScaleX(-1)"/>
      </properties>
      <point/>
     </object>
-    <object id="235" template="enemies/PathPoint.tx" x="128" y="3264">
+    <object id="235" template="enemies/PathPoint.tx" x="128" y="3232">
      <properties>
       <property name="commandscript">for i=1,5 do
 
@@ -754,7 +755,7 @@ wait(10)
 end</property>
      </properties>
     </object>
-    <object id="279" template="enemies/PathPoint.tx" x="104" y="3208">
+    <object id="279" template="enemies/PathPoint.tx" x="104" y="3176">
      <properties>
       <property name="commandscript" value="setSpeed(slowspeed or 2)"/>
      </properties>
@@ -976,19 +977,19 @@ setSpeed(fastspeed or 4)</property>
    <objectgroup id="30" name="room5bigant">
     <object id="276" template="enemies/AntBig.tx" x="64" y="2928">
      <properties>
-      <property name="spawncount" type="float" value="150"/>
+      <property name="spawncount" type="float" value="200"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="z" type="float" value="2"/>
      </properties>
     </object>
     <object id="277" template="enemies/AntBig.tx" gid="2147484133" x="192" y="2928" rotation="0">
      <properties>
-      <property name="spawncount" type="float" value="150"/>
+      <property name="spawncount" type="float" value="200"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="z" type="float" value="2"/>
      </properties>
     </object>
-    <object id="278" template="enemies/Trigger.tx" x="-16" y="3344"/>
+    <object id="278" template="enemies/Trigger.tx" x="-88" y="3472"/>
     <object id="177" class="Path" x="208" y="2936">
      <polyline points="0,0 24,24 24,32 0,56 -32,64 -56,88 -56,96 -32,120 0,128 24,152 24,160 0,184 -32,192 -56,216 -56,224 -32,248 0,256 24,280 24,288 0,312 -32,320 -56,344 -56,352 -32,376"/>
     </object>
