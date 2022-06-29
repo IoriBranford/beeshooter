@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Aliens.tsx"/>
+ <object class="AlienPillager" gid="11" width="24" height="16"/>
+</template>
