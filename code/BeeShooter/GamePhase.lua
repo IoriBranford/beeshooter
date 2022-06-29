@@ -137,13 +137,13 @@ end
 
 function GamePhase.win()
     Audio.fadeMusic()
-    status = "COMPLETE!"
+    status = "COMPLETE!\n\nPress ESC key\nor START button"
     Stage.win()
 end
 
 function GamePhase.lose(reason)
     Audio.fadeMusic()
-    status = reason or "GAME OVER\n\nPress F2 to retry"
+    status = reason or "GAME OVER\n\nPress ESC key\nor START button"
     Stage.lose()
 end
 
