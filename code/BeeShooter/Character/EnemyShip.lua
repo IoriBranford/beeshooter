@@ -220,15 +220,28 @@ function EnemyShip:defeatAlienMind()
 end
 
 function EnemyShip:defeatBoss()
+    Stage.stop()
+    self:giveDefeatPoints()
     self.collidable = false
     Stage.killTeam("EnemyShip")
     Stage.killTeam("EnemyShot")
     Body.setVelocity(self, 0, .125)
-    for i = 1, 6 do
+    local hitbox = self.hitbox
+    local dyingeffect = self.dyingeffect or "KillSmall"
+    for i = 1, 20 do
         Audio.play(self.dyingsound)
-        wait(10)
+        if dyingeffect then
+            Stage.addCharacter({
+                type = dyingeffect,
+                x = self.x + hitbox.x + love.math.random(hitbox.width),
+                y = self.y + hitbox.y + love.math.random(hitbox.height),
+            })
+        end
+        wait(6)
     end
-    self:defaultDefeat()
+    Audio.play(self.defeatsound)
+    self:dropDefeatObjects()
+    self:markDisappear()
     GamePhase.win()
 end
 
