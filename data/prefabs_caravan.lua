@@ -1269,6 +1269,7 @@ return {
           gid = 5,
           visible = true,
           properties = {
+            ["applydroppertransform"] = true,
             ["z"] = 1
           }
         },
@@ -1285,6 +1286,7 @@ return {
           gid = 1,
           visible = true,
           properties = {
+            ["applydroppertransform"] = true,
             ["velx"] = 0.125,
             ["vely"] = -4,
             ["z"] = 10
@@ -1303,6 +1305,7 @@ return {
           gid = 2,
           visible = true,
           properties = {
+            ["applydroppertransform"] = true,
             ["velx"] = -0.125,
             ["vely"] = -4,
             ["z"] = 10
@@ -1428,9 +1431,10 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 20,
+          gid = 2147483668,
           visible = true,
           properties = {
+            ["applydroppertransform"] = true,
             ["z"] = 1
           }
         },
