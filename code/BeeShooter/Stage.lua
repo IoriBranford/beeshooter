@@ -268,7 +268,7 @@ function Stage.fixedupdate()
         if gametimer <= 0 then
             Script.start(player, "timeout")
             local GamePhase = require "BeeShooter.GamePhase"
-            GamePhase.lose("TIME UP!")
+            GamePhase.lose("TIME UP!\n\nPress ESC key\nor START button")
         end
     end
 end
@@ -311,18 +311,18 @@ function Stage.setTime(time)
     gametimer = time
 end
 
-local function stopStage()
+function Stage.stop()
     gametimerstate = "stopped"
     stage.vely = 0
 end
 
 function Stage.win()
-    stopStage()
+    Stage.stop()
     Script.start(player, PlayerShip.win, gametimer)
 end
 
 function Stage.lose()
-    stopStage()
+    Stage.stop()
 end
 
 local function drawTimer()
