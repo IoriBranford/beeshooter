@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 42,
-  nextobjectid = 477,
+  nextlayerid = 47,
+  nextobjectid = 546,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -1903,7 +1903,7 @@ return {
             },
             {
               x = 0, y = 140, width = 16, height = 14,
-              data = "eJxjYBgFo2AUYAOOjAwMzozk648H6k0koB8AUIQBSQ=="
+              data = "eJxjYKANcGRkYHCCYmdG0vXHA/UYQnEiifpBdisi6Vci0Q21QLX2QJyAhEl1A8wMByCuA+J6Mv1Aqtux2U+q3chmkKt3OABHMsMeBuKJSDcA89UMMw=="
             },
             {
               x = 0, y = 154, width = 16, height = 14,
@@ -5826,7 +5826,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 2147484166,
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
@@ -5954,7 +5954,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 2147484172,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -5986,7 +5986,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 2147484172,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -6018,7 +6018,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 2147484172,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -6226,6 +6226,752 @@ return {
                   visible = true,
                   properties = {
                     ["commandscript"] = "changeTile(\"claw_scrape\")"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 46,
+              name = "room8alien1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 533,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 2368,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 542,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 2312,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 537,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 112,
+                  y = 2336,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 535,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 144,
+                  y = 2360,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 544,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 2320,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 539,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 144,
+                  y = 2336,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 534,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 104,
+                  y = 2352,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 541,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 88,
+                  y = 2304,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 538,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 96,
+                  y = 2320,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 528,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 536,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 152,
+                  y = 2344,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 543,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 168,
+                  y = 2304,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 540,
+                  name = "",
+                  class = "AlienPillager",
+                  shape = "rectangle",
+                  x = 160,
+                  y = 2320,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484176,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 545,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 2376,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 43,
+              name = "room8alien2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 481,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 2360,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 511,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 80,
+                  y = 2352,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 518,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 516,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 176,
+                  y = 2352,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484166,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 512,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 88,
+                  y = 2352,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -8, y = 0 },
+                    { x = -8, y = 16 },
+                    { x = -40, y = 48 },
+                    { x = -104, y = 48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 515,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 152,
+                  y = 2352,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 24, y = 0 },
+                    { x = 24, y = 16 },
+                    { x = 56, y = 48 },
+                    { x = 120, y = 48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 513,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 2368,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,3 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                },
+                {
+                  id = 514,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 2368,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,3 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 45,
+              name = "room8alien3",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 527,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 2392,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 518,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 528,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 2392,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484166,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 529,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -16,
+                  y = 2392,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 64, y = 0 },
+                    { x = 96, y = -32 },
+                    { x = 96, y = -48 },
+                    { x = 80, y = -64 },
+                    { x = 80, y = -88 },
+                    { x = 96, y = -104 },
+                    { x = 96, y = -152 },
+                    { x = 64, y = -184 },
+                    { x = 64, y = -248 },
+                    { x = 112, y = -296 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 530,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 2392,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -64, y = 0 },
+                    { x = -96, y = -32 },
+                    { x = -96, y = -48 },
+                    { x = -80, y = -64 },
+                    { x = -80, y = -88 },
+                    { x = -96, y = -104 },
+                    { x = -96, y = -152 },
+                    { x = -64, y = -184 },
+                    { x = -64, y = -248 },
+                    { x = -120, y = -296 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 531,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 48,
+                  y = 2392,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                },
+                {
+                  id = 532,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 208,
+                  y = 2392,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 44,
+              name = "room8alien4",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 500,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 2264,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 501,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 80,
+                  y = 2256,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 518,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 520,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 72,
+                  y = 2240,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 518,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 518,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 184,
+                  y = 2248,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484166,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 523,
+                  name = "",
+                  class = "AlienGunner",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 2232,
+                  width = 24,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484166,
+                  visible = true,
+                  properties = {
+                    ["bullettype"] = "FlyBullet",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 502,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 96,
+                  y = 2248,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -16, y = 8 },
+                    { x = 16, y = 40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 521,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 88,
+                  y = 2232,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -16, y = 8 },
+                    { x = 16, y = 40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 519,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 160,
+                  y = 2248,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 24, y = 0 },
+                    { x = -16, y = 40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 524,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 168,
+                  y = 2232,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 24, y = 0 },
+                    { x = -16, y = 40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 503,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 112,
+                  y = 2288,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                },
+                {
+                  id = 522,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 2272,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                },
+                {
+                  id = 517,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 144,
+                  y = 2288,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                },
+                {
+                  id = 525,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 2272,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 42,
+              name = "room8powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 477,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 2272,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 478,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 2256,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 480,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 2264,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
                   }
                 }
               }
