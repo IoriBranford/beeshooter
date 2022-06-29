@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 41,
-  nextobjectid = 457,
+  nextlayerid = 42,
+  nextobjectid = 477,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -1664,20 +1664,32 @@ return {
               data = "eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED"
             },
             {
+              x = -16, y = 140, width = 16, height = 14,
+              data = "eJxjYBgFo2BkgicU6mdipEy/AlA/AHpeAQk="
+            },
+            {
               x = 0, y = 140, width = 16, height = 14,
-              data = "eJxjYIAAJkYGFKDACBUDYkYglkOTRwcg9U+wiGHT9wiHGehuwAbAenGow+YGDEDAL/jcALKbmHDAZzclgJDdQx0QjDsG3GkHBIhJP/jiADnu2tAwDBATByA3PkbDuPwGAF3+DzU="
+              data = "eJylU0EOwCAIAx+y+No9dO4hk00S1gGarEkvgrYlSPSgML1QeZx1cucGdYT0n86Zd+8I3kAPHu67QZ/n4YNJlsyDaK/MIdP+g5n2NDvFsxeszD/LYLPvQEWWQf2Lxwa0NQvU0f1gYBm7gf2oE+2H/gfsR50sX3V8Xa9bHqk="
+            },
+            {
+              x = 16, y = 140, width = 16, height = 14,
+              data = "eJxjYBgFo2DogkeUGsBImXY5CvUDALU+AQM="
             },
             {
               x = -16, y = 154, width = 16, height = 14,
-              data = "eJxjYCAfPKFALwgwMVKmX4FC/aNg6AJQ2ntEgX5w2qMg/YDSnhwV0h8Aw14DEw=="
+              data = "eJxjYBgFQxE8AeJHFOhnYgQSjOTrVwDqlaNA/yiAAACAcQIL"
             },
             {
               x = 0, y = 154, width = 16, height = 14,
-              data = "eJzdUkEKwDAIs3vI8LV9aOtDpjBBUmUduy00UNCk0tiJqAcOJTU9wEMp0GucQNOejRbw7YH9+E6mjR7Y/xfgv76pW2ZLDgCsS9BmeSOqfajylnAfyTy+D1Xe7u/zZeCHXTGPar4d8AftLi6ZmyEv"
+              data = "eJxjYBgcoA0NkyL/CIgfo2F0gC7/BEkvAyMQoWF0gC7PxAg1A0jLYVH/BIn9CIt7FKBmYNMLAjDzYe7DBhRwiCObj8t9xAAFCvSOAuIAANEYE4E="
             },
             {
               x = 16, y = 154, width = 16, height = 14,
-              data = "eJx7xEAhYKRMuxyF+kfB4ACPyNT3BKaXzHTAxAjRS246UqBALzUAAIq6BA8="
+              data = "eJxjYBgF1ACPyNT3BKaXkTz9TIwQvXJk6legQO8ooBwAAB98Aw0="
+            },
+            {
+              x = 0, y = 168, width = 16, height = 14,
+              data = "eJxjYKAMtAFxOxn6WqF6M4A4kwz96VC9o/aTZ/+TYWT/IwrsfwziMJKun4kRopcRSMuRoV+BEaIXABwtGDc="
             },
             {
               x = 0, y = 182, width = 16, height = 14,
@@ -1693,7 +1705,7 @@ return {
             },
             {
               x = 0, y = 224, width = 16, height = 14,
-              data = "eJxjYKAdSAfiDCDOJFP/EyBuA+JHZOpnYmRgeAxiMJKnXwGojxGI5cjUP1RAGx5MCIDi5jEeDItDnOZBwxgXhsUhNvNAgFDcKOAx7wmaWmSzcaU5BTSzkAGy2cSkOZBZAO0VHmg="
+              data = "eJxjYKAdeALEbUD8iEz9TIwMDI9BDEby9CsA9TECsdwA6R8qoA0PJgRAcfsYD4alAZzmQcMYF4alAWzmgQChuFHAY94TNLXIZuNKswpoZiEDZLOJSbMgswCYBB1y"
             },
             {
               x = 16, y = 224, width = 16, height = 14,
@@ -1780,27 +1792,31 @@ return {
             },
             {
               x = -16, y = 140, width = 16, height = 14,
-              data = "eJxjYBgFo2AUkANYGSnTrw3EAAXDADI="
+              data = "eJxjYBgFo2BgACsjZfq1qeOMAQUAKoMAMg=="
             },
             {
               x = 0, y = 140, width = 16, height = 14,
-              data = "eJylkUEOgDAIBOHQemo96Seq//+eGCUSQguNTfZUBhYW4HuNtJFWsF8h7aSz8881Fp/QZ6WHBWN9Ix6isyVfSRkf1YnZ6a23pHeaYSM9isN6e/zlObseG8lg5MHLgO93zzmU2Je+H2ecxe0tj034kIyeM9qvGb4uBwMIyg=="
+              data = "eJxjYEAAbSAWBWJ+BkzAysjAwAekxYBYF4s8DPAyQNSxMaJiYvQi68eGsbkLmxvxYXZG8uwmxg2U6oeFPy699Ao/kD06aBjmLvTwQ49jPhxu1EZyB7IedHvw+U8bi7uoBVgZMdMsPowcDsSkO1xpEQAmjwkS"
             },
             {
               x = 16, y = 140, width = 16, height = 14,
-              data = "eJxjYBgFo2DkAnZGyvTrUmg/ABK/ADY="
+              data = "eJxjYBgFo4B8wM5ImX5d6jhjyAIAOn8ANg=="
             },
             {
               x = -16, y = 154, width = 16, height = 14,
-              data = "eJxjYBgFAwVYGSnTy0eB3bxALEahfn4K9GsDsS4F+ocLAADl7gCy"
+              data = "eJxjYBg4wMpImV4+CuzmBWIxCvXzU6BfG4h1KdA/CoYHAACW/QCy"
             },
             {
               x = 0, y = 154, width = 16, height = 14,
-              data = "eJxjYBgcgJWRgYGNBMzOiKqXj4F0DDKDXL3IWAyIddCwKAnyuljCgxdJnh+LvDYevcToh5mBC2hD3SiGxw5CQJsCvSMFAABzYAX9"
+              data = "eJxjZWRg4GOgDIsBsQ4aFiVBXpcBE/AiyfNjkdfGo5cY/TAzcAFtqBvF8NhBCGhToHcUDA3ABsw/7Iyk62NlhOgFAEy9BPo="
             },
             {
               x = 16, y = 154, width = 16, height = 14,
-              data = "eJxjYBjZgJ2RMv38FNrPR6EbRCk0gxeIxYBYl0z7tSnQOwoYGACTgAEB"
+              data = "eJxjZ2SgCPBTpp2BD4jZKXCDKIVm8AKxGBDrkmm/NgV6R8EoAACTjwEB"
+            },
+            {
+              x = 0, y = 168, width = 16, height = 14,
+              data = "eJzTYWBg0GUgHWgDsQ4Z+kbBKBgFCAAAVzIAsQ=="
             },
             {
               x = 0, y = 182, width = 16, height = 14,
@@ -1886,8 +1902,16 @@ return {
               data = "eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh"
             },
             {
+              x = 0, y = 140, width = 16, height = 14,
+              data = "eJxjYBgFo2AUYAOOjAwMzozk648H6k0koB8AUIQBSQ=="
+            },
+            {
               x = 0, y = 154, width = 16, height = 14,
-              data = "eJxjYBi8wJGRgcGZkXz98UC9iWTqB9mtCMRKZLqhFqinDojtKXADzJx6CvSPgsENALk8BLE="
+              data = "eJxjYMAOHBkZGBSBWAmInRlxKMIDaoF66oDYHogTydCPbE49BfpHwSigJXAiM3+A8hdILwDEAAR1"
+            },
+            {
+              x = 0, y = 168, width = 16, height = 14,
+              data = "eJyrY2RgqAdiUkEtUE8dGfpGwSgYBQgAALqCAf0="
             },
             {
               x = 0, y = 182, width = 16, height = 14,
@@ -4919,9 +4943,9 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 20,
-              name = "room?fly",
+              name = "room6fly",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -4935,31 +4959,31 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 272,
-                  y = 2712,
+                  y = 2832,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = -160, y = 0 },
-                    { x = -192, y = 8 },
-                    { x = -224, y = 24 },
-                    { x = -248, y = 48 },
-                    { x = -256, y = 80 },
-                    { x = -248, y = 56 },
-                    { x = -224, y = 32 },
-                    { x = -192, y = 16 },
-                    { x = -160, y = 8 },
-                    { x = -128, y = 8 },
-                    { x = -96, y = 16 },
-                    { x = -64, y = 32 },
-                    { x = -40, y = 56 },
-                    { x = -32, y = 80 },
-                    { x = -40, y = 48 },
-                    { x = -64, y = 24 },
-                    { x = -96, y = 8 },
-                    { x = -128, y = 0 },
+                    { x = -152, y = 0 },
+                    { x = -176, y = 8 },
+                    { x = -200, y = 24 },
+                    { x = -216, y = 48 },
+                    { x = -224, y = 80 },
+                    { x = -216, y = 112 },
+                    { x = -200, y = 136 },
+                    { x = -176, y = 152 },
+                    { x = -152, y = 160 },
+                    { x = -136, y = 160 },
+                    { x = -112, y = 152 },
+                    { x = -88, y = 136 },
+                    { x = -72, y = 112 },
+                    { x = -64, y = 80 },
+                    { x = -72, y = 48 },
+                    { x = -88, y = 24 },
+                    { x = -112, y = 8 },
+                    { x = -136, y = 0 },
                     { x = -288, y = 0 }
                   },
                   properties = {}
@@ -4970,7 +4994,7 @@ return {
                   class = "Fly",
                   shape = "rectangle",
                   x = 272,
-                  y = 2712,
+                  y = 2832,
                   width = 32,
                   height = 32,
                   rotation = 0,
@@ -4987,7 +5011,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 280,
-                  y = 2816,
+                  y = 2936,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5001,23 +5025,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 2768,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 156,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
                   x = 208,
-                  y = 2744,
+                  y = 2912,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5031,14 +5040,14 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 2728,
+                  x = 160,
+                  y = 2984,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["commandscript"] = "setScaleX(-abs(scalex))\n\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
                   }
                 },
                 {
@@ -5047,7 +5056,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 296,
-                  y = 2832,
+                  y = 2952,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5062,7 +5071,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 288,
-                  y = 2832,
+                  y = 2952,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5077,22 +5086,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 296,
-                  y = 2832,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 158,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 144,
-                  y = 2720,
+                  y = 2952,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5106,8 +5100,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 16,
-                  y = 2792,
+                  x = 120,
+                  y = 2832,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5121,8 +5115,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 112,
-                  y = 2720,
+                  x = 96,
+                  y = 2984,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5136,8 +5130,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 144,
-                  y = 2712,
+                  x = 136,
+                  y = 2832,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5151,23 +5145,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 2728,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 170,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 176,
-                  y = 2720,
+                  x = 56,
+                  y = 2944,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5182,7 +5161,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 2744,
+                  y = 2912,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5196,8 +5175,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 208,
-                  y = 2736,
+                  x = 200,
+                  y = 2944,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5211,8 +5190,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 24,
-                  y = 2768,
+                  x = 72,
+                  y = 2856,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5226,23 +5205,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 2760,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["commandscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
-                  }
-                },
-                {
-                  id = 163,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 240,
-                  y = 2792,
+                  x = 184,
+                  y = 2856,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5257,14 +5221,27 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 272,
-                  y = 2712,
+                  y = 2832,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setCollidable(false)\nsetAlpha(0.5)\nsetZ(-abs(z))\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "setCollidable(false)\nsetAlpha(0.5)\nsetZ(-abs(z))\nsetSpeed(fastspeed or 3)"
                   }
+                },
+                {
+                  id = 476,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 2816,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
                 }
               }
             },
@@ -5568,6 +5545,141 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 41,
+              name = "room6bigant",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 457,
+                  name = "",
+                  class = "AntBig",
+                  shape = "rectangle",
+                  x = 216,
+                  y = 2704,
+                  width = 60,
+                  height = 40,
+                  rotation = 270,
+                  gid = 485,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawnpath"] = { id = 0 },
+                    ["spawntype"] = "AntFromBigAnt",
+                    ["z"] = 2
+                  }
+                },
+                {
+                  id = 458,
+                  name = "",
+                  class = "AntBig",
+                  shape = "rectangle",
+                  x = 40,
+                  y = 2704,
+                  width = 60,
+                  height = 40,
+                  rotation = 90,
+                  gid = 2147484133,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawnpath"] = { id = 0 },
+                    ["spawntype"] = "AntFromBigAnt",
+                    ["z"] = 2
+                  }
+                },
+                {
+                  id = 459,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 2944,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 472,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 28,
+                  y = 2736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 8, y = -16 },
+                    { x = 8, y = 144 },
+                    { x = -16, y = 168 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 475,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 212,
+                  y = 2736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 8, y = -16 },
+                    { x = 8, y = 144 },
+                    { x = 32, y = 168 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 473,
+                  name = "toBack",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 36,
+                  y = 2880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                  }
+                },
+                {
+                  id = 474,
+                  name = "toBack",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 220,
+                  y = 2880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 31,
               name = "room7alien1",
               class = "",
@@ -5585,7 +5697,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 2568,
+                  y = 2504,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5598,7 +5710,7 @@ return {
                   class = "AlienGunner",
                   shape = "rectangle",
                   x = 112,
-                  y = 2560,
+                  y = 2496,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5615,7 +5727,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 112,
-                  y = 2560,
+                  y = 2496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5633,7 +5745,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 128,
-                  y = 2600,
+                  y = 2536,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5648,7 +5760,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 2536,
+                  y = 2472,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -5680,7 +5792,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -80,
-                  y = 2512,
+                  y = 2448,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5693,7 +5805,7 @@ return {
                   class = "AlienGunner",
                   shape = "rectangle",
                   x = 48,
-                  y = 2504,
+                  y = 2440,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5710,7 +5822,7 @@ return {
                   class = "AlienGunner",
                   shape = "rectangle",
                   x = 208,
-                  y = 2504,
+                  y = 2440,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5727,7 +5839,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 48,
-                  y = 2504,
+                  y = 2440,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5745,7 +5857,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 176,
-                  y = 2504,
+                  y = 2440,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5763,7 +5875,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
-                  y = 2544,
+                  y = 2480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5778,7 +5890,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 192,
-                  y = 2544,
+                  y = 2480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5809,7 +5921,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 2496,
+                  y = 2432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5822,7 +5934,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = -8,
-                  y = 2560,
+                  y = 2496,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5838,7 +5950,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = 264,
-                  y = 2560,
+                  y = 2496,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5854,7 +5966,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = -16,
-                  y = 2576,
+                  y = 2512,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5870,7 +5982,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = 272,
-                  y = 2576,
+                  y = 2512,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5886,7 +5998,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = -24,
-                  y = 2592,
+                  y = 2528,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5902,7 +6014,7 @@ return {
                   class = "AlienPillager",
                   shape = "rectangle",
                   x = 280,
-                  y = 2592,
+                  y = 2528,
                   width = 24,
                   height = 16,
                   rotation = 0,
@@ -5918,7 +6030,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -24,
-                  y = 2592,
+                  y = 2528,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5937,7 +6049,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -16,
-                  y = 2576,
+                  y = 2512,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5956,7 +6068,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -8,
-                  y = 2560,
+                  y = 2496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5975,7 +6087,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 24,
-                  y = 2560,
+                  y = 2496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5994,7 +6106,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 2576,
+                  y = 2512,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6013,7 +6125,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 40,
-                  y = 2592,
+                  y = 2528,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6032,7 +6144,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 96,
-                  y = 2544,
+                  y = 2480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6047,7 +6159,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 2512,
+                  y = 2448,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6062,7 +6174,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 2528,
+                  y = 2464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6077,7 +6189,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 2512,
+                  y = 2448,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6092,7 +6204,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 2528,
+                  y = 2464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6107,7 +6219,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 160,
-                  y = 2544,
+                  y = 2480,
                   width = 0,
                   height = 0,
                   rotation = 0,
