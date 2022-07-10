@@ -15,9 +15,17 @@ local Env = {
     abs = math.abs,
     atan2 = math.atan2
 }
-local EnvMetatable = {}
-setmetatable(Env, EnvMetatable)
 local self
+local EnvMetatable = {
+    __index = function(_, k)
+        local v = self.script and self.script[k]
+        if v == nil then
+            v = self[k]
+        end
+        return v
+    end
+}
+setmetatable(Env, EnvMetatable)
 
 local pi, cos, sin = math.pi, math.cos, math.sin
 local atan2 = math.atan2
@@ -108,7 +116,7 @@ end
 
 function Commands.run(command, character)
     self = character
-    EnvMetatable.__index = character
+    Env.self = self
     local t = type(command)
     if t=="string" then
         Env[command]()
@@ -119,7 +127,7 @@ function Commands.run(command, character)
         command()
     end
     self = nil
-    EnvMetatable.__index = nil
+    Env.self = nil
 end
 
 return Commands
