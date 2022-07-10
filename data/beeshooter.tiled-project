@@ -6,7 +6,42 @@
     "folders": [
         "."
     ],
-    "objectTypesFile": "",
     "propertyTypes": [
+        {
+            "color": "#ff00ffff",
+            "id": 3,
+            "members": [
+            ],
+            "name": "Path",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "color": "#ff00ffff",
+            "id": 2,
+            "members": [
+            ],
+            "name": "PathPoint",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        },
+        {
+            "color": "#ff00ff00",
+            "id": 1,
+            "members": [
+            ],
+            "name": "Trigger",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        }
     ]
 }
