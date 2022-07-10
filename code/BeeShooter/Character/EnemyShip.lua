@@ -5,8 +5,11 @@ local Stage         = require "BeeShooter.Stage"
 local GamePhase     = require "BeeShooter.GamePhase"
 local Audio         = require "System.Audio"
 local PlayerShip    = require "BeeShooter.Character.PlayerShip"
+local Database      = require "Data.Database"
 local EnemyShip = {}
 
+local cos, sin, atan2 = math.cos, math.sin, math.atan2
+local abs = math.abs
 local huge = math.huge
 local distsq = math.distsq
 local yield = coroutine.yield
@@ -157,6 +160,51 @@ function EnemyShip:Faller()
             self:markDisappear()
         end
     end
+end
+
+function EnemyShip:shootAS(bullettype, angle, speed)
+    local prefab = Database.get(bullettype)
+    if not prefab then
+        return
+    end
+    angle = angle or 0
+    speed = speed or prefab.speed or 1
+    local velx, vely = cos(angle)*speed, sin(angle)*speed
+    Stage.addCharacter({
+        type = bullettype,
+        x = self.x,
+        y = self.y,
+        rotation = angle,
+        velx = velx,
+        vely = vely
+    })
+end
+
+function EnemyShip:shootTargetAS(bullettype, target, angleoffset, speed)
+    if not target then
+        return
+    end
+    local x, y = self.x, self.y
+    local targetx, targety = target.x, target.y
+    local angle = targetx == x and targety == y and 0 or atan2(targety - y, targetx - x)
+    angle = (angleoffset or 0) + angle
+    EnemyShip.shootAS(self, bullettype, angle, speed)
+end
+
+function EnemyShip:Flyer_enterBackground()
+    self.z = -abs(self.z)
+    self.collidable = false
+    self.sprite.alpha = 0.5
+end
+
+function EnemyShip:Flyer_enterForeground()
+    self.z = abs(self.z)
+    self.collidable = true
+    self.sprite.alpha = 1
+end
+
+function EnemyShip:shootAtPlayer()
+    EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
 end
 
 local function alienMindSpawnReinforcement(self, name, typ, path)
