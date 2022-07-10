@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="47" nextobjectid="546">
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="47" nextobjectid="550">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -1066,6 +1066,16 @@ setAlpha(1)</property>
      </properties>
      <point/>
     </object>
+    <object id="546" template="enemies/PathPoint.tx" x="80" y="3312">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
+    </object>
+    <object id="547" template="enemies/PathPoint.tx" x="176" y="3312">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
+    </object>
    </objectgroup>
    <objectgroup id="41" name="room6bigant">
     <object id="457" template="enemies/AntBig.tx" x="216" y="2704" rotation="270">
@@ -1104,6 +1114,16 @@ setCollidable(false)
 setAlpha(0.5)</property>
      </properties>
      <point/>
+    </object>
+    <object id="548" template="enemies/PathPoint.tx" x="12" y="2904">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
+    </object>
+    <object id="549" template="enemies/PathPoint.tx" x="244" y="2904">
+     <properties>
+      <property name="commandscript" value="disappear()"/>
+     </properties>
     </object>
    </objectgroup>
    <objectgroup id="31" name="room7alien1">
