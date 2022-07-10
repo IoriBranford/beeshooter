@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 47,
-  nextobjectid = 546,
+  nextobjectid = 550,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -4093,6 +4093,7 @@ return {
                     { x = 104, y = 120 },
                     { x = 88, y = 136 },
                     { x = 64, y = 144 },
+                    { x = 40, y = 136 },
                     { x = 16, y = 96 },
                     { x = -24, y = 0 }
                   },
@@ -4119,6 +4120,7 @@ return {
                     { x = -72, y = 128 },
                     { x = -56, y = 144 },
                     { x = -32, y = 152 },
+                    { x = -8, y = 144 },
                     { x = 16, y = 104 },
                     { x = 56, y = 8 }
                   },
@@ -4136,7 +4138,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\n\nfor _=1,3 do\n\nlocal angle = -pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "Flyer_enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4151,7 +4153,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\n\nfor _=1,3 do\n\nlocal angle = pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "Flyer_enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4166,7 +4168,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "Flyer_enterBackground(self)\nsetSpeed(1)"
                   }
                 },
                 {
@@ -4181,7 +4183,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "Flyer_enterBackground(self)\nsetSpeed(1)"
                   }
                 },
                 {
@@ -4189,14 +4191,14 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 3648,
+                  x = 40,
+                  y = 3640,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(fastspeed or 2)"
+                    ["commandscript"] = "setSpeed(2)"
                   }
                 },
                 {
@@ -4204,14 +4206,14 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 3648,
+                  x = 216,
+                  y = 3640,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setSpeed(fastspeed or 2)"
+                    ["commandscript"] = "setSpeed(2)"
                   }
                 }
               }
@@ -5539,6 +5541,36 @@ return {
                   properties = {
                     ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
                   }
+                },
+                {
+                  id = 546,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 3312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
+                  }
+                },
+                {
+                  id = 547,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 3312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
+                  }
                 }
               }
             },
@@ -5673,6 +5705,36 @@ return {
                   visible = true,
                   properties = {
                     ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                  }
+                },
+                {
+                  id = 548,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 12,
+                  y = 2904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
+                  }
+                },
+                {
+                  id = 549,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 244,
+                  y = 2904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["commandscript"] = "disappear()"
                   }
                 }
               }
