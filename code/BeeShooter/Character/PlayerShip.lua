@@ -93,47 +93,46 @@ local function inputMovement(self)
     Body.setVelocity(self, vx, vy)
 end
 
-local function inputShooting(self, firetime, firebutton)
-    if firebutton then
-        firetime = max(0, firetime - 1)
-        if firetime <= 0 then
-            local x, y = Body.getPosition(self)
-            local weapon = self.weapon
-            local power = self.power
-            local i = 1
-            while i <= 6 do
-                local bullettype = "JennyShot"..weapon..power..i
-                local bulletprefab = Database.get(bullettype)
-                if not bulletprefab then
-                    break
-                end
-                local bullet = Stage.addCharacter({
-                    type = bullettype,
-                    x = bulletprefab.x + x,
-                    y = bulletprefab.y + y
-                })
-                local angle = bullet.rotation or 0
-                local speed = bullet.speed or 1
-                bullet.velx = cos(angle)*speed
-                bullet.vely = sin(angle)*speed
-                Audio.play(bulletprefab.sound)
-                i = i + 1
-            end
-            firetime = 5
+local function shoot(self)
+    local x, y = Body.getPosition(self)
+    local weapon = self.weapon
+    local power = self.power
+    local i = 1
+    while i <= 6 do
+        local bullettype = "JennyShot"..weapon..power..i
+        local bulletprefab = Database.get(bullettype)
+        if not bulletprefab then
+            break
         end
-    else
-        firetime = 0
+        local bullet = Stage.addCharacter({
+            type = bullettype,
+            x = bulletprefab.x + x,
+            y = bulletprefab.y + y
+        })
+        local angle = bullet.rotation or 0
+        local speed = bullet.speed or 1
+        bullet.velx = cos(angle)*speed
+        bullet.vely = sin(angle)*speed
+        Audio.play(bulletprefab.sound)
+        i = i + 1
     end
-    return firetime
+end
+
+local function inputShooting(self, firepressed, firedown)
+    if firepressed then
+        shoot(self)
+        self:setShooting(shoot, 5, math.huge)
+    elseif not firedown then
+        self:setShooting()
+    end
 end
 
 function PlayerShip:fight()
-    local firetime = 0
     while true do
         self.invincibletime = max(0, self.invincibletime - 1)
         self.sprite:setHidden(self.invincibletime % 4 >= 2)
-        local firebutton = Controls.getButtonsDown()
-        local _, weaponbutton, speedbutton = Controls.getButtonsPressed()
+        local firedown = Controls.getButtonsDown()
+        local firepressed, weaponbutton, speedbutton = Controls.getButtonsPressed()
         if weaponbutton then
             self.weapon = self.weapon == "A" and "B" or "A"
             Audio.play(self.changeweaponsound)
@@ -155,7 +154,7 @@ function PlayerShip:fight()
             self.sprite:changeTile("flyslow"..self.weapon)
         end
         inputMovement(self)
-        firetime = inputShooting(self, firetime, firebutton)
+        inputShooting(self, firepressed, firedown)
 
         local stingrate = self.stingrate or 3
         if self.age % stingrate == 0 then
