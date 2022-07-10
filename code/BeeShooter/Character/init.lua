@@ -110,7 +110,7 @@ function Character:isSpriteOffScreenBottom()
     return y - oy > cy + ch
 end
 
-local DroppedTransform = love.math.newTransform()
+local DropperTransform = love.math.newTransform()
 
 function Character:dropObject(droptype)
     local Stage = require "BeeShooter.Stage"
@@ -123,12 +123,15 @@ function Character:dropObject(droptype)
             layer = self.layer
         }
         if dropprefab.applydroppertransform then
-            drop.rotation = (self.rotation or 0) + (dropprefab.rotation or 0)
-            drop.scalex   = (self.scalex or 1) * (dropprefab.scalex or 1)
-            drop.scaley   = (self.scaley or 1) * (dropprefab.scaley or 1)
+            local rotation = self.rotation or 0
+            local scalex = self.scalex or 1
+            local scaley = self.scaley or 1
+            drop.rotation = rotation + (dropprefab.rotation or 0)
+            drop.scalex   = scalex * (dropprefab.scalex or 1)
+            drop.scaley   = scaley * (dropprefab.scaley or 1)
 
-            DroppedTransform:setTransformation(0, 0, drop.rotation, drop.scalex, drop.scaley)
-            offsetx, offsety = DroppedTransform:transformPoint(offsetx, offsety)
+            DropperTransform:setTransformation(0, 0, rotation, scalex, scaley)
+            offsetx, offsety = DropperTransform:transformPoint(offsetx, offsety)
             -- drop.velx, drop.vely = DroppedTransform:transformPoint(dropprefab.velx or 0, dropprefab.vely or 0)
         end
         drop.x, drop.y = self.x + offsetx, self.y + offsety
