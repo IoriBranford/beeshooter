@@ -14,14 +14,18 @@ local testrects = math.testrects
 ---@field scriptstart string|function the first script function to run
 ---@field scriptdefeat string|function the script function to start when out of health
 ---@field team string cannot have whitespace
----@field enemyteams string list of teams separated by whitespace
 ---@field camera table camera reference for convenience
 ---@field enemies table array of characters that do damage
 ---@field invincibletime number
----@field collidable boolean otherwise cannot hit or be hit
+---@field collidable boolean can hit and damage others or be hit
 ---@field defeatdrops string list of items to drop, separated by non-word chars
 ---@field spawnsound string
 ---@field defeatsound string
+---@field hitbox table { x = offsetX, y = offsetY, width = width, height = height }
+---@field shootfunc function|string? function or name of script function that will fire next shot
+---@field shoottimer number?
+---@field shootinterval number?
+---@field shootcount number?
 local Character = {}
 Character.__index = Character
 
@@ -69,6 +73,7 @@ function Character:init()
     if not self.hitbox then
         initHitbox(self)
     end
+    self:setShooting(self.shootfunc, self.shootinterval, self.shootcount)
     Audio.play(self.spawnsound)
     return self
 end
@@ -203,9 +208,43 @@ local function fixedupdateDamage(self)
     end
 end
 
+local function fixedupdateShoot(self)
+    local shootfunc = self.shootfunc
+    local shootcount = self.shootcount or 0
+    local shoottimer = self.shoottimer
+    if not shootfunc or not shoottimer or shootcount <= 0 then return end
+
+    shoottimer = shoottimer - 1
+    self.shoottimer = shoottimer
+    if shoottimer == 0 then
+        self.shoottimer = self.shootinterval
+        self.shootcount = shootcount - 1
+        shootfunc(self)
+    end
+end
+
+function Character:setShooting(func, interval, count)
+    if type(func) == "string" then
+        func = self.script and self.script[func]
+    end
+    self.shootfunc = func
+    if interval then
+        self.shootinterval = interval
+        self.shoottimer = interval
+    end
+    if count then
+        self.shootcount = count
+    end
+end
+
+function Character:stopShooting()
+    self:setShooting(nil)
+end
+
 function Character:fixedupdate()
     self.age = self.age + 1
     fixedupdateDamage(self)
+    fixedupdateShoot(self)
     Script.run(self)
     if self.lifetime > 0 and self.age >= self.lifetime then
         self:markDisappear()
