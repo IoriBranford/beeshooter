@@ -162,6 +162,19 @@ function EnemyShip:Faller()
     end
 end
 
+function EnemyShip:shootXY(bullettype, velx, vely)
+    velx, vely = velx or 0, vely or 0
+    local angle = velx == 0 and vely == 0 and 0 or atan2(vely, velx)
+    Stage.addCharacter({
+        type = bullettype,
+        x = self.x,
+        y = self.y,
+        rotation = angle,
+        velx = velx,
+        vely = vely
+    })
+end
+
 function EnemyShip:shootAS(bullettype, angle, speed)
     local prefab = Database.get(bullettype)
     if not prefab then

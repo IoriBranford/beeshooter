@@ -89,6 +89,21 @@ function Character:addToScene(scene)
         or scene:addObject(self)
 end
 
+function Character:faceSpriteX(facex)
+    if facex > 0 then
+        self.scalex = math.abs(self.scalex)
+    elseif facex < 0 then
+        self.scalex = -math.abs(self.scalex)
+    end
+end
+
+function Character:changeTile(tileid)
+    local sprite = self.sprite
+    if sprite then
+        sprite:changeTile(tileid)
+    end
+end
+
 function Character:isSpriteOnScreen()
     local x, y, w, h = self.x, self.y, self.width, self.height
     local sprite = self.sprite
