@@ -75,24 +75,12 @@
   <object id="17" template="enemies/AlienGunner.tx" name="AlienGunnerLeft" gid="2147483672" x="0" y="0" rotation="0"/>
   <object id="11" template="enemies/AlienPillager.tx" name="AlienPillager" x="0" y="0"/>
   <object id="18" template="enemies/AlienPillager.tx" name="AlienPillagerLeft" gid="2147483678" x="0" y="0" rotation="0"/>
-  <object id="13" template="enemies/Fly.tx" name="FlyBehind" x="0" y="0">
-   <properties>
-    <property name="collidable" type="bool" value="false"/>
-    <property name="color" type="color" value="#80ffffff"/>
-    <property name="z" type="float" value="-10"/>
-   </properties>
-  </object>
+  <object id="13" template="enemies/FlyBackground.tx" name="FlyBehind" x="0" y="0"/>
   <object id="14" name="InfiniteHoneyPotOpen" gid="9" x="0" y="0" width="16" height="32">
    <properties>
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
-  <object id="16" template="enemies/Fly.tx" name="FlyBehindLeft" gid="2147483694" x="0" y="0" rotation="0">
-   <properties>
-    <property name="collidable" type="bool" value="false"/>
-    <property name="color" type="color" value="#80ffffff"/>
-    <property name="z" type="float" value="-10"/>
-   </properties>
-  </object>
+  <object id="16" template="enemies/FlyLeftBackground.tx" name="FlyBehindLeft" x="0" y="0" visible="1"/>
  </objectgroup>
 </map>
