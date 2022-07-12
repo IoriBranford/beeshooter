@@ -4052,7 +4052,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4069,7 +4071,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4259,7 +4263,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4276,7 +4282,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4432,7 +4440,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4449,7 +4459,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4711,7 +4723,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -4861,7 +4875,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
@@ -5004,7 +5020,9 @@ return {
                   visible = true,
                   properties = {
                     ["bullettype"] = "FlyBullet",
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = -10
                   }
                 },
                 {
