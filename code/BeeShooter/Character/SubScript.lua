@@ -1,14 +1,14 @@
 local Commands = require "BeeShooter.Character.Commands"
-local CommandScript = {}
+local SubScript = {}
 
 local loadstring, assert = loadstring, assert
 local co_create, co_status = coroutine.create, coroutine.status
 
----@param commandscript string
+---@param subscript string
 ---@param name string?
-function CommandScript.compile(commandscript, name)
-    if commandscript then
-        local func, err = loadstring(commandscript, name)
+function SubScript.compile(subscript, name)
+    if subscript then
+        local func, err = loadstring(subscript, name)
         assert(func, err)
         Commands.setEnvOn(func)
         return func
@@ -16,18 +16,18 @@ function CommandScript.compile(commandscript, name)
 end
 
 ---@param character Character
----@param commandscript function
-function CommandScript.start(character, commandscript)
-    if not commandscript then
+---@param subscript function
+function SubScript.start(character, subscript)
+    if not subscript then
         return
     end
-    local thread = co_create(commandscript)
+    local thread = co_create(subscript)
     character.commandthread = thread
-    CommandScript.run(character)
+    SubScript.run(character)
 end
 
 ---@param character Character
-function CommandScript.run(character)
+function SubScript.run(character)
     local thread = character.commandthread
     if not thread then
         return
@@ -40,4 +40,4 @@ function CommandScript.run(character)
     end
 end
 
-return CommandScript
+return SubScript

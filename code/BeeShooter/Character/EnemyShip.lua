@@ -1,6 +1,6 @@
 local Movement = require "Component.Movement"
 local Body     = require "BeeShooter.Character.Body"
-local CommandScript = require "BeeShooter.Character.CommandScript"
+local SubScript = require "BeeShooter.Character.SubScript"
 local Stage         = require "BeeShooter.Stage"
 local GamePhase     = require "BeeShooter.GamePhase"
 local Audio         = require "System.Audio"
@@ -18,7 +18,7 @@ local wait = coroutine.wait
 ---@param self Character
 local function waitForOnscreenState(self, onscreenstate)
     while self:isSpriteOnScreen() ~= onscreenstate do
-        CommandScript.run(self)
+        SubScript.run(self)
         yield()
     end
 end
@@ -33,7 +33,7 @@ local function walkPath(self, path)
     local stage = self.stage
     for i = 2, #points, 2 do
         repeat
-            CommandScript.run(self)
+            SubScript.run(self)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - stage.y, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely + stage.vely)
@@ -41,7 +41,7 @@ local function walkPath(self, path)
         until self.x == destx and self.y - stage.y == desty
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
-            CommandScript.start(self, pointdata.commandscript)
+            SubScript.start(self, pointdata.subscript)
         end
     end
 end
@@ -74,7 +74,7 @@ local function flyPath(self, path, meleedamage)
     local pointsdata = path.pointsdata
     for i = 2, #points, 2 do
         repeat
-            CommandScript.run(self)
+            SubScript.run(self)
             local destx, desty = points[i-1], points[i]
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely)
@@ -83,7 +83,7 @@ local function flyPath(self, path, meleedamage)
         until self.x == destx and self.y - pathy == desty
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
-            CommandScript.start(self, pointdata.commandscript)
+            SubScript.start(self, pointdata.subscript)
         end
     end
 end
