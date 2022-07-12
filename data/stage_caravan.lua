@@ -4142,7 +4142,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "Flyer_enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
+                    ["commandscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4157,7 +4157,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "Flyer_enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
+                    ["commandscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4172,7 +4172,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "Flyer_enterBackground(self)\nsetSpeed(1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(1)"
                   }
                 },
                 {
@@ -4187,7 +4187,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "Flyer_enterBackground(self)\nsetSpeed(1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(1)"
                   }
                 },
                 {
@@ -4349,7 +4349,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\n\nfor _=1,3 do\n\nlocal angle = -pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "enterForeground(self)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4364,7 +4364,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\n\nfor _=1,3 do\n\nlocal angle = pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "enterForeground(self)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4379,7 +4379,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
                   }
                 },
                 {
@@ -4394,7 +4394,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
                   }
                 }
               }
@@ -4524,7 +4524,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n\nlocal angle = -pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle + pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "enterForeground(self)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4539,7 +4539,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n\nlocal angle = pi/8\nfor _=1,3 do\n wait(6)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\n angle = angle - pi/16\nend\nwait(12)\n\nend"
+                    ["commandscript"] = "enterForeground(self)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4584,7 +4584,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
                   }
                 },
                 {
@@ -4599,7 +4599,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(slowspeed or 1)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
                   }
                 }
               }
@@ -4740,7 +4740,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(fastspeed or 4)"
                   }
                 },
                 {
@@ -4755,7 +4755,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -4892,7 +4892,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)\nsetSpeed(fastspeed or 4)"
+                    ["commandscript"] = "enterBackground(self)\nsetSpeed(fastspeed or 4)"
                   }
                 },
                 {
@@ -4907,7 +4907,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -5422,7 +5422,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5437,7 +5437,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5452,7 +5452,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5467,7 +5467,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5482,7 +5482,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5497,7 +5497,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5512,7 +5512,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -5527,7 +5527,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -5542,7 +5542,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -5557,7 +5557,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)"
+                    ["commandscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -5707,7 +5707,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -5722,7 +5722,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(-abs(z))\nsetCollidable(false)\nsetAlpha(0.5)"
+                    ["commandscript"] = "enterBackground(self)"
                   }
                 },
                 {
@@ -7414,7 +7414,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(0.75)"
+                    ["commandscript"] = "enterForeground(self)\nsetSpeed(0.75)"
                   }
                 },
                 {
@@ -7429,7 +7429,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["commandscript"] = "setZ(abs(z))\nsetCollidable(true)\nsetAlpha(1)\nsetSpeed(0.75)"
+                    ["commandscript"] = "enterForeground(self)\nsetSpeed(0.75)"
                   }
                 },
                 {
