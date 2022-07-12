@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
  <tileset firstgid="1" source="../tilesets/Fly.tsx"/>
- <object name="FlyBehindLeft" class="Fly" gid="2147483649" width="32" height="32">
+ <object class="Fly" gid="2147483649" width="32" height="32">
   <properties>
    <property name="bullettype" value="FlyBullet"/>
    <property name="collidable" type="bool" value="false"/>
