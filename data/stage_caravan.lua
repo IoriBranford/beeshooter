@@ -2180,7 +2180,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(1)"
+                    ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 },
                 {
@@ -2195,7 +2195,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(1)"
+                    ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 }
               }
@@ -4142,7 +4142,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
+                    ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4157,7 +4157,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, \"shootAtPlayer\", 6, 3)\n wait(30)\nend"
+                    ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4172,7 +4172,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
@@ -4187,7 +4187,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
@@ -4202,7 +4202,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(2)"
+                    ["subscript"] = "self.speed = 2"
                   }
                 },
                 {
@@ -4217,7 +4217,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(2)"
+                    ["subscript"] = "self.speed = 2"
                   }
                 }
               }
@@ -4379,7 +4379,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
@@ -4394,7 +4394,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
@@ -4524,7 +4524,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
+                    ["subscript"] = "enterForeground(self)\nself.speed = slowspeed or 1\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4539,7 +4539,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nsetSpeed(slowspeed or 1)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
+                    ["subscript"] = "enterForeground(self)\nself.speed = slowspeed or 1\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
                 {
@@ -4554,7 +4554,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(fastspeed or 2)"
+                    ["subscript"] = "self.speed = fastspeed or 2"
                   }
                 },
                 {
@@ -4569,7 +4569,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(fastspeed or 2)"
+                    ["subscript"] = "self.speed = fastspeed or 2"
                   }
                 },
                 {
@@ -4584,7 +4584,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
@@ -4599,7 +4599,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(slowspeed or 1)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
@@ -4740,7 +4740,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(fastspeed or 4)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 4"
                   }
                 },
                 {
@@ -4770,7 +4770,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(-1)"
+                    ["subscript"] = "faceSpriteX(self, -1)"
                   }
                 },
                 {
@@ -4785,7 +4785,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,5 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                    ["subscript"] = "for i=1,5 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
                 {
@@ -4800,7 +4800,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 2)"
+                    ["subscript"] = "self.speed = slowspeed or 2"
                   }
                 }
               }
@@ -4892,7 +4892,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterBackground(self)\nsetSpeed(fastspeed or 4)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 4"
                   }
                 },
                 {
@@ -4922,7 +4922,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(1)"
+                    ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 },
                 {
@@ -4937,7 +4937,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,5 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                    ["subscript"] = "for i=1,5 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
                 {
@@ -4952,7 +4952,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 2)"
+                    ["subscript"] = "self.speed = slowspeed or 2"
                   }
                 }
               }
@@ -5037,7 +5037,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5052,7 +5052,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5067,7 +5067,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(-abs(scalex))\n\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "faceSpriteX(self, -1)\n\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5082,7 +5082,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5097,7 +5097,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5112,7 +5112,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5127,7 +5127,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(abs(scalex))\n\nsetCollidable(true)\nsetAlpha(1)\nsetZ(abs(z))\n\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "faceSpriteX(self, 1)\nenterForeground(self)\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5142,7 +5142,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(1)\nfor i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "faceSpriteX(self, 1)\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5157,7 +5157,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5172,7 +5172,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5187,7 +5187,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5202,7 +5202,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5217,7 +5217,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5232,7 +5232,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n yield()\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend"
+                    ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
                 {
@@ -5247,7 +5247,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setCollidable(false)\nsetAlpha(0.5)\nsetZ(-abs(z))\nsetSpeed(fastspeed or 3)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 3"
                   }
                 },
                 {
@@ -5572,7 +5572,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "disappear()"
+                    ["subscript"] = "markDisappear(self)"
                   }
                 },
                 {
@@ -5587,7 +5587,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "disappear()"
+                    ["subscript"] = "markDisappear(self)"
                   }
                 }
               }
@@ -5737,7 +5737,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "disappear()"
+                    ["subscript"] = "markDisappear(self)"
                   }
                 },
                 {
@@ -5752,7 +5752,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "disappear()"
+                    ["subscript"] = "markDisappear(self)"
                   }
                 }
               }
@@ -5831,7 +5831,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -5961,7 +5961,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -5976,7 +5976,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 }
               }
@@ -6230,7 +6230,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
                 {
@@ -6245,7 +6245,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
                 {
@@ -6260,7 +6260,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
                 {
@@ -6275,7 +6275,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
                 {
@@ -6290,7 +6290,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
                 {
@@ -6305,7 +6305,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"claw_scrape\")"
+                    ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 }
               }
@@ -6618,7 +6618,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,3 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -6633,7 +6633,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,3 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 }
               }
@@ -6750,7 +6750,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -6765,7 +6765,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(slowspeed or 1)\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 }
               }
@@ -6945,7 +6945,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -6960,7 +6960,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -6975,7 +6975,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 },
                 {
@@ -6990,7 +6990,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nfor i = 1,5 do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
                   }
                 }
               }
@@ -7354,7 +7354,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nwhile true do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
                   }
                 },
                 {
@@ -7369,7 +7369,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(\"gun_stand\")\nwhile true do\n setScaleX(player.x < x and -1 or 1)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
                   }
                 },
                 {
@@ -7384,7 +7384,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                    ["subscript"] = "for i=1,3 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
                 {
@@ -7399,7 +7399,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "for i=1,3 do\n\nfor i=1,3 do\n wait(2)\n shootTargetAS(bullettype, player, 0, bulletspeed or 3)\nend\n\nwait(10)\nend"
+                    ["subscript"] = "for i=1,3 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
                 {
@@ -7414,7 +7414,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nsetSpeed(0.75)"
+                    ["subscript"] = "enterForeground(self)\nself.speed = 0.75"
                   }
                 },
                 {
@@ -7429,7 +7429,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)\nsetSpeed(0.75)"
+                    ["subscript"] = "enterForeground(self)\nself.speed = 0.75"
                   }
                 },
                 {
@@ -7444,7 +7444,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(1)"
+                    ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 },
                 {
@@ -7459,7 +7459,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setScaleX(-1)"
+                    ["subscript"] = "faceSpriteX(self, -1)"
                   }
                 },
                 {
@@ -7474,7 +7474,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(fastspeed or 4)"
+                    ["subscript"] = "self.speed = fastspeed or 4"
                   }
                 },
                 {
@@ -7489,7 +7489,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setSpeed(fastspeed or 4)"
+                    ["subscript"] = "self.speed = fastspeed or 4"
                   }
                 }
               }

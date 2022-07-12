@@ -321,13 +321,13 @@ A brief chance to practice controls</text>
     </object>
     <object id="432" class="PathPoint" x="192" y="3976">
      <properties>
-      <property name="subscript" value="setScaleX(1)"/>
+      <property name="subscript" value="faceSpriteX(self, 1)"/>
      </properties>
      <point/>
     </object>
     <object id="434" class="PathPoint" x="200" y="3984">
      <properties>
-      <property name="subscript" value="setScaleX(1)"/>
+      <property name="subscript" value="faceSpriteX(self, 1)"/>
      </properties>
      <point/>
     </object>
@@ -536,25 +536,25 @@ end</property>
     <object id="453" name="toBack" class="PathPoint" x="64" y="3616">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(1)</property>
+self.speed = 1</property>
      </properties>
      <point/>
     </object>
     <object id="454" name="toBack" class="PathPoint" x="192" y="3616">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(1)</property>
+self.speed = 1</property>
      </properties>
      <point/>
     </object>
     <object id="455" template="enemies/PathPoint.tx" x="40" y="3640">
      <properties>
-      <property name="subscript" value="setSpeed(2)"/>
+      <property name="subscript" value="self.speed = 2"/>
      </properties>
     </object>
     <object id="456" template="enemies/PathPoint.tx" x="216" y="3640">
      <properties>
-      <property name="subscript" value="setSpeed(2)"/>
+      <property name="subscript" value="self.speed = 2"/>
      </properties>
     </object>
    </objectgroup>
@@ -591,14 +591,14 @@ end</property>
     <object id="442" name="toBack" class="PathPoint" x="104" y="3496">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(slowspeed or 1)</property>
+self.speed = slowspeed or 1</property>
      </properties>
      <point/>
     </object>
     <object id="443" name="toBack" class="PathPoint" x="152" y="3496">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(slowspeed or 1)</property>
+self.speed = slowspeed or 1</property>
      </properties>
      <point/>
     </object>
@@ -616,7 +616,7 @@ setSpeed(slowspeed or 1)</property>
     <object id="400" template="enemies/PathPoint.tx" x="32" y="3504">
      <properties>
       <property name="subscript">enterForeground(self)
-setSpeed(slowspeed or 1)
+self.speed = slowspeed or 1
 
 for _=1,3 do
  setShooting(self, shootAtPlayer, 6, 3)
@@ -627,7 +627,7 @@ end</property>
     <object id="401" template="enemies/PathPoint.tx" x="224" y="3504">
      <properties>
       <property name="subscript">enterForeground(self)
-setSpeed(slowspeed or 1)
+self.speed = slowspeed or 1
 
 for _=1,3 do
  setShooting(self, shootAtPlayer, 6, 3)
@@ -637,25 +637,25 @@ end</property>
     </object>
     <object id="440" template="enemies/PathPoint.tx" x="40" y="3424">
      <properties>
-      <property name="subscript" value="setSpeed(fastspeed or 2)"/>
+      <property name="subscript" value="self.speed = fastspeed or 2"/>
      </properties>
     </object>
     <object id="441" template="enemies/PathPoint.tx" x="216" y="3424">
      <properties>
-      <property name="subscript" value="setSpeed(fastspeed or 2)"/>
+      <property name="subscript" value="self.speed = fastspeed or 2"/>
      </properties>
     </object>
     <object id="444" name="toBack" class="PathPoint" x="40" y="3544">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(slowspeed or 1)</property>
+self.speed = slowspeed or 1</property>
      </properties>
      <point/>
     </object>
     <object id="445" name="toBack" class="PathPoint" x="216" y="3544">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(slowspeed or 1)</property>
+self.speed = slowspeed or 1</property>
      </properties>
      <point/>
     </object>
@@ -673,7 +673,7 @@ setSpeed(slowspeed or 1)</property>
     <object id="232" name="toBack" class="PathPoint" x="-16" y="3232">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(fastspeed or 4)</property>
+self.speed = fastspeed or 4</property>
      </properties>
      <point/>
     </object>
@@ -685,7 +685,7 @@ setSpeed(fastspeed or 4)</property>
     </object>
     <object id="234" name="turnX" class="PathPoint" x="152" y="3208">
      <properties>
-      <property name="subscript" value="setScaleX(-1)"/>
+      <property name="subscript" value="faceSpriteX(self, -1)"/>
      </properties>
      <point/>
     </object>
@@ -699,7 +699,7 @@ end</property>
     </object>
     <object id="279" template="enemies/PathPoint.tx" x="104" y="3176">
      <properties>
-      <property name="subscript" value="setSpeed(slowspeed or 2)"/>
+      <property name="subscript" value="self.speed = slowspeed or 2"/>
      </properties>
     </object>
    </objectgroup>
@@ -712,7 +712,7 @@ end</property>
     <object id="388" name="toBack" class="PathPoint" x="272" y="3192">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(fastspeed or 4)</property>
+self.speed = fastspeed or 4</property>
      </properties>
      <point/>
     </object>
@@ -724,7 +724,7 @@ setSpeed(fastspeed or 4)</property>
     </object>
     <object id="390" name="turnX" class="PathPoint" x="104" y="3120">
      <properties>
-      <property name="subscript" value="setScaleX(1)"/>
+      <property name="subscript" value="faceSpriteX(self, 1)"/>
      </properties>
      <point/>
     </object>
@@ -738,7 +738,7 @@ end</property>
     </object>
     <object id="392" template="enemies/PathPoint.tx" x="152" y="3160">
      <properties>
-      <property name="subscript" value="setSpeed(slowspeed or 2)"/>
+      <property name="subscript" value="self.speed = slowspeed or 2"/>
      </properties>
     </object>
    </objectgroup>
@@ -749,83 +749,83 @@ end</property>
     <object id="153" template="enemies/FlyLeftBackground.tx" x="272" y="2832"/>
     <object id="154" template="enemies/PathPoint.tx" x="280" y="2936">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="155" template="enemies/PathPoint.tx" x="208" y="2912">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="157" template="enemies/PathPoint.tx" x="160" y="2984">
      <properties>
-      <property name="subscript">setScaleX(-abs(scalex))
+      <property name="subscript">faceSpriteX(self, -1)
 
 setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="165" template="enemies/PathPoint.tx" x="296" y="2952">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="166" template="enemies/PathPoint.tx" x="288" y="2952">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="167" template="enemies/PathPoint.tx" x="296" y="2952">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="172" template="enemies/PathPoint.tx" x="120" y="2832">
      <properties>
-      <property name="subscript">setScaleX(abs(scalex))
+      <property name="subscript">faceSpriteX(self, 1)
 enterForeground(self)
 setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="159" template="enemies/PathPoint.tx" x="96" y="2984">
      <properties>
-      <property name="subscript">setScaleX(1)
+      <property name="subscript">faceSpriteX(self, 1)
 setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="171" template="enemies/PathPoint.tx" x="136" y="2832">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="160" template="enemies/PathPoint.tx" x="56" y="2944">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="161" template="enemies/PathPoint.tx" x="48" y="2912">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="169" template="enemies/PathPoint.tx" x="200" y="2944">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="162" template="enemies/PathPoint.tx" x="72" y="2856">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="168" template="enemies/PathPoint.tx" x="184" y="2856">
      <properties>
-      <property name="subscript">setShooting(self, shootAtPlayer, 1, 3)</property>
+      <property name="subscript" value="setShooting(self, shootAtPlayer, 1, 3)"/>
      </properties>
     </object>
     <object id="164" template="enemies/PathPoint.tx" x="272" y="2832">
      <properties>
       <property name="subscript">enterBackground(self)
-setSpeed(fastspeed or 3)</property>
+self.speed = fastspeed or 3</property>
      </properties>
     </object>
     <object id="476" template="enemies/Trigger.tx" x="-24" y="2816"/>
@@ -914,12 +914,12 @@ setSpeed(fastspeed or 3)</property>
     </object>
     <object id="546" template="enemies/PathPoint.tx" x="80" y="3312">
      <properties>
-      <property name="subscript" value="disappear()"/>
+      <property name="subscript" value="markDisappear(self)"/>
      </properties>
     </object>
     <object id="547" template="enemies/PathPoint.tx" x="176" y="3312">
      <properties>
-      <property name="subscript" value="disappear()"/>
+      <property name="subscript" value="markDisappear(self)"/>
      </properties>
     </object>
    </objectgroup>
@@ -959,12 +959,12 @@ setSpeed(fastspeed or 3)</property>
     </object>
     <object id="548" template="enemies/PathPoint.tx" x="12" y="2904">
      <properties>
-      <property name="subscript" value="disappear()"/>
+      <property name="subscript" value="markDisappear(self)"/>
      </properties>
     </object>
     <object id="549" template="enemies/PathPoint.tx" x="244" y="2904">
      <properties>
-      <property name="subscript" value="disappear()"/>
+      <property name="subscript" value="markDisappear(self)"/>
      </properties>
     </object>
    </objectgroup>
@@ -976,13 +976,13 @@ setSpeed(fastspeed or 3)</property>
     </object>
     <object id="283" template="enemies/PathPoint.tx" x="128" y="2536">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1004,13 +1004,13 @@ end</property>
     </object>
     <object id="291" template="enemies/PathPoint.tx" x="64" y="2480">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1020,13 +1020,13 @@ end</property>
     </object>
     <object id="294" template="enemies/PathPoint.tx" x="192" y="2480">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1063,32 +1063,32 @@ end</property>
     </object>
     <object id="350" template="enemies/PathPoint.tx" x="96" y="2480">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
     <object id="351" template="enemies/PathPoint.tx" x="112" y="2448">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
     <object id="352" template="enemies/PathPoint.tx" x="104" y="2464">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
     <object id="353" template="enemies/PathPoint.tx" x="144" y="2448">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
     <object id="354" template="enemies/PathPoint.tx" x="152" y="2464">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
     <object id="355" template="enemies/PathPoint.tx" x="160" y="2480">
      <properties>
-      <property name="subscript" value="changeTile(&quot;claw_scrape&quot;)"/>
+      <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
      </properties>
     </object>
    </objectgroup>
@@ -1119,13 +1119,13 @@ end</property>
     </object>
     <object id="513" template="enemies/PathPoint.tx" x="80" y="2368">
      <properties>
-      <property name="subscript">setSpeed(slowspeed or 1)
+      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1135,13 +1135,13 @@ end</property>
     </object>
     <object id="514" template="enemies/PathPoint.tx" x="176" y="2368">
      <properties>
-      <property name="subscript">setSpeed(slowspeed or 1)
+      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1161,13 +1161,13 @@ end</property>
     </object>
     <object id="531" template="enemies/PathPoint.tx" x="48" y="2392">
      <properties>
-      <property name="subscript">setSpeed(slowspeed or 1)
+      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1177,13 +1177,13 @@ end</property>
     </object>
     <object id="532" template="enemies/PathPoint.tx" x="208" y="2392">
      <properties>
-      <property name="subscript">setSpeed(slowspeed or 1)
+      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1212,13 +1212,13 @@ end</property>
     </object>
     <object id="503" template="enemies/PathPoint.tx" x="112" y="2288">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1228,13 +1228,13 @@ end</property>
     </object>
     <object id="522" template="enemies/PathPoint.tx" x="104" y="2272">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1244,13 +1244,13 @@ end</property>
     </object>
     <object id="517" template="enemies/PathPoint.tx" x="144" y="2288">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1260,13 +1260,13 @@ end</property>
     </object>
     <object id="525" template="enemies/PathPoint.tx" x="152" y="2272">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1321,13 +1321,13 @@ end</property>
     </object>
     <object id="377" template="enemies/PathPoint.tx" x="40" y="2072">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1337,13 +1337,13 @@ end</property>
     </object>
     <object id="378" template="enemies/PathPoint.tx" x="216" y="2072">
      <properties>
-      <property name="subscript">changeTile(&quot;gun_stand&quot;)
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
- setScaleX(player.x &lt; x and -1 or 1)
+ faceSpriteX(self, player.x - x)
  local angle = atan2(player.y - y, player.x - x)
  if angle == angle then
   for i = 1,5 do
-   shootAS(bullettype, angle, bulletspeed or 4)
+   shootAS(self, bullettype, angle, bulletspeed or 4)
    yield()
   end
  end
@@ -1370,35 +1370,35 @@ end</property>
     <object id="381" class="PathPoint" x="240" y="2192">
      <properties>
       <property name="subscript">enterForeground(self)
-setSpeed(0.75)</property>
+self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
     <object id="382" class="PathPoint" x="16" y="2192">
      <properties>
       <property name="subscript">enterForeground(self)
-setSpeed(0.75)</property>
+self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
     <object id="383" template="enemies/PathPoint.tx" x="40" y="2224">
      <properties>
-      <property name="subscript" value="setScaleX(1)"/>
+      <property name="subscript" value="faceSpriteX(self, 1)"/>
      </properties>
     </object>
     <object id="384" template="enemies/PathPoint.tx" x="216" y="2224">
      <properties>
-      <property name="subscript" value="setScaleX(-1)"/>
+      <property name="subscript" value="faceSpriteX(self, -1)"/>
      </properties>
     </object>
     <object id="393" template="enemies/PathPoint.tx" x="104" y="2040">
      <properties>
-      <property name="subscript" value="setSpeed(fastspeed or 4)"/>
+      <property name="subscript" value="self.speed = fastspeed or 4"/>
      </properties>
     </object>
     <object id="394" template="enemies/PathPoint.tx" x="152" y="2040">
      <properties>
-      <property name="subscript" value="setSpeed(fastspeed or 4)"/>
+      <property name="subscript" value="self.speed = fastspeed or 4"/>
      </properties>
     </object>
    </objectgroup>
