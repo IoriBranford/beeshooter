@@ -517,32 +517,32 @@ A brief chance to practice controls</text>
     </object>
     <object id="451" template="enemies/PathPoint.tx" x="88" y="3576">
      <properties>
-      <property name="commandscript">Flyer_enterForeground(self)
+      <property name="commandscript">enterForeground(self)
 for _=1,3 do
- setShooting(self, &quot;shootAtPlayer&quot;, 6, 3)
+ setShooting(self, shootAtPlayer, 6, 3)
  wait(30)
 end</property>
      </properties>
     </object>
     <object id="452" template="enemies/PathPoint.tx" x="168" y="3576">
      <properties>
-      <property name="commandscript">Flyer_enterForeground(self)
+      <property name="commandscript">enterForeground(self)
 for _=1,3 do
- setShooting(self, &quot;shootAtPlayer&quot;, 6, 3)
+ setShooting(self, shootAtPlayer, 6, 3)
  wait(30)
 end</property>
      </properties>
     </object>
     <object id="453" name="toBack" class="PathPoint" x="64" y="3616">
      <properties>
-      <property name="commandscript">Flyer_enterBackground(self)
+      <property name="commandscript">enterBackground(self)
 setSpeed(1)</property>
      </properties>
      <point/>
     </object>
     <object id="454" name="toBack" class="PathPoint" x="192" y="3616">
      <properties>
-      <property name="commandscript">Flyer_enterBackground(self)
+      <property name="commandscript">enterBackground(self)
 setSpeed(1)</property>
      </properties>
      <point/>
@@ -570,56 +570,34 @@ setSpeed(1)</property>
     </object>
     <object id="127" template="enemies/PathPoint.tx" x="88" y="3480">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 
 for _=1,3 do
-
-local angle = -pi/8
-for _=1,3 do
- wait(6)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
- angle = angle + pi/16
-end
-wait(12)
-
+ setShooting(self, shootAtPlayer, 6, 3)
+ wait(30)
 end</property>
      </properties>
     </object>
     <object id="128" template="enemies/PathPoint.tx" x="168" y="3480">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 
 for _=1,3 do
-
-local angle = pi/8
-for _=1,3 do
- wait(6)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
- angle = angle - pi/16
-end
-wait(12)
-
+ setShooting(self, shootAtPlayer, 6, 3)
+ wait(30)
 end</property>
      </properties>
     </object>
     <object id="442" name="toBack" class="PathPoint" x="104" y="3496">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
     <object id="443" name="toBack" class="PathPoint" x="152" y="3496">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
@@ -637,41 +615,23 @@ setSpeed(slowspeed or 1)</property>
     </object>
     <object id="400" template="enemies/PathPoint.tx" x="32" y="3504">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 setSpeed(slowspeed or 1)
 
 for _=1,3 do
-
-local angle = -pi/8
-for _=1,3 do
- wait(6)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
- angle = angle + pi/16
-end
-wait(12)
-
+ setShooting(self, shootAtPlayer, 6, 3)
+ wait(30)
 end</property>
      </properties>
     </object>
     <object id="401" template="enemies/PathPoint.tx" x="224" y="3504">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 setSpeed(slowspeed or 1)
 
 for _=1,3 do
-
-local angle = pi/8
-for _=1,3 do
- wait(6)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
- angle = angle - pi/16
-end
-wait(12)
-
+ setShooting(self, shootAtPlayer, 6, 3)
+ wait(30)
 end</property>
      </properties>
     </object>
@@ -687,18 +647,14 @@ end</property>
     </object>
     <object id="444" name="toBack" class="PathPoint" x="40" y="3544">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
     </object>
     <object id="445" name="toBack" class="PathPoint" x="216" y="3544">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(slowspeed or 1)</property>
      </properties>
      <point/>
@@ -716,18 +672,14 @@ setSpeed(slowspeed or 1)</property>
     <object id="230" template="enemies/FlyBackground.tx" x="-16" y="3224"/>
     <object id="232" name="toBack" class="PathPoint" x="-16" y="3232">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(fastspeed or 4)</property>
      </properties>
      <point/>
     </object>
     <object id="233" name="toFront" class="PathPoint" x="144" y="3192">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
@@ -740,13 +692,8 @@ setAlpha(1)</property>
     <object id="235" template="enemies/PathPoint.tx" x="128" y="3232">
      <properties>
       <property name="commandscript">for i=1,5 do
-
-for i=1,3 do
- wait(2)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end
-
-wait(10)
+ setShooting(self, shootAtPlayer, 2, 3)
+ wait(16)
 end</property>
      </properties>
     </object>
@@ -764,18 +711,14 @@ end</property>
     <object id="387" template="enemies/FlyLeftBackground.tx" x="272" y="3192"/>
     <object id="388" name="toBack" class="PathPoint" x="272" y="3192">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)
+      <property name="commandscript">enterBackground(self)
 setSpeed(fastspeed or 4)</property>
      </properties>
      <point/>
     </object>
     <object id="389" name="toFront" class="PathPoint" x="112" y="3096">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
@@ -788,13 +731,8 @@ setAlpha(1)</property>
     <object id="391" template="enemies/PathPoint.tx" x="136" y="3088">
      <properties>
       <property name="commandscript">for i=1,5 do
-
-for i=1,3 do
- wait(2)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end
-
-wait(10)
+ setShooting(self, shootAtPlayer, 2, 3)
+ wait(16)
 end</property>
      </properties>
     </object>
@@ -811,130 +749,82 @@ end</property>
     <object id="153" template="enemies/FlyLeftBackground.tx" x="272" y="2832"/>
     <object id="154" template="enemies/PathPoint.tx" x="280" y="2936">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="155" template="enemies/PathPoint.tx" x="208" y="2912">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="157" template="enemies/PathPoint.tx" x="160" y="2984">
      <properties>
       <property name="commandscript">setScaleX(-abs(scalex))
 
-for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="165" template="enemies/PathPoint.tx" x="296" y="2952">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="166" template="enemies/PathPoint.tx" x="288" y="2952">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="167" template="enemies/PathPoint.tx" x="296" y="2952">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="172" template="enemies/PathPoint.tx" x="120" y="2832">
      <properties>
       <property name="commandscript">setScaleX(abs(scalex))
-
-setCollidable(true)
-setAlpha(1)
-setZ(abs(z))
-
-for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+enterForeground(self)
+setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="159" template="enemies/PathPoint.tx" x="96" y="2984">
      <properties>
       <property name="commandscript">setScaleX(1)
-for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="171" template="enemies/PathPoint.tx" x="136" y="2832">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="160" template="enemies/PathPoint.tx" x="56" y="2944">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="161" template="enemies/PathPoint.tx" x="48" y="2912">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="169" template="enemies/PathPoint.tx" x="200" y="2944">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="162" template="enemies/PathPoint.tx" x="72" y="2856">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="168" template="enemies/PathPoint.tx" x="184" y="2856">
      <properties>
-      <property name="commandscript">for i=1,3 do
- yield()
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end</property>
+      <property name="commandscript">setShooting(self, shootAtPlayer, 1, 3)</property>
      </properties>
     </object>
     <object id="164" template="enemies/PathPoint.tx" x="272" y="2832">
      <properties>
-      <property name="commandscript">setCollidable(false)
-setAlpha(0.5)
-setZ(-abs(z))
+      <property name="commandscript">enterBackground(self)
 setSpeed(fastspeed or 3)</property>
      </properties>
     </object>
@@ -964,81 +854,61 @@ setSpeed(fastspeed or 3)</property>
     </object>
     <object id="241" name="toBack" class="PathPoint" x="152" y="3152">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="413" name="toBack" class="PathPoint" x="152" y="3280">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="247" name="toBack" class="PathPoint" x="104" y="3152">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="412" name="toBack" class="PathPoint" x="104" y="3280">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="243" name="toBack" class="PathPoint" x="152" y="3024">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="246" name="toBack" class="PathPoint" x="104" y="3024">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="242" name="toFront" class="PathPoint" x="232" y="3088">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="414" name="toFront" class="PathPoint" x="232" y="3216">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="245" name="toFront" class="PathPoint" x="24" y="3088">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="411" name="toFront" class="PathPoint" x="24" y="3216">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)</property>
+      <property name="commandscript" value="enterForeground(self)"/>
      </properties>
      <point/>
     </object>
@@ -1077,17 +947,13 @@ setAlpha(1)</property>
     </object>
     <object id="473" name="toBack" class="PathPoint" x="36" y="2880">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
     <object id="474" name="toBack" class="PathPoint" x="220" y="2880">
      <properties>
-      <property name="commandscript">setZ(-abs(z))
-setCollidable(false)
-setAlpha(0.5)</property>
+      <property name="commandscript" value="enterBackground(self)"/>
      </properties>
      <point/>
     </object>
@@ -1488,43 +1354,29 @@ end</property>
     <object id="379" template="enemies/PathPoint.tx" x="16" y="2144">
      <properties>
       <property name="commandscript">for i=1,3 do
-
-for i=1,3 do
- wait(2)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end
-
-wait(10)
+ setShooting(self, shootAtPlayer, 2, 3)
+ wait(16)
 end</property>
      </properties>
     </object>
     <object id="380" template="enemies/PathPoint.tx" x="240" y="2144">
      <properties>
       <property name="commandscript">for i=1,3 do
-
-for i=1,3 do
- wait(2)
- shootTargetAS(bullettype, player, 0, bulletspeed or 3)
-end
-
-wait(10)
+ setShooting(self, shootAtPlayer, 2, 3)
+ wait(16)
 end</property>
      </properties>
     </object>
     <object id="381" class="PathPoint" x="240" y="2192">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 setSpeed(0.75)</property>
      </properties>
      <point/>
     </object>
     <object id="382" class="PathPoint" x="16" y="2192">
      <properties>
-      <property name="commandscript">setZ(abs(z))
-setCollidable(true)
-setAlpha(1)
+      <property name="commandscript">enterForeground(self)
 setSpeed(0.75)</property>
      </properties>
      <point/>

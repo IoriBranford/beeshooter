@@ -191,13 +191,13 @@ function EnemyShip:shootTargetAS(bullettype, target, angleoffset, speed)
     EnemyShip.shootAS(self, bullettype, angle, speed)
 end
 
-function EnemyShip:Flyer_enterBackground()
+function EnemyShip:enterBackground()
     self.z = -abs(self.z)
     self.collidable = false
     self.sprite.alpha = 0.5
 end
 
-function EnemyShip:Flyer_enterForeground()
+function EnemyShip:enterForeground()
     self.z = abs(self.z)
     self.collidable = true
     self.sprite.alpha = 1
