@@ -2,7 +2,7 @@
 <template>
  <object type="PathPoint">
   <properties>
-   <property name="commandscript" value=""/>
+   <property name="subscript" value=""/>
   </properties>
   <point/>
  </object>

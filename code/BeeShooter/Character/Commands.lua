@@ -108,9 +108,9 @@ end
 
 local Commands = {}
 
-function Commands.setEnvOn(commandscript)
+function Commands.setEnvOn(subscript)
     Stage    = require "BeeShooter.Stage"
-    setfenv(commandscript, Env)
+    setfenv(subscript, Env)
     Env.difficulty = Config.game_difficulty
 end
 
