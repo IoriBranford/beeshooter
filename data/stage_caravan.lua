@@ -5831,7 +5831,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -5961,7 +5961,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -5976,7 +5976,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
               }
@@ -6618,7 +6618,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -6633,7 +6633,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
               }
@@ -6750,7 +6750,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -6765,7 +6765,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
               }
@@ -6945,7 +6945,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -6960,7 +6960,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -6975,7 +6975,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
                 {
@@ -6990,7 +6990,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
               }
@@ -7354,7 +7354,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
                   }
                 },
                 {
@@ -7369,7 +7369,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n faceSpriteX(self, player.x - x)\n local angle = atan2(player.y - y, player.x - x)\n if angle == angle then\n  for i = 1,5 do\n   shootAS(self, bullettype, angle, bulletspeed or 4)\n   yield()\n  end\n end\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
                   }
                 },
                 {
