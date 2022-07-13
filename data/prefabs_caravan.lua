@@ -1269,7 +1269,7 @@ return {
           gid = 5,
           visible = true,
           properties = {
-            ["applydroppertransform"] = true,
+            ["applyspawnertransform"] = true,
             ["z"] = 1
           }
         },
@@ -1286,7 +1286,7 @@ return {
           gid = 1,
           visible = true,
           properties = {
-            ["applydroppertransform"] = true,
+            ["applyspawnertransform"] = true,
             ["velx"] = 0.125,
             ["vely"] = -4,
             ["z"] = 10
@@ -1305,7 +1305,7 @@ return {
           gid = 2,
           visible = true,
           properties = {
-            ["applydroppertransform"] = true,
+            ["applyspawnertransform"] = true,
             ["velx"] = -0.125,
             ["vely"] = -4,
             ["z"] = 10
@@ -1450,7 +1450,7 @@ return {
           gid = 2147483668,
           visible = true,
           properties = {
-            ["applydroppertransform"] = true,
+            ["applyspawnertransform"] = true,
             ["z"] = 1
           }
         },
