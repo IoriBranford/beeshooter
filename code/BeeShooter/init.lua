@@ -30,7 +30,10 @@ function love.load(args)
     end
     Config.applyDisplayMode(Stage.CameraWidth, Stage.CameraHeight)
     love.window.setTitle(love.filesystem.getIdentity())
-
+    local iconfile = "appicon/appicon.png"
+    if love.filesystem.getInfo(iconfile) then
+        love.window.setIcon(love.image.newImageData(iconfile))
+    end
     Tiled.animationtimeunit = "fixedupdates"
     Tiled.setFontPath("data/fonts/")
     love.graphics.setNewFont("data/fonts/Press Start 2P 8.fnt")
