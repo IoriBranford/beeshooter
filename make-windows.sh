@@ -41,27 +41,28 @@ getZip () {
 ./make-game.sh
 mkdir -p game-win
 
-if ! [ -e ${LOVE_DIR} ]
+if ! [ -d ${LOVE_DIR} ]
 then
 	getZip ${LOVE_ZIP} ${LOVE_URL}
 fi
 
-ICO=${ICO:=${LOVE_DIR}/game.ico}
-if [ -e $ICO ]
+ICO="appicon/appicon.ico"
+if ! [ -f "$ICO" ]
 then
-	if ! [ -e ${RCEDIT} ]
-	then
-		wget -N ${RCEDIT_URL}
-	fi
-	case $(uname | tr '[:upper:]' '[:lower:]') in
-		windows*|mingw*|msys*|cygwin*)
-			;;
-		*)
-			WINE="wine"
-			;;
-	esac
-	${WINE} ./${RCEDIT} ${LOVE_EXE} --set-icon "$ICO"
+	ICO="${LOVE_DIR}/game.ico"
 fi
+if ! [ -f ${RCEDIT} ]
+then
+	wget -N ${RCEDIT_URL}
+fi
+case $(uname | tr '[:upper:]' '[:lower:]') in
+	windows*|mingw*|msys*|cygwin*)
+		;;
+	*)
+		WINE="wine"
+		;;
+esac
+${WINE} ./${RCEDIT} ${LOVE_EXE} --set-icon "$ICO"
 
 cat ${LOVE_EXE} ${GAME_ASSET} > $GAME_EXE
 cp ${LOVE_DIR}/*.dll game-win
