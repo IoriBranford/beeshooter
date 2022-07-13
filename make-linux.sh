@@ -8,7 +8,8 @@ GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:="${GAME_TYPE}.love"}
 DESCRIPTION=${DESCRIPTION:="No description"}
 
-LOVE_VERSION=${LOVE_VERSION:="11.3"}
+LOVE_VERSION=${LOVE_VERSION:="11.4"}
+LOVE_EXE=bin/love
 
 ARCH=${ARCH:="x86_64"}
 if [ ${ARCH} = x86_64 ]; then
@@ -101,9 +102,9 @@ then
 	set_property love.desktop Icon "appicon"
 fi
 mv love.desktop ${PROJECT_TITLE_NOSPACE}.desktop
-cat usr/bin/love ../${GAME_ASSET} > love-fused
-mv love-fused usr/bin/love
-chmod +x usr/bin/love
+cat $LOVE_EXE ../${GAME_ASSET} > love-fused
+mv love-fused $LOVE_EXE
+chmod +x $LOVE_EXE
 cd ..
 
 mkdir -p $GAME_DIR
