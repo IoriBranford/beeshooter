@@ -177,7 +177,7 @@ local function die(self)
     self.defeated = true
     Body.setVelocity(self, 0, 0)
     Audio.play(self.defeatsound)
-    self:dropDefeatObjects()
+    self:spawnTypes(self.defeatdrops)
     self.sprite:setHidden(true)
 end
 

@@ -145,7 +145,7 @@ function EnemyShip:Spawner()
     local spawncount = self.spawncount or 1
     for _ = 1, spawncount do
         wait(spawninterval)
-        self:dropObject(spawntype)
+        self:spawnTypes(spawntype)
     end
     waitForOnscreenState(self, false)
     self:markDisappear()
@@ -317,7 +317,7 @@ function EnemyShip:defeatBoss()
         wait(6)
     end
     Audio.play(self.defeatsound)
-    self:dropDefeatObjects()
+    self:spawnTypes(self.defeatdrops)
     self:markDisappear()
     GamePhase.win()
 end

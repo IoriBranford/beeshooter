@@ -28,13 +28,13 @@
  <objectgroup id="2" name="defeatdrops_AntBig">
   <object id="1" name="AntBigCorpse" gid="5" x="0" y="0" width="60" height="40">
    <properties>
-    <property name="applydroppertransform" type="bool" value="true"/>
+    <property name="applyspawnertransform" type="bool" value="true"/>
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
   <object id="2" name="AntBigHead" gid="1" x="24" y="-8" width="24" height="24">
    <properties>
-    <property name="applydroppertransform" type="bool" value="true"/>
+    <property name="applyspawnertransform" type="bool" value="true"/>
     <property name="velx" type="float" value="0.125"/>
     <property name="vely" type="float" value="-4"/>
     <property name="z" type="float" value="10"/>
@@ -42,7 +42,7 @@
   </object>
   <object id="3" name="AntBigAbdomen" gid="2" x="-24" y="-8" width="24" height="24">
    <properties>
-    <property name="applydroppertransform" type="bool" value="true"/>
+    <property name="applyspawnertransform" type="bool" value="true"/>
     <property name="velx" type="float" value="-0.125"/>
     <property name="vely" type="float" value="-4"/>
     <property name="z" type="float" value="10"/>
@@ -73,7 +73,7 @@
   <object id="8" template="enemies/Ant.tx" name="Ant" x="0" y="0"/>
   <object id="25" template="enemies/Ant.tx" name="AntFromBigAnt" gid="2147483668" x="-16" y="0" rotation="0">
    <properties>
-    <property name="applydroppertransform" type="bool" value="true"/>
+    <property name="applyspawnertransform" type="bool" value="true"/>
    </properties>
   </object>
   <object id="10" template="enemies/AlienGunner.tx" name="AlienGunner" x="0" y="0"/>
