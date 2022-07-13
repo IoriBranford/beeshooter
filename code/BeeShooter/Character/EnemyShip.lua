@@ -220,6 +220,22 @@ function EnemyShip:shootAtPlayer()
     EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
 end
 
+function EnemyShip:shootAimAngle()
+    EnemyShip.shootAS(self, self.bullettype, self.aimangle)
+end
+
+---@param self Character
+function EnemyShip:AlienGunner_shootAtPlayer()
+    local player = self.player
+    local x, y = self.x, self.y
+    self:faceSpriteX(player.x - x)
+    local angle = atan2(player.y - y, player.x - x)
+    if angle == angle then
+        self.aimangle = angle
+        self:setShooting(EnemyShip.shootAimAngle, 1, 5)
+    end
+end
+
 local function alienMindSpawnReinforcement(self, name, typ, path)
     local reinforcement = self[name]
     if not reinforcement or reinforcement:willDisappear() then

@@ -978,14 +978,7 @@ self.speed = fastspeed or 3</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1006,14 +999,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1022,14 +1008,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1121,14 +1100,7 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1137,14 +1109,7 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1163,14 +1128,7 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1179,14 +1137,7 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1214,14 +1165,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1230,14 +1174,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1246,14 +1183,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1262,14 +1192,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(20)
 end</property>
      </properties>
@@ -1323,14 +1246,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(30)
 end</property>
      </properties>
@@ -1339,14 +1255,7 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
- faceSpriteX(self, player.x - x)
- local angle = atan2(player.y - y, player.x - x)
- if angle == angle then
-  for i = 1,5 do
-   shootAS(self, bullettype, angle, bulletspeed or 4)
-   yield()
-  end
- end
+ AlienGunner_shootAtPlayer(self)
  wait(30)
 end</property>
      </properties>
