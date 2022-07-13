@@ -1,0 +1,7 @@
+weapon,shootbullets
+JennyShotA1,JennyShotU1 JennyShotU2
+JennyShotB1,JennyShotU JennyShotD
+JennyShotA2,JennyShotU1 JennyShotU2 JennyShotUL JennyShotUR
+JennyShotB2,JennyShotU JennyShotD JennyShotL JennyShotR
+JennyShotA3,JennyShotU1 JennyShotU2 JennyShotUL JennyShotUR JennyShotDL JennyShotDR
+JennyShotB3,JennyShotU JennyShotD JennyShotL JennyShotR JennyShotUL JennyShotUR
