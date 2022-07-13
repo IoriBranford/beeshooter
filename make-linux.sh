@@ -25,7 +25,7 @@ LOVE_APPIMAGE_URL=https://github.com/love2d/love/releases/download/${LOVE_VERSIO
 LOVE_APPIMAGE=love-${LOVE_VERSION}-${ARCH}.AppImage
 
 APPIMAGETOOL=appimagetool-${ARCH}.AppImage
-APPIMAGETOOL_RELEASE=12
+APPIMAGETOOL_RELEASE=13
 APPIMAGETOOL_URL=https://github.com/AppImage/AppImageKit/releases/download/${APPIMAGETOOL_RELEASE}
 
 GAME_APPDIR=${PROJECT_TITLE_NOSPACE}.AppDir
@@ -87,9 +87,10 @@ set_property() {
 	fi
 }
 
-if [ -f appicon.png ]
+if [ -f "appicon/appicon.png" ]
 then
-	cp appicon.png ${GAME_APPDIR}
+	zip $GAME_ASSET appicon/appicon.png
+	cp appicon/appicon.png $GAME_APPDIR
 fi
 cd ${GAME_APPDIR}
 set_property love.desktop Name "${PROJECT_TITLE}"
@@ -99,6 +100,7 @@ set_property love.desktop Categories "Game;"
 set_property love.desktop NoDisplay "false"
 if [ -f appicon.png ]
 then
+	ln -sf appicon.png .DirIcon
 	set_property love.desktop Icon "appicon"
 fi
 mv love.desktop ${PROJECT_TITLE_NOSPACE}.desktop
