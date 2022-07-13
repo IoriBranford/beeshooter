@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 26,
+  nextobjectid = 27,
   properties = {},
   tilesets = {
     {
@@ -1388,6 +1388,22 @@ return {
           properties = {
             ["z"] = 20
           }
+        },
+        {
+          id = 26,
+          name = "AlienGunnerBullet",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 18,
+          visible = true,
+          properties = {
+            ["z"] = 20
+          }
         }
       }
     },
@@ -1451,7 +1467,6 @@ return {
           gid = 24,
           visible = true,
           properties = {
-            ["bullettype"] = "FlyBullet",
             ["z"] = 1
           }
         },
@@ -1468,7 +1483,6 @@ return {
           gid = 2147483672,
           visible = true,
           properties = {
-            ["bullettype"] = "FlyBullet",
             ["z"] = 1
           }
         },
@@ -1517,7 +1531,6 @@ return {
           gid = 46,
           visible = true,
           properties = {
-            ["bullettype"] = "FlyBullet",
             ["collidable"] = false,
             ["color"] = "#80ffffff",
             ["z"] = -10
@@ -1552,7 +1565,6 @@ return {
           gid = 2147483694,
           visible = true,
           properties = {
-            ["bullettype"] = "FlyBullet",
             ["collidable"] = false,
             ["color"] = "#80ffffff",
             ["z"] = -10

@@ -4051,7 +4051,6 @@ return {
                   gid = 502,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4070,7 +4069,6 @@ return {
                   gid = 2147484150,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4262,7 +4260,6 @@ return {
                   gid = 502,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4281,7 +4278,6 @@ return {
                   gid = 2147484150,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4439,7 +4435,6 @@ return {
                   gid = 502,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4458,7 +4453,6 @@ return {
                   gid = 2147484150,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4722,7 +4716,6 @@ return {
                   gid = 502,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -4874,7 +4867,6 @@ return {
                   gid = 2147484150,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -5019,7 +5011,6 @@ return {
                   gid = 2147484150,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["z"] = -10
@@ -5797,7 +5788,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -5892,7 +5882,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -5909,7 +5898,6 @@ return {
                   gid = 2147484166,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6547,7 +6535,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6564,7 +6551,6 @@ return {
                   gid = 2147484166,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6665,7 +6651,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6682,7 +6667,6 @@ return {
                   gid = 2147484166,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6810,7 +6794,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6827,7 +6810,6 @@ return {
                   gid = 518,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6844,7 +6826,6 @@ return {
                   gid = 2147484166,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
@@ -6861,7 +6842,6 @@ return {
                   gid = 2147484166,
                   visible = true,
                   properties = {
-                    ["bullettype"] = "FlyBullet",
                     ["z"] = 1
                   }
                 },
