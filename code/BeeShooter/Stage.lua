@@ -297,8 +297,8 @@ end
 function Stage.killTeam(teamname)
     local team = teams[teamname]
     if team then
-        for _, character in ipairs(team) do
-            character:defeat()
+        for i = 1, #team do
+            team[i]:defeat()
         end
     end
 end
