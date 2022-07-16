@@ -97,28 +97,11 @@ local function inputShooting(self, firetime, firebutton)
     if firebutton then
         firetime = max(0, firetime - 1)
         if firetime <= 0 then
-            local x, y = Body.getPosition(self)
             local weapon = self.weapon
             local power = self.power
-            local i = 1
-            while i <= 6 do
-                local bullettype = "JennyShot"..weapon..power..i
-                local bulletprefab = Database.get(bullettype)
-                if not bulletprefab then
-                    break
-                end
-                local bullet = Stage.addCharacter({
-                    type = bullettype,
-                    x = bulletprefab.x + x,
-                    y = bulletprefab.y + y
-                })
-                local angle = bullet.rotation or 0
-                local speed = bullet.speed or 1
-                bullet.velx = cos(angle)*speed
-                bullet.vely = sin(angle)*speed
-                Audio.play(bulletprefab.sound)
-                i = i + 1
-            end
+            local weapontype = "JennyShot"..weapon..power
+            local weapondata = Database.get(weapontype)
+            self:spawnTypes(weapondata and weapondata.shootbullets)
             firetime = 5
         end
     else

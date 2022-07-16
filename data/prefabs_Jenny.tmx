@@ -5,59 +5,20 @@
  </editorsettings>
  <tileset firstgid="1" source="tilesets/Jenny.tsx"/>
  <tileset firstgid="10" source="tilesets/JennyKill.tsx"/>
- <objectgroup id="3" name="JennyShotA1" visible="0">
+ <objectgroup id="9" name="JennyShot">
   <properties>
    <property name="z" type="float" value="99"/>
   </properties>
-  <object id="2" name="JennyShotA11" class="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="-90"/>
-  <object id="3" name="JennyShotA12" class="JennyShot" gid="3" x="6" y="0" width="32" height="32" rotation="-90"/>
- </objectgroup>
- <objectgroup id="5" name="JennyShotA2" visible="0">
-  <properties>
-   <property name="z" type="float" value="99"/>
-  </properties>
-  <object id="8" name="JennyShotA22" class="JennyShot" gid="3" x="6" y="0" width="32" height="32" rotation="-90"/>
-  <object id="11" name="JennyShotA21" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-135"/>
-  <object id="9" name="JennyShotA23" class="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="-90"/>
-  <object id="10" name="JennyShotA24" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-45"/>
- </objectgroup>
- <objectgroup id="7" name="JennyShotA3" visible="0">
-  <properties>
-   <property name="z" type="float" value="99"/>
-  </properties>
-  <object id="16" name="JennyShotA31" class="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="-90"/>
-  <object id="17" name="JennyShotA32" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-135"/>
-  <object id="21" name="JennyShotA33" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="135"/>
-  <object id="18" name="JennyShotA34" class="JennyShot" gid="3" x="6" y="0" width="32" height="32" rotation="-90"/>
-  <object id="19" name="JennyShotA35" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-45"/>
-  <object id="20" name="JennyShotA36" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="45"/>
- </objectgroup>
- <objectgroup id="4" name="JennyShotB1" visible="0">
-  <properties>
-   <property name="z" type="float" value="99"/>
-  </properties>
-  <object id="6" name="JennyShotB11" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-90"/>
-  <object id="7" name="JennyShotB12" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="90"/>
- </objectgroup>
- <objectgroup id="6" name="JennyShotB2" visible="0">
-  <properties>
-   <property name="z" type="float" value="99"/>
-  </properties>
-  <object id="12" name="JennyShotB21" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-90"/>
-  <object id="15" name="JennyShotB22" class="JennyShot" gid="3" x="0" y="0" width="32" height="32"/>
-  <object id="13" name="JennyShotB23" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="90"/>
-  <object id="14" name="JennyShotB24" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="180"/>
- </objectgroup>
- <objectgroup id="8" name="JennyShotB3" visible="0">
-  <properties>
-   <property name="z" type="float" value="99"/>
-  </properties>
-  <object id="22" name="JennyShotB31" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-90"/>
-  <object id="23" name="JennyShotB32" class="JennyShot" gid="3" x="0" y="0" width="32" height="32"/>
-  <object id="24" name="JennyShotB33" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="90"/>
-  <object id="25" name="JennyShotB34" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="180"/>
-  <object id="28" name="JennyShotB35" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-135"/>
-  <object id="29" name="JennyShotB36" class="JennyShot" gid="3" x="0" y="0" width="32" height="32" rotation="-45"/>
+  <object id="32" name="JennyShotU" class="JennyShot" gid="3" x="0" y="-6" width="32" height="32" rotation="-90"/>
+  <object id="35" name="JennyShotD" class="JennyShot" gid="3" x="0" y="6" width="32" height="32" rotation="90"/>
+  <object id="34" name="JennyShotUL" class="JennyShot" gid="3" x="-6" y="-6" width="32" height="32" rotation="-135"/>
+  <object id="37" name="JennyShotUR" class="JennyShot" gid="3" x="6" y="-6" width="32" height="32" rotation="-45"/>
+  <object id="40" name="JennyShotL" class="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="180"/>
+  <object id="41" name="JennyShotR" class="JennyShot" gid="3" x="6" y="0" width="32" height="32"/>
+  <object id="39" name="JennyShotDL" class="JennyShot" gid="3" x="-6" y="6" width="32" height="32" rotation="135"/>
+  <object id="38" name="JennyShotDR" class="JennyShot" gid="3" x="6" y="6" width="32" height="32" rotation="45"/>
+  <object id="36" name="JennyShotU1" class="JennyShot" gid="3" x="-6" y="-6" width="32" height="32" rotation="-90"/>
+  <object id="33" name="JennyShotU2" class="JennyShot" gid="3" x="6" y="-6" width="32" height="32" rotation="-90"/>
  </objectgroup>
  <objectgroup id="2" name="Jenny">
   <properties>
@@ -74,17 +35,5 @@
     <property name="lifetime" value="animation"/>
    </properties>
   </object>
- </objectgroup>
- <objectgroup id="9" name="JennyShot">
-  <object id="32" name="JennyShotU" class="JennyShot" gid="3" x="0" y="-6" width="32" height="32" rotation="-90"/>
-  <object id="35" name="JennyShotD" class="JennyShot" gid="3" x="0" y="6" width="32" height="32" rotation="90"/>
-  <object id="34" name="JennyShotUL" class="JennyShot" gid="3" x="-6" y="-6" width="32" height="32" rotation="-135"/>
-  <object id="37" name="JennyShotUR" class="JennyShot" gid="3" x="6" y="-6" width="32" height="32" rotation="-45"/>
-  <object id="40" name="JennyShotL" class="JennyShot" gid="3" x="-6" y="0" width="32" height="32" rotation="180"/>
-  <object id="41" name="JennyShotR" class="JennyShot" gid="3" x="6" y="0" width="32" height="32"/>
-  <object id="39" name="JennyShotDL" class="JennyShot" gid="3" x="-6" y="6" width="32" height="32" rotation="135"/>
-  <object id="38" name="JennyShotDR" class="JennyShot" gid="3" x="6" y="6" width="32" height="32" rotation="45"/>
-  <object id="36" name="JennyShotU1" class="JennyShot" gid="3" x="-6" y="-6" width="32" height="32" rotation="-90"/>
-  <object id="33" name="JennyShotU2" class="JennyShot" gid="3" x="6" y="-6" width="32" height="32" rotation="-90"/>
  </objectgroup>
 </map>
