@@ -344,514 +344,6 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
-      id = 3,
-      name = "JennyShotA1",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 2,
-          name = "JennyShotA11",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = -6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 3,
-          name = "JennyShotA12",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 5,
-      name = "JennyShotA2",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 8,
-          name = "JennyShotA22",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 11,
-          name = "JennyShotA21",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -135,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 9,
-          name = "JennyShotA23",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = -6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 10,
-          name = "JennyShotA24",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -45,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 7,
-      name = "JennyShotA3",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 16,
-          name = "JennyShotA31",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = -6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 17,
-          name = "JennyShotA32",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -135,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 21,
-          name = "JennyShotA33",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 135,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 18,
-          name = "JennyShotA34",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 6,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 19,
-          name = "JennyShotA35",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -45,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 20,
-          name = "JennyShotA36",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 45,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 4,
-      name = "JennyShotB1",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 6,
-          name = "JennyShotB11",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 7,
-          name = "JennyShotB12",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 6,
-      name = "JennyShotB2",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 12,
-          name = "JennyShotB21",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 15,
-          name = "JennyShotB22",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 0,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 13,
-          name = "JennyShotB23",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 14,
-          name = "JennyShotB24",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 180,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 8,
-      name = "JennyShotB3",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 99
-      },
-      objects = {
-        {
-          id = 22,
-          name = "JennyShotB31",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 23,
-          name = "JennyShotB32",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 0,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 24,
-          name = "JennyShotB33",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 90,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 25,
-          name = "JennyShotB34",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 180,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 28,
-          name = "JennyShotB35",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -135,
-          gid = 3,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 29,
-          name = "JennyShotB36",
-          class = "JennyShot",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = -45,
-          gid = 3,
-          visible = true,
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 2,
-      name = "Jenny",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {
-        ["z"] = 100
-      },
-      objects = {
-        {
-          id = 30,
-          name = "JennyKilled",
-          class = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 0,
-          gid = 4,
-          visible = true,
-          properties = {
-            ["lifetime"] = "animation"
-          }
-        },
-        {
-          id = 1,
-          name = "Jenny",
-          class = "",
-          shape = "rectangle",
-          x = 0,
-          y = 0,
-          width = 32,
-          height = 32,
-          rotation = 0,
-          gid = 2,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 31,
-          name = "JennyKilledSplat",
-          class = "",
-          shape = "rectangle",
-          x = 0,
-          y = 8,
-          width = 64,
-          height = 64,
-          rotation = 0,
-          gid = 10,
-          visible = true,
-          properties = {
-            ["lifetime"] = "animation"
-          }
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
       id = 9,
       name = "JennyShot",
       class = "",
@@ -861,7 +353,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 99
+      },
       objects = {
         {
           id = 32,
@@ -1002,6 +496,70 @@ return {
           gid = 3,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 2,
+      name = "Jenny",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {
+        ["z"] = 100
+      },
+      objects = {
+        {
+          id = 30,
+          name = "JennyKilled",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 4,
+          visible = true,
+          properties = {
+            ["lifetime"] = "animation"
+          }
+        },
+        {
+          id = 1,
+          name = "Jenny",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 2,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "JennyKilledSplat",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 8,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 10,
+          visible = true,
+          properties = {
+            ["lifetime"] = "animation"
+          }
         }
       }
     }
