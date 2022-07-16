@@ -3,6 +3,7 @@ local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 
+local cos, sin = math.cos, math.sin
 local huge = math.huge
 local testrects = math.testrects
 
@@ -66,6 +67,14 @@ function Character:init()
     self.x = self.x or 0
     self.y = self.y or 0
     self.z = self.z or 0
+    if self.velx == "forward" or self.vely == "forward" then
+        local speed = self.speed or 0
+        local rotation = self.rotation or 0
+        if speed > 0 then
+            self.velx = speed * cos(rotation)
+            self.vely = speed * sin(rotation)
+        end
+    end
     self.velx = self.velx or 0
     self.vely = self.vely or 0
     self.velz = self.velz or 0
