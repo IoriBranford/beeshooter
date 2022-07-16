@@ -136,36 +136,42 @@ end
 
 local DropperTransform = love.math.newTransform()
 
+function Character:spawnType(typ)
+    local prefab = Database.get(typ)
+    if not prefab then
+        return
+    end
+
+    local offsetx, offsety = prefab.x, prefab.y
+
+    local drop = {
+        type = typ,
+        layer = self.layer
+    }
+    if prefab.applyspawnertransform then
+        local rotation = (self.rotation or 0)
+        local scalex   = (self.scalex or 1)
+        local scaley   = (self.scaley or 1)
+        drop.rotation = rotation + (prefab.rotation or 0)
+        drop.scalex   = scalex * (prefab.scalex or 1)
+        drop.scaley   = scaley * (prefab.scaley or 1)
+        DropperTransform:setTransformation(0, 0, rotation, scalex, scaley)
+        offsetx, offsety = DropperTransform:transformPoint(offsetx, offsety)
+        -- drop.velx, drop.vely = DroppedTransform:transformPoint(dropprefab.velx or 0, dropprefab.vely or 0)
+    end
+    drop.x, drop.y = self.x + offsetx, self.y + offsety
+
+    local Stage = require "BeeShooter.Stage"
+    Stage.addCharacter(drop)
+end
+
 function Character:spawnTypes(typeslist)
     if not typeslist then
         return
     end
 
     for typ in string.gmatch(typeslist, "%w+") do
-        local Stage = require "BeeShooter.Stage"
-        local dropprefab = Database.get(typ)
-        if dropprefab then
-            local offsetx, offsety = dropprefab.x, dropprefab.y
-
-            local drop = {
-                type = typ,
-                layer = self.layer
-            }
-            if dropprefab.applyspawnertransform then
-                local rotation = (self.rotation or 0)
-                local scalex   = (self.scalex or 1)
-                local scaley   = (self.scaley or 1)
-                drop.rotation = rotation + (dropprefab.rotation or 0)
-                drop.scalex   = scalex * (dropprefab.scalex or 1)
-                drop.scaley   = scaley * (dropprefab.scaley or 1)
-                DropperTransform:setTransformation(0, 0, rotation, scalex, scaley)
-                offsetx, offsety = DropperTransform:transformPoint(offsetx, offsety)
-                -- drop.velx, drop.vely = DroppedTransform:transformPoint(dropprefab.velx or 0, dropprefab.vely or 0)
-            end
-            drop.x, drop.y = self.x + offsetx, self.y + offsety
-
-            Stage.addCharacter(drop)
-        end
+        self:spawnType(typ)
     end
 end
 
