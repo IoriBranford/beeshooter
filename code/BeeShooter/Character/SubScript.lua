@@ -17,9 +17,9 @@ local Env = {
     abs = math.abs,
     atan2 = math.atan2
 }
-local self
 local EnvMetatable = {
     __index = function(_, k)
+        local self = Env.self
         local v = self.script and self.script[k]
         if v == nil then
             v = self[k]
@@ -59,18 +59,9 @@ function SubScript.run(character)
         return
     end
 
-    self = character
-    Env.self = self
-    local t = type(thread)
-    if t=="string" then
-        Env[thread]()
-    elseif t=="thread" then
-        local ok, err = resume(thread, self)
-        assert(ok, err)
-    elseif t=="function" then
-        thread()
-    end
-    self = nil
+    Env.self = character
+    local ok, err = resume(thread, character)
+    assert(ok, err)
     Env.self = nil
 
     if co_status(thread) == "dead" then
