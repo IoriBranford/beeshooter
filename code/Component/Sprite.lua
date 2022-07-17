@@ -19,7 +19,9 @@ function Sprite:newAseprite(scene)
         = self.animation or 1, 1,
         self.x, self.y,
         self.spriteoriginx or 0, self.spriteoriginy or 0
-    local z, r, sx, sy = self.z, self.rotation, self.scalex, self.scaley
+    local z, r, sx, sy, sxy = self.z, self.rotation, self.scalex, self.scaley, self.scalexy or 1
+    sx = sx * sxy
+    sy = sy * sxy
 
     if type(frameortag) == "string" then
         return scene:addAnimatedAseprite(ase, frameortag, tagframe,
@@ -64,11 +66,12 @@ function Sprite:update(sprite, fixedfrac)
         local x, y = self.x, self.y
         local z = self.z
         local angle = self.rotation or 0
+        local scalexy = self.scalexy or 1
         sprite.x = x + vx * fixedfrac
         sprite.y = y + vy * fixedfrac
         sprite.z = z + vz * fixedfrac
-        sprite.sx = self.scalex
-        sprite.sy = self.scaley
+        sprite.sx = self.scalex * scalexy
+        sprite.sy = self.scaley * scalexy
         sprite.r = angle
         -- sprite.oy = (self.spriteoriginy or 0) + z
     end
