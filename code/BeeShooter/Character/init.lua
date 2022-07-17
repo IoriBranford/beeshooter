@@ -2,6 +2,7 @@ local Script = require "Component.Script"
 local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
 local Audio    = require "System.Audio"
+local Movement = require "Component.Movement"
 
 local cos, sin = math.cos, math.sin
 local huge = math.huge
@@ -272,10 +273,47 @@ function Character:stopShooting()
     self:setShooting(nil)
 end
 
+---@param property string name of a number property of the character
+---@param target number
+---@param time number
+function Character:setLerpingTime(property, start, target, time)
+    self.lerpproperty = property
+    self.lerpdelta = (target - start) / time
+    self.lerptarget = target
+    self.lerptime = time
+    self[property] = start
+end
+
+function Character:stopLerping()
+    self.lerpproperty = nil
+    self.lerpdelta = nil
+    self.lerptarget = nil
+    self.lerptime = nil
+end
+
+local function fixedupdateLerp(self)
+    local lerpproperty = self.lerpproperty
+    local lerptarget = self.lerptarget
+    local lerpdelta = self.lerpdelta
+    local lerptime = self.lerptime or 0
+    if not lerpproperty or not lerptarget or not lerpdelta or lerptime <= 0 then
+        return
+    end
+
+    self[lerpproperty] = Movement.moveTowards(self[lerpproperty], lerptarget, lerpdelta)
+    lerptime = lerptime - 1
+    self.lerptime = lerptime
+    if lerptime <= 0 then
+        self[lerpproperty] = lerptarget
+        self:stopLerping()
+    end
+end
+
 function Character:fixedupdate()
     self.age = self.age + 1
     fixedupdateDamage(self)
     fixedupdateShoot(self)
+    fixedupdateLerp(self)
     Script.run(self)
     if self.lifetime > 0 and self.age >= self.lifetime then
         self:markDisappear()
