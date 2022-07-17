@@ -152,10 +152,12 @@ function Character:spawnType(typ)
         local rotation = (self.rotation or 0)
         local scalex   = (self.scalex or 1)
         local scaley   = (self.scaley or 1)
+        local scalexy = self.scalexy or 1
         drop.rotation = rotation + (prefab.rotation or 0)
+        drop.scalexy = scalexy * (prefab.scalexy or 1)
         drop.scalex   = scalex * (prefab.scalex or 1)
         drop.scaley   = scaley * (prefab.scaley or 1)
-        DropperTransform:setTransformation(0, 0, rotation, scalex, scaley)
+        DropperTransform:setTransformation(0, 0, rotation, scalex*scalexy, scaley*scalexy)
         offsetx, offsety = DropperTransform:transformPoint(offsetx, offsety)
         -- drop.velx, drop.vely = DroppedTransform:transformPoint(dropprefab.velx or 0, dropprefab.vely or 0)
     end
