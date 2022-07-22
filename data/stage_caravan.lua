@@ -4053,7 +4053,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4072,7 +4071,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4162,7 +4160,7 @@ return {
                 },
                 {
                   id = 453,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
@@ -4172,12 +4170,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 15)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
                   id = 454,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 192,
@@ -4187,7 +4185,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 15)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
@@ -4264,7 +4262,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4283,7 +4280,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4369,7 +4365,7 @@ return {
                 },
                 {
                   id = 442,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -4379,12 +4375,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 20)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
                   id = 443,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -4394,7 +4390,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 20)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
@@ -4441,7 +4437,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4460,7 +4455,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0,
                     ["z"] = -10
                   }
                 },
@@ -4574,7 +4568,7 @@ return {
                 },
                 {
                   id = 444,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
@@ -4584,12 +4578,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 20)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
                   id = 445,
-                  name = "",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
@@ -4599,7 +4593,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", 0, 1, 20)"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
