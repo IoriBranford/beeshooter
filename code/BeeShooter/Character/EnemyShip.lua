@@ -83,6 +83,7 @@ local function flyPath(self, path, meleedamage)
         until self.x == destx and self.y - pathy == desty
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
+            self.pathpoint = pointdata
             SubScript.start(self, pointdata.subscript)
         end
     end
