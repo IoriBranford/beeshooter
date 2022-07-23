@@ -69,6 +69,10 @@ local function readMapObjectLayer(objectlayer)
     end
     objectlayer.paths = paths
     objectlayer.characters = characters
+    objectlayer.objects = nil
+    for i = #objectlayer, 1, -1 do
+        objectlayer[i] = nil
+    end
     return objectlayer
 end
 
@@ -90,6 +94,7 @@ local function doStageSpawn(stagespawn)
         end
     end
     Stage.addCharacters(stagespawn.characters)
+    stagespawn.characters = nil
 end
 
 function Stage.init(startpoint)
@@ -119,6 +124,7 @@ function Stage.init(startpoint)
         stage.vely = 0
         scene:addLayers(stage, "group,tilelayer,imagelayer")
         local stagespawns = stage.spawns
+        stage.spawns = nil
         if stagespawns then
             for _, stagespawn in ipairs(stagespawns) do
                 readMapObjectLayer(stagespawn)
@@ -227,6 +233,10 @@ local function prune(chars)
     for i = n, 1, -1 do
         local char = chars[i]
         if char:willDisappear() then
+            char.player = nil
+            char.enemies = nil
+            char.layer = nil
+            char.stage = nil
             char:disappear()
             chars[i] = chars[n]
             chars[n] = nil
