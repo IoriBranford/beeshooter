@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
  <tileset firstgid="1" source="../tilesets/Wasp.tsx"/>
- <object class="Wasp" gid="1" width="40" height="30">
+ <object class="Wasp" gid="2147483649" width="40" height="30">
   <properties>
    <property name="collidable" type="bool" value="false"/>
    <property name="color" type="color" value="#80ffffff"/>
-   <property name="scalexy" type="float" value="0.5"/>
    <property name="z" type="float" value="-10"/>
   </properties>
  </object>
