@@ -6,6 +6,7 @@ local GamePhase     = require "BeeShooter.GamePhase"
 local Audio         = require "System.Audio"
 local PlayerShip    = require "BeeShooter.Character.PlayerShip"
 local Database      = require "Data.Database"
+local Script        = require "Component.Script"
 local EnemyShip = {}
 
 local cos, sin, atan2 = math.cos, math.sin, math.atan2
@@ -163,6 +164,20 @@ function EnemyShip:Faller()
     end
 end
 
+function EnemyShip:chargePlayer()
+    local speed = self.speed
+    local dirx, diry = math.norm(self.player.x - self.x, self.player.y - self.y)
+    self.velx, self.vely = dirx * speed, diry * speed
+    self:faceSpriteX(dirx)
+end
+
+function EnemyShip:PlayerCharger()
+    EnemyShip.chargePlayer(self)
+    waitForOnscreenState(self, true)
+    waitForOnscreenState(self, false)
+    self:markDisappear()
+end
+
 function EnemyShip:shootXY(bullettype, velx, vely)
     velx, vely = velx or 0, vely or 0
     local angle = velx == 0 and vely == 0 and 0 or atan2(vely, velx)
@@ -223,6 +238,12 @@ end
 
 function EnemyShip:shootAimAngle()
     EnemyShip.shootAS(self, self.bullettype, self.aimangle)
+end
+
+---@param self Character
+function EnemyShip:startWaspAttack()
+    self:setShooting(EnemyShip.shootAtPlayer, 6, 5)
+    Script.setNext(self, EnemyShip.PlayerCharger)
 end
 
 ---@param self Character
