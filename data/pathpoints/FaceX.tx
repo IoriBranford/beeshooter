@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="facex" type="int" value="0"/>
+   <property name="subscript" value="faceSpriteX(self, pathpoint.facex)"/>
+  </properties>
+  <point/>
+ </object>
+</template>

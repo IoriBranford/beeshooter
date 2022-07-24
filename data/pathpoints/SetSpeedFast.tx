@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="speed" type="int" value="1"/>
+   <property name="subscript" value="self.speed = self.fastspeed or 2"/>
+  </properties>
+  <point/>
+ </object>
+</template>
