@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 49,
-  nextobjectid = 562,
+  nextlayerid = 50,
+  nextobjectid = 563,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -7543,6 +7543,35 @@ return {
                   properties = {
                     ["subscript"] = "self.speed = fastspeed or 4"
                   }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 49,
+              name = "teststart",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 562,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
                 }
               }
             },

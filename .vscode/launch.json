@@ -5,13 +5,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug LOVE",
+            "name": "Debug",
             "type": "lua-local",
             "request": "launch",
             "program": {
                 "command": "love"
             },
             "args": ["${workspaceFolder}", "--debug"]
-        }
+        },
+        {
+            "name": "Debug test content",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "love"
+            },
+            "args": ["${workspaceFolder}", "--startpoint", "teststart"]
+        },
     ]
 }
