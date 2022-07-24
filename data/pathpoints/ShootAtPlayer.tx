@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="shootinterval" type="int" value="1"/>
+   <property name="shoottimes" type="int" value="1"/>
+   <property name="subscript" value="setShooting(self, shootAtPlayer, pathpoint.shootinterval, pathpoint.shoottimes)"/>
+  </properties>
+  <point/>
+ </object>
+</template>
