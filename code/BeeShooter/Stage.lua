@@ -179,7 +179,7 @@ end
 
 function Stage.startGame()
     stage.vely = stage.startvely or .75
-    Script.start(player, PlayerShip.recenter)
+    Script.start(player, PlayerShip.respawn)
 end
 
 function Stage.addCharacter(object)
@@ -328,11 +328,15 @@ end
 
 function Stage.win()
     Stage.stop()
-    Script.start(player, PlayerShip.win, gametimer)
+    Script.start(player, PlayerShip.win)
 end
 
 function Stage.lose()
     Stage.stop()
+end
+
+function Stage.getTimeLeft()
+    return gametimer
 end
 
 local function drawTimer()

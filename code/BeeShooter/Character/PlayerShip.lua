@@ -50,7 +50,7 @@ function PlayerShip:start()
     self.nextlifeindex = 1
 end
 
-function PlayerShip:recenter(nextaction)
+function PlayerShip:recenter()
     self.invincibletime = 240
     local camera = self.camera
     local x, y, destx, desty
@@ -65,7 +65,11 @@ function PlayerShip:recenter(nextaction)
     until abs(velx) < 1 and abs(vely) < 1
     Body.setPosition(self, destx, desty)
     Body.setVelocity(self, 0, 0)
-    return nextaction or PlayerShip.fight
+end
+
+function PlayerShip:respawn()
+    PlayerShip.recenter(self)
+    Script.setNext(self, PlayerShip.fight)
 end
 
 local function inputMovement(self)
@@ -178,7 +182,8 @@ function PlayerShip:defeat()
             self.invincibletime = hurtinvincibletime
         end
         Audio.play(self.hurtsound)
-        return PlayerShip.fight
+        Script.setNext(self, PlayerShip.fight)
+        return
     end
     self.power = max(1, self.power)
     die(self)
@@ -199,7 +204,7 @@ function PlayerShip:defeat()
     local destx = camera.x + camera.width/2
     local desty = camera.y + camera.height + 16
     Body.setPosition(self, destx, desty)
-    return PlayerShip.recenter
+    Script.setNext(self, PlayerShip.respawn)
 end
 
 local function tallyBonuses(self, timeleft)
@@ -217,12 +222,13 @@ local function tallyBonuses(self, timeleft)
     end
 end
 
-function PlayerShip:win(timeleft)
+function PlayerShip:win()
     self.collidable = false
     self.defeated = false
     self.health = 1
     self.sprite:setHidden(false)
     PlayerShip.recenter(self)
+    local timeleft = Stage.getTimeLeft()
     tallyBonuses(self, timeleft)
 end
 

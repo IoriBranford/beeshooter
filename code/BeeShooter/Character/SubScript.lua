@@ -61,7 +61,9 @@ function SubScript.run(character)
 
     Env.self = character
     local ok, err = resume(thread, character)
-    assert(ok, err)
+    if not ok then
+        error(debug.traceback(err))
+    end
     Env.self = nil
 
     if co_status(thread) == "dead" then
