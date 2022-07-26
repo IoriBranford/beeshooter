@@ -174,7 +174,10 @@ end
 function EnemyShip:PlayerCharger()
     EnemyShip.chargePlayer(self)
     waitForOnscreenState(self, true)
-    waitForOnscreenState(self, false)
+    while self:isSpriteOnScreen() do
+        meleeAttack(self)
+        yield()
+    end
     self:markDisappear()
 end
 
@@ -242,7 +245,7 @@ end
 
 ---@param self Character
 function EnemyShip:startWaspAttack()
-    self:setShooting(EnemyShip.shootAtPlayer, 6, 5)
+    self.speed = self.chargeplayerspeed or 5
     Script.setNext(self, EnemyShip.PlayerCharger)
 end
 

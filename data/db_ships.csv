@@ -12,5 +12,5 @@ AlienPillager,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,4,TRUE,,,sounds
 AlienMind,BeeShooter.Character.EnemyShip,AlienMind,defeatAlienMind,EnemyShip,1,64,TRUE,,sounds/bugkill1.mp3,sounds/bugkill2.mp3,5000,KillSmall KillMedium
 InfiniteHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
 InfiniteHoneyPotOpen,BeeShooter.Character.EnemyShip,Idler,openInfiniteHoneyPot,EnemyShip,,1,TRUE,,,sounds/breakpot.mp3,,InfiniteHoneyPotOpen Powerup
-Wasp,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,2,8,TRUE,FlyBullet,,sounds/bugkill2.mp3,500,KillSmall KillMedium
+Wasp,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,1,4,TRUE,,,sounds/bugkill2.mp3,500,KillSmall KillMedium
 Beetle,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,0.5,16,TRUE,,,sounds/bugkill2.mp3,1000,KillSmall KillMedium
