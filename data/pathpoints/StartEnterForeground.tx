@@ -2,7 +2,10 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="setLerpingTime(self, &quot;scalexy&quot;, 0.5, 1, 15)"/>
+   <property name="scalexy0" type="float" value="0.5"/>
+   <property name="scalexy1" type="float" value="1"/>
+   <property name="subscript" value="setLerpingTime(self, &quot;scalexy&quot;, pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)"/>
+   <property name="time" type="int" value="15"/>
   </properties>
   <point/>
  </object>
