@@ -164,21 +164,12 @@ function EnemyShip:Faller()
     end
 end
 
-function EnemyShip:chargePlayer()
+function EnemyShip:chargePlayer(dir)
+    dir = dir or 1
     local speed = self.speed
     local dirx, diry = math.norm(self.player.x - self.x, self.player.y - self.y)
-    self.velx, self.vely = dirx * speed, diry * speed
+    self.velx, self.vely = dir * dirx * speed, dir * diry * speed
     self:faceSpriteX(dirx)
-end
-
-function EnemyShip:PlayerCharger()
-    EnemyShip.chargePlayer(self)
-    waitForOnscreenState(self, true)
-    while self:isSpriteOnScreen() do
-        meleeAttack(self)
-        yield()
-    end
-    self:markDisappear()
 end
 
 function EnemyShip:shootXY(bullettype, velx, vely)
@@ -243,10 +234,25 @@ function EnemyShip:shootAimAngle()
     EnemyShip.shootAS(self, self.bullettype, self.aimangle)
 end
 
+function EnemyShip:WaspCharge()
+    EnemyShip.chargePlayer(self)
+    waitForOnscreenState(self, true)
+    local turnedaround
+    while self:isSpriteOnScreen() do
+        if not turnedaround and self.health <= (self.fleeathealth or 4) then
+            EnemyShip.chargePlayer(self, -1)
+            turnedaround = true
+        end
+        meleeAttack(self)
+        yield()
+    end
+    self:markDisappear()
+end
+
 ---@param self Character
 function EnemyShip:startWaspAttack()
     self.speed = self.chargeplayerspeed or 5
-    Script.setNext(self, EnemyShip.PlayerCharger)
+    Script.setNext(self, EnemyShip.WaspCharge)
 end
 
 ---@param self Character
