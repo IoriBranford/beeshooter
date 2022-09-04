@@ -1,7 +1,7 @@
 return {
   version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.9.0",
+  tiledversion = "1.9.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 27,
+  nextobjectid = 28,
   properties = {},
   tilesets = {
     {
@@ -1191,6 +1191,78 @@ return {
           }
         }
       }
+    },
+    {
+      name = "AcidBullet",
+      firstgid = 93,
+      class = "",
+      tilewidth = 16,
+      tileheight = 8,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/AcidBullet.png",
+      imagewidth = 32,
+      imageheight = 8,
+      objectalignment = "right",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 3,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 8
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 11,
+                y = 2,
+                width = 4,
+                height = 4,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1400,6 +1472,22 @@ return {
           height = 8,
           rotation = 0,
           gid = 18,
+          visible = true,
+          properties = {
+            ["z"] = 20
+          }
+        },
+        {
+          id = 27,
+          name = "AcidBullet",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 93,
           visible = true,
           properties = {
             ["z"] = 20
