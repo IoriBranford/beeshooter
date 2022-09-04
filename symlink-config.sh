@@ -1,3 +1,3 @@
 #!/bin/sh
 
-ln -s $HOME/.local/share/love/BeeShooter/config.lua config.lua
+ln -s "$HOME/.local/share/love/Honey Guardian/config.lua" config.lua
