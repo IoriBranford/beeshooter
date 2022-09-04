@@ -7,9 +7,10 @@ local Audio         = require "System.Audio"
 local PlayerShip    = require "BeeShooter.Character.PlayerShip"
 local Database      = require "Data.Database"
 local Script        = require "Component.Script"
+local Sprite        = require "Component.Sprite"
 local EnemyShip = {}
 
-local cos, sin, atan2 = math.cos, math.sin, math.atan2
+local pi, cos, sin, atan2 = math.pi, math.cos, math.sin, math.atan2
 local abs = math.abs
 local huge = math.huge
 local distsq = math.distsq
@@ -264,6 +265,29 @@ function EnemyShip:AlienGunner_shootAtPlayer()
     if angle == angle then
         self.aimangle = angle
         self:setShooting(EnemyShip.shootAimAngle, 1, 5)
+    end
+end
+
+function EnemyShip:BeetleSpray(centerangle)
+    centerangle = centerangle or pi/2
+    Sprite.setDirectionalTile_angle(self.sprite, "spray", 4, centerangle)
+    local allangles = {
+        { -5, -4, -3, 3, 4, 5 },
+        { -5, -4, -2, 2, 4, 5 },
+        { -4, -3, -1, 1, 3, 4 },
+        { -3, -2, -1, 1, 2, 3 },
+        { -4, -3, -1, 1, 3, 4 },
+        { -5, -4, -2, 2, 4, 5 },
+    }
+    local interangle = pi/20
+    while true do
+        for _, angles in ipairs(allangles) do
+            for _, angle in ipairs(angles) do
+                angle = centerangle + angle*interangle
+                EnemyShip.shootAS(self, self.bullettype, angle)
+            end
+            wait(20)
+        end
     end
 end
 
