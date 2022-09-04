@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="54" nextobjectid="587">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="55" nextobjectid="592">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -11,6 +11,7 @@
  <tileset firstgid="490" source="tilesets/BeehiveObjects.tsx"/>
  <tileset firstgid="502" source="tilesets/Fly.tsx"/>
  <tileset firstgid="518" source="tilesets/Aliens.tsx"/>
+ <tileset firstgid="536" source="tilesets/Beetle.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -1330,7 +1331,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="48" name="testwasp2">
     <object id="556" template="enemies/Trigger.tx" x="-16" y="1792"/>
-    <object id="557" template="enemies/WaspBackground.tx" gid="0" x="160" y="1848"/>
+    <object id="557" template="enemies/WaspBackground.tx" x="160" y="1848"/>
     <object id="558" template="enemies/Path.tx" x="160" y="1848">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -1358,7 +1359,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="50" name="testwasp4">
     <object id="563" template="enemies/Trigger.tx" x="-16" y="1744"/>
-    <object id="564" template="enemies/WaspBackground.tx" gid="0" x="192" y="1832"/>
+    <object id="564" template="enemies/WaspBackground.tx" x="192" y="1832"/>
     <object id="565" template="enemies/Path.tx" x="192" y="1832">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -1386,7 +1387,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="52" name="testwasp6">
     <object id="575" template="enemies/Trigger.tx" x="-16" y="1696"/>
-    <object id="576" template="enemies/WaspBackground.tx" gid="0" x="224" y="1816"/>
+    <object id="576" template="enemies/WaspBackground.tx" x="224" y="1816"/>
     <object id="577" template="enemies/Path.tx" x="224" y="1816">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -1397,6 +1398,18 @@ self.speed = 0.75</property>
     </object>
     <object id="579" template="pathpoints/FinishEnterForeground.tx" x="224" y="1784"/>
     <object id="580" template="pathpoints/WaspAttack.tx" class="PathPoint" x="224" y="1776"/>
+   </objectgroup>
+   <objectgroup id="54" name="testbeetle1">
+    <object id="587" template="enemies/Trigger.tx" x="-16" y="1664"/>
+    <object id="589" template="enemies/Path.tx" x="128" y="1728">
+     <polyline points="0,0 0,-32 0,-128"/>
+    </object>
+    <object id="590" template="enemies/Beetle.tx" gid="541" x="128" y="1728" width="48" height="48"/>
+    <object id="591" template="enemies/PathPoint.tx" x="128" y="1696">
+     <properties>
+      <property name="subscript" value="BeetleSpray(self)"/>
+     </properties>
+    </object>
    </objectgroup>
   </group>
  </group>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.0" name="Beetle" tilewidth="48" tileheight="48" tilecount="20" columns="5" objectalignment="center">
+<tileset version="1.9" tiledversion="1.9.1" name="Beetle" tilewidth="48" tileheight="48" tilecount="20" columns="5" objectalignment="center">
  <image source="Beetle.png" width="240" height="192"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
@@ -22,6 +22,9 @@
   </objectgroup>
  </tile>
  <tile id="3">
+  <properties>
+   <property name="name" value="spray3"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -56,6 +59,9 @@
   </objectgroup>
  </tile>
  <tile id="8">
+  <properties>
+   <property name="name" value="spray1"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -90,6 +96,9 @@
   </objectgroup>
  </tile>
  <tile id="13">
+  <properties>
+   <property name="name" value="spray2"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -124,6 +133,9 @@
   </objectgroup>
  </tile>
  <tile id="18">
+  <properties>
+   <property name="name" value="spray0"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
