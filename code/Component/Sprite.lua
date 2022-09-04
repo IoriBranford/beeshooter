@@ -95,6 +95,13 @@ function Sprite.getDirectionalTileId_vector(basetileid, numdirections, vecx, vec
     return Sprite.getDirectionalTileId_angle(basetileid, numdirections, angle)
 end
 
+function Sprite.setDirectionalTile_angle(sprite, basetileid, numdirections, angle)
+    local tileset = sprite and sprite:getObjectTileset()
+    if tileset then
+        sprite:changeTile(Sprite.getDirectionalTileId_angle(basetileid, numdirections, angle))
+    end
+end
+
 function Sprite.setDirectionalTile_vector(sprite, basetileid, numdirections, vecx, vecy)
     local tileset = sprite and sprite:getObjectTileset()
     if tileset then
