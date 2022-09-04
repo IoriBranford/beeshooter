@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 7,
-  nextobjectid = 28,
+  nextobjectid = 29,
   properties = {},
   tilesets = {
     {
@@ -504,11 +504,11 @@ return {
           animation = {
             {
               tileid = 2,
-              duration = 50
+              duration = 100
             },
             {
               tileid = 3,
-              duration = 50
+              duration = 100
             }
           }
         }
@@ -1656,6 +1656,22 @@ return {
             ["collidable"] = false,
             ["color"] = "#80ffffff",
             ["z"] = -10
+          }
+        },
+        {
+          id = 28,
+          name = "AcidAnt",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {
+            ["z"] = 1
           }
         }
       }
