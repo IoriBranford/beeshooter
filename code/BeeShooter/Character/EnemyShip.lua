@@ -25,32 +25,11 @@ local function waitForOnscreenState(self, onscreenstate)
     end
 end
 
----@param self Character
-local function walkPath(self, path)
-    if not path then
-        return
-    end
-    local points = path.points
-    local pointsdata = path.pointsdata
-    local stage = self.stage
-    for i = 2, #points, 2 do
-        repeat
-            SubScript.run(self)
-            local destx, desty = points[i-1], points[i]
-            local velx, vely = Movement.getVelocity_speed(self.x, self.y - stage.y, destx, desty, self.speed or 1)
-            Body.setVelocity(self, velx, vely + stage.vely)
-            yield()
-        until self.x == destx and self.y - stage.y == desty
-        local pointdata = pointsdata and pointsdata[i]
-        if pointdata then
-            self.pathpoint = pointdata
-            SubScript.start(self, pointdata.subscript)
-        end
-    end
-end
-
 local function meleeAttack(self, damage)
     if not self.collidable then
+        return
+    end
+    if damage <= 0 then
         return
     end
     local hitbox = self.hitbox
@@ -68,28 +47,42 @@ local function meleeAttack(self, damage)
 end
 
 ---@param self Character
-local function flyPath(self, path, meleedamage)
+local function movePath(self, path, parent, meleedamage)
     if not path then
         return
     end
+    meleedamage = meleedamage or 0
     local points = path.points
-    local pathy = path.y
     local pointsdata = path.pointsdata
     for i = 2, #points, 2 do
         repeat
             SubScript.run(self)
             local destx, desty = points[i-1], points[i]
-            local velx, vely = Movement.getVelocity_speed(self.x, self.y - pathy, destx, desty, self.speed or 1)
-            Body.setVelocity(self, velx, vely)
+            local parenty = parent and parent.y or 0
+            local parentvely = parent and parent.vely or 0
+            local velx, vely = Movement.getVelocity_speed(self.x, self.y - parenty, destx, desty, self.speed or 1)
+            Body.setVelocity(self, velx, vely + parentvely)
             meleeAttack(self, meleedamage)
             yield()
-        until self.x == destx and self.y - pathy == desty
+        until self.x == destx
+        and self.y - (parent and parent.y or 0) == desty
+
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
             self.pathpoint = pointdata
             SubScript.start(self, pointdata.subscript)
         end
     end
+end
+
+---@param self Character
+local function walkPath(self, path)
+    movePath(self, path, self.stage)
+end
+
+---@param self Character
+local function flyPath(self, path, meleedamage)
+    movePath(self, path, path, meleedamage)
 end
 
 function EnemyShip:Idler()
@@ -245,7 +238,7 @@ function EnemyShip:WaspCharge()
             EnemyShip.chargePlayer(self, -1)
             turnedaround = true
         end
-        meleeAttack(self)
+        meleeAttack(self, 1)
         yield()
     end
     self:markDisappear()
