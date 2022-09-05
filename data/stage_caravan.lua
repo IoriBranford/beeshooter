@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 55,
-  nextobjectid = 592,
+  nextlayerid = 56,
+  nextobjectid = 599,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -9021,6 +9021,139 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 55,
+              name = "testacidant1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 592,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1632,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 593,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1648,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 598,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 296,
+                  y = 1640,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 594,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -16,
+                  y = 1648,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 48, y = 16 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 597,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 176,
+                  y = 1648,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 120, y = -8 },
+                    { x = 48, y = 16 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 595,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1664,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["burstinterval"] = 30,
+                    ["bursts"] = 4,
+                    ["burstshots"] = 6,
+                    ["shotinterval"] = 3,
+                    ["subscript"] = "shootBurstsAtPlayer(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval)"
+                  }
+                },
+                {
+                  id = 596,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1664,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["burstinterval"] = 30,
+                    ["bursts"] = 4,
+                    ["burstshots"] = 6,
+                    ["shotinterval"] = 3,
+                    ["subscript"] = "shootBurstsAtPlayer(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 54,
               name = "testbeetle1",
               class = "",
@@ -9038,7 +9171,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1664,
+                  y = 1552,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -9051,7 +9184,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 128,
-                  y = 1728,
+                  y = 1616,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -9069,7 +9202,7 @@ return {
                   class = "Beetle",
                   shape = "rectangle",
                   x = 128,
-                  y = 1728,
+                  y = 1616,
                   width = 48,
                   height = 48,
                   rotation = 0,
@@ -9085,7 +9218,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 128,
-                  y = 1696,
+                  y = 1584,
                   width = 0,
                   height = 0,
                   rotation = 0,

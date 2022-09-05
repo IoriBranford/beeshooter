@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="55" nextobjectid="592">
+<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="56" nextobjectid="599">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -1399,13 +1399,40 @@ self.speed = 0.75</property>
     <object id="579" template="pathpoints/FinishEnterForeground.tx" x="224" y="1784"/>
     <object id="580" template="pathpoints/WaspAttack.tx" class="PathPoint" x="224" y="1776"/>
    </objectgroup>
+   <objectgroup id="55" name="testacidant1">
+    <object id="592" template="enemies/Trigger.tx" x="-16" y="1632"/>
+    <object id="593" template="enemies/AcidAnt.tx" x="-16" y="1648"/>
+    <object id="598" template="enemies/AcidAnt.tx" gid="2147484131" x="296" y="1640" rotation="0"/>
+    <object id="594" template="enemies/Path.tx" x="-16" y="1648">
+     <polyline points="0,0 48,16"/>
+    </object>
+    <object id="597" template="enemies/Path.tx" x="176" y="1648">
+     <polyline points="120,-8 48,16"/>
+    </object>
+    <object id="595" template="pathpoints/ShootBurstsAtPlayer.tx" x="32" y="1664">
+     <properties>
+      <property name="burstinterval" type="int" value="30"/>
+      <property name="bursts" type="int" value="4"/>
+      <property name="burstshots" type="int" value="6"/>
+      <property name="shotinterval" type="int" value="3"/>
+     </properties>
+    </object>
+    <object id="596" template="pathpoints/ShootBurstsAtPlayer.tx" x="224" y="1664">
+     <properties>
+      <property name="burstinterval" type="int" value="30"/>
+      <property name="bursts" type="int" value="4"/>
+      <property name="burstshots" type="int" value="6"/>
+      <property name="shotinterval" type="int" value="3"/>
+     </properties>
+    </object>
+   </objectgroup>
    <objectgroup id="54" name="testbeetle1">
-    <object id="587" template="enemies/Trigger.tx" x="-16" y="1664"/>
-    <object id="589" template="enemies/Path.tx" x="128" y="1728">
+    <object id="587" template="enemies/Trigger.tx" x="-16" y="1552"/>
+    <object id="589" template="enemies/Path.tx" x="128" y="1616">
      <polyline points="0,0 0,-32 0,-128"/>
     </object>
-    <object id="590" template="enemies/Beetle.tx" gid="541" x="128" y="1728" width="48" height="48"/>
-    <object id="591" template="enemies/PathPoint.tx" x="128" y="1696">
+    <object id="590" template="enemies/Beetle.tx" gid="541" x="128" y="1616" width="48" height="48"/>
+    <object id="591" template="enemies/PathPoint.tx" x="128" y="1584">
      <properties>
       <property name="subscript" value="BeetleSpray(self)"/>
      </properties>
