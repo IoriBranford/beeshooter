@@ -271,7 +271,6 @@ end
 
 function EnemyShip:BeetleSpray(centerangle)
     centerangle = centerangle or pi/2
-    Sprite.setDirectionalTile_angle(self.sprite, "spray", 4, centerangle)
     local allangles = {
         { -5, -4, -3, 3, 4, 5 },
         { -5, -4, -2, 2, 4, 5 },
