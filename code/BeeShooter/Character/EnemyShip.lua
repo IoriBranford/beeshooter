@@ -225,6 +225,13 @@ function EnemyShip:shootAtPlayer()
     EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
 end
 
+function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotinterval)
+    for i = 1, bursts do
+        self:setShooting(EnemyShip.shootAtPlayer, shotinterval, burstshots)
+        wait(burstinterval)
+    end
+end
+
 function EnemyShip:shootAimAngle()
     EnemyShip.shootAS(self, self.bullettype, self.aimangle)
 end
