@@ -43,6 +43,7 @@ local function walkPath(self, path)
         until self.x == destx and self.y - stage.y == desty
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
+            self.pathpoint = pointdata
             SubScript.start(self, pointdata.subscript)
         end
     end
