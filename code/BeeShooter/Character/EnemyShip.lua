@@ -271,23 +271,17 @@ end
 
 function EnemyShip:BeetleSpray(centerangle)
     centerangle = centerangle or pi/2
-    local allangles = {
-        { -5, -4, -3, 3, 4, 5 },
-        { -5, -4, -2, 2, 4, 5 },
-        { -4, -3, -1, 1, 3, 4 },
-        { -3, -2, -1, 1, 2, 3 },
-        { -4, -3, -1, 1, 3, 4 },
-        { -5, -4, -2, 2, 4, 5 },
+    local bursts = {
+        "BeetleBulletA1 BeetleBulletA2",
+        "BeetleBulletB1 BeetleBulletB2",
+        "BeetleBulletC1 BeetleBulletC2",
     }
-    local interangle = pi/20
     while true do
-        for _, angles in ipairs(allangles) do
-            for _, angle in ipairs(angles) do
-                angle = centerangle + angle*interangle
-                EnemyShip.shootAS(self, self.bullettype, angle)
-            end
-            wait(20)
+        for _, burst in ipairs(bursts) do
+            self:spawnTypes(burst)
+            wait(1)
         end
+        wait(27)
     end
 end
 
