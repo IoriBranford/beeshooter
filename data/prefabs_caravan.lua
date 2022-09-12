@@ -1200,9 +1200,9 @@ return {
       tileheight = 8,
       spacing = 0,
       margin = 0,
-      columns = 2,
+      columns = 4,
       image = "tilesets/AcidBullet.png",
-      imagewidth = 32,
+      imagewidth = 64,
       imageheight = 8,
       objectalignment = "right",
       tilerendersize = "tile",
@@ -1218,7 +1218,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 2,
+      tilecount = 4,
       tiles = {
         {
           id = 0,
@@ -1258,6 +1258,19 @@ return {
             },
             {
               tileid = 1,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 2,
+          animation = {
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
               duration = 100
             }
           }
@@ -1705,7 +1718,7 @@ return {
           properties = {
             ["speed"] = 1,
             ["velx"] = "forward",
-            ["z"] = 20
+            ["z"] = 30
           }
         },
         {
@@ -1723,7 +1736,7 @@ return {
           properties = {
             ["speed"] = 2,
             ["velx"] = "forward",
-            ["z"] = 20
+            ["z"] = 30
           }
         },
         {
@@ -1741,7 +1754,7 @@ return {
           properties = {
             ["speed"] = 3,
             ["velx"] = "forward",
-            ["z"] = 20
+            ["z"] = 30
           }
         }
       }
@@ -1770,7 +1783,7 @@ return {
           width = 16,
           height = 8,
           rotation = 90,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 3,
@@ -1788,7 +1801,7 @@ return {
           width = 16,
           height = 8,
           rotation = 90,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 3,
@@ -1806,7 +1819,7 @@ return {
           width = 16,
           height = 8,
           rotation = 60,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 2,
@@ -1824,7 +1837,7 @@ return {
           width = 16,
           height = 8,
           rotation = 45,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 1,
@@ -1842,7 +1855,7 @@ return {
           width = 16,
           height = 8,
           rotation = 120,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 2,
@@ -1860,7 +1873,7 @@ return {
           width = 16,
           height = 8,
           rotation = 135,
-          gid = 93,
+          gid = 95,
           visible = true,
           properties = {
             ["speed"] = 1,

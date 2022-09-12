@@ -100,61 +100,61 @@
    <properties>
     <property name="speed" type="float" value="1"/>
     <property name="velx" value="forward"/>
-    <property name="z" type="int" value="20"/>
+    <property name="z" type="int" value="30"/>
    </properties>
   </object>
   <object id="30" name="AcidAntBullet2" class="AcidBullet" gid="93" x="0" y="0" width="16" height="8">
    <properties>
     <property name="speed" type="float" value="2"/>
     <property name="velx" value="forward"/>
-    <property name="z" type="int" value="20"/>
+    <property name="z" type="int" value="30"/>
    </properties>
   </object>
   <object id="31" name="AcidAntBullet3" class="AcidBullet" gid="93" x="0" y="0" width="16" height="8">
    <properties>
     <property name="speed" type="float" value="3"/>
     <property name="velx" value="forward"/>
-    <property name="z" type="int" value="20"/>
+    <property name="z" type="int" value="30"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup id="7" name="BeetleSpray">
-  <object id="33" name="BeetleBulletC1" class="AcidBullet" gid="93" x="-2" y="16" width="16" height="8" rotation="90">
+  <object id="33" name="BeetleBulletC1" class="AcidBullet" gid="95" x="-2" y="16" width="16" height="8" rotation="90">
    <properties>
     <property name="speed" type="float" value="3"/>
     <property name="velx" value="forward"/>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="36" name="BeetleBulletC2" class="AcidBullet" gid="93" x="2" y="16" width="16" height="8" rotation="90">
+  <object id="36" name="BeetleBulletC2" class="AcidBullet" gid="95" x="2" y="16" width="16" height="8" rotation="90">
    <properties>
     <property name="speed" type="float" value="3"/>
     <property name="velx" value="forward"/>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="34" name="BeetleBulletB2" class="AcidBullet" gid="93" x="7" y="15" width="16" height="8" rotation="60">
+  <object id="34" name="BeetleBulletB2" class="AcidBullet" gid="95" x="7" y="15" width="16" height="8" rotation="60">
    <properties>
     <property name="speed" type="float" value="2"/>
     <property name="velx" value="forward"/>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="38" name="BeetleBulletA2" class="AcidBullet" gid="93" x="12" y="12" width="16" height="8" rotation="45">
+  <object id="38" name="BeetleBulletA2" class="AcidBullet" gid="95" x="12" y="12" width="16" height="8" rotation="45">
    <properties>
     <property name="speed" type="float" value="1"/>
     <property name="velx" value="forward"/>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="35" name="BeetleBulletB1" class="AcidBullet" gid="93" x="-7" y="15" width="16" height="8" rotation="120">
+  <object id="35" name="BeetleBulletB1" class="AcidBullet" gid="95" x="-7" y="15" width="16" height="8" rotation="120">
    <properties>
     <property name="speed" type="float" value="2"/>
     <property name="velx" value="forward"/>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="37" name="BeetleBulletA1" class="AcidBullet" gid="93" x="-12" y="12" width="16" height="8" rotation="135">
+  <object id="37" name="BeetleBulletA1" class="AcidBullet" gid="95" x="-12" y="12" width="16" height="8" rotation="135">
    <properties>
     <property name="speed" type="float" value="1"/>
     <property name="velx" value="forward"/>
