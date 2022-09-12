@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 7,
-  nextobjectid = 29,
+  nextlayerid = 9,
+  nextobjectid = 39,
   properties = {},
   tilesets = {
     {
@@ -1672,6 +1672,200 @@ return {
           visible = true,
           properties = {
             ["z"] = 1
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 8,
+      name = "AcidAntSpray",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 29,
+          name = "AcidAntBullet1",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 1,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 30,
+          name = "AcidAntBullet2",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 2,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 31,
+          name = "AcidAntBullet3",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 3,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "BeetleSpray",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 33,
+          name = "BeetleBulletC1",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = -2,
+          y = 16,
+          width = 16,
+          height = 8,
+          rotation = 90,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 3,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 36,
+          name = "BeetleBulletC2",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 2,
+          y = 16,
+          width = 16,
+          height = 8,
+          rotation = 90,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 3,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 34,
+          name = "BeetleBulletB2",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 7,
+          y = 15,
+          width = 16,
+          height = 8,
+          rotation = 60,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 2,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 38,
+          name = "BeetleBulletA2",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = 12,
+          y = 12,
+          width = 16,
+          height = 8,
+          rotation = 45,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 1,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 35,
+          name = "BeetleBulletB1",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = -7,
+          y = 15,
+          width = 16,
+          height = 8,
+          rotation = 120,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 2,
+            ["velx"] = "forward",
+            ["z"] = 20
+          }
+        },
+        {
+          id = 37,
+          name = "BeetleBulletA1",
+          class = "AcidBullet",
+          shape = "rectangle",
+          x = -12,
+          y = 12,
+          width = 16,
+          height = 8,
+          rotation = 135,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["speed"] = 1,
+            ["velx"] = "forward",
+            ["z"] = 20
           }
         }
       }
