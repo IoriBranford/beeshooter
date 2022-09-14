@@ -343,6 +343,10 @@ local function decodeGids(data, encoding, compression)
     if encoding == "lua" then
         return data
     end
+    local hasffi, ffi = pcall(require, "ffi")
+    if not hasffi then
+        error(love.system.getOS().." platform does not support compressed or encoded tile layers.\nPlease re-export map with CSV tile layer format for this platform.")
+    end
     local gids = {}
     -- if encoding == "csv" then
     --     for gid in data:gmatch("%d+") do
@@ -356,7 +360,6 @@ local function decodeGids(data, encoding, compression)
             data = love.data.decompress("data", compression, data)
         end
     end
-    local ffi = require "ffi"
     local pointer = ffi.cast("uint32_t*", data:getFFIPointer())
     local n = math.floor(data:getSize() / ffi.sizeof("uint32_t"))
 
@@ -524,11 +527,13 @@ function Tiled.load(mapfile)
         end
     end
 
-    local packimagedata, packimageerr = TilePacking.pack(map)
-    if packimagedata then
-        -- TilePacking.save(map, mapfile..".quads", mapfile..".png", packimagedata)
-    else
-        print(packimageerr)
+    if TilePacking.isSupported() then
+        local packimagedata, packimageerr = TilePacking.pack(map)
+        if packimagedata then
+            -- TilePacking.save(map, mapfile..".quads", mapfile..".png", packimagedata)
+        else
+            print(packimageerr)
+        end
     end
 
     local cellwidth = map.tilewidth
