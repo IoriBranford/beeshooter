@@ -25,9 +25,20 @@ local features = {
     }
 }
 
+local defaultconfig = {
+    Web = {
+        key_pausemenu = "p"
+    }
+}
+
 function Platform.supports(feature)
     feature = features[feature]
     return feature ~= nil and feature[OS] == true
+end
+
+function Platform.defaultSetting(setting)
+    local config = defaultconfig[OS]
+    return config and config[setting]
 end
 
 return Platform
