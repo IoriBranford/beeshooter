@@ -2,6 +2,7 @@ local Tiled = require "Data.Tiled"
 local Config = require "System.Config"
 local Wallpaper             = require "System.Wallpaper"
 local Stage                 = require "BeeShooter.Stage"
+local Platform              = require "System.Platform"
 
 local firstphase = "BeeShooter.GamePhase"
 local firstmap = "data/stage_caravan.lua"
@@ -28,7 +29,7 @@ function love.load(args)
     elseif args.windowed then
         Config.fullscreen = false
     end
-    Config.applyDisplayMode(Stage.CameraWidth, Stage.CameraHeight)
+    Config.applyDisplayMode(Stage.CameraWidth, Stage.CameraHeight, 3)
     love.window.setTitle(love.filesystem.getIdentity())
     local iconfile = "appicon/appicon.png"
     if love.filesystem.getInfo(iconfile) then
@@ -59,6 +60,7 @@ return {
     defaultconfig = {
         _version = 1,
         drawbodies = false,
+        maximize = Platform.supports("maximize"),
 
         key_left = "left",
         key_right = "right",
