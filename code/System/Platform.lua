@@ -15,12 +15,19 @@ local features = {
         Linux = true,
         Android = true,
         iOS = true
+    },
+    maximize = {
+        Windows = true,
+        ["Mac OS X"] = true,
+        Linux = true,
+        Android = true,
+        iOS = true
     }
 }
 
 function Platform.supports(feature)
     feature = features[feature]
-    return feature and feature[OS]
+    return feature ~= nil and feature[OS] == true
 end
 
 return Platform
