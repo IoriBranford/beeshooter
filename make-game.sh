@@ -2,7 +2,7 @@
 set -e
 
 LUA=${LUA:=luajit}
-GAME_TYPE=${GAME_TYPE:=demo}
+GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
 
 if [ -e $GAME_ASSET ]
