@@ -35,6 +35,7 @@ love-apk-src/
 game-apk/
 apktool
 appimagetool
+public/
 
 **/ignore/**/*
 
