@@ -9,6 +9,7 @@ function Config.reset(defaultconfig)
 	config = {
         debug = false,
         fullscreen = false,
+		maximize = true,
         exclusive = false,
         vsync = false,
         usedpiscale = false,
@@ -54,7 +55,7 @@ function Config.isPortraitDimensions()
 	return w < h
 end
 
-function Config.applyDisplayMode(basew, baseh)
+function Config.applyDisplayMode(basew, baseh, winmaxscale)
 	local w, h, flags = love.window.getMode()
 	local modes = love.window.getFullscreenModes()
 	local exclusive = Config.exclusive
@@ -63,7 +64,7 @@ function Config.applyDisplayMode(basew, baseh)
 		basew, baseh = baseh, basew
 	end
 	local bestmode
-	local maxscale = 1
+	local maxscale = winmaxscale or 1
 
 	if fullscreen and exclusive then
 		for i = 1, #modes do
@@ -80,7 +81,7 @@ function Config.applyDisplayMode(basew, baseh)
 		if bestmode then
 			maxscale = math.min(bestmode.width/basew, bestmode.height/baseh)
 		end
-	else
+	elseif config.maximize then
 		local deskwidth, deskheight = love.window.getDesktopDimensions()
 		maxscale = math.min(deskwidth/basew, deskheight/baseh)
 	end
