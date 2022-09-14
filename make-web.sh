@@ -9,4 +9,4 @@ WEB_DIR=public
 ./make-game.sh
 
 npm install love.js
-npx love.js ${GAME_ASSET} ${WEB_DIR} -t ${PROJECT_TITLE} -c
+npx love.js ${GAME_ASSET} ${WEB_DIR} -t ${PROJECT_TITLE}
