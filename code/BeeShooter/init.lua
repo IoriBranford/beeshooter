@@ -70,7 +70,7 @@ return {
         key_changeweapon = "x",
         key_changespeed = "c",
         key_pause = "pause",
-        key_pausemenu = "escape",
+        key_pausemenu = Platform.defaultSetting("key_pausemenu") or "escape",
         key_restart = "none",
 
         joy_deadzone = 0.25,
