@@ -47,15 +47,6 @@ end
 
 local TilePacking = {}
 
-function TilePacking.isSupported()
-    local ossupporttilepacking = {
-        Windows = true,
-        ["Mac OS X"] = true,
-        Linux = true
-    }
-    return ossupporttilepacking[love.system.getOS()]
-end
-
 --- Pack tiles in a map.
 --- Do not use with gamma-correct rendering - tiles will be darkened.
 --- @param map table map with unpacked tiles

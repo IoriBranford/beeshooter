@@ -1,6 +1,7 @@
 local Time = require "System.Time"
 local Color= require "Data.Color"
 local TilePacking = require "Data.TilePacking"
+local Platform    = require "System.Platform"
 local Tiled = {}
 Tiled.fontpath = ""
 Tiled.animationtimeunit = "milliseconds"
@@ -527,7 +528,7 @@ function Tiled.load(mapfile)
         end
     end
 
-    if TilePacking.isSupported() then
+    if Platform.supports("tilepacking") then
         local packimagedata, packimageerr = TilePacking.pack(map)
         if packimagedata then
             -- TilePacking.save(map, mapfile..".quads", mapfile..".png", packimagedata)

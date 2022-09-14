@@ -5,6 +5,7 @@ local Config= require "System.Config"
 local Tiled = require "Data.Tiled"
 local Assets= require "System.Assets"
 local Database = require "Data.Database"
+local Platform = require "System.Platform"
 local GamePhase = {}
 
 local paused
@@ -78,7 +79,9 @@ function GamePhase.gamepadpressed(joystick, button)
     or button == "back" and joystick:isGamepadDown("start")
     then
         if status == TitleStatus then
-            love.event.quit()
+            if Platform.supports("quit") then
+                love.event.quit()
+            end
         else
             Stage.restart()
         end
@@ -104,7 +107,9 @@ end
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu then
         if status == TitleStatus then
-            love.event.quit()
+            if Platform.supports("quit") then
+                love.event.quit()
+            end
         elseif status then
             Stage.restart()
         else
