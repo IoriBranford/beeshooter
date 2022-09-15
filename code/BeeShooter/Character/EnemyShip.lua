@@ -241,7 +241,7 @@ function EnemyShip:WaspCharge()
     waitForOnscreenState(self, true)
     local turnedaround
     while self:isSpriteOnScreen() do
-        if not turnedaround and self.health <= (self.fleeathealth or 4) then
+        if not turnedaround and self.health <= (self.fleeathealth or 2) then
             EnemyShip.chargePlayer(self, -1)
             turnedaround = true
         end
