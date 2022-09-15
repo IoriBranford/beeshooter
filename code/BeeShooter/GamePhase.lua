@@ -143,13 +143,15 @@ end
 
 function GamePhase.win()
     Audio.fadeMusic()
-    status = "COMPLETE!\n\nPress ESC key\nor START button"
+    status = "COMPLETE!\n\nPress %s key\nor START button"
+    status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
 end
 
 function GamePhase.lose(reason)
     Audio.fadeMusic()
-    status = reason or "GAME OVER\n\nPress ESC key\nor START button"
+    status = reason or "GAME OVER\n\nPress %s key\nor START button"
+    status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
 end
 
