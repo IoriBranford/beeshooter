@@ -54,3 +54,5 @@ steamcmd/
 .~lock*
 
 *.log
+
+node_modules

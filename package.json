@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "local-web-server": "^5.2.1",
+    "love.js": "^11.4.1"
+  }
+}
