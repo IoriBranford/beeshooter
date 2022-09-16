@@ -166,9 +166,7 @@ function TilePacking.pack(map)
         end
     end
 
-    local canvas = love.graphics.newCanvas(packwidth, packheight, {
-            format = "rgba8"
-        })
+    local canvas = love.graphics.newCanvas(packwidth, packheight)
     love.graphics.setCanvas(canvas)
     love.graphics.setLineStyle("rough")
     drawSpace(space)

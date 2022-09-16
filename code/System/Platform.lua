@@ -14,7 +14,8 @@ local features = {
         ["Mac OS X"] = true,
         Linux = true,
         Android = true,
-        iOS = true
+        iOS = true,
+        Web = true,
     },
     maximize = {
         Windows = true,
