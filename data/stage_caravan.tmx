@@ -2178,7 +2178,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="50" name="testwasp4">
     <object id="563" template="enemies/Trigger.tx" x="-56" y="1744"/>
-    <object id="564" template="enemies/WaspBackground.tx" gid="0" x="96" y="1800" rotation="0"/>
+    <object id="564" template="enemies/WaspBackground.tx" x="96" y="1800" rotation="0"/>
     <object id="565" template="enemies/Path.tx" x="96" y="1800">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2192,7 +2192,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="53" name="testwasp5">
     <object id="581" template="enemies/Trigger.tx" x="-64" y="1728"/>
-    <object id="582" template="enemies/WaspBackground.tx" gid="0" x="64" y="1816" rotation="0"/>
+    <object id="582" template="enemies/WaspBackground.tx" x="64" y="1816" rotation="0"/>
     <object id="583" template="enemies/Path.tx" x="64" y="1816">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2206,7 +2206,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="52" name="testwasp6">
     <object id="575" template="enemies/Trigger.tx" x="-72" y="1712"/>
-    <object id="576" template="enemies/WaspBackground.tx" gid="0" x="32" y="1832" rotation="0"/>
+    <object id="576" template="enemies/WaspBackground.tx" x="32" y="1832" rotation="0"/>
     <object id="577" template="enemies/Path.tx" x="32" y="1832">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2220,7 +2220,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="58" name="testwasp7">
     <object id="611" template="enemies/Trigger.tx" x="-40" y="1696"/>
-    <object id="612" template="enemies/WaspBackground.tx" gid="0" x="160" y="1752" rotation="0"/>
+    <object id="612" template="enemies/WaspBackground.tx" x="160" y="1752" rotation="0"/>
     <object id="613" template="enemies/Path.tx" x="160" y="1752">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2234,7 +2234,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="57" name="testwasp8">
     <object id="605" template="enemies/Trigger.tx" x="-32" y="1680"/>
-    <object id="606" template="enemies/WaspBackground.tx" gid="0" x="192" y="1768" rotation="0"/>
+    <object id="606" template="enemies/WaspBackground.tx" x="192" y="1768" rotation="0"/>
     <object id="607" template="enemies/Path.tx" x="192" y="1768">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2248,7 +2248,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="56" name="testwasp9">
     <object id="599" template="enemies/Trigger.tx" x="-24" y="1664"/>
-    <object id="600" template="enemies/WaspBackground.tx" gid="0" x="224" y="1784" rotation="0"/>
+    <object id="600" template="enemies/WaspBackground.tx" x="224" y="1784" rotation="0"/>
     <object id="601" template="enemies/Path.tx" x="224" y="1784">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2266,7 +2266,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="59" name="testwasp10">
     <object id="617" template="enemies/Trigger.tx" x="-80" y="1584"/>
-    <object id="618" template="enemies/WaspBackground.tx" gid="0" x="32" y="1696" rotation="0"/>
+    <object id="618" template="enemies/WaspBackground.tx" x="32" y="1696" rotation="0"/>
     <object id="619" template="enemies/Path.tx" x="32" y="1696">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2280,7 +2280,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="61" name="testwasp11">
     <object id="629" template="enemies/Trigger.tx" x="-16" y="1576"/>
-    <object id="630" template="enemies/WaspBackground.tx" gid="0" x="224" y="1672" rotation="0"/>
+    <object id="630" template="enemies/WaspBackground.tx" x="224" y="1672" rotation="0"/>
     <object id="631" template="enemies/Path.tx" x="224" y="1672">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2294,7 +2294,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="60" name="testwasp12">
     <object id="623" template="enemies/Trigger.tx" x="-64" y="1560"/>
-    <object id="624" template="enemies/WaspBackground.tx" gid="0" x="80" y="1776" rotation="0"/>
+    <object id="624" template="enemies/WaspBackground.tx" x="80" y="1776" rotation="0"/>
     <object id="625" template="enemies/Path.tx" x="80" y="1776">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2308,7 +2308,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="62" name="testwasp13">
     <object id="635" template="enemies/Trigger.tx" x="-32" y="1552"/>
-    <object id="636" template="enemies/WaspBackground.tx" gid="0" x="176" y="1752" rotation="0"/>
+    <object id="636" template="enemies/WaspBackground.tx" x="176" y="1752" rotation="0"/>
     <object id="637" template="enemies/Path.tx" x="176" y="1752">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -2321,26 +2321,26 @@ self.speed = 0.75</property>
     <object id="640" template="pathpoints/WaspAttack.tx" class="PathPoint" x="176" y="1712"/>
    </objectgroup>
    <objectgroup id="55" name="testacidant1">
-    <object id="592" template="enemies/Trigger.tx" x="-16" y="1496"/>
-    <object id="593" template="enemies/AcidAnt.tx" x="-16" y="1512"/>
-    <object id="598" template="enemies/AcidAnt.tx" gid="2147484131" x="296" y="1504" rotation="0"/>
-    <object id="594" template="enemies/Path.tx" x="-16" y="1512">
+    <object id="592" template="enemies/Trigger.tx" x="-40" y="1456"/>
+    <object id="593" template="enemies/AcidAnt.tx" x="-16" y="1472"/>
+    <object id="598" template="enemies/AcidAnt.tx" gid="2147484131" x="296" y="1464" rotation="0"/>
+    <object id="594" template="enemies/Path.tx" x="-16" y="1472">
      <polyline points="0,0 48,16"/>
     </object>
-    <object id="597" template="enemies/Path.tx" x="176" y="1512">
+    <object id="597" template="enemies/Path.tx" x="176" y="1472">
      <polyline points="120,-8 48,16"/>
     </object>
-    <object id="595" template="pathpoints/ShootBurstsAtPlayer.tx" x="32" y="1528">
+    <object id="595" template="pathpoints/ShootBurstsAtPlayer.tx" x="32" y="1488">
      <properties>
-      <property name="burstinterval" type="int" value="30"/>
+      <property name="burstinterval" type="int" value="60"/>
       <property name="bursts" type="int" value="4"/>
       <property name="burstshots" type="int" value="3"/>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="596" template="pathpoints/ShootBurstsAtPlayer.tx" x="224" y="1528">
+    <object id="596" template="pathpoints/ShootBurstsAtPlayer.tx" x="224" y="1488">
      <properties>
-      <property name="burstinterval" type="int" value="30"/>
+      <property name="burstinterval" type="int" value="60"/>
       <property name="bursts" type="int" value="4"/>
       <property name="burstshots" type="int" value="3"/>
       <property name="shotinterval" type="int" value="3"/>
@@ -2348,12 +2348,12 @@ self.speed = 0.75</property>
     </object>
    </objectgroup>
    <objectgroup id="54" name="testbeetle1">
-    <object id="587" template="enemies/Trigger.tx" x="-16" y="1416"/>
-    <object id="589" template="enemies/Path.tx" x="128" y="1480">
+    <object id="587" template="enemies/Trigger.tx" x="-16" y="1456"/>
+    <object id="589" template="enemies/Path.tx" x="128" y="1520">
      <polyline points="0,0 0,-32 0,-128"/>
     </object>
-    <object id="590" template="enemies/Beetle.tx" gid="541" x="128" y="1480" width="48" height="48"/>
-    <object id="591" template="enemies/PathPoint.tx" x="128" y="1448">
+    <object id="590" template="enemies/Beetle.tx" gid="541" x="128" y="1520" width="48" height="48"/>
+    <object id="591" template="enemies/PathPoint.tx" x="128" y="1488">
      <properties>
       <property name="subscript" value="BeetleSpray(self)"/>
      </properties>
