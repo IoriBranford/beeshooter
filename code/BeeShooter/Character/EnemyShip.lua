@@ -148,6 +148,7 @@ function EnemyShip:Spawner()
     self:markDisappear()
 end
 
+---@param self Character
 function EnemyShip:Faller()
     while true do
         local accely = self.accely or (1/8)
@@ -197,6 +198,7 @@ function EnemyShip:shootAS(bullettype, angle, speed)
         vely = vely
     })
 end
+local shootAS = EnemyShip.shootAS
 
 function EnemyShip:shootTargetAS(bullettype, target, angleoffset, speed)
     if not target then
@@ -206,7 +208,7 @@ function EnemyShip:shootTargetAS(bullettype, target, angleoffset, speed)
     local targetx, targety = target.x, target.y
     local angle = targetx == x and targety == y and 0 or atan2(targety - y, targetx - x)
     angle = (angleoffset or 0) + angle
-    EnemyShip.shootAS(self, bullettype, angle, speed)
+    shootAS(self, bullettype, angle, speed)
 end
 
 function EnemyShip:enterBackground()
@@ -233,7 +235,7 @@ function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotin
 end
 
 function EnemyShip:shootAimAngle()
-    EnemyShip.shootAS(self, self.bullettype, self.aimangle)
+    shootAS(self, self.bullettype, self.aimangle)
 end
 
 function EnemyShip:WaspCharge()
@@ -271,17 +273,22 @@ end
 
 function EnemyShip:BeetleSpray(centerangle)
     centerangle = centerangle or pi/2
-    local bursts = {
-        "BeetleBulletA1 BeetleBulletA2",
-        "BeetleBulletB1 BeetleBulletB2",
-        "BeetleBulletC1 BeetleBulletC2",
-    }
-    while true do
-        for _, burst in ipairs(bursts) do
-            self:spawnTypes(burst)
-            wait(1)
+    local arcs = {}
+    local speeds = {}
+    local bursts = 5
+    local burstshots = 4
+    for i = 1, burstshots do
+        arcs[i] = (burstshots - i + 1)*pi/16
+        speeds[i] = 1 + i/4
+    end
+    for _ = 1, bursts do
+        for i = 1, burstshots do
+            shootAS(self, self.bullettype, centerangle + arcs[i], speeds[i])
+            shootAS(self, self.bullettype, centerangle - arcs[i], speeds[i])
+            wait(2)
         end
-        wait(27)
+        shootAS(self, self.bullettype, centerangle, speeds[#speeds]+.25)
+        wait(24)
     end
 end
 
