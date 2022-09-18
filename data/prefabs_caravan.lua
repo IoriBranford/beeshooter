@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 43,
+  nextobjectid = 44,
   properties = {},
   tilesets = {
     {
@@ -1276,6 +1276,49 @@ return {
           }
         }
       }
+    },
+    {
+      name = "Tick",
+      firstgid = 97,
+      class = "",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/Tick.png",
+      imagewidth = 48,
+      imageheight = 32,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1702,6 +1745,20 @@ return {
           properties = {
             ["z"] = 1
           }
+        },
+        {
+          id = 43,
+          name = "Tick",
+          class = "Tick",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 32,
+          rotation = 0,
+          gid = 97,
+          visible = true,
+          properties = {}
         }
       }
     }

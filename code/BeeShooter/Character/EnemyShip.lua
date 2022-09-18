@@ -292,6 +292,14 @@ function EnemyShip:BeetleSpray(centerangle)
     end
 end
 
+function EnemyShip:Tick()
+    -- circle player while emerging
+    -- circle player until facing free bite spot: UL, UR, CL, CR, BL, BR
+    -- charge and bite player for t frames, turn red gradually
+    -- if still alive damage player and flee
+    -- disappear when offscreen
+end
+
 local function alienMindSpawnReinforcement(self, name, typ, path)
     local reinforcement = self[name]
     if not reinforcement or reinforcement:willDisappear() then
