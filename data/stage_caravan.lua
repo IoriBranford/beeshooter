@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 64,
-  nextobjectid = 643,
+  nextlayerid = 69,
+  nextobjectid = 653,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2081,6 +2081,78 @@ return {
             {
               tileid = 1,
               duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "Tick",
+      firstgid = 562,
+      class = "",
+      tilewidth = 24,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 2,
+      image = "tilesets/Tick.png",
+      imagewidth = 48,
+      imageheight = 32,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 2,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 6,
+                y = 10,
+                width = 12,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
             }
           }
         }
@@ -11010,6 +11082,246 @@ return {
                   visible = true,
                   properties = {
                     ["subscript"] = "BeetleSpray(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 64,
+              name = "testtick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 643,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1344,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 644,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1328,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 562,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 65,
+              name = "Copy of testtick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 645,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 646,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1296,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 562,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 66,
+              name = "Copy of Copy of testtick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 647,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1280,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 648,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1264,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 562,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 67,
+              name = "Copy of Copy of Copy of testtick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 649,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1248,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 650,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1232,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 562,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 68,
+              name = "Copy of Copy of Copy of Copy of testtick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 651,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1216,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 652,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1200,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 562,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0,
+                    ["z"] = -10
                   }
                 }
               }
