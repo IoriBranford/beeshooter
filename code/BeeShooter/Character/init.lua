@@ -199,6 +199,19 @@ function Character:defeat()
     Script.start(self, self.scriptdefeat or Character.defaultDefeat)
 end
 
+function Character:testCollisionWith(other)
+    if other.collidable then
+        local hitbox = self.hitbox or DefaultHitbox
+        local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
+        local hitbox2 = other.hitbox or DefaultHitbox
+        local x2, y2, w2, h2 =
+            hitbox2.x + other.x,
+            hitbox2.y + other.y,
+            hitbox2.width, hitbox2.height
+        return testrects(x, y, w, h, x2, y2, w2, h2)
+    end
+end
+
 local function respondToCollisions(self, others, collide)
     if not others or not self.collidable or not self:isSpriteOnScreen() then
         return
