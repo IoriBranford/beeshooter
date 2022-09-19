@@ -258,6 +258,7 @@ function PlayerShip:incPowerLevel()
 end
 
 function PlayerShip:drawStatus()
+    love.graphics.setColor(1, 1, 1)
     local score = s_format("%07d", self.score)
     love.graphics.printf(score, 8, 8, 112, "right")
 
