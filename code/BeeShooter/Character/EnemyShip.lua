@@ -11,7 +11,9 @@ local Sprite        = require "Component.Sprite"
 local EnemyShip = {}
 
 local pi, cos, sin, atan2 = math.pi, math.cos, math.sin, math.atan2
-local abs = math.abs
+local abs, min, max = math.abs, math.min, math.max
+local floor, ceil = math.floor, math.ceil
+local fmod = math.fmod
 local huge = math.huge
 local distsq = math.distsq
 local yield = coroutine.yield
@@ -292,12 +294,111 @@ function EnemyShip:BeetleSpray(centerangle)
     end
 end
 
+local function getCirclingVelocity(self, centerx, centery, angle, dist)
+    local posx, posy = centerx + dist*cos(angle), centery + dist*sin(angle)
+    return posx - self.x, posy - self.y
+end
+
+local BiteIndexes = {
+    [3] = true,
+    [7] = true,
+    [4] = true,
+    [0] = true,
+    [5] = true,
+    [1] = true,
+}
+
+---@param self Character
 function EnemyShip:Tick()
+    Audio.play(self.movesound)
+    local player = self.player
+    local biters = player.biters or {}
+    player.biters = biters
+    local anglefromplayer = 0
+    local circlingspeed = pi/30
+    local emergingspeed = 1/64
+
     -- circle player while emerging
-    -- circle player until facing free bite spot: UL, UR, CL, CR, BL, BR
-    -- charge and bite player for t frames, turn red gradually
-    -- if still alive damage player and flee
+    while self.scalexy < 1 do
+        self.scalexy = min(1, self.scalexy + emergingspeed)
+        Body.setVelocity(self, getCirclingVelocity(self, player.x, player.y, anglefromplayer, 64))
+        anglefromplayer = fmod(anglefromplayer + circlingspeed, 2*pi)
+        self.rotation = anglefromplayer + pi
+        yield()
+    end
+
+    EnemyShip.enterForeground(self)
+
+    -- circle player until onscreen and facing free bite spot: UL, UR, CL, CR, BL, BR
+    local biteangle, biteindex
+    while not biteangle do
+        local nextanglefromplayer = fmod(anglefromplayer + circlingspeed, 2*pi)
+        if self:isSpriteOnScreen() then
+            biteindex = floor(nextanglefromplayer/(pi/4))
+            if BiteIndexes[biteindex] and floor(anglefromplayer/(pi/4)) ~= biteindex then
+                local biter = biters[biteindex]
+                if not biter or biter:willDisappear() then
+                    self.biteindex = biteindex
+                    biters[biteindex] = self
+                    biteangle = biteindex * pi/4
+                    nextanglefromplayer = biteangle
+                end
+            end
+        end
+        Body.setVelocity(self, getCirclingVelocity(self, player.x, player.y, nextanglefromplayer, 64))
+        anglefromplayer = nextanglefromplayer
+        self.rotation = anglefromplayer + pi
+        yield()
+    end
+
+    -- charge at player, bite on collision
+    local chargespeed = -4
+    self.velx, self.vely = cos(biteangle) * chargespeed, sin(biteangle) * chargespeed
+    local bitesuccess
+    while not bitesuccess and self:isSpriteOnScreen() do
+        yield()
+        if self:testCollisionWith(player) then
+            bitesuccess = true
+        end
+    end
+
+    if bitesuccess then
+        Audio.play(self.attacksound)
+        Audio.play(player.hurtsound)
+        -- bite player for t frames, turn red gradually
+        local draintime = 64
+        local draindist = 16
+        for _ = 1, draintime do
+            if player.defeated then
+                break
+            end
+            Body.setVelocity(self, getCirclingVelocity(self, player.x, player.y, biteangle, draindist))
+            self.sprite.green = max(0, self.sprite.green - (1/draintime))
+            self.sprite.blue = max(0, self.sprite.blue - (1/draintime))
+            yield()
+        end
+
+        -- if still alive damage player and flee
+        biters[biteindex] = nil
+        player:defeat()
+        chargespeed = -chargespeed
+        self.velx, self.vely = cos(biteangle) * chargespeed, sin(biteangle) * chargespeed
+        waitForOnscreenState(self, false)
+    end
+
     -- disappear when offscreen
+    self:markDisappear()
+end
+
+function EnemyShip:TickDefeat()
+    if self.biteindex then
+        local player = self.player
+        local biters = player.biters
+        if biters then
+            biters[self.biteindex] = nil
+        end
+    end
+    self:defaultDefeat()
 end
 
 local function alienMindSpawnReinforcement(self, name, typ, path)
