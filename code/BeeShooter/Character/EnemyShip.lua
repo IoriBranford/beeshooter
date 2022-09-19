@@ -363,6 +363,8 @@ function EnemyShip:Tick()
     end
 
     if bitesuccess then
+        local hitbox = self.hitbox
+        self.hitbox = nil
         Audio.play(self.attacksound)
         Audio.play(player.hurtsound)
         -- bite player for t frames, turn red gradually
@@ -379,6 +381,7 @@ function EnemyShip:Tick()
         end
 
         -- if still alive damage player and flee
+        self.hitbox = hitbox
         biters[biteindex] = nil
         player:defeat()
         chargespeed = -chargespeed
