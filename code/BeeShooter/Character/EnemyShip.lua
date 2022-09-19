@@ -300,11 +300,11 @@ local function getCirclingVelocity(self, centerx, centery, angle, dist)
 end
 
 local BiteIndexes = {
-    [3] = true,
+    [5] = true,
     [7] = true,
     [4] = true,
     [0] = true,
-    [5] = true,
+    [3] = true,
     [1] = true,
 }
 
@@ -352,7 +352,7 @@ function EnemyShip:Tick()
     end
 
     -- charge at player, bite on collision
-    local chargespeed = -4
+    local chargespeed = -8
     self.velx, self.vely = cos(biteangle) * chargespeed, sin(biteangle) * chargespeed
     local bitesuccess
     while not bitesuccess and self:isSpriteOnScreen() do
@@ -368,7 +368,7 @@ function EnemyShip:Tick()
         Audio.play(self.attacksound)
         Audio.play(player.hurtsound)
         -- bite player for t frames, turn red gradually
-        local draintime = 64
+        local draintime = 128
         local draindist = 16
         for _ = 1, draintime do
             if player.defeated then
