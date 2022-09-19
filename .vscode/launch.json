@@ -22,5 +22,22 @@
             },
             "args": ["${workspaceFolder}", "--startpoint", "teststart"]
         },
+        {
+            "name": "Debug start at...",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "love"
+            },
+            "args": ["${workspaceFolder}", "--startpoint", "${input:startpoint}"],
+            
+        },
+    ],
+    "inputs": [
+        {
+            "id": "startpoint",
+            "type": "promptString",
+            "description": "Name of the spawn to start at"
+        }
     ]
 }
