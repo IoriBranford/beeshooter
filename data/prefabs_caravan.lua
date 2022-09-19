@@ -1307,6 +1307,35 @@ return {
       tiles = {
         {
           id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 6,
+                y = 10,
+                width = 12,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 0,
@@ -1758,7 +1787,12 @@ return {
           rotation = 0,
           gid = 97,
           visible = true,
-          properties = {}
+          properties = {
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
+            ["scalexy"] = 0,
+            ["z"] = -10
+          }
         }
       }
     }
