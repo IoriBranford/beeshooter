@@ -1,7 +1,7 @@
 return {
   version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.9.1",
+  tiledversion = "1.9.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 69,
-  nextobjectid = 653,
+  nextlayerid = 70,
+  nextobjectid = 657,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -11082,6 +11082,83 @@ return {
                   visible = true,
                   properties = {
                     ["subscript"] = "BeetleSpray(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 69,
+              name = "testtickpowerups",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 653,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1408,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 654,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 1392,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 655,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 144,
+                  y = 1384,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 656,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 1376,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
                   }
                 }
               }

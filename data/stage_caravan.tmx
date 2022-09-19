@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="69" nextobjectid="653">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="70" nextobjectid="657">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -2358,6 +2358,12 @@ self.speed = 0.75</property>
       <property name="subscript" value="BeetleSpray(self)"/>
      </properties>
     </object>
+   </objectgroup>
+   <objectgroup id="69" name="testtickpowerups">
+    <object id="653" template="enemies/Trigger.tx" x="-16" y="1408"/>
+    <object id="654" template="enemies/HoneyPot.tx" x="120" y="1392"/>
+    <object id="655" template="enemies/HoneyPot.tx" x="144" y="1384"/>
+    <object id="656" template="enemies/HoneyPot.tx" x="128" y="1376"/>
    </objectgroup>
    <objectgroup id="64" name="testtick">
     <object id="643" template="enemies/Trigger.tx" x="-16" y="1344"/>
