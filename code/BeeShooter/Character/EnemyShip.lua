@@ -38,8 +38,8 @@ local function meleeAttack(self, damage)
     if hitbox then
         Stage.addCharacter({
             type = "EnemyMelee",
-            x = self.x + hitbox.x,
-            y = self.y + hitbox.y,
+            x = self.x,
+            y = self.y,
             width = hitbox.width,
             height = hitbox.height,
             hitbox = hitbox,
