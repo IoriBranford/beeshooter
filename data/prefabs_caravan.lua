@@ -1,7 +1,7 @@
 return {
   version = "1.9",
   luaversion = "5.1",
-  tiledversion = "1.9.1",
+  tiledversion = "1.9.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 44,
+  nextobjectid = 45,
   properties = {},
   tilesets = {
     {
@@ -1579,9 +1579,25 @@ return {
           }
         },
         {
+          id = 44,
+          name = "AcidBulletFalling",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 8,
+          rotation = 0,
+          gid = 93,
+          visible = true,
+          properties = {
+            ["z"] = 20
+          }
+        },
+        {
           id = 39,
           name = "AcidBulletBeetle",
-          class = "AcidBullet",
+          class = "",
           shape = "rectangle",
           x = 0,
           y = 0,

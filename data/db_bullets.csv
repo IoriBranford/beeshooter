@@ -1,8 +1,9 @@
-type,team,velx,speed,lifetime,hitdamageenemy,hitdamageself,spawnsound,collidable,defeatsound
-JennyShot,PlayerShot,forward,16,24,1,1,sounds/shootarrow.mp3,TRUE,sounds/arrowhit.mp3
-JennySting,PlayerShot,,0,1,1,0,,TRUE,
-FlyBullet,EnemyShot,,3,120,1,1,sounds/enemyshot1.mp3,TRUE,
-EnemyMelee,EnemyShot,,0,1,1,0,,TRUE,
-AlienGunnerBullet,EnemyShot,,4,120,1,1,sounds/enemyshot1.mp3,TRUE,
-AcidBullet,EnemyShot,,2,120,1,1,sounds/liquidshot.mp3,TRUE,
-AcidBulletBeetle,EnemyShot,,2,,1,1,sounds/liquidshot.mp3,TRUE,
+type,team,velx,speed,lifetime,hitdamageenemy,hitdamageself,spawnsound,collidable,defeatsound,script,scriptstart
+JennyShot,PlayerShot,forward,16,24,1,1,sounds/shootarrow.mp3,TRUE,sounds/arrowhit.mp3,,
+JennySting,PlayerShot,,0,1,1,0,,TRUE,,,
+FlyBullet,EnemyShot,,3,120,1,1,sounds/enemyshot1.mp3,TRUE,,,
+EnemyMelee,EnemyShot,,0,1,1,0,,TRUE,,,
+AlienGunnerBullet,EnemyShot,,4,120,1,1,sounds/enemyshot1.mp3,TRUE,,,
+AcidBullet,EnemyShot,,2,120,1,1,sounds/liquidshot.mp3,TRUE,,,
+AcidBulletBeetle,EnemyShot,,2,300,1,1,sounds/liquidshot.mp3,TRUE,,,
+AcidBulletFalling,EnemyShot,,2,,1,1,sounds/liquidshot.mp3,TRUE,,BeeShooter.Character.EnemyShip,Faller
