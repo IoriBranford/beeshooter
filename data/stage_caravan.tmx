@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="70" nextobjectid="659">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="70" nextobjectid="661">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -2324,29 +2324,35 @@ self.speed = 0.75</property>
     <object id="592" template="enemies/Trigger.tx" x="-40" y="1456"/>
     <object id="593" template="enemies/AcidAnt.tx" x="16" y="1504"/>
     <object id="598" template="enemies/AcidAnt.tx" gid="2147484131" x="240" y="1504" rotation="0"/>
-    <object id="594" template="enemies/Path.tx" x="-16" y="1472">
+    <object id="594" template="enemies/Path.tx" x="-16" y="1320">
      <polyline points="32,32 48,16"/>
     </object>
-    <object id="597" template="enemies/Path.tx" x="176" y="1472">
+    <object id="597" template="enemies/Path.tx" x="176" y="1320">
      <polyline points="64,32 48,16"/>
     </object>
-    <object id="657" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="1488">
+    <object id="657" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="1480">
      <properties>
       <property name="angle" type="float" value="315"/>
       <property name="burstinterval" type="int" value="30"/>
-      <property name="bursts" type="int" value="5"/>
+      <property name="bursts" type="int" value="10"/>
       <property name="burstshots" type="int" value="3"/>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="658" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="1488">
+    <object id="658" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="1480">
      <properties>
       <property name="angle" type="float" value="225"/>
       <property name="burstinterval" type="int" value="30"/>
-      <property name="bursts" type="int" value="5"/>
+      <property name="bursts" type="int" value="10"/>
       <property name="burstshots" type="int" value="3"/>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
+    </object>
+    <object id="659" class="Path" x="16" y="1504">
+     <polyline points="0,0 24,-24 24,-184"/>
+    </object>
+    <object id="660" class="Path" x="240" y="1504">
+     <polyline points="0,0 -24,-24 -24,-184"/>
     </object>
    </objectgroup>
    <objectgroup id="54" name="testbeetle1">

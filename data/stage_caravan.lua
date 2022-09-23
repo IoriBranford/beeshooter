@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 70,
-  nextobjectid = 659,
+  nextobjectid = 661,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -414,6 +414,34 @@ return {
         },
         {
           id = 2,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 2,
+                width = 16,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 2,
@@ -10940,7 +10968,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -16,
-                  y = 1472,
+                  y = 1320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10957,7 +10985,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 176,
-                  y = 1472,
+                  y = 1320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10973,8 +11001,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1488,
+                  x = 40,
+                  y = 1480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10982,7 +11010,7 @@ return {
                   properties = {
                     ["angle"] = 315,
                     ["burstinterval"] = 30,
-                    ["bursts"] = 5,
+                    ["bursts"] = 10,
                     ["burstshots"] = 3,
                     ["deltaangle"] = 0,
                     ["shotinterval"] = 3,
@@ -10994,8 +11022,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 224,
-                  y = 1488,
+                  x = 216,
+                  y = 1480,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -11003,12 +11031,48 @@ return {
                   properties = {
                     ["angle"] = 225,
                     ["burstinterval"] = 30,
-                    ["bursts"] = 5,
+                    ["bursts"] = 10,
                     ["burstshots"] = 3,
                     ["deltaangle"] = 0,
                     ["shotinterval"] = 3,
                     ["subscript"] = "shootBurstsAtAngle(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval, rad(pathpoint.angle), rad(pathpoint.deltaangle))"
                   }
+                },
+                {
+                  id = 659,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 16,
+                  y = 1504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 24, y = -24 },
+                    { x = 24, y = -184 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 660,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 240,
+                  y = 1504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -24, y = -24 },
+                    { x = -24, y = -184 }
+                  },
+                  properties = {}
                 }
               }
             },
