@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="angle" type="float" value="0"/>
+   <property name="burstinterval" type="int" value="1"/>
+   <property name="bursts" type="int" value="1"/>
+   <property name="burstshots" type="int" value="1"/>
+   <property name="deltaangle" type="float" value="0"/>
+   <property name="shotinterval" type="int" value="1"/>
+   <property name="subscript" value="shootBurstsAtAngle(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval, rad(pathpoint.angle), rad(pathpoint.deltaangle))"/>
+  </properties>
+  <point/>
+ </object>
+</template>
