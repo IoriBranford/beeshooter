@@ -155,6 +155,9 @@ function EnemyShip:Faller()
     while true do
         local accely = self.accely or (1/8)
         self.vely = self.vely + accely
+        if self.vely ~= 0 or self.velx ~= 0 then
+            self.rotation = atan2(self.vely, self.velx)
+        end
         yield()
         if self:isSpriteOffScreenBottom() then
             self:markDisappear()
@@ -227,6 +230,16 @@ end
 
 function EnemyShip:shootAtPlayer()
     EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
+end
+
+---@param self Character
+function EnemyShip:shootBurstsAtAngle(bursts, burstinterval, burstshots, shotinterval, angle, deltaangle)
+    self.aimangle = angle
+    for i = 1, bursts do
+        self:setShooting(EnemyShip.shootAimAngle, shotinterval, burstshots)
+        wait(burstinterval)
+        self.aimangle = self.aimangle + deltaangle
+    end
 end
 
 function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotinterval)
