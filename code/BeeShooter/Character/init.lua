@@ -349,4 +349,13 @@ function Character:disappear()
     Sprite.remove(self, "sprite")
 end
 
+function Character:drawBody()
+    if not self.collidable then
+        return
+    end
+    local hitbox = self.hitbox or DefaultHitbox
+    local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
+    love.graphics.rectangle("line", x, y, w, h)
+end
+
 return Character

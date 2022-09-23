@@ -6,6 +6,7 @@ local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
 local PathPoint    = require "Object.PathPoint"
 local Path         = require "Object.Path"
+local Config       = require "System.Config"
 local PlayerShip
 
 local t_sort = table.sort
@@ -350,6 +351,11 @@ end
 function Stage.draw(fixedfrac)
     love.graphics.clear(clearred, cleargreen, clearblue)
     scene:draw()
+    if Config.drawbodies then
+        for i = 1, #everyone do
+            everyone[i]:drawBody()
+        end
+    end
     drawTimer()
     PlayerShip.drawStatus(player)
 end
