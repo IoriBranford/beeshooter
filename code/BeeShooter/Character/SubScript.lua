@@ -15,7 +15,8 @@ local Env = {
     waitfor = waitfor,
     yield = yield,
     abs = math.abs,
-    atan2 = math.atan2
+    atan2 = math.atan2,
+    rad = math.rad
 }
 local EnvMetatable = {
     __index = function(_, k)
