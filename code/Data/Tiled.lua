@@ -344,28 +344,18 @@ local function decodeGids(data, encoding, compression)
     if encoding == "lua" then
         return data
     end
-    local hasffi, ffi = pcall(require, "ffi")
-    if not hasffi then
-        error(love.system.getOS().." platform does not support compressed or encoded tile layers.\nPlease re-export map with CSV tile layer format for this platform.")
-    end
-    local gids = {}
-    -- if encoding == "csv" then
-    --     for gid in data:gmatch("%d+") do
-    --         gids[#gids + 1] = tonumber(gid)
-    --     end
-    --     return gids
-    -- else
+
     if encoding == "base64" then
         data = love.data.decode("data", encoding, data)
         if compression then
             data = love.data.decompress("data", compression, data)
         end
     end
-    local pointer = ffi.cast("uint32_t*", data:getFFIPointer())
-    local n = math.floor(data:getSize() / ffi.sizeof("uint32_t"))
 
-    for i = 0, n - 1 do
-        gids[#gids + 1] = pointer[i]
+    local gids = {}
+    local i, n = 1, data:getSize()
+    while i <= n do
+        gids[#gids + 1], i = love.data.unpack("I4", data, i)
     end
     return gids
 end
