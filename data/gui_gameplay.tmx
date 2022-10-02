@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="10">
+ <tileset firstgid="1" source="tilesets/Weapons.tsx"/>
+ <objectgroup draworder="index" id="2" name="hud">
+  <object id="1" name="score" x="8" y="8" width="112" height="8">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
+  </object>
+  <object id="3" name="lives" x="8" y="208" width="80" height="8">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥♥♥♥♥♥♥</text>
+  </object>
+  <object id="4" name="speed" x="184" y="208" width="64" height="8">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Speed ▶▶</text>
+  </object>
+  <object id="2" name="time" x="136" y="8" width="112" height="8">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
+  </object>
+  <object id="8" name="weaponbackA" gid="7" x="216" y="200" width="16" height="16"/>
+  <object id="9" name="weaponbackB" gid="8" x="232" y="200" width="16" height="16"/>
+  <object id="5" name="weaponA" gid="5" x="216" y="200" width="16" height="16"/>
+  <object id="6" name="weaponB" gid="6" x="232" y="200" width="16" height="16"/>
+ </objectgroup>
+</map>
