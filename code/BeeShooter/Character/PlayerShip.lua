@@ -273,6 +273,19 @@ function PlayerShip:updateHud(gui)
 
     local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
     gui.hud.speed:setString(speedstring)
+
+    local power = tostring(self.power)
+    gui.hud.weaponA:changeTile(power.."A")
+    gui.hud.weaponB:changeTile(power.."B")
+
+    local weapon = self.weapon
+    local selectedicon = gui.hud["weapon"..weapon]
+    if selectedicon then
+       gui.hud.weaponcursor1:setPosition(selectedicon.x + 8, selectedicon.y + 8)
+       gui.hud.weaponcursor2:setPosition(selectedicon.x - 8, selectedicon.y + 8)
+       gui.hud.weaponcursor3:setPosition(selectedicon.x - 8, selectedicon.y - 8)
+       gui.hud.weaponcursor4:setPosition(selectedicon.x + 8, selectedicon.y - 8)
+    end
 end
 
 return PlayerShip

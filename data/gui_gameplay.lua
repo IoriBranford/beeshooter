@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 5,
-  nextobjectid = 10,
+  nextobjectid = 14,
   properties = {},
   tilesets = {
     {
@@ -25,7 +25,7 @@ return {
       image = "tilesets/Weapons.png",
       imagewidth = 128,
       imageheight = 16,
-      objectalignment = "unspecified",
+      objectalignment = "center",
       tilerendersize = "tile",
       fillmode = "stretch",
       tileoffset = {
@@ -42,12 +42,51 @@ return {
       tilecount = 8,
       tiles = {
         {
+          id = 0,
+          properties = {
+            ["name"] = "1A"
+          }
+        },
+        {
+          id = 1,
+          properties = {
+            ["name"] = "1B"
+          }
+        },
+        {
+          id = 2,
+          properties = {
+            ["name"] = "2A"
+          }
+        },
+        {
+          id = 3,
+          properties = {
+            ["name"] = "2B"
+          }
+        },
+        {
+          id = 4,
+          properties = {
+            ["name"] = "3A"
+          }
+        },
+        {
+          id = 5,
+          properties = {
+            ["name"] = "3B"
+          }
+        },
+        {
           id = 6,
-          animation = {
-            {
-              tileid = 6,
-              duration = 100
-            }
+          properties = {
+            ["name"] = "border"
+          }
+        },
+        {
+          id = 7,
+          properties = {
+            ["name"] = "cursorcorner"
           }
         }
       }
@@ -66,7 +105,9 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["z"] = 0
+      },
       objects = {
         {
           id = 1,
@@ -146,8 +187,8 @@ return {
           name = "weaponbackA",
           class = "",
           shape = "rectangle",
-          x = 216,
-          y = 200,
+          x = 220,
+          y = 192,
           width = 16,
           height = 16,
           rotation = 0,
@@ -160,12 +201,12 @@ return {
           name = "weaponbackB",
           class = "",
           shape = "rectangle",
-          x = 232,
-          y = 200,
+          x = 240,
+          y = 192,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 8,
+          gid = 7,
           visible = true,
           properties = {}
         },
@@ -174,28 +215,96 @@ return {
           name = "weaponA",
           class = "",
           shape = "rectangle",
-          x = 216,
-          y = 200,
+          x = 220,
+          y = 192,
           width = 16,
           height = 16,
           rotation = 0,
           gid = 5,
           visible = true,
-          properties = {}
+          properties = {
+            ["z"] = 1
+          }
         },
         {
           id = 6,
           name = "weaponB",
           class = "",
           shape = "rectangle",
-          x = 232,
+          x = 240,
+          y = 192,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 2,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 10,
+          name = "weaponcursor1",
+          class = "",
+          shape = "rectangle",
+          x = 228,
           y = 200,
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 6,
+          gid = 8,
           visible = true,
-          properties = {}
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 11,
+          name = "weaponcursor2",
+          class = "",
+          shape = "rectangle",
+          x = 212,
+          y = 200,
+          width = 16,
+          height = 16,
+          rotation = 90,
+          gid = 8,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 12,
+          name = "weaponcursor3",
+          class = "",
+          shape = "rectangle",
+          x = 212,
+          y = 184,
+          width = 16,
+          height = 16,
+          rotation = 180,
+          gid = 8,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 13,
+          name = "weaponcursor4",
+          class = "",
+          shape = "rectangle",
+          x = 228,
+          y = 184,
+          width = 16,
+          height = 16,
+          rotation = 270,
+          gid = 8,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
         }
       }
     }
