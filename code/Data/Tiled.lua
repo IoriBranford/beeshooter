@@ -477,6 +477,8 @@ local function setLayersZ(layers, z1, dz)
     end
 end
 
+---@param mapfile string
+---@return table
 function Tiled.load(mapfile)
     local map, err = love.filesystem.load(mapfile)
     assert(map, err)

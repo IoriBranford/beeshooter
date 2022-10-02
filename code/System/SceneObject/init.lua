@@ -1,3 +1,4 @@
+---@class SceneObject
 local SceneObject = {}
 SceneObject.__index = SceneObject
 
