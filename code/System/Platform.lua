@@ -15,7 +15,7 @@ local features = {
         Linux = true,
         Android = true,
         iOS = true,
-        Web = true,
+        -- Web = true,
     },
     maximize = {
         Windows = true,
