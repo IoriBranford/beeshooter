@@ -257,10 +257,10 @@ function PlayerShip:incPowerLevel()
     end
 end
 
-function PlayerShip:drawStatus()
+function PlayerShip:updateHud(gui)
     love.graphics.setColor(1, 1, 1)
     local score = s_format("%07d", self.score)
-    love.graphics.printf(score, 8, 8, 112, "right")
+    gui.hud.score:setString(score)
 
     local lives = self.lives
     local livesstring
@@ -269,10 +269,10 @@ function PlayerShip:drawStatus()
     else
         livesstring = s_rep("♥", lives)
     end
-    love.graphics.printf(livesstring, 8, 208, 120, "left")
+    gui.hud.lives:setString(livesstring)
 
     local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
-    love.graphics.printf(speedstring, 256-8-64, 208, 64, "left")
+    gui.hud.speed:setString(speedstring)
 end
 
 return PlayerShip
