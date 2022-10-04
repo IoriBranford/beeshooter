@@ -8,6 +8,85 @@
     ],
     "propertyTypes": [
         {
+            "color": "#ffa0a0a4",
+            "id": 5,
+            "members": [
+                {
+                    "name": "pressaction",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "presssound",
+                    "type": "file",
+                    "value": ""
+                },
+                {
+                    "name": "selectsound",
+                    "type": "file",
+                    "value": ""
+                }
+            ],
+            "name": "Gui.Button",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 4,
+            "members": [
+                {
+                    "name": "offsetx",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "offsety",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "Gui.Cursor",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "id": 6,
+            "members": [
+            ],
+            "name": "Gui.Menu",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset"
+            ]
+        },
+        {
             "color": "#ff00ffff",
             "id": 3,
             "members": [
