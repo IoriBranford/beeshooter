@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 5,
-  nextobjectid = 14,
+  nextlayerid = 6,
+  nextobjectid = 19,
   properties = {},
   tilesets = {
     {
@@ -304,6 +304,101 @@ return {
           visible = true,
           properties = {
             ["z"] = 1
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "pausemenu",
+      class = "Gui.Menu",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 14,
+          name = "PAUSE!",
+          class = "",
+          shape = "text",
+          x = 80,
+          y = 56,
+          width = 96,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "PAUSE!",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          halign = "center",
+          properties = {}
+        },
+        {
+          id = 15,
+          name = "Resume",
+          class = "Gui.Button",
+          shape = "text",
+          x = 104,
+          y = 88,
+          width = 64,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "Resume",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["pressaction"] = "resumeGame"
+          }
+        },
+        {
+          id = 16,
+          name = "End",
+          class = "Gui.Button",
+          shape = "text",
+          x = 104,
+          y = 104,
+          width = 64,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "End",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["pressaction"] = "endGame"
+          }
+        },
+        {
+          id = 18,
+          name = "cursor",
+          class = "Gui.Cursor",
+          shape = "text",
+          x = 88,
+          y = 88,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "▶",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["offsetx"] = -16
           }
         }
       }
