@@ -7,7 +7,6 @@ local Timeline     = require "Data.Timeline"
 local PathPoint    = require "Object.PathPoint"
 local Path         = require "Object.Path"
 local Config       = require "System.Config"
-local Gui          = require "System.Gui"
 local PlayerShip
 
 local t_sort = table.sort
@@ -32,7 +31,6 @@ local stagespawntimeline ---@type Timeline
 local clearred, cleargreen, clearblue = 0, 0, 0
 local gametimer
 local gametimerstate
-local gui
 
 local function readMapObjectLayer(objectlayer)
     local paths, pointdatas, characters
@@ -178,8 +176,6 @@ function Stage.init(startpoint)
 
     gametimer = 60*60
     gametimerstate = "waitingforenemy"
-
-    gui = Gui.new("data/gui_gameplay.lua")
 end
 
 function Stage.startGame()
@@ -227,7 +223,6 @@ function Stage.quit()
     stagespawntimeline = nil
     flyingspawntimeline = nil
     currentflyers = nil
-    gui = nil
 end
 
 function Stage.restart()
@@ -251,13 +246,13 @@ local function prune(chars)
     end
 end
 
-local function updateHud()
+function Stage.fixedupdateHud(hud)
     local timerminutes = floor(gametimer/3600)
     local timerseconds = floor(gametimer / 60) % 60
     local timerframes = gametimer % 60
     local timerstring = s_format("%d:%02d:%02d", timerminutes, timerseconds, timerframes)
-    gui.hud.time:setString(timerstring)
-    PlayerShip.updateHud(player, gui)
+    hud.time:setString(timerstring)
+    PlayerShip.updateHud(player, hud)
 end
 
 function Stage.fixedupdate()
@@ -296,8 +291,6 @@ function Stage.fixedupdate()
             GamePhase.lose("TIME UP!\n\nPress ESC key\nor START button")
         end
     end
-
-    updateHud()
 end
 
 function Stage.update(dsecs, fixedfrac)
@@ -364,7 +357,6 @@ function Stage.draw(fixedfrac)
             everyone[i]:drawBody()
         end
     end
-    gui:draw()
 end
 
 return Stage

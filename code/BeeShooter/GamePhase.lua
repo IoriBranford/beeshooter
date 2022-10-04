@@ -6,11 +6,13 @@ local Tiled = require "Data.Tiled"
 local Assets= require "System.Assets"
 local Database = require "Data.Database"
 local Platform = require "System.Platform"
+local Gui      = require "Gui"
 local GamePhase = {}
 
 local paused
 local music
 local status
+local gui
 
 local TitleStatus = [[
 HONEY GUARDIAN
@@ -50,6 +52,8 @@ function GamePhase.loadphase(startpoint)
         end
     end)
     Stage.init(startpoint)
+    gui = Gui.new("data/gui_gameplay.lua")
+    gui.pausemenu:setHidden(true)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
     Assets.get("music/Funkbuster.ogg")
 end
@@ -61,6 +65,7 @@ end
 function GamePhase.quitphase()
     status = nil
     music = nil
+    gui = nil
     Audio.stop()
     Stage.quit()
     Tiled.clearCache()
@@ -71,7 +76,9 @@ end
 function GamePhase.fixedupdate()
     if not paused then
         Stage.fixedupdate()
+        Stage.fixedupdateHud(gui.hud)
     end
+    gui:fixedupdate()
 end
 
 function GamePhase.gamepadpressed(joystick, button)
@@ -94,7 +101,7 @@ function GamePhase.gamepadpressed(joystick, button)
         elseif status then
             Stage.restart()
         else
-            paused = not paused
+            GamePhase.setPaused(not paused)
         end
         return
     elseif button == Config.joy_fire then
@@ -113,16 +120,23 @@ function GamePhase.keypressed(key)
         elseif status then
             Stage.restart()
         else
-            paused = not paused
+            GamePhase.setPaused(not paused)
         end
-        -- if paused then
-        --     Audio.play("sounds/pause.ogg")
-        -- end
     elseif key == "f2" then
         Stage.restart()
     elseif key == Config.key_fire then
         if status == TitleStatus then
             GamePhase.startGame()
+        elseif paused then
+            gui.pausemenu:pressSelectedButton()
+        end
+    elseif key == Config.key_up then
+        if paused then
+            gui.pausemenu:moveCursor(-1)
+        end
+    elseif key == Config.key_down then
+        if paused then
+            gui.pausemenu:moveCursor(1)
         end
     end
 end
@@ -132,6 +146,14 @@ function GamePhase.startGame()
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
     Stage.startGame()
+end
+
+function GamePhase.setPaused(pause)
+    paused = pause
+    -- if pause then
+    --     Audio.play("sounds/pause.ogg")
+    -- end
+    gui.pausemenu:setHidden(not paused)
 end
 
 function GamePhase.update(dsecs, fixedfrac)
@@ -163,11 +185,12 @@ function GamePhase.draw(fixedfrac)
         Stage.draw(fixedfrac)
         if status then
             love.graphics.printf(status, 0, 64, 256, "center")
-        elseif paused then
-            love.graphics.printf("PAUSE!", 0, 64, 256, "center")
         end
     end)
     Canvas.drawCanvas()
+    Canvas.drawScaledToCanvas(function()
+        gui:draw()
+    end)
 end
 
 return GamePhase
