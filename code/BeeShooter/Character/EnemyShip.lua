@@ -234,18 +234,21 @@ end
 
 ---@param self Character
 function EnemyShip:shootBurstsAtAngle(bursts, burstinterval, burstshots, shotinterval, angle, deltaangle)
+    deltaangle = deltaangle or 0
     self.aimangle = angle
+    local waittime = burstinterval + shotinterval*burstshots
     for i = 1, bursts do
         self:setShooting(EnemyShip.shootAimAngle, shotinterval, burstshots)
-        wait(burstinterval)
+        wait(waittime)
         self.aimangle = self.aimangle + deltaangle
     end
 end
 
 function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotinterval)
+    local waittime = burstinterval + shotinterval*burstshots
     for i = 1, bursts do
         self:setShooting(EnemyShip.shootAtPlayer, shotinterval, burstshots)
-        wait(burstinterval)
+        wait(waittime)
     end
 end
 
