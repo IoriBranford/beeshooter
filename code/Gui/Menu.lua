@@ -18,10 +18,10 @@ function Menu:init()
     for _, object in ipairs(self) do
         local platforms = object.platforms or "all"
         if platforms == "all" or platforms:find(platform) then
-            local otype = object.type
-            if otype == "Gui.Cursor" then
+            local oclass = object.class
+            if oclass:find("Gui.Cursor") then
                 cursors[#cursors+1] = object
-            elseif otype == "Gui.Button" then
+            elseif oclass:find("Gui.Button") then
                 buttons[#buttons + 1] = object
             end
         else

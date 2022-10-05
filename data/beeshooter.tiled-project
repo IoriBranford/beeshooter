@@ -27,7 +27,7 @@
                     "value": ""
                 }
             ],
-            "name": "Gui.Button",
+            "name": "BeeShooter.Gui.Button",
             "type": "class",
             "useAs": [
                 "property",

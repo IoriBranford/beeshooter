@@ -344,7 +344,7 @@ return {
         {
           id = 15,
           name = "Resume",
-          class = "Gui.Button",
+          class = "BeeShooter.Gui.Button",
           shape = "text",
           x = 104,
           y = 88,
@@ -364,7 +364,7 @@ return {
         {
           id = 16,
           name = "End",
-          class = "Gui.Button",
+          class = "BeeShooter.Gui.Button",
           shape = "text",
           x = 104,
           y = 104,
