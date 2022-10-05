@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 70,
-  nextobjectid = 661,
+  nextlayerid = 76,
+  nextobjectid = 863,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -9964,7 +9964,7 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 55,
+              id = 72,
               name = "testacidant1",
               class = "",
               visible = true,
@@ -9976,25 +9976,12 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 592,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -40,
-                  y = 1456,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 593,
+                  id = 729,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 16,
-                  y = 1504,
+                  x = -16,
+                  y = 1312,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -10005,12 +9992,458 @@ return {
                   }
                 },
                 {
-                  id = 598,
+                  id = 731,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 240,
-                  y = 1504,
+                  x = -80,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 733,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -192,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 735,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -32,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 737,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -144,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 739,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -96,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 741,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -208,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 743,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 745,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -160,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 747,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -112,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 749,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -224,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 751,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -64,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 753,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -176,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 755,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -128,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 757,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -240,
+                  y = 1312,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 761,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 16,
+                  y = 1360,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 256, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 793,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 74,
+              name = "testacidant0",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 829,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -152,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 830,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -32,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 832,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -80,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 835,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -128,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 837,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -176,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 838,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -56,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 840,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -104,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 841,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -200,
+                  y = 1488,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 842,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 16,
+                  y = 1536,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 256, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 843,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1488,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 75,
+              name = "Copy of testacidant0",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 844,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 408,
+                  y = 1440,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -10021,116 +10454,2474 @@ return {
                   }
                 },
                 {
-                  id = 594,
+                  id = 845,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 846,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 847,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 848,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 849,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 312,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 850,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 360,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 851,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 456,
+                  y = 1440,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 852,
                   name = "",
                   class = "Path",
                   shape = "polyline",
+                  x = 272,
+                  y = 1440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -240, y = 0 },
+                    { x = -288, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 853,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
                   x = -16,
-                  y = 1320,
+                  y = 1440,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  polyline = {
-                    { x = 32, y = 32 },
-                    { x = 48, y = 16 }
-                  },
                   properties = {}
                 },
                 {
-                  id = 597,
+                  id = 854,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 408,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 855,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 856,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 857,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 858,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 859,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 312,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 860,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 360,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 861,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 456,
+                  y = 1536,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 862,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 176,
-                  y = 1320,
+                  x = 272,
+                  y = 1536,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 64, y = 32 },
-                    { x = 48, y = 16 }
+                    { x = 0, y = 0 },
+                    { x = -240, y = 0 },
+                    { x = -288, y = 0 }
                   },
                   properties = {}
-                },
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 73,
+              name = "Copy of testacidant1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
                 {
-                  id = 657,
+                  id = 794,
                   name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 40,
-                  y = 1480,
-                  width = 0,
-                  height = 0,
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
                   rotation = 0,
+                  gid = 483,
                   visible = true,
                   properties = {
-                    ["angle"] = 315,
-                    ["burstinterval"] = 30,
-                    ["bursts"] = 10,
-                    ["burstshots"] = 3,
-                    ["deltaangle"] = 0,
-                    ["shotinterval"] = 3,
-                    ["subscript"] = "shootBurstsAtAngle(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval, rad(pathpoint.angle), rad(pathpoint.deltaangle))"
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
                   }
                 },
                 {
-                  id = 658,
+                  id = 795,
                   name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 216,
-                  y = 1480,
-                  width = 0,
-                  height = 0,
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
                   rotation = 0,
+                  gid = 483,
                   visible = true,
                   properties = {
-                    ["angle"] = 225,
-                    ["burstinterval"] = 30,
-                    ["bursts"] = 10,
-                    ["burstshots"] = 3,
-                    ["deltaangle"] = 0,
-                    ["shotinterval"] = 3,
-                    ["subscript"] = "shootBurstsAtAngle(self, pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval, rad(pathpoint.angle), rad(pathpoint.deltaangle))"
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
                   }
                 },
                 {
-                  id = 659,
+                  id = 796,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -80,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 797,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -72,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 798,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -192,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 799,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -184,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 800,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -32,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 801,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -24,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 802,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -144,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 803,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -136,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 804,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -96,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 805,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -88,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 806,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -208,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 807,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -200,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 808,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 809,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -40,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 810,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -160,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 811,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -152,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 812,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -112,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 813,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -104,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 814,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -224,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 815,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -216,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 816,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -64,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 817,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -56,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 818,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -176,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 819,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -168,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 820,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -128,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 821,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -120,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 822,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -240,
+                  y = 1184,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 824 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 823,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -232,
+                  y = 1168,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["path"] = { id = 825 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 824,
                   name = "",
                   class = "Path",
                   shape = "polyline",
                   x = 16,
-                  y = 1504,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = 24, y = -24 },
-                    { x = 24, y = -184 }
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 264, y = -48 }
                   },
                   properties = {}
                 },
                 {
-                  id = 660,
+                  id = 825,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 240,
-                  y = 1504,
+                  x = 24,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = -24, y = -24 },
-                    { x = -24, y = -184 }
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 256, y = -48 }
                   },
                   properties = {}
+                },
+                {
+                  id = 826,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1136,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 71,
+              name = "testacidant2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 728,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1264,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 759,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 760,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 763,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -48 },
+                    { x = -48, y = -48 },
+                    { x = -288, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 764,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 1408,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -48 },
+                    { x = -48, y = -48 },
+                    { x = -288, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 765,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 766,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 767,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 448,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 768,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 448,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 769,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 770,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 771,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 400,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 772,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 400,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 773,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 774,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 775,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 464,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 776,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 464,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 777,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 778,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 779,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 416,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 780,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 416,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 781,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 368,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 782,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 368,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 783,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 480,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 784,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 480,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 785,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 320,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 786,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 320,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 787,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 788,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 789,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 790,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 791,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 496,
+                  y = 1264,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 792,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 496,
+                  y = 1360,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 70,
+              name = "testacidant4",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 661,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1008,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 662,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 696,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 674,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -80,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 697,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -80,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 675,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -192,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 698,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -192,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 668,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -32,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 699,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -32,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 681,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -144,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 700,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -144,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 673,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -96,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 701,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -96,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 676,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -208,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 702,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -208,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 669,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 703,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 680,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -160,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 704,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -160,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 672,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -112,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 705,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -112,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 677,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -224,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 706,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -224,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 670,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -64,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 707,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -64,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 679,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -176,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 708,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -176,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 671,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -128,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 709,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -128,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 678,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -240,
+                  y = 1136,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 710,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -240,
+                  y = 1040,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 663,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 711,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 272,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 666,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 16,
+                  y = 1184,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 256, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 712,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 16,
+                  y = 1088,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = -48 },
+                    { x = 16, y = -48 },
+                    { x = 256, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 667,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 1168,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -48 },
+                    { x = -48, y = -48 },
+                    { x = -288, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 713,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 272,
+                  y = 1072,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -48 },
+                    { x = -48, y = -48 },
+                    { x = -288, y = -48 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 682,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 714,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 683,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 448,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 715,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 448,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 684,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 716,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 288,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 685,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 400,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 717,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 400,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 686,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 718,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 687,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 464,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 719,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 464,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 688,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 720,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 689,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 416,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 721,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 416,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 690,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 368,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 722,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 368,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 691,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 480,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 723,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 480,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 692,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 320,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 724,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 320,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 693,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 725,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 432,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 694,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 726,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 384,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 695,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 496,
+                  y = 1120,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 727,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 496,
+                  y = 1024,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
                 }
               }
             },
@@ -10154,7 +12945,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1296,
+                  y = 896,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10167,7 +12958,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 128,
-                  y = 1360,
+                  y = 960,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10185,7 +12976,7 @@ return {
                   class = "Beetle",
                   shape = "rectangle",
                   x = 128,
-                  y = 1360,
+                  y = 960,
                   width = 48,
                   height = 48,
                   rotation = 0,
@@ -10201,7 +12992,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 128,
-                  y = 1328,
+                  y = 928,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10232,7 +13023,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1248,
+                  y = 848,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10245,7 +13036,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
-                  y = 1232,
+                  y = 832,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -10261,7 +13052,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 144,
-                  y = 1224,
+                  y = 824,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -10277,7 +13068,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 1216,
+                  y = 816,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -10309,7 +13100,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1184,
+                  y = 784,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10322,7 +13113,7 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -16,
-                  y = 1168,
+                  y = 768,
                   width = 24,
                   height = 32,
                   rotation = 0,
@@ -10357,7 +13148,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1152,
+                  y = 752,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10370,7 +13161,7 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -16,
-                  y = 1136,
+                  y = 736,
                   width = 24,
                   height = 32,
                   rotation = 0,
@@ -10405,7 +13196,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1120,
+                  y = 720,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10418,7 +13209,7 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -16,
-                  y = 1104,
+                  y = 704,
                   width = 24,
                   height = 32,
                   rotation = 0,
@@ -10453,7 +13244,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1088,
+                  y = 688,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10466,7 +13257,7 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -16,
-                  y = 1072,
+                  y = 672,
                   width = 24,
                   height = 32,
                   rotation = 0,
@@ -10501,7 +13292,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 1056,
+                  y = 656,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -10514,7 +13305,7 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -16,
-                  y = 1040,
+                  y = 640,
                   width = 24,
                   height = 32,
                   rotation = 0,
