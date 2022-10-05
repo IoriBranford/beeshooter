@@ -252,6 +252,16 @@ function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotin
     end
 end
 
+function EnemyShip:shootAtAimAngleOnDefeat()
+    EnemyShip.shootAimAngle(self)
+    self:defaultDefeat()
+end
+
+function EnemyShip:shootAtPlayerOnDefeat()
+    EnemyShip.shootAtPlayer(self)
+    self:defaultDefeat()
+end
+
 function EnemyShip:shootAimAngle()
     shootAS(self, self.bullettype, self.aimangle)
 end
