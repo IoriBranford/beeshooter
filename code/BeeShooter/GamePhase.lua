@@ -107,6 +107,16 @@ function GamePhase.gamepadpressed(joystick, button)
     elseif button == Config.joy_fire then
         if status == TitleStatus then
             GamePhase.startGame()
+        elseif paused then
+            gui.pausemenu:pressSelectedButton()
+        end
+    elseif button == "dpup" then
+        if paused then
+            gui.pausemenu:moveCursor(-1)
+        end
+    elseif button == "dpdown" then
+        if paused then
+            gui.pausemenu:moveCursor(1)
         end
     end
 end
