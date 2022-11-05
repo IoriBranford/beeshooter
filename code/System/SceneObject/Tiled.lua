@@ -92,6 +92,7 @@ function SceneTiled.newShapeObject(shapeobject)
         return
     end
 
+    sceneobject.hidden = not shapeobject.visible
     local color = shapeobject.color
     if color then
         sceneobject.red, sceneobject.green, sceneobject.blue, sceneobject.alpha = Color.unpack(color)
@@ -146,6 +147,7 @@ function SceneTiled.newTextObject(textobject)
         textobject.rotation, textobject.scalex, textobject.scaley,
         textobject.originx, textobject.originy,
         textobject.skewx, textobject.skewy)
+    sceneobject.hidden = not textobject.visible
     sceneobject.font = textobject.font
     sceneobject.halign = textobject.halign or "left"
     sceneobject.valign = textobject.valign or "top"
@@ -159,6 +161,7 @@ end
 function SceneTiled.newImageLayer(imagelayer)
     local image = imagelayer.image
     local sceneobject = SceneTiled.newImage(image, imagelayer.x, imagelayer.y, imagelayer.z)
+    sceneobject.hidden = not imagelayer.visible
     sceneobject.alpha = imagelayer.opacity
     return sceneobject
 end
@@ -170,6 +173,7 @@ function SceneTiled.newTileObject(tileobject)
     local y = tileobject.y
     local z = tileobject.z
     local sceneobject = SceneTiled.newTile(tile, x, y, z, tileobject.rotation, tileobject.scalex, tileobject.scaley)
+    sceneobject.hidden = not tileobject.visible
     local color = tileobject.color
     if color then
         sceneobject.red, sceneobject.green, sceneobject.blue, sceneobject.alpha = Color.unpack(color)

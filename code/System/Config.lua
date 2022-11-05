@@ -55,6 +55,13 @@ function Config.isPortraitDimensions()
 	return w < h
 end
 
+function Config.isVertical()
+    local portraitrotation = Config.isPortraitRotation()
+    local portraitdimensions = Config.isPortraitDimensions()
+    return portraitrotation and not portraitdimensions
+    	or portraitdimensions and not portraitrotation
+end
+
 function Config.applyDisplayMode(basew, baseh, winmaxscale)
 	local w, h, flags = love.window.getMode()
 	local modes = love.window.getFullscreenModes()

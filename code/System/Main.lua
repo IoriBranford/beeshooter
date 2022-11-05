@@ -20,41 +20,40 @@ local fixedrate = Time.FixedUpdateRate
 local fixedlimit = 1
 local variableupdate = true
 
-local blankphase = {
-    loadphase   = function() end,
-    fixedupdate = function() end,
-    update      = function(dsecs, fixedfrac) end,
-    draw        = function(fixedfrac) end,
-    quitphase   = function() end,
+local blankphase = {}
+function blankphase.loadphase() end
+function blankphase.fixedupdate() end
+function blankphase.update(dsecs, fixedfrac) end
+function blankphase.draw(fixedfrac) end
+function blankphase.quitphase() end
 
-    displayrotated   = function(index, orientation) end,
-    directorydropped = function(path) end,
-    filedropped      = function(file) end,
-    focus            = function(focus) end,
-    mousefocus       = function(focus) end,
-    resize           = function(w, h) end,
-    visible          = function(visible) end,
+function blankphase.displayrotated(index, orientation) end
+function blankphase.directorydropped(path) end
+function blankphase.filedropped(file) end
+function blankphase.focus(focus) end
+function blankphase.mousefocus(focus) end
+function blankphase.resize(w, h) end
+function blankphase.visible(visible) end
 
-    keypressed  = function(key, scancode, isrepeat) end,
-    keyreleased = function(key, scancode) end,
-    textedited  = function(text, start, length) end,
-    textinput   = function(text) end,
+function blankphase.keypressed(key, scancode, isrepeat) end
+function blankphase.keyreleased(key, scancode) end
+function blankphase.textedited(text, start, length) end
+function blankphase.textinput(text) end
 
-    mousemoved    = function(x, y, dx, dy, istouch) end,
-    mousepressed  = function(x, y, button, istouch, presses) end,
-    mousereleased = function(x, y, button, istouch, presses) end,
-    wheelmoved    = function(x, y) end,
+function blankphase.mousemoved(x, y, dx, dy, istouch) end
+function blankphase.mousepressed(x, y, button, istouch, presses) end
+function blankphase.mousereleased(x, y, button, istouch, presses) end
+function blankphase.wheelmoved(x, y) end
 
-    joystickadded   = function(joystick) end,
-    joystickremoved = function(joystick) end,
-    gamepadaxis     = function(joystick, axis, value) end,
-    gamepadpressed  = function(joystick, button) end,
-    gamepadreleased = function(joystick, button) end,
+function blankphase.joystickadded(joystick) end
+function blankphase.joystickremoved(joystick) end
+function blankphase.gamepadaxis(joystick, axis, value) end
+function blankphase.gamepadpressed(joystick, button) end
+function blankphase.gamepadreleased(joystick, button) end
 
-    touchmoved    = function(id, x, y, dx, dy, pressure) end,
-    touchpressed  = function(id, x, y, dx, dy, pressure) end,
-    touchreleased = function(id, x, y, dx, dy, pressure) end
-}
+function blankphase.touchmoved(id, x, y, dx, dy, pressure) end
+function blankphase.touchpressed(id, x, y, dx, dy, pressure) end
+function blankphase.touchreleased(id, x, y, dx, dy, pressure) end
 
 function love.event.loadphase(name, ...)
     love.event.push("loadphase", name, ...)

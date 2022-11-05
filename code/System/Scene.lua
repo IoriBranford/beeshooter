@@ -87,12 +87,15 @@ function Scene:addImageLayer(imagelayer)
 end
 
 function Scene:addTileLayer(tilelayer)
+    local hidden = not tilelayer.visible
     local tilebatch = tilelayer.tilebatch
     local layerx = tilelayer.x
     local layery = tilelayer.y
     local layerz = tilelayer.z
     if tilebatch then
-        return {self:addAnimatedChunk(tilelayer, layerx, layery, layerz)}
+        local spritebatch = self:addAnimatedChunk(tilelayer, layerx, layery, layerz)
+        spritebatch.hidden = hidden
+        return {spritebatch}
     end
     local chunks = tilelayer.chunks
     if chunks then
@@ -106,6 +109,7 @@ function Scene:addTileLayer(tilelayer)
             local cx = chunk.x * cellwidth
             local cy = chunk.y * cellheight
             local spritebatch = self:addAnimatedChunk(chunk, layerx+cx, layery+cy, layerz)
+            spritebatch.hidden = hidden
             chunk.sprite = spritebatch
             sceneobjects[i] = spritebatch
         end
@@ -142,6 +146,7 @@ function Scene:addObject(object)
 end
 
 function Scene:addLayer(layer, layerfilter)
+    local layerhidden = not layer.visible
     local layertype = layer.type
     if layertype == "group" then
         self:addLayers(layer, layerfilter)
@@ -151,6 +156,7 @@ function Scene:addLayer(layer, layerfilter)
         for i = 1, #layer do
             local object = layer[i]
             object.sprite = self:addObject(object)
+            object.sprite.hidden = object.sprite.hidden or layerhidden
         end
     elseif layertype == "imagelayer" then
         layer.sprite = self:addImageLayer(layer)

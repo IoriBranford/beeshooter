@@ -28,6 +28,9 @@ function Canvas.init(width, height)
         canvasscale = math.floor(canvasscale)
     end
 
+    local filter = Config.canvasscalesoft and "linear" or "nearest"
+    canvas:setFilter(filter, filter)
+
     transform = love.math.newTransform()
     transform:translate(math.floor(ghw), math.floor(ghh))
     transform:rotate(rotation)
