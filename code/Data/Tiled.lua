@@ -302,7 +302,7 @@ function Tiled.addTileset(tileset)
 
         local tile = tileset[tileid]
         tile.id = tileid
-        tile.type = tiledata.type
+        tile.type = tiledata.class or tiledata.type
         local properties = tiledata.properties
         local name = properties and properties.name
         if name then

@@ -50,10 +50,11 @@ local TilePacking = {}
 --- Pack tiles in a map.
 --- Do not use with gamma-correct rendering - tiles will be darkened.
 --- @param map table map with unpacked tiles
---- @return table imagedata packed image data for saving
+--- @return table? imagedata packed image data for saving
+--- @return string? error if no imagedata, what went wrong
 function TilePacking.pack(map)
     if not love.graphics then
-        return false, "Megatileset requires love.graphics"
+        return nil, "Megatileset requires love.graphics"
     end
 
     local tilesets = map.tilesets
@@ -95,21 +96,21 @@ function TilePacking.pack(map)
         return a.width*a.height > b.width*b.height
     end)
 
-    local space = newSpace(0, 0, packwidth, packheight)
+    local allspace = newSpace(0, 0, packwidth, packheight)
 
     for i = 1, #sizesortedtiles do
         local tile = sizesortedtiles[i]
         local width = tile.width + 2
         local height = tile.height + 2
-        local subspace = findSubspace(space, width, height)
+        local subspace = findSubspace(allspace, width, height)
         while not subspace do
             if packheight < packwidth then
                 packheight = packheight*2
             else
                 packwidth = packwidth*2
             end
-            space = growSpace(space, packwidth, packheight)
-            subspace = findSubspace(space, width, height)
+            allspace = growSpace(allspace, packwidth, packheight)
+            subspace = findSubspace(allspace, width, height)
         end
         subspace.tile = tile
         splitSpace(subspace, width, height)
@@ -118,7 +119,7 @@ function TilePacking.pack(map)
     local limits = love.graphics.getSystemLimits()
     if packwidth > limits.texturesize
     or packheight > limits.texturesize then
-        return false, string.format("Megatileset exceeds texture size limit of %dpx", limits.texturesize)
+        return nil, string.format("Megatileset exceeds texture size limit of %dpx", limits.texturesize)
     end
 
     local drawSpace_quad = love.graphics.newQuad(0, 0, 1, 1, 1, 1)
@@ -169,7 +170,7 @@ function TilePacking.pack(map)
     local canvas = love.graphics.newCanvas(packwidth, packheight)
     love.graphics.setCanvas(canvas)
     love.graphics.setLineStyle("rough")
-    drawSpace(space)
+    drawSpace(allspace)
     love.graphics.setCanvas()
 
     local imagedata = canvas:newImageData()
@@ -200,7 +201,7 @@ end
 ---@param map table map with packed tiles
 ---@param quadspath string quad table file path
 ---@param imagepath string image file path
----@param imagedata ImageData image data returned from packing
+---@param imagedata love.ImageData image data returned from packing
 function TilePacking.save(map, quadspath, imagepath, imagedata)
     local tiles = map.tiles
     imagedata:encode("png", imagepath)
@@ -219,7 +220,7 @@ end
 ---@param quadspath string quad table file path
 ---@param imagepath string image file path
 ---@return boolean success
----@return string err
+---@return string? err
 function TilePacking.load(map, quadspath, imagepath)
     local quadsfunction, err = love.filesystem.load(quadspath)
     if not quadsfunction then

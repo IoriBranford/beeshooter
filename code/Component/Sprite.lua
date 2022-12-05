@@ -67,11 +67,12 @@ function Sprite:update(sprite, fixedfrac)
         local z = self.z
         local angle = self.rotation or 0
         local scalexy = self.scalexy or 1
+        local scalex, scaley = self.scalex or 1, self.scaley or 1
         sprite.x = x + vx * fixedfrac
         sprite.y = y + vy * fixedfrac
         sprite.z = z + vz * fixedfrac
-        sprite.sx = self.scalex * scalexy
-        sprite.sy = self.scaley * scalexy
+        sprite.sx = scalex * scalexy
+        sprite.sy = scaley * scalexy
         sprite.r = angle
         -- sprite.oy = (self.spriteoriginy or 0) + z
     end
@@ -79,7 +80,7 @@ end
 
 function Sprite.getDirectionIndex_angle(numdirections, angle)
     local dirarc = 2 * pi / numdirections
-    return floor(angle / dirarc) % numdirections
+    return floor(angle / dirarc + .5) % numdirections
 end
 local getDirectionIndex_angle = Sprite.getDirectionIndex_angle
 

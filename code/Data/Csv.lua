@@ -19,15 +19,20 @@ local function parseValue(v)
     return v
 end
 
+function Csv.readLine(line)
+    local row = {}
+    for v in s_gmatch(line, "%s*([^,]-)%s*,") do
+        row[#row+1] = parseValue(v)
+    end
+    row[#row+1] = parseValue(s_match(line, "%s*([^,]-)%s*$"))
+    return row
+end
+local readLine = Csv.readLine
+
 function Csv.load(filename)
     local rows = {}
     for line in love.filesystem.lines(filename) do
-        local row = {}
-        for v in s_gmatch(line, "%s*([^,]-)%s*,") do
-            row[#row+1] = parseValue(v)
-        end
-        row[#row+1] = parseValue(s_match(line, "%s*([^,]-)%s*$"))
-        rows[#rows+1] = row
+        rows[#rows+1] = readLine(line)
     end
     return rows
 end
