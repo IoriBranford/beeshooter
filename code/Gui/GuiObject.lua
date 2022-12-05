@@ -1,11 +1,10 @@
+local class = require "pl.class"
 ---@class GuiObject
 ---@field sprite SceneObject
 
-local GuiObject = {}
-GuiObject.__index = GuiObject
+local GuiObject = class()
 
 function GuiObject:init()
-    setmetatable(self, GuiObject)
 end
 
 function GuiObject:changeTile(tileid)

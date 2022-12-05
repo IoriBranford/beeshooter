@@ -12,7 +12,7 @@
             "id": 5,
             "members": [
                 {
-                    "name": "pressaction",
+                    "name": "action",
                     "type": "string",
                     "value": ""
                 },

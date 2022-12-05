@@ -1,10 +1,10 @@
 local Scene = require "System.Scene"
 local Tiled = require "Data.Tiled"
 local GuiObject = require "Gui.GuiObject"
+local class     = require "pl.class"
 
 ---@class Gui
-local Gui = {}
-Gui.__index = Gui
+local Gui = class()
 
 ---@param map string|table Tiled map exported to Lua, either table or filename
 ---@return Gui
@@ -13,6 +13,8 @@ function Gui.new(map)
         map = Tiled.load(map)
     end
     local self = map.layers
+    self.width = map.width*map.tilewidth
+    self.height = map.height*map.tileheight
     self.class = "Gui"
     local scene = Scene.new()
     scene:addLayers(self)
@@ -24,17 +26,18 @@ function Gui.new(map)
         end
 
         local ok
-        local class = element.class
-        if class ~= "" then
-            ok, class = pcall(require, class)
+        local cls = element.class
+        if cls ~= "" then
+            ok, cls = pcall(require, cls)
             if not ok then
-                print(class)
+                print(cls)
             end
         end
         if not ok then
-            class = GuiObject
+            cls = GuiObject
         end
-        class.init(element)
+        cls:cast(element)
+        cls.init(element)
     end
 
     init(self)
@@ -42,7 +45,7 @@ function Gui.new(map)
 end
 
 function Gui:init()
-    setmetatable(self, Gui)
+    Gui:cast(self)
 end
 
 function Gui:fixedupdate()

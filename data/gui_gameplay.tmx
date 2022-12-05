@@ -1,71 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="19">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="19">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/Weapons.tsx"/>
- <objectgroup draworder="index" id="2" name="hud">
-  <properties>
-   <property name="z" type="float" value="0"/>
-  </properties>
-  <object id="1" name="score" x="8" y="8" width="112" height="8">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
-  </object>
-  <object id="3" name="lives" x="8" y="208" width="80" height="8">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥♥♥♥♥♥♥</text>
-  </object>
-  <object id="4" name="speed" x="184" y="208" width="64" height="8">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Speed ▶▶</text>
-  </object>
-  <object id="2" name="time" x="136" y="8" width="112" height="8">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
-  </object>
-  <object id="8" name="weaponbackA" gid="7" x="220" y="192" width="16" height="16"/>
-  <object id="9" name="weaponbackB" gid="7" x="240" y="192" width="16" height="16"/>
-  <object id="5" name="weaponA" gid="5" x="220" y="192" width="16" height="16">
+ <group id="7" name="hud">
+  <objectgroup draworder="index" id="2" name="status">
    <properties>
-    <property name="z" type="float" value="1"/>
+    <property name="z" type="float" value="0"/>
    </properties>
-  </object>
-  <object id="6" name="weaponB" gid="2" x="240" y="192" width="16" height="16">
+   <object id="1" name="score" x="8" y="8" width="112" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
+   </object>
+   <object id="3" name="lives" x="8" y="208" width="80" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥♥♥♥♥♥♥</text>
+   </object>
+   <object id="4" name="speed" x="184" y="208" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Speed ▶▶</text>
+   </object>
+   <object id="2" name="time" x="136" y="8" width="112" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
+   </object>
+  </objectgroup>
+  <objectgroup draworder="index" id="6" name="weapons" class="Gui.Menu">
    <properties>
-    <property name="z" type="float" value="1"/>
+    <property name="z" type="float" value="0"/>
    </properties>
-  </object>
-  <object id="10" name="weaponcursor1" gid="8" x="228" y="200" width="16" height="16">
-   <properties>
-    <property name="z" type="float" value="1"/>
-   </properties>
-  </object>
-  <object id="11" name="weaponcursor2" gid="8" x="212" y="200" width="16" height="16" rotation="90">
-   <properties>
-    <property name="z" type="float" value="1"/>
-   </properties>
-  </object>
-  <object id="12" name="weaponcursor3" gid="8" x="212" y="184" width="16" height="16" rotation="180">
-   <properties>
-    <property name="z" type="float" value="1"/>
-   </properties>
-  </object>
-  <object id="13" name="weaponcursor4" gid="8" x="228" y="184" width="16" height="16" rotation="270">
-   <properties>
-    <property name="z" type="float" value="1"/>
-   </properties>
-  </object>
- </objectgroup>
+   <object id="8" name="weaponbackA" gid="7" x="220" y="192" width="16" height="16">
+    <properties>
+     <property name="z" type="float" value="-1"/>
+    </properties>
+   </object>
+   <object id="9" name="weaponbackB" gid="7" x="240" y="192" width="16" height="16">
+    <properties>
+     <property name="z" type="float" value="-1"/>
+    </properties>
+   </object>
+   <object id="5" name="weaponA" class="Gui.Button" gid="5" x="220" y="192" width="16" height="16">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="6" name="weaponB" class="Gui.Button" gid="2" x="240" y="192" width="16" height="16">
+    <properties>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="10" name="weaponcursor1" class="Gui.Cursor" gid="8" x="228" y="200" width="16" height="16">
+    <properties>
+     <property name="offsetx" type="float" value="8"/>
+     <property name="offsety" type="float" value="8"/>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="11" name="weaponcursor2" class="Gui.Cursor" gid="8" x="212" y="200" width="16" height="16" rotation="90">
+    <properties>
+     <property name="offsetx" type="float" value="-8"/>
+     <property name="offsety" type="float" value="8"/>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="12" name="weaponcursor3" class="Gui.Cursor" gid="8" x="212" y="184" width="16" height="16" rotation="180">
+    <properties>
+     <property name="offsetx" type="float" value="-8"/>
+     <property name="offsety" type="float" value="-8"/>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+   <object id="13" name="weaponcursor4" class="Gui.Cursor" gid="8" x="228" y="184" width="16" height="16" rotation="270">
+    <properties>
+     <property name="offsetx" type="float" value="8"/>
+     <property name="offsety" type="float" value="-8"/>
+     <property name="z" type="float" value="1"/>
+    </properties>
+   </object>
+  </objectgroup>
+ </group>
  <objectgroup id="5" name="pausemenu" class="Gui.Menu">
   <object id="14" name="PAUSE!" x="80" y="56" width="96" height="8">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">PAUSE!</text>
   </object>
   <object id="15" name="Resume" class="BeeShooter.Gui.Button" x="104" y="88" width="64" height="8">
    <properties>
-    <property name="pressaction" value="resumeGame"/>
+    <property name="action" value="resumeGame"/>
    </properties>
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Resume</text>
   </object>
   <object id="16" name="End" class="BeeShooter.Gui.Button" x="104" y="104" width="64" height="8">
    <properties>
-    <property name="pressaction" value="endGame"/>
+    <property name="action" value="endGame"/>
    </properties>
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">End</text>
   </object>

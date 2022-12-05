@@ -1,11 +1,18 @@
-local tablex = require "pl.tablex"
 local GuiObject = require "Gui.GuiObject"
+local Audio     = require "System.Audio"
+local class     = require "pl.class"
 
-local Cursor = tablex.copy(GuiObject)
-Cursor.__index = Cursor
+local Cursor = class(GuiObject)
+Cursor.iscursor = true
 
 function Cursor:init()
-    setmetatable(self, Cursor)
+end
+
+function Cursor:onSelect(i, item)
+end
+
+function Cursor:onMoveTo(i, item)
+    Audio.play(self.movesound)
 end
 
 return Cursor

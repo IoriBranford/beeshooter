@@ -251,7 +251,7 @@ function Stage.fixedupdateHud(hud)
     local timerseconds = floor(gametimer / 60) % 60
     local timerframes = gametimer % 60
     local timerstring = s_format("%d:%02d:%02d", timerminutes, timerseconds, timerframes)
-    hud.time:setString(timerstring)
+    hud.status.time:setString(timerstring)
     PlayerShip.updateHud(player, hud)
 end
 

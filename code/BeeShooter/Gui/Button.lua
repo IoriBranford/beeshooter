@@ -9,8 +9,8 @@ Button.__index = Button
 function Button:init()
     setmetatable(self, Button)
 
-    local pressaction = self.pressaction
-    self.pressaction = Button[pressaction] or Button.playInvalidSound
+    local action = self.action
+    self.action = Button[action] or Button.playInvalidSound
 end
 
 function Button:resumeGame()

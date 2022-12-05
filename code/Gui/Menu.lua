@@ -1,37 +1,33 @@
-local Audio = require "System.Audio"
-local tablex= require "pl.tablex"
 local GuiObject = require "Gui.GuiObject"
+local Config    = require "System.Config"
+local class     = require "pl.class"
 
----@class Menu
-local Menu = tablex.copy(GuiObject)
-Menu.__index = Menu
+local Menu = class(GuiObject)
 
 function Menu:init()
-    setmetatable(self, Menu)
     local platform = love.system.getOS()
 
     local cursors = {}
-    local buttons = {}
+    local menuitems = {}
     self.cursors = cursors
-    self.buttons = buttons
+    self.menuitems = menuitems
 
     for _, object in ipairs(self) do
         local platforms = object.platforms or "all"
         if platforms == "all" or platforms:find(platform) then
-            local oclass = object.class
-            if oclass:find("Gui.Cursor") then
+            if object.iscursor then
                 cursors[#cursors+1] = object
-            elseif oclass:find("Gui.Button") then
-                buttons[#buttons + 1] = object
+            elseif object.ismenuitem then
+                menuitems[#menuitems + 1] = object
             end
         else
             object:setHidden(true)
         end
     end
 
-    assert(#buttons > 0, self.name.." is a Menu without Buttons")
+    assert(#menuitems > 0, self.name.." is a Menu without Buttons")
 
-    table.sort(buttons, function(a,b)
+    table.sort(menuitems, function(a,b)
         return a.y < b.y
     end)
 
@@ -39,22 +35,54 @@ function Menu:init()
     return self
 end
 
+function Menu:keypressed(key)
+    if key == Config.key_fire then
+        self:pressSelectedButton()
+    elseif key == Config.key_up then
+        self:moveCursor(-1)
+    elseif key == Config.key_down then
+        self:moveCursor(1)
+    elseif key == Config.key_left then
+        self:changeSelectedSlider(-1)
+    elseif key == Config.key_right then
+        self:changeSelectedSlider(1)
+    end
+end
+
+function Menu:gamepadpressed(gamepad, button)
+    if button == "dpup" then
+        self:moveCursor(-1)
+    elseif button == "dpdown" then
+        self:moveCursor(1)
+    elseif button == "dpleft" then
+        self:changeSelectedSlider(-1)
+    elseif button == "dpright" then
+        self:changeSelectedSlider(1)
+    elseif button == Config.joy_fire then
+        self:pressSelectedButton()
+    end
+end
+
 function Menu:selectButton(i)
-    local buttons = self.buttons
-    local button = buttons[i]
-    local oldbutton = buttons[self.cursorposition]
-    if oldbutton then
-        if oldbutton.onDeselect then
-            oldbutton:onDeselect()
+    local menuitems = self.menuitems
+    local menuitem = menuitems[i]
+    local lastmenuitem = menuitems[self.cursorposition]
+    if lastmenuitem then
+        lastmenuitem:onDeselect()
+    end
+    if menuitem then
+        menuitem:onSelect()
+        for _, cursor in ipairs(self.cursors) do
+            cursor:setHidden(false)
+            cursor:setPosition(
+                menuitem.x + (cursor.offsetx or 0),
+                menuitem.y + (cursor.offsety or 0))
+            cursor:onSelect(i, menuitem)
         end
-    end
-    if button.onSelect then
-        button:onSelect()
-    end
-    for _, cursor in ipairs(self.cursors) do
-        cursor:setPosition(
-            button.x + (cursor.offsetx or 0),
-            button.y + (cursor.offsety or 0))
+    else
+        for _, cursor in ipairs(self.cursors) do
+            cursor:setHidden(true)
+        end
     end
     self.cursorposition = i
 end
@@ -62,19 +90,29 @@ end
 function Menu:moveCursor(dir)
     dir = dir / math.abs(dir)
     local i = self.cursorposition
-    local buttons = self.buttons
+    local menuitems = self.menuitems
     i = i + dir
     if i < 1 then
-        i = #buttons
-    elseif i > #buttons then
+        i = #menuitems
+    elseif i > #menuitems then
         i = 1
     end
     self:selectButton(i)
+    for _, cursor in ipairs(self.cursors) do
+        cursor:onMoveTo(i, menuitems[i])
+    end
+end
+
+function Menu:changeSelectedSlider(dir)
+    local slider = self.menuitems[self.cursorposition]
+    if slider and slider.change then
+        slider:change(dir)
+    end
 end
 
 function Menu:pressSelectedButton()
-    local button = self.buttons[self.cursorposition]
-    if button then
+    local button = self.menuitems[self.cursorposition]
+    if button and button.press then
         button:press()
     end
 end

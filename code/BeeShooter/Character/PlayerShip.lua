@@ -260,7 +260,7 @@ end
 function PlayerShip:updateHud(hud)
     love.graphics.setColor(1, 1, 1)
     local score = s_format("%07d", self.score)
-    hud.score:setString(score)
+    hud.status.score:setString(score)
 
     local lives = self.lives
     local livesstring
@@ -269,22 +269,20 @@ function PlayerShip:updateHud(hud)
     else
         livesstring = s_rep("♥", lives)
     end
-    hud.lives:setString(livesstring)
+    hud.status.lives:setString(livesstring)
 
     local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
-    hud.speed:setString(speedstring)
+    hud.status.speed:setString(speedstring)
 
     local power = tostring(self.power)
-    hud.weaponA:changeTile(power.."A")
-    hud.weaponB:changeTile(power.."B")
+    hud.weapons.weaponA:changeTile(power.."A")
+    hud.weapons.weaponB:changeTile(power.."B")
 
     local weapon = self.weapon
-    local selectedicon = hud["weapon"..weapon]
-    if selectedicon then
-       hud.weaponcursor1:setPosition(selectedicon.x + 8, selectedicon.y + 8)
-       hud.weaponcursor2:setPosition(selectedicon.x - 8, selectedicon.y + 8)
-       hud.weaponcursor3:setPosition(selectedicon.x - 8, selectedicon.y - 8)
-       hud.weaponcursor4:setPosition(selectedicon.x + 8, selectedicon.y - 8)
+    if weapon == "A" then
+        hud.weapons:selectButton(1)
+    elseif weapon == "B" then
+        hud.weapons:selectButton(2)
     end
 end
 

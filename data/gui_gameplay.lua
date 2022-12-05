@@ -9,7 +9,7 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 6,
+  nextlayerid = 8,
   nextobjectid = 19,
   properties = {},
   tilesets = {
@@ -94,9 +94,8 @@ return {
   },
   layers = {
     {
-      type = "objectgroup",
-      draworder = "index",
-      id = 2,
+      type = "group",
+      id = 7,
       name = "hud",
       class = "",
       visible = true,
@@ -105,205 +104,251 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {
-        ["z"] = 0
-      },
-      objects = {
+      properties = {},
+      layers = {
         {
-          id = 1,
-          name = "score",
-          class = "",
-          shape = "text",
-          x = 8,
-          y = 8,
-          width = 112,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          text = "00000000",
-          fontfamily = "Press Start 2P",
-          pixelsize = 8,
-          wrap = true,
-          color = { 255, 255, 255 },
-          halign = "right",
-          properties = {}
-        },
-        {
-          id = 3,
-          name = "lives",
-          class = "",
-          shape = "text",
-          x = 8,
-          y = 208,
-          width = 80,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          text = "♥♥♥♥♥♥♥♥♥",
-          fontfamily = "Press Start 2P",
-          pixelsize = 8,
-          wrap = true,
-          color = { 255, 255, 255 },
-          properties = {}
-        },
-        {
-          id = 4,
-          name = "speed",
-          class = "",
-          shape = "text",
-          x = 184,
-          y = 208,
-          width = 64,
-          height = 8,
-          rotation = 0,
-          visible = true,
-          text = "Speed ▶▶",
-          fontfamily = "Press Start 2P",
-          pixelsize = 8,
-          wrap = true,
-          color = { 255, 255, 255 },
-          properties = {}
-        },
-        {
+          type = "objectgroup",
+          draworder = "index",
           id = 2,
-          name = "time",
+          name = "status",
           class = "",
-          shape = "text",
-          x = 136,
-          y = 8,
-          width = 112,
-          height = 8,
-          rotation = 0,
           visible = true,
-          text = "00:00:00",
-          fontfamily = "Press Start 2P",
-          pixelsize = 8,
-          wrap = true,
-          color = { 255, 255, 255 },
-          properties = {}
-        },
-        {
-          id = 8,
-          name = "weaponbackA",
-          class = "",
-          shape = "rectangle",
-          x = 220,
-          y = 192,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 7,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 9,
-          name = "weaponbackB",
-          class = "",
-          shape = "rectangle",
-          x = 240,
-          y = 192,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 7,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 5,
-          name = "weaponA",
-          class = "",
-          shape = "rectangle",
-          x = 220,
-          y = 192,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 5,
-          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
           properties = {
-            ["z"] = 1
+            ["z"] = 0
+          },
+          objects = {
+            {
+              id = 1,
+              name = "score",
+              class = "",
+              shape = "text",
+              x = 8,
+              y = 8,
+              width = 112,
+              height = 8,
+              rotation = 0,
+              visible = true,
+              text = "00000000",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              halign = "right",
+              properties = {}
+            },
+            {
+              id = 3,
+              name = "lives",
+              class = "",
+              shape = "text",
+              x = 8,
+              y = 208,
+              width = 80,
+              height = 8,
+              rotation = 0,
+              visible = true,
+              text = "♥♥♥♥♥♥♥♥♥",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              properties = {}
+            },
+            {
+              id = 4,
+              name = "speed",
+              class = "",
+              shape = "text",
+              x = 184,
+              y = 208,
+              width = 64,
+              height = 8,
+              rotation = 0,
+              visible = true,
+              text = "Speed ▶▶",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              properties = {}
+            },
+            {
+              id = 2,
+              name = "time",
+              class = "",
+              shape = "text",
+              x = 136,
+              y = 8,
+              width = 112,
+              height = 8,
+              rotation = 0,
+              visible = true,
+              text = "00:00:00",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              properties = {}
+            }
           }
         },
         {
+          type = "objectgroup",
+          draworder = "index",
           id = 6,
-          name = "weaponB",
-          class = "",
-          shape = "rectangle",
-          x = 240,
-          y = 192,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 2,
+          name = "weapons",
+          class = "Gui.Menu",
           visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
           properties = {
-            ["z"] = 1
-          }
-        },
-        {
-          id = 10,
-          name = "weaponcursor1",
-          class = "",
-          shape = "rectangle",
-          x = 228,
-          y = 200,
-          width = 16,
-          height = 16,
-          rotation = 0,
-          gid = 8,
-          visible = true,
-          properties = {
-            ["z"] = 1
-          }
-        },
-        {
-          id = 11,
-          name = "weaponcursor2",
-          class = "",
-          shape = "rectangle",
-          x = 212,
-          y = 200,
-          width = 16,
-          height = 16,
-          rotation = 90,
-          gid = 8,
-          visible = true,
-          properties = {
-            ["z"] = 1
-          }
-        },
-        {
-          id = 12,
-          name = "weaponcursor3",
-          class = "",
-          shape = "rectangle",
-          x = 212,
-          y = 184,
-          width = 16,
-          height = 16,
-          rotation = 180,
-          gid = 8,
-          visible = true,
-          properties = {
-            ["z"] = 1
-          }
-        },
-        {
-          id = 13,
-          name = "weaponcursor4",
-          class = "",
-          shape = "rectangle",
-          x = 228,
-          y = 184,
-          width = 16,
-          height = 16,
-          rotation = 270,
-          gid = 8,
-          visible = true,
-          properties = {
-            ["z"] = 1
+            ["z"] = 0
+          },
+          objects = {
+            {
+              id = 8,
+              name = "weaponbackA",
+              class = "",
+              shape = "rectangle",
+              x = 220,
+              y = 192,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 7,
+              visible = true,
+              properties = {
+                ["z"] = -1
+              }
+            },
+            {
+              id = 9,
+              name = "weaponbackB",
+              class = "",
+              shape = "rectangle",
+              x = 240,
+              y = 192,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 7,
+              visible = true,
+              properties = {
+                ["z"] = -1
+              }
+            },
+            {
+              id = 5,
+              name = "weaponA",
+              class = "Gui.Button",
+              shape = "rectangle",
+              x = 220,
+              y = 192,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 5,
+              visible = true,
+              properties = {
+                ["z"] = 1
+              }
+            },
+            {
+              id = 6,
+              name = "weaponB",
+              class = "Gui.Button",
+              shape = "rectangle",
+              x = 240,
+              y = 192,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 2,
+              visible = true,
+              properties = {
+                ["z"] = 1
+              }
+            },
+            {
+              id = 10,
+              name = "weaponcursor1",
+              class = "Gui.Cursor",
+              shape = "rectangle",
+              x = 228,
+              y = 200,
+              width = 16,
+              height = 16,
+              rotation = 0,
+              gid = 8,
+              visible = true,
+              properties = {
+                ["offsetx"] = 8,
+                ["offsety"] = 8,
+                ["z"] = 1
+              }
+            },
+            {
+              id = 11,
+              name = "weaponcursor2",
+              class = "Gui.Cursor",
+              shape = "rectangle",
+              x = 212,
+              y = 200,
+              width = 16,
+              height = 16,
+              rotation = 90,
+              gid = 8,
+              visible = true,
+              properties = {
+                ["offsetx"] = -8,
+                ["offsety"] = 8,
+                ["z"] = 1
+              }
+            },
+            {
+              id = 12,
+              name = "weaponcursor3",
+              class = "Gui.Cursor",
+              shape = "rectangle",
+              x = 212,
+              y = 184,
+              width = 16,
+              height = 16,
+              rotation = 180,
+              gid = 8,
+              visible = true,
+              properties = {
+                ["offsetx"] = -8,
+                ["offsety"] = -8,
+                ["z"] = 1
+              }
+            },
+            {
+              id = 13,
+              name = "weaponcursor4",
+              class = "Gui.Cursor",
+              shape = "rectangle",
+              x = 228,
+              y = 184,
+              width = 16,
+              height = 16,
+              rotation = 270,
+              gid = 8,
+              visible = true,
+              properties = {
+                ["offsetx"] = 8,
+                ["offsety"] = -8,
+                ["z"] = 1
+              }
+            }
           }
         }
       }
@@ -358,7 +403,7 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["pressaction"] = "resumeGame"
+            ["action"] = "resumeGame"
           }
         },
         {
@@ -378,7 +423,7 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["pressaction"] = "endGame"
+            ["action"] = "endGame"
           }
         },
         {
