@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="77" nextobjectid="864">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="85" nextobjectid="986">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -34,11 +34,17 @@
   <object id="50" x="-256" y="1344" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">12</text>
   </object>
-  <object id="51" x="-256" y="1568" width="256" height="224">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">11</text>
+  <object id="51" x="-256" y="1568" width="224" height="224">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 11
+
+Lines of acid ants across screen, first stationary then marching</text>
   </object>
   <object id="52" x="-256" y="1792" width="256" height="224">
-   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">10</text>
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Room 10
+
+Meet the acid ants
+
+Don't allow easily trapping yourself with acid yet</text>
   </object>
   <object id="53" x="-256" y="2016" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">9</text>
@@ -177,6 +183,21 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="-16" y="98" width="16" height="14">
+   eJxjYCAf8FGgdzDopxQMdfcPdTAcwh8A0AgAYw==
+  </chunk>
+    <chunk x="0" y="98" width="16" height="14">
+   eJzjY2Bg4BvCGBsgVh02taSKU2IXHwFxQvYRYz4p7iPkFlLBQKcNUsKC2umN2PADAFuYCM8=
+  </chunk>
+    <chunk x="16" y="98" width="16" height="14">
+   eJzjY6AM8A2wfkrBUHf/QIOBDr+hHv4A+IAAcQ==
+  </chunk>
+    <chunk x="0" y="112" width="16" height="14">
+   eJzjY2Bg4MODsQFkOXL1EsKU6CVFPzZxXACfPYT0EtJPLKBUP7oZo2BgAQC03wOd
+  </chunk>
+    <chunk x="16" y="112" width="16" height="14">
+   eJxjYBhYwEcF/ZSYwYeGR5r+UTCwAABRJgEL
+  </chunk>
     <chunk x="-16" y="126" width="16" height="14">
    eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg==
   </chunk>
@@ -1310,6 +1331,279 @@ self.speed = 0.75</property>
      <properties>
       <property name="subscript" value="self.speed = fastspeed or 4"/>
      </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="80" name="part2">
+    <object id="887" template="enemies/Trigger.tx" x="-16" y="2000"/>
+   </objectgroup>
+   <objectgroup id="77" name="room10acidants">
+    <object id="869" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1848" rotation="0"/>
+    <object id="870" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1880" rotation="0"/>
+    <object id="871" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1864" rotation="0"/>
+    <object id="872" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1888" rotation="0"/>
+    <object id="873" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1904" rotation="0"/>
+    <object id="875" class="Path" x="264" y="1888">
+     <polyline points="0,0 -32,0 -56,-24"/>
+    </object>
+    <object id="876" class="Path" x="272" y="1904">
+     <polyline points="-8,0 -40,0 -80,-40"/>
+    </object>
+    <object id="877" class="Path" x="304" y="1864">
+     <polyline points="-40,0 -48,0 -72,-24"/>
+    </object>
+    <object id="878" class="Path" x="296" y="1880">
+     <polyline points="-32,0 -48,0 -72,-24"/>
+    </object>
+    <object id="879" class="Path" x="328" y="1856">
+     <polyline points="-64,-8 -88,-32"/>
+    </object>
+    <object id="886" template="enemies/Trigger.tx" x="-16" y="1872"/>
+   </objectgroup>
+   <objectgroup id="79" name="room10acidants2">
+    <object id="864" template="enemies/AcidAnt.tx" gid="2147484131" x="72" y="1808" rotation="0"/>
+    <object id="865" template="enemies/AcidAnt.tx" gid="2147484131" x="64" y="1816" rotation="0"/>
+    <object id="866" template="enemies/AcidAnt.tx" gid="2147484131" x="56" y="1792" rotation="0"/>
+    <object id="867" template="enemies/AcidAnt.tx" gid="2147484131" x="40" y="1800" rotation="0"/>
+    <object id="868" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1792" rotation="0"/>
+    <object id="880" class="Path" x="96" y="1784">
+     <polyline points="-24,24 -24,48"/>
+    </object>
+    <object id="881" class="Path" x="80" y="1800">
+     <polyline points="-16,16 -24,24"/>
+    </object>
+    <object id="882" class="Path" x="72" y="1776">
+     <polyline points="-16,16 -24,24 -24,40"/>
+    </object>
+    <object id="883" class="Path" x="56" y="1784">
+     <polyline points="-16,16 -24,24 -24,40"/>
+    </object>
+    <object id="884" class="Path" x="48" y="1768">
+     <polyline points="-24,24 -24,64"/>
+    </object>
+    <object id="885" template="enemies/Trigger.tx" x="-16" y="1824"/>
+   </objectgroup>
+   <objectgroup id="78" name="room11acidants1">
+    <object id="890" template="enemies/AcidAnt.tx" x="72" y="1776"/>
+    <object id="891" template="enemies/AcidAnt.tx" x="88" y="1760"/>
+    <object id="892" template="enemies/AcidAnt.tx" x="104" y="1744"/>
+    <object id="893" template="enemies/AcidAnt.tx" x="120" y="1736"/>
+    <object id="894" template="enemies/AcidAnt.tx" x="136" y="1728"/>
+    <object id="895" template="enemies/AcidAnt.tx" x="152" y="1720"/>
+    <object id="896" template="enemies/AcidAnt.tx" x="168" y="1720"/>
+    <object id="897" template="enemies/AcidAnt.tx" x="184" y="1720"/>
+    <object id="898" template="enemies/AcidAnt.tx" x="200" y="1720"/>
+    <object id="899" template="enemies/AcidAnt.tx" x="216" y="1720"/>
+    <object id="900" class="Path" x="72" y="1776">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="901" class="Path" x="88" y="1760">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="902" class="Path" x="104" y="1744">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="903" class="Path" x="120" y="1736">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="904" class="Path" x="136" y="1728">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="905" class="Path" x="152" y="1720">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="906" class="Path" x="168" y="1720">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="907" class="Path" x="184" y="1720">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="908" class="Path" x="200" y="1720">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="909" class="Path" x="216" y="1720">
+     <polyline points="0,0 16,16"/>
+    </object>
+    <object id="910" template="enemies/Trigger.tx" x="-16" y="1784"/>
+   </objectgroup>
+   <objectgroup id="84" name="room11acidants2">
+    <object id="965" template="enemies/Trigger.tx" x="-16" y="1712"/>
+    <object id="966" template="enemies/AcidAnt.tx" x="120" y="1704">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="967" template="enemies/AcidAnt.tx" x="104" y="1696">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="968" template="enemies/AcidAnt.tx" x="88" y="1688">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="969" template="enemies/AcidAnt.tx" x="72" y="1680">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="970" template="enemies/AcidAnt.tx" x="56" y="1672">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="971" template="enemies/AcidAnt.tx" x="40" y="1664">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="972" template="enemies/AcidAnt.tx" x="24" y="1656">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="973" template="enemies/AcidAnt.tx" gid="483" x="8" y="1648" rotation="0">
+     <properties>
+      <property name="path" type="object" value="982"/>
+     </properties>
+    </object>
+    <object id="974" template="enemies/AcidAnt.tx" gid="2147484131" x="136" y="1688" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="975" template="enemies/AcidAnt.tx" gid="2147484131" x="152" y="1680" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="976" template="enemies/AcidAnt.tx" gid="2147484131" x="168" y="1672" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="977" template="enemies/AcidAnt.tx" gid="2147484131" x="184" y="1664" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="978" template="enemies/AcidAnt.tx" gid="2147484131" x="200" y="1656" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="979" template="enemies/AcidAnt.tx" gid="2147484131" x="216" y="1648" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="980" template="enemies/AcidAnt.tx" gid="2147484131" x="232" y="1640" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="981" template="enemies/AcidAnt.tx" gid="2147484131" x="248" y="1632" rotation="0">
+     <properties>
+      <property name="path" type="object" value="983"/>
+     </properties>
+    </object>
+    <object id="982" class="Path" x="120" y="1704">
+     <polyline points="0,0 0,24 -32,40 -136,40"/>
+    </object>
+    <object id="983" class="Path" x="136" y="1688">
+     <polyline points="0,0 0,24 32,40 136,40"/>
+    </object>
+    <object id="984" template="pathpoints/FaceLeft.tx" x="120" y="1728"/>
+    <object id="985" template="pathpoints/FaceRight.tx" x="136" y="1712"/>
+   </objectgroup>
+   <objectgroup id="83" name="room11acidants3">
+    <object id="946" template="enemies/AcidAnt.tx" x="8" y="1592"/>
+    <object id="947" template="enemies/AcidAnt.tx" gid="2147484131" x="120" y="1592" rotation="0"/>
+    <object id="948" template="enemies/AcidAnt.tx" x="40" y="1592"/>
+    <object id="958" template="enemies/AcidAnt.tx" gid="2147484131" x="56" y="1592" rotation="0"/>
+    <object id="949" template="enemies/AcidAnt.tx" gid="2147484131" x="88" y="1592" rotation="0"/>
+    <object id="957" template="enemies/AcidAnt.tx" x="104" y="1592"/>
+    <object id="950" template="enemies/AcidAnt.tx" x="72" y="1592"/>
+    <object id="956" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1592" rotation="0"/>
+    <object id="951" template="enemies/AcidAnt.tx" gid="2147484131" x="248" y="1592" rotation="0"/>
+    <object id="952" template="enemies/AcidAnt.tx" gid="483" x="136" y="1592" rotation="0"/>
+    <object id="953" template="enemies/AcidAnt.tx" gid="2147484131" x="216" y="1592" rotation="0"/>
+    <object id="961" template="enemies/AcidAnt.tx" gid="483" x="200" y="1592" rotation="0"/>
+    <object id="954" template="enemies/AcidAnt.tx" gid="483" x="168" y="1592" rotation="0"/>
+    <object id="960" template="enemies/AcidAnt.tx" gid="2147484131" x="152" y="1592" rotation="0"/>
+    <object id="955" template="enemies/AcidAnt.tx" gid="2147484131" x="184" y="1592" rotation="0"/>
+    <object id="959" template="enemies/AcidAnt.tx" gid="483" x="232" y="1592" rotation="0"/>
+    <object id="964" template="enemies/Trigger.tx" x="-16" y="1600"/>
+   </objectgroup>
+   <objectgroup id="81" name="room11powerup">
+    <object id="888" template="enemies/HoneyPot.tx" x="128" y="1624"/>
+    <object id="889" template="enemies/Trigger.tx" x="-16" y="1616"/>
+   </objectgroup>
+   <objectgroup id="82" name="room12acidants2">
+    <object id="911" template="enemies/Trigger.tx" x="-16" y="1520"/>
+    <object id="912" template="enemies/AcidAnt.tx" x="176" y="1516"/>
+    <object id="921" template="enemies/AcidAnt.tx" x="48" y="1484"/>
+    <object id="917" template="enemies/AcidAnt.tx" x="112" y="1500"/>
+    <object id="924" template="enemies/AcidAnt.tx" x="-16" y="1468"/>
+    <object id="915" template="enemies/AcidAnt.tx" x="144" y="1508"/>
+    <object id="922" template="enemies/AcidAnt.tx" x="16" y="1476"/>
+    <object id="918" template="enemies/AcidAnt.tx" x="80" y="1492"/>
+    <object id="926" template="enemies/AcidAnt.tx" x="-48" y="1460"/>
+    <object id="913" template="enemies/AcidAnt.tx" x="160" y="1512"/>
+    <object id="920" template="enemies/AcidAnt.tx" x="32" y="1480"/>
+    <object id="916" template="enemies/AcidAnt.tx" x="96" y="1496"/>
+    <object id="925" template="enemies/AcidAnt.tx" x="-32" y="1464"/>
+    <object id="914" template="enemies/AcidAnt.tx" x="128" y="1504"/>
+    <object id="923" template="enemies/AcidAnt.tx" x="0" y="1472"/>
+    <object id="919" template="enemies/AcidAnt.tx" x="64" y="1488"/>
+    <object id="927" template="enemies/AcidAnt.tx" x="-64" y="1456"/>
+    <object id="928" class="Path" x="-64" y="1456">
+     <polyline points="0,0 256,64 368,64"/>
+    </object>
+    <object id="930" class="Path" x="-32" y="1464">
+     <polyline points="0,0 224,56 336,56"/>
+    </object>
+    <object id="931" class="Path" x="0" y="1472">
+     <polyline points="0,0 192,48 304,48"/>
+    </object>
+    <object id="938" class="Path" x="16" y="1476">
+     <polyline points="0,0 176,44 288,44"/>
+    </object>
+    <object id="937" class="Path" x="-16" y="1468">
+     <polyline points="0,0 208,52 320,52"/>
+    </object>
+    <object id="932" class="Path" x="32" y="1480">
+     <polyline points="0,0 160,40 272,40"/>
+    </object>
+    <object id="939" class="Path" x="48" y="1484">
+     <polyline points="0,0 144,36 256,36"/>
+    </object>
+    <object id="933" class="Path" x="64" y="1488">
+     <polyline points="0,0 128,32 240,32"/>
+    </object>
+    <object id="940" class="Path" x="80" y="1492">
+     <polyline points="0,0 112,28 224,28"/>
+    </object>
+    <object id="934" class="Path" x="96" y="1496">
+     <polyline points="0,0 96,24 208,24"/>
+    </object>
+    <object id="941" class="Path" x="112" y="1500">
+     <polyline points="0,0 80,20 192,20"/>
+    </object>
+    <object id="935" class="Path" x="128" y="1504">
+     <polyline points="0,0 64,16 176,16"/>
+    </object>
+    <object id="942" class="Path" x="144" y="1508">
+     <polyline points="0,0 48,12 160,12"/>
+    </object>
+    <object id="936" class="Path" x="160" y="1512">
+     <polyline points="0,0 32,8 144,8"/>
+    </object>
+    <object id="943" class="Path" x="176" y="1516">
+     <polyline points="0,0 16,4 128,4"/>
+    </object>
+    <object id="929" class="Path" x="-48" y="1460">
+     <polyline points="0,0 240,60 352,60"/>
     </object>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
