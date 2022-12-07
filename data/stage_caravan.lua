@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 85,
-  nextobjectid = 986,
+  nextlayerid = 109,
+  nextobjectid = 1173,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2577,11 +2577,35 @@ return {
           parallaxx = 1,
           parallaxy = 1,
           properties = {
-            ["z"] = -0.5
+            ["z"] = -2
           },
           encoding = "base64",
           compression = "zlib",
           chunks = {
+            {
+              x = -16, y = 98, width = 16, height = 14,
+              data = "eJxjYBi54AmF+pkYKdOvQKH+UTBwAJR22ijQD0o7j4E0APHXA1k="
+            },
+            {
+              x = 0, y = 98, width = 16, height = 14,
+              data = "eJxjYKAPeALEbUD8iEz9TIwMDI9BDEZU8TYoJgQUgPoYgVgOTf9jKIa5DxvGBxih5sLchw0TYzbMfdgwPrOJAfjMHukAV7wQk6ZAAFe8EIp3GAYA4QkoUw=="
+            },
+            {
+              x = 16, y = 98, width = 16, height = 14,
+              data = "eJxjYBgFlIA2CvU/plA/IyOFBowCigAo/h9RoB8AUSQC1A=="
+            },
+            {
+              x = -16, y = 112, width = 16, height = 14,
+              data = "eJxjYCAPKDAyMDAykql5FIyCUQAGAHZOACQ="
+            },
+            {
+              x = 0, y = 112, width = 16, height = 14,
+              data = "eJxjZGRgYMSBmYD4MQN+jA8o4DEbhqkFngBxGxX0w+hHJOqHhRUx+rHJKaCFOQNS2MDMhJuLJ9xg5sghqUGORwY0OWIAcjySqncU4AcAD8oW2w=="
+            },
+            {
+              x = 16, y = 112, width = 16, height = 14,
+              data = "eJx7zAAEjAxkA0agXjkK9I+CUTCSAQCMagEG"
+            },
             {
               x = -16, y = 126, width = 16, height = 14,
               data = "eJxjYBgF5IInFOpnYqRMvwKF+kfBwAMASHwBCQ=="
@@ -2710,24 +2734,24 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 84, width = 16, height = 14,
+              data = "eJxjYBgFo2AU0BqwMjIwsAExOyOqOAAFGQAW"
+            },
+            {
               x = -16, y = 98, width = 16, height = 14,
-              data = "eJxjYCAf8FGgdzDopxQMdfcPdTAcwh8A0AgAYw=="
+              data = "eJxjYCAfsDJSoBkIeCnTzqBNof5RQD4AxT0bBfEPins+CuynVD8o7ehQoJ9aAAAj2ADZ"
             },
             {
               x = 0, y = 98, width = 16, height = 14,
-              data = "eJzjY2Bg4BvCGBsgVh02taSKU2IXHwFxQvYRYz4p7iPkFlLBQKcNUsKC2umN2PADAFuYCM8="
+              data = "eJxjY2RgYANidiDGB7SBWAeIddHE+ZAwGyMmJmSuDhSLopmFz1xsZmojmYWOsZkNM4sYgM/soQ6wxRkp8YcrzgilCxgmRj8+jCteCKUpGMYH8MU7teIfAC9MCak="
             },
             {
               x = 16, y = 98, width = 16, height = 14,
-              data = "eJzjY6AM8A2wfkrBUHf/QIOBDr+hHv4A+IAAcQ=="
+              data = "eJxjYBjagJ2RMv061HHGiAVsjJTFAR8Q81NgP6X6QfGvS4F+SgEA+DEA1w=="
             },
             {
               x = 0, y = 112, width = 16, height = 14,
-              data = "eJzjY2Bg4MODsQFkOXL1EsKU6CVFPzZxXACfPYT0EtJPLKBUP7oZo2BgAQC03wOd"
-            },
-            {
-              x = 16, y = 112, width = 16, height = 14,
-              data = "eJxjYBhYwEcF/ZSYwYeGR5r+UTCwAABRJgEL"
+              data = "eJxjYKAOYGVkYGCDYnZG0vXzAjEfEsZmBise87WBWAeIRaH6+bHo48Mih8scXRxuE0OTIwbAzEQ3dxSMAgD8DALS"
             },
             {
               x = -16, y = 126, width = 16, height = 14,
@@ -2843,11 +2867,23 @@ return {
           parallaxx = 1,
           parallaxy = 1,
           properties = {
-            ["z"] = 0.5
+            ["z"] = 0.125
           },
           encoding = "base64",
           compression = "zlib",
           chunks = {
+            {
+              x = 0, y = 84, width = 16, height = 14,
+              data = "eJxjYBgFo2AU0Bo4MjIwOAGxMyOqOAATKQDK"
+            },
+            {
+              x = 0, y = 98, width = 16, height = 14,
+              data = "eJxjYCAO1DIyMNQBcT0jkRpGwYgAjsD04IQDOxORVkDpyh6IDYHYAZrGQPwEIFbCYp4jFrPR0yaMj2yWA1Q+HmpXIpHpGJfZ1MoHALC8ECk="
+            },
+            {
+              x = 0, y = 112, width = 16, height = 14,
+              data = "eJxjYKAOcGRkYHCCYmdG0vXXAvXUAbE9ECvhMMORCPNh5tQzYupTBGIHNDlS3IZu7igYBZQCAKIOCFs="
+            },
             {
               x = 0, y = 126, width = 16, height = 14,
               data = "eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh"
@@ -8444,8 +8480,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 2000,
+                  x = -24,
+                  y = 2008,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -8473,14 +8509,16 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1848,
+                  x = 216,
+                  y = 1904,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = 90,
                   gid = 2147484131,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8489,14 +8527,16 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1880,
+                  x = 184,
+                  y = 1928,
                   width = 16,
                   height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
+                  rotation = -90,
+                  gid = 483,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8505,14 +8545,16 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1864,
+                  x = 200,
+                  y = 1920,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = 90,
                   gid = 2147484131,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8521,14 +8563,16 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1888,
+                  x = 168,
+                  y = 1928,
                   width = 16,
                   height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
+                  rotation = -90,
+                  gid = 483,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8537,118 +8581,196 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1904,
+                  x = 152,
+                  y = 1920,
                   width = 16,
                   height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
+                  rotation = -90,
+                  gid = 483,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
-                },
-                {
-                  id = 875,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 264,
-                  y = 1888,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = -32, y = 0 },
-                    { x = -56, y = -24 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 876,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 272,
-                  y = 1904,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -8, y = 0 },
-                    { x = -40, y = 0 },
-                    { x = -80, y = -40 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 877,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 304,
-                  y = 1864,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -40, y = 0 },
-                    { x = -48, y = 0 },
-                    { x = -72, y = -24 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 878,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 296,
-                  y = 1880,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -32, y = 0 },
-                    { x = -48, y = 0 },
-                    { x = -72, y = -24 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 879,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 328,
-                  y = 1856,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -64, y = -8 },
-                    { x = -88, y = -32 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 886,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 1872,
+                  x = -32,
+                  y = 1856,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {}
+                },
+                {
+                  id = 1030,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 152,
+                  y = 1920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1032,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 168,
+                  y = 1928,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1034,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 184,
+                  y = 1928,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1036,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1038,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 216,
+                  y = 1904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1031,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1033,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 168,
+                  y = 1888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1035,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 184,
+                  y = 1888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1037,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1039,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 1864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
@@ -8667,192 +8789,280 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 864,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 72,
-                  y = 1808,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 865,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 64,
-                  y = 1816,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 866,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 56,
-                  y = 1792,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 867,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 40,
-                  y = 1800,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 868,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 24,
-                  y = 1792,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 880,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 96,
-                  y = 1784,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -24, y = 24 },
-                    { x = -24, y = 48 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 881,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 80,
-                  y = 1800,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -16, y = 16 },
-                    { x = -24, y = 24 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 882,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 72,
-                  y = 1776,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -16, y = 16 },
-                    { x = -24, y = 24 },
-                    { x = -24, y = 40 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 883,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 56,
-                  y = 1784,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -16, y = 16 },
-                    { x = -24, y = 24 },
-                    { x = -24, y = 40 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 884,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 48,
-                  y = 1768,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = -24, y = 24 },
-                    { x = -24, y = 64 }
-                  },
-                  properties = {}
-                },
-                {
                   id = 885,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 1824,
+                  x = -32,
+                  y = 1840,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {}
+                },
+                {
+                  id = 1046,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 104,
+                  y = 1904,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1047,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 72,
+                  y = 1904,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1048,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 88,
+                  y = 1912,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1049,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 56,
+                  y = 1896,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1050,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 40,
+                  y = 1888,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1051,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 40,
+                  y = 1888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1052,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 56,
+                  y = 1896,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1053,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 72,
+                  y = 1904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1054,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 88,
+                  y = 1912,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1055,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 104,
+                  y = 1904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1056,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 1848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1057,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 56,
+                  y = 1856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1058,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 72,
+                  y = 1864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1059,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 88,
+                  y = 1872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                },
+                {
+                  id = 1060,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 78,
-              name = "room11acidants1",
+              id = 83,
+              name = "r11acidants1a",
               class = "",
               visible = true,
               opacity = 1,
@@ -8863,347 +9073,628 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 890,
+                  id = 952,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 72,
-                  y = 1776,
+                  x = 232,
+                  y = 1816,
                   width = 16,
                   height = 16,
-                  rotation = 0,
-                  gid = 483,
+                  rotation = 90,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
                 {
-                  id = 891,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 88,
-                  y = 1760,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 892,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 104,
-                  y = 1744,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 893,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 120,
-                  y = 1736,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 894,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 136,
-                  y = 1728,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 895,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 152,
-                  y = 1720,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 896,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 168,
-                  y = 1720,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 897,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 184,
-                  y = 1720,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 898,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 200,
-                  y = 1720,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 899,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 216,
-                  y = 1720,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 900,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 72,
-                  y = 1776,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 901,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 88,
-                  y = 1760,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 902,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 104,
-                  y = 1744,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 903,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 120,
-                  y = 1736,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 904,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 136,
-                  y = 1728,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 905,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 152,
-                  y = 1720,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 906,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 168,
-                  y = 1720,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 907,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 184,
-                  y = 1720,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 908,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 200,
-                  y = 1720,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 909,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 216,
-                  y = 1720,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 910,
+                  id = 964,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
+                  x = -48,
+                  y = 1760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1001,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 264,
                   y = 1784,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
                   properties = {}
+                },
+                {
+                  id = 1011,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 1776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 91,
+              name = "r11acidants1b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1101,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 1816,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1102,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1752,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1103,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 1784,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1104,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 92,
+              name = "r11acidants1c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1105,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 168,
+                  y = 1816,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1106,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1107,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1784,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1108,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 168,
+                  y = 1776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 96,
+              name = "r11acidants1d",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1121,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 1816,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1122,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1123,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 168,
+                  y = 1784,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1124,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 1776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 93,
+              name = "r11acidants1e",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1109,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 1808,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1110,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1111,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 152,
+                  y = 1776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1112,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 1768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 94,
+              name = "r11acidants1f",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1113,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 88,
+                  y = 1800,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1114,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1115,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 120,
+                  y = 1768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1116,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 88,
+                  y = 1760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 95,
+              name = "r11acidants1g",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1117,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 56,
+                  y = 1800,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1118,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1119,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 88,
+                  y = 1768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1120,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 56,
+                  y = 1760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 97,
+              name = "r11acidants1h",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1125,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 24,
+                  y = 1800,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1126,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1704,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1127,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 56,
+                  y = 1768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -32, y = 32 },
+                    { x = -32, y = -8 },
+                    { x = -32, y = -24 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1128,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 1760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
@@ -9211,7 +9702,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 84,
-              name = "room11acidants2",
+              name = "room11acidants2a",
               class = "",
               visible = true,
               opacity = 1,
@@ -9226,8 +9717,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 1712,
+                  x = -32,
+                  y = 1648,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -9235,19 +9726,34 @@ return {
                   properties = {}
                 },
                 {
-                  id = 966,
+                  id = 1071,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 120,
-                  y = 1704,
+                  x = 264,
+                  y = 1800,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1075,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 1800,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
                     ["z"] = 1
                   }
                 },
@@ -9256,15 +9762,62 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 104,
-                  y = 1696,
+                  x = 264,
+                  y = 1736,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1078,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 1736,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1072,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 1768,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1076,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 1768,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
                     ["z"] = 1
                   }
                 },
@@ -9273,15 +9826,30 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 88,
-                  y = 1688,
+                  x = 264,
+                  y = 1928,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1079,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 264,
+                  y = 1896,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
                     ["z"] = 1
                   }
                 },
@@ -9290,15 +9858,14 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 72,
-                  y = 1680,
+                  x = 264,
+                  y = 1704,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
                     ["z"] = 1
                   }
                 },
@@ -9307,15 +9874,14 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 56,
-                  y = 1672,
+                  x = 264,
+                  y = 1864,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
                     ["z"] = 1
                   }
                 },
@@ -9324,15 +9890,14 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 40,
-                  y = 1664,
+                  x = 264,
+                  y = 1672,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
                     ["z"] = 1
                   }
                 },
@@ -9341,15 +9906,14 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 24,
-                  y = 1656,
+                  x = 264,
+                  y = 1832,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 483,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 982 },
                     ["z"] = 1
                   }
                 },
@@ -9358,126 +9922,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 8,
-                  y = 1648,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 982 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 974,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 136,
-                  y = 1688,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 975,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 152,
-                  y = 1680,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 976,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 168,
-                  y = 1672,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 977,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 184,
-                  y = 1664,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 978,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 200,
-                  y = 1656,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 979,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 216,
-                  y = 1648,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 980,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 232,
+                  x = 264,
                   y = 1640,
                   width = 16,
                   height = 16,
@@ -9485,24 +9930,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["path"] = { id = 983 },
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 981,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 248,
-                  y = 1632,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["path"] = { id = 983 },
                     ["z"] = 1
                   }
                 },
@@ -9511,76 +9938,25 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 120,
-                  y = 1704,
+                  x = 264,
+                  y = 1616,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
                     { x = 0, y = 24 },
-                    { x = -32, y = 40 },
-                    { x = -136, y = 40 }
+                    { x = -272, y = -24 }
                   },
                   properties = {}
-                },
-                {
-                  id = 983,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 136,
-                  y = 1688,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = 24 },
-                    { x = 32, y = 40 },
-                    { x = 136, y = 40 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 984,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 120,
-                  y = 1728,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["subscript"] = "faceSpriteX(self, -1)"
-                  }
-                },
-                {
-                  id = 985,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 136,
-                  y = 1712,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["subscript"] = "faceSpriteX(self, 1)"
-                  }
                 }
               }
             },
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 83,
-              name = "room11acidants3",
+              id = 86,
+              name = "room11acidants2b",
               class = "",
               visible = true,
               opacity = 1,
@@ -9591,12 +9967,25 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 946,
+                  id = 1061,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 1584,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1062,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 8,
-                  y = 1592,
+                  x = -8,
+                  y = 1864,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -9607,28 +9996,12 @@ return {
                   }
                 },
                 {
-                  id = 947,
+                  id = 1074,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 120,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 948,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 40,
-                  y = 1592,
+                  x = -8,
+                  y = 1768,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -9639,44 +10012,12 @@ return {
                   }
                 },
                 {
-                  id = 958,
+                  id = 1063,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 56,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 949,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 88,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 957,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 104,
-                  y = 1592,
+                  x = -8,
+                  y = 1704,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -9687,12 +10028,12 @@ return {
                   }
                 },
                 {
-                  id = 950,
+                  id = 1073,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 72,
-                  y = 1592,
+                  x = -8,
+                  y = 1736,
                   width = 16,
                   height = 16,
                   rotation = 0,
@@ -9703,161 +10044,997 @@ return {
                   }
                 },
                 {
-                  id = 956,
+                  id = 1064,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 24,
-                  y = 1592,
+                  x = -8,
+                  y = 1832,
                   width = 16,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484131,
+                  gid = 483,
                   visible = true,
                   properties = {
                     ["z"] = 1
                   }
                 },
                 {
-                  id = 951,
+                  id = 1065,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1672,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1066,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1800,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1067,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1640,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1068,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1608,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1069,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -8,
+                  y = 1576,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1070,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -8,
+                  y = 1576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 272, y = 48 }
+                  },
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 78,
+              name = "r11acidants3a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 899,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
                   x = 248,
-                  y = 1592,
+                  y = 1720,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = 90,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 952,
+                  id = 909,
                   name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 136,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
+                  class = "Path",
+                  shape = "polyline",
+                  x = 248,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
                   rotation = 0,
-                  gid = 483,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 910,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1632,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1028,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 248,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["subscript"] = "climbUpToFloor(self)"
                   }
-                },
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 98,
+              name = "r11acidants3b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
                 {
-                  id = 953,
+                  id = 1129,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 216,
-                  y = 1592,
+                  x = 224,
+                  y = 1720,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = 90,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 961,
+                  id = 1130,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1131,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1624,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1132,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 99,
+              name = "r11acidants3c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1133,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
                   x = 200,
-                  y = 1592,
+                  y = 1720,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = -90,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 954,
+                  id = 1134,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1135,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1616,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1136,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 100,
+              name = "r11acidants3d",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1137,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 168,
-                  y = 1592,
+                  x = 176,
+                  y = 1720,
                   width = 16,
                   height = 16,
-                  rotation = 0,
-                  gid = 483,
+                  rotation = 90,
+                  gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 960,
+                  id = 1138,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 176,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1139,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1608,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1140,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 101,
+              name = "r11acidants3e",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1141,
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
                   x = 152,
-                  y = 1592,
+                  y = 1720,
                   width = 16,
                   height = 16,
-                  rotation = 0,
+                  rotation = 90,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 955,
+                  id = 1142,
                   name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 184,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
+                  class = "Path",
+                  shape = "polyline",
+                  x = 152,
+                  y = 1736,
+                  width = 0,
+                  height = 0,
                   rotation = 0,
-                  gid = 2147484131,
                   visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
                 },
                 {
-                  id = 959,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 232,
-                  y = 1592,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 964,
+                  id = 1143,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
+                  x = -48,
                   y = 1600,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {}
+                },
+                {
+                  id = 1144,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1712,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 102,
+              name = "r11acidants3f",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1145,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1146,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 128,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1147,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1592,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1148,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 104,
+              name = "r11acidants3g",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1153,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 104,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1154,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 104,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1155,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1584,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1156,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 105,
+              name = "r11acidants3h",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1157,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 80,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1158,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 80,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1159,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1160,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 106,
+              name = "r11acidants3i",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1161,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 56,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = 90,
+                  gid = 2147484131,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1162,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 56,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1163,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1164,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 56,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 107,
+              name = "r11acidants3j",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1165,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 32,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1166,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1167,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1560,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1168,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 108,
+              name = "r11acidants3k",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1169,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = 8,
+                  y = 1704,
+                  width = 16,
+                  height = 16,
+                  rotation = -90,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1170,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 8,
+                  y = 1720,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1171,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1172,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 8,
+                  y = 1696,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
@@ -9880,8 +11057,8 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 128,
-                  y = 1624,
+                  x = 184,
+                  y = 1552,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -9896,585 +11073,12 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 1616,
+                  x = -24,
+                  y = 1568,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
-              id = 82,
-              name = "room12acidants2",
-              class = "",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 911,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -16,
-                  y = 1520,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 912,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 176,
-                  y = 1516,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 921,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 48,
-                  y = 1484,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 917,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 112,
-                  y = 1500,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 924,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -16,
-                  y = 1468,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 915,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 144,
-                  y = 1508,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 922,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 16,
-                  y = 1476,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 918,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 80,
-                  y = 1492,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 926,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -48,
-                  y = 1460,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 913,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 160,
-                  y = 1512,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 920,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 32,
-                  y = 1480,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 916,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 96,
-                  y = 1496,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 925,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -32,
-                  y = 1464,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 914,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 128,
-                  y = 1504,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 923,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 0,
-                  y = 1472,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 919,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 64,
-                  y = 1488,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 927,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -64,
-                  y = 1456,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 928,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = -64,
-                  y = 1456,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 256, y = 64 },
-                    { x = 368, y = 64 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 930,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = -32,
-                  y = 1464,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 224, y = 56 },
-                    { x = 336, y = 56 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 931,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 0,
-                  y = 1472,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 192, y = 48 },
-                    { x = 304, y = 48 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 938,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 16,
-                  y = 1476,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 176, y = 44 },
-                    { x = 288, y = 44 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 937,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = -16,
-                  y = 1468,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 208, y = 52 },
-                    { x = 320, y = 52 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 932,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 32,
-                  y = 1480,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 160, y = 40 },
-                    { x = 272, y = 40 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 939,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 48,
-                  y = 1484,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 144, y = 36 },
-                    { x = 256, y = 36 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 933,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 64,
-                  y = 1488,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 128, y = 32 },
-                    { x = 240, y = 32 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 940,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 80,
-                  y = 1492,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 112, y = 28 },
-                    { x = 224, y = 28 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 934,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 96,
-                  y = 1496,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 96, y = 24 },
-                    { x = 208, y = 24 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 941,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 112,
-                  y = 1500,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 80, y = 20 },
-                    { x = 192, y = 20 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 935,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 128,
-                  y = 1504,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 64, y = 16 },
-                    { x = 176, y = 16 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 942,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 144,
-                  y = 1508,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 48, y = 12 },
-                    { x = 160, y = 12 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 936,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 160,
-                  y = 1512,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 32, y = 8 },
-                    { x = 144, y = 8 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 943,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 176,
-                  y = 1516,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 16, y = 4 },
-                    { x = 128, y = 4 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 929,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = -48,
-                  y = 1460,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 240, y = 60 },
-                    { x = 352, y = 60 }
-                  },
                   properties = {}
                 }
               }

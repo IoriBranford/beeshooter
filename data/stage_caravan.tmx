@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="85" nextobjectid="986">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="109" nextobjectid="1173">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -12,6 +12,9 @@
  <tileset firstgid="502" source="tilesets/Fly.tsx"/>
  <tileset firstgid="518" source="tilesets/Aliens.tsx"/>
  <tileset firstgid="536" source="tilesets/Beetle.tsx"/>
+ <tileset firstgid="556" source="tilesets/AlienMind.tsx"/>
+ <tileset firstgid="560" source="tilesets/Wasp.tsx"/>
+ <tileset firstgid="562" source="tilesets/Tick.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -95,9 +98,27 @@ A brief chance to practice controls</text>
   </properties>
   <layer id="8" name="underfloor" width="30" height="20">
    <properties>
-    <property name="z" type="float" value="-0.5"/>
+    <property name="z" type="float" value="-2"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="-16" y="98" width="16" height="14">
+   eJxjYBi54AmF+pkYKdOvQKH+UTBwAJR22ijQD0o7j4E0APHXA1k=
+  </chunk>
+    <chunk x="0" y="98" width="16" height="14">
+   eJxjYKAPeALEbUD8iEz9TIwMDI9BDEZU8TYoJgQUgPoYgVgOTf9jKIa5DxvGBxih5sLchw0TYzbMfdgwPrOJAfjMHukAV7wQk6ZAAFe8EIp3GAYA4QkoUw==
+  </chunk>
+    <chunk x="16" y="98" width="16" height="14">
+   eJxjYBgFlIA2CvU/plA/IyOFBowCigAo/h9RoB8AUSQC1A==
+  </chunk>
+    <chunk x="-16" y="112" width="16" height="14">
+   eJxjYCAPKDAyMDAykql5FIyCUQAGAHZOACQ=
+  </chunk>
+    <chunk x="0" y="112" width="16" height="14">
+   eJxjZGRgYMSBmYD4MQN+jA8o4DEbhqkFngBxGxX0w+hHJOqHhRUx+rHJKaCFOQNS2MDMhJuLJ9xg5sghqUGORwY0OWIAcjySqncU4AcAD8oW2w==
+  </chunk>
+    <chunk x="16" y="112" width="16" height="14">
+   eJx7zAAEjAxkA0agXjkK9I+CUTCSAQCMagEG
+  </chunk>
     <chunk x="-16" y="126" width="16" height="14">
    eJxjYBgF5IInFOpnYqRMvwKF+kfBwAMASHwBCQ==
   </chunk>
@@ -183,20 +204,20 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="0" y="84" width="16" height="14">
+   eJxjYBgFo2AU0BqwMjIwsAExOyOqOAAFGQAW
+  </chunk>
     <chunk x="-16" y="98" width="16" height="14">
-   eJxjYCAf8FGgdzDopxQMdfcPdTAcwh8A0AgAYw==
+   eJxjYCAfsDJSoBkIeCnTzqBNof5RQD4AxT0bBfEPins+CuynVD8o7ehQoJ9aAAAj2ADZ
   </chunk>
     <chunk x="0" y="98" width="16" height="14">
-   eJzjY2Bg4BvCGBsgVh02taSKU2IXHwFxQvYRYz4p7iPkFlLBQKcNUsKC2umN2PADAFuYCM8=
+   eJxjY2RgYANidiDGB7SBWAeIddHE+ZAwGyMmJmSuDhSLopmFz1xsZmojmYWOsZkNM4sYgM/soQ6wxRkp8YcrzgilCxgmRj8+jCteCKUpGMYH8MU7teIfAC9MCak=
   </chunk>
     <chunk x="16" y="98" width="16" height="14">
-   eJzjY6AM8A2wfkrBUHf/QIOBDr+hHv4A+IAAcQ==
+   eJxjYBjagJ2RMv061HHGiAVsjJTFAR8Q81NgP6X6QfGvS4F+SgEA+DEA1w==
   </chunk>
     <chunk x="0" y="112" width="16" height="14">
-   eJzjY2Bg4MODsQFkOXL1EsKU6CVFPzZxXACfPYT0EtJPLKBUP7oZo2BgAQC03wOd
-  </chunk>
-    <chunk x="16" y="112" width="16" height="14">
-   eJxjYBhYwEcF/ZSYwYeGR5r+UTCwAABRJgEL
+   eJxjYKAOYGVkYGCDYnZG0vXzAjEfEsZmBise87WBWAeIRaH6+bHo48Mih8scXRxuE0OTIwbAzEQ3dxSMAgD8DALS
   </chunk>
     <chunk x="-16" y="126" width="16" height="14">
    eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg==
@@ -274,9 +295,18 @@ A brief chance to practice controls</text>
   </layer>
   <layer id="22" name="onfloor" width="30" height="20">
    <properties>
-    <property name="z" type="float" value="0.5"/>
+    <property name="z" type="float" value="0.125"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="0" y="84" width="16" height="14">
+   eJxjYBgFo2AU0Bo4MjIwOAGxMyOqOAATKQDK
+  </chunk>
+    <chunk x="0" y="98" width="16" height="14">
+   eJxjYCAO1DIyMNQBcT0jkRpGwYgAjsD04IQDOxORVkDpyh6IDYHYAZrGQPwEIFbCYp4jFrPR0yaMj2yWA1Q+HmpXIpHpGJfZ1MoHALC8ECk=
+  </chunk>
+    <chunk x="0" y="112" width="16" height="14">
+   eJxjYKAOcGRkYHCCYmdG0vXXAvXUAbE9ECvhMMORCPNh5tQzYupTBGIHNDlS3IZu7igYBZQCAKIOCFs=
+  </chunk>
     <chunk x="0" y="126" width="16" height="14">
    eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh
   </chunk>
@@ -1334,277 +1364,254 @@ self.speed = 0.75</property>
     </object>
    </objectgroup>
    <objectgroup id="80" name="part2">
-    <object id="887" template="enemies/Trigger.tx" x="-16" y="2000"/>
+    <object id="887" template="enemies/Trigger.tx" x="-24" y="2008"/>
    </objectgroup>
    <objectgroup id="77" name="room10acidants">
-    <object id="869" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1848" rotation="0"/>
-    <object id="870" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1880" rotation="0"/>
-    <object id="871" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1864" rotation="0"/>
-    <object id="872" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1888" rotation="0"/>
-    <object id="873" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1904" rotation="0"/>
-    <object id="875" class="Path" x="264" y="1888">
-     <polyline points="0,0 -32,0 -56,-24"/>
+    <object id="869" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="216" y="1904" rotation="90"/>
+    <object id="870" template="enemies/AcidAntClimbForeground.tx" x="184" y="1928" rotation="-90"/>
+    <object id="871" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="200" y="1920" rotation="90"/>
+    <object id="872" template="enemies/AcidAntClimbForeground.tx" x="168" y="1928" rotation="-90"/>
+    <object id="873" template="enemies/AcidAntClimbForeground.tx" x="152" y="1920" rotation="-90"/>
+    <object id="886" template="enemies/Trigger.tx" x="-32" y="1856"/>
+    <object id="1030" class="Path" x="152" y="1920">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="876" class="Path" x="272" y="1904">
-     <polyline points="-8,0 -40,0 -80,-40"/>
+    <object id="1032" class="Path" x="168" y="1928">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="877" class="Path" x="304" y="1864">
-     <polyline points="-40,0 -48,0 -72,-24"/>
+    <object id="1034" class="Path" x="184" y="1928">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="878" class="Path" x="296" y="1880">
-     <polyline points="-32,0 -48,0 -72,-24"/>
+    <object id="1036" class="Path" x="200" y="1920">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="879" class="Path" x="328" y="1856">
-     <polyline points="-64,-8 -88,-32"/>
+    <object id="1038" class="Path" x="216" y="1904">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="886" template="enemies/Trigger.tx" x="-16" y="1872"/>
+    <object id="1031" template="pathpoints/ClimbUpToFloor.tx" x="152" y="1880"/>
+    <object id="1033" template="pathpoints/ClimbUpToFloor.tx" x="168" y="1888"/>
+    <object id="1035" template="pathpoints/ClimbUpToFloor.tx" x="184" y="1888"/>
+    <object id="1037" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1880"/>
+    <object id="1039" template="pathpoints/ClimbUpToFloor.tx" x="216" y="1864"/>
    </objectgroup>
    <objectgroup id="79" name="room10acidants2">
-    <object id="864" template="enemies/AcidAnt.tx" gid="2147484131" x="72" y="1808" rotation="0"/>
-    <object id="865" template="enemies/AcidAnt.tx" gid="2147484131" x="64" y="1816" rotation="0"/>
-    <object id="866" template="enemies/AcidAnt.tx" gid="2147484131" x="56" y="1792" rotation="0"/>
-    <object id="867" template="enemies/AcidAnt.tx" gid="2147484131" x="40" y="1800" rotation="0"/>
-    <object id="868" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1792" rotation="0"/>
-    <object id="880" class="Path" x="96" y="1784">
-     <polyline points="-24,24 -24,48"/>
+    <object id="885" template="enemies/Trigger.tx" x="-32" y="1840"/>
+    <object id="1046" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="104" y="1904" rotation="90"/>
+    <object id="1047" template="enemies/AcidAntClimbForeground.tx" x="72" y="1904" rotation="-90"/>
+    <object id="1048" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="88" y="1912" rotation="90"/>
+    <object id="1049" template="enemies/AcidAntClimbForeground.tx" x="56" y="1896" rotation="-90"/>
+    <object id="1050" template="enemies/AcidAntClimbForeground.tx" x="40" y="1888" rotation="-90"/>
+    <object id="1051" class="Path" x="40" y="1888">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="881" class="Path" x="80" y="1800">
-     <polyline points="-16,16 -24,24"/>
+    <object id="1052" class="Path" x="56" y="1896">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="882" class="Path" x="72" y="1776">
-     <polyline points="-16,16 -24,24 -24,40"/>
+    <object id="1053" class="Path" x="72" y="1904">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="883" class="Path" x="56" y="1784">
-     <polyline points="-16,16 -24,24 -24,40"/>
+    <object id="1054" class="Path" x="88" y="1912">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="884" class="Path" x="48" y="1768">
-     <polyline points="-24,24 -24,64"/>
+    <object id="1055" class="Path" x="104" y="1904">
+     <polyline points="0,0 0,-40 0,-56"/>
     </object>
-    <object id="885" template="enemies/Trigger.tx" x="-16" y="1824"/>
+    <object id="1056" template="pathpoints/ClimbUpToFloor.tx" x="40" y="1848"/>
+    <object id="1057" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1856"/>
+    <object id="1058" template="pathpoints/ClimbUpToFloor.tx" x="72" y="1864"/>
+    <object id="1059" template="pathpoints/ClimbUpToFloor.tx" x="88" y="1872"/>
+    <object id="1060" template="pathpoints/ClimbUpToFloor.tx" x="104" y="1864"/>
    </objectgroup>
-   <objectgroup id="78" name="room11acidants1">
-    <object id="890" template="enemies/AcidAnt.tx" x="72" y="1776"/>
-    <object id="891" template="enemies/AcidAnt.tx" x="88" y="1760"/>
-    <object id="892" template="enemies/AcidAnt.tx" x="104" y="1744"/>
-    <object id="893" template="enemies/AcidAnt.tx" x="120" y="1736"/>
-    <object id="894" template="enemies/AcidAnt.tx" x="136" y="1728"/>
-    <object id="895" template="enemies/AcidAnt.tx" x="152" y="1720"/>
-    <object id="896" template="enemies/AcidAnt.tx" x="168" y="1720"/>
-    <object id="897" template="enemies/AcidAnt.tx" x="184" y="1720"/>
-    <object id="898" template="enemies/AcidAnt.tx" x="200" y="1720"/>
-    <object id="899" template="enemies/AcidAnt.tx" x="216" y="1720"/>
-    <object id="900" class="Path" x="72" y="1776">
-     <polyline points="0,0 16,16"/>
+   <objectgroup id="83" name="r11acidants1a">
+    <object id="952" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="232" y="1816" rotation="90"/>
+    <object id="964" template="enemies/Trigger.tx" x="-48" y="1760"/>
+    <object id="1001" template="enemies/Path.tx" x="264" y="1784" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
     </object>
-    <object id="901" class="Path" x="88" y="1760">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="902" class="Path" x="104" y="1744">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="903" class="Path" x="120" y="1736">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="904" class="Path" x="136" y="1728">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="905" class="Path" x="152" y="1720">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="906" class="Path" x="168" y="1720">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="907" class="Path" x="184" y="1720">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="908" class="Path" x="200" y="1720">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="909" class="Path" x="216" y="1720">
-     <polyline points="0,0 16,16"/>
-    </object>
-    <object id="910" template="enemies/Trigger.tx" x="-16" y="1784"/>
+    <object id="1011" template="pathpoints/ClimbUpToFloor.tx" x="232" y="1776"/>
    </objectgroup>
-   <objectgroup id="84" name="room11acidants2">
-    <object id="965" template="enemies/Trigger.tx" x="-16" y="1712"/>
-    <object id="966" template="enemies/AcidAnt.tx" x="120" y="1704">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
+   <objectgroup id="91" name="r11acidants1b">
+    <object id="1101" template="enemies/AcidAntClimbForeground.tx" gid="483" x="200" y="1816" rotation="-90"/>
+    <object id="1102" template="enemies/Trigger.tx" x="-56" y="1752"/>
+    <object id="1103" template="enemies/Path.tx" x="232" y="1784" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
     </object>
-    <object id="967" template="enemies/AcidAnt.tx" x="104" y="1696">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="968" template="enemies/AcidAnt.tx" x="88" y="1688">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="969" template="enemies/AcidAnt.tx" x="72" y="1680">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="970" template="enemies/AcidAnt.tx" x="56" y="1672">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="971" template="enemies/AcidAnt.tx" x="40" y="1664">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="972" template="enemies/AcidAnt.tx" x="24" y="1656">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="973" template="enemies/AcidAnt.tx" gid="483" x="8" y="1648" rotation="0">
-     <properties>
-      <property name="path" type="object" value="982"/>
-     </properties>
-    </object>
-    <object id="974" template="enemies/AcidAnt.tx" gid="2147484131" x="136" y="1688" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="975" template="enemies/AcidAnt.tx" gid="2147484131" x="152" y="1680" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="976" template="enemies/AcidAnt.tx" gid="2147484131" x="168" y="1672" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="977" template="enemies/AcidAnt.tx" gid="2147484131" x="184" y="1664" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="978" template="enemies/AcidAnt.tx" gid="2147484131" x="200" y="1656" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="979" template="enemies/AcidAnt.tx" gid="2147484131" x="216" y="1648" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="980" template="enemies/AcidAnt.tx" gid="2147484131" x="232" y="1640" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="981" template="enemies/AcidAnt.tx" gid="2147484131" x="248" y="1632" rotation="0">
-     <properties>
-      <property name="path" type="object" value="983"/>
-     </properties>
-    </object>
-    <object id="982" class="Path" x="120" y="1704">
-     <polyline points="0,0 0,24 -32,40 -136,40"/>
-    </object>
-    <object id="983" class="Path" x="136" y="1688">
-     <polyline points="0,0 0,24 32,40 136,40"/>
-    </object>
-    <object id="984" template="pathpoints/FaceLeft.tx" x="120" y="1728"/>
-    <object id="985" template="pathpoints/FaceRight.tx" x="136" y="1712"/>
+    <object id="1104" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1776"/>
    </objectgroup>
-   <objectgroup id="83" name="room11acidants3">
-    <object id="946" template="enemies/AcidAnt.tx" x="8" y="1592"/>
-    <object id="947" template="enemies/AcidAnt.tx" gid="2147484131" x="120" y="1592" rotation="0"/>
-    <object id="948" template="enemies/AcidAnt.tx" x="40" y="1592"/>
-    <object id="958" template="enemies/AcidAnt.tx" gid="2147484131" x="56" y="1592" rotation="0"/>
-    <object id="949" template="enemies/AcidAnt.tx" gid="2147484131" x="88" y="1592" rotation="0"/>
-    <object id="957" template="enemies/AcidAnt.tx" x="104" y="1592"/>
-    <object id="950" template="enemies/AcidAnt.tx" x="72" y="1592"/>
-    <object id="956" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1592" rotation="0"/>
-    <object id="951" template="enemies/AcidAnt.tx" gid="2147484131" x="248" y="1592" rotation="0"/>
-    <object id="952" template="enemies/AcidAnt.tx" gid="483" x="136" y="1592" rotation="0"/>
-    <object id="953" template="enemies/AcidAnt.tx" gid="2147484131" x="216" y="1592" rotation="0"/>
-    <object id="961" template="enemies/AcidAnt.tx" gid="483" x="200" y="1592" rotation="0"/>
-    <object id="954" template="enemies/AcidAnt.tx" gid="483" x="168" y="1592" rotation="0"/>
-    <object id="960" template="enemies/AcidAnt.tx" gid="2147484131" x="152" y="1592" rotation="0"/>
-    <object id="955" template="enemies/AcidAnt.tx" gid="2147484131" x="184" y="1592" rotation="0"/>
-    <object id="959" template="enemies/AcidAnt.tx" gid="483" x="232" y="1592" rotation="0"/>
-    <object id="964" template="enemies/Trigger.tx" x="-16" y="1600"/>
+   <objectgroup id="92" name="r11acidants1c">
+    <object id="1105" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="168" y="1816" rotation="90"/>
+    <object id="1106" template="enemies/Trigger.tx" x="-48" y="1744"/>
+    <object id="1107" template="enemies/Path.tx" x="200" y="1784" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1108" template="pathpoints/ClimbUpToFloor.tx" x="168" y="1776"/>
+   </objectgroup>
+   <objectgroup id="96" name="r11acidants1d">
+    <object id="1121" template="enemies/AcidAntClimbForeground.tx" gid="483" x="136" y="1816" rotation="-90"/>
+    <object id="1122" template="enemies/Trigger.tx" x="-56" y="1736"/>
+    <object id="1123" template="enemies/Path.tx" x="168" y="1784" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1124" template="pathpoints/ClimbUpToFloor.tx" x="136" y="1776"/>
+   </objectgroup>
+   <objectgroup id="93" name="r11acidants1e">
+    <object id="1109" template="enemies/AcidAntClimbForeground.tx" gid="483" x="120" y="1808" rotation="-90"/>
+    <object id="1110" template="enemies/Trigger.tx" x="-48" y="1728"/>
+    <object id="1111" template="enemies/Path.tx" x="152" y="1776" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1112" template="pathpoints/ClimbUpToFloor.tx" x="120" y="1768"/>
+   </objectgroup>
+   <objectgroup id="94" name="r11acidants1f">
+    <object id="1113" template="enemies/AcidAntClimbForeground.tx" gid="483" x="88" y="1800" rotation="-90"/>
+    <object id="1114" template="enemies/Trigger.tx" x="-56" y="1720"/>
+    <object id="1115" template="enemies/Path.tx" x="120" y="1768" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1116" template="pathpoints/ClimbUpToFloor.tx" x="88" y="1760"/>
+   </objectgroup>
+   <objectgroup id="95" name="r11acidants1g">
+    <object id="1117" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="56" y="1800" rotation="90"/>
+    <object id="1118" template="enemies/Trigger.tx" x="-48" y="1712"/>
+    <object id="1119" template="enemies/Path.tx" x="88" y="1768" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1120" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1760"/>
+   </objectgroup>
+   <objectgroup id="97" name="r11acidants1h">
+    <object id="1125" template="enemies/AcidAntClimbForeground.tx" gid="483" x="24" y="1800" rotation="-90"/>
+    <object id="1126" template="enemies/Trigger.tx" x="-56" y="1704"/>
+    <object id="1127" template="enemies/Path.tx" x="56" y="1768" visible="1">
+     <polyline points="-32,32 -32,-8 -32,-24"/>
+    </object>
+    <object id="1128" template="pathpoints/ClimbUpToFloor.tx" x="24" y="1760"/>
+   </objectgroup>
+   <objectgroup id="84" name="room11acidants2a">
+    <object id="965" template="enemies/Trigger.tx" x="-32" y="1648"/>
+    <object id="1071" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1800" rotation="0"/>
+    <object id="1075" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1800" rotation="0"/>
+    <object id="967" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1736" rotation="0"/>
+    <object id="1078" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1736" rotation="0"/>
+    <object id="1072" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1768" rotation="0"/>
+    <object id="1076" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1768" rotation="0"/>
+    <object id="968" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1928" rotation="0"/>
+    <object id="1079" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1896" rotation="0"/>
+    <object id="969" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1704" rotation="0"/>
+    <object id="970" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1864" rotation="0"/>
+    <object id="971" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1672" rotation="0"/>
+    <object id="972" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1832" rotation="0"/>
+    <object id="973" template="enemies/AcidAnt.tx" gid="2147484131" x="264" y="1640" rotation="0"/>
+    <object id="982" class="Path" x="264" y="1616">
+     <polyline points="0,24 -272,-24"/>
+    </object>
+   </objectgroup>
+   <objectgroup id="86" name="room11acidants2b">
+    <object id="1061" template="enemies/Trigger.tx" x="-80" y="1584"/>
+    <object id="1062" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1864" rotation="0"/>
+    <object id="1074" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1768" rotation="0"/>
+    <object id="1063" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1704" rotation="0"/>
+    <object id="1073" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1736" rotation="0"/>
+    <object id="1064" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1832" rotation="0"/>
+    <object id="1065" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1672" rotation="0"/>
+    <object id="1066" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1800" rotation="0"/>
+    <object id="1067" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1640" rotation="0"/>
+    <object id="1068" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1608" rotation="0"/>
+    <object id="1069" template="enemies/AcidAnt.tx" gid="483" x="-8" y="1576" rotation="0"/>
+    <object id="1070" class="Path" x="-8" y="1576">
+     <polyline points="0,0 272,48"/>
+    </object>
+   </objectgroup>
+   <objectgroup id="78" name="r11acidants3a">
+    <object id="899" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="248" y="1720" rotation="90"/>
+    <object id="909" class="Path" x="248" y="1736">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="910" template="enemies/Trigger.tx" x="-48" y="1632"/>
+    <object id="1028" template="pathpoints/ClimbUpToFloor.tx" x="248" y="1712"/>
+   </objectgroup>
+   <objectgroup id="98" name="r11acidants3b">
+    <object id="1129" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="224" y="1720" rotation="90"/>
+    <object id="1130" class="Path" x="224" y="1736">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1131" template="enemies/Trigger.tx" x="-56" y="1624"/>
+    <object id="1132" template="pathpoints/ClimbUpToFloor.tx" x="224" y="1712"/>
+   </objectgroup>
+   <objectgroup id="99" name="r11acidants3c">
+    <object id="1133" template="enemies/AcidAntClimbBackground.tx" gid="483" x="200" y="1720" rotation="-90"/>
+    <object id="1134" class="Path" x="200" y="1736">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1135" template="enemies/Trigger.tx" x="-48" y="1616"/>
+    <object id="1136" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1712"/>
+   </objectgroup>
+   <objectgroup id="100" name="r11acidants3d">
+    <object id="1137" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="176" y="1720" rotation="90"/>
+    <object id="1138" class="Path" x="176" y="1736">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1139" template="enemies/Trigger.tx" x="-56" y="1608"/>
+    <object id="1140" template="pathpoints/ClimbUpToFloor.tx" x="176" y="1712"/>
+   </objectgroup>
+   <objectgroup id="101" name="r11acidants3e">
+    <object id="1141" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="152" y="1720" rotation="90"/>
+    <object id="1142" class="Path" x="152" y="1736">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1143" template="enemies/Trigger.tx" x="-48" y="1600"/>
+    <object id="1144" template="pathpoints/ClimbUpToFloor.tx" x="152" y="1712"/>
+   </objectgroup>
+   <objectgroup id="102" name="r11acidants3f">
+    <object id="1145" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="128" y="1704" rotation="90"/>
+    <object id="1146" class="Path" x="128" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1147" template="enemies/Trigger.tx" x="-56" y="1592"/>
+    <object id="1148" template="pathpoints/ClimbUpToFloor.tx" x="128" y="1696"/>
+   </objectgroup>
+   <objectgroup id="104" name="r11acidants3g">
+    <object id="1153" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="104" y="1704" rotation="90"/>
+    <object id="1154" class="Path" x="104" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1155" template="enemies/Trigger.tx" x="-48" y="1584"/>
+    <object id="1156" template="pathpoints/ClimbUpToFloor.tx" x="104" y="1696"/>
+   </objectgroup>
+   <objectgroup id="105" name="r11acidants3h">
+    <object id="1157" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="80" y="1704" rotation="90"/>
+    <object id="1158" class="Path" x="80" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1159" template="enemies/Trigger.tx" x="-56" y="1576"/>
+    <object id="1160" template="pathpoints/ClimbUpToFloor.tx" x="80" y="1696"/>
+   </objectgroup>
+   <objectgroup id="106" name="r11acidants3i">
+    <object id="1161" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="56" y="1704" rotation="90"/>
+    <object id="1162" class="Path" x="56" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1163" template="enemies/Trigger.tx" x="-48" y="1568"/>
+    <object id="1164" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1696"/>
+   </objectgroup>
+   <objectgroup id="107" name="r11acidants3j">
+    <object id="1165" template="enemies/AcidAntClimbBackground.tx" gid="483" x="32" y="1704" rotation="-90"/>
+    <object id="1166" class="Path" x="32" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1167" template="enemies/Trigger.tx" x="-56" y="1560"/>
+    <object id="1168" template="pathpoints/ClimbUpToFloor.tx" x="32" y="1696"/>
+   </objectgroup>
+   <objectgroup id="108" name="r11acidants3k">
+    <object id="1169" template="enemies/AcidAntClimbBackground.tx" gid="483" x="8" y="1704" rotation="-90"/>
+    <object id="1170" class="Path" x="8" y="1720">
+     <polyline points="0,-16 0,-24 0,0"/>
+    </object>
+    <object id="1171" template="enemies/Trigger.tx" x="-48" y="1552"/>
+    <object id="1172" template="pathpoints/ClimbUpToFloor.tx" x="8" y="1696"/>
    </objectgroup>
    <objectgroup id="81" name="room11powerup">
-    <object id="888" template="enemies/HoneyPot.tx" x="128" y="1624"/>
-    <object id="889" template="enemies/Trigger.tx" x="-16" y="1616"/>
-   </objectgroup>
-   <objectgroup id="82" name="room12acidants2">
-    <object id="911" template="enemies/Trigger.tx" x="-16" y="1520"/>
-    <object id="912" template="enemies/AcidAnt.tx" x="176" y="1516"/>
-    <object id="921" template="enemies/AcidAnt.tx" x="48" y="1484"/>
-    <object id="917" template="enemies/AcidAnt.tx" x="112" y="1500"/>
-    <object id="924" template="enemies/AcidAnt.tx" x="-16" y="1468"/>
-    <object id="915" template="enemies/AcidAnt.tx" x="144" y="1508"/>
-    <object id="922" template="enemies/AcidAnt.tx" x="16" y="1476"/>
-    <object id="918" template="enemies/AcidAnt.tx" x="80" y="1492"/>
-    <object id="926" template="enemies/AcidAnt.tx" x="-48" y="1460"/>
-    <object id="913" template="enemies/AcidAnt.tx" x="160" y="1512"/>
-    <object id="920" template="enemies/AcidAnt.tx" x="32" y="1480"/>
-    <object id="916" template="enemies/AcidAnt.tx" x="96" y="1496"/>
-    <object id="925" template="enemies/AcidAnt.tx" x="-32" y="1464"/>
-    <object id="914" template="enemies/AcidAnt.tx" x="128" y="1504"/>
-    <object id="923" template="enemies/AcidAnt.tx" x="0" y="1472"/>
-    <object id="919" template="enemies/AcidAnt.tx" x="64" y="1488"/>
-    <object id="927" template="enemies/AcidAnt.tx" x="-64" y="1456"/>
-    <object id="928" class="Path" x="-64" y="1456">
-     <polyline points="0,0 256,64 368,64"/>
-    </object>
-    <object id="930" class="Path" x="-32" y="1464">
-     <polyline points="0,0 224,56 336,56"/>
-    </object>
-    <object id="931" class="Path" x="0" y="1472">
-     <polyline points="0,0 192,48 304,48"/>
-    </object>
-    <object id="938" class="Path" x="16" y="1476">
-     <polyline points="0,0 176,44 288,44"/>
-    </object>
-    <object id="937" class="Path" x="-16" y="1468">
-     <polyline points="0,0 208,52 320,52"/>
-    </object>
-    <object id="932" class="Path" x="32" y="1480">
-     <polyline points="0,0 160,40 272,40"/>
-    </object>
-    <object id="939" class="Path" x="48" y="1484">
-     <polyline points="0,0 144,36 256,36"/>
-    </object>
-    <object id="933" class="Path" x="64" y="1488">
-     <polyline points="0,0 128,32 240,32"/>
-    </object>
-    <object id="940" class="Path" x="80" y="1492">
-     <polyline points="0,0 112,28 224,28"/>
-    </object>
-    <object id="934" class="Path" x="96" y="1496">
-     <polyline points="0,0 96,24 208,24"/>
-    </object>
-    <object id="941" class="Path" x="112" y="1500">
-     <polyline points="0,0 80,20 192,20"/>
-    </object>
-    <object id="935" class="Path" x="128" y="1504">
-     <polyline points="0,0 64,16 176,16"/>
-    </object>
-    <object id="942" class="Path" x="144" y="1508">
-     <polyline points="0,0 48,12 160,12"/>
-    </object>
-    <object id="936" class="Path" x="160" y="1512">
-     <polyline points="0,0 32,8 144,8"/>
-    </object>
-    <object id="943" class="Path" x="176" y="1516">
-     <polyline points="0,0 16,4 128,4"/>
-    </object>
-    <object id="929" class="Path" x="-48" y="1460">
-     <polyline points="0,0 240,60 352,60"/>
-    </object>
+    <object id="888" template="enemies/HoneyPot.tx" x="184" y="1552"/>
+    <object id="889" template="enemies/Trigger.tx" x="-24" y="1568"/>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="448">
