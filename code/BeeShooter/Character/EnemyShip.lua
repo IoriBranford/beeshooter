@@ -222,6 +222,15 @@ function EnemyShip:enterBackground()
     self.sprite.alpha = 0.5
 end
 
+function EnemyShip:climbUpToFloor()
+    self.rotation = 0
+    self.z = abs(self.z)
+    self.collidable = true
+    self.sprite.red = 1
+    self.sprite.green = 1
+    self.sprite.blue = 1
+end
+
 function EnemyShip:enterForeground()
     self.z = abs(self.z)
     self.collidable = true
