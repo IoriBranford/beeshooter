@@ -6,9 +6,12 @@ local GamePhase     = require "BeeShooter.GamePhase"
 local Audio         = require "System.Audio"
 local PlayerShip    = require "BeeShooter.Character.PlayerShip"
 local Database      = require "Data.Database"
-local Script        = require "Component.Script"
 local Sprite        = require "Component.Sprite"
-local EnemyShip = {}
+local Character = require "BeeShooter.Character"
+local class     = require "pl.class"
+
+---@class EnemyShip:Character
+local EnemyShip = class(Character)
 
 local pi, cos, sin, atan2 = math.pi, math.cos, math.sin, math.atan2
 local abs, min, max = math.abs, math.min, math.max
@@ -19,7 +22,6 @@ local distsq = math.distsq
 local yield = coroutine.yield
 local wait = coroutine.wait
 
----@param self Character
 local function waitForOnscreenState(self, onscreenstate)
     while self:isSpriteOnScreen() ~= onscreenstate do
         SubScript.run(self)
@@ -48,7 +50,6 @@ local function meleeAttack(self, damage)
     end
 end
 
----@param self Character
 local function movePath(self, path, parent, meleedamage)
     if not path then
         return
@@ -77,12 +78,10 @@ local function movePath(self, path, parent, meleedamage)
     end
 end
 
----@param self Character
 local function walkPath(self, path)
     movePath(self, path, self.stage)
 end
 
----@param self Character
 local function flyPath(self, path, meleedamage)
     movePath(self, path, path, meleedamage)
 end
@@ -120,7 +119,6 @@ local function findPath(self)
     return closestpath
 end
 
----@param self Character
 function EnemyShip:Walker()
     walkPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
@@ -150,7 +148,6 @@ function EnemyShip:Spawner()
     self:markDisappear()
 end
 
----@param self Character
 function EnemyShip:Faller()
     while true do
         local accely = self.accely or (1/8)
@@ -241,7 +238,6 @@ function EnemyShip:shootAtPlayer()
     EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
 end
 
----@param self Character
 function EnemyShip:shootBurstsAtAngle(bursts, burstinterval, burstshots, shotinterval, angle, deltaangle)
     deltaangle = deltaangle or 0
     self.aimangle = angle
@@ -290,13 +286,11 @@ function EnemyShip:WaspCharge()
     self:markDisappear()
 end
 
----@param self Character
 function EnemyShip:startWaspAttack()
     self.speed = self.chargeplayerspeed or 5
-    Script.setNext(self, EnemyShip.WaspCharge)
+    self:setNextCoroutines(EnemyShip.WaspCharge)
 end
 
----@param self Character
 function EnemyShip:AlienGunner_shootAtPlayer()
     local player = self.player
     local x, y = self.x, self.y
@@ -343,7 +337,6 @@ local BiteIndexes = {
     [1] = true,
 }
 
----@param self Character
 function EnemyShip:Tick()
     Audio.play(self.movesound)
     local player = self.player

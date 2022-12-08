@@ -20,12 +20,7 @@ local Env = {
 }
 local EnvMetatable = {
     __index = function(_, k)
-        local self = Env.self
-        local v = self.script and self.script[k]
-        if v == nil then
-            v = self[k]
-        end
-        return v
+        return Env.self[k]
     end
 }
 setmetatable(Env, EnvMetatable)

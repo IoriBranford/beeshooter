@@ -1,7 +1,9 @@
 local PlayerShip = require "BeeShooter.Character.PlayerShip"
 local Movement   = require "Component.Movement"
 local Body       = require "BeeShooter.Character.Body"
-local Item = {}
+local class      = require "pl.class"
+local Character  = require "BeeShooter.Character"
+local Item = class(Character)
 
 local cos = math.cos
 local pi = math.pi

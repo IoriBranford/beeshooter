@@ -1,12 +1,12 @@
 local Scene    = require "System.Scene"
 local Character    = require "BeeShooter.Character"
 local Body         = require "BeeShooter.Character.Body"
-local Script       = require "Component.Script"
 local Tiled        = require "Data.Tiled"
 local Timeline     = require "Data.Timeline"
 local PathPoint    = require "Object.PathPoint"
 local Path         = require "Object.Path"
 local Config       = require "System.Config"
+local Database     = require "Data.Database"
 local PlayerShip
 
 local t_sort = table.sort
@@ -180,7 +180,7 @@ end
 
 function Stage.startGame()
     stage.vely = stage.startvely or .75
-    Script.start(player, PlayerShip.respawn)
+    player:setNextCoroutines(PlayerShip.respawn)
 end
 
 function Stage.addCharacter(object)
@@ -189,7 +189,13 @@ function Stage.addCharacter(object)
     end
     object.camera = camera
     object.stage = stage
-    local character = Character.init(object)
+    local type = object.type
+    if type then
+        Database.fillBlanks(object, type)
+    end
+    local characterclass = object.script and require(object.script) or Character
+    characterclass:cast(object)
+    local character = characterclass.init(object)
     character:addToScene(scene)
     local team = teams[character.team]
     if team then
@@ -201,8 +207,6 @@ function Stage.addCharacter(object)
         gametimerstate = "running"
     end
     everyone[#everyone+1] = character
-    Script.load(character, character.script)
-    Script.start(character, character.scriptstart or "start")
     return character
 end
 local addCharacter = Stage.addCharacter
@@ -285,7 +289,7 @@ function Stage.fixedupdate()
     if gametimerstate == "running" and gametimer > 0 then
         gametimer = gametimer - 1
         if gametimer <= 0 then
-            Script.start(player, "timeout")
+            player:setNextCoroutines(PlayerShip.timeout)
             local GamePhase = require "BeeShooter.GamePhase"
             GamePhase.lose("TIME UP!\n\nPress %s key\nor START button")
         end
@@ -337,7 +341,7 @@ end
 
 function Stage.win()
     Stage.stop()
-    Script.start(player, PlayerShip.win)
+    player:setNextCoroutines(PlayerShip.win)
 end
 
 function Stage.lose()

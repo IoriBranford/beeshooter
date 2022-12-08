@@ -5,7 +5,8 @@ local Audio    = require "System.Audio"
 local Stage    = require "BeeShooter.Stage"
 local Movement = require "Component.Movement"
 local GamePhase= require "BeeShooter.GamePhase"
-local Script   = require "Component.Script"
+local class    = require "pl.class"
+local Character = require "BeeShooter.Character"
 
 local cos = math.cos
 local sin = math.sin
@@ -17,9 +18,9 @@ local s_rep = string.rep
 local yield = coroutine.yield
 local wait = coroutine.wait
 
-local PlayerShip = {
-    InstantKillDamage = 0x1000000
-}
+---@class PlayerShip:Character
+local PlayerShip = class(Character)
+PlayerShip.InstantKillDamage = 0x1000000
 
 local NextLifeScores = {
     10000,
@@ -36,7 +37,8 @@ local NextLifeScores = {
     1500000
 }
 
-function PlayerShip:start()
+function PlayerShip:init()
+    Character.init(self)
     local tile = self.tile
     local shapes = tile and tile.shapes
     self.sting = shapes and shapes.sting or { x = 0, y = 12 }
@@ -48,6 +50,7 @@ function PlayerShip:start()
     self.speed = self.slowspeed
     self.weapon = "A"
     self.nextlifeindex = 1
+    return self
 end
 
 function PlayerShip:recenter()
@@ -69,7 +72,7 @@ end
 
 function PlayerShip:respawn()
     PlayerShip.recenter(self)
-    Script.setNext(self, PlayerShip.fight)
+    self:setNextCoroutines(PlayerShip.fight)
 end
 
 local function inputMovement(self)
@@ -172,7 +175,7 @@ function PlayerShip:timeout()
     die(self)
 end
 
-function PlayerShip:defeat()
+function PlayerShip:defaultDefeat()
     self.power = self.power - 1
     if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
         self.defeated = false
@@ -182,7 +185,7 @@ function PlayerShip:defeat()
             self.invincibletime = hurtinvincibletime
         end
         Audio.play(self.hurtsound)
-        Script.setNext(self, PlayerShip.fight)
+        self:setNextCoroutines(PlayerShip.fight)
         return
     end
     self.power = max(1, self.power)
@@ -204,7 +207,7 @@ function PlayerShip:defeat()
     local destx = camera.x + camera.width/2
     local desty = camera.y + camera.height + 16
     Body.setPosition(self, destx, desty)
-    Script.setNext(self, PlayerShip.respawn)
+    self:setNextCoroutines(PlayerShip.respawn)
 end
 
 local function tallyBonuses(self, timeleft)

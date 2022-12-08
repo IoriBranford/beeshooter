@@ -1,12 +1,14 @@
-local Script = require "Component.Script"
 local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 local Movement = require "Component.Movement"
-
+local class = require "pl.class"
 local cos, sin = math.cos, math.sin
 local huge = math.huge
 local testrects = math.testrects
+local co_create = coroutine.create
+local co_resume = coroutine.resume
+local co_status = coroutine.status
 
 ---@class Character
 ---@field type string
@@ -28,8 +30,7 @@ local testrects = math.testrects
 ---@field shoottimer number?
 ---@field shootinterval number?
 ---@field shootcount number?
-local Character = {}
-Character.__index = Character
+local Character = class()
 
 local DefaultHitbox = {
     x = 0,
@@ -47,11 +48,6 @@ end
 
 function Character:init()
     self = self or {}
-    local type = self.type
-    if type then
-        Database.fillBlanks(self, type)
-    end
-    setmetatable(self, Character)
     self.age = 0                                    -- in fixedupdates
     self.lifetime = self.lifetime or 0              -- die at this age, immortal if <= 0
     if self.lifetime == "animation" then
@@ -196,7 +192,7 @@ function Character:defeat()
         return
     end
     self.defeated = true
-    Script.start(self, self.scriptdefeat or Character.defaultDefeat)
+    self:setNextCoroutines(self.scriptdefeat or self.defaultDefeat)
 end
 
 function Character:testCollisionWith(other)
@@ -230,6 +226,62 @@ local function respondToCollisions(self, others, collide)
                 collide(self, other)
             end
         end
+    end
+end
+
+function Character:addCoroutine(f)
+    if type(f) ~= "function" then
+        f = self[f]
+    end
+    self[#self+1] = type(f) == "function" and co_create(f)
+end
+
+function Character:startNextCoroutines()
+    local nextcoroutines = self.nextcoroutines
+    if nextcoroutines then
+        self.nextcoroutines = nil
+        self:clearCoroutines()
+        if type(nextcoroutines) == "string" then
+            for f in nextcoroutines:gmatch("%S+") do
+                self:addCoroutine(f)
+            end
+        elseif type(nextcoroutines) == "table" then
+            for _, f in ipairs(nextcoroutines) do
+                self:addCoroutine(f)
+            end
+        elseif type(nextcoroutines) == "function" then
+            self:addCoroutine(nextcoroutines)
+        end
+    end
+end
+
+function Character:runCoroutines()
+    for i, co in ipairs(self) do
+        if co then
+            local ok, err = co_resume(co, self)
+            if not ok then
+                error(debug.traceback(err))
+            elseif co_status(co) == "dead" then
+                self[i] = false
+            end
+        end
+    end
+    for i = #self, 1, -1 do
+        if self[i] == false then
+            self[i] = nil
+        else
+            break
+        end
+    end
+end
+
+function Character:setNextCoroutines(funcs)
+    self.nextcoroutines = funcs
+end
+
+function Character:clearCoroutines()
+    for i = #self, 1, -1 do
+        self[i] = nil
     end
 end
 
@@ -270,7 +322,7 @@ end
 
 function Character:setShooting(func, interval, count)
     if type(func) == "string" then
-        func = self.script and self.script[func]
+        func = self and self[func]
     end
     self.shootfunc = func
     if interval then
@@ -327,7 +379,8 @@ function Character:fixedupdate()
     fixedupdateDamage(self)
     fixedupdateShoot(self)
     fixedupdateLerp(self)
-    Script.run(self)
+    self:startNextCoroutines()
+    self:runCoroutines()
     if self.lifetime > 0 and self.age >= self.lifetime then
         self:markDisappear()
     end
