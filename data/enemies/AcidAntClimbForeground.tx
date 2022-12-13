@@ -3,8 +3,6 @@
  <tileset firstgid="1" source="../tilesets/Ant.tsx"/>
  <object class="AcidAnt" gid="3" width="16" height="16">
   <properties>
-   <property name="collidable" type="bool" value="false"/>
-   <property name="color" type="color" value="#ff808080"/>
    <property name="z" type="float" value="1"/>
   </properties>
  </object>

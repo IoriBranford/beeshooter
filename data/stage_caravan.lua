@@ -2878,7 +2878,7 @@ return {
             },
             {
               x = 0, y = 98, width = 16, height = 14,
-              data = "eJxjYCAO1DIyMNQBcT0jkRpGwYgAjsD04IQDOxORVkDpyh6IDYHYAZrGQPwEIFbCYp4jFrPR0yaMj2yWA1Q+HmpXIpHpGJfZ1MoHALC8ECk="
+              data = "eJxjYCAO1DIyMNQBcT0jkRpGwYgAjsD04IQDOxORVkDpyh6IDYHYAZrGQPwEIFbCYp4jFvPR0yaMj2yWA1Q+HskuYtIyLrOplQ8AFIkQyw=="
             },
             {
               x = 0, y = 112, width = 16, height = 14,
@@ -8517,8 +8517,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8535,8 +8533,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8553,8 +8549,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8571,8 +8565,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8589,8 +8581,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8814,8 +8804,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8832,8 +8820,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8850,8 +8836,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8868,8 +8852,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -8886,8 +8868,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9085,8 +9065,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9165,8 +9143,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9245,8 +9221,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9325,8 +9299,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9405,8 +9377,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9485,8 +9455,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9565,8 +9533,6 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
@@ -9645,8 +9611,6 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#ff808080",
                     ["z"] = 1
                   }
                 },
