@@ -73,7 +73,12 @@ local function movePath(self, path, parent, meleedamage)
         local pointdata = pointsdata and pointsdata[i]
         if pointdata then
             self.pathpoint = pointdata
-            SubScript.start(self, pointdata.subscript)
+            local action = self[pointdata.action]
+            if type(action) == "function" then
+                action(self)
+            else
+                SubScript.start(self, pointdata.subscript)
+            end
         end
     end
 end
