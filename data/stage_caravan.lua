@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 109,
-  nextobjectid = 1173,
+  nextlayerid = 123,
+  nextobjectid = 1255,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2733,6 +2733,14 @@ return {
           encoding = "base64",
           compression = "zlib",
           chunks = {
+            {
+              x = 0, y = 56, width = 16, height = 14,
+              data = "eJxjYBgcoBCI26C4CIt8MBBnQHEIGfKEzB+1f9T+gbAfAIQTKMk="
+            },
+            {
+              x = 0, y = 70, width = 16, height = 14,
+              data = "eJxjYICAQiBug+IiBkwQDMQZUBxChjwh80ftH9r2jwLyAADwOB6X"
+            },
             {
               x = 0, y = 84, width = 16, height = 14,
               data = "eJxjYBgFo2AU0BqwMjIwsAExOyOqOAAFGQAW"
@@ -9681,7 +9689,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -32,
+                  x = -40,
                   y = 1648,
                   width = 0,
                   height = 0,
@@ -9694,31 +9702,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1800,
+                  x = 272,
+                  y = 1808,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1075,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 264,
-                  y = 1800,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9726,7 +9720,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
+                  x = 272,
                   y = 1736,
                   width = 16,
                   height = 16,
@@ -9734,7 +9728,9 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9742,15 +9738,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1736,
+                  x = 272,
+                  y = 1712,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9758,15 +9756,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1768,
+                  x = 272,
+                  y = 1784,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9774,47 +9774,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1768,
+                  x = 272,
+                  y = 1760,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 968,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 264,
-                  y = 1928,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1079,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = 264,
-                  y = 1896,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 2147484131,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9822,15 +9792,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1704,
+                  x = 272,
+                  y = 1688,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9838,15 +9810,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1864,
+                  x = 272,
+                  y = 1856,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9854,15 +9828,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
-                  y = 1672,
+                  x = 272,
+                  y = 1664,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9870,7 +9846,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
+                  x = 272,
                   y = 1832,
                   width = 16,
                   height = 16,
@@ -9878,7 +9854,9 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9886,7 +9864,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = 264,
+                  x = 272,
                   y = 1640,
                   width = 16,
                   height = 16,
@@ -9894,7 +9872,9 @@ return {
                   gid = 2147484131,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9902,7 +9882,7 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 264,
+                  x = 272,
                   y = 1616,
                   width = 0,
                   height = 0,
@@ -9910,9 +9890,24 @@ return {
                   visible = true,
                   polyline = {
                     { x = 0, y = 24 },
-                    { x = -272, y = -24 }
+                    { x = -288, y = -24 }
                   },
                   properties = {}
+                },
+                {
+                  id = 1176,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 272,
+                  y = 1640,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
@@ -9935,7 +9930,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -80,
+                  x = -88,
                   y = 1584,
                   width = 0,
                   height = 0,
@@ -9948,15 +9943,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1864,
+                  x = -16,
+                  y = 1792,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9964,15 +9961,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1768,
+                  x = -16,
+                  y = 1720,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -9980,55 +9979,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1704,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1073,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -8,
-                  y = 1736,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1064,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -8,
-                  y = 1832,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 483,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1065,
-                  name = "",
-                  class = "AcidAnt",
-                  shape = "rectangle",
-                  x = -8,
+                  x = -16,
                   y = 1672,
                   width = 16,
                   height = 16,
@@ -10036,7 +9987,63 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1073,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1696,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1064,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1768,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
+                  }
+                },
+                {
+                  id = 1065,
+                  name = "",
+                  class = "AcidAnt",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 1648,
+                  width = 16,
+                  height = 16,
+                  rotation = 0,
+                  gid = 483,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -10044,15 +10051,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1800,
+                  x = -16,
+                  y = 1744,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -10060,15 +10069,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1640,
+                  x = -16,
+                  y = 1624,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -10076,15 +10087,17 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
-                  y = 1608,
+                  x = -16,
+                  y = 1600,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -10092,7 +10105,7 @@ return {
                   name = "",
                   class = "AcidAnt",
                   shape = "rectangle",
-                  x = -8,
+                  x = -16,
                   y = 1576,
                   width = 16,
                   height = 16,
@@ -10100,7 +10113,9 @@ return {
                   gid = 483,
                   visible = true,
                   properties = {
-                    ["z"] = 1
+                    ["collidable"] = false,
+                    ["color"] = "#ff808080",
+                    ["z"] = -1
                   }
                 },
                 {
@@ -10108,7 +10123,7 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = -8,
+                  x = -16,
                   y = 1576,
                   width = 0,
                   height = 0,
@@ -10116,9 +10131,24 @@ return {
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = 272, y = 48 }
+                    { x = 288, y = 48 }
                   },
                   properties = {}
+                },
+                {
+                  id = 1175,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = -16,
+                  y = 1576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "climbUpToFloor(self)"
+                  }
                 }
               }
             },
@@ -11006,7 +11036,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 81,
-              name = "room11powerup",
+              name = "r11powerup",
               class = "",
               visible = true,
               opacity = 1,
@@ -11022,7 +11052,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 184,
-                  y = 1552,
+                  y = 1560,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -11037,13 +11067,1540 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -24,
+                  x = -32,
                   y = 1568,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 118,
+              name = "r12wasp1a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1225,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1528,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1226,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 96,
+                  y = 1584,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1227,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 96,
+                  y = 1584,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1228,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1584,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1229,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1230,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1544,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 117,
+              name = "r12wasp1b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1219,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1512,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1220,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 1568,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1221,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 128,
+                  y = 1568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1222,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1568,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1223,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1536,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1224,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1528,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 116,
+              name = "r12wasp1c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1213,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 1496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1214,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 160,
+                  y = 1552,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1215,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 160,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1216,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1217,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1218,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1512,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 115,
+              name = "r12wasp2a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1207,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 1464,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1208,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 96,
+                  y = 1520,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1209,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 96,
+                  y = 1520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1210,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1211,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1488,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1212,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 96,
+                  y = 1480,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 114,
+              name = "r12wasp2b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1201,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -64,
+                  y = 1448,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1202,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 1536,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1203,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 64,
+                  y = 1536,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1204,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1536,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1205,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1206,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1496,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 113,
+              name = "r12wasp2c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1195,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 1432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1196,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 32,
+                  y = 1552,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1197,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1198,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1552,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1199,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1520,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1200,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1512,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 112,
+              name = "r12wasp3a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1189,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 1416,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1190,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 160,
+                  y = 1472,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1191,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 160,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1192,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1193,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1194,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 160,
+                  y = 1432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 111,
+              name = "r12wasp3b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1183,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 1400,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1184,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 1488,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1185,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 192,
+                  y = 1488,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1186,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1488,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1187,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1456,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1188,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1448,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 110,
+              name = "r12wasp3c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1177,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 1384,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1178,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 224,
+                  y = 1504,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1179,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 1504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1180,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1504,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1181,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1182,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1464,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 122,
+              name = "r12wasp4a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1249,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1250,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 1376,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1251,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 64,
+                  y = 1376,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1252,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1376,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1253,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1344,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1254,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1336,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 121,
+              name = "r12wasp4b",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1243,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1244,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 1376,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1245,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 192,
+                  y = 1376,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1246,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1376,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1247,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1344,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1248,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1336,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 120,
+              name = "r12wasp4c",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1237,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -64,
+                  y = 1280,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1238,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 32,
+                  y = 1472,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1239,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1240,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1241,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1242,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 119,
+              name = "r12wasp4d",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1231,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -32,
+                  y = 1280,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1232,
+                  name = "",
+                  class = "Wasp",
+                  shape = "rectangle",
+                  x = 224,
+                  y = 1472,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 560,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1233,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1234,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1472,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 1235,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1440,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "enterForeground(self)"
+                  }
+                },
+                {
+                  id = 1236,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 1432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "startWaspAttack(self)"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 109,
+              name = "r12powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1173,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1360,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1174,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 1352,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
                 }
               }
             },
