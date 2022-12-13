@@ -22,7 +22,7 @@ function Item:Powerup()
     self.vely = .5
     local t = 0
     repeat
-        self.velx = wavesign * cos(t) * 4
+        self.velx = wavesign * cos(t) * 3
         t = t + pi/60
         yield()
     until not self:isSpriteOnScreen()
