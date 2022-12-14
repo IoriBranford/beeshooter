@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="climbUpToFloor(self)"/>
+   <property name="action" value="climbUpToFloor"/>
   </properties>
   <point/>
  </object>

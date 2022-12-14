@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="markDisappear(self)"/>
+   <property name="action" value="markDisappear"/>
   </properties>
   <point/>
  </object>

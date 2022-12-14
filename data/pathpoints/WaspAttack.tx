@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="startWaspAttack(self)"/>
+   <property name="action" value="startWaspAttack"/>
   </properties>
   <point/>
  </object>

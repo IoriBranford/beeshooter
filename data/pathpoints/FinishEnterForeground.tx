@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="enterForeground(self)"/>
+   <property name="action" value="enterForeground"/>
   </properties>
   <point/>
  </object>
