@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="123" nextobjectid="1255">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="126" nextobjectid="1281">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -101,6 +101,27 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="-2"/>
    </properties>
    <data encoding="base64" compression="zlib">
+    <chunk x="0" y="42" width="16" height="14">
+   eJxjYBgFo2AUwEAfHrlpjPj1zgDKr8Ejv4UR0wwAyhADtw==
+  </chunk>
+    <chunk x="16" y="42" width="16" height="14">
+   eJxjYBgF1ACFQNwGxUVk6A8G4gwoDhm1f8TYDwCTtg+I
+  </chunk>
+    <chunk x="0" y="56" width="16" height="14">
+   eJxjYICAGYwMDNuAuIgBNygE4i1ANdMYUcVhetuB7BA8+oOBuBXNDGS9mQyE7U9HMwNZL7H2I5uBrJcU+2E0sl5S7U9noL799/Hof0jAfpDev3j0/8diBrpeaUac2hlkGTHNIFYvLjNI0YvNDFL1optBjl5kMwBpDT0Q
+  </chunk>
+    <chunk x="16" y="56" width="16" height="14">
+   eJxjYICAYCDOgOIQBtJBIRC3QXERGfpH7R+1fyTaDwDqVhfL
+  </chunk>
+    <chunk x="-16" y="70" width="16" height="14">
+   eJxjYCAfBFOgFwQKKdQ/av/Qtv8JhfqZGCnTr0ChfmoAAKsiBGw=
+  </chunk>
+    <chunk x="0" y="70" width="16" height="14">
+   eJzLYGBgyADiEAbiQTBUDwi3QXERCfoLkfTBzBm1f2jb/4gE/U+Q9D2GYgZG4vUzMSL0MTJCsBwJ+hUYEfoGGgAARdUfBg==
+  </chunk>
+    <chunk x="16" y="70" width="16" height="14">
+   eJwLYaAMFFGoP2TU/iFt/yMK9TMwUqZdjkL9Aw0AxMUEbw==
+  </chunk>
     <chunk x="0" y="84" width="16" height="14">
    eJxjYBi+4AkQP6JAPxMjkGAkX78CUK8cBfpHwfAHAEEnAgs=
   </chunk>
@@ -207,15 +228,6 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0"/>
    </properties>
    <data encoding="base64" compression="zlib">
-    <chunk x="16" y="42" width="16" height="14">
-   eJxjYBgFo2AUFAJxGxQXYZEPBuIMKA4hQx6X+QDEDwbN
-  </chunk>
-    <chunk x="16" y="56" width="16" height="14">
-   eJxjYICAQiBug+IiBkwQDMQZUBxChjwh80ftH7V/JNoPAKndL5U=
-  </chunk>
-    <chunk x="16" y="70" width="16" height="14">
-   eJxjYICAQiBug+IiBkwQDMQZUBxChjwh80ftp8z+UTA0AQCwIhfL
-  </chunk>
     <chunk x="0" y="84" width="16" height="14">
    eJxjYMANWBkZGNgZ8SggAHiBmJ987QzaQKxLgf5RMAoGOwAAiEUAgw==
   </chunk>
@@ -1809,6 +1821,71 @@ self.speed = 0.75</property>
    <objectgroup id="109" name="r12powerup">
     <object id="1173" template="enemies/Trigger.tx" x="-40" y="1368"/>
     <object id="1174" template="enemies/HoneyPot.tx" x="128" y="1360"/>
+   </objectgroup>
+   <objectgroup id="123" name="r13acidants1">
+    <object id="1255" template="enemies/Trigger.tx" x="-48" y="1272"/>
+    <object id="1257" class="AntHole" gid="496" x="8" y="1120" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="100"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="spawntype" value="AcidAnt"/>
+      <property name="z" type="float" value="0.75"/>
+     </properties>
+    </object>
+    <object id="1276" class="AntHole" gid="496" x="232" y="1120" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="100"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="spawntype" value="AcidAnt"/>
+      <property name="z" type="float" value="0.75"/>
+     </properties>
+    </object>
+    <object id="1270" class="AntHole" gid="496" x="24" y="1120" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="100"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="spawntype" value="AcidAnt"/>
+      <property name="z" type="float" value="0.75"/>
+     </properties>
+    </object>
+    <object id="1273" class="AntHole" gid="496" x="248" y="1120" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="100"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="spawntype" value="AcidAnt"/>
+      <property name="z" type="float" value="0.75"/>
+     </properties>
+    </object>
+    <object id="1263" template="enemies/Path.tx" x="8" y="1120">
+     <polyline points="0,0 0,176 0,192"/>
+    </object>
+    <object id="1275" template="enemies/Path.tx" x="232" y="1120">
+     <polyline points="0,0 0,176 0,192"/>
+    </object>
+    <object id="1269" template="enemies/Path.tx" x="24" y="1120">
+     <polyline points="0,0 0,176 0,192"/>
+    </object>
+    <object id="1274" template="enemies/Path.tx" x="248" y="1120">
+     <polyline points="0,0 0,176 0,192"/>
+    </object>
+    <object id="1265" template="pathpoints/Disappear.tx" x="8" y="1312"/>
+    <object id="1272" template="pathpoints/Disappear.tx" x="232" y="1312"/>
+    <object id="1268" template="pathpoints/Disappear.tx" x="24" y="1312"/>
+    <object id="1271" template="pathpoints/Disappear.tx" x="248" y="1312"/>
+   </objectgroup>
+   <objectgroup id="124" name="r13beetle1">
+    <object id="1266" template="enemies/Beetle.tx" gid="2147484194" x="48" y="1304" rotation="90"/>
+    <object id="1267" template="enemies/Trigger.tx" x="-24" y="1272"/>
+    <object id="1279" template="enemies/Path.tx" x="48" y="1304">
+     <polyline points="0,0 0,-144"/>
+    </object>
+   </objectgroup>
+   <objectgroup id="125" name="r13beetle2">
+    <object id="1277" template="enemies/Beetle.tx" gid="546" x="200" y="1184" rotation="-90"/>
+    <object id="1278" template="enemies/Trigger.tx" x="-24" y="1192"/>
+    <object id="1280" template="enemies/Path.tx" x="200" y="1184">
+     <polyline points="0,0 0,-144"/>
+    </object>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="448">

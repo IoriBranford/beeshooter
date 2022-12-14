@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 123,
-  nextobjectid = 1255,
+  nextlayerid = 126,
+  nextobjectid = 1281,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2583,6 +2583,34 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 42, width = 16, height = 14,
+              data = "eJxjYBgFo2AUwEAfHrlpjPj1zgDKr8Ejv4UR0wwAyhADtw=="
+            },
+            {
+              x = 16, y = 42, width = 16, height = 14,
+              data = "eJxjYBgF1ACFQNwGxUVk6A8G4gwoDhm1f8TYDwCTtg+I"
+            },
+            {
+              x = 0, y = 56, width = 16, height = 14,
+              data = "eJxjYICAGYwMDNuAuIgBNygE4i1ANdMYUcVhetuB7BA8+oOBuBXNDGS9mQyE7U9HMwNZL7H2I5uBrJcU+2E0sl5S7U9noL799/Hof0jAfpDev3j0/8diBrpeaUac2hlkGTHNIFYvLjNI0YvNDFL1optBjl5kMwBpDT0Q"
+            },
+            {
+              x = 16, y = 56, width = 16, height = 14,
+              data = "eJxjYICAYCDOgOIQBtJBIRC3QXERGfpH7R+1fyTaDwDqVhfL"
+            },
+            {
+              x = -16, y = 70, width = 16, height = 14,
+              data = "eJxjYCAfBFOgFwQKKdQ/av/Qtv8JhfqZGCnTr0ChfmoAAKsiBGw="
+            },
+            {
+              x = 0, y = 70, width = 16, height = 14,
+              data = "eJzLYGBgyADiEAbiQTBUDwi3QXERCfoLkfTBzBm1f2jb/4gE/U+Q9D2GYgZG4vUzMSL0MTJCsBwJ+hUYEfoGGgAARdUfBg=="
+            },
+            {
+              x = 16, y = 70, width = 16, height = 14,
+              data = "eJwLYaAMFFGoP2TU/iFt/yMK9TMwUqZdjkL9Aw0AxMUEbw=="
+            },
+            {
               x = 0, y = 84, width = 16, height = 14,
               data = "eJxjYBi+4AkQP6JAPxMjkGAkX78CUK8cBfpHwfAHAEEnAgs="
             },
@@ -2737,18 +2765,6 @@ return {
           encoding = "base64",
           compression = "zlib",
           chunks = {
-            {
-              x = 16, y = 42, width = 16, height = 14,
-              data = "eJxjYBgFo2AUFAJxGxQXYZEPBuIMKA4hQx6X+QDEDwbN"
-            },
-            {
-              x = 16, y = 56, width = 16, height = 14,
-              data = "eJxjYICAQiBug+IiBkwQDMQZUBxChjwh80ftH7V/JNoPAKndL5U="
-            },
-            {
-              x = 16, y = 70, width = 16, height = 14,
-              data = "eJxjYICAQiBug+IiBkwQDMQZUBxChjwh80ftp8z+UTA0AQCwIhfL"
-            },
             {
               x = 0, y = 84, width = 16, height = 14,
               data = "eJxjYMANWBkZGNgZ8SggAHiBmJ987QzaQKxLgf5RMAoGOwAAiEUAgw=="
@@ -8715,7 +8731,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -8730,7 +8746,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -8745,7 +8761,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -8760,7 +8776,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -8775,7 +8791,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -8989,7 +9005,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -9004,7 +9020,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -9019,7 +9035,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -9034,7 +9050,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 },
                 {
@@ -9049,7 +9065,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9127,7 +9143,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9205,7 +9221,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9283,7 +9299,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9361,7 +9377,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9439,7 +9455,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9517,7 +9533,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9595,7 +9611,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9673,7 +9689,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -9914,7 +9930,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10155,7 +10171,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10235,7 +10251,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10315,7 +10331,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10395,7 +10411,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10475,7 +10491,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10555,7 +10571,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10635,7 +10651,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10715,7 +10731,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10795,7 +10811,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10875,7 +10891,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -10955,7 +10971,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -11035,7 +11051,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "climbUpToFloor(self)"
+                    ["action"] = "climbUpToFloor"
                   }
                 }
               }
@@ -11179,7 +11195,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11194,7 +11210,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11293,7 +11309,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11308,7 +11324,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11407,7 +11423,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11422,7 +11438,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11521,7 +11537,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11536,7 +11552,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11635,7 +11651,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11650,7 +11666,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11749,7 +11765,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11764,7 +11780,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11863,7 +11879,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11878,7 +11894,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -11977,7 +11993,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -11992,7 +12008,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12091,7 +12107,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12106,7 +12122,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12205,7 +12221,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12220,7 +12236,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12319,7 +12335,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12334,7 +12350,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12433,7 +12449,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12448,7 +12464,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12547,7 +12563,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12562,7 +12578,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12609,6 +12625,367 @@ return {
                   properties = {
                     ["z"] = 1
                   }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 123,
+              name = "r13acidants1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1255,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 1272,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1257,
+                  name = "",
+                  class = "AntHole",
+                  shape = "rectangle",
+                  x = 8,
+                  y = 1120,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 496,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawntype"] = "AcidAnt",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 1276,
+                  name = "",
+                  class = "AntHole",
+                  shape = "rectangle",
+                  x = 232,
+                  y = 1120,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 496,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawntype"] = "AcidAnt",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 1270,
+                  name = "",
+                  class = "AntHole",
+                  shape = "rectangle",
+                  x = 24,
+                  y = 1120,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 496,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawntype"] = "AcidAnt",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 1273,
+                  name = "",
+                  class = "AntHole",
+                  shape = "rectangle",
+                  x = 248,
+                  y = 1120,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 496,
+                  visible = true,
+                  properties = {
+                    ["spawncount"] = 100,
+                    ["spawninterval"] = 6,
+                    ["spawntype"] = "AcidAnt",
+                    ["z"] = 0.75
+                  }
+                },
+                {
+                  id = 1263,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 8,
+                  y = 1120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1275,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 1120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1269,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 24,
+                  y = 1120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1274,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 248,
+                  y = 1120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1265,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 8,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                },
+                {
+                  id = 1272,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                },
+                {
+                  id = 1268,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                },
+                {
+                  id = 1271,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 248,
+                  y = 1312,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 124,
+              name = "r13beetle1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1266,
+                  name = "",
+                  class = "Beetle",
+                  shape = "rectangle",
+                  x = 48,
+                  y = 1304,
+                  width = 48,
+                  height = 48,
+                  rotation = 90,
+                  gid = 2147484194,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1267,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 1272,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1279,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 48,
+                  y = 1304,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -144 }
+                  },
+                  properties = {}
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 125,
+              name = "r13beetle2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1277,
+                  name = "",
+                  class = "Beetle",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 1184,
+                  width = 48,
+                  height = 48,
+                  rotation = -90,
+                  gid = 546,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1278,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 1192,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1280,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1184,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -144 }
+                  },
+                  properties = {}
                 }
               }
             },
@@ -12764,7 +13141,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12779,7 +13156,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12878,7 +13255,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -12893,7 +13270,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -12992,7 +13369,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13007,7 +13384,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13106,7 +13483,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13121,7 +13498,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13220,7 +13597,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13235,7 +13612,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13334,7 +13711,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13349,7 +13726,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13448,7 +13825,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13463,7 +13840,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13562,7 +13939,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13577,7 +13954,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13676,7 +14053,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13691,7 +14068,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13835,7 +14212,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13850,7 +14227,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -13949,7 +14326,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -13964,7 +14341,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14063,7 +14440,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -14078,7 +14455,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14177,7 +14554,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "enterForeground(self)"
+                    ["action"] = "enterForeground"
                   }
                 },
                 {
@@ -14192,7 +14569,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "startWaspAttack(self)"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
