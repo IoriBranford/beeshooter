@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Beetle.tsx"/>
+ <object class="Beetle" gid="11" width="48" height="48">
+  <properties>
+   <property name="collidable" type="bool" value="false"/>
+   <property name="color" type="color" value="#80ffffff"/>
+   <property name="z" type="float" value="1"/>
+  </properties>
+ </object>
+</template>
