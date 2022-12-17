@@ -711,16 +711,6 @@ return {
                 properties = {}
               }
             }
-          },
-          animation = {
-            {
-              tileid = 2,
-              duration = 50
-            },
-            {
-              tileid = 0,
-              duration = 50
-            }
           }
         },
         {
@@ -752,16 +742,6 @@ return {
                 visible = true,
                 properties = {}
               }
-            }
-          },
-          animation = {
-            {
-              tileid = 3,
-              duration = 50
-            },
-            {
-              tileid = 1,
-              duration = 50
             }
           }
         },
@@ -12671,14 +12651,14 @@ return {
                 {
                   id = 1174,
                   name = "",
-                  class = "HoneyPot",
+                  class = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 1360,
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 490,
+                  gid = 492,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -12728,7 +12708,7 @@ return {
                   properties = {
                     ["spawncount"] = 100,
                     ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAnt",
+                    ["spawntype"] = "AcidAntClimbingDown",
                     ["z"] = 0.75
                   }
                 },
@@ -12747,7 +12727,7 @@ return {
                   properties = {
                     ["spawncount"] = 100,
                     ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAnt",
+                    ["spawntype"] = "AcidAntClimbingDownLeft",
                     ["z"] = 0.75
                   }
                 },
@@ -12766,7 +12746,7 @@ return {
                   properties = {
                     ["spawncount"] = 100,
                     ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAnt",
+                    ["spawntype"] = "AcidAntClimbingDown",
                     ["z"] = 0.75
                   }
                 },
@@ -12785,7 +12765,7 @@ return {
                   properties = {
                     ["spawncount"] = 100,
                     ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAnt",
+                    ["spawntype"] = "AcidAntClimbingDownLeft",
                     ["z"] = 0.75
                   }
                 },

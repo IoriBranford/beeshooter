@@ -1820,7 +1820,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="109" name="r12powerup">
     <object id="1173" template="enemies/Trigger.tx" x="-40" y="1368"/>
-    <object id="1174" template="enemies/HoneyPot.tx" x="128" y="1360"/>
+    <object id="1174" template="enemies/ReinforcedHoneyPot.tx" x="128" y="1360"/>
    </objectgroup>
    <objectgroup id="123" name="r13acidants1">
     <object id="1255" template="enemies/Trigger.tx" x="-48" y="1272"/>
@@ -1828,7 +1828,7 @@ self.speed = 0.75</property>
      <properties>
       <property name="spawncount" type="float" value="100"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAnt"/>
+      <property name="spawntype" value="AcidAntClimbingDown"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
@@ -1836,7 +1836,7 @@ self.speed = 0.75</property>
      <properties>
       <property name="spawncount" type="float" value="100"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAnt"/>
+      <property name="spawntype" value="AcidAntClimbingDownLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
@@ -1844,7 +1844,7 @@ self.speed = 0.75</property>
      <properties>
       <property name="spawncount" type="float" value="100"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAnt"/>
+      <property name="spawntype" value="AcidAntClimbingDown"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
@@ -1852,7 +1852,7 @@ self.speed = 0.75</property>
      <properties>
       <property name="spawncount" type="float" value="100"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAnt"/>
+      <property name="spawntype" value="AcidAntClimbingDownLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
