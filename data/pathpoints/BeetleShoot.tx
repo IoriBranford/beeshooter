@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="action" value="startBeetleShoot"/>
+  </properties>
+  <point/>
+ </object>
+</template>
