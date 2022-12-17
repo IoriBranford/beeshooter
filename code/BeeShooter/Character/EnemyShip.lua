@@ -302,20 +302,23 @@ function EnemyShip:AlienGunner_shootAtPlayer()
     end
 end
 
-function EnemyShip:BeetleSpray(centerangle)
-    centerangle = centerangle or pi/2
+function EnemyShip:startBeetleShoot()
+    self:addCoroutine(self.BeetleShoot)
+end
+
+function EnemyShip:BeetleShoot()
+    local centerangle = pi/2
     local arcs = {}
     local speeds = {}
     local bursts = 5
     local burstshots = 4
     for i = 1, burstshots do
-        arcs[i] = (burstshots - i + 1)*pi/16
+        arcs[i] = self.scalex*(burstshots - i + 1)*pi/16
         speeds[i] = 1 + i/4
     end
     for _ = 1, bursts do
         for i = 1, burstshots do
             shootAS(self, self.bullettype, centerangle + arcs[i], speeds[i])
-            shootAS(self, self.bullettype, centerangle - arcs[i], speeds[i])
             wait(2)
         end
         shootAS(self, self.bullettype, centerangle, speeds[#speeds]+.25)
