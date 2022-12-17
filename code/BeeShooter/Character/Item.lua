@@ -18,7 +18,7 @@ function Item:Powerup()
         yield()
     until self.x == destx and self.y == desty
 
-    local wavesign = self.velx < 0 and -1 or 1
+    local wavesign = self.wavedir or self.velx < 0 and -1 or 1
     self.vely = .5
     local t = 0
     repeat
