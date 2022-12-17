@@ -2,7 +2,7 @@
 <template>
  <object type="PathPoint">
   <properties>
-   <property name="subscript" value=""/>
+   <property name="action" value=""/>
   </properties>
   <point/>
  </object>
