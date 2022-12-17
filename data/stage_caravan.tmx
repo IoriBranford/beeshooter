@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="126" nextobjectid="1281">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="126" nextobjectid="1285">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -1874,18 +1874,22 @@ self.speed = 0.75</property>
     <object id="1271" template="pathpoints/Disappear.tx" x="248" y="1312"/>
    </objectgroup>
    <objectgroup id="124" name="r13beetle1">
-    <object id="1266" template="enemies/Beetle.tx" gid="2147484194" x="48" y="1304" rotation="90"/>
+    <object id="1266" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="48" y="1304" rotation="90"/>
     <object id="1267" template="enemies/Trigger.tx" x="-24" y="1272"/>
     <object id="1279" template="enemies/Path.tx" x="48" y="1304">
-     <polyline points="0,0 0,-144"/>
+     <polyline points="0,0 0,-16 0,-24 0,-216"/>
     </object>
+    <object id="1281" template="pathpoints/FinishEnterForeground.tx" x="48" y="1280"/>
+    <object id="1283" template="pathpoints/BeetleShoot.tx" x="48" y="1288"/>
    </objectgroup>
    <objectgroup id="125" name="r13beetle2">
-    <object id="1277" template="enemies/Beetle.tx" gid="546" x="200" y="1184" rotation="-90"/>
-    <object id="1278" template="enemies/Trigger.tx" x="-24" y="1192"/>
-    <object id="1280" template="enemies/Path.tx" x="200" y="1184">
-     <polyline points="0,0 0,-144"/>
+    <object id="1278" template="enemies/Trigger.tx" x="-24" y="1152"/>
+    <object id="1277" template="enemies/Beetle.tx" x="208" y="1144" rotation="-90"/>
+    <object id="1280" template="enemies/Path.tx" x="208" y="1144">
+     <polyline points="0,0 0,-16 0,-24 0,-216"/>
     </object>
+    <object id="1282" template="pathpoints/FinishEnterForeground.tx" x="208" y="1120"/>
+    <object id="1284" template="pathpoints/BeetleShoot.tx" x="208" y="1128"/>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="448">

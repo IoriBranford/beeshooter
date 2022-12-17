@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 126,
-  nextobjectid = 1281,
+  nextobjectid = 1285,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -5159,6 +5159,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5174,6 +5175,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5219,6 +5221,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = 2"
                   }
                 },
@@ -5234,6 +5237,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = 2"
                   }
                 }
@@ -5364,6 +5368,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5379,6 +5384,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5537,6 +5543,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\nself.speed = slowspeed or 1\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5552,6 +5559,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterForeground(self)\nself.speed = slowspeed or 1\n\nfor _=1,3 do\n setShooting(self, shootAtPlayer, 6, 3)\n wait(30)\nend"
                   }
                 },
@@ -5567,6 +5575,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = fastspeed or 2"
                   }
                 },
@@ -5582,6 +5591,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = fastspeed or 2"
                   }
                 },
@@ -5797,6 +5807,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "for i=1,5 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
@@ -5812,6 +5823,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 2"
                   }
                 }
@@ -5948,6 +5960,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "for i=1,5 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
@@ -5963,6 +5976,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 2"
                   }
                 }
@@ -6047,6 +6061,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6062,6 +6077,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6077,6 +6093,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "faceSpriteX(self, -1)\n\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6092,6 +6109,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6107,6 +6125,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6122,6 +6141,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6137,6 +6157,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "faceSpriteX(self, 1)\nenterForeground(self)\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6152,6 +6173,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "faceSpriteX(self, 1)\nsetShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6167,6 +6189,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6182,6 +6205,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6197,6 +6221,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6212,6 +6237,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6227,6 +6253,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6242,6 +6269,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "setShooting(self, shootAtPlayer, 1, 3)"
                   }
                 },
@@ -6257,6 +6285,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 3"
                   }
                 },
@@ -6582,6 +6611,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "markDisappear(self)"
                   }
                 },
@@ -6597,6 +6627,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "markDisappear(self)"
                   }
                 }
@@ -6747,6 +6778,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "markDisappear(self)"
                   }
                 },
@@ -6762,6 +6794,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "markDisappear(self)"
                   }
                 }
@@ -6840,6 +6873,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -6968,6 +7002,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -6983,6 +7018,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
@@ -7237,6 +7273,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
@@ -7252,6 +7289,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
@@ -7267,6 +7305,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
@@ -7282,6 +7321,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
@@ -7297,6 +7337,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 },
@@ -7312,6 +7353,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"claw_scrape\")"
                   }
                 }
@@ -7623,6 +7665,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -7638,6 +7681,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
@@ -7753,6 +7797,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -7768,6 +7813,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
@@ -7944,6 +7990,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -7959,6 +8006,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -7974,6 +8022,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 },
@@ -7989,6 +8038,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
                   }
                 }
@@ -8353,6 +8403,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
                   }
                 },
@@ -8368,6 +8419,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
                   }
                 },
@@ -8383,6 +8435,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "for i=1,3 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
@@ -8398,6 +8451,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "for i=1,3 do\n setShooting(self, shootAtPlayer, 2, 3)\n wait(16)\nend"
                   }
                 },
@@ -8443,6 +8497,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 },
@@ -8458,6 +8513,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "faceSpriteX(self, -1)"
                   }
                 },
@@ -8473,6 +8529,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = fastspeed or 4"
                   }
                 },
@@ -8488,6 +8545,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "self.speed = fastspeed or 4"
                   }
                 }
@@ -12892,6 +12950,8 @@ return {
                   gid = 2147484194,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
                     ["z"] = 1
                   }
                 },
@@ -12921,9 +12981,41 @@ return {
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = 0, y = -144 }
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = -216 }
                   },
                   properties = {}
+                },
+                {
+                  id = 1281,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 48,
+                  y = 1280,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1283,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 48,
+                  y = 1288,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startBeetleShoot"
+                  }
                 }
               }
             },
@@ -12942,12 +13034,25 @@ return {
               properties = {},
               objects = {
                 {
+                  id = 1278,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 1152,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
                   id = 1277,
                   name = "",
                   class = "Beetle",
                   shape = "rectangle",
-                  x = 200,
-                  y = 1184,
+                  x = 208,
+                  y = 1144,
                   width = 48,
                   height = 48,
                   rotation = -90,
@@ -12958,34 +13063,53 @@ return {
                   }
                 },
                 {
-                  id = 1278,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -24,
-                  y = 1192,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                },
-                {
                   id = 1280,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 200,
-                  y = 1184,
+                  x = 208,
+                  y = 1144,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = 0, y = -144 }
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = -216 }
                   },
                   properties = {}
+                },
+                {
+                  id = 1282,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 208,
+                  y = 1120,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1284,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 208,
+                  y = 1128,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startBeetleShoot"
+                  }
                 }
               }
             },
@@ -17611,6 +17735,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
+                    ["action"] = "",
                     ["subscript"] = "BeetleSpray(self)"
                   }
                 }
