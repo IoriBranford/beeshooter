@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 45,
+  nextobjectid = 50,
   properties = {},
   tilesets = {
     {
@@ -269,16 +269,6 @@ return {
                 properties = {}
               }
             }
-          },
-          animation = {
-            {
-              tileid = 2,
-              duration = 50
-            },
-            {
-              tileid = 0,
-              duration = 50
-            }
           }
         },
         {
@@ -310,16 +300,6 @@ return {
                 visible = true,
                 properties = {}
               }
-            }
-          },
-          animation = {
-            {
-              tileid = 3,
-              duration = 50
-            },
-            {
-              tileid = 1,
-              duration = 50
             }
           }
         },
@@ -1529,6 +1509,22 @@ return {
           }
         },
         {
+          id = 46,
+          name = "ReinforcedHoneyPotOpen",
+          class = "HoneyPotOpen",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 9,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
           id = 5,
           name = "Powerup",
           class = "",
@@ -1541,6 +1537,38 @@ return {
           gid = 10,
           visible = true,
           properties = {}
+        },
+        {
+          id = 47,
+          name = "PowerupLeft",
+          class = "Powerup",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 10,
+          visible = true,
+          properties = {
+            ["wavedir"] = -1
+          }
+        },
+        {
+          id = 48,
+          name = "PowerupRight",
+          class = "Powerup",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 10,
+          visible = true,
+          properties = {
+            ["wavedir"] = 1
+          }
         }
       }
     },
@@ -1814,6 +1842,38 @@ return {
           height = 16,
           rotation = 0,
           gid = 22,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 45,
+          name = "AcidAntClimbingDown",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 90,
+          gid = 22,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 49,
+          name = "AcidAntClimbingDownLeft",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = -90,
+          gid = 2147483670,
           visible = true,
           properties = {
             ["z"] = 1

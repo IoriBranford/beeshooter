@@ -16,3 +16,4 @@ InfiniteHoneyPotOpen,BeeShooter.Character.EnemyShip,Idler,openInfiniteHoneyPot,E
 Wasp,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,1,4,TRUE,,,sounds/bugkill2.mp3,500,KillSmall KillMedium,,,
 Beetle,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,0.5,32,TRUE,AcidBulletBeetle,,sounds/bugkill2.mp3,1000,KillSmall KillMedium,,,
 Tick,BeeShooter.Character.EnemyShip,Tick,TickDefeat,EnemyShip,,8,TRUE,,,sounds/bugkill2.mp3,500,KillSmall KillMedium,sounds/beebuzz.mp3,sounds/arrowhit.mp3,
+ReinforcedHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,16,TRUE,,,sounds/breakpot.mp3,,ReinforcedHoneyPotOpen PowerupLeft PowerupRight,,,
