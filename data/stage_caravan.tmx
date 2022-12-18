@@ -111,7 +111,7 @@ A brief chance to practice controls</text>
    eJxjYBgF1ACFQNwGxUVk6A8G4gwoDhm1f8TYDwCTtg+I
   </chunk>
     <chunk x="0" y="56" width="16" height="14">
-   eJxjYBgF2EAhELdhwUVE6g8G4gwsOGTUfrrY/xCH/feJ1P8fiB9gwX+J1C/LyMDwjwETSzOiqgMAsVYlZg==
+   eJxjYBgFtACFQNyGBRcRqT8YiDOw4JBR++li/0Mc9t8nUv9/IH6ABf9FUwcAEkggNg==
   </chunk>
     <chunk x="16" y="56" width="16" height="14">
    eJxjYICAYCDOgOIQBtJBIRC3QXERGfpH7R+1fyTaDwDqVhfL
@@ -120,7 +120,7 @@ A brief chance to practice controls</text>
    eJxjYBi6oJBC/cGj9g+o/Q8p1P+fQv2yjBQaQAUAAEAUBLw=
   </chunk>
     <chunk x="0" y="70" width="16" height="14">
-   eJxjYBhY0IaGi0jUn4GGQ0btH1D775Oo/wEa/kui/n9oWJqRRAMGGAAA6BIbFQ==
+   eJxjYMAOZBkZGP4xYGJpRhwayARtaLiIRP0ZaDhk1P4Btf8+ifofoOG/JOqndfqkNQAAVnYgRQ==
   </chunk>
     <chunk x="0" y="84" width="16" height="14">
    eJxjYBi+4AkQP6JAPxMjkGAkX78CUK8cBfpHwfAHAEEnAgs=
@@ -229,7 +229,7 @@ A brief chance to practice controls</text>
    </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="0" y="56" width="16" height="14">
-   eJxjYBicgJWRgYENC2ZnJE6/NhDrYMG6tHLwKBgFZAAAs0IBZg==
+   eJxjYBiegJWRgYENC2ZnJE6/NhDrYMG6tHLwKBiRAABaAgFm
   </chunk>
     <chunk x="-16" y="70" width="16" height="14">
    eJxjYCAfsDJSoBkItCnTPgpGwZAHAJjDADI=
@@ -332,7 +332,7 @@ A brief chance to practice controls</text>
    </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="0" y="56" width="16" height="14">
-   eJxjYBi8wJGRgcEJCTszkqa/Fqi+DgnXk6h/FIwCWgMAOsQDyw==
+   eJxjYBi+wJGRgcEJCTszkqa/Fqi+DgnXk6h/FIwCQgAASDUDyw==
   </chunk>
     <chunk x="0" y="84" width="16" height="14">
    eJxjYMANHBkZGJwZ8SggAOKBehMp0F8L1FtPgf5RMAoGOwAABSMCRw==
@@ -1982,237 +1982,237 @@ self.speed = 0.75</property>
     <object id="1410" template="pathpoints/FinishEnterForeground.tx" x="224" y="1240"/>
     <object id="1411" template="pathpoints/WaspAttack.tx" class="PathPoint" x="224" y="1232"/>
    </objectgroup>
-   <objectgroup id="125" name="r13beetle2">
-    <object id="1278" template="enemies/Trigger.tx" x="-24" y="1088"/>
-    <object id="1277" template="enemies/BeetleFromBelow.tx" x="96" y="1104" rotation="-90"/>
-    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="208" y="1104" rotation="90"/>
-    <object id="1280" template="enemies/Path.tx" x="96" y="1144">
+   <objectgroup id="125" name="r14beetles">
+    <object id="1278" template="enemies/Trigger.tx" x="-24" y="1112"/>
+    <object id="1277" template="enemies/BeetleFromBelow.tx" x="96" y="1120" rotation="-90"/>
+    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="208" y="1120" rotation="90"/>
+    <object id="1280" template="enemies/Path.tx" x="96" y="1160">
      <polyline points="0,-40 0,-56 0,-64 0,-192 16,-208 24,-208"/>
     </object>
-    <object id="1298" template="enemies/Path.tx" x="208" y="1144">
+    <object id="1298" template="enemies/Path.tx" x="208" y="1160">
      <polyline points="0,-40 0,-56 0,-64 0,-192 -16,-208 -24,-208"/>
     </object>
-    <object id="1282" template="pathpoints/FinishEnterForeground.tx" x="96" y="1080"/>
-    <object id="1301" template="pathpoints/FinishEnterForeground.tx" x="208" y="1080"/>
-    <object id="1284" template="pathpoints/BeetleShoot.tx" x="96" y="1088"/>
-    <object id="1300" template="pathpoints/BeetleShoot.tx" x="208" y="1088"/>
-    <object id="1324" template="pathpoints/Rotate.tx" x="96" y="952">
+    <object id="1282" template="pathpoints/FinishEnterForeground.tx" x="96" y="1096"/>
+    <object id="1301" template="pathpoints/FinishEnterForeground.tx" x="208" y="1096"/>
+    <object id="1284" template="pathpoints/BeetleShoot.tx" x="96" y="1104"/>
+    <object id="1300" template="pathpoints/BeetleShoot.tx" x="208" y="1104"/>
+    <object id="1324" template="pathpoints/Rotate.tx" x="96" y="968">
      <properties>
       <property name="delta" type="float" value="45"/>
      </properties>
     </object>
-    <object id="1325" template="pathpoints/Rotate.tx" x="112" y="936">
+    <object id="1325" template="pathpoints/Rotate.tx" x="112" y="952">
      <properties>
       <property name="delta" type="float" value="45"/>
      </properties>
     </object>
-    <object id="1326" template="pathpoints/Rotate.tx" x="208" y="952">
+    <object id="1326" template="pathpoints/Rotate.tx" x="208" y="968">
      <properties>
       <property name="delta" type="float" value="-45"/>
      </properties>
     </object>
-    <object id="1327" template="pathpoints/Rotate.tx" x="192" y="936">
+    <object id="1327" template="pathpoints/Rotate.tx" x="192" y="952">
      <properties>
       <property name="delta" type="float" value="-45"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="126" name="r14acidants1">
-    <object id="1302" template="enemies/Trigger.tx" x="-48" y="1112"/>
-    <object id="1303" class="AntHole" gid="496" x="120" y="976" width="16" height="32">
+    <object id="1302" template="enemies/Trigger.tx" x="-48" y="1128"/>
+    <object id="1303" class="AntHole" gid="496" x="120" y="992" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDown"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1309" class="AntHole" gid="496" x="184" y="976" width="16" height="32">
+    <object id="1309" class="AntHole" gid="496" x="184" y="992" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDownLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1310" template="enemies/Path.tx" x="120" y="960">
+    <object id="1310" template="enemies/Path.tx" x="120" y="976">
      <polyline points="0,16 0,144 0,160"/>
     </object>
-    <object id="1316" template="enemies/Path.tx" x="184" y="960">
+    <object id="1316" template="enemies/Path.tx" x="184" y="976">
      <polyline points="0,16 0,144 0,160"/>
     </object>
-    <object id="1317" template="pathpoints/Disappear.tx" x="120" y="1120"/>
-    <object id="1323" template="pathpoints/Disappear.tx" x="184" y="1120"/>
+    <object id="1317" template="pathpoints/Disappear.tx" x="120" y="1136"/>
+    <object id="1323" template="pathpoints/Disappear.tx" x="184" y="1136"/>
    </objectgroup>
    <objectgroup id="130" name="r14acidants2">
-    <object id="1346" template="enemies/Trigger.tx" x="-48" y="1056"/>
-    <object id="1348" class="AntHole" gid="496" x="128" y="992" width="16" height="32">
+    <object id="1346" template="enemies/Trigger.tx" x="-48" y="1064"/>
+    <object id="1348" class="AntHole" gid="496" x="128" y="1008" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDown"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1350" class="AntHole" gid="496" x="176" y="992" width="16" height="32">
+    <object id="1350" class="AntHole" gid="496" x="176" y="1008" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDownLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1353" template="enemies/Path.tx" x="128" y="976">
+    <object id="1353" template="enemies/Path.tx" x="128" y="992">
      <polyline points="0,16 0,128 0,144"/>
     </object>
-    <object id="1354" template="enemies/Path.tx" x="176" y="976">
+    <object id="1354" template="enemies/Path.tx" x="176" y="992">
      <polyline points="0,16 0,128 0,144"/>
     </object>
-    <object id="1355" template="pathpoints/Disappear.tx" x="128" y="1120"/>
-    <object id="1356" template="pathpoints/Disappear.tx" x="176" y="1120"/>
+    <object id="1355" template="pathpoints/Disappear.tx" x="128" y="1136"/>
+    <object id="1356" template="pathpoints/Disappear.tx" x="176" y="1136"/>
    </objectgroup>
    <objectgroup id="131" name="r14acidants3">
     <object id="1357" template="enemies/Trigger.tx" x="-48" y="1000"/>
-    <object id="1360" class="AntHole" gid="496" x="168" y="976" width="16" height="32">
+    <object id="1360" class="AntHole" gid="496" x="168" y="992" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDownLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1362" class="AntHole" gid="496" x="136" y="976" width="16" height="32">
+    <object id="1362" class="AntHole" gid="496" x="136" y="992" width="16" height="32">
      <properties>
-      <property name="spawncount" type="float" value="60"/>
+      <property name="spawncount" type="float" value="20"/>
       <property name="spawninterval" type="float" value="6"/>
       <property name="spawntype" value="AcidAntClimbingDown"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1364" template="enemies/Path.tx" x="136" y="960">
+    <object id="1364" template="enemies/Path.tx" x="136" y="976">
      <polyline points="0,16 0,144 0,160"/>
     </object>
-    <object id="1365" template="enemies/Path.tx" x="168" y="960">
+    <object id="1365" template="enemies/Path.tx" x="168" y="976">
      <polyline points="0,16 0,144 0,160"/>
     </object>
-    <object id="1366" template="pathpoints/Disappear.tx" x="136" y="1120"/>
-    <object id="1367" template="pathpoints/Disappear.tx" x="168" y="1120"/>
+    <object id="1366" template="pathpoints/Disappear.tx" x="136" y="1136"/>
+    <object id="1367" template="pathpoints/Disappear.tx" x="168" y="1136"/>
    </objectgroup>
    <objectgroup id="129" name="r14wasp1a">
-    <object id="1340" template="enemies/Trigger.tx" x="-64" y="976"/>
-    <object id="1341" template="enemies/WaspBackground.tx" x="64" y="1040" rotation="0"/>
-    <object id="1342" template="enemies/Path.tx" x="64" y="1040">
+    <object id="1340" template="enemies/Trigger.tx" x="-64" y="992"/>
+    <object id="1341" template="enemies/WaspBackground.tx" x="64" y="1056" rotation="0"/>
+    <object id="1342" template="enemies/Path.tx" x="64" y="1056">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1343" template="pathpoints/StartEnterForeground.tx" x="64" y="1040">
+    <object id="1343" template="pathpoints/StartEnterForeground.tx" x="64" y="1056">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1344" template="pathpoints/FinishEnterForeground.tx" x="64" y="1008"/>
-    <object id="1345" template="pathpoints/WaspAttack.tx" class="PathPoint" x="64" y="1000"/>
+    <object id="1344" template="pathpoints/FinishEnterForeground.tx" x="64" y="1024"/>
+    <object id="1345" template="pathpoints/WaspAttack.tx" class="PathPoint" x="64" y="1016"/>
    </objectgroup>
    <objectgroup id="128" name="r14wasp1b">
-    <object id="1334" template="enemies/Trigger.tx" x="-72" y="968"/>
-    <object id="1335" template="enemies/WaspBackground.tx" x="32" y="1064" rotation="0"/>
-    <object id="1336" template="enemies/Path.tx" x="32" y="1064">
+    <object id="1334" template="enemies/Trigger.tx" x="-72" y="984"/>
+    <object id="1335" template="enemies/WaspBackground.tx" x="32" y="1080" rotation="0"/>
+    <object id="1336" template="enemies/Path.tx" x="32" y="1080">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1337" template="pathpoints/StartEnterForeground.tx" x="32" y="1064">
+    <object id="1337" template="pathpoints/StartEnterForeground.tx" x="32" y="1080">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1338" template="pathpoints/FinishEnterForeground.tx" x="32" y="1032"/>
-    <object id="1339" template="pathpoints/WaspAttack.tx" class="PathPoint" x="32" y="1024"/>
+    <object id="1338" template="pathpoints/FinishEnterForeground.tx" x="32" y="1048"/>
+    <object id="1339" template="pathpoints/WaspAttack.tx" class="PathPoint" x="32" y="1040"/>
    </objectgroup>
    <objectgroup id="132" name="r14wasp2a">
-    <object id="1368" template="enemies/Trigger.tx" x="-48" y="904"/>
-    <object id="1369" template="enemies/WaspBackground.tx" x="72" y="968" rotation="0"/>
-    <object id="1370" template="enemies/Path.tx" x="72" y="968">
+    <object id="1368" template="enemies/Trigger.tx" x="-48" y="920"/>
+    <object id="1369" template="enemies/WaspBackground.tx" x="72" y="984" rotation="0"/>
+    <object id="1370" template="enemies/Path.tx" x="72" y="984">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1371" template="pathpoints/StartEnterForeground.tx" x="72" y="968">
+    <object id="1371" template="pathpoints/StartEnterForeground.tx" x="72" y="984">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1372" template="pathpoints/FinishEnterForeground.tx" x="72" y="936"/>
-    <object id="1373" template="pathpoints/WaspAttack.tx" class="PathPoint" x="72" y="928"/>
+    <object id="1372" template="pathpoints/FinishEnterForeground.tx" x="72" y="952"/>
+    <object id="1373" template="pathpoints/WaspAttack.tx" class="PathPoint" x="72" y="944"/>
    </objectgroup>
    <objectgroup id="133" name="r14wasp2b">
-    <object id="1374" template="enemies/Trigger.tx" x="-56" y="896"/>
-    <object id="1375" template="enemies/WaspBackground.tx" x="48" y="992" rotation="0"/>
-    <object id="1376" template="enemies/Path.tx" x="48" y="992">
+    <object id="1374" template="enemies/Trigger.tx" x="-56" y="912"/>
+    <object id="1375" template="enemies/WaspBackground.tx" x="48" y="1008" rotation="0"/>
+    <object id="1376" template="enemies/Path.tx" x="48" y="1008">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1377" template="pathpoints/StartEnterForeground.tx" x="48" y="992">
+    <object id="1377" template="pathpoints/StartEnterForeground.tx" x="48" y="1008">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1378" template="pathpoints/FinishEnterForeground.tx" x="48" y="960"/>
-    <object id="1379" template="pathpoints/WaspAttack.tx" class="PathPoint" x="48" y="952"/>
+    <object id="1378" template="pathpoints/FinishEnterForeground.tx" x="48" y="976"/>
+    <object id="1379" template="pathpoints/WaspAttack.tx" class="PathPoint" x="48" y="968"/>
    </objectgroup>
    <objectgroup id="127" name="r14wasp2c">
-    <object id="1328" template="enemies/Trigger.tx" x="-64" y="888"/>
-    <object id="1329" template="enemies/WaspBackground.tx" x="24" y="1016" rotation="0"/>
-    <object id="1330" template="enemies/Path.tx" x="24" y="1016">
+    <object id="1328" template="enemies/Trigger.tx" x="-64" y="904"/>
+    <object id="1329" template="enemies/WaspBackground.tx" x="24" y="1032" rotation="0"/>
+    <object id="1330" template="enemies/Path.tx" x="24" y="1032">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="1016">
+    <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="1032">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1332" template="pathpoints/FinishEnterForeground.tx" x="24" y="984"/>
-    <object id="1333" template="pathpoints/WaspAttack.tx" class="PathPoint" x="24" y="976"/>
+    <object id="1332" template="pathpoints/FinishEnterForeground.tx" x="24" y="1000"/>
+    <object id="1333" template="pathpoints/WaspAttack.tx" class="PathPoint" x="24" y="992"/>
    </objectgroup>
    <objectgroup id="137" name="r14wasp3a">
-    <object id="1398" template="enemies/Trigger.tx" x="-48" y="864"/>
-    <object id="1399" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="952" rotation="0"/>
-    <object id="1400" template="enemies/Path.tx" x="232" y="952">
+    <object id="1398" template="enemies/Trigger.tx" x="-48" y="880"/>
+    <object id="1399" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="968" rotation="0"/>
+    <object id="1400" template="enemies/Path.tx" x="232" y="968">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1401" template="pathpoints/StartEnterForeground.tx" x="232" y="952">
+    <object id="1401" template="pathpoints/StartEnterForeground.tx" x="232" y="968">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1402" template="pathpoints/FinishEnterForeground.tx" x="232" y="920"/>
-    <object id="1403" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="912"/>
+    <object id="1402" template="pathpoints/FinishEnterForeground.tx" x="232" y="936"/>
+    <object id="1403" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="928"/>
    </objectgroup>
    <objectgroup id="136" name="r14wasp3b">
-    <object id="1392" template="enemies/Trigger.tx" x="-56" y="856"/>
-    <object id="1393" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1000" rotation="0"/>
-    <object id="1394" template="enemies/Path.tx" x="232" y="1000">
+    <object id="1392" template="enemies/Trigger.tx" x="-56" y="872"/>
+    <object id="1393" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1016" rotation="0"/>
+    <object id="1394" template="enemies/Path.tx" x="232" y="1016">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1395" template="pathpoints/StartEnterForeground.tx" x="232" y="1000">
+    <object id="1395" template="pathpoints/StartEnterForeground.tx" x="232" y="1016">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1396" template="pathpoints/FinishEnterForeground.tx" x="232" y="968"/>
-    <object id="1397" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="960"/>
+    <object id="1396" template="pathpoints/FinishEnterForeground.tx" x="232" y="984"/>
+    <object id="1397" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="976"/>
    </objectgroup>
    <objectgroup id="135" name="r14wasp3c">
-    <object id="1386" template="enemies/Trigger.tx" x="-64" y="848"/>
-    <object id="1387" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1048" rotation="0"/>
-    <object id="1388" template="enemies/Path.tx" x="232" y="1048">
+    <object id="1386" template="enemies/Trigger.tx" x="-64" y="864"/>
+    <object id="1387" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1064" rotation="0"/>
+    <object id="1388" template="enemies/Path.tx" x="232" y="1064">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1389" template="pathpoints/StartEnterForeground.tx" x="232" y="1048">
+    <object id="1389" template="pathpoints/StartEnterForeground.tx" x="232" y="1064">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1390" template="pathpoints/FinishEnterForeground.tx" x="232" y="1016"/>
-    <object id="1391" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="1008"/>
+    <object id="1390" template="pathpoints/FinishEnterForeground.tx" x="232" y="1032"/>
+    <object id="1391" template="pathpoints/WaspAttack.tx" class="PathPoint" x="232" y="1024"/>
    </objectgroup>
    <objectgroup id="138" name="r14powerup">
-    <object id="1404" template="enemies/Trigger.tx" x="-16" y="944"/>
-    <object id="1405" template="enemies/ReinforcedHoneyPot.tx" x="152" y="936"/>
+    <object id="1404" template="enemies/Trigger.tx" x="-16" y="960"/>
+    <object id="1405" template="enemies/ReinforcedHoneyPot.tx" x="152" y="952"/>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="448">
