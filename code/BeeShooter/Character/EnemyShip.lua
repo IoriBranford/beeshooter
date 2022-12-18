@@ -114,6 +114,14 @@ function EnemyShip:PathPoint_Lerp()
     end)
 end
 
+function EnemyShip:PathPoint_SetSpeed()
+    self.speed = self.pathpoint and self.pathpoint.speed or self.speed
+end
+
+function EnemyShip:PathPoint_SetSpeedFast()
+    self.speed = self.fastspeed or 2
+end
+
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
         Body.setVelocity(self, 0, self.stage.vely)
@@ -288,6 +296,14 @@ function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotin
         self:setShooting(EnemyShip.shootAtPlayer, shotinterval, burstshots)
         wait(waittime)
     end
+end
+
+function EnemyShip:PathPoint_SlowSpeedAndShootBurstsAtPlayer()
+    self.speed = self.slowspeed or 1
+    self:addCoroutine(function()
+        local pathpoint = self.pathpoint
+        self:shootBurstsAtPlayer(pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval)
+    end)
 end
 
 function EnemyShip:shootAtAimAngleOnDefeat()
