@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="action" value="PathPoint_SlowSpeedAndShootBurstsAtPlayer"/>
+   <property name="burstinterval" type="int" value="1"/>
+   <property name="bursts" type="int" value="1"/>
+   <property name="burstshots" type="int" value="1"/>
+   <property name="shotinterval" type="int" value="1"/>
+  </properties>
+  <point/>
+ </object>
+</template>
