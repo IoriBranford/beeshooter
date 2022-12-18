@@ -334,9 +334,17 @@ function Stage.setTime(time)
     gametimer = time
 end
 
+function Stage.addToTimer(time)
+    gametimer = gametimer + time
+end
+
 function Stage.stop()
     gametimerstate = "stopped"
     stage.vely = 0
+end
+
+function Stage.pauseTimerUntilNextEnemy()
+    gametimerstate = "waitingforenemy"
 end
 
 function Stage.win()
