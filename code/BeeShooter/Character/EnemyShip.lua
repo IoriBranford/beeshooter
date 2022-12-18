@@ -91,6 +91,12 @@ local function flyPath(self, path, meleedamage)
     movePath(self, path, path, meleedamage)
 end
 
+function EnemyShip:PathPoint_Rotate()
+    local pathpoint = self.pathpoint
+    local delta = pathpoint and pathpoint.delta or 0
+    self.rotation = self.rotation + math.rad(delta)
+end
+
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
         Body.setVelocity(self, 0, self.stage.vely)
