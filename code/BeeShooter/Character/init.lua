@@ -216,7 +216,7 @@ local function respondToCollisions(self, others, collide)
     local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
     for i = 1, #others do
         local other = others[i]
-        if other.collidable then
+        if other and other.collidable then
             local hitbox2 = other.hitbox or DefaultHitbox
             local x2, y2, w2, h2 =
                 hitbox2.x + other.x,
