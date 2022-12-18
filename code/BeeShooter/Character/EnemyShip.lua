@@ -114,13 +114,17 @@ local function findPath(self)
     if not paths then
         return
     end
+    if #paths == 1 then
+        return paths[1]
+    end
     local closestpath
     local closestdsq = huge
-    local x, y = self.x, self.y
+    local stagey = self.stage.y
+    local x, y = self.x, self.y - stagey
     for i, path in ipairs(paths) do
         local points = path.points
-        local pathx = points[1] + path.x
-        local pathy = points[2] + path.y
+        local pathx = points[1]
+        local pathy = points[2]
         local dsq = distsq(x, y, pathx, pathy)
         if dsq < closestdsq then
             closestpath = path
