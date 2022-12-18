@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="action" value="PathPoint_Lerp"/>
+   <property name="property" value=""/>
+   <property name="startvalue" type="float" value="0"/>
+   <property name="targetvalue" type="float" value="0"/>
+   <property name="time" value="1"/>
+  </properties>
+  <point/>
+ </object>
+</template>

@@ -97,6 +97,23 @@ function EnemyShip:PathPoint_Rotate()
     self.rotation = self.rotation + math.rad(delta)
 end
 
+function EnemyShip:PathPoint_Lerp()
+    self:addCoroutine(function()
+        local pathpoint = self.pathpoint
+        local property = pathpoint.property
+        local startvalue = pathpoint.startvalue
+        local targetvalue = pathpoint.targetvalue
+        local time = math.max(1, pathpoint.time)
+        local delta = (targetvalue - startvalue) / time
+        self[property] = startvalue
+        for _ = 1, time do
+            self[property] = Movement.moveTowards(self[property], targetvalue, delta)
+            yield()
+        end
+        self[property] = targetvalue
+    end)
+end
+
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
         Body.setVelocity(self, 0, self.stage.vely)
