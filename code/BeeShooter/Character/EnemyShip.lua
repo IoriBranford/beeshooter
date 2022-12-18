@@ -502,9 +502,34 @@ function EnemyShip:AlienMind()
     end
 end
 
-function EnemyShip:defeatAlienMind()
-    EnemyShip.defeatBoss(self)
+function EnemyShip:defeatMidBoss()
+    Stage.pauseTimerUntilNextEnemy()
+    Stage.addToTimer(60*60)
+    self:giveDefeatPoints()
+    self.collidable = false
+    Stage.killTeam("EnemyShip")
+    Stage.killTeam("EnemyShot")
+    Body.setVelocity(self, 0, .125)
+    local hitbox = self.hitbox
+    local dyingeffect = self.dyingeffect or "KillSmall"
+    for i = 1, 20 do
+        Audio.play(self.dyingsound)
+        if dyingeffect then
+            Stage.addCharacter({
+                type = dyingeffect,
+                x = self.x + hitbox.x + love.math.random(hitbox.width),
+                y = self.y + hitbox.y + love.math.random(hitbox.height),
+            })
+        end
+        wait(6)
+    end
+    Audio.play(self.defeatsound)
+    self:spawnTypes(self.defeatdrops)
+    self:markDisappear()
+    Stage.setVelY(self.stage.startvely or .75)
 end
+
+EnemyShip.defeatAlienMind = EnemyShip.defeatMidBoss
 
 function EnemyShip:defeatBoss()
     Stage.stop()
