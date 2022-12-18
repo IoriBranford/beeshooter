@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 142,
-  nextobjectid = 1424,
+  nextlayerid = 143,
+  nextobjectid = 1446,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -14197,7 +14197,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -64,
-                  y = 992,
+                  y = 1008,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14207,19 +14207,18 @@ return {
                 {
                   id = 1341,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 64,
-                  y = 1056,
-                  width = 40,
-                  height = 30,
+                  y = 1072,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 560,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -14229,7 +14228,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 64,
-                  y = 1056,
+                  y = 1072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14237,7 +14236,9 @@ return {
                   polyline = {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
-                    { x = 0, y = -40 }
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = -88, y = -96 }
                   },
                   properties = {}
                 },
@@ -14247,7 +14248,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
-                  y = 1056,
+                  y = 1072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14265,7 +14266,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
-                  y = 1024,
+                  y = 1040,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14280,13 +14281,32 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
-                  y = 1016,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1433,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14311,7 +14331,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -72,
-                  y = 984,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14321,39 +14341,20 @@ return {
                 {
                   id = 1335,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 32,
-                  y = 1080,
-                  width = 40,
-                  height = 30,
+                  y = 1096,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 560,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1336,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 32,
-                  y = 1080,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1337,
@@ -14361,7 +14362,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 1080,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14379,7 +14380,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 1048,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14394,13 +14395,52 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 1040,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1424,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 1096,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = -56, y = -64 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1432,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 1088,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14424,8 +14464,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 920,
+                  x = -88,
+                  y = 880,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14435,39 +14475,20 @@ return {
                 {
                   id = 1369,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 72,
-                  y = 984,
-                  width = 40,
-                  height = 30,
+                  y = 944,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 560,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1370,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 72,
-                  y = 984,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1371,
@@ -14475,7 +14496,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 72,
-                  y = 984,
+                  y = 944,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14493,7 +14514,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 72,
-                  y = 952,
+                  y = 912,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14508,13 +14529,52 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 72,
-                  y = 944,
+                  y = 904,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1426,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 72,
+                  y = 944,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = -96, y = -104 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1435,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 72,
+                  y = 936,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14538,8 +14598,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -56,
-                  y = 912,
+                  x = -96,
+                  y = 872,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14549,39 +14609,20 @@ return {
                 {
                   id = 1375,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 48,
-                  y = 1008,
-                  width = 40,
-                  height = 30,
+                  y = 968,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 560,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1376,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 48,
-                  y = 1008,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1377,
@@ -14589,7 +14630,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 1008,
+                  y = 968,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14607,7 +14648,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 976,
+                  y = 936,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14622,13 +14663,52 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 968,
+                  y = 928,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1427,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 48,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = -72, y = -80 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1434,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 48,
+                  y = 960,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14652,8 +14732,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -64,
-                  y = 904,
+                  x = -104,
+                  y = 864,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14663,39 +14743,20 @@ return {
                 {
                   id = 1329,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 24,
-                  y = 1032,
-                  width = 40,
-                  height = 30,
+                  y = 992,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 560,
+                  gid = 502,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1330,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 24,
-                  y = 1032,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1331,
@@ -14703,7 +14764,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 1032,
+                  y = 992,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14721,7 +14782,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 1000,
+                  y = 960,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14736,13 +14797,52 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 992,
+                  y = 952,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1425,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 24,
+                  y = 992,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = -48, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1431,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 984,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14767,7 +14867,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -48,
-                  y = 880,
+                  y = 928,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14777,39 +14877,20 @@ return {
                 {
                   id = 1399,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 232,
-                  y = 968,
-                  width = 40,
-                  height = 30,
+                  y = 1000,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484150,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1400,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 232,
-                  y = 968,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1401,
@@ -14817,7 +14898,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 968,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14835,7 +14916,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 936,
+                  y = 968,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14850,13 +14931,52 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 928,
+                  y = 960,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
+                  }
+                },
+                {
+                  id = 1430,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = 48, y = -56 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1436,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 992,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
@@ -14881,7 +15001,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 872,
+                  y = 920,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14891,39 +15011,20 @@ return {
                 {
                   id = 1393,
                   name = "",
-                  class = "Wasp",
+                  class = "Fly",
                   shape = "rectangle",
                   x = 232,
-                  y = 1016,
-                  width = 40,
-                  height = 30,
+                  y = 1048,
+                  width = 32,
+                  height = 32,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484150,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
-                },
-                {
-                  id = 1394,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
-                  x = 232,
-                  y = 1016,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 0 },
-                    { x = 0, y = -32 },
-                    { x = 0, y = -40 }
-                  },
-                  properties = {}
                 },
                 {
                   id = 1395,
@@ -14931,7 +15032,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 1016,
+                  y = 1048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14949,7 +15050,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 984,
+                  y = 1016,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14964,70 +15065,26 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 976,
+                  y = 1008,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startWaspAttack"
-                  }
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
-              id = 135,
-              name = "r14wasp3c",
-              class = "",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 1386,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -64,
-                  y = 864,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 1387,
-                  name = "",
-                  class = "Wasp",
-                  shape = "rectangle",
-                  x = 232,
-                  y = 1064,
-                  width = 40,
-                  height = 30,
-                  rotation = 0,
-                  gid = 2147484208,
-                  visible = true,
-                  properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotinterval"] = 6
                   }
                 },
                 {
-                  id = 1388,
+                  id = 1429,
                   name = "",
                   class = "Path",
                   shape = "polyline",
                   x = 232,
-                  y = 1064,
+                  y = 1048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15035,56 +15092,25 @@ return {
                   polyline = {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
-                    { x = 0, y = -40 }
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 },
+                    { x = 48, y = -56 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1389,
+                  id = 1437,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 1064,
+                  y = 1040,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["scalexy0"] = 0.5,
-                    ["scalexy1"] = 1,
-                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 30
-                  }
-                },
-                {
-                  id = 1390,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 232,
-                  y = 1032,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "enterForeground"
-                  }
-                },
-                {
-                  id = 1391,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 232,
-                  y = 1024,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "startWaspAttack"
+                    ["action"] = "PathPoint_SetSpeedFast"
                   }
                 }
               }
