@@ -159,6 +159,7 @@ function EnemyShip:Spawner()
         wait(spawninterval)
         self:spawnTypes(spawntype)
     end
+    waitForOnscreenState(self, true)
     waitForOnscreenState(self, false)
     self:markDisappear()
 end
