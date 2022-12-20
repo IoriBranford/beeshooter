@@ -590,4 +590,16 @@ function EnemyShip:defeatBoss()
     GamePhase.win()
 end
 
+function EnemyShip:DamageFlashRed()
+    while true do
+        local health = math.max(2, self.health)
+        if health < self.maxhealth and self.age % health == 0 then
+            self.sprite.green, self.sprite.blue = 0, 0
+        else
+            self.sprite.green, self.sprite.blue = 1, 1
+        end
+        yield()
+    end
+end
+
 return EnemyShip
