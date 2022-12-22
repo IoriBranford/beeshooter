@@ -203,6 +203,26 @@ function EnemyShip:Faller()
     end
 end
 
+function EnemyShip:Egg()
+    self.lifetime = self.lifetime or 60
+    while self.age < self.lifetime do
+        Body.setVelocity(self, 0, self.stage.vely)
+        yield()
+    end
+    if self:isSpriteOnScreen() and self.health > 0 then
+        self:spawnType(self.bullettype)
+    end
+end
+
+function EnemyShip:WaspHatch()
+    coroutine.waitfor(function()
+        return self.sprite:isAnimationEnding(1)
+    end)
+    self.collidable = true
+    self.sprite:changeTile("fly")
+    self:startWaspAttack()
+end
+
 function EnemyShip:chargePlayer(dir)
     dir = dir or 1
     local speed = self.speed
