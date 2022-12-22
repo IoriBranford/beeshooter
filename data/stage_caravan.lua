@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 143,
-  nextobjectid = 1446,
+  nextlayerid = 144,
+  nextobjectid = 1454,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2030,9 +2030,9 @@ return {
       tileheight = 30,
       spacing = 0,
       margin = 0,
-      columns = 2,
+      columns = 6,
       image = "tilesets/Wasp.png",
-      imagewidth = 80,
+      imagewidth = 240,
       imageheight = 30,
       objectalignment = "center",
       tilerendersize = "tile",
@@ -2048,10 +2048,13 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 2,
+      tilecount = 6,
       tiles = {
         {
           id = 0,
+          properties = {
+            ["name"] = "fly"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -2091,12 +2094,64 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 2,
+          properties = {
+            ["name"] = "hatch"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
+              duration = 100
+            },
+            {
+              tileid = 4,
+              duration = 100
+            },
+            {
+              tileid = 5,
+              duration = 100
+            }
+          }
         }
       }
     },
     {
       name = "Tick",
-      firstgid = 562,
+      firstgid = 566,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -2161,6 +2216,53 @@ return {
             {
               tileid = 1,
               duration = 50
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "WaspEgg",
+      firstgid = 568,
+      class = "",
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspEgg.png",
+      imagewidth = 24,
+      imageheight = 8,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
             }
           }
         }
@@ -19902,7 +20004,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 562,
+                  gid = 566,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19950,7 +20052,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 562,
+                  gid = 566,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19998,7 +20100,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 562,
+                  gid = 566,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20046,7 +20148,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 562,
+                  gid = 566,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20094,13 +20196,154 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 562,
+                  gid = 566,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0,
                     ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 143,
+              name = "testwaspeggs",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1446,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = -1680,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1447,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 40,
+                  y = -1664,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1448,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 24,
+                  y = -1608,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1449,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 88,
+                  y = -1536,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1450,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 176,
+                  y = -1552,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1451,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 216,
+                  y = -1616,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1452,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 168,
+                  y = -1664,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1453,
+                  name = "",
+                  class = "WaspEgg",
+                  shape = "rectangle",
+                  x = 168,
+                  y = -1664,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  gid = 568,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
                   }
                 }
               }
