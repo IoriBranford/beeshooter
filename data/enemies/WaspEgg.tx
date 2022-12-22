@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/WaspEgg.tsx"/>
+ <object class="WaspEgg" gid="1" width="8" height="8">
+  <properties>
+   <property name="z" type="float" value="1"/>
+  </properties>
+ </object>
+</template>

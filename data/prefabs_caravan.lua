@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 50,
+  nextobjectid = 52,
   properties = {},
   tilesets = {
     {
@@ -1356,6 +1356,180 @@ return {
           }
         }
       }
+    },
+    {
+      name = "WaspEgg",
+      firstgid = 99,
+      class = "",
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspEgg.png",
+      imagewidth = 24,
+      imageheight = 8,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "Wasp",
+      firstgid = 102,
+      class = "",
+      tilewidth = 40,
+      tileheight = 30,
+      spacing = 0,
+      margin = 0,
+      columns = 6,
+      image = "tilesets/Wasp.png",
+      imagewidth = 240,
+      imageheight = 30,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 40,
+        height = 30
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 6,
+      tiles = {
+        {
+          id = 0,
+          properties = {
+            ["name"] = "fly"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 2,
+          properties = {
+            ["name"] = "hatch"
+          },
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
+              duration = 100
+            },
+            {
+              tileid = 4,
+              duration = 100
+            },
+            {
+              tileid = 5,
+              duration = 100
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1897,6 +2071,36 @@ return {
             ["scalexy"] = 0,
             ["z"] = -10
           }
+        },
+        {
+          id = 50,
+          name = "WaspEgg",
+          class = "WaspEgg",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          gid = 99,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 51,
+          name = "WaspHatch",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 40,
+          height = 30,
+          rotation = 0,
+          gid = 104,
+          visible = true,
+          properties = {}
         }
       }
     }

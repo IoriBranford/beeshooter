@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="10" nextobjectid="50">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="10" nextobjectid="52">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
@@ -15,6 +15,8 @@
  <tileset firstgid="77" source="tilesets/KillMedium.tsx"/>
  <tileset firstgid="93" source="tilesets/AcidBullet.tsx"/>
  <tileset firstgid="97" source="tilesets/Tick.tsx"/>
+ <tileset firstgid="99" source="tilesets/WaspEgg.tsx"/>
+ <tileset firstgid="102" source="tilesets/Wasp.tsx"/>
  <objectgroup id="6" name="defeatdrops">
   <object id="23" name="KillSmall" gid="62" x="0" y="8" width="32" height="32">
    <properties>
@@ -123,5 +125,7 @@
   <object id="45" template="enemies/AcidAnt.tx" name="AcidAntClimbingDown" x="0" y="0" rotation="90"/>
   <object id="49" template="enemies/AcidAnt.tx" name="AcidAntClimbingDownLeft" gid="2147483670" x="0" y="0" rotation="-90"/>
   <object id="43" template="enemies/Tick.tx" name="Tick" x="0" y="0" width="24" height="32"/>
+  <object id="50" template="enemies/WaspEgg.tx" name="WaspEgg" x="0" y="0"/>
+  <object id="51" name="WaspHatch" gid="104" x="0" y="0" width="40" height="30"/>
  </objectgroup>
 </map>
