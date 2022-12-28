@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/WaspBoss.tsx"/>
+ <object class="WaspBoss" gid="1" width="100" height="100">
+  <properties>
+   <property name="z" type="float" value="1"/>
+  </properties>
+ </object>
+</template>
