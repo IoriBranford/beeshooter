@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="WaspBoss" tilewidth="100" tileheight="100" tilecount="3" columns="3">
+<tileset version="1.9" tiledversion="1.9.2" name="WaspBoss" tilewidth="100" tileheight="100" tilecount="3" columns="3" objectalignment="center">
  <image source="WaspBoss.png" width="300" height="100"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
