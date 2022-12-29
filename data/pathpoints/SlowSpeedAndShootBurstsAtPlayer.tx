@@ -2,11 +2,16 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="action" value="PathPoint_SlowSpeedAndShootBurstsAtPlayer"/>
+   <property name="action" value="PathPoint_SlowSpeedAndShootBurstsAtTarget"/>
+   <property name="actiontype" value="addcoroutine"/>
+   <property name="angleoffset" type="float" value="0"/>
+   <property name="burstdeltaangleoffset" type="float" value="0"/>
    <property name="burstinterval" type="int" value="1"/>
    <property name="bursts" type="int" value="1"/>
    <property name="burstshots" type="int" value="1"/>
+   <property name="shotdeltaangleoffset" type="float" value="0"/>
    <property name="shotinterval" type="int" value="1"/>
+   <property name="target" type="object" value="0"/>
   </properties>
   <point/>
  </object>

@@ -14389,11 +14389,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -14503,11 +14508,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -14637,11 +14647,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -14771,11 +14786,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -14905,11 +14925,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -15039,11 +15064,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {
@@ -15173,11 +15203,16 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtPlayer",
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
                     ["burstinterval"] = 1,
                     ["bursts"] = 1,
                     ["burstshots"] = 3,
-                    ["shotinterval"] = 6
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
                   }
                 },
                 {

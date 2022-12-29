@@ -304,31 +304,76 @@ function EnemyShip:shootAtPlayer()
     EnemyShip.shootTargetAS(self, self.bullettype, self.player, self.shootangleoffset, self.bulletspeed)
 end
 
-function EnemyShip:shootBurstsAtAngle(bursts, burstinterval, burstshots, shotinterval, angle, deltaangle)
-    deltaangle = deltaangle or 0
-    self.aimangle = angle
-    local waittime = burstinterval + shotinterval*burstshots
-    for i = 1, bursts do
-        self:setShooting(EnemyShip.shootAimAngle, shotinterval, burstshots)
-        wait(waittime)
-        self.aimangle = self.aimangle + deltaangle
+function EnemyShip:shootBurstsAtAngle(bursts, burstinterval, burstshots, shotinterval,
+                                    angle, shotdeltaangle, burstdeltaangle)
+    angle = (angle or 0)
+    bursts = bursts or 1
+    burstinterval = burstinterval or 1
+    burstshots = burstshots or 1
+    burstdeltaangle = (burstdeltaangle or 0)
+    shotdeltaangle = (shotdeltaangle or 0)
+    shotinterval = shotinterval or 1
+    for b = 1, bursts do
+        wait(burstinterval)
+        for s = 1, burstshots do
+            wait(shotinterval)
+            shootAS(self, self.bullettype, angle)
+            if s < burstshots then
+                angle = angle + shotdeltaangle
+            end
+        end
+        if b < bursts then
+            angle = angle + burstdeltaangle
+        end
     end
 end
 
-function EnemyShip:shootBurstsAtPlayer(bursts, burstinterval, burstshots, shotinterval)
-    local waittime = burstinterval + shotinterval*burstshots
-    for i = 1, bursts do
-        self:setShooting(EnemyShip.shootAtPlayer, shotinterval, burstshots)
-        wait(waittime)
+function EnemyShip:PathPoint_ShootBurstsAtAngle()
+    local pathpoint = self.pathpoint
+    self:shootBurstsAtAngle(
+        pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval,
+            math.rad(pathpoint.angle or 0), math.rad(pathpoint.shotdeltaangle or 0),
+            math.rad(pathpoint.burstdeltaangle or 0)
+    )
+end
+
+function EnemyShip:shootBurstsAtTarget(target, bursts, burstinterval, burstshots, shotinterval,
+                                    angleoffset, shotdeltaangleoffset, burstdeltaangleoffset)
+    target = target or self.player
+    angleoffset = (angleoffset or 0)
+    bursts = bursts or 1
+    burstinterval = burstinterval or 1
+    burstshots = burstshots or 1
+    burstdeltaangleoffset = (burstdeltaangleoffset or 0)
+    shotdeltaangleoffset = (shotdeltaangleoffset or 0)
+    shotinterval = shotinterval or 1
+    for b = 1, bursts do
+        wait(burstinterval)
+        for s = 1, burstshots do
+            wait(shotinterval)
+            self:shootTargetAS(self.bullettype, target, angleoffset)
+            if s < burstshots then
+                angleoffset = angleoffset + shotdeltaangleoffset
+            end
+        end
+        if b < bursts then
+            angleoffset = angleoffset + burstdeltaangleoffset
+        end
     end
 end
 
-function EnemyShip:PathPoint_SlowSpeedAndShootBurstsAtPlayer()
+function EnemyShip:PathPoint_ShootBurstsAtTarget()
+    local pathpoint = self.pathpoint
+    self:shootBurstsAtTarget(pathpoint.target,
+        pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval,
+        math.rad(pathpoint.angleoffset or 0), math.rad(pathpoint.shotdeltaangleoffset or 0),
+        math.rad(pathpoint.burstdeltaangleoffset or 0)
+    )
+end
+
+function EnemyShip:PathPoint_SlowSpeedAndShootBurstsAtTarget()
     self.speed = self.slowspeed or 1
-    self:addCoroutine(function()
-        local pathpoint = self.pathpoint
-        self:shootBurstsAtPlayer(pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval)
-    end)
+    self:PathPoint_ShootBurstsAtTarget()
 end
 
 function EnemyShip:shootAtAimAngleOnDefeat()
