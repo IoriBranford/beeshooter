@@ -75,7 +75,12 @@ local function movePath(self, path, parent, meleedamage)
             self.pathpoint = pointdata
             local action = self[pointdata.action]
             if type(action) == "function" then
-                action(self)
+                local actiontype = pointdata.actiontype or "function"
+                if actiontype == "addcoroutine" then
+                    self:addCoroutine(action)
+                else
+                    action(self)
+                end
             else
                 SubScript.start(self, pointdata.subscript)
             end
