@@ -2112,7 +2112,7 @@ self.speed = 0.75</property>
     <object id="1340" template="enemies/Trigger.tx" x="-64" y="1008"/>
     <object id="1341" template="enemies/FlyBackground.tx" x="64" y="1072"/>
     <object id="1342" template="enemies/Path.tx" x="64" y="1072">
-     <polyline points="0,0 0,-32 0,-40 0,-8 -88,-96"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
     <object id="1343" template="pathpoints/StartEnterForeground.tx" x="64" y="1072">
      <properties>
@@ -2128,7 +2128,7 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1433" template="pathpoints/SetSpeedFast.tx" x="64" y="1064"/>
+    <object id="1433" template="pathpoints/WaspAttack.tx" x="64" y="1064"/>
    </objectgroup>
    <objectgroup id="128" name="r14wasp1b">
     <object id="1334" template="enemies/Trigger.tx" x="-72" y="1000"/>
@@ -2148,9 +2148,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1424" template="enemies/Path.tx" x="32" y="1096">
-     <polyline points="0,0 0,-32 0,-40 0,-8 -56,-64"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1432" template="pathpoints/SetSpeedFast.tx" x="32" y="1088"/>
+    <object id="1432" template="pathpoints/WaspAttack.tx" x="32" y="1088"/>
    </objectgroup>
    <objectgroup id="132" name="r14wasp2a">
     <object id="1368" template="enemies/Trigger.tx" x="-88" y="880"/>
@@ -2170,9 +2170,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1426" template="enemies/Path.tx" x="72" y="944">
-     <polyline points="0,0 0,-32 0,-40 0,-8 -96,-104"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1435" template="pathpoints/SetSpeedFast.tx" x="72" y="936"/>
+    <object id="1435" template="pathpoints/WaspAttack.tx" x="72" y="936"/>
    </objectgroup>
    <objectgroup id="133" name="r14wasp2b">
     <object id="1374" template="enemies/Trigger.tx" x="-96" y="872"/>
@@ -2192,9 +2192,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1427" template="enemies/Path.tx" x="48" y="968">
-     <polyline points="0,0 0,-32 0,-40 0,-8 -72,-80"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1434" template="pathpoints/SetSpeedFast.tx" x="48" y="960"/>
+    <object id="1434" template="pathpoints/WaspAttack.tx" x="48" y="960"/>
    </objectgroup>
    <objectgroup id="127" name="r14wasp2c">
     <object id="1328" template="enemies/Trigger.tx" x="-104" y="864"/>
@@ -2214,9 +2214,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1425" template="enemies/Path.tx" x="24" y="992">
-     <polyline points="0,0 0,-32 0,-40 0,-8 -48,-56"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1431" template="pathpoints/SetSpeedFast.tx" x="24" y="984"/>
+    <object id="1431" template="pathpoints/WaspAttack.tx" x="24" y="984"/>
    </objectgroup>
    <objectgroup id="137" name="r14wasp3a">
     <object id="1398" template="enemies/Trigger.tx" x="-48" y="928"/>
@@ -2236,9 +2236,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1430" template="enemies/Path.tx" x="232" y="1000">
-     <polyline points="0,0 0,-32 0,-40 0,-8 48,-56"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1436" template="pathpoints/SetSpeedFast.tx" x="232" y="992"/>
+    <object id="1436" template="pathpoints/WaspAttack.tx" x="232" y="992"/>
    </objectgroup>
    <objectgroup id="136" name="r14wasp3b">
     <object id="1392" template="enemies/Trigger.tx" x="-56" y="920"/>
@@ -2258,9 +2258,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1429" template="enemies/Path.tx" x="232" y="1048">
-     <polyline points="0,0 0,-32 0,-40 0,-8 48,-56"/>
+     <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1437" template="pathpoints/SetSpeedFast.tx" x="232" y="1040"/>
+    <object id="1437" template="pathpoints/WaspAttack.tx" x="232" y="1040"/>
    </objectgroup>
    <objectgroup id="138" name="r14powerup">
     <object id="1404" template="enemies/Trigger.tx" x="-16" y="960"/>

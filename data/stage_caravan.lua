@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 144,
-  nextobjectid = 1454,
+  nextobjectid = 1458,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2665,16 +2665,12 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = 0, y = 28, width = 16, height = 14,
-              data = "eJxjYBgFo2AUwEAfHrlpjPj1zgDKr8Ejv4UR0wwAyhADtw=="
-            },
-            {
-              x = 0, y = 42, width = 16, height = 14,
-              data = "eJxjYICAGYwMDNuAuIgBNygE4i1ANdMYUcVhetuB7BA8+oOBuBXNDGS9mQyE7U9HMwNZL7H2I5uBrJcU+2E0sl5S7U9noL799/Hof0jAfpDev3j0/8diBrpeaUac2hlkGTHNIFYvLjNI0YvNDFL1optBjl5kMwBpDT0Q"
+              x = 16, y = 28, width = 16, height = 14,
+              data = "eJxjYBgFwwkUAnEbDlxEhP5gIM7AgUPoYP9iIF6CAy8lQj+5AJ+7ifEHvnDDF44A6+4bHA=="
             },
             {
               x = 16, y = 42, width = 16, height = 14,
-              data = "eJxjYBgF1ACFQNwGxUVk6A8G4gwoDhm1f8TYDwCTtg+I"
+              data = "eJxjYICAQiBuIxIXMWCCh0CcQSS+j0X/fyB+QCT+i0W/LCMDwz8G4rA0IxYDKATI4YctfAiBYAZE+ISM2j9i7AcALlMwWQ=="
             },
             {
               x = 0, y = 56, width = 16, height = 14,
@@ -2693,8 +2689,16 @@ return {
               data = "eJxjYMAOZBkZGP4xYGJpRhwayARtaLiIRP0ZaDhk1P4Btf8+ifofoOG/JOqndfqkNQAAVnYgRQ=="
             },
             {
+              x = 16, y = 70, width = 16, height = 14,
+              data = "eJxjYEAFfQy4wTRGPJJAMAMovwaP/BZG3GaA9G4D4iI8+gtxmAHT2w5kh+DRHwzErWhmIOvNZCBsfzqaGch6ibUf2QxkvaTYD6OR9ZJqfzoD9e2/j0f/QwL2g/T+xaP/PxYz0PVK40mjsoyYZhCrF5cZpOjFZgYAIV8+Vg=="
+            },
+            {
               x = 0, y = 84, width = 16, height = 14,
               data = "eJxjYBi+4AkQP6JAPxMjkGAkX78CUK8cBfpHwfAHAEEnAgs="
+            },
+            {
+              x = 16, y = 84, width = 16, height = 14,
+              data = "eJz7y8DAIM3IQDKQBer5T6ZeZDNGwSgYyQAAM6gCcQ=="
             },
             {
               x = -16, y = 98, width = 16, height = 14,
@@ -2848,6 +2852,10 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 16, y = 28, width = 16, height = 14,
+              data = "eJxjYBgF1ASsjAwMbDgwOyNh/dpArIMD69LQ3ZQCmL8JAVzhwAvEfETYA1LDj0UcX7gN5nAEALBsA/0="
+            },
+            {
               x = 0, y = 56, width = 16, height = 14,
               data = "eJxjYBiegJWRgYENC2ZnJE6/NhDrYMG6tHLwKBiRAABaAgFm"
             },
@@ -2998,6 +3006,10 @@ return {
           encoding = "base64",
           compression = "zlib",
           chunks = {
+            {
+              x = 16, y = 28, width = 16, height = 14,
+              data = "eJxjYBgF1AaOjAwMTmjYmZF4/bVAtXVouJ4E/aNg6AAA99wEjQ=="
+            },
             {
               x = 0, y = 56, width = 16, height = 14,
               data = "eJxjYBi+wJGRgcEJCTszkqa/Fqi+DgnXk6h/FIwCQgAASDUDyw=="
@@ -14339,8 +14351,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = -88, y = -96 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -14413,7 +14424,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14535,8 +14546,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = -56, y = -64 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -14552,7 +14562,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14674,8 +14684,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = -96, y = -104 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -14691,7 +14700,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14813,8 +14822,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = -72, y = -80 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -14830,7 +14838,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -14952,8 +14960,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = -48, y = -56 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -14969,7 +14976,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -15091,8 +15098,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = 48, y = -56 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -15108,7 +15114,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
@@ -15230,8 +15236,7 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -32 },
                     { x = 0, y = -40 },
-                    { x = 0, y = -8 },
-                    { x = 48, y = -56 }
+                    { x = 0, y = -8 }
                   },
                   properties = {}
                 },
@@ -15247,7 +15252,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_SetSpeedFast"
+                    ["action"] = "startWaspAttack"
                   }
                 }
               }
