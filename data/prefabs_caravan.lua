@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 52,
+  nextobjectid = 53,
   properties = {},
   tilesets = {
     {
@@ -2016,6 +2016,22 @@ return {
           height = 16,
           rotation = 0,
           gid = 22,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 52,
+          name = "AcidAntLeft",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 2147483670,
           visible = true,
           properties = {
             ["z"] = 1

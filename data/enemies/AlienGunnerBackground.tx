@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Aliens.tsx"/>
+ <object name="AlienGunnerBackground" class="AlienGunner" gid="1" width="24" height="16">
+  <properties>
+   <property name="z" type="float" value="1"/>
+  </properties>
+ </object>
+</template>

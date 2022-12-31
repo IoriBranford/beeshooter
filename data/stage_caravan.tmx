@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="150" nextobjectid="1505">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="154" nextobjectid="1540">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -106,13 +106,13 @@ A brief chance to practice controls</text>
    eJxjYBheIBiIM3DgECL0FwJxGw5cRIT+xUC8BAdeSoI/yAH43E6MH/CFHTFhSKn9+MKO1mHYSoTbYbgdi/50BsJhB8OZSPoA0nQr3A==
   </chunk>
     <chunk x="0" y="42" width="16" height="14">
-   eJxjYBgFowACWoG4jQBux6M/HWpGBhS3Y+Fn4tH/BGoGLrtBeh/h0c/ECDHjMQ4M1suIW78CI8SMVqhbYfbC+CC9cnj0w8xIh7oVZi+Mj00vALvVHak=
+   eJxjYBgFo2Bogydk6HmExGZihJjRRiQG62VE6FdghJjxmIE4DNIrB9UPAArVEe8=
   </chunk>
     <chunk x="16" y="42" width="16" height="14">
    eJxjYICAViBuIxK3M2CCh0CcQSS+j0X/fyB+QCT+i0W/LCMDwz8G4rA0IxYDKASFDIjwKSJDfzADInxCRu0fMfYDALjvMII=
   </chunk>
     <chunk x="0" y="56" width="16" height="14">
-   eJxjYMAET4D4ERAzMkIwjE8sYGIEacbNJwQUgGrlGHHzhwIoBOI2LLiISP3BQJyBBYeM2k8X+x/isP8+kfr/A/EDLPgvmjoAqkkkTg==
+   eJxjYIAABUYGBkYisRwjwyggAAqBuA0LLiJSfzAQZ2DBIaP208X+hzjsv0+k/v9A/AAL/oumDgAunyCK
   </chunk>
     <chunk x="16" y="56" width="16" height="14">
    eJxjYICAYCDOgOIQBtJBIRC3QXERGfpH7R+1fyTaDwDqVhfL
@@ -236,13 +236,13 @@ A brief chance to practice controls</text>
    </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="0" y="28" width="16" height="14">
-   eJxjYBgFo2B4AVZGBgY2NMzOSLx+bSDWQcO6NHEpAwMAgvYBMw==
+   eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA==
   </chunk>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYKAuYGVkYGDDgdkZCevXBmIdHFiXym5FB6xEuA+fH3iJsIMfjxw+v9MrDMgFxIQdDGALQ2LCDgawhSExYTcYwxAAuTsFtQ==
   </chunk>
     <chunk x="0" y="42" width="16" height="14">
-   eJxjYEAFrIwMDGw4MDsjA0HAC8QHgfgQGj4MxPyEtTNoA7EoEPOhYTEg1iVCP8wMHTRMrF5KAHrYgQApYQgKu8VA3IpFXztQbCkD/jCEhR3IjCVoGKSXmDCkRvjzQtXDwl6UgLux6efHwycEQH7QxcMfTAAA78kQDA==
+   eJxjYMAErUBsw8jAYAvFdkDcjkUdLpAOxFGMCH4MkJ1JhD5WRoT9HUC8iRGCOxkQ9rMz4tbLh2S/JZBvBcXWSPbz4TCDFyq3GGp/OFBNBBRHQv2/FKqGH4v9MP0wM0qBesqguJwRoReXfm0gFkVSgwuLAbEu9iAAm6FDAGPTixzuNkhx3sYAwTZY0gFyGIL8fpABEe/RjJA4z2CAYGQxUDwcRgsDmN9BZlQA1VQCcRUQH2KAYGSxwzjCgBi/4wuDgQIAWGokkA==
   </chunk>
     <chunk x="0" y="56" width="16" height="14">
    eJxjYBiegJWRgYENC2ZnJE6/NhDrYMG6tHLwKBiRAABaAgFm
@@ -348,7 +348,7 @@ A brief chance to practice controls</text>
    </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="0" y="28" width="16" height="14">
-   eJxjYBgFo2D4AUdGBgYnKHZmJF1/LVBPHRTXk6GfWAAAb38DCQ==
+   eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew==
   </chunk>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBh8wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/FIwCegEAYRgEjQ==
@@ -407,12 +407,12 @@ A brief chance to practice controls</text>
    </data>
   </layer>
   <layer id="148" name="overfloor" width="30" height="20">
+   <properties>
+    <property name="z" type="float" value="2"/>
+   </properties>
    <data encoding="base64" compression="zlib">
-    <chunk x="0" y="28" width="16" height="14">
-   eJxjYBgFo2AUUBO0AnEbGm7HoRYAbjQDJQ==
-  </chunk>
     <chunk x="0" y="42" width="16" height="14">
-   eJxjYMAE6UCcgYYzsagbjKAVj1w7EfrToWa0oWGQXmLCoJUBd/gRYz8MoNs/CoYnAADQSQ0F
+   eJxjYEAF6Qy4QSYeORhoxSPXToT+gbZ/qAJ8/kYH2MIBX7ijA2LiYRQQBwD5IwWV
   </chunk>
    </data>
   </layer>
@@ -2288,110 +2288,171 @@ self.speed = 0.75</property>
     <object id="1404" template="enemies/Trigger.tx" x="-16" y="960"/>
     <object id="1405" template="enemies/ReinforcedHoneyPot.tx" x="152" y="952"/>
    </objectgroup>
-   <objectgroup id="146" name="r15beetles">
-    <object id="1470" template="enemies/Trigger.tx" x="-72" y="848"/>
-    <object id="1471" template="enemies/BeetleFromBelow.tx" x="40" y="856" rotation="-90"/>
-    <object id="1472" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="216" y="856" rotation="90"/>
-    <object id="1473" template="enemies/Path.tx" x="40" y="896">
-     <polyline points="0,-40 0,-56 0,-64 0,-128 16,-144 16,-208 32,-224 32,-248 48,-264 56,-264"/>
-    </object>
-    <object id="1474" template="enemies/Path.tx" x="216" y="896">
-     <polyline points="0,-40 0,-56 0,-64 0,-128 -16,-144 -16,-208 -32,-224 -32,-248 -48,-264 -56,-264"/>
-    </object>
-    <object id="1475" template="pathpoints/FinishEnterForeground.tx" x="40" y="840"/>
-    <object id="1476" template="pathpoints/FinishEnterForeground.tx" x="216" y="840"/>
-    <object id="1477" template="pathpoints/BeetleShoot.tx" x="40" y="832"/>
-    <object id="1478" template="pathpoints/BeetleShoot.tx" x="216" y="832"/>
-    <object id="1479" template="pathpoints/Rotate.tx" x="40" y="768">
+   <objectgroup id="144" name="r15acidants1">
+    <object id="1458" template="enemies/Trigger.tx" x="-72" y="896"/>
+    <object id="1459" class="AntHole" gid="496" x="40" y="800" width="16" height="32">
      <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1480" template="pathpoints/Rotate.tx" x="88" y="632">
-     <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1481" template="pathpoints/Rotate.tx" x="216" y="768">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-    <object id="1482" template="pathpoints/Rotate.tx" x="168" y="632">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-    <object id="1483" template="pathpoints/Rotate.tx" x="56" y="688">
-     <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1484" template="pathpoints/Rotate.tx" x="56" y="752">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-    <object id="1485" template="pathpoints/Rotate.tx" x="72" y="672">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-    <object id="1486" template="pathpoints/Rotate.tx" x="184" y="648">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-    <object id="1487" template="pathpoints/Rotate.tx" x="72" y="648">
-     <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1488" template="pathpoints/Rotate.tx" x="200" y="752">
-     <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1489" template="pathpoints/Rotate.tx" x="184" y="672">
-     <properties>
-      <property name="delta" type="float" value="45"/>
-     </properties>
-    </object>
-    <object id="1490" template="pathpoints/Rotate.tx" x="200" y="688">
-     <properties>
-      <property name="delta" type="float" value="-45"/>
-     </properties>
-    </object>
-   </objectgroup>
-   <objectgroup id="144" name="r15acidantsH1">
-    <object id="1458" template="enemies/Trigger.tx" x="-72" y="800"/>
-    <object id="1459" class="AntHole" gid="496" x="72" y="752" width="16" height="32">
-     <properties>
-      <property name="spawncount" type="float" value="20"/>
+      <property name="spawncount" type="float" value="50"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAntClimbingDown"/>
+      <property name="spawntype" value="AcidAntLeft"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1461" template="enemies/Path.tx" x="72" y="736">
-     <polyline points="0,16 -16,24 -16,40 16,64 96,64 128,40 128,24 112,16"/>
+    <object id="1461" template="enemies/Path.tx" x="40" y="784">
+     <polyline points="0,16 -16,24 -16,40 8,64 168,64 192,40 192,24 176,16"/>
     </object>
-    <object id="1465" template="pathpoints/Disappear.tx" x="184" y="752"/>
-   </objectgroup>
-   <objectgroup id="145" name="r15acidantsH2">
-    <object id="1466" template="enemies/Trigger.tx" x="-56" y="720"/>
-    <object id="1467" class="AntHole" gid="496" x="168" y="672" width="16" height="32">
+    <object id="1465" template="pathpoints/Disappear.tx" x="216" y="800"/>
+    <object id="1512" template="pathpoints/FaceX.tx" x="24" y="824">
      <properties>
-      <property name="spawncount" type="float" value="20"/>
+      <property name="facex" type="int" value="1"/>
+     </properties>
+    </object>
+    <object id="1513" template="pathpoints/FaceX.tx" x="232" y="808">
+     <properties>
+      <property name="facex" type="int" value="-1"/>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="151" name="r15aliens1">
+    <object id="1519" template="enemies/Trigger.tx" x="-16" y="816"/>
+    <object id="1520" template="enemies/AlienGunner.tx" x="88" y="832"/>
+    <object id="1521" template="enemies/AlienGunner.tx" x="168" y="832"/>
+    <object id="1522" template="enemies/Path.tx" x="88" y="832">
+     <polyline points="0,0 0,8"/>
+    </object>
+    <object id="1523" template="enemies/Path.tx" x="168" y="832">
+     <polyline points="0,0 0,8"/>
+    </object>
+    <object id="1534" template="enemies/PathPoint.tx" x="88" y="840">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+    <object id="1535" template="enemies/PathPoint.tx" x="168" y="840">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="145" name="r15acidants2">
+    <object id="1466" template="enemies/Trigger.tx" x="-56" y="832"/>
+    <object id="1467" class="AntHole" gid="496" x="184" y="696" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
       <property name="spawninterval" type="float" value="6"/>
-      <property name="spawntype" value="AcidAntClimbingDown"/>
+      <property name="spawntype" value="AcidAnt"/>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1468" template="enemies/Path.tx" x="168" y="672">
-     <polyline points="0,0 16,8 16,24 0,32 -80,32 -96,24 -96,8 -80,0"/>
+    <object id="1507" class="AntHole" gid="496" x="72" y="712" width="16" height="32">
+     <properties>
+      <property name="spawncount" type="float" value="50"/>
+      <property name="spawninterval" type="float" value="6"/>
+      <property name="spawntype" value="AcidAntLeft"/>
+      <property name="z" type="float" value="0.75"/>
+     </properties>
     </object>
-    <object id="1469" template="pathpoints/Disappear.tx" x="88" y="672"/>
+    <object id="1468" template="enemies/Path.tx" x="184" y="704">
+     <polyline points="0,-8 32,24 32,56 8,80 -120,80 -144,56 -144,24 -112,-8"/>
+    </object>
+    <object id="1505" template="enemies/Path.tx" x="88" y="696">
+     <polyline points="-16,16 -32,32 -32,48 -8,72 88,72 112,48 112,32 96,16"/>
+    </object>
+    <object id="1469" template="pathpoints/Disappear.tx" x="72" y="696"/>
+    <object id="1506" template="pathpoints/Disappear.tx" x="184" y="712"/>
+    <object id="1508" template="pathpoints/FaceX.tx" x="56" y="744">
+     <properties>
+      <property name="facex" type="int" value="1"/>
+     </properties>
+    </object>
+    <object id="1509" template="pathpoints/FaceX.tx" x="40" y="728">
+     <properties>
+      <property name="facex" type="int" value="1"/>
+     </properties>
+    </object>
+    <object id="1510" template="pathpoints/FaceX.tx" x="200" y="728">
+     <properties>
+      <property name="facex" type="int" value="-1"/>
+     </properties>
+    </object>
+    <object id="1511" template="pathpoints/FaceX.tx" x="216" y="760">
+     <properties>
+      <property name="facex" type="int" value="-1"/>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="152" name="r15aliens2">
+    <object id="1524" template="enemies/Trigger.tx" x="-16" y="736"/>
+    <object id="1525" template="enemies/AlienGunner.tx" x="120" y="752"/>
+    <object id="1526" template="enemies/AlienGunner.tx" x="136" y="752"/>
+    <object id="1527" template="enemies/Path.tx" x="120" y="752">
+     <polyline points="0,0 0,8"/>
+    </object>
+    <object id="1528" template="enemies/Path.tx" x="136" y="752">
+     <polyline points="0,0 0,8"/>
+    </object>
+    <object id="1536" template="enemies/PathPoint.tx" x="120" y="760">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+    <object id="1537" template="enemies/PathPoint.tx" x="136" y="760">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="153" name="r15aliens3">
+    <object id="1529" template="enemies/Trigger.tx" x="-16" y="680"/>
+    <object id="1530" template="enemies/AlienGunner.tx" x="120" y="696"/>
+    <object id="1531" template="enemies/AlienGunner.tx" x="136" y="696"/>
+    <object id="1532" template="enemies/Path.tx" x="120" y="696">
+     <polyline points="0,0 0,-8 0,8"/>
+    </object>
+    <object id="1533" template="enemies/Path.tx" x="136" y="696">
+     <polyline points="0,0 0,-8 0,8"/>
+    </object>
+    <object id="1538" template="enemies/PathPoint.tx" x="120" y="704">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+    <object id="1539" template="enemies/PathPoint.tx" x="136" y="704">
+     <properties>
+      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
+for i = 1,5 do
+ AlienGunner_shootAtPlayer(self)
+ wait(20)
+end</property>
+     </properties>
+    </object>
+   </objectgroup>
+   <objectgroup id="150" name="r16powerup">
+    <object id="1514" template="enemies/Trigger.tx" x="-24" y="656"/>
+    <object id="1515" template="enemies/ReinforcedHoneyPot.tx" x="120" y="624"/>
+    <object id="1517" template="enemies/ReinforcedHoneyPot.tx" x="152" y="640"/>
+    <object id="1518" template="enemies/ReinforcedHoneyPot.tx" x="136" y="632"/>
+    <object id="1516" template="enemies/ReinforcedHoneyPot.tx" x="112" y="640"/>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="448">
