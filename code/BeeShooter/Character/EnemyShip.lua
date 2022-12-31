@@ -22,12 +22,13 @@ local distsq = math.distsq
 local yield = coroutine.yield
 local wait = coroutine.wait
 
-local function waitForOnscreenState(self, onscreenstate)
+function EnemyShip:waitForOnscreenState(onscreenstate)
     while self:isSpriteOnScreen() ~= onscreenstate do
         SubScript.run(self)
         yield()
     end
 end
+local waitForOnscreenState = EnemyShip.waitForOnscreenState
 
 local function meleeAttack(self, damage)
     if not self.collidable then
@@ -440,10 +441,11 @@ function EnemyShip:BeetleShoot()
     end
 end
 
-local function getCirclingVelocity(self, centerx, centery, angle, dist)
+function EnemyShip:getCirclingVelocity(centerx, centery, angle, dist)
     local posx, posy = centerx + dist*cos(angle), centery + dist*sin(angle)
     return posx - self.x, posy - self.y
 end
+local getCirclingVelocity = EnemyShip.getCirclingVelocity
 
 local BiteIndexes = {
     [5] = true,
