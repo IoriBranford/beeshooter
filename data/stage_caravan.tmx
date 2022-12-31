@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="154" nextobjectid="1540">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="158" nextobjectid="1551">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -3000,34 +3000,75 @@ end</property>
     <object id="656" template="enemies/HoneyPot.tx" x="128" y="-1288"/>
    </objectgroup>
    <objectgroup id="64" name="testtick">
-    <object id="643" template="enemies/Trigger.tx" x="-16" y="-1320"/>
-    <object id="644" template="enemies/Tick.tx" x="-16" y="-1336"/>
+    <object id="643" template="enemies/Trigger.tx" x="-16" y="-1344"/>
+    <object id="644" template="enemies/Tick.tx" x="-16" y="-1360">
+     <properties>
+      <property name="circlingdist" type="float" value="96"/>
+     </properties>
+    </object>
+    <object id="1544" template="enemies/HoneyPot.tx" x="120" y="-1360"/>
    </objectgroup>
-   <objectgroup id="65" name="Copy of testtick">
-    <object id="645" template="enemies/Trigger.tx" x="-16" y="-1352"/>
-    <object id="646" template="enemies/Tick.tx" x="-16" y="-1368"/>
+   <objectgroup id="65" name="testtick2">
+    <object id="645" template="enemies/Trigger.tx" x="-16" y="-1416"/>
+    <object id="646" template="enemies/Tick.tx" x="-16" y="-1432">
+     <properties>
+      <property name="circlingdist" type="float" value="64"/>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
+    <object id="1542" template="enemies/HoneyPot.tx" x="120" y="-1424"/>
+    <object id="648" template="enemies/Tick.tx" x="-40" y="-1432" rotation="180">
+     <properties>
+      <property name="circlingdist" type="float" value="96"/>
+      <property name="circlingspeed" type="float" value="-3"/>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
    </objectgroup>
-   <objectgroup id="66" name="Copy of Copy of testtick">
-    <object id="647" template="enemies/Trigger.tx" x="-16" y="-1384"/>
-    <object id="648" template="enemies/Tick.tx" x="-16" y="-1400"/>
+   <objectgroup id="67" name="testtick4a">
+    <object id="649" template="enemies/Trigger.tx" x="-16" y="-1664"/>
+    <object id="650" template="enemies/Tick.tx" x="-16" y="-1680">
+     <properties>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
+    <object id="1543" template="enemies/ReinforcedHoneyPot.tx" x="120" y="-1680"/>
    </objectgroup>
-   <objectgroup id="67" name="Copy of Copy of Copy of testtick">
-    <object id="649" template="enemies/Trigger.tx" x="-16" y="-1416"/>
-    <object id="650" template="enemies/Tick.tx" x="-16" y="-1432"/>
+   <objectgroup id="68" name="testtick4b">
+    <object id="651" template="enemies/Trigger.tx" x="-40" y="-1672"/>
+    <object id="652" template="enemies/Tick.tx" x="-40" y="-1688">
+     <properties>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
    </objectgroup>
-   <objectgroup id="68" name="Copy of Copy of Copy of Copy of testtick">
-    <object id="651" template="enemies/Trigger.tx" x="-16" y="-1448"/>
-    <object id="652" template="enemies/Tick.tx" x="-16" y="-1464"/>
+   <objectgroup id="155" name="testtick3">
+    <object id="1545" template="enemies/Trigger.tx" x="-16" y="-1504"/>
+    <object id="1546" template="enemies/Tick.tx" x="-16" y="-1520">
+     <properties>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
+    <object id="1548" template="enemies/Tick.tx" x="-40" y="-1520" rotation="120">
+     <properties>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
+    <object id="1550" template="enemies/Tick.tx" x="-64" y="-1520" rotation="240">
+     <properties>
+      <property name="difficulty" type="float" value="1"/>
+     </properties>
+    </object>
    </objectgroup>
    <objectgroup id="143" name="testwaspeggs">
-    <object id="1446" template="enemies/Trigger.tx" x="-16" y="-1680"/>
-    <object id="1447" template="enemies/WaspEgg.tx" x="40" y="-1664"/>
-    <object id="1448" template="enemies/WaspEgg.tx" x="24" y="-1608"/>
-    <object id="1449" template="enemies/WaspEgg.tx" x="88" y="-1536"/>
-    <object id="1450" template="enemies/WaspEgg.tx" x="176" y="-1552"/>
-    <object id="1451" template="enemies/WaspEgg.tx" x="216" y="-1616"/>
-    <object id="1452" template="enemies/WaspEgg.tx" x="168" y="-1664"/>
-    <object id="1453" template="enemies/WaspEgg.tx" x="168" y="-1664"/>
+    <object id="1446" template="enemies/Trigger.tx" x="-16" y="-1792"/>
+    <object id="1447" template="enemies/WaspEgg.tx" x="40" y="-1776"/>
+    <object id="1448" template="enemies/WaspEgg.tx" x="24" y="-1720"/>
+    <object id="1449" template="enemies/WaspEgg.tx" x="88" y="-1648"/>
+    <object id="1450" template="enemies/WaspEgg.tx" x="176" y="-1664"/>
+    <object id="1451" template="enemies/WaspEgg.tx" x="216" y="-1728"/>
+    <object id="1452" template="enemies/WaspEgg.tx" x="168" y="-1776"/>
+    <object id="1453" template="enemies/WaspEgg.tx" x="168" y="-1776"/>
    </objectgroup>
   </group>
  </group>
