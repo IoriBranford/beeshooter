@@ -378,12 +378,16 @@ function EnemyShip:PathPoint_SlowSpeedAndShootBurstsAtTarget()
 end
 
 function EnemyShip:shootAtAimAngleOnDefeat()
-    EnemyShip.shootAimAngle(self)
+    if self:isSpriteFullyOnScreen() then
+        EnemyShip.shootAimAngle(self)
+    end
     self:defaultDefeat()
 end
 
 function EnemyShip:shootAtPlayerOnDefeat()
-    EnemyShip.shootAtPlayer(self)
+    if self:isSpriteFullyOnScreen() then
+        EnemyShip.shootAtPlayer(self)
+    end
     self:defaultDefeat()
 end
 
