@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 10,
-  nextobjectid = 53,
+  nextobjectid = 56,
   properties = {},
   tilesets = {
     {
@@ -1906,6 +1906,24 @@ return {
           }
         },
         {
+          id = 53,
+          name = "AlienGunnerBackground",
+          class = "AlienGunner",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 16,
+          rotation = 0,
+          gid = 24,
+          visible = true,
+          properties = {
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
+            ["z"] = 1
+          }
+        },
+        {
           id = 17,
           name = "AlienGunnerLeft",
           class = "AlienGunner",
@@ -2022,6 +2040,24 @@ return {
           }
         },
         {
+          id = 54,
+          name = "AcidAntBehind",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
+            ["z"] = 1
+          }
+        },
+        {
           id = 52,
           name = "AcidAntLeft",
           class = "AcidAnt",
@@ -2034,6 +2070,24 @@ return {
           gid = 2147483670,
           visible = true,
           properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 55,
+          name = "AcidAntLeftBehind",
+          class = "AcidAnt",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 2147483670,
+          visible = true,
+          properties = {
+            ["collidable"] = false,
+            ["color"] = "#80ffffff",
             ["z"] = 1
           }
         },
