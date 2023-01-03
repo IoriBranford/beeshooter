@@ -122,6 +122,18 @@ function Character:isSpriteOnScreen()
     return testrects(x - ox, y - oy, w, h, cx, cy, cw, ch)
 end
 
+function Character:isSpriteFullyOnScreen()
+    local x, y, w, h = self.x, self.y, self.width, self.height
+    local sprite = self.sprite
+    local ox, oy = 0, 0
+    if sprite then
+        ox, oy = sprite.ox, sprite.oy
+    end
+    local camera = self.camera
+    local cx, cy, cw, ch = camera.x, camera.y, camera.width, camera.height
+    return cx < x and x+w < cx+cw and cy < y and y+h < cy+ch
+end
+
 function Character:isSpriteOffScreenBottom()
     local y = self.y
     local sprite = self.sprite
