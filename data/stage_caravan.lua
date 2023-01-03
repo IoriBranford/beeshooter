@@ -13381,7 +13381,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -32,
+                  x = -40,
                   y = 1184,
                   width = 0,
                   height = 0,
@@ -13392,18 +13392,20 @@ return {
                 {
                   id = 1674,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
-                  x = 40,
+                  x = 32,
                   y = 1208,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13412,7 +13414,7 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 40,
+                  x = 32,
                   y = 1208,
                   width = 0,
                   height = 0,
@@ -13433,7 +13435,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 40,
+                  x = 32,
                   y = 1208,
                   width = 0,
                   height = 0,
@@ -13443,7 +13445,7 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 30
+                    ["time"] = 45
                   }
                 },
                 {
@@ -13451,7 +13453,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 160,
+                  x = 152,
                   y = 1224,
                   width = 0,
                   height = 0,
@@ -13466,7 +13468,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
+                  x = 160,
                   y = 1232,
                   width = 0,
                   height = 0,
@@ -13490,7 +13492,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 184,
+                  x = 176,
                   y = 1264,
                   width = 0,
                   height = 0,
@@ -13505,7 +13507,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 144,
+                  x = 136,
                   y = 1216,
                   width = 0,
                   height = 0,
@@ -13537,7 +13539,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -40,
+                  x = -48,
                   y = 1176,
                   width = 0,
                   height = 0,
@@ -13548,18 +13550,20 @@ return {
                 {
                   id = 1681,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
-                  x = 56,
+                  x = 48,
                   y = 1224,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13568,7 +13572,7 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 56,
+                  x = 48,
                   y = 1224,
                   width = 0,
                   height = 0,
@@ -13589,7 +13593,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 56,
+                  x = 48,
                   y = 1224,
                   width = 0,
                   height = 0,
@@ -13599,7 +13603,7 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 30
+                    ["time"] = 45
                   }
                 },
                 {
@@ -13607,7 +13611,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
+                  x = 168,
                   y = 1240,
                   width = 0,
                   height = 0,
@@ -13622,7 +13626,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 184,
+                  x = 176,
                   y = 1248,
                   width = 0,
                   height = 0,
@@ -13646,7 +13650,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 200,
+                  x = 192,
                   y = 1280,
                   width = 0,
                   height = 0,
@@ -13661,7 +13665,7 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 160,
+                  x = 152,
                   y = 1232,
                   width = 0,
                   height = 0,
@@ -13704,18 +13708,20 @@ return {
                 {
                   id = 1688,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 48,
                   y = 1240,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13755,7 +13761,7 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 30
+                    ["time"] = 45
                   }
                 },
                 {
@@ -13860,18 +13866,20 @@ return {
                 {
                   id = 1698,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 64,
                   y = 1256,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13911,7 +13919,7 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 30
+                    ["time"] = 45
                   }
                 },
                 {
@@ -14646,18 +14654,19 @@ return {
                 {
                   id = 1341,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 64,
                   y = 1072,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -14784,18 +14793,19 @@ return {
                 {
                   id = 1335,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 32,
                   y = 1096,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -14922,18 +14932,19 @@ return {
                 {
                   id = 1399,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 232,
                   y = 1000,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484208,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -15060,18 +15071,19 @@ return {
                 {
                   id = 1393,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 232,
                   y = 1048,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484208,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -15198,18 +15210,19 @@ return {
                 {
                   id = 1369,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 72,
                   y = 952,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -15336,18 +15349,19 @@ return {
                 {
                   id = 1375,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 48,
                   y = 976,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -15474,18 +15488,19 @@ return {
                 {
                   id = 1329,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 24,
                   y = 1000,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -16134,18 +16149,19 @@ return {
                 {
                   id = 1646,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 40,
                   y = 680,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -16272,18 +16288,19 @@ return {
                 {
                   id = 1653,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 24,
                   y = 704,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 502,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -16410,18 +16427,19 @@ return {
                 {
                   id = 1667,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 208,
                   y = 680,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484208,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },
@@ -16548,18 +16566,19 @@ return {
                 {
                   id = 1660,
                   name = "",
-                  class = "Fly",
+                  class = "Wasp",
                   shape = "rectangle",
                   x = 232,
                   y = 704,
-                  width = 32,
-                  height = 32,
+                  width = 40,
+                  height = 30,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484208,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
                 },

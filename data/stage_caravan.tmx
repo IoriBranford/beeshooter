@@ -1973,18 +1973,22 @@ self.speed = 0.75</property>
     </object>
    </objectgroup>
    <objectgroup id="176" name="r13fly1">
-    <object id="1673" template="enemies/Trigger.tx" x="-32" y="1184"/>
-    <object id="1674" template="enemies/FlyBackground.tx" x="40" y="1208"/>
-    <object id="1675" template="enemies/Path.tx" x="40" y="1208">
-     <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
-    </object>
-    <object id="1676" template="pathpoints/StartEnterForeground.tx" x="40" y="1208">
+    <object id="1673" template="enemies/Trigger.tx" x="-40" y="1184"/>
+    <object id="1674" template="enemies/WaspBackground.tx" x="32" y="1208">
      <properties>
-      <property name="time" type="int" value="30"/>
+      <property name="speed" type="float" value="3"/>
      </properties>
     </object>
-    <object id="1677" template="pathpoints/FinishEnterForeground.tx" x="160" y="1224"/>
-    <object id="1678" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="168" y="1232">
+    <object id="1675" template="enemies/Path.tx" x="32" y="1208">
+     <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
+    </object>
+    <object id="1676" template="pathpoints/StartEnterForeground.tx" x="32" y="1208">
+     <properties>
+      <property name="time" type="int" value="45"/>
+     </properties>
+    </object>
+    <object id="1677" template="pathpoints/FinishEnterForeground.tx" x="152" y="1224"/>
+    <object id="1678" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="160" y="1232">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -1992,26 +1996,30 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1679" template="pathpoints/WaspAttack.tx" x="184" y="1264"/>
-    <object id="1694" template="pathpoints/FaceX.tx" x="144" y="1216">
+    <object id="1679" template="pathpoints/WaspAttack.tx" x="176" y="1264"/>
+    <object id="1694" template="pathpoints/FaceX.tx" x="136" y="1216">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="177" name="r13fly2">
-    <object id="1680" template="enemies/Trigger.tx" x="-40" y="1176"/>
-    <object id="1681" template="enemies/FlyBackground.tx" x="56" y="1224"/>
-    <object id="1682" template="enemies/Path.tx" x="56" y="1224">
-     <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
-    </object>
-    <object id="1683" template="pathpoints/StartEnterForeground.tx" x="56" y="1224">
+    <object id="1680" template="enemies/Trigger.tx" x="-48" y="1176"/>
+    <object id="1681" template="enemies/WaspBackground.tx" x="48" y="1224">
      <properties>
-      <property name="time" type="int" value="30"/>
+      <property name="speed" type="float" value="3"/>
      </properties>
     </object>
-    <object id="1684" template="pathpoints/FinishEnterForeground.tx" x="176" y="1240"/>
-    <object id="1685" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="184" y="1248">
+    <object id="1682" template="enemies/Path.tx" x="48" y="1224">
+     <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
+    </object>
+    <object id="1683" template="pathpoints/StartEnterForeground.tx" x="48" y="1224">
+     <properties>
+      <property name="time" type="int" value="45"/>
+     </properties>
+    </object>
+    <object id="1684" template="pathpoints/FinishEnterForeground.tx" x="168" y="1240"/>
+    <object id="1685" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="176" y="1248">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2019,8 +2027,8 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1686" template="pathpoints/WaspAttack.tx" x="200" y="1280"/>
-    <object id="1695" template="pathpoints/FaceX.tx" x="160" y="1232">
+    <object id="1686" template="pathpoints/WaspAttack.tx" x="192" y="1280"/>
+    <object id="1695" template="pathpoints/FaceX.tx" x="152" y="1232">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
@@ -2028,13 +2036,17 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="178" name="r13fly3">
     <object id="1687" template="enemies/Trigger.tx" x="-48" y="1152"/>
-    <object id="1688" template="enemies/FlyBackground.tx" x="48" y="1240"/>
+    <object id="1688" template="enemies/WaspBackground.tx" x="48" y="1240">
+     <properties>
+      <property name="speed" type="float" value="3"/>
+     </properties>
+    </object>
     <object id="1689" template="enemies/Path.tx" x="48" y="1240">
      <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
     </object>
     <object id="1690" template="pathpoints/StartEnterForeground.tx" x="48" y="1240">
      <properties>
-      <property name="time" type="int" value="30"/>
+      <property name="time" type="int" value="45"/>
      </properties>
     </object>
     <object id="1691" template="pathpoints/FinishEnterForeground.tx" x="168" y="1256"/>
@@ -2055,13 +2067,17 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="179" name="r14fly4">
     <object id="1697" template="enemies/Trigger.tx" x="-56" y="1144"/>
-    <object id="1698" template="enemies/FlyBackground.tx" x="64" y="1256"/>
+    <object id="1698" template="enemies/WaspBackground.tx" x="64" y="1256">
+     <properties>
+      <property name="speed" type="float" value="3"/>
+     </properties>
+    </object>
     <object id="1699" template="enemies/Path.tx" x="64" y="1256">
      <polyline points="0,0 56,0 104,8 120,16 128,24 144,56"/>
     </object>
     <object id="1700" template="pathpoints/StartEnterForeground.tx" x="64" y="1256">
      <properties>
-      <property name="time" type="int" value="30"/>
+      <property name="time" type="int" value="45"/>
      </properties>
     </object>
     <object id="1701" template="pathpoints/FinishEnterForeground.tx" x="184" y="1272"/>
@@ -2198,7 +2214,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="129" name="r14wasp1a">
     <object id="1340" template="enemies/Trigger.tx" x="-64" y="1008"/>
-    <object id="1341" template="enemies/FlyBackground.tx" x="64" y="1072"/>
+    <object id="1341" template="enemies/WaspBackground.tx" x="64" y="1072"/>
     <object id="1342" template="enemies/Path.tx" x="64" y="1072">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2220,7 +2236,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="128" name="r14wasp1b">
     <object id="1334" template="enemies/Trigger.tx" x="-72" y="1000"/>
-    <object id="1335" template="enemies/FlyBackground.tx" x="32" y="1096"/>
+    <object id="1335" template="enemies/WaspBackground.tx" x="32" y="1096"/>
     <object id="1337" template="pathpoints/StartEnterForeground.tx" x="32" y="1096">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2242,7 +2258,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="137" name="r14wasp3a">
     <object id="1398" template="enemies/Trigger.tx" x="-48" y="928"/>
-    <object id="1399" template="enemies/FlyLeftBackground.tx" x="232" y="1000"/>
+    <object id="1399" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1000" rotation="0"/>
     <object id="1401" template="pathpoints/StartEnterForeground.tx" x="232" y="1000">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2264,7 +2280,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="136" name="r14wasp3b">
     <object id="1392" template="enemies/Trigger.tx" x="-56" y="920"/>
-    <object id="1393" template="enemies/FlyLeftBackground.tx" x="232" y="1048"/>
+    <object id="1393" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1048" rotation="0"/>
     <object id="1395" template="pathpoints/StartEnterForeground.tx" x="232" y="1048">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2286,7 +2302,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="132" name="r14wasp2a">
     <object id="1368" template="enemies/Trigger.tx" x="-88" y="888"/>
-    <object id="1369" template="enemies/FlyBackground.tx" x="72" y="952"/>
+    <object id="1369" template="enemies/WaspBackground.tx" x="72" y="952"/>
     <object id="1371" template="pathpoints/StartEnterForeground.tx" x="72" y="952">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2308,7 +2324,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="133" name="r14wasp2b">
     <object id="1374" template="enemies/Trigger.tx" x="-96" y="880"/>
-    <object id="1375" template="enemies/FlyBackground.tx" x="48" y="976"/>
+    <object id="1375" template="enemies/WaspBackground.tx" x="48" y="976"/>
     <object id="1377" template="pathpoints/StartEnterForeground.tx" x="48" y="976">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2330,7 +2346,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="127" name="r14wasp2c">
     <object id="1328" template="enemies/Trigger.tx" x="-104" y="872"/>
-    <object id="1329" template="enemies/FlyBackground.tx" x="24" y="1000"/>
+    <object id="1329" template="enemies/WaspBackground.tx" x="24" y="1000"/>
     <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="1000">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2440,7 +2456,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="172" name="r15fly1">
     <object id="1645" template="enemies/Trigger.tx" x="-96" y="616"/>
-    <object id="1646" template="enemies/FlyBackground.tx" x="40" y="680"/>
+    <object id="1646" template="enemies/WaspBackground.tx" x="40" y="680"/>
     <object id="1647" template="enemies/Path.tx" x="40" y="680">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2462,7 +2478,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="173" name="r15fly2">
     <object id="1652" template="enemies/Trigger.tx" x="-112" y="592"/>
-    <object id="1653" template="enemies/FlyBackground.tx" x="24" y="704"/>
+    <object id="1653" template="enemies/WaspBackground.tx" x="24" y="704"/>
     <object id="1654" template="enemies/Path.tx" x="24" y="704">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2484,7 +2500,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="175" name="Copy of r15fly1">
     <object id="1666" template="enemies/Trigger.tx" x="-16" y="616"/>
-    <object id="1667" template="enemies/FlyBackground.tx" gid="2147484150" x="208" y="680" rotation="0"/>
+    <object id="1667" template="enemies/WaspBackground.tx" gid="2147484208" x="208" y="680" rotation="0"/>
     <object id="1668" template="enemies/Path.tx" x="208" y="680">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2506,7 +2522,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="174" name="Copy of r15fly2">
     <object id="1659" template="enemies/Trigger.tx" x="-32" y="592"/>
-    <object id="1660" template="enemies/FlyBackground.tx" gid="2147484150" x="232" y="704" rotation="0"/>
+    <object id="1660" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="704" rotation="0"/>
     <object id="1661" template="enemies/Path.tx" x="232" y="704">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
