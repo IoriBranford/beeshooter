@@ -69,7 +69,8 @@ function Tick:Tick()
     local anglefromplayer = self.rotation + pi
     local circlingspeed = math.rad(self.circlingspeed or 3)
     local circlingdist = self.circlingdist or 64
-    local emergingspeed = 1/64
+    local emergingtime = self.emergingtime or 64
+    local emergingspeed = 1 / emergingtime
     local difficulty = self.difficulty or 1
     local maxcirclingtime = 600
     local timer = 1
