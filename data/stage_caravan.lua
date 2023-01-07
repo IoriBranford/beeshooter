@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 189,
-  nextobjectid = 1804,
+  nextlayerid = 191,
+  nextobjectid = 1811,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -17750,6 +17750,156 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 189,
+              name = "r17tick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1804,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1805,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 424,
+                  width = 24,
+                  height = 32,
+                  rotation = 90,
+                  gid = 566,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 128,
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1806,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 416,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 190,
+              name = "r17tick2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1807,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -64,
+                  y = 336,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1808,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -40,
+                  y = 328,
+                  width = 24,
+                  height = 32,
+                  rotation = 0,
+                  gid = 566,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 128,
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 1809,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 320,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1810,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -16,
+                  y = 328,
+                  width = 24,
+                  height = 32,
+                  rotation = 180,
+                  gid = 566,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 128,
+                    ["scalexy"] = 0,
+                    ["z"] = -10
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 76,
               name = "lastroomboss",
               class = "",
@@ -17767,7 +17917,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 448,
+                  y = 224,
                   width = 0,
                   height = 0,
                   rotation = 0,

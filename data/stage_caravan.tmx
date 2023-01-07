@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="189" nextobjectid="1804">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="191" nextobjectid="1811">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -2673,8 +2673,31 @@ self.speed = 0.75</property>
     <object id="1791" template="pathpoints/WaspAttack.tx" class="PathPoint" x="40" y="544"/>
     <object id="1792" template="pathpoints/WaspAttack.tx" class="PathPoint" x="216" y="544"/>
    </objectgroup>
+   <objectgroup id="189" name="r17tick">
+    <object id="1804" template="enemies/Trigger.tx" x="-40" y="432"/>
+    <object id="1805" template="enemies/Tick.tx" x="-16" y="424" rotation="90">
+     <properties>
+      <property name="emergingtime" type="float" value="128"/>
+     </properties>
+    </object>
+    <object id="1806" template="enemies/HoneyPot.tx" x="128" y="416"/>
+   </objectgroup>
+   <objectgroup id="190" name="r17tick2">
+    <object id="1807" template="enemies/Trigger.tx" x="-64" y="336"/>
+    <object id="1808" template="enemies/Tick.tx" x="-40" y="328" rotation="0">
+     <properties>
+      <property name="emergingtime" type="float" value="128"/>
+     </properties>
+    </object>
+    <object id="1809" template="enemies/HoneyPot.tx" x="128" y="320"/>
+    <object id="1810" template="enemies/Tick.tx" x="-16" y="328" rotation="180">
+     <properties>
+      <property name="emergingtime" type="float" value="128"/>
+     </properties>
+    </object>
+   </objectgroup>
    <objectgroup id="76" name="lastroomboss">
-    <object id="863" class="Trigger" x="-16" y="448">
+    <object id="863" class="Trigger" x="-16" y="224">
      <point/>
     </object>
    </objectgroup>
