@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 191,
-  nextobjectid = 1811,
+  nextlayerid = 199,
+  nextobjectid = 1832,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2699,6 +2699,14 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 14, width = 16, height = 14,
+              data = "eJxjYCAOPCJSHQw8AeI2KAbrZSRNPxNQ/WMGCAbplSNRvwJQPSMUk6p3FGAHsDglNS3AACxOsaUFYsxWwBOf+MwmBuAzm5b+BgAE4hAA"
+            },
+            {
+              x = 0, y = 28, width = 16, height = 14,
+              data = "eJxjYEAFT4C4DYgfIYkpMDIwMAKxHCMDQcAEVPMYxCBCLTZAil2jYBQMdQAAWpgDuA=="
+            },
+            {
               x = 16, y = 28, width = 16, height = 14,
               data = "eJxjYBheIBiIM3DgECL0FwJxGw5cRIT+xUC8BAdeSoI/yAH43E6MH/CFHTFhSKn9+MKO1mHYSoTbYbgdi/50BsJhB8OZSPoA0nQr3A=="
             },
@@ -2890,6 +2898,14 @@ return {
           compression = "zlib",
           chunks = {
             {
+              x = 0, y = 0, width = 16, height = 14,
+              data = "eJxjYBgFo2B4AlZGBgY2IGZnJE8vHwMCk2oGL5JeMSDWxaEOADHjALo="
+            },
+            {
+              x = 0, y = 14, width = 16, height = 14,
+              data = "eJxjYMAOtIFYB4p1cagZBfQFrIwMDGxAzM5Inn5YnGKLT1qaTSmgp9voHQ4AiAwDFQ=="
+            },
+            {
               x = 0, y = 28, width = 16, height = 14,
               data = "eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA=="
             },
@@ -2899,7 +2915,7 @@ return {
             },
             {
               x = 0, y = 42, width = 16, height = 14,
-              data = "eJxjYMAErUBsw8jA0MYAwXZAdjsWdeiAlRFCpwNxBhrOhKphZ8Stlw/NflsoRrafD4cZvFC5g1D7o4BqoqE4hhFi/2GoGn4s9sP0w8yoAOqphOIqRoReXPq1gVgUSQ0uLAbEutiDAGyGDgGMTS8s3JHDzQ4p/mywhCNyGPJiCTdQmMHiLgpLOCKHAczvyOEGCrNDDBBcgRaO2MKAGL/jC4OhCgDxxSMh"
+              data = "eJxjYMAErUBsw8jA0MYAwXZAdjsWdeiAlRFCpwNxBhrOhKphZ8Stlx/NflsoRrafF4cZIHE+ID4ItT8KqCYaimMYIfYfhqrhx9QO1w8zowKopxKKqxgRenHp1wZiUSQ1uLAYEOtiDwKwGToEMDa9sHBHDjc7pPizwRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAPHpIyE="
             },
             {
               x = 0, y = 56, width = 16, height = 14,
@@ -3052,6 +3068,14 @@ return {
           encoding = "base64",
           compression = "zlib",
           chunks = {
+            {
+              x = 0, y = 0, width = 16, height = 14,
+              data = "eJxjYBgFo2B4AkdGBgZnRvL1KgKxEhA7kWFOPFC9AxDXQXE9Dv0A/tADtA=="
+            },
+            {
+              x = 0, y = 14, width = 16, height = 14,
+              data = "eJxjYMAOahkZGOoZcUiOggEBjsD4cAJiZzLjBRSndTjilZZmUwro6TZ6hwMAMzoKFw=="
+            },
             {
               x = 0, y = 28, width = 16, height = 14,
               data = "eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew=="
@@ -14698,7 +14722,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -14834,7 +14861,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -14970,7 +15000,10 @@ return {
                   gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -15106,7 +15139,10 @@ return {
                   gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -15242,7 +15278,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -15378,7 +15417,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -15514,7 +15556,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -16228,7 +16273,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -96,
+                  x = -184,
                   y = 616,
                   width = 0,
                   height = 0,
@@ -16249,7 +16294,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -16364,7 +16412,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
+                  x = -104,
                   y = 616,
                   width = 0,
                   height = 0,
@@ -16385,7 +16433,10 @@ return {
                   gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -16500,7 +16551,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -112,
+                  x = -200,
                   y = 592,
                   width = 0,
                   height = 0,
@@ -16521,7 +16572,10 @@ return {
                   gid = 566,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -16636,7 +16690,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -32,
+                  x = -120,
                   y = 592,
                   width = 0,
                   height = 0,
@@ -16657,7 +16711,10 @@ return {
                   gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["z"] = 10
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
                   }
                 },
                 {
@@ -17752,7 +17809,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 189,
-              name = "r17tick",
+              name = "r17tick1",
               class = "",
               visible = true,
               opacity = 1,
@@ -17767,7 +17824,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
+                  x = -40,
                   y = 432,
                   width = 0,
                   height = 0,
@@ -17780,31 +17837,353 @@ return {
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
+                  x = -48,
+                  y = 576,
+                  width = 72,
+                  height = 96,
+                  rotation = 0,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 40,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 191,
+              name = "r17tick2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1811,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
                   x = -40,
-                  y = 424,
-                  width = 24,
-                  height = 32,
+                  y = 400,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1812,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 544,
+                  width = 72,
+                  height = 96,
+                  rotation = 180,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 50,
+                    ["circlingspeed"] = -6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 193,
+              name = "r17tick3",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1815,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 368,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1816,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 512,
+                  width = 72,
+                  height = 96,
+                  rotation = 0,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 60,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 192,
+              name = "r17tick4",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1813,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 336,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1814,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 480,
+                  width = 72,
+                  height = 96,
+                  rotation = 180,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 70,
+                    ["circlingspeed"] = -6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 198,
+              name = "r17_4ticks",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1825,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 224,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1826,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 160,
+                  width = 72,
+                  height = 96,
                   rotation = 90,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 64,
-                    ["circlingspeed"] = 3,
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
                     ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["emergingtime"] = 128,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 2,
                     ["z"] = 5
                   }
                 },
                 {
-                  id = 1806,
+                  id = 1829,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 512,
+                  width = 72,
+                  height = 96,
+                  rotation = 270,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 2,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1827,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 304,
+                  y = 336,
+                  width = 72,
+                  height = 96,
+                  rotation = 180,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 2,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1828,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = -48,
+                  y = 336,
+                  width = 72,
+                  height = 96,
+                  rotation = 0,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 2,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1830,
+                  name = "",
+                  class = "ReinforcedHoneyPot",
+                  shape = "rectangle",
+                  x = 152,
+                  y = 200,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 492,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1831,
+                  name = "",
+                  class = "ReinforcedHoneyPot",
+                  shape = "rectangle",
+                  x = 112,
+                  y = 208,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 492,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 194,
+              name = "r17powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1817,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 432,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1818,
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 128,
-                  y = 416,
+                  x = 88,
+                  y = 424,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -17819,8 +18198,8 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 190,
-              name = "r17tick2",
+              id = 195,
+              name = "r17powerup2",
               class = "",
               visible = true,
               opacity = 1,
@@ -17831,12 +18210,12 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 1807,
+                  id = 1819,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 368,
+                  x = -80,
+                  y = 400,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17844,35 +18223,12 @@ return {
                   properties = {}
                 },
                 {
-                  id = 1808,
-                  name = "",
-                  class = "Tick",
-                  shape = "rectangle",
-                  x = -64,
-                  y = 360,
-                  width = 24,
-                  height = 32,
-                  rotation = 0,
-                  gid = 572,
-                  visible = true,
-                  properties = {
-                    ["circlingdist"] = 64,
-                    ["circlingspeed"] = 3,
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["emergingtime"] = 128,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
-                    ["z"] = 5
-                  }
-                },
-                {
-                  id = 1809,
+                  id = 1820,
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 104,
-                  y = 352,
+                  x = 168,
+                  y = 392,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -17881,28 +18237,95 @@ return {
                   properties = {
                     ["z"] = 1
                   }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 196,
+              name = "r17powerup3",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1821,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 368,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
                 },
                 {
-                  id = 1810,
+                  id = 1822,
                   name = "",
-                  class = "Tick",
+                  class = "HoneyPot",
                   shape = "rectangle",
-                  x = -40,
+                  x = 56,
                   y = 360,
-                  width = 24,
+                  width = 16,
                   height = 32,
-                  rotation = 180,
-                  gid = 572,
+                  rotation = 0,
+                  gid = 490,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 64,
-                    ["circlingspeed"] = 3,
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["emergingtime"] = 128,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
-                    ["z"] = 5
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 197,
+              name = "r17powerup4",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1823,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 336,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1824,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 328,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
                   }
                 }
               }
@@ -17927,7 +18350,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 224,
+                  y = 0,
                   width = 0,
                   height = 0,
                   rotation = 0,
