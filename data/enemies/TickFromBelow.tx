@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../tilesets/Tick.tsx"/>
+ <object class="Tick" gid="1" width="3" height="4">
+  <properties>
+   <property name="circlingdist" type="float" value="64"/>
+   <property name="circlingspeed" type="float" value="3"/>
+   <property name="collidable" type="bool" value="false"/>
+   <property name="emergingtime" type="int" value="64"/>
+   <property name="maxnumbiters" type="int" value="1"/>
+   <property name="z" type="float" value="5"/>
+  </properties>
+ </object>
+</template>
