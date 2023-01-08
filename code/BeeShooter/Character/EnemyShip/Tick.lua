@@ -173,6 +173,7 @@ function Tick:Tick()
         biters[biteindex] = nil
         player:defeat()
         self.velx, self.vely = math.cos(biteangle) * chargespeed, math.sin(biteangle) * chargespeed
+        self.defeatdrops = (self.defeatdrops or "").." Powerup"
         self:waitForOnscreenState(false)
     end
 
