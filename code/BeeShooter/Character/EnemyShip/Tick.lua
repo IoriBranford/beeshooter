@@ -141,20 +141,22 @@ function Tick:Tick()
     EnemyShip.enterForeground(self)
 
     -- circle player until onscreen and facing free bite spot: UL, UR, CL, CR, BL, BR
-    local biteangle, biteindex
+    local biteangle
+    local biteindex = ((math.floor(anglefromplayer/(pi/4)) % 8) + 8) % 8
     while not biteangle and timer < maxcirclingtime do
-        local nextanglefromplayer = math.fmod(anglefromplayer + circlingspeed, 2*pi)
-        biteindex = math.floor(nextanglefromplayer/(pi/4))
-        if math.floor(anglefromplayer/(pi/4)) ~= biteindex then
-            if canBite(self, biteindex) then
-                self.biteindex = biteindex
-                biters[biteindex] = self
-                biteangle = biteindex * pi/4
+        local nextanglefromplayer = anglefromplayer + circlingspeed
+        local nextbiteindex = ((math.floor(nextanglefromplayer/(pi/4)) % 8) + 8) % 8
+        if nextbiteindex ~= biteindex then
+            if canBite(self, nextbiteindex) then
+                self.biteindex = nextbiteindex
+                biters[nextbiteindex] = self
+                biteangle = nextbiteindex * pi/4
                 nextanglefromplayer = biteangle
             end
         end
         Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, nextanglefromplayer, circlingdist))
         anglefromplayer = nextanglefromplayer
+        biteindex = nextbiteindex
         self.rotation = anglefromplayer + pi
         yield()
         timer = timer + 1
