@@ -169,6 +169,9 @@ function Tick:Tick()
                 bitesuccess = true
             end
         end
+        if not bitesuccess then
+            biters[biteindex] = nil
+        end
     else
         self.velx, self.vely = math.cos(anglefromplayer) * chargespeed, math.sin(anglefromplayer) * chargespeed
         self:waitForOnscreenState(false)
