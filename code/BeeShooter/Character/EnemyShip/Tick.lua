@@ -99,7 +99,13 @@ function Tick:Tick()
     local player = self.player
     player.biters = player.biters or setmetatable({}, WeakTable)
     local biters = player.biters
-    local anglefromplayer = self.rotation + pi
+    local anglefromplayer = 0
+    local distfromplayer = math.floor(math.dist(player.x, player.y, self.x, self.y))
+    if distfromplayer > 0 then
+        anglefromplayer = math.atan2(self.y - player.y, self.x - player.x)
+    end
+    self.scalexy = math.max(self.scalex, self.scaley)
+    self.scalex, self.scaley = 1, 1
     local circlingspeed = math.rad(self.circlingspeed or 3)
     local circlingdist = self.circlingdist or 64
     local emergingtime = self.emergingtime or 64
@@ -108,9 +114,21 @@ function Tick:Tick()
     local timer = 1
 
     -- circle player while emerging
-    while self.scalexy < 1 do
-        self.scalexy = math.min(1, self.scalexy + emergingspeed)
-        Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, anglefromplayer, circlingdist))
+    while self.scalexy ~= 1 do
+        if self.scalexy < 1 then
+            self.scalexy = math.min(1, self.scalexy + emergingspeed)
+        else
+            self.scalexy = math.max(1, self.scalexy - emergingspeed)
+        end
+        local distdiff = distfromplayer - circlingdist
+        if distdiff >= 4 then
+            distfromplayer = distfromplayer - 4
+        elseif distdiff <= -4 then
+            distfromplayer = distfromplayer + 4
+        else
+            distfromplayer = circlingdist
+        end
+        Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, anglefromplayer, distfromplayer))
         anglefromplayer = math.fmod(anglefromplayer + circlingspeed, 2*pi)
         self.rotation = anglefromplayer + pi
         yield()
