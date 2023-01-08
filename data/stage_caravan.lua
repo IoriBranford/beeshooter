@@ -2033,7 +2033,7 @@ return {
       columns = 6,
       image = "tilesets/Wasp.png",
       imagewidth = 240,
-      imageheight = 30,
+      imageheight = 60,
       objectalignment = "center",
       tilerendersize = "tile",
       fillmode = "stretch",
@@ -2048,7 +2048,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 6,
+      tilecount = 12,
       tiles = {
         {
           id = 0,
@@ -2146,12 +2146,46 @@ return {
               duration = 100
             }
           }
+        },
+        {
+          id = 6,
+          animation = {
+            {
+              tileid = 6,
+              duration = 100
+            },
+            {
+              tileid = 7,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 8,
+          animation = {
+            {
+              tileid = 8,
+              duration = 100
+            },
+            {
+              tileid = 9,
+              duration = 100
+            },
+            {
+              tileid = 10,
+              duration = 100
+            },
+            {
+              tileid = 11,
+              duration = 100
+            }
+          }
         }
       }
     },
     {
       name = "Tick",
-      firstgid = 566,
+      firstgid = 572,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -2223,7 +2257,7 @@ return {
     },
     {
       name = "WaspEgg",
-      firstgid = 568,
+      firstgid = 574,
       class = "",
       tilewidth = 8,
       tileheight = 8,
@@ -14661,13 +14695,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -14800,13 +14831,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -14939,13 +14967,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -15078,13 +15103,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -15217,13 +15239,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -15356,13 +15375,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -15495,13 +15511,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -16233,13 +16246,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -16372,13 +16382,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -16511,13 +16518,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 566,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -16650,13 +16654,10 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
-                    ["collidable"] = false,
-                    ["color"] = "#80ffffff",
-                    ["scalexy"] = 0.5,
-                    ["z"] = -10
+                    ["z"] = 10
                   }
                 },
                 {
@@ -17766,7 +17767,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -40,
+                  x = -16,
                   y = 432,
                   width = 0,
                   height = 0,
@@ -17779,19 +17780,22 @@ return {
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
-                  x = -16,
+                  x = -40,
                   y = 424,
                   width = 24,
                   height = 32,
                   rotation = 90,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["emergingtime"] = 128,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -17831,8 +17835,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -64,
-                  y = 336,
+                  x = -16,
+                  y = 368,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17844,19 +17848,22 @@ return {
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
-                  x = -40,
-                  y = 328,
+                  x = -64,
+                  y = 360,
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["emergingtime"] = 128,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -17864,8 +17871,8 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 128,
-                  y = 320,
+                  x = 104,
+                  y = 352,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -17880,19 +17887,22 @@ return {
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
-                  x = -16,
-                  y = 328,
+                  x = -40,
+                  y = 360,
                   width = 24,
                   height = 32,
                   rotation = 180,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["emergingtime"] = 128,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 }
               }
@@ -22639,14 +22649,17 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
                     ["circlingdist"] = 96,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -22704,15 +22717,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
                     ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -22741,7 +22757,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 180,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
                     ["circlingdist"] = 96,
@@ -22749,8 +22765,10 @@ return {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 }
               }
@@ -22792,14 +22810,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -22857,14 +22879,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 }
               }
@@ -22906,14 +22932,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -22926,14 +22956,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 120,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 },
                 {
@@ -22946,14 +22980,18 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 240,
-                  gid = 566,
+                  gid = 572,
                   visible = true,
                   properties = {
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
+                    ["emergingtime"] = 64,
+                    ["maxnumbiters"] = 1,
                     ["scalexy"] = 0,
-                    ["z"] = -10
+                    ["z"] = 5
                   }
                 }
               }
@@ -22995,7 +23033,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23011,7 +23049,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23027,7 +23065,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23043,7 +23081,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23059,7 +23097,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23075,7 +23113,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23091,7 +23129,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 568,
+                  gid = 574,
                   visible = true,
                   properties = {
                     ["z"] = 1

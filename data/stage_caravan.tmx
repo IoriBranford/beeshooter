@@ -14,8 +14,8 @@
  <tileset firstgid="536" source="tilesets/Beetle.tsx"/>
  <tileset firstgid="556" source="tilesets/AlienMind.tsx"/>
  <tileset firstgid="560" source="tilesets/Wasp.tsx"/>
- <tileset firstgid="566" source="tilesets/Tick.tsx"/>
- <tileset firstgid="568" source="tilesets/WaspEgg.tsx"/>
+ <tileset firstgid="572" source="tilesets/Tick.tsx"/>
+ <tileset firstgid="574" source="tilesets/WaspEgg.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -2214,7 +2214,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="129" name="r14wasp1a">
     <object id="1340" template="enemies/Trigger.tx" x="-64" y="1008"/>
-    <object id="1341" template="enemies/WaspBackground.tx" x="64" y="1072"/>
+    <object id="1341" template="enemies/WaspShooter.tx" x="64" y="1072"/>
     <object id="1342" template="enemies/Path.tx" x="64" y="1072">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2236,7 +2236,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="128" name="r14wasp1b">
     <object id="1334" template="enemies/Trigger.tx" x="-72" y="1000"/>
-    <object id="1335" template="enemies/WaspBackground.tx" x="32" y="1096"/>
+    <object id="1335" template="enemies/WaspShooter.tx" x="32" y="1096"/>
     <object id="1337" template="pathpoints/StartEnterForeground.tx" x="32" y="1096">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2258,7 +2258,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="137" name="r14wasp3a">
     <object id="1398" template="enemies/Trigger.tx" x="-48" y="928"/>
-    <object id="1399" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1000" rotation="0"/>
+    <object id="1399" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="1000" rotation="0"/>
     <object id="1401" template="pathpoints/StartEnterForeground.tx" x="232" y="1000">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2280,7 +2280,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="136" name="r14wasp3b">
     <object id="1392" template="enemies/Trigger.tx" x="-56" y="920"/>
-    <object id="1393" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="1048" rotation="0"/>
+    <object id="1393" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="1048" rotation="0"/>
     <object id="1395" template="pathpoints/StartEnterForeground.tx" x="232" y="1048">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2302,7 +2302,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="132" name="r14wasp2a">
     <object id="1368" template="enemies/Trigger.tx" x="-88" y="888"/>
-    <object id="1369" template="enemies/WaspBackground.tx" x="72" y="952"/>
+    <object id="1369" template="enemies/WaspShooter.tx" x="72" y="952"/>
     <object id="1371" template="pathpoints/StartEnterForeground.tx" x="72" y="952">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2324,7 +2324,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="133" name="r14wasp2b">
     <object id="1374" template="enemies/Trigger.tx" x="-96" y="880"/>
-    <object id="1375" template="enemies/WaspBackground.tx" x="48" y="976"/>
+    <object id="1375" template="enemies/WaspShooter.tx" x="48" y="976"/>
     <object id="1377" template="pathpoints/StartEnterForeground.tx" x="48" y="976">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2346,7 +2346,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="127" name="r14wasp2c">
     <object id="1328" template="enemies/Trigger.tx" x="-104" y="872"/>
-    <object id="1329" template="enemies/WaspBackground.tx" x="24" y="1000"/>
+    <object id="1329" template="enemies/WaspShooter.tx" x="24" y="1000"/>
     <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="1000">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2462,7 +2462,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="172" name="r16fly1a">
     <object id="1645" template="enemies/Trigger.tx" x="-96" y="616"/>
-    <object id="1646" template="enemies/WaspBackground.tx" x="40" y="680"/>
+    <object id="1646" template="enemies/WaspShooter.tx" x="40" y="680"/>
     <object id="1647" template="enemies/Path.tx" x="40" y="680">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2484,7 +2484,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="175" name="r16fly1b">
     <object id="1666" template="enemies/Trigger.tx" x="-16" y="616"/>
-    <object id="1667" template="enemies/WaspBackground.tx" gid="2147484208" x="208" y="680" rotation="0"/>
+    <object id="1667" template="enemies/WaspShooter.tx" gid="2147484214" x="208" y="680" rotation="0"/>
     <object id="1668" template="enemies/Path.tx" x="208" y="680">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2506,7 +2506,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="173" name="r16fly2a">
     <object id="1652" template="enemies/Trigger.tx" x="-112" y="592"/>
-    <object id="1653" template="enemies/WaspBackground.tx" x="24" y="704"/>
+    <object id="1653" template="enemies/WaspShooter.tx" x="24" y="704"/>
     <object id="1654" template="enemies/Path.tx" x="24" y="704">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2528,7 +2528,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="174" name="r16fly2b">
     <object id="1659" template="enemies/Trigger.tx" x="-32" y="592"/>
-    <object id="1660" template="enemies/WaspBackground.tx" gid="2147484208" x="232" y="704" rotation="0"/>
+    <object id="1660" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="704" rotation="0"/>
     <object id="1661" template="enemies/Path.tx" x="232" y="704">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>

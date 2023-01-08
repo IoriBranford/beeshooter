@@ -1415,7 +1415,7 @@ return {
       columns = 6,
       image = "tilesets/Wasp.png",
       imagewidth = 240,
-      imageheight = 30,
+      imageheight = 60,
       objectalignment = "center",
       tilerendersize = "tile",
       fillmode = "stretch",
@@ -1430,7 +1430,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 6,
+      tilecount = 12,
       tiles = {
         {
           id = 0,
@@ -1525,6 +1525,40 @@ return {
             },
             {
               tileid = 5,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 6,
+          animation = {
+            {
+              tileid = 6,
+              duration = 100
+            },
+            {
+              tileid = 7,
+              duration = 100
+            }
+          }
+        },
+        {
+          id = 8,
+          animation = {
+            {
+              tileid = 8,
+              duration = 100
+            },
+            {
+              tileid = 9,
+              duration = 100
+            },
+            {
+              tileid = 10,
+              duration = 100
+            },
+            {
+              tileid = 11,
               duration = 100
             }
           }
@@ -2136,10 +2170,14 @@ return {
           gid = 97,
           visible = true,
           properties = {
+            ["circlingdist"] = 64,
+            ["circlingspeed"] = 3,
             ["collidable"] = false,
             ["color"] = "#80ffffff",
+            ["emergingtime"] = 64,
+            ["maxnumbiters"] = 1,
             ["scalexy"] = 0,
-            ["z"] = -10
+            ["z"] = 5
           }
         },
         {
