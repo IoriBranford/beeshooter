@@ -19,10 +19,10 @@ local BiteIndexLevelReqs = {
             [5] = 1,[7] = 1,
 
             -- player must powerup and change weapon
-            [4] = 2,[0] = 2,
+            -- [4] = 2,[0] = 2,
 
             -- player must powerup x2
-            [3] = 2,[1] = 2,
+            -- [3] = 2,[1] = 2,
         },
         {
             -- player must change weapon
@@ -39,20 +39,20 @@ local BiteIndexLevelReqs = {
     B = {
         {
             -- player must powerup 2x or powerup and change weapon
-            [5] = 2,[7] = 2,
+            -- [5] = 2,[7] = 2,
 
             -- player must powerup
             [4] = 1,[0] = 1,
 
             -- player must powerup 2x and change weapon
-            [3] = 3,[1] = 3,
+            -- [3] = 3,[1] = 3,
         },
         {
             -- player must change weapon
             [5] = 1,[7] = 1,
 
             -- player must powerup and change weapon
-            [3] = 2,[1] = 2,
+            -- [3] = 2,[1] = 2,
         },
         {
             -- player must change weapon
