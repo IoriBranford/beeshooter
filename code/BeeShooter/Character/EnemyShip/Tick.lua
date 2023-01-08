@@ -61,6 +61,33 @@ local BiteIndexLevelReqs = {
     }
 }
 
+local function canBite(self, biteindex)
+    if not self:isSpriteOnScreen() then
+        return false
+    end
+    local player = self.player
+    local biters = player.biters
+    local biter = biters[biteindex]
+    if biter and not biter:willDisappear() then
+        return false
+    end
+    local nbiters = 0
+    for _ in pairs(biters) do
+        nbiters = nbiters + 1
+    end
+    local maxnumbiters = self.maxnumbiters or 1
+    if nbiters >= maxnumbiters then
+        return false
+    end
+    local playerweapon, playerpower = player.weapon, player.power
+    local mindifficulty = BiteIndexLevelReqs[playerweapon][playerpower][biteindex] or math.huge
+    local difficulty = self.difficulty or 1
+    if mindifficulty > difficulty then
+        return false
+    end
+    return true
+end
+
 function Tick:Tick()
     Audio.play(self.movesound)
     local player = self.player
@@ -71,7 +98,6 @@ function Tick:Tick()
     local circlingdist = self.circlingdist or 64
     local emergingtime = self.emergingtime or 64
     local emergingspeed = 1 / emergingtime
-    local difficulty = self.difficulty or 1
     local maxcirclingtime = 600
     local timer = 1
 
@@ -90,20 +116,13 @@ function Tick:Tick()
     local biteangle, biteindex
     while not biteangle and timer < maxcirclingtime do
         local nextanglefromplayer = math.fmod(anglefromplayer + circlingspeed, 2*pi)
-        if self:isSpriteOnScreen() then
-            biteindex = math.floor(nextanglefromplayer/(pi/4))
-            if math.floor(anglefromplayer/(pi/4)) ~= biteindex then
-                local biter = biters[biteindex]
-                if not biter or biter:willDisappear() then
-                    local playerweapon, playerpower = player.weapon, player.power
-                    local mindifficulty = BiteIndexLevelReqs[playerweapon][playerpower][biteindex] or math.huge
-                    if mindifficulty <= difficulty then
-                        self.biteindex = biteindex
-                        biters[biteindex] = self
-                        biteangle = biteindex * pi/4
-                        nextanglefromplayer = biteangle
-                    end
-                end
+        biteindex = math.floor(nextanglefromplayer/(pi/4))
+        if math.floor(anglefromplayer/(pi/4)) ~= biteindex then
+            if canBite(self, biteindex) then
+                self.biteindex = biteindex
+                biters[biteindex] = self
+                biteangle = biteindex * pi/4
+                nextanglefromplayer = biteangle
             end
         end
         Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, nextanglefromplayer, circlingdist))
