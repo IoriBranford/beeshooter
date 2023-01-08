@@ -3,7 +3,10 @@
  <tileset firstgid="1" source="../tilesets/Wasp.tsx"/>
  <object class="Wasp" gid="7" width="40" height="30">
   <properties>
-   <property name="z" type="float" value="10"/>
+   <property name="collidable" type="bool" value="false"/>
+   <property name="color" type="color" value="#80ffffff"/>
+   <property name="scalexy" type="float" value="0.5"/>
+   <property name="z" type="float" value="-10"/>
   </properties>
  </object>
 </template>
