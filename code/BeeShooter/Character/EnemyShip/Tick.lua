@@ -95,7 +95,11 @@ local WeakTable = {
 }
 
 function Tick:Tick()
-    Audio.play(self.movesound)
+    local buzzsound = Audio.newSource(self.movesound)
+    if buzzsound then
+        self.buzzsound = buzzsound
+        buzzsound:play()
+    end
     local player = self.player
     player.biters = player.biters or setmetatable({}, WeakTable)
     local biters = player.biters
@@ -206,9 +210,17 @@ function Tick:Tick()
 
     -- disappear when offscreen
     self:markDisappear()
+    if buzzsound then
+        buzzsound:stop()
+        self.buzzsound = nil
+    end
 end
 
 function Tick:TickDefeat()
+    if self.buzzsound then
+        self.buzzsound:stop()
+        self.buzzsound = nil
+    end
     if self.biteindex then
         local player = self.player
         local biters = player.biters
