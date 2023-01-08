@@ -3,10 +3,14 @@
  <tileset firstgid="1" source="../tilesets/Tick.tsx"/>
  <object class="Tick" gid="1" width="24" height="32">
   <properties>
+   <property name="circlingdist" type="float" value="64"/>
+   <property name="circlingspeed" type="float" value="3"/>
    <property name="collidable" type="bool" value="false"/>
    <property name="color" type="color" value="#80ffffff"/>
+   <property name="emergingtime" type="int" value="64"/>
+   <property name="maxnumbiters" type="int" value="1"/>
    <property name="scalexy" type="float" value="0"/>
-   <property name="z" type="float" value="-10"/>
+   <property name="z" type="float" value="5"/>
   </properties>
  </object>
 </template>
