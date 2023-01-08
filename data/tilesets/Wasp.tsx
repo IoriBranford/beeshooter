@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="Wasp" tilewidth="40" tileheight="30" tilecount="6" columns="6" objectalignment="center">
- <image source="Wasp.png" width="240" height="30"/>
+<tileset version="1.9" tiledversion="1.9.2" name="Wasp" tilewidth="40" tileheight="30" tilecount="12" columns="6" objectalignment="center">
+ <image source="Wasp.png" width="240" height="60"/>
  <tile id="0">
   <properties>
    <property name="name" value="fly"/>
@@ -25,6 +25,20 @@
    <frame tileid="3" duration="100"/>
    <frame tileid="4" duration="100"/>
    <frame tileid="5" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="6">
+  <animation>
+   <frame tileid="6" duration="100"/>
+   <frame tileid="7" duration="100"/>
+  </animation>
+ </tile>
+ <tile id="8">
+  <animation>
+   <frame tileid="8" duration="100"/>
+   <frame tileid="9" duration="100"/>
+   <frame tileid="10" duration="100"/>
+   <frame tileid="11" duration="100"/>
   </animation>
  </tile>
 </tileset>
