@@ -72,8 +72,10 @@ local function canBite(self, biteindex)
         return false
     end
     local nbiters = 0
-    for _ in pairs(biters) do
-        nbiters = nbiters + 1
+    for _, b in pairs(biters) do
+        if not b:willDisappear() then
+            nbiters = nbiters + 1
+        end
     end
     local maxnumbiters = self.maxnumbiters or 1
     if nbiters >= maxnumbiters then
@@ -88,10 +90,14 @@ local function canBite(self, biteindex)
     return true
 end
 
+local WeakTable = {
+    __mode = "v"
+}
+
 function Tick:Tick()
     Audio.play(self.movesound)
     local player = self.player
-    player.biters = player.biters or {}
+    player.biters = player.biters or setmetatable({}, WeakTable)
     local biters = player.biters
     local anglefromplayer = self.rotation + pi
     local circlingspeed = math.rad(self.circlingspeed or 3)
