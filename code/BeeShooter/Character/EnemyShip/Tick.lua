@@ -118,10 +118,10 @@ function Tick:Tick()
     local timer = 1
 
     -- circle player while emerging
-    while self.scalexy ~= 1 do
+    while distfromplayer ~= circlingdist or self.scalexy ~= 1 do
         if self.scalexy < 1 then
             self.scalexy = math.min(1, self.scalexy + emergingspeed)
-        else
+        elseif self.scalexy > 1 then
             self.scalexy = math.max(1, self.scalexy - emergingspeed)
         end
         local distdiff = distfromplayer - circlingdist
