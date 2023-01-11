@@ -8,85 +8,13 @@ local Tick = class(EnemyShip)
 local pi = math.pi
 local yield = coroutine.yield
 
--- UL = 5, UR = 7, CL = 4, CR = 0, BL = 3, BR = 1.
--- 
--- BiteIndexLevelReqs[playerweapon][playerpower][biteindex] = minimum difficulty to bite here.
-local BiteIndexLevelReqs = {
-    A =
-    {
-        {
-            -- player must powerup
-            [5] = 1,[7] = 1,
-
-            -- player must powerup and change weapon
-            -- [4] = 2,[0] = 2,
-
-            -- player must powerup x2
-            -- [3] = 2,[1] = 2,
-        },
-        {
-            -- player must change weapon
-            [4] = 1,[0] = 1,
-
-            -- player must powerup
-            [3] = 1,[1] = 1,
-        },
-        {
-            -- player must change weapon
-            [4] = 1,[0] = 1,
-        }
-    },
-    B = {
-        {
-            -- player must powerup 2x or powerup and change weapon
-            -- [5] = 2,[7] = 2,
-
-            -- player must powerup
-            [4] = 1,[0] = 1,
-
-            -- player must powerup 2x and change weapon
-            -- [3] = 3,[1] = 3,
-        },
-        {
-            -- player must change weapon
-            [5] = 1,[7] = 1,
-
-            -- player must powerup and change weapon
-            -- [3] = 2,[1] = 2,
-        },
-        {
-            -- player must change weapon
-            [3] = 1,[1] = 1,
-        }
-    }
-}
-
 local function canBite(self, biteindex)
-    -- if not self:isSpriteOnScreen() then
-    --     return false
-    -- end
     local player = self.player
     local biters = player.biters
     local biter = biters[biteindex]
     if biter and not biter:willDisappear() then
         return false
     end
-    -- local nbiters = 0
-    -- for _, b in pairs(biters) do
-    --     if not b:willDisappear() then
-    --         nbiters = nbiters + 1
-    --     end
-    -- end
-    -- local maxnumbiters = self.maxnumbiters or 1
-    -- if nbiters >= maxnumbiters then
-    --     return false
-    -- end
-    -- local playerweapon, playerpower = player.weapon, player.power
-    -- local mindifficulty = BiteIndexLevelReqs[playerweapon][playerpower][biteindex] or math.huge
-    -- local difficulty = self.difficulty or 1
-    -- if mindifficulty > difficulty then
-    --     return false
-    -- end
     return true
 end
 
@@ -103,57 +31,47 @@ function Tick:Tick()
     local player = self.player
     player.biters = player.biters or setmetatable({}, WeakTable)
     local biters = player.biters
-    local anglefromplayer = self.rotation + pi --0
-    local distfromplayer = self.circlingdist or 64 --math.floor(math.dist(player.x, player.y, self.x, self.y))
-    -- if distfromplayer > 0 then
-    --     anglefromplayer = math.atan2(self.y - player.y, self.x - player.x)
-    -- end
+    local anglefromplayer = self.rotation + pi
     self.scalexy = math.max(self.scalex, self.scaley)
     self.scalex, self.scaley = 1, 1
     local circlingspeed = math.rad(self.circlingspeed or 3)
     local circlingdist = self.circlingdist or 64
     local emergingtime = self.emergingtime or 64
-    local emergingspeed = 1 / emergingtime
+    local emergingspeed = (1 - self.scalexy) / emergingtime
     local maxcirclingtime = 600
     local timer = 1
 
     -- circle player while emerging
-    while distfromplayer ~= circlingdist or self.scalexy ~= 1 do
-        if self.scalexy < 1 then
+    while self.scalexy ~= 1 do
+        if emergingspeed > 0 then
             self.scalexy = math.min(1, self.scalexy + emergingspeed)
-        elseif self.scalexy > 1 then
-            self.scalexy = math.max(1, self.scalexy - emergingspeed)
+        elseif emergingspeed < 0 then
+            self.scalexy = math.max(1, self.scalexy + emergingspeed)
         end
-        local distdiff = distfromplayer - circlingdist
-        if distdiff >= 4 then
-            distfromplayer = distfromplayer - 4
-        elseif distdiff <= -4 then
-            distfromplayer = distfromplayer + 4
-        else
-            distfromplayer = circlingdist
-        end
-        Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, anglefromplayer, distfromplayer))
-        anglefromplayer = math.fmod(anglefromplayer + circlingspeed, 2*pi)
+        Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, anglefromplayer, circlingdist))
+        anglefromplayer = anglefromplayer + circlingspeed
         self.rotation = anglefromplayer + pi
         yield()
     end
 
     EnemyShip.enterForeground(self)
 
-    -- circle player until onscreen and facing free bite spot: UL, UR, CL, CR, BL, BR
+    -- circle player until facing desired or free bite spot
     local biteangle
     local biteindex = ((math.floor(anglefromplayer/(pi/4)) % 8) + 8) % 8
     while not biteangle and timer < maxcirclingtime do
         local nextanglefromplayer = anglefromplayer + circlingspeed
         local nextbiteindex = ((math.floor(nextanglefromplayer/(pi/4)) % 8) + 8) % 8
         local wantedbiteindex = self.bitepoint or nextbiteindex
-        if nextbiteindex ~= biteindex
-        and nextbiteindex == wantedbiteindex then
-            if canBite(self, wantedbiteindex) then
-                self.biteindex = wantedbiteindex
-                biters[wantedbiteindex] = self
-                biteangle = wantedbiteindex * pi/4
-                nextanglefromplayer = biteangle
+        if nextbiteindex ~= biteindex then
+            if circlingspeed < 0 and biteindex == wantedbiteindex
+            or nextbiteindex == wantedbiteindex then
+                if canBite(self, wantedbiteindex) then
+                    self.biteindex = wantedbiteindex
+                    biters[wantedbiteindex] = self
+                    biteangle = wantedbiteindex * pi/4
+                    nextanglefromplayer = biteangle
+                end
             end
         end
         Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, nextanglefromplayer, circlingdist))
