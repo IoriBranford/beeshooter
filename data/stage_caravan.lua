@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 199,
-  nextobjectid = 1832,
+  nextlayerid = 204,
+  nextobjectid = 1843,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2700,11 +2700,11 @@ return {
           chunks = {
             {
               x = 0, y = 14, width = 16, height = 14,
-              data = "eJxjYCAOPCJSHQw8AeI2KAbrZSRNPxNQ/WMGCAbplSNRvwJQPSMUk6p3FGAHsDglNS3AACxOsaUFYsxWwBOf+MwmBuAzm5b+BgAE4hAA"
+              data = "eJxjYBie4AmF+pkYIWY8IlO/AiPEDAZG8t0AMkOOBP0g97YxYHczPjkYALn3MYiBxU58cjAAci8jDjfjkxvMgJhwwwcIhRsA7MQNMA=="
             },
             {
               x = 0, y = 28, width = 16, height = 14,
-              data = "eJxjYEAFT4C4DYgfIYkpMDIwMAKxHCMDQcAEVPMYxCBCLTZAil2jYBQMdQAAWpgDuA=="
+              data = "eJxjYMAET4C4DYgfAbECIwMDIxDLMWJRiAMwAdU+BjFI0IMMyLFzFIyCoQgATcwDuA=="
             },
             {
               x = 16, y = 28, width = 16, height = 14,
@@ -2898,12 +2898,8 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = 0, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2B4AlZGBgY2IGZnJE8vHwMCk2oGL5JeMSDWxaEOADHjALo="
-            },
-            {
               x = 0, y = 14, width = 16, height = 14,
-              data = "eJxjYMAOtIFYB4p1cagZBfQFrIwMDGxAzM5Inn5YnGKLT1qaTSmgp9voHQ4AiAwDFQ=="
+              data = "eJxjYKANYGVkYGADYnZG8vRrA7EoEPNT4AaQGboU6CcV4PMzMeEBcq8OA3Y345MbzoAa6YjUcKOnnQDcGQMh"
             },
             {
               x = 0, y = 28, width = 16, height = 14,
@@ -3069,12 +3065,8 @@ return {
           compression = "zlib",
           chunks = {
             {
-              x = 0, y = 0, width = 16, height = 14,
-              data = "eJxjYBgFo2B4AkdGBgZnRvL1KgKxEhA7kWFOPFC9AxDXQXE9Dv0A/tADtA=="
-            },
-            {
               x = 0, y = 14, width = 16, height = 14,
-              data = "eJxjYMAOahkZGOoZcUiOggEBjsD4cAJiZzLjBRSndTjilZZmUwro6TZ6hwMAMzoKFw=="
+              data = "eJxjYKANcGRkYHACYmdG8vTXAvXZA3EimfphZtRToJ9UgM/PxIQHyL11ONyMT244A2qkI1LDjZ52AgBvUQwA"
             },
             {
               x = 0, y = 28, width = 16, height = 14,
@@ -17825,7 +17817,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -40,
-                  y = 432,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17838,18 +17830,19 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -48,
-                  y = 576,
+                  y = 552,
                   width = 72,
                   height = 96,
-                  rotation = 0,
+                  rotation = 180,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 40,
-                    ["circlingspeed"] = 6,
+                    ["bitepoint"] = 3,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = -3,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
                     ["z"] = 5
                   }
                 }
@@ -17875,7 +17868,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -40,
-                  y = 400,
+                  y = 368,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17888,18 +17881,19 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = 304,
-                  y = 544,
+                  y = 512,
                   width = 72,
                   height = 96,
-                  rotation = 180,
+                  rotation = 3.55271e-15,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 50,
-                    ["circlingspeed"] = -6,
+                    ["bitepoint"] = 1,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
                     ["z"] = 5
                   }
                 }
@@ -17925,7 +17919,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -40,
-                  y = 368,
+                  y = 280,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17938,18 +17932,19 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = -48,
-                  y = 512,
+                  y = 424,
                   width = 72,
                   height = 96,
-                  rotation = 0,
+                  rotation = 315,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 60,
+                    ["bitepoint"] = 4,
+                    ["circlingdist"] = 64,
                     ["circlingspeed"] = 6,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
                     ["z"] = 5
                   }
                 }
@@ -17974,8 +17969,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -40,
-                  y = 336,
+                  x = -24,
+                  y = 280,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17988,18 +17983,19 @@ return {
                   class = "Tick",
                   shape = "rectangle",
                   x = 304,
-                  y = 480,
+                  y = 424,
                   width = 72,
                   height = 96,
-                  rotation = 180,
+                  rotation = 135,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 70,
-                    ["circlingspeed"] = -6,
+                    ["bitepoint"] = 0,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 6,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
                     ["z"] = 5
                   }
                 }
@@ -18008,8 +18004,8 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 198,
-              name = "r17_4ticks",
+              id = 203,
+              name = "r17ticks5",
               class = "",
               visible = true,
               opacity = 1,
@@ -18020,12 +18016,12 @@ return {
               properties = {},
               objects = {
                 {
-                  id = 1825,
+                  id = 1839,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -56,
-                  y = 224,
+                  x = -72,
+                  y = 200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18033,119 +18029,47 @@ return {
                   properties = {}
                 },
                 {
-                  id = 1826,
+                  id = 1840,
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
-                  x = 128,
-                  y = 160,
+                  x = 320,
+                  y = 328,
                   width = 72,
                   height = 96,
-                  rotation = 90,
+                  rotation = 120,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 80,
-                    ["circlingspeed"] = 6,
+                    ["bitepoint"] = 1,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 3,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 2,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 30,
                     ["z"] = 5
                   }
                 },
                 {
-                  id = 1829,
+                  id = 1841,
                   name = "",
                   class = "Tick",
                   shape = "rectangle",
-                  x = 128,
-                  y = 512,
+                  x = -64,
+                  y = 328,
                   width = 72,
                   height = 96,
-                  rotation = 270,
+                  rotation = 60,
                   gid = 572,
                   visible = true,
                   properties = {
-                    ["circlingdist"] = 80,
-                    ["circlingspeed"] = 6,
+                    ["bitepoint"] = 3,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = -3,
                     ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 2,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 30,
                     ["z"] = 5
-                  }
-                },
-                {
-                  id = 1827,
-                  name = "",
-                  class = "Tick",
-                  shape = "rectangle",
-                  x = 304,
-                  y = 336,
-                  width = 72,
-                  height = 96,
-                  rotation = 180,
-                  gid = 572,
-                  visible = true,
-                  properties = {
-                    ["circlingdist"] = 80,
-                    ["circlingspeed"] = 6,
-                    ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 2,
-                    ["z"] = 5
-                  }
-                },
-                {
-                  id = 1828,
-                  name = "",
-                  class = "Tick",
-                  shape = "rectangle",
-                  x = -48,
-                  y = 336,
-                  width = 72,
-                  height = 96,
-                  rotation = 0,
-                  gid = 572,
-                  visible = true,
-                  properties = {
-                    ["circlingdist"] = 80,
-                    ["circlingspeed"] = 6,
-                    ["collidable"] = false,
-                    ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 2,
-                    ["z"] = 5
-                  }
-                },
-                {
-                  id = 1830,
-                  name = "",
-                  class = "ReinforcedHoneyPot",
-                  shape = "rectangle",
-                  x = 152,
-                  y = 200,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 492,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 1831,
-                  name = "",
-                  class = "ReinforcedHoneyPot",
-                  shape = "rectangle",
-                  x = 112,
-                  y = 208,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 492,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
                   }
                 }
               }
@@ -18182,7 +18106,7 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 88,
+                  x = 104,
                   y = 424,
                   width = 16,
                   height = 32,
@@ -18215,7 +18139,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -80,
-                  y = 400,
+                  y = 392,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18227,8 +18151,8 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 168,
-                  y = 392,
+                  x = 152,
+                  y = 384,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -18260,7 +18184,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -80,
-                  y = 368,
+                  y = 320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18272,8 +18196,8 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 56,
-                  y = 360,
+                  x = 72,
+                  y = 312,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -18304,8 +18228,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -80,
-                  y = 336,
+                  x = -96,
+                  y = 320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18317,8 +18241,159 @@ return {
                   name = "",
                   class = "HoneyPot",
                   shape = "rectangle",
-                  x = 200,
-                  y = 328,
+                  x = 184,
+                  y = 312,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 200,
+              name = "r17powerup5",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1833,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 256,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1834,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 112,
+                  y = 240,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1842,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 248,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 201,
+              name = "r17powerup6",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1835,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -136,
+                  y = 200,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1836,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 48,
+                  y = 184,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 202,
+              name = "r17powerup7",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1837,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 216,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1838,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 216,
+                  y = 200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -23075,13 +23150,12 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 96,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 },
@@ -23143,14 +23217,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 },
@@ -23183,14 +23256,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 96,
                     ["circlingspeed"] = -3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 }
@@ -23236,14 +23308,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 },
@@ -23305,14 +23376,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 }
@@ -23358,14 +23428,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 },
@@ -23382,14 +23451,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 },
@@ -23406,14 +23474,13 @@ return {
                   gid = 572,
                   visible = true,
                   properties = {
+                    ["bitepoint"] = 0,
                     ["circlingdist"] = 64,
                     ["circlingspeed"] = 3,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["difficulty"] = 1,
                     ["emergingtime"] = 64,
-                    ["maxnumbiters"] = 1,
-                    ["scalexy"] = 0,
                     ["z"] = 5
                   }
                 }

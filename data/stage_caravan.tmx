@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="199" nextobjectid="1832">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="204" nextobjectid="1843">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -103,10 +103,10 @@ A brief chance to practice controls</text>
    </properties>
    <data encoding="base64" compression="zlib">
     <chunk x="0" y="14" width="16" height="14">
-   eJxjYCAOPCJSHQw8AeI2KAbrZSRNPxNQ/WMGCAbplSNRvwJQPSMUk6p3FGAHsDglNS3AACxOsaUFYsxWwBOf+MwmBuAzm5b+BgAE4hAA
+   eJxjYBie4AmF+pkYIWY8IlO/AiPEDAZG8t0AMkOOBP0g97YxYHczPjkYALn3MYiBxU58cjAAci8jDjfjkxvMgJhwwwcIhRsA7MQNMA==
   </chunk>
     <chunk x="0" y="28" width="16" height="14">
-   eJxjYEAFT4C4DYgfIYkpMDIwMAKxHCMDQcAEVPMYxCBCLTZAil2jYBQMdQAAWpgDuA==
+   eJxjYMAET4C4DYgfAbECIwMDIxDLMWJRiAMwAdU+BjFI0IMMyLFzFIyCoQgATcwDuA==
   </chunk>
     <chunk x="16" y="28" width="16" height="14">
    eJxjYBheIBiIM3DgECL0FwJxGw5cRIT+xUC8BAdeSoI/yAH43E6MH/CFHTFhSKn9+MKO1mHYSoTbYbgdi/50BsJhB8OZSPoA0nQr3A==
@@ -241,11 +241,8 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0"/>
    </properties>
    <data encoding="base64" compression="zlib">
-    <chunk x="0" y="0" width="16" height="14">
-   eJxjYBgFo2B4AlZGBgY2IGZnJE8vHwMCk2oGL5JeMSDWxaEOADHjALo=
-  </chunk>
     <chunk x="0" y="14" width="16" height="14">
-   eJxjYMAOtIFYB4p1cagZBfQFrIwMDGxAzM5Inn5YnGKLT1qaTSmgp9voHQ4AiAwDFQ==
+   eJxjYKANYGVkYGADYnZG8vRrA7EoEPNT4AaQGboU6CcV4PMzMeEBcq8OA3Y345MbzoAa6YjUcKOnnQDcGQMh
   </chunk>
     <chunk x="0" y="28" width="16" height="14">
    eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA==
@@ -359,11 +356,8 @@ A brief chance to practice controls</text>
     <property name="z" type="float" value="0.125"/>
    </properties>
    <data encoding="base64" compression="zlib">
-    <chunk x="0" y="0" width="16" height="14">
-   eJxjYBgFo2B4AkdGBgZnRvL1KgKxEhA7kWFOPFC9AxDXQXE9Dv0A/tADtA==
-  </chunk>
     <chunk x="0" y="14" width="16" height="14">
-   eJxjYMAOahkZGOoZcUiOggEBjsD4cAJiZzLjBRSndTjilZZmUwro6TZ6hwMAMzoKFw==
+   eJxjYKANcGRkYHACYmdG8vTXAvXZA3EimfphZtRToJ9UgM/PxIQHyL11ONyMT244A2qkI1LDjZ52AgBvUQwA
   </chunk>
     <chunk x="0" y="28" width="16" height="14">
    eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew==
@@ -2692,83 +2686,87 @@ self.speed = 0.75</property>
     <object id="1792" template="pathpoints/WaspAttack.tx" class="PathPoint" x="216" y="544"/>
    </objectgroup>
    <objectgroup id="189" name="r17tick1">
-    <object id="1804" template="enemies/Trigger.tx" x="-40" y="432"/>
-    <object id="1805" template="enemies/TickFromAbove.tx" x="-48" y="576" rotation="0">
+    <object id="1804" template="enemies/Trigger.tx" x="-40" y="408"/>
+    <object id="1805" template="enemies/TickFromAbove.tx" x="-48" y="552" rotation="180">
      <properties>
-      <property name="circlingdist" type="float" value="40"/>
+      <property name="bitepoint" type="int" value="3"/>
+      <property name="circlingspeed" type="float" value="-3"/>
+      <property name="emergingtime" type="int" value="60"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="191" name="r17tick2">
-    <object id="1811" template="enemies/Trigger.tx" x="-40" y="400"/>
-    <object id="1812" template="enemies/TickFromAbove.tx" x="304" y="544" rotation="180">
+    <object id="1811" template="enemies/Trigger.tx" x="-40" y="368"/>
+    <object id="1812" template="enemies/TickFromAbove.tx" x="304" y="512" rotation="3.55271e-15">
      <properties>
-      <property name="circlingdist" type="float" value="50"/>
-      <property name="circlingspeed" type="float" value="-6"/>
+      <property name="bitepoint" type="int" value="1"/>
+      <property name="circlingspeed" type="float" value="3"/>
+      <property name="emergingtime" type="int" value="60"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="193" name="r17tick3">
-    <object id="1815" template="enemies/Trigger.tx" x="-40" y="368"/>
-    <object id="1816" template="enemies/TickFromAbove.tx" x="-48" y="512" rotation="0">
+    <object id="1815" template="enemies/Trigger.tx" x="-40" y="280"/>
+    <object id="1816" template="enemies/TickFromAbove.tx" x="-48" y="424" rotation="315">
      <properties>
-      <property name="circlingdist" type="float" value="60"/>
+      <property name="bitepoint" type="int" value="4"/>
+      <property name="emergingtime" type="int" value="60"/>
      </properties>
     </object>
    </objectgroup>
    <objectgroup id="192" name="r17tick4">
-    <object id="1813" template="enemies/Trigger.tx" x="-40" y="336"/>
-    <object id="1814" template="enemies/TickFromAbove.tx" x="304" y="480" rotation="180">
+    <object id="1813" template="enemies/Trigger.tx" x="-24" y="280"/>
+    <object id="1814" template="enemies/TickFromAbove.tx" x="304" y="424" rotation="135">
      <properties>
-      <property name="circlingdist" type="float" value="70"/>
-      <property name="circlingspeed" type="float" value="-6"/>
+      <property name="emergingtime" type="int" value="60"/>
      </properties>
     </object>
    </objectgroup>
-   <objectgroup id="198" name="r17_4ticks">
-    <object id="1825" template="enemies/Trigger.tx" x="-56" y="224"/>
-    <object id="1826" template="enemies/TickFromAbove.tx" x="128" y="160" rotation="90">
+   <objectgroup id="203" name="r17ticks5">
+    <object id="1839" template="enemies/Trigger.tx" x="-72" y="200"/>
+    <object id="1840" template="enemies/TickFromAbove.tx" x="320" y="328" rotation="120">
      <properties>
-      <property name="circlingdist" type="float" value="80"/>
-      <property name="maxnumbiters" type="int" value="2"/>
+      <property name="bitepoint" type="int" value="1"/>
+      <property name="circlingspeed" type="float" value="3"/>
+      <property name="emergingtime" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1829" template="enemies/TickFromAbove.tx" x="128" y="512" rotation="270">
+    <object id="1841" template="enemies/TickFromAbove.tx" x="-64" y="328" rotation="60">
      <properties>
-      <property name="circlingdist" type="float" value="80"/>
-      <property name="maxnumbiters" type="int" value="2"/>
+      <property name="bitepoint" type="int" value="3"/>
+      <property name="circlingspeed" type="float" value="-3"/>
+      <property name="emergingtime" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1827" template="enemies/TickFromAbove.tx" x="304" y="336" rotation="180">
-     <properties>
-      <property name="circlingdist" type="float" value="80"/>
-      <property name="maxnumbiters" type="int" value="2"/>
-     </properties>
-    </object>
-    <object id="1828" template="enemies/TickFromAbove.tx" x="-48" y="336" rotation="0">
-     <properties>
-      <property name="circlingdist" type="float" value="80"/>
-      <property name="maxnumbiters" type="int" value="2"/>
-     </properties>
-    </object>
-    <object id="1830" template="enemies/ReinforcedHoneyPot.tx" x="152" y="200"/>
-    <object id="1831" template="enemies/ReinforcedHoneyPot.tx" x="112" y="208"/>
    </objectgroup>
    <objectgroup id="194" name="r17powerup">
     <object id="1817" template="enemies/Trigger.tx" x="-80" y="432"/>
-    <object id="1818" template="enemies/HoneyPot.tx" x="88" y="424"/>
+    <object id="1818" template="enemies/HoneyPot.tx" x="104" y="424"/>
    </objectgroup>
    <objectgroup id="195" name="r17powerup2">
-    <object id="1819" template="enemies/Trigger.tx" x="-80" y="400"/>
-    <object id="1820" template="enemies/HoneyPot.tx" x="168" y="392"/>
+    <object id="1819" template="enemies/Trigger.tx" x="-80" y="392"/>
+    <object id="1820" template="enemies/HoneyPot.tx" x="152" y="384"/>
    </objectgroup>
    <objectgroup id="196" name="r17powerup3">
-    <object id="1821" template="enemies/Trigger.tx" x="-80" y="368"/>
-    <object id="1822" template="enemies/HoneyPot.tx" x="56" y="360"/>
+    <object id="1821" template="enemies/Trigger.tx" x="-80" y="320"/>
+    <object id="1822" template="enemies/HoneyPot.tx" x="72" y="312"/>
    </objectgroup>
    <objectgroup id="197" name="r17powerup4">
-    <object id="1823" template="enemies/Trigger.tx" x="-80" y="336"/>
-    <object id="1824" template="enemies/HoneyPot.tx" x="200" y="328"/>
+    <object id="1823" template="enemies/Trigger.tx" x="-96" y="320"/>
+    <object id="1824" template="enemies/HoneyPot.tx" x="184" y="312"/>
+   </objectgroup>
+   <objectgroup id="200" name="r17powerup5">
+    <object id="1833" template="enemies/Trigger.tx" x="-56" y="256"/>
+    <object id="1834" template="enemies/HoneyPot.tx" x="112" y="240"/>
+    <object id="1842" template="enemies/HoneyPot.tx" x="128" y="248"/>
+   </objectgroup>
+   <objectgroup id="201" name="r17powerup6">
+    <object id="1835" template="enemies/Trigger.tx" x="-136" y="200"/>
+    <object id="1836" template="enemies/HoneyPot.tx" x="48" y="184"/>
+   </objectgroup>
+   <objectgroup id="202" name="r17powerup7">
+    <object id="1837" template="enemies/Trigger.tx" x="-16" y="216"/>
+    <object id="1838" template="enemies/HoneyPot.tx" x="216" y="200"/>
    </objectgroup>
    <objectgroup id="76" name="lastroomboss">
     <object id="863" class="Trigger" x="-16" y="0">
