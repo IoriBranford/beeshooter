@@ -62,31 +62,31 @@ local BiteIndexLevelReqs = {
 }
 
 local function canBite(self, biteindex)
-    if not self:isSpriteOnScreen() then
-        return false
-    end
+    -- if not self:isSpriteOnScreen() then
+    --     return false
+    -- end
     local player = self.player
     local biters = player.biters
     local biter = biters[biteindex]
     if biter and not biter:willDisappear() then
         return false
     end
-    local nbiters = 0
-    for _, b in pairs(biters) do
-        if not b:willDisappear() then
-            nbiters = nbiters + 1
-        end
-    end
-    local maxnumbiters = self.maxnumbiters or 1
-    if nbiters >= maxnumbiters then
-        return false
-    end
-    local playerweapon, playerpower = player.weapon, player.power
-    local mindifficulty = BiteIndexLevelReqs[playerweapon][playerpower][biteindex] or math.huge
-    local difficulty = self.difficulty or 1
-    if mindifficulty > difficulty then
-        return false
-    end
+    -- local nbiters = 0
+    -- for _, b in pairs(biters) do
+    --     if not b:willDisappear() then
+    --         nbiters = nbiters + 1
+    --     end
+    -- end
+    -- local maxnumbiters = self.maxnumbiters or 1
+    -- if nbiters >= maxnumbiters then
+    --     return false
+    -- end
+    -- local playerweapon, playerpower = player.weapon, player.power
+    -- local mindifficulty = BiteIndexLevelReqs[playerweapon][playerpower][biteindex] or math.huge
+    -- local difficulty = self.difficulty or 1
+    -- if mindifficulty > difficulty then
+    --     return false
+    -- end
     return true
 end
 
@@ -103,11 +103,11 @@ function Tick:Tick()
     local player = self.player
     player.biters = player.biters or setmetatable({}, WeakTable)
     local biters = player.biters
-    local anglefromplayer = 0
-    local distfromplayer = math.floor(math.dist(player.x, player.y, self.x, self.y))
-    if distfromplayer > 0 then
-        anglefromplayer = math.atan2(self.y - player.y, self.x - player.x)
-    end
+    local anglefromplayer = self.rotation + pi --0
+    local distfromplayer = self.circlingdist or 64 --math.floor(math.dist(player.x, player.y, self.x, self.y))
+    -- if distfromplayer > 0 then
+    --     anglefromplayer = math.atan2(self.y - player.y, self.x - player.x)
+    -- end
     self.scalexy = math.max(self.scalex, self.scaley)
     self.scalex, self.scaley = 1, 1
     local circlingspeed = math.rad(self.circlingspeed or 3)
@@ -146,11 +146,13 @@ function Tick:Tick()
     while not biteangle and timer < maxcirclingtime do
         local nextanglefromplayer = anglefromplayer + circlingspeed
         local nextbiteindex = ((math.floor(nextanglefromplayer/(pi/4)) % 8) + 8) % 8
-        if nextbiteindex ~= biteindex then
-            if canBite(self, nextbiteindex) then
-                self.biteindex = nextbiteindex
-                biters[nextbiteindex] = self
-                biteangle = nextbiteindex * pi/4
+        local wantedbiteindex = self.bitepoint or nextbiteindex
+        if nextbiteindex ~= biteindex
+        and nextbiteindex == wantedbiteindex then
+            if canBite(self, wantedbiteindex) then
+                self.biteindex = wantedbiteindex
+                biters[wantedbiteindex] = self
+                biteangle = wantedbiteindex * pi/4
                 nextanglefromplayer = biteangle
             end
         end
