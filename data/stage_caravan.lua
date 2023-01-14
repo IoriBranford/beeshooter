@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 204,
-  nextobjectid = 1843,
+  nextlayerid = 210,
+  nextobjectid = 1862,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -17838,11 +17838,11 @@ return {
                   visible = true,
                   properties = {
                     ["bitepoint"] = 5,
-                    ["circlingdist"] = 64,
-                    ["circlingspeed"] = 3,
+                    ["circlingdist"] = 96,
+                    ["circlingspeed"] = 6,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["emergingtime"] = 60,
+                    ["emergingtime"] = 90,
                     ["z"] = 5
                   }
                 }
@@ -17889,11 +17889,11 @@ return {
                   visible = true,
                   properties = {
                     ["bitepoint"] = 7,
-                    ["circlingdist"] = 64,
-                    ["circlingspeed"] = -3,
+                    ["circlingdist"] = 96,
+                    ["circlingspeed"] = -6,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["emergingtime"] = 60,
+                    ["emergingtime"] = 90,
                     ["z"] = 5
                   }
                 }
@@ -17940,7 +17940,7 @@ return {
                   visible = true,
                   properties = {
                     ["bitepoint"] = 4,
-                    ["circlingdist"] = 64,
+                    ["circlingdist"] = 80,
                     ["circlingspeed"] = 6,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
@@ -17991,7 +17991,7 @@ return {
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
-                    ["circlingdist"] = 64,
+                    ["circlingdist"] = 80,
                     ["circlingspeed"] = 6,
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
@@ -18318,6 +18318,225 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 204,
+              name = "r18tick",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1843,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 216,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1844,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 472,
+                  y = 184,
+                  width = 72,
+                  height = 96,
+                  rotation = 180,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 1,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1845,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 184,
+                  width = 72,
+                  height = 96,
+                  rotation = 0,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 5,
+                    ["circlingdist"] = 64,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 205,
+              name = "r18tick2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1846,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 192,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1847,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 448.167,
+                  y = -8,
+                  width = 72,
+                  height = 96,
+                  rotation = 135,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 0,
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1848,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 352,
+                  y = 88.1665,
+                  width = 72,
+                  height = 96,
+                  rotation = 315,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 4,
+                    ["circlingdist"] = 80,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 206,
+              name = "r18tick3",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1849,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 168,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {}
+                },
+                {
+                  id = 1850,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 336,
+                  y = -136,
+                  width = 72,
+                  height = 96,
+                  rotation = 90,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 7,
+                    ["circlingdist"] = 96,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                },
+                {
+                  id = 1851,
+                  name = "",
+                  class = "Tick",
+                  shape = "rectangle",
+                  x = 336,
+                  y = 1.42109e-14,
+                  width = 72,
+                  height = 96,
+                  rotation = 270,
+                  gid = 572,
+                  visible = true,
+                  properties = {
+                    ["bitepoint"] = 3,
+                    ["circlingdist"] = 96,
+                    ["circlingspeed"] = 6,
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["emergingtime"] = 60,
+                    ["z"] = 5
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 201,
               name = "r18powerup2",
               class = "",
@@ -18334,8 +18553,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -136,
-                  y = 96,
+                  x = -152,
+                  y = 208,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18345,14 +18564,14 @@ return {
                 {
                   id = 1836,
                   name = "",
-                  class = "HoneyPot",
+                  class = "ReinforcedHoneyPot",
                   shape = "rectangle",
-                  x = 48,
-                  y = 80,
+                  x = 120,
+                  y = 192,
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 490,
+                  gid = 492,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -18379,8 +18598,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 112,
+                  x = -184,
+                  y = 144,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18390,14 +18609,14 @@ return {
                 {
                   id = 1838,
                   name = "",
-                  class = "HoneyPot",
+                  class = "ReinforcedHoneyPot",
                   shape = "rectangle",
-                  x = 216,
-                  y = 96,
+                  x = 136,
+                  y = 128,
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 490,
+                  gid = 492,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -18431,6 +18650,22 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {}
+                },
+                {
+                  id = 1861,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 128,
+                  y = -16,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
                 }
               }
             },
