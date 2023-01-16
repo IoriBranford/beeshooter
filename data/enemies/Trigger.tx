@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object type="Trigger">
+ <object class="Trigger">
+  <properties>
+   <property name="action" value="spawnCharacters"/>
+  </properties>
   <point/>
  </object>
 </template>

@@ -3211,7 +3211,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 416,
@@ -3527,7 +3529,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 435,
@@ -3913,7 +3917,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -4443,7 +4449,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 81,
@@ -4511,7 +4519,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -4700,7 +4710,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 108,
@@ -5059,7 +5071,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 141,
@@ -5258,7 +5272,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 447,
@@ -5471,7 +5487,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 101,
@@ -5648,7 +5666,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 396,
@@ -5871,7 +5891,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -5900,7 +5922,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 229,
@@ -6057,7 +6081,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 386,
@@ -6503,7 +6529,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -6572,7 +6600,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 177,
@@ -6901,7 +6931,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 472,
@@ -7028,7 +7060,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 281,
@@ -7123,7 +7157,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 293,
@@ -7252,7 +7288,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 338,
@@ -7755,7 +7793,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -7784,7 +7824,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 511,
@@ -8047,7 +8089,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 501,
@@ -8272,7 +8316,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 478,
@@ -8333,7 +8379,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 374,
@@ -8432,7 +8480,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 363,
@@ -8779,7 +8829,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -8888,7 +8940,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1030,
@@ -9082,7 +9136,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1046,
@@ -9372,7 +9428,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1001,
@@ -9450,7 +9508,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1103,
@@ -9528,7 +9588,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1107,
@@ -9606,7 +9668,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1123,
@@ -9684,7 +9748,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1111,
@@ -9762,7 +9828,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1115,
@@ -9840,7 +9908,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1119,
@@ -9918,7 +9988,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1127,
@@ -9980,7 +10052,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1071,
@@ -10221,7 +10295,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1062,
@@ -10498,7 +10574,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1028,
@@ -10578,7 +10656,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1132,
@@ -10658,7 +10738,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1136,
@@ -10738,7 +10820,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1140,
@@ -10818,7 +10902,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1144,
@@ -10898,7 +10984,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1148,
@@ -10978,7 +11066,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1156,
@@ -11058,7 +11148,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1160,
@@ -11138,7 +11230,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1164,
@@ -11218,7 +11312,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1168,
@@ -11298,7 +11394,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1172,
@@ -11358,7 +11456,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -11387,7 +11487,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1226,
@@ -11501,7 +11603,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1220,
@@ -11615,7 +11719,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1214,
@@ -11729,7 +11835,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1208,
@@ -11843,7 +11951,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1202,
@@ -11957,7 +12067,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1196,
@@ -12071,7 +12183,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1190,
@@ -12185,7 +12299,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1184,
@@ -12299,7 +12415,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1178,
@@ -12413,7 +12531,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1250,
@@ -12527,7 +12647,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1244,
@@ -12641,7 +12763,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1238,
@@ -12755,7 +12879,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1232,
@@ -12869,7 +12995,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1174,
@@ -12914,7 +13042,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1257,
@@ -13325,7 +13455,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1279,
@@ -13437,7 +13569,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1674,
@@ -13595,7 +13729,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1681,
@@ -13753,7 +13889,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1688,
@@ -13911,7 +14049,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1698,
@@ -14069,7 +14209,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1277,
@@ -14300,7 +14442,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1303,
@@ -14433,7 +14577,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1348,
@@ -14566,7 +14712,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1360,
@@ -14699,7 +14847,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1341,
@@ -14838,7 +14988,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1335,
@@ -14977,7 +15129,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1399,
@@ -15116,7 +15270,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1393,
@@ -15255,7 +15411,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1369,
@@ -15394,7 +15552,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1375,
@@ -15533,7 +15693,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1329,
@@ -15672,7 +15834,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1405,
@@ -15717,7 +15881,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1459,
@@ -15850,7 +16016,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1632,
@@ -15911,7 +16079,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1467,
@@ -16149,7 +16319,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1634,
@@ -16194,7 +16366,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1517,
@@ -16271,7 +16445,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1646,
@@ -16410,7 +16586,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1667,
@@ -16549,7 +16727,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1653,
@@ -16688,7 +16868,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1660,
@@ -16827,7 +17009,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1706,
@@ -17026,7 +17210,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1728,
@@ -17225,7 +17411,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1750,
@@ -17424,7 +17612,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1761,
@@ -17623,7 +17813,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1783,
@@ -17822,7 +18014,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1805,
@@ -17873,7 +18067,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1812,
@@ -17924,7 +18120,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1816,
@@ -17975,7 +18173,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1814,
@@ -18026,7 +18226,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1840,
@@ -18099,7 +18301,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1818,
@@ -18144,7 +18348,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1820,
@@ -18189,7 +18395,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1822,
@@ -18234,7 +18442,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1824,
@@ -18279,7 +18489,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1834,
@@ -18340,7 +18552,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1844,
@@ -18413,7 +18627,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1847,
@@ -18486,7 +18702,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1850,
@@ -18559,7 +18777,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1836,
@@ -18604,7 +18824,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1838,
@@ -18694,7 +18916,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -18723,7 +18947,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 551,
@@ -18837,7 +19063,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 557,
@@ -18951,7 +19179,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 570,
@@ -19065,7 +19295,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 564,
@@ -19179,7 +19411,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 582,
@@ -19293,7 +19527,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 576,
@@ -19407,7 +19643,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 612,
@@ -19521,7 +19759,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 606,
@@ -19635,7 +19875,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 600,
@@ -19765,7 +20007,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -19794,7 +20038,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 618,
@@ -19908,7 +20154,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 630,
@@ -20022,7 +20270,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 624,
@@ -20136,7 +20386,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 636,
@@ -20508,7 +20760,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -20683,7 +20937,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -20858,7 +21114,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 854,
@@ -21579,7 +21837,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 }
               }
             },
@@ -21608,7 +21868,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 759,
@@ -22153,7 +22415,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 662,
@@ -23214,7 +23478,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 589,
@@ -23293,7 +23559,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 654,
@@ -23370,7 +23638,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 644,
@@ -23437,7 +23707,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 646,
@@ -23528,7 +23800,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 650,
@@ -23596,7 +23870,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 652,
@@ -23648,7 +23924,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1546,
@@ -23746,7 +24024,9 @@ return {
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
                 },
                 {
                   id = 1447,
