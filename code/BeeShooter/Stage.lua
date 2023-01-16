@@ -7,6 +7,7 @@ local PathPoint    = require "Object.PathPoint"
 local Path         = require "Object.Path"
 local Config       = require "System.Config"
 local Database     = require "Data.Database"
+local Trigger      = require "BeeShooter.Trigger"
 local PlayerShip
 
 local t_sort = table.sort
@@ -37,6 +38,7 @@ local function readMapObjectLayer(objectlayer)
     for i, object in ipairs(objectlayer) do
         local objecttype = object.type
         if objecttype == "Trigger" then
+            Trigger:cast(object)
             objectlayer.trigger = object
         elseif objecttype == "Path" then
             paths = paths or {}
@@ -47,8 +49,8 @@ local function readMapObjectLayer(objectlayer)
         else
             characters = characters or {}
             characters[#characters+1] = object
-            object.layer = objectlayer
         end
+        object.layer = objectlayer
     end
     if paths and pointdatas then
         for _, pointdata in ipairs(pointdatas) do
@@ -82,7 +84,7 @@ local function doFlyingSpawn(flyingspawn)
     Stage.addCharacters(flyingspawn.characters)
 end
 
-local function doStageSpawn(stagespawn)
+function Stage.doStageSpawn(stagespawn)
     local stagey = stage.y
     local characters = stagespawn.characters
     for _, character in ipairs(characters) do
@@ -136,11 +138,10 @@ function Stage.init(startpoint)
             end
             for _, stagespawn in ipairs(stagespawns) do
                 local trigger = stagespawn.trigger
-                local characters = stagespawn.characters
-                if trigger and characters then
+                if trigger then
                     local timelinepos = -stagey - trigger.y
                     if timelinepos >= 0 then
-                        stagespawntimeline:addEvent(timelinepos, doStageSpawn, stagespawn)
+                        stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
                     end
                 end
             end
