@@ -34,12 +34,13 @@ local gametimer
 local gametimerstate
 
 local function readMapObjectLayer(objectlayer)
-    local paths, pointdatas, characters
+    local triggers, paths, pointdatas, characters
     for i, object in ipairs(objectlayer) do
-        local objecttype = object.type
+        local objecttype = object.type or ""
         if objecttype == "Trigger" then
             Trigger:cast(object)
-            objectlayer.trigger = object
+            triggers = triggers or {}
+            triggers[#triggers+1] = object
         elseif objecttype == "Path" then
             paths = paths or {}
             paths[#paths+1] = object
@@ -70,6 +71,7 @@ local function readMapObjectLayer(objectlayer)
             end
         end
     end
+    objectlayer.triggers = triggers
     objectlayer.paths = paths
     objectlayer.characters = characters
     objectlayer.objects = nil
@@ -133,15 +135,19 @@ function Stage.init(startpoint)
                 readMapObjectLayer(stagespawn)
             end
             local startspawn = startpoint and stagespawns[startpoint]
-            if startspawn and startspawn.trigger then
-                stagey = -startspawn.trigger.y - 1
+            if startspawn and startspawn.triggers then
+                for _, trigger in ipairs(startspawn.triggers) do
+                    stagey = math.max(stagey, -trigger.y - 1)
+                end
             end
             for _, stagespawn in ipairs(stagespawns) do
-                local trigger = stagespawn.trigger
-                if trigger then
-                    local timelinepos = -stagey - trigger.y
-                    if timelinepos >= 0 then
-                        stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
+                local triggers = stagespawn.triggers
+                if triggers then
+                    for _, trigger in ipairs(triggers) do
+                        local timelinepos = -stagey - trigger.y
+                        if timelinepos >= 0 then
+                            stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
+                        end
                     end
                 end
             end
