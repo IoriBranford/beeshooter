@@ -18865,13 +18865,15 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
+                  x = -32,
                   y = 0,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["action"] = "stopStageScroll"
+                  }
                 },
                 {
                   id = 1861,
