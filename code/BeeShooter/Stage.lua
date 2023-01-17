@@ -87,8 +87,11 @@ local function doFlyingSpawn(flyingspawn)
 end
 
 function Stage.doStageSpawn(stagespawn)
-    local stagey = stage.y
     local characters = stagespawn.characters
+    if not characters then
+        return
+    end
+    local stagey = stage.y
     for _, character in ipairs(characters) do
         character.y = character.y + stagey
     end
