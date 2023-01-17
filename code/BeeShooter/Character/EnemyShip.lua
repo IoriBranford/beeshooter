@@ -51,6 +51,21 @@ local function meleeAttack(self, damage)
     end
 end
 
+local function doPointData(self, pointdata)
+    self.pathpoint = pointdata
+    local action = self[pointdata.action]
+    if type(action) == "function" then
+        local actiontype = pointdata.actiontype or "function"
+        if actiontype == "addcoroutine" then
+            self:addCoroutine(action)
+        else
+            action(self)
+        end
+    else
+        SubScript.start(self, pointdata.subscript)
+    end
+end
+
 local function movePath(self, path, parent, meleedamage)
     if not path then
         return
@@ -71,20 +86,13 @@ local function movePath(self, path, parent, meleedamage)
         until self.x == destx
         and self.y - (parent and parent.y or 0) == desty
 
-        local pointdata = pointsdata and pointsdata[i]
-        if pointdata then
-            self.pathpoint = pointdata
-            local action = self[pointdata.action]
-            if type(action) == "function" then
-                local actiontype = pointdata.actiontype or "function"
-                if actiontype == "addcoroutine" then
-                    self:addCoroutine(action)
-                else
-                    action(self)
-                end
-            else
-                SubScript.start(self, pointdata.subscript)
+        local numpointdata = pointsdata and pointsdata[i-1] or 0
+        if numpointdata > 1 then
+            for _, pointdata in ipairs(pointsdata[i]) do
+                doPointData(self, pointdata)
             end
+        elseif numpointdata == 1 then
+            doPointData(self, pointsdata[i])
         end
     end
 end

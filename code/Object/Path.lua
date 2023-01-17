@@ -139,22 +139,43 @@ function Path.getPathPointDistSq(path, i, x, y)
 end
 
 function Path.addPointData(path, pointdata)
-    local pointsdata
+    local pointsdata = path.pointsdata
     local points = path.points
     local x, y = pointdata.x, pointdata.y
     for i = 2, #points, 2 do
         if points[i-1] == x and points[i] == y then
-            pointsdata = path.pointsdata or {}
-            path.pointsdata = pointsdata
-            pointsdata[i-1] = pointdata
-            pointsdata[i] = pointdata
+            if not pointsdata then
+                pointsdata = {}
+                path.pointsdata = pointsdata
+                for i = 2, #points, 2 do
+                    pointsdata[i-1] = 0
+                    pointsdata[i] = false
+                end
+            end
+            local numdatas = pointsdata[i-1] + 1
+            pointsdata[i-1] = numdatas
+            if numdatas == 1 then
+                pointsdata[i] = pointdata
+            elseif numdatas == 2 then
+                pointsdata[i] = {pointsdata[i], pointdata}
+            else
+                pointsdata[i][#pointsdata[i]+1] = pointdata
+            end
             return true
         end
     end
 end
 
-function Path.getPointData(path, i)
-    return path.pointsdata and path.pointsdata[i]
+function Path.getPointData(path, i, j)
+    local pointsdata = path.pointsdata
+    if not pointsdata then
+        return
+    end
+    local numdatas = pointsdata[i-1]
+    if numdatas > 1 then
+        return pointsdata[i][j]
+    end
+    return pointsdata[i]
 end
 
 function Path.draw(path)
