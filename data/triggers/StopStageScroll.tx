@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="Trigger">
+  <properties>
+   <property name="action" value="stopStageScroll"/>
+  </properties>
+  <point/>
+ </object>
+</template>
