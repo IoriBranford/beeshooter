@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 8,
-  nextobjectid = 19,
+  nextlayerid = 9,
+  nextobjectid = 20,
   properties = {},
   tilesets = {
     {
@@ -193,6 +193,25 @@ return {
               pixelsize = 8,
               wrap = true,
               color = { 255, 255, 255 },
+              properties = {}
+            },
+            {
+              id = 19,
+              name = "bonus",
+              class = "BeeShooter.Gui.BonusText",
+              shape = "text",
+              x = 8,
+              y = 24,
+              width = 112,
+              height = 16,
+              rotation = 0,
+              visible = true,
+              text = "SECRET BONUS!\n25000",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              halign = "right",
               properties = {}
             }
           }
