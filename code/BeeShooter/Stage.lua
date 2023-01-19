@@ -8,6 +8,7 @@ local Path         = require "Object.Path"
 local Config       = require "System.Config"
 local Database     = require "Data.Database"
 local Trigger      = require "BeeShooter.Trigger"
+local CharacterGroup        = require "BeeShooter.Character.Group"
 local PlayerShip
 
 local t_sort = table.sort
@@ -48,8 +49,11 @@ local function readMapObjectLayer(objectlayer)
             pointdatas = pointdatas or {}
             pointdatas[#pointdatas+1] = object
         else
-            characters = characters or {}
-            characters[#characters+1] = object
+            characters = characters or CharacterGroup()
+            characters.allenemiesdefeatedbonus = objectlayer.allenemiesdefeatedbonus
+            characters.allenemiesdefeatedbonuswindow = objectlayer.allenemiesdefeatedbonuswindow
+            object.charactergroup = characters
+            characters:add(object)
         end
         object.layer = objectlayer
     end

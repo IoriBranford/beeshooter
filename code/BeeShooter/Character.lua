@@ -193,6 +193,7 @@ end
 
 ---@param self Character
 function Character:defaultDefeat()
+    self.defeatedage = self.age
     Audio.play(self.defeatsound)
     self:spawnTypes(self.defeatdrops)
     self:giveDefeatPoints()
