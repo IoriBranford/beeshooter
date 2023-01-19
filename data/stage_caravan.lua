@@ -14196,7 +14196,10 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["allenemiesdefeatedbonus"] = 25000,
+                ["allenemiesdefeatedbonuswindow"] = 30
+              },
               objects = {
                 {
                   id = 1278,
