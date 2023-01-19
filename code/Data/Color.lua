@@ -54,4 +54,12 @@ function Color.unpack(color)
     return 1, 1, 1, 1
 end
 
+function Color.fromHSV(h, s, v)
+    local function f(n)
+        local k = (n + h*3/math.pi) % 6
+        return v - v*s*math.max(0, math.min(k, 4-k, 1))
+    end
+    return f(5), f(3), f(1)
+end
+
 return Color
