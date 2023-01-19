@@ -1,2 +1,2 @@
-type,fastsound,slowsound,changeweaponsound,lifesound,hurtsound
-Jenny,sounds/fast.mp3,sounds/slow.mp3,sounds/changeweapon.mp3,sounds/life.mp3,sounds/playerhurt.mp3
+type,fastsound,slowsound,changeweaponsound,lifesound,hurtsound,bonussound
+Jenny,sounds/fast.mp3,sounds/slow.mp3,sounds/changeweapon.mp3,sounds/life.mp3,sounds/playerhurt.mp3,sounds/bonus.mp3
