@@ -248,6 +248,12 @@ function PlayerShip:scorePoints(points)
     self.score = newscore
 end
 
+function PlayerShip:giveSecretBonus(points)
+    Audio.play(self.bonussound)
+    self:scorePoints(points)
+    self.bonus = points
+end
+
 function PlayerShip:incPowerLevel()
     local powerupinvincibletime = self.powerupinvincibletime or 60
     if self.invincibletime < powerupinvincibletime then
@@ -287,6 +293,13 @@ function PlayerShip:updateHud(hud)
     elseif weapon == "B" then
         hud.weapons:selectButton(2)
     end
+
+    local bonus = self.bonus
+    if bonus then
+        self.bonus = nil
+        hud.status.bonus:start(bonus)
+    end
+    hud.status.bonus:fixedupdate()
 end
 
 return PlayerShip
