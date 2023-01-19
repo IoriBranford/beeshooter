@@ -582,4 +582,18 @@ function EnemyShip:DamageFlashRed()
     end
 end
 
+function EnemyShip:defeatWithAllEnemyBonus()
+    self:defaultDefeat()
+    local group = self.charactergroup
+    local bonus = group and group.allenemiesdefeatedbonus or 0
+    if bonus <= 0 then
+        return
+    end
+    local window = group.allenemiesdefeatedbonuswindow
+    if group:checkAllEnemyShipsDefeatedInWindow(window) then
+        self.player:giveSecretBonus(bonus)
+        group.allenemiesdefeatedbonus = nil
+    end
+end
+
 return EnemyShip
