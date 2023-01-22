@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 14,
-  nextobjectid = 48,
+  nextobjectid = 49,
   properties = {},
   tilesets = {
     {
@@ -90,6 +90,35 @@ return {
           }
         }
       }
+    },
+    {
+      name = "MoveCursor",
+      firstgid = 9,
+      class = "",
+      tilewidth = 8,
+      tileheight = 8,
+      spacing = 0,
+      margin = 0,
+      columns = 1,
+      image = "tilesets/MoveCursor.png",
+      imagewidth = 8,
+      imageheight = 8,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 8,
+        height = 8
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 1,
+      tiles = {}
     }
   },
   layers = {
@@ -628,6 +657,20 @@ return {
               width = 64,
               height = 32,
               rotation = 0,
+              visible = true,
+              properties = {}
+            },
+            {
+              id = 48,
+              name = "",
+              class = "",
+              shape = "rectangle",
+              x = 0,
+              y = 0,
+              width = 8,
+              height = 8,
+              rotation = 0,
+              gid = 9,
               visible = true,
               properties = {}
             }

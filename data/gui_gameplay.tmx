@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="48">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="49">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/Weapons.tsx"/>
+ <tileset firstgid="9" source="tilesets/MoveCursor.tsx"/>
  <group id="7" name="hud">
   <objectgroup draworder="index" id="2" name="status">
    <properties>
@@ -124,6 +125,7 @@ SECONDARY</text>
     <text fontfamily="Unifont" wrap="1" color="#ffffff" halign="center" valign="center">MOVE</text>
    </object>
    <object id="40" name="pause" x="96" y="240" width="64" height="32"/>
+   <object id="48" gid="9" x="0" y="0" width="8" height="8"/>
   </objectgroup>
   <objectgroup draworder="index" id="11" name="status">
    <properties>
