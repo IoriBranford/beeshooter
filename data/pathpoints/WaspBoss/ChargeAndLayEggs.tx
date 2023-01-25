@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="ChargeAndLayEggs" class="PathPoint">
+  <properties>
+   <property name="action" value="ChargeAndLayEggs"/>
+   <property name="actiontype" value="setcoroutines"/>
+  </properties>
+  <point/>
+ </object>
+</template>

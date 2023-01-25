@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="ChooseSweepPath" class="PathPoint">
+  <properties>
+   <property name="action" value="ChooseSweepPath"/>
+   <property name="actiontype" value="setcoroutines"/>
+   <property name="horizontalpath" type="object" value="0"/>
+   <property name="verticalpath" type="object" value="0"/>
+  </properties>
+  <point/>
+ </object>
+</template>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="PathPoint">
+  <properties>
+   <property name="action" value="ChooseEntryPath"/>
+   <property name="actiontype" value="setcoroutines"/>
+   <property name="leftpath" type="object" value="1863"/>
+   <property name="rightpath" type="object" value="1864"/>
+  </properties>
+  <point/>
+ </object>
+</template>
