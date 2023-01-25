@@ -30,7 +30,7 @@ function EnemyShip:waitForOnscreenState(onscreenstate)
 end
 local waitForOnscreenState = EnemyShip.waitForOnscreenState
 
-local function meleeAttack(self, damage)
+function EnemyShip:meleeAttack(damage)
     if not self.collidable then
         return
     end
@@ -50,6 +50,7 @@ local function meleeAttack(self, damage)
         })
     end
 end
+local meleeAttack = EnemyShip.meleeAttack
 
 local function doPointData(self, pointdata)
     self.pathpoint = pointdata
@@ -58,6 +59,8 @@ local function doPointData(self, pointdata)
         local actiontype = pointdata.actiontype or "function"
         if actiontype == "addcoroutine" then
             self:addCoroutine(action)
+        elseif actiontype == "setcoroutines" then
+            self:setNextCoroutines(action)
         else
             action(self)
         end
@@ -101,9 +104,10 @@ local function walkPath(self, path)
     movePath(self, path, self.stage)
 end
 
-local function flyPath(self, path, meleedamage)
+function EnemyShip:flyPath(path, meleedamage)
     movePath(self, path, path, meleedamage)
 end
+local flyPath = EnemyShip.flyPath
 
 function EnemyShip:PathPoint_Rotate()
     local pathpoint = self.pathpoint
