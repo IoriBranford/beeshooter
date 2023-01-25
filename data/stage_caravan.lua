@@ -19305,8 +19305,8 @@ return {
                 },
                 {
                   id = 1884,
-                  name = "",
-                  class = "PathPoint",
+                  name = "startpoint",
+                  class = "",
                   shape = "point",
                   x = 128,
                   y = -48,
@@ -19315,8 +19315,6 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChooseEntryPath",
-                    ["actiontype"] = "setcoroutines",
                     ["leftpath"] = { id = 1863 },
                     ["rightpath"] = { id = 1864 }
                   }

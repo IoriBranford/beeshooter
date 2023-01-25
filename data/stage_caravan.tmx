@@ -2894,7 +2894,13 @@ self.speed = 0.75</property>
     </object>
     <object id="1880" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="16"/>
     <object id="1883" template="triggers/SpawnCharacters.tx" x="-16" y="0"/>
-    <object id="1884" template="pathpoints/WaspBoss/ChooseEntryPath.tx" class="PathPoint" x="128" y="-48"/>
+    <object id="1884" name="startpoint" x="128" y="-48">
+     <properties>
+      <property name="leftpath" type="object" value="1863"/>
+      <property name="rightpath" type="object" value="1864"/>
+     </properties>
+     <point/>
+    </object>
    </objectgroup>
    <objectgroup id="49" name="teststart">
     <object id="562" template="triggers/SpawnCharacters.tx" x="-16" y="-224"/>

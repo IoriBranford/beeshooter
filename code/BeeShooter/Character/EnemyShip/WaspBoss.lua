@@ -7,12 +7,12 @@ local class = require "pl.class"
 local WaspBoss = class(EnemyShip)
 
 function WaspBoss:ChooseEntryPath()
-    local pathpoint = self.pathpoint
+    local pathpoint = self.startpoint
     local leftpath = pathpoint.leftpath
     local rightpath = pathpoint.rightpath
     local player = self.player
     local path, face
-    if player.x < 0 then
+    if player.x < self.x then
         path, face = rightpath, -1
     else
         path, face = leftpath, 1
@@ -46,7 +46,7 @@ function WaspBoss:ChargeAndLayEggs()
     end
     self.collidable = false
     self.sprite:setHidden(true)
-    local dest = self.entrypoint
+    local dest = self.startpoint
     repeat
         local velx, vely = Movement.getVelocity_speed(self.x, self.y, dest.x, dest.y, self.speed or 1)
         Body.setVelocity(self, velx, vely)
@@ -54,6 +54,7 @@ function WaspBoss:ChargeAndLayEggs()
     until self.x == dest.x and self.y == dest.y
     self.sprite:setHidden(false)
     self.collidable = true
+    self:setNextCoroutines(self.ChooseEntryPath)
 end
 
 return WaspBoss
