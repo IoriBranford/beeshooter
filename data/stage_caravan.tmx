@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="210" nextobjectid="1862">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="210" nextobjectid="1885">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -2824,9 +2824,77 @@ self.speed = 0.75</property>
     <object id="1837" template="triggers/SpawnCharacters.tx" x="-184" y="144"/>
     <object id="1838" template="enemies/ReinforcedHoneyPot.tx" x="136" y="128"/>
    </objectgroup>
-   <objectgroup id="76" name="lastroomboss">
+   <objectgroup id="76" name="waspboss">
     <object id="863" template="triggers/StopStageScroll.tx" class="Trigger" x="-32" y="0"/>
-    <object id="1861" template="enemies/HoneyPot.tx" x="128" y="-16"/>
+    <object id="1862" template="enemies/WaspBoss.tx" x="128" y="-48">
+     <properties>
+      <property name="startpoint" type="object" value="1884"/>
+     </properties>
+    </object>
+    <object id="1863" class="Path" x="-80" y="-96">
+     <polyline points="208,48 192,136 160,152 128,136 112,112"/>
+    </object>
+    <object id="1864" class="Path" x="-32" y="48">
+     <polyline points="160,-96 176,-8 208,8 240,-8 256,-32"/>
+    </object>
+    <object id="1868" class="Path" x="32" y="16">
+     <polyline points="0,0 0,8 0,192"/>
+    </object>
+    <object id="1871" class="Path" x="224" y="16">
+     <polyline points="0,0 0,8 0,192"/>
+    </object>
+    <object id="1869" class="Path" x="32" y="16">
+     <polyline points="0,0 8,0 208,0"/>
+    </object>
+    <object id="1870" class="Path" x="224" y="16">
+     <polyline points="0,0 -8,0 -208,0"/>
+    </object>
+    <object id="1872" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="24">
+     <properties>
+      <property name="angle" type="float" value="45"/>
+      <property name="burstinterval" type="int" value="3"/>
+      <property name="burstshots" type="int" value="10"/>
+     </properties>
+    </object>
+    <object id="1875" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="16">
+     <properties>
+      <property name="angle" type="float" value="45"/>
+      <property name="burstinterval" type="int" value="3"/>
+      <property name="burstshots" type="int" value="10"/>
+     </properties>
+    </object>
+    <object id="1873" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="24">
+     <properties>
+      <property name="angle" type="float" value="135"/>
+      <property name="burstinterval" type="int" value="3"/>
+      <property name="burstshots" type="int" value="10"/>
+     </properties>
+    </object>
+    <object id="1874" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="16">
+     <properties>
+      <property name="angle" type="float" value="135"/>
+      <property name="burstinterval" type="int" value="3"/>
+      <property name="burstshots" type="int" value="10"/>
+     </properties>
+    </object>
+    <object id="1876" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="32" y="16">
+     <properties>
+      <property name="horizontalpath" type="object" value="1869"/>
+      <property name="verticalpath" type="object" value="1868"/>
+     </properties>
+    </object>
+    <object id="1879" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="224" y="208"/>
+    <object id="1881" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="32" y="208"/>
+    <object id="1882" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="16" y="16"/>
+    <object id="1878" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="224" y="16">
+     <properties>
+      <property name="horizontalpath" type="object" value="1870"/>
+      <property name="verticalpath" type="object" value="1871"/>
+     </properties>
+    </object>
+    <object id="1880" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="16"/>
+    <object id="1883" template="triggers/SpawnCharacters.tx" x="-16" y="0"/>
+    <object id="1884" template="pathpoints/WaspBoss/ChooseEntryPath.tx" class="PathPoint" x="128" y="-48"/>
    </objectgroup>
    <objectgroup id="49" name="teststart">
     <object id="562" template="triggers/SpawnCharacters.tx" x="-16" y="-224"/>

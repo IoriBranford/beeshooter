@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 210,
-  nextobjectid = 1862,
+  nextobjectid = 1885,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2297,6 +2297,95 @@ return {
             {
               tileid = 2,
               duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "WaspBoss",
+      firstgid = 577,
+      class = "",
+      tilewidth = 100,
+      tileheight = 100,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspBoss.png",
+      imagewidth = 300,
+      imageheight = 100,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 100,
+        height = 100
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 25,
+                y = 40,
+                width = 50,
+                height = 25,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "sting",
+                class = "",
+                shape = "point",
+                x = 50,
+                y = 100,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
             }
           }
         }
@@ -18853,7 +18942,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 76,
-              name = "lastroomboss",
+              name = "waspboss",
               class = "",
               visible = true,
               opacity = 1,
@@ -18879,19 +18968,357 @@ return {
                   }
                 },
                 {
-                  id = 1861,
+                  id = 1862,
                   name = "",
-                  class = "HoneyPot",
+                  class = "WaspBoss",
                   shape = "rectangle",
                   x = 128,
-                  y = -16,
-                  width = 16,
-                  height = 32,
+                  y = -48,
+                  width = 100,
+                  height = 100,
                   rotation = 0,
-                  gid = 490,
+                  gid = 577,
                   visible = true,
                   properties = {
+                    ["startpoint"] = { id = 1884 },
                     ["z"] = 1
+                  }
+                },
+                {
+                  id = 1863,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -80,
+                  y = -96,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 208, y = 48 },
+                    { x = 192, y = 136 },
+                    { x = 160, y = 152 },
+                    { x = 128, y = 136 },
+                    { x = 112, y = 112 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1864,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = -32,
+                  y = 48,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 160, y = -96 },
+                    { x = 176, y = -8 },
+                    { x = 208, y = 8 },
+                    { x = 240, y = -8 },
+                    { x = 256, y = -32 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1868,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 8 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1871,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 8 },
+                    { x = 0, y = 192 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1869,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 8, y = 0 },
+                    { x = 208, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1870,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = -8, y = 0 },
+                    { x = -208, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1872,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 24,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_ShootBurstsAtAngle",
+                    ["actiontype"] = "addcoroutine",
+                    ["angle"] = 45,
+                    ["burstdeltaangle"] = 0,
+                    ["burstinterval"] = 3,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 10,
+                    ["shotdeltaangle"] = 0,
+                    ["shotinterval"] = 1
+                  }
+                },
+                {
+                  id = 1875,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_ShootBurstsAtAngle",
+                    ["actiontype"] = "addcoroutine",
+                    ["angle"] = 45,
+                    ["burstdeltaangle"] = 0,
+                    ["burstinterval"] = 3,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 10,
+                    ["shotdeltaangle"] = 0,
+                    ["shotinterval"] = 1
+                  }
+                },
+                {
+                  id = 1873,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 24,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_ShootBurstsAtAngle",
+                    ["actiontype"] = "addcoroutine",
+                    ["angle"] = 135,
+                    ["burstdeltaangle"] = 0,
+                    ["burstinterval"] = 3,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 10,
+                    ["shotdeltaangle"] = 0,
+                    ["shotinterval"] = 1
+                  }
+                },
+                {
+                  id = 1874,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_ShootBurstsAtAngle",
+                    ["actiontype"] = "addcoroutine",
+                    ["angle"] = 135,
+                    ["burstdeltaangle"] = 0,
+                    ["burstinterval"] = 3,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 10,
+                    ["shotdeltaangle"] = 0,
+                    ["shotinterval"] = 1
+                  }
+                },
+                {
+                  id = 1876,
+                  name = "ChooseSweepPath",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChooseSweepPath",
+                    ["actiontype"] = "setcoroutines",
+                    ["horizontalpath"] = { id = 1869 },
+                    ["verticalpath"] = { id = 1868 }
+                  }
+                },
+                {
+                  id = 1879,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 208,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines"
+                  }
+                },
+                {
+                  id = 1881,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 32,
+                  y = 208,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines"
+                  }
+                },
+                {
+                  id = 1882,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 16,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines"
+                  }
+                },
+                {
+                  id = 1878,
+                  name = "ChooseSweepPath",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 224,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChooseSweepPath",
+                    ["actiontype"] = "setcoroutines",
+                    ["horizontalpath"] = { id = 1870 },
+                    ["verticalpath"] = { id = 1871 }
+                  }
+                },
+                {
+                  id = 1880,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 240,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines"
+                  }
+                },
+                {
+                  id = 1883,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -16,
+                  y = 0,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 1884,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = -48,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChooseEntryPath",
+                    ["actiontype"] = "setcoroutines",
+                    ["leftpath"] = { id = 1863 },
+                    ["rightpath"] = { id = 1864 }
                   }
                 }
               }
