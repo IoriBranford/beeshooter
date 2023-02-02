@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 210,
-  nextobjectid = 1885,
+  nextobjectid = 1887,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -19111,12 +19111,13 @@ return {
                     ["action"] = "PathPoint_ShootBurstsAtAngle",
                     ["actiontype"] = "addcoroutine",
                     ["angle"] = 45,
+                    ["bullettype"] = "FlyBullet",
                     ["burstdeltaangle"] = 0,
-                    ["burstinterval"] = 3,
+                    ["burstinterval"] = 1,
                     ["bursts"] = 1,
-                    ["burstshots"] = 10,
+                    ["burstshots"] = 12,
                     ["shotdeltaangle"] = 0,
-                    ["shotinterval"] = 1
+                    ["shotinterval"] = 3
                   }
                 },
                 {
@@ -19134,12 +19135,13 @@ return {
                     ["action"] = "PathPoint_ShootBurstsAtAngle",
                     ["actiontype"] = "addcoroutine",
                     ["angle"] = 45,
+                    ["bullettype"] = "FlyBullet",
                     ["burstdeltaangle"] = 0,
-                    ["burstinterval"] = 3,
+                    ["burstinterval"] = 1,
                     ["bursts"] = 1,
-                    ["burstshots"] = 10,
+                    ["burstshots"] = 12,
                     ["shotdeltaangle"] = 0,
-                    ["shotinterval"] = 1
+                    ["shotinterval"] = 3
                   }
                 },
                 {
@@ -19157,12 +19159,13 @@ return {
                     ["action"] = "PathPoint_ShootBurstsAtAngle",
                     ["actiontype"] = "addcoroutine",
                     ["angle"] = 135,
+                    ["bullettype"] = "FlyBullet",
                     ["burstdeltaangle"] = 0,
-                    ["burstinterval"] = 3,
+                    ["burstinterval"] = 1,
                     ["bursts"] = 1,
-                    ["burstshots"] = 10,
+                    ["burstshots"] = 12,
                     ["shotdeltaangle"] = 0,
-                    ["shotinterval"] = 1
+                    ["shotinterval"] = 3
                   }
                 },
                 {
@@ -19180,12 +19183,13 @@ return {
                     ["action"] = "PathPoint_ShootBurstsAtAngle",
                     ["actiontype"] = "addcoroutine",
                     ["angle"] = 135,
+                    ["bullettype"] = "FlyBullet",
                     ["burstdeltaangle"] = 0,
-                    ["burstinterval"] = 3,
+                    ["burstinterval"] = 1,
                     ["bursts"] = 1,
-                    ["burstshots"] = 10,
+                    ["burstshots"] = 12,
                     ["shotdeltaangle"] = 0,
-                    ["shotinterval"] = 1
+                    ["shotinterval"] = 3
                   }
                 },
                 {
@@ -19219,7 +19223,11 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "ChargeAndLayEggs",
-                    ["actiontype"] = "setcoroutines"
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
                   }
                 },
                 {
@@ -19235,7 +19243,11 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "ChargeAndLayEggs",
-                    ["actiontype"] = "setcoroutines"
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
                   }
                 },
                 {
@@ -19251,7 +19263,11 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "ChargeAndLayEggs",
-                    ["actiontype"] = "setcoroutines"
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
                   }
                 },
                 {
@@ -19285,7 +19301,11 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "ChargeAndLayEggs",
-                    ["actiontype"] = "setcoroutines"
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
                   }
                 },
                 {
@@ -19316,7 +19336,8 @@ return {
                   visible = true,
                   properties = {
                     ["leftpath"] = { id = 1863 },
-                    ["rightpath"] = { id = 1864 }
+                    ["rightpath"] = { id = 1864 },
+                    ["speed"] = 5
                   }
                 }
               }

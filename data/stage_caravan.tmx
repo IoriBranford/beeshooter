@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="210" nextobjectid="1885">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="210" nextobjectid="1887">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -2852,29 +2852,33 @@ self.speed = 0.75</property>
     <object id="1872" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="24">
      <properties>
       <property name="angle" type="float" value="45"/>
-      <property name="burstinterval" type="int" value="3"/>
-      <property name="burstshots" type="int" value="10"/>
+      <property name="bullettype" value="FlyBullet"/>
+      <property name="burstshots" type="int" value="12"/>
+      <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
     <object id="1875" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="16">
      <properties>
       <property name="angle" type="float" value="45"/>
-      <property name="burstinterval" type="int" value="3"/>
-      <property name="burstshots" type="int" value="10"/>
+      <property name="bullettype" value="FlyBullet"/>
+      <property name="burstshots" type="int" value="12"/>
+      <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
     <object id="1873" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="24">
      <properties>
       <property name="angle" type="float" value="135"/>
-      <property name="burstinterval" type="int" value="3"/>
-      <property name="burstshots" type="int" value="10"/>
+      <property name="bullettype" value="FlyBullet"/>
+      <property name="burstshots" type="int" value="12"/>
+      <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
     <object id="1874" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="16">
      <properties>
       <property name="angle" type="float" value="135"/>
-      <property name="burstinterval" type="int" value="3"/>
-      <property name="burstshots" type="int" value="10"/>
+      <property name="bullettype" value="FlyBullet"/>
+      <property name="burstshots" type="int" value="12"/>
+      <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
     <object id="1876" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="32" y="16">
@@ -2898,6 +2902,7 @@ self.speed = 0.75</property>
      <properties>
       <property name="leftpath" type="object" value="1863"/>
       <property name="rightpath" type="object" value="1864"/>
+      <property name="speed" type="int" value="5"/>
      </properties>
      <point/>
     </object>

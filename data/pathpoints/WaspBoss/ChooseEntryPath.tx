@@ -6,6 +6,7 @@
    <property name="actiontype" value="setcoroutines"/>
    <property name="leftpath" type="object" value="1863"/>
    <property name="rightpath" type="object" value="1864"/>
+   <property name="speed" type="int" value="4"/>
   </properties>
   <point/>
  </object>

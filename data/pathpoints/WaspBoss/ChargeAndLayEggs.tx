@@ -4,6 +4,10 @@
   <properties>
    <property name="action" value="ChargeAndLayEggs"/>
    <property name="actiontype" value="setcoroutines"/>
+   <property name="egginterval" type="int" value="10"/>
+   <property name="eggs" type="int" value="4"/>
+   <property name="eggtype" value="WaspEgg"/>
+   <property name="speed" type="int" value="5"/>
   </properties>
   <point/>
  </object>

@@ -8,6 +8,7 @@ local WaspBoss = class(EnemyShip)
 
 function WaspBoss:ChooseEntryPath()
     local pathpoint = self.startpoint
+    self.speed = pathpoint.speed or 6
     local leftpath = pathpoint.leftpath
     local rightpath = pathpoint.rightpath
     local player = self.player
@@ -38,6 +39,12 @@ function WaspBoss:ChooseSweepPath()
 end
 
 function WaspBoss:ChargeAndLayEggs()
+    local pathpoint = self.pathpoint
+    self.speed = pathpoint.speed or 8
+    self.bullettype = pathpoint.eggtype or "WaspEgg"
+    self:addCoroutine(function()
+        self:shootBurstsAtAngle(1, 0, pathpoint.eggs, pathpoint.egginterval)
+    end)
     EnemyShip.chargePlayer(self)
     self:waitForOnscreenState(true)
     while self:isSpriteOnScreen() do
