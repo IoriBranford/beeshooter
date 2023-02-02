@@ -17,6 +17,6 @@ Wasp,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,1,4,TRUE,FlyBullet,,sounds/
 Beetle,BeeShooter.Character.EnemyShip,Walker DamageFlashRed,defeatWithAllEnemyBonus,EnemyShip,0.5,25,TRUE,AcidBulletBeetle,,sounds/bugkill2.mp3,1000,KillSmall KillMedium,,,,
 Tick,BeeShooter.Character.EnemyShip.Tick,Tick,TickDefeat,EnemyShip,,8,TRUE,,,sounds/bugkill2.mp3,2000,KillSmall KillMedium,sounds/beebuzz.mp3,sounds/arrowhit.mp3,,
 ReinforcedHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,16,TRUE,,,sounds/breakpot.mp3,,ReinforcedHoneyPotOpen PowerupLeft PowerupRight,,,,
-WaspEgg,BeeShooter.Character.EnemyShip,Egg,,EnemyShip,,8,TRUE,WaspHatch,,sounds/bugkill1.mp3,1000,KillSmall KillMedium,,,,60
+WaspEgg,BeeShooter.Character.EnemyShip,Egg,,EnemyShip,,8,TRUE,WaspHatch,,sounds/bugkill1.mp3,1000,KillSmall KillMedium,,,,45
 WaspHatch,BeeShooter.Character.EnemyShip,WaspHatch,,EnemyShip,1,4,,,,sounds/bugkill2.mp3,500,KillSmall KillMedium,,,,
 WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,ChooseEntryPath,defeatBoss,EnemyShip,4,64,TRUE,WaspEgg,sounds/bugkill1.mp3,sounds/bugkill2.mp3,10000,KillSmall KillMedium,,,,
