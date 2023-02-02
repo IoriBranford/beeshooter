@@ -2,14 +2,14 @@
 
 # Fill in the project info
 variables:
-        PROJECT: beeshooter
-        PROJECT_TITLE: "Bee Shooter"
-        PROJECT_TITLE_NOSPACE: Bee_Shooter
+        PROJECT: honey-guardian
+        PROJECT_TITLE: "Honey Guardian"
+        PROJECT_TITLE_NOSPACE: Honey_Guardian
         DESCRIPTION: "Caravan shooting"
-        COPYRIGHT: "© 2022 IoriBranford"
-        APPLICATION_ID_BASE: "io.itch.ioribranford.beeshooter"
+        COPYRIGHT: "© 2022-2023 IoriBranford"
+        APPLICATION_ID_BASE: "io.itch.ioribranford.honeysoldier"
         LOVE_VERSION: "11.4"
-        SCREEN_ORIENTATION: "sensorPortrait"
+        SCREEN_ORIENTATION: "sensorLandscape"
         GAME_TYPE: full
         VERSION: "${CI_COMMIT_REF_NAME}"
         GIT_DEPTH: "1"
@@ -190,7 +190,7 @@ linux-x86_64:
         variables:
                 ARCH: "x86_64"
 
-linux-i686:
+.linux-i686:
         <<: *build-linux
         <<: *full
         image: i386/debian:stretch-slim
@@ -208,7 +208,7 @@ win-64:
         <<: *build-windows
         <<: *full
 
-win-32:
+.win-32:
         <<: *build-windows
         <<: *full
         variables:
@@ -223,14 +223,14 @@ android:
         <<: *build-android
         <<: *full
 
-demo-data:
+.demo-data:
         variables:
                 <<: *demo-variables
                 GAME_ASSET: "${PROJECT}-${GAME_TYPE}.love"
         <<: *build-data
         <<: *demo
 
-demo-linux-x86_64:
+.demo-linux-x86_64:
         <<: *build-linux
         <<: *demo
         variables:
@@ -240,7 +240,7 @@ demo-linux-x86_64:
           <<: *build-linux-artifacts
           <<: *demo-artifacts-exclude
 
-demo-linux-i686:
+.demo-linux-i686:
         <<: *build-linux
         <<: *demo
         image: i386/debian:stretch-slim
@@ -259,7 +259,7 @@ demo-linux-i686:
                 ARCH: "armhf"
                 <<: *demo-variables
 
-demo-win-64:
+.demo-win-64:
         <<: *build-windows
         <<: *demo
         variables:
@@ -270,7 +270,7 @@ demo-win-64:
           <<: *build-windows-artifacts
           <<: *demo-artifacts-exclude
 
-demo-win-32:
+.demo-win-32:
         <<: *build-windows
         <<: *demo
         variables:
@@ -281,7 +281,7 @@ demo-win-32:
           <<: *build-windows-artifacts
           <<: *demo-artifacts-exclude
 
-demo-osx:
+.demo-osx:
         <<: *build-osx
         <<: *demo
         variables:
@@ -289,7 +289,7 @@ demo-osx:
                 <<: *build-osx-variables
                 CFBundleIdentifier: "${APPLICATION_ID_BASE}demo"
 
-demo-android:
+.demo-android:
         <<: *build-android
         <<: *demo
         variables:
@@ -297,11 +297,11 @@ demo-android:
                 GAME_TYPE: "4kids-demo"
                 APPLICATION_ID: "${APPLICATION_ID_BASE}demo"
 
-dev-win-64:
+.dev-win-64:
         <<: *build-dev-windows
         <<: *full
 
-dev-win-32:
+.dev-win-32:
         <<: *build-dev-windows
         <<: *full
         variables:
