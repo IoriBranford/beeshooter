@@ -344,6 +344,10 @@ end
 
 function EnemyShip:PathPoint_ShootBurstsAtAngle()
     local pathpoint = self.pathpoint
+    local bullettype = pathpoint.bullettype or ""
+    if bullettype ~= "" then
+        self.bullettype = bullettype
+    end
     self:shootBurstsAtAngle(
         pathpoint.bursts, pathpoint.burstinterval, pathpoint.burstshots, pathpoint.shotinterval,
             math.rad(pathpoint.angle or 0), math.rad(pathpoint.shotdeltaangle or 0),

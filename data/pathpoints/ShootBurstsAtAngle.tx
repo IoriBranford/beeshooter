@@ -5,6 +5,7 @@
    <property name="action" value="PathPoint_ShootBurstsAtAngle"/>
    <property name="actiontype" value="addcoroutine"/>
    <property name="angle" type="float" value="0"/>
+   <property name="bullettype" value=""/>
    <property name="burstdeltaangle" type="float" value="0"/>
    <property name="burstinterval" type="int" value="1"/>
    <property name="bursts" type="int" value="1"/>
