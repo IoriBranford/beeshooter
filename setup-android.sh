@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-LOVE_ANDROID_COMMIT="5862a884bd6866a989ed56ce431a0134e21c86e7"
+LOVE_ANDROID_COMMIT="8e61af76693185579a82acc3b53b8a4fa66f3209"
 LOVE_ANDROID_URL="https://github.com/love2d/love-android.git"
 LOVE_ANDROID_NATIVE_SRC_PATH="love-apk-src/love/src/jni"
 LIBGME_PATH="${LOVE_ANDROID_NATIVE_SRC_PATH}/game-music-emu"
@@ -21,21 +21,6 @@ then
 	git -C love-apk-src checkout $LOVE_ANDROID_COMMIT
 fi
 git -C love-apk-src submodule update --init --recursive
-
-# If ndkVersion specified, tries to install it.
-# But in ci we want to use the installed.
-NDK_VERSION=`grep -o '[\.[:digit:]]\+$'  "$ANDROID_NDK_HOME/source.properties"`
-CORRECT_NDK_HOME="$ANDROID_HOME/ndk/$NDK_VERSION"
-sed -i -r -e "s/ndkVersion.*$/ndkVersion '$NDK_VERSION'/" love-apk-src/app/build.gradle
-sed -i -r -e "s/ndkVersion.*$/ndkVersion '$NDK_VERSION'/" love-apk-src/love/build.gradle
-if [ ! -d $ANDROID_HOME/ndk ]
-then
-	mkdir -p $ANDROID_HOME/ndk
-fi
-if [ "$ANDROID_NDK_HOME" != "$CORRECT_NDK_HOME" ] && [ ! -e "$CORRECT_NDK_HOME" ]
-then
-	ln -s "$ANDROID_NDK_HOME" "$CORRECT_NDK_HOME"
-fi
 
 if [ ! -d $LIBGME_PATH ]
 then
@@ -60,8 +45,3 @@ APPLICATION_JAVA_SRC_PATH=love-apk-src/love/src/main/java/$(echo ${APPLICATION_I
 mkdir -p ${APPLICATION_JAVA_SRC_PATH}
 echo "package ${APPLICATION_ID};" > ${APPLICATION_JAVA_SRC_PATH}/GameActivity.java
 cat GameActivity.java.in >> ${APPLICATION_JAVA_SRC_PATH}/GameActivity.java
-
-cd love-apk-src
-./gradlew assembleEmbedRelease
-
-# output: love-apk-src/app/build/outputs/apk/embed/release/app-embed-release-unsigned.apk
