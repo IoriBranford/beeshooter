@@ -2,7 +2,8 @@
 
 # Fill in the project info
 variables:
-        VERSION: "${CI_COMMIT_REF_NAME}"
+        PROJECT_TITLE: "Honey Soldier"
+        PROJECT_TITLE_NOSPACE: Honey_Soldier
         GIT_DEPTH: "1"
         GIT_SUBMODULE_STRATEGY: recursive
 
@@ -55,7 +56,7 @@ before_script:
                 - apk add wget xz
                 - ./make-game.sh
         artifacts:
-                name: "${PROJECT}-${VERSION}-data"
+                name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-data"
                 paths:
                         - "${GAME_ASSET}"
 
@@ -67,14 +68,14 @@ before_script:
                 - apt-get install -y -qq file wget fuse libglib2.0-0 curl
                 - ./make-linux.sh
         cache:
-                key: "${PROJECT}-linux-${ARCH}"
+                key: "${CI_PROJECT_NAME}-linux-${ARCH}"
                 paths:
                         - "love-${LOVE_VERSION}-${ARCH}.AppImage"
                         - "appimagetool"
                         - "*.deb"
         artifacts:
                 <<: &build-linux-artifacts
-                    name: "${PROJECT}-${VERSION}-linux-${ARCH}"
+                    name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-linux-${ARCH}"
                     paths:
                         - ${PROJECT_TITLE_NOSPACE}-${ARCH}
 
@@ -91,7 +92,7 @@ before_script:
                 - apt-get install -y -qq wget curl
                 - ./make-windows.sh
         cache:
-                key: "${PROJECT}-win-${ARCH_BITS}"
+                key: "${CI_PROJECT_NAME}-win-${ARCH_BITS}"
                 paths:
                         - "love-${LOVE_VERSION}-win${ARCH_BITS}"
                         - "bin"
@@ -99,7 +100,7 @@ before_script:
                         - ".wine${ARCH_BITS}"
         artifacts:
                 <<: &build-windows-artifacts
-                    name: "${PROJECT}-${VERSION}-win-${ARCH_BITS}"
+                    name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-win-${ARCH_BITS}"
                     paths:
                         - "${PROJECT_TITLE}"
 
@@ -111,12 +112,12 @@ before_script:
                 - apk add wget
                 - ./make-dev-windows.sh
         cache:
-                key: "${PROJECT}-win-${ARCH_BITS}"
+                key: "${CI_PROJECT_NAME}-win-${ARCH_BITS}"
                 paths:
-                        - "love-${LOVE_VERSION}-win${ARCH_BITS}"
+                        - "love-*-win${ARCH_BITS}/"
                         - "bin"
         artifacts:
-                name: "${PROJECT}-dev-win-${ARCH_BITS}"
+                name: "${CI_PROJECT_NAME}-dev-win-${ARCH_BITS}"
                 paths:
                         - "${PROJECT_TITLE}"
 
@@ -125,7 +126,7 @@ before_script:
         stage: build
         image: fzwoch/osxcross
         variables:
-                CFBundleIdentifier: "${APPLICATION_ID_BASE}"
+                CFBundleIdentifier: "${APPLICATION_ID}"
                 <<: &build-osx-variables
                         NSHumanReadableCopyright: "${COPYRIGHT}"
                         INSTALL_NAME_TOOL: x86_64-apple-darwin12-install_name_tool
@@ -133,12 +134,12 @@ before_script:
                 - apt-get install -y -qq wget
                 - ./make-macosx.sh
         cache:
-                key: "${PROJECT}-osx"
+                key: "${CI_PROJECT_NAME}-osx"
                 paths:
                         - "love.app"
                         - "game-music-emu"
         artifacts:
-                name: "${PROJECT}-${VERSION}-osx"
+                name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-osx"
                 paths:
                         - "${PROJECT_TITLE}.app"
 
@@ -147,31 +148,26 @@ before_script:
         stage: build
         image: androidsdk/android-31:latest
         variables:
-                APPLICATION_ID: "${APPLICATION_ID_BASE}"
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
-                GAME_TYPE: "4kids"
         before_script:
           - apt-get update
           - apt-get install -y -qq git zip luajit make file python
         script:
                 - ./make-android.sh
         cache:
-                key: "${PROJECT}-android"
+                key: "${CI_PROJECT_NAME}-android"
                 paths:
                         - love-apk-src
-                        - apktool.jar
-                        - uber-apk-signer.jar
-                        - apktool
                         - .gradle
         artifacts:
-                name: "${PROJECT}-${VERSION}-android"
+                name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-android"
                 paths:
                         - "${PROJECT_TITLE_NOSPACE}*.apk"
                         - "${PROJECT_TITLE_NOSPACE}*.aab"
 
 data:
         variables:
-                GAME_ASSET: "${PROJECT}-${GAME_TYPE}.love"
+                GAME_ASSET: "${CI_PROJECT_NAME}.love"
         <<: *build-data
         <<: *full
 
@@ -217,7 +213,7 @@ android:
 .demo-data:
         variables:
                 <<: *demo-variables
-                GAME_ASSET: "${PROJECT}-${GAME_TYPE}.love"
+                GAME_ASSET: "${CI_PROJECT_NAME}-${GAME_TYPE}.love"
         <<: *build-data
         <<: *demo
 
@@ -278,7 +274,7 @@ android:
         variables:
                 <<: *demo-variables
                 <<: *build-osx-variables
-                CFBundleIdentifier: "${APPLICATION_ID_BASE}demo"
+                CFBundleIdentifier: "${APPLICATION_ID}demo"
 
 .demo-android:
         <<: *build-android
@@ -286,7 +282,7 @@ android:
         variables:
                 <<: *demo-variables
                 GAME_TYPE: "4kids-demo"
-                APPLICATION_ID: "${APPLICATION_ID_BASE}demo"
+                APPLICATION_ID: "${APPLICATION_ID}demo"
 
 .dev-win-64:
         <<: *build-dev-windows
