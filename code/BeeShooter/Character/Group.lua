@@ -22,6 +22,17 @@ end
 
 function CharacterGroup:add(character)
     self[#self+1] = character
+    character.charactergroup = self
+end
+
+function CharacterGroup:remove(character)
+    for i = #self, 1, -1 do
+        if self[i] == character then
+            self[i] = self[#self]
+            self[#self] = nil
+            character.charactergroup = nil
+        end
+    end
 end
 
 function CharacterGroup:checkAllEnemyShipsDefeated()

@@ -52,7 +52,6 @@ local function readMapObjectLayer(objectlayer)
             characters = characters or CharacterGroup()
             characters.allenemiesdefeatedbonus = objectlayer.allenemiesdefeatedbonus
             characters.allenemiesdefeatedbonuswindow = objectlayer.allenemiesdefeatedbonuswindow
-            object.charactergroup = characters
             characters:add(object)
         end
         object.layer = objectlayer
