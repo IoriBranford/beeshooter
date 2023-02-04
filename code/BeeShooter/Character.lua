@@ -173,7 +173,7 @@ function Character:spawnType(typ)
     drop.x, drop.y = self.x + offsetx, self.y + offsety
 
     local Stage = require "BeeShooter.Stage"
-    Stage.addCharacter(drop)
+    return Stage.addCharacter(drop)
 end
 
 function Character:spawnTypes(typeslist)
