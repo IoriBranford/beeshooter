@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+. ./make-vars.sh
+
 PROJECT=${PROJECT:=${PWD##*/}}
 PROJECT_TITLE=${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}
 GAME_TYPE=${GAME_TYPE:=game}

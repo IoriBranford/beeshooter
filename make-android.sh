@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+. ./make-vars.sh
+
 # see https://github.com/love2d/love-android/wiki/Game-Packaging
 
 ./setup-android.sh

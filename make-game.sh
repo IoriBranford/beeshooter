@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+. ./make-vars.sh
+
 LUA=${LUA:=luajit}
 GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}

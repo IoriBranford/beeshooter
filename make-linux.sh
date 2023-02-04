@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+. ./make-vars.sh
+
 PROJECT=${PROJECT:=${PWD##*/}}
 PROJECT_TITLE=${PROJECT_TITLE:="${PROJECT}${GAME_TYPE}"}
 PROJECT_TITLE_NOSPACE=${PROJECT_TITLE_NOSPACE:="$(echo ${PROJECT_TITLE} | sed -e 's/\s\+/_/g')"}

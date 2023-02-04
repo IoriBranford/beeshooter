@@ -2,15 +2,6 @@
 
 # Fill in the project info
 variables:
-        PROJECT: honey-guardian
-        PROJECT_TITLE: "Honey Guardian"
-        PROJECT_TITLE_NOSPACE: Honey_Guardian
-        DESCRIPTION: "Caravan shooting"
-        COPYRIGHT: "© 2022-2023 IoriBranford"
-        APPLICATION_ID_BASE: "io.itch.ioribranford.honeysoldier"
-        LOVE_VERSION: "11.4"
-        SCREEN_ORIENTATION: "sensorLandscape"
-        GAME_TYPE: full
         VERSION: "${CI_COMMIT_REF_NAME}"
         GIT_DEPTH: "1"
         GIT_SUBMODULE_STRATEGY: recursive
