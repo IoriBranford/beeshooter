@@ -151,7 +151,6 @@ before_script:
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
                 GAME_TYPE: "4kids"
         before_script:
-        #   - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
           - apt-get update
           - apt-get install -y -qq git zip luajit make file python
         script:
@@ -167,7 +166,8 @@ before_script:
         artifacts:
                 name: "${PROJECT}-${VERSION}-android"
                 paths:
-                        - "${PROJECT_TITLE_NOSPACE}.apk"
+                        - "${PROJECT_TITLE_NOSPACE}*.apk"
+                        - "${PROJECT_TITLE_NOSPACE}*.aab"
 
 data:
         variables:
