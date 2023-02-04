@@ -154,7 +154,7 @@ before_script:
 .build-android: &build-android
         <<: *debian
         stage: build
-        image: mingc/android-build-box:1.20.0
+        image: androidsdk/android-31:latest
         variables:
                 APPLICATION_ID: "${APPLICATION_ID_BASE}"
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
