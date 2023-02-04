@@ -28,6 +28,8 @@ history.db
 *.deb
 *.jar
 *.apk
+*.aab
+*.idsig
 *.tar.*
 squashfs-root
 bin*/
