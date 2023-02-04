@@ -2,6 +2,7 @@ local EnemyShip = require "BeeShooter.Character.EnemyShip"
 local Movement = require "Component.Movement"
 local Body = require "BeeShooter.Character.Body"
 local class = require "pl.class"
+local CharacterGroup = require "BeeShooter.Character.Group"
 
 ---@class WaspBoss:EnemyShip
 local WaspBoss = class(EnemyShip)
@@ -39,11 +40,17 @@ function WaspBoss:ChooseSweepPath()
 end
 
 function WaspBoss:ChargeAndLayEggs()
+    local spawngroup = CharacterGroup()
     local pathpoint = self.pathpoint
     self.speed = pathpoint.speed or 8
-    self.bullettype = pathpoint.eggtype or "WaspEgg"
+    local egginterval = pathpoint.egginterval or 10
+    local eggtype = pathpoint.eggtype or "WaspEgg"
     self:addCoroutine(function()
-        self:shootBurstsAtAngle(1, 0, pathpoint.eggs, pathpoint.egginterval)
+        for _ = 1, pathpoint.eggs do
+            coroutine.wait(egginterval)
+            local egg = self:spawnType(eggtype)
+            spawngroup:add(egg)
+        end
     end)
     EnemyShip.chargePlayer(self)
     self:waitForOnscreenState(true)

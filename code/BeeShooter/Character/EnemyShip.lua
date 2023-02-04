@@ -229,7 +229,11 @@ function EnemyShip:Egg()
         yield()
     end
     if self:isSpriteOnScreen() and self.health > 0 then
-        self:spawnType(self.bullettype)
+        local spawned = self:spawnType(self.bullettype)
+        if self.charactergroup then
+            self.charactergroup:add(spawned)
+        end
+        self.defeated = true -- for checkAllEnemyShipsDefeated
     end
 end
 
@@ -601,6 +605,18 @@ function EnemyShip:defeatWithAllEnemyBonus()
     if group:checkAllEnemyShipsDefeatedInWindow(window) then
         self.player:giveSecretBonus(bonus)
         group.allenemiesdefeatedbonus = nil
+    end
+end
+
+function EnemyShip:defeatDropItemIfLast()
+    self:defaultDefeat()
+    local dropsifdefeatedlast = self.dropsifdefeatedlast
+    if not dropsifdefeatedlast then
+        return
+    end
+    local group = self.charactergroup
+    if group and group:checkAllEnemyShipsDefeated() then
+        self:spawnTypes(dropsifdefeatedlast)
     end
 end
 
