@@ -12,4 +12,4 @@ fi
 
 git describe --tags --always > version
 export LUA_PATH="${LUA_PATH};./?.lua;./libraries/?.lua"
-zip -r ${GAME_ASSET} conf.lua main.lua libraries code shaders version data
+zip -r ${GAME_ASSET} version $(cat game-files.txt)
