@@ -14,7 +14,7 @@ then
 	cp -r $(cat game-files.txt) $GAME_ASSET_PATH
 fi
 
-cp -r love-android/* game-apk
+cp -r appicon/android/* love-apk-src/app/src/main/res
 
 ANDROID_MANIFEST=love-apk-src/app/src/main/AndroidManifest.xml
 BUILD_GRADLE=love-apk-src/app/build.gradle
@@ -50,7 +50,6 @@ set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
 set_gradle_property $BUILD_GRADLE versionName "'`git describe --tags --always`'"
 set_gradle_property $BUILD_GRADLE versionCode 1
 set_manifest_property $ANDROID_MANIFEST "package" "$APPLICATION_ID.executable"
-set_manifest_property $ANDROID_MANIFEST "android:icon" "@drawable/ic_launcher"
 set_manifest_property $ANDROID_MANIFEST "android:label" "$PROJECT_TITLE"
 set_manifest_property $ANDROID_MANIFEST "android:screenOrientation" "$SCREEN_ORIENTATION"
 replace $ANDROID_MANIFEST "android:name=\".+GameActivity\"" "android:name=\"$APPLICATION_ID.GameActivity\""
