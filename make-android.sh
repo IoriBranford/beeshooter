@@ -31,7 +31,7 @@ set_gradle_property() {
 	FILE=$1
 	KEY=$2
 	VALUE=$3
-	sed -i -r -e "s#${KEY} .+$$#${KEY} ${VALUE}#" ${FILE}
+	sed -i -r -e "s#${KEY} .+#${KEY} ${VALUE}#" ${FILE}
 }
 
 set_manifest_property() {
