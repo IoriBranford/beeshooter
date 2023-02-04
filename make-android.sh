@@ -57,38 +57,24 @@ set_manifest_property $ANDROID_MANIFEST "android:screenOrientation" "$SCREEN_ORI
 replace $ANDROID_MANIFEST "android:name=\".+GameActivity\"" "android:name=\"$APPLICATION_ID.GameActivity\""
 
 cd love-apk-src
-./gradlew bundleEmbedNoRecordRelease
+./gradlew assembleEmbedNoRecordRelease bundleEmbedNoRecordRelease
 cd ..
 
+LOVE_APK=$(find love-apk-src/app/build/outputs/apk -name "*.apk")
+GAME_APK=${GAME_APK:="${PROJECT_TITLE_NOSPACE}.apk"}
 LOVE_AAB=$(find love-apk-src/app/build/outputs/bundle -name "*.aab")
 GAME_AAB=${GAME_AAB:="${PROJECT_TITLE_NOSPACE}.aab"}
-cp $LOVE_AAB $GAME_AAB
 
-UBERAPKSIGNER_VERSION=1.2.1
-UBERAPKSIGNER_URL=https://github.com/patrickfav/uber-apk-signer/releases/download/v${UBERAPKSIGNER_VERSION}
-UBERAPKSIGNER_JAR=uber-apk-signer-${UBERAPKSIGNER_VERSION}.jar
-
-download() {
-	URL=$1
-	FILE=$2
-	OUTFILE=$3
-	if [ -z $OUTFILE ]
-	then
-		if [ ! -f ${FILE} ]
-		then
-			wget -N ${URL}/${FILE}
-		fi
-	else
-		if [ ! -f $OUTFILE ]
-		then
-			wget -O $OUTFILE ${URL}/${FILE}
-		fi
-	fi
-}
-
-download $UBERAPKSIGNER_URL $UBERAPKSIGNER_JAR uber-apk-signer.jar
 if [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
 then
-	SIGNING_PARAMS="--ks release.keystore --ksAlias $KEYSTORE_ALIAS --ksPass $KEYSTORE_PASSWORD --ksKeyPass $KEYSTORE_PASSWORD"
+	apksigner sign --ks release.keystore \
+		--ks-key-alias $KEYSTORE_ALIAS \
+		--ks-pass env:KEYSTORE_PASSWORD --key-pass env:KEYSTORE_PASSWORD \
+		--out $GAME_APK $LOVE_APK
+	jarsigner -verbose -keystore release.keystore \
+		-storepass $KEYSTORE_PASSWORD \
+		-signedjar $GAME_AAB $LOVE_AAB $KEYSTORE_ALIAS
+else
+	cp $LOVE_APK "${PROJECT_TITLE_NOSPACE}-unsigned.apk"
+	cp $LOVE_AAB "${PROJECT_TITLE_NOSPACE}-unsigned.aab"
 fi
-java -jar uber-apk-signer.jar --overwrite --apk $GAME_AAB $SIGNING_PARAMS
