@@ -19,4 +19,4 @@ Tick,BeeShooter.Character.EnemyShip.Tick,Tick,TickDefeat,EnemyShip,,8,TRUE,,,sou
 ReinforcedHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,16,TRUE,,,sounds/breakpot.mp3,,ReinforcedHoneyPotOpen PowerupLeft PowerupRight,,,,,
 WaspEgg,BeeShooter.Character.EnemyShip,Egg,defeatDropItemIfLast,EnemyShip,,8,TRUE,WaspHatch,,sounds/bugkill1.mp3,1000,KillSmall KillMedium,,,,45,Powerup
 WaspHatch,BeeShooter.Character.EnemyShip,WaspHatch,defeatDropItemIfLast,EnemyShip,1,4,TRUE,,,sounds/bugkill2.mp3,500,KillSmall KillMedium,,,,,Powerup
-WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,ChooseEntryPath,defeatBoss,EnemyShip,4,64,TRUE,WaspEgg,sounds/bugkill1.mp3,sounds/bugkill2.mp3,10000,KillSmall KillMedium,,,,,
+WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,ChooseEntryPath,defeatBoss,EnemyShip,4,100,TRUE,WaspEgg,sounds/bugkill1.mp3,sounds/bugkill2.mp3,10000,KillSmall KillMedium,,,,,
