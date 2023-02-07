@@ -7,6 +7,9 @@
    <object id="2" name="sting" x="50" y="100">
     <point/>
    </object>
+   <object id="3" name="mouth" x="80" y="65">
+    <point/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="50"/>
