@@ -63,14 +63,8 @@ local function readMapObjectLayer(objectlayer)
                 Path.addPointData(datapath, pointdata)
             else
                 for _, path in ipairs(paths) do
-                    if Path.addPointData(path, pointdata) then
-                        datapath = path
-                        break
-                    end
+                    Path.addPointData(path, pointdata)
                 end
-            end
-            if datapath then
-                PathPoint.init(pointdata)
             end
         end
     end
