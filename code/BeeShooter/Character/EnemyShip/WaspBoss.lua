@@ -4,6 +4,9 @@ local Body = require "BeeShooter.Character.Body"
 local class = require "pl.class"
 local CharacterGroup = require "BeeShooter.Character.Group"
 
+local Sqrt2 = math.sqrt(2)
+local CosPiThird = math.cos(math.pi/3)
+
 ---@class WaspBoss:EnemyShip
 local WaspBoss = class(EnemyShip)
 
@@ -28,12 +31,27 @@ function WaspBoss:ChooseSweepPath()
     local pathpoint = self.pathpoint
     local horizontalpath = pathpoint.horizontalpath
     local verticalpath = pathpoint.verticalpath
+    local horidiagonalpath = pathpoint.horidiagonalpath
+    local vertidiagonalpath = pathpoint.vertidiagonalpath
     local player = self.player
     local path
-    if math.det(1, self.scalex, player.x - self.x, player.y - self.y) < 0 then
-        path = horizontalpath
+    local healthpercent = self.health / self.maxhealth
+    local dist = math.dist(self.x, self.y, player.x, player.y)
+    local det = math.det(1, self.scalex, player.x - self.x, player.y - self.y)
+    local dot = math.dot(1, self.scalex, player.x - self.x, player.y - self.y)
+    local usediagonal = healthpercent <= .5 and dot >= dist * Sqrt2 * CosPiThird
+    if det < 0 then
+        if usediagonal then
+            path = horidiagonalpath
+        else
+            path = horizontalpath
+        end
     else
-        path = verticalpath
+        if usediagonal then
+            path = vertidiagonalpath
+        else
+            path = verticalpath
+        end
     end
     self.path = path
     self:flyPath(path)

@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 210,
-  nextobjectid = 1887,
+  nextobjectid = 1901,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2366,6 +2366,19 @@ return {
                 shape = "point",
                 x = 50,
                 y = 100,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 3,
+                name = "mouth",
+                class = "",
+                shape = "point",
+                x = 80,
+                y = 65,
                 width = 0,
                 height = 0,
                 rotation = 0,
@@ -18996,7 +19009,7 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 208, y = 48 },
+                    { x = 208, y = 120 },
                     { x = 192, y = 136 },
                     { x = 160, y = 152 },
                     { x = 128, y = 136 },
@@ -19016,7 +19029,7 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 160, y = -96 },
+                    { x = 160, y = -24 },
                     { x = 176, y = -8 },
                     { x = 208, y = 8 },
                     { x = 240, y = -8 },
@@ -19036,8 +19049,8 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
                     { x = 0, y = 8 },
+                    { x = 0, y = 96 },
                     { x = 0, y = 192 }
                   },
                   properties = {}
@@ -19054,8 +19067,8 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
                     { x = 0, y = 8 },
+                    { x = 0, y = 96 },
                     { x = 0, y = 192 }
                   },
                   properties = {}
@@ -19072,8 +19085,8 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
                     { x = 8, y = 0 },
+                    { x = 96, y = 0 },
                     { x = 208, y = 0 }
                   },
                   properties = {}
@@ -19090,8 +19103,8 @@ return {
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
                     { x = -8, y = 0 },
+                    { x = -96, y = 0 },
                     { x = -208, y = 0 }
                   },
                   properties = {}
@@ -19206,8 +19219,10 @@ return {
                   properties = {
                     ["action"] = "ChooseSweepPath",
                     ["actiontype"] = "setcoroutines",
+                    ["horidiagonalpath"] = { id = 1897 },
                     ["horizontalpath"] = { id = 1869 },
-                    ["verticalpath"] = { id = 1868 }
+                    ["verticalpath"] = { id = 1868 },
+                    ["vertidiagonalpath"] = { id = 1896 }
                   }
                 },
                 {
@@ -19237,6 +19252,86 @@ return {
                   shape = "point",
                   x = 32,
                   y = 208,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
+                  }
+                },
+                {
+                  id = 1891,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 104,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
+                  }
+                },
+                {
+                  id = 1894,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 24,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
+                  }
+                },
+                {
+                  id = 1895,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 24,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "ChargeAndLayEggs",
+                    ["actiontype"] = "setcoroutines",
+                    ["egginterval"] = 10,
+                    ["eggs"] = 4,
+                    ["eggtype"] = "WaspEgg",
+                    ["speed"] = 5
+                  }
+                },
+                {
+                  id = 1892,
+                  name = "ChargeAndLayEggs",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 104,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -19284,8 +19379,10 @@ return {
                   properties = {
                     ["action"] = "ChooseSweepPath",
                     ["actiontype"] = "setcoroutines",
+                    ["horidiagonalpath"] = { id = 1898 },
                     ["horizontalpath"] = { id = 1870 },
-                    ["verticalpath"] = { id = 1871 }
+                    ["verticalpath"] = { id = 1871 },
+                    ["vertidiagonalpath"] = { id = 1899 }
                   }
                 },
                 {
@@ -19339,6 +19436,78 @@ return {
                     ["rightpath"] = { id = 1864 },
                     ["speed"] = 5
                   }
+                },
+                {
+                  id = 1896,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = 0, y = 96 },
+                    { x = 88, y = 8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1897,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 32,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 8, y = 0 },
+                    { x = 96, y = 0 },
+                    { x = 8, y = 88 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1898,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -8, y = 0 },
+                    { x = -96, y = 0 },
+                    { x = -8, y = 88 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1899,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 224,
+                  y = 16,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 8 },
+                    { x = 0, y = 96 },
+                    { x = -88, y = 8 }
+                  },
+                  properties = {}
                 }
               }
             },
