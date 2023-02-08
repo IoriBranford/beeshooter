@@ -11,4 +11,5 @@
         "code/?.lua",
         "code/?/init.lua"
     ],
+    "Lua.completion.autoRequire": true
 }
