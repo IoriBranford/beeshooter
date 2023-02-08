@@ -1,3 +1,4 @@
 type,script,nextcoroutines
 AntBigCorpse,BeeShooter.Character.EnemyShip,Idler
 HoneyPotOpen,BeeShooter.Character.EnemyShip,Idler
+Decal,BeeShooter.Character.EnemyShip,Decal
