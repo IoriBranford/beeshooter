@@ -33,6 +33,7 @@ local stagespawntimeline ---@type Timeline
 local clearred, cleargreen, clearblue = 0, 0, 0
 local gametimer
 local gametimerstate
+local spriteshader
 
 local function readMapObjectLayer(objectlayer)
     local triggers, paths, pointdatas, characters
@@ -104,6 +105,7 @@ function Stage.doStageSpawn(stagespawn)
 end
 
 function Stage.init(startpoint)
+    spriteshader = love.graphics.newShader("shaders/sprite.glsl")
     PlayerShip   = require "BeeShooter.Character.PlayerShip"
     scene = Scene.new()
     camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
@@ -370,7 +372,9 @@ end
 
 function Stage.draw(fixedfrac)
     love.graphics.clear(clearred, cleargreen, clearblue)
+    love.graphics.setShader(spriteshader)
     scene:draw()
+    love.graphics.setShader()
     if Config.drawbodies then
         for i = 1, #everyone do
             everyone[i]:drawBody()
