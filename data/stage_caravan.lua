@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 211,
-  nextobjectid = 1901,
+  nextobjectid = 1903,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -3510,7 +3510,7 @@ return {
                   properties = {}
                 },
                 {
-                  id = 432,
+                  id = 1901,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
@@ -3521,11 +3521,11 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "faceSpriteX(self, 1)"
+                    ["action"] = "faceRight"
                   }
                 },
                 {
-                  id = 434,
+                  id = 1902,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
@@ -3536,7 +3536,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["subscript"] = "faceSpriteX(self, 1)"
+                    ["action"] = "faceRight"
                   }
                 }
               }
@@ -5557,8 +5557,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "",
-                    ["subscript"] = "self.speed = 2"
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 2
                   }
                 },
                 {
@@ -5573,8 +5573,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "",
-                    ["subscript"] = "self.speed = 2"
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 2
                   }
                 }
               }
@@ -16214,7 +16214,7 @@ return {
                   height = 32,
                   rotation = 0,
                   gid = 496,
-                  visible = true,
+                  visible = false,
                   properties = {
                     ["spawncount"] = 15,
                     ["spawninterval"] = 15,

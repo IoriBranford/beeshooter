@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="211" nextobjectid="1901">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="211" nextobjectid="1903">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -453,18 +453,8 @@ A brief chance to practice controls</text>
     <object id="431" class="Path" x="296" y="4088">
      <polyline points="0,-72 -72,-72 -96,-96 -96,-104 -88,-112"/>
     </object>
-    <object id="432" class="PathPoint" x="192" y="3976">
-     <properties>
-      <property name="subscript" value="faceSpriteX(self, 1)"/>
-     </properties>
-     <point/>
-    </object>
-    <object id="434" class="PathPoint" x="200" y="3984">
-     <properties>
-      <property name="subscript" value="faceSpriteX(self, 1)"/>
-     </properties>
-     <point/>
-    </object>
+    <object id="1901" template="pathpoints/FaceRight.tx" x="192" y="3976"/>
+    <object id="1902" template="pathpoints/FaceRight.tx" x="200" y="3984"/>
    </objectgroup>
    <objectgroup id="39" name="room1ants2">
     <object id="422" template="enemies/Ant.tx" gid="481" x="-16" y="3992"/>
@@ -681,14 +671,14 @@ self.speed = 1</property>
      </properties>
      <point/>
     </object>
-    <object id="455" template="enemies/PathPoint.tx" x="40" y="3640">
+    <object id="455" template="pathpoints/SetSpeed.tx" x="40" y="3640">
      <properties>
-      <property name="subscript" value="self.speed = 2"/>
+      <property name="speed" type="int" value="2"/>
      </properties>
     </object>
-    <object id="456" template="enemies/PathPoint.tx" x="216" y="3640">
+    <object id="456" template="pathpoints/SetSpeed.tx" x="216" y="3640">
      <properties>
-      <property name="subscript" value="self.speed = 2"/>
+      <property name="speed" type="int" value="2"/>
      </properties>
     </object>
    </objectgroup>
@@ -2421,7 +2411,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="145" name="r15acidants2">
     <object id="1466" template="triggers/SpawnCharacters.tx" x="-56" y="816"/>
-    <object id="1467" class="AntHole" gid="496" x="184" y="680" width="16" height="32">
+    <object id="1467" class="AntHole" gid="496" x="184" y="680" width="16" height="32" visible="0">
      <properties>
       <property name="spawncount" type="float" value="15"/>
       <property name="spawninterval" type="float" value="15"/>
