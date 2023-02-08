@@ -95,6 +95,14 @@ function Character:addToScene(scene)
         or scene:addObject(self)
 end
 
+function Character:faceLeft()
+    self.scalex = -math.abs(self.scalex)
+end
+
+function Character:faceRight()
+    self.scalex = math.abs(self.scalex)
+end
+
 function Character:faceSpriteX(facex)
     if facex > 0 then
         self.scalex = math.abs(self.scalex)

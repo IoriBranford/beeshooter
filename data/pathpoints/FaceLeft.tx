@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="subscript" value="faceSpriteX(self, -1)"/>
+   <property name="action" value="faceLeft"/>
   </properties>
   <point/>
  </object>
