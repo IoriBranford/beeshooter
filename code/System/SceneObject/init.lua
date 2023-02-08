@@ -172,6 +172,63 @@ function SceneObject.drawGeneric(sceneobject)
 end
 local drawGeneric = SceneObject.drawGeneric
 
+function SceneObject.drawArray(sceneobject)
+    if sceneobject.predraw then
+        sceneobject:predraw()
+    end
+    for _, child in ipairs(sceneobject) do
+        child:draw()
+    end
+    if sceneobject.postdraw then
+        sceneobject:postdraw()
+    end
+end
+local drawArray = SceneObject.drawArray
+
+function SceneObject.newArray(array)
+    local so = SceneObject.new(drawArray)
+    for i = 1, #array do
+        so[i] = array[i]
+    end
+    return so
+end
+
+function SceneObject.drawStencil(sceneobject)
+    local stencil = sceneobject.stencil or function() end
+    if type(stencil) == "table" then
+        stencil = function ()
+            drawArray(sceneobject)
+        end
+    end
+    local action = sceneobject.stencilaction
+    local value = sceneobject.stencilvalue
+    local keepvalues = sceneobject.stencilkeepvalues
+    love.graphics.stencil(stencil, action, value, keepvalues)
+end
+local drawStencil = SceneObject.drawStencil
+
+function SceneObject.newStencil(stencil, action, value, keepvalues)
+    local so = SceneObject.new(drawStencil)
+    so.stencil = stencil
+    so.stencilaction = action
+    so.stencilvalue = value
+    so.stencilkeepvalues = keepvalues
+    return so
+end
+
+function SceneObject.drawClear3b(sceneobject)
+    love.graphics.clear(sceneobject.clearcolor, sceneobject.clearstencil, sceneobject.cleardepth)
+end
+local drawClear3b = SceneObject.drawClear3b
+
+function SceneObject.newClear3b(clearcolor, clearstencil, cleardepth)
+    local so = SceneObject.new(drawClear3b)
+    so.clearcolor = clearcolor
+    so.clearstencil = clearstencil
+    so.cleardepth = cleardepth
+    return so
+end
+
 function SceneObject.updateGeneric(sceneobject, unit, fixedfrac)
     local vx, vy, vz = unit.velx or 0, unit.vely or 0, unit.velz or 0
     local av = unit.avel or 0
