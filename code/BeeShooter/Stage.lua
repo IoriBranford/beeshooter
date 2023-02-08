@@ -310,7 +310,7 @@ function Stage.update(dsecs, fixedfrac)
 
     local stagevely = stage.vely
     local stagey = stage.y + stagevely*fixedfrac
-    for _, layer in ipairs(stage) do
+    for _, layer in ipairs(stage.tilelayers) do
         local layertype = layer.type
         if layertype == "tilelayer" then
             local chunks = layer.chunks
