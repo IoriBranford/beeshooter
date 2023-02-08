@@ -1,19 +1,23 @@
 local Config = require "System.Config"
 local Canvas = {}
 
-local canvas
+local maincanvas
+local canvases
 local transform
 
 function Canvas.init(width, height)
-    canvas = love.graphics.newCanvas(width, height)
-    canvas:setFilter(Config.canvasscalesoft and "linear" or "nearest")
+    maincanvas = love.graphics.newCanvas(width, height)
+    canvases = {maincanvas}
+    if love.graphics.getCanvasFormats().stencil8 then
+        canvases.depthstencil = love.graphics.newCanvas(width, height, { format = "stencil8" })
+    end
 
     local gw = love.graphics.getWidth()
     local gh = love.graphics.getHeight()
     local ghw = gw / 2
     local ghh = gh / 2
-    local chw = canvas:getWidth() / 2
-    local chh = canvas:getHeight() / 2
+    local chw = maincanvas:getWidth() / 2
+    local chh = maincanvas:getHeight() / 2
     local canvasscale
 
     local rotation = math.rad(Config.rotation)
@@ -29,7 +33,7 @@ function Canvas.init(width, height)
     end
 
     local filter = Config.canvasscalesoft and "linear" or "nearest"
-    canvas:setFilter(filter, filter)
+    maincanvas:setFilter(filter, filter)
 
     transform = love.math.newTransform()
     transform:translate(math.floor(ghw), math.floor(ghh))
@@ -39,12 +43,14 @@ function Canvas.init(width, height)
 end
 
 function Canvas.drawOnCanvas(draw)
-    canvas:renderTo(draw)
+    love.graphics.setCanvas(canvases)
+    draw()
+    love.graphics.setCanvas()
 end
 
 function Canvas.drawCanvas()
     love.graphics.setColor(1, 1, 1)
-    love.graphics.draw(canvas, transform)
+    love.graphics.draw(maincanvas, transform)
 end
 
 function Canvas.drawScaledToCanvas(draw)
