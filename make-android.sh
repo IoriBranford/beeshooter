@@ -53,7 +53,10 @@ set_gradle_property $BUILD_GRADLE versionName "'`git describe --tags --always`'"
 set_gradle_property $BUILD_GRADLE versionCode 1
 set_manifest_property $ANDROID_MANIFEST "package" "$APPLICATION_ID.executable"
 set_manifest_property $ANDROID_MANIFEST "android:label" "$PROJECT_TITLE"
-set_manifest_property $ANDROID_MANIFEST "android:screenOrientation" "$SCREEN_ORIENTATION"
+
+# device may not honor this anymore
+# set_manifest_property $ANDROID_MANIFEST "android:screenOrientation" "$SCREEN_ORIENTATION"
+
 replace $ANDROID_MANIFEST "android:name=\".+GameActivity\"" "android:name=\"$APPLICATION_ID.GameActivity\""
 
 cd love-apk-src
