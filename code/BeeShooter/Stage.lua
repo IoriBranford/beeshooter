@@ -58,6 +58,7 @@ local function readMapObjectLayer(objectlayer)
     end
     if paths and pointdatas then
         for _, pointdata in ipairs(pointdatas) do
+            PathPoint.init(pointdata)
             local datapath = pointdata.path
             if datapath then
                 Path.addPointData(datapath, pointdata)
