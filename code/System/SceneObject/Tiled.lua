@@ -58,6 +58,13 @@ function SceneTiled.changeTile(sceneobject, tileid)
     end
 end
 
+function SceneTiled.randomizeTile(sceneobject)
+    local tile = sceneobject.tile
+    local tileid = love.math.random(#tile.tileset)
+    local newtile = tile.tileset[tileid]
+    setTile(sceneobject, newtile)
+end
+
 function SceneTiled.getObjectTileset(sceneobject)
     local tile = sceneobject.tile
     return tile and tile.tileset
