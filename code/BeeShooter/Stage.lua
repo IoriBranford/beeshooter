@@ -9,6 +9,7 @@ local Config       = require "System.Config"
 local Database     = require "Data.Database"
 local Trigger      = require "BeeShooter.Trigger"
 local CharacterGroup        = require "BeeShooter.Character.Group"
+local Z                     = require "BeeShooter.Z"
 local PlayerShip
 
 local t_sort = table.sort
@@ -131,6 +132,26 @@ function Stage.init(startpoint)
         end
         stage.vely = 0
         scene:addLayers(stage, "group,tilelayer,imagelayer")
+
+        local tilelayers = stage.tilelayers
+        local drawbeforedecals = scene:addCustom(function()
+            love.graphics.stencil(function()
+                for _, layer in ipairs(tilelayers) do
+                    local chunks = layer.chunks
+                    for _, chunk in ipairs(chunks) do
+                        local sprite = chunk.sprite
+                        sprite:draw()
+                    end
+                end
+            end)
+            love.graphics.setStencilTest("greater", 0)
+        end)
+        drawbeforedecals.z = Z.GroundDecal-(1/256)
+        local drawafterdecals = scene:addCustom(function()
+            love.graphics.setStencilTest()
+        end)
+        drawafterdecals.z = Z.GroundDecal+(1/256)
+
         local stagespawns = stage.spawns
         stage.spawns = nil
         if stagespawns then
