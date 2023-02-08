@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 10,
-  nextobjectid = 56,
+  nextlayerid = 11,
+  nextobjectid = 75,
   properties = {},
   tilesets = {
     {
@@ -1564,6 +1564,35 @@ return {
           }
         }
       }
+    },
+    {
+      name = "Splats",
+      firstgid = 114,
+      class = "",
+      tilewidth = 24,
+      tileheight = 24,
+      spacing = 0,
+      margin = 0,
+      columns = 4,
+      image = "tilesets/Splats.png",
+      imagewidth = 96,
+      imageheight = 96,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 24,
+        height = 24
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 16,
+      tiles = {}
     }
   },
   layers = {
@@ -2170,13 +2199,12 @@ return {
           gid = 97,
           visible = true,
           properties = {
+            ["bitepoint"] = 0,
             ["circlingdist"] = 64,
             ["circlingspeed"] = 3,
             ["collidable"] = false,
             ["color"] = "#80ffffff",
             ["emergingtime"] = 64,
-            ["maxnumbiters"] = 1,
-            ["scalexy"] = 0,
             ["z"] = 5
           }
         },
@@ -2209,6 +2237,90 @@ return {
           gid = 104,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 10,
+      name = "decals",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 56,
+          name = "DecalBlood",
+          class = "Decal",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 24,
+          rotation = 0,
+          gid = 114,
+          visible = true,
+          properties = {
+            ["color"] = "#40aa0000",
+            ["z"] = 0.25
+          }
+        },
+        {
+          id = 74,
+          name = "DecalAcid",
+          class = "Decal",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 24,
+          height = 24,
+          rotation = 0,
+          gid = 114,
+          visible = true,
+          properties = {
+            ["color"] = "#40555500",
+            ["z"] = 0.25
+          }
+        },
+        {
+          id = 72,
+          name = "DecalBloodBigAnt1",
+          class = "Decal",
+          shape = "rectangle",
+          x = -8,
+          y = 8,
+          width = 24,
+          height = 24,
+          rotation = 0,
+          gid = 114,
+          visible = true,
+          properties = {
+            ["color"] = "#40aa0000",
+            ["z"] = 0.25
+          }
+        },
+        {
+          id = 73,
+          name = "DecalBloodBigAnt2",
+          class = "Decal",
+          shape = "rectangle",
+          x = 8,
+          y = 8,
+          width = 24,
+          height = 24,
+          rotation = 0,
+          gid = 114,
+          visible = true,
+          properties = {
+            ["color"] = "#40aa0000",
+            ["z"] = 0.25
+          }
         }
       }
     }
