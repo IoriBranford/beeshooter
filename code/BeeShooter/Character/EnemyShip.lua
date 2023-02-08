@@ -141,6 +141,16 @@ function EnemyShip:PathPoint_SetSpeedFast()
     self.speed = self.fastspeed or 2
 end
 
+function EnemyShip:Decal()
+    self.x = self.x + love.math.random(-3, 3)
+    self.y = self.y + love.math.random(-3, 3)
+    self.sprite:randomizeTile()
+    self.sprite.red = self.sprite.red + (love.math.random() - .5) / 64
+    self.sprite.green = self.sprite.green + (love.math.random() - .5) / 64
+    self.sprite.blue = self.sprite.blue + (love.math.random() - .5) / 64
+    self:Idler()
+end
+
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
         Body.setVelocity(self, 0, self.stage.vely)
