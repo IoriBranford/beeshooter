@@ -537,6 +537,24 @@ function EnemyShip:AlienMind()
     end
 end
 
+local function dropDyingEffects(self)
+    local hitbox = self.hitbox
+    local dyingeffects = self.dyingeffect or "KillSmall DecalBlood"
+    for i = 1, 20 do
+        Audio.play(self.dyingsound)
+        if dyingeffects then
+            for dyingeffect in dyingeffects:gmatch("%S+") do
+                Stage.addCharacter({
+                    type = dyingeffect,
+                    x = self.x + hitbox.x + love.math.random(hitbox.width),
+                    y = self.y + hitbox.y + love.math.random(hitbox.height),
+                })
+            end
+        end
+        wait(6)
+    end
+end
+
 function EnemyShip:defeatMidBoss()
     Stage.pauseTimerUntilNextEnemy()
     Stage.addToTimer(60*60)
@@ -545,19 +563,7 @@ function EnemyShip:defeatMidBoss()
     Stage.killTeam("EnemyShip")
     Stage.killTeam("EnemyShot")
     Body.setVelocity(self, 0, .125)
-    local hitbox = self.hitbox
-    local dyingeffect = self.dyingeffect or "KillSmall"
-    for i = 1, 20 do
-        Audio.play(self.dyingsound)
-        if dyingeffect then
-            Stage.addCharacter({
-                type = dyingeffect,
-                x = self.x + hitbox.x + love.math.random(hitbox.width),
-                y = self.y + hitbox.y + love.math.random(hitbox.height),
-            })
-        end
-        wait(6)
-    end
+    dropDyingEffects(self)
     Audio.play(self.defeatsound)
     self:spawnTypes(self.defeatdrops)
     self:markDisappear()
@@ -573,19 +579,7 @@ function EnemyShip:defeatBoss()
     Stage.killTeam("EnemyShip")
     Stage.killTeam("EnemyShot")
     Body.setVelocity(self, 0, .125)
-    local hitbox = self.hitbox
-    local dyingeffect = self.dyingeffect or "KillSmall"
-    for i = 1, 20 do
-        Audio.play(self.dyingsound)
-        if dyingeffect then
-            Stage.addCharacter({
-                type = dyingeffect,
-                x = self.x + hitbox.x + love.math.random(hitbox.width),
-                y = self.y + hitbox.y + love.math.random(hitbox.height),
-            })
-        end
-        wait(6)
-    end
+    dropDyingEffects(self)
     Audio.play(self.defeatsound)
     self:spawnTypes(self.defeatdrops)
     self:markDisappear()
