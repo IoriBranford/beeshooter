@@ -68,3 +68,18 @@ tiled.extendMenu("TilesetView.Tiles", [
 	{ separator: true },
 	{ action: "regexReplaceTilePropertyValues" },
 ])
+
+const regexReplaceLayerPropertyValuesAction = tiled.registerAction("regexReplaceLayerPropertyValues", (action) => {
+    let asset = tiled.activeAsset
+    let selected
+    if (asset.isTileMap) {
+        selected = asset.selectedLayers
+    }
+    regexReplacePropertyValues(selected)
+})
+regexReplaceLayerPropertyValuesAction.text = "Regex replace property values"
+
+tiled.extendMenu("LayerView.Layers", [
+	{ separator: true },
+	{ action: "regexReplaceLayerPropertyValues" },
+])
