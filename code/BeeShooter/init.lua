@@ -60,6 +60,7 @@ return {
     defaultconfig = {
         _version = 1,
         drawbodies = false,
+        fullscreen = Platform.defaultSetting("fullscreen") or false,
         maximize = Platform.supports("maximize"),
 
         key_left = "left",
