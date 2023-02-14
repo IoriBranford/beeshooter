@@ -48,6 +48,31 @@ function Gui:init()
     Gui:cast(self)
 end
 
+function Gui:setActiveMenu(menu)
+    if menu then
+        menu:setHidden(false)
+    end
+    self.activemenu = menu
+end
+
+function Gui:touchpressed(id, x, y)
+    if self.activemenu and self.activemenu.visible then
+        self.activemenu:touchpressed(id, x, y)
+    end
+end
+
+function Gui:touchmoved(id, x, y)
+    if self.activemenu and self.activemenu.visible then
+        self.activemenu:touchmoved(id, x, y)
+    end
+end
+
+function Gui:touchreleased(id, x, y)
+    if self.activemenu and self.activemenu.visible then
+        self.activemenu:touchreleased(id, x, y)
+    end
+end
+
 function Gui:fixedupdate()
     self.scene:animate(1)
 end
