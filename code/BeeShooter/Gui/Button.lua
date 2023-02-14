@@ -13,4 +13,18 @@ function Button:endGame()
     Stage.restart()
 end
 
+function Button:touchPauseGame()
+    GamePhase.touchSetPaused(true)
+end
+
+function Button:touchResumeGame()
+    GamePhase.touchSetPaused(false)
+end
+
+function Button:fireWeaponA()
+end
+
+function Button:fireWeaponB()
+end
+
 return Button
