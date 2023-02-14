@@ -10,6 +10,5 @@
         "libraries/?/init.lua",
         "code/?.lua",
         "code/?/init.lua"
-    ],
-    "Lua.completion.autoRequire": true
+    ]
 }
