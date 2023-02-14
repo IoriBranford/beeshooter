@@ -1,7 +1,9 @@
 local GuiObject = require "Gui.GuiObject"
 local Config    = require "System.Config"
 local class     = require "pl.class"
+local Canvas    = require "System.Canvas"
 
+---@class Menu
 local Menu = class(GuiObject)
 
 function Menu:init()
@@ -61,6 +63,40 @@ function Menu:gamepadpressed(gamepad, button)
     elseif button == Config.joy_fire then
         self:pressSelectedButton()
     end
+end
+
+function Menu:touchpressed(id, x, y)
+    if self.menutouchid then
+        return
+    end
+    self.menutouchid = id
+    self:touchmoved(id, x, y)
+end
+
+function Menu:touchmoved(id, x, y)
+    if self.menutouchid ~= id then
+        return
+    end
+    x, y = Canvas.inverseTransformPoint(x, y)
+    for i, menuitem in ipairs(self.menuitems) do
+        if math.testrects(
+            x, y, 0, 0,
+            menuitem.x, menuitem.y,
+            menuitem.width, menuitem.height
+        ) then
+            self:selectButton(i)
+            return
+        end
+    end
+    self:selectButton()
+end
+
+function Menu:touchreleased(id)
+    if self.menutouchid ~= id then
+        return
+    end
+    self:pressSelectedButton()
+    self.menutouchid = nil
 end
 
 function Menu:selectButton(i)
