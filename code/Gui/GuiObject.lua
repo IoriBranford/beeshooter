@@ -1,7 +1,7 @@
 local class = require "pl.class"
+
 ---@class GuiObject
 ---@field sprite SceneObject
-
 local GuiObject = class()
 
 function GuiObject:init()
