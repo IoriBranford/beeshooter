@@ -60,4 +60,8 @@ function Canvas.drawScaledToCanvas(draw)
     love.graphics.pop()
 end
 
+function Canvas.inverseTransformPoint(x, y)
+    return transform:inverseTransformPoint(x, y)
+end
+
 return Canvas
