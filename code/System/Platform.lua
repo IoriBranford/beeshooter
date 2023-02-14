@@ -29,6 +29,9 @@ local features = {
 local defaultconfig = {
     Web = {
         key_pausemenu = "p"
+    },
+    Android = {
+        fullscreen = true
     }
 }
 
