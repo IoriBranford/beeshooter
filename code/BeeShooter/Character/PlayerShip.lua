@@ -85,17 +85,33 @@ local function inputMovement(self)
     local cameray = camera.y + 8
     local camerax2 = camerax + cameraw - 16
     local cameray2 = cameray + camerah - 16
-    local vx, vy = dirx * speed, diry * speed
+    local vx, vy = 0, 0
     local x, y = self.x, self.y
-    if x + vx < camerax then
-        vx = camerax - x
-    elseif x + vx > camerax2 then
-        vx = camerax2 - x
+    local destx, desty
+    if dirx == 0 and diry == 0 then
+        destx, desty = Controls.getDestination()
+    else
+        Controls.setDestination()
     end
-    if y + vy < cameray then
-        vy = cameray - y
-    elseif y + vy > cameray2 then
-        vy = cameray2 - y
+    if destx and desty then
+        destx = math.max(camerax, math.min(destx, camerax2))
+        desty = math.max(cameray, math.min(desty, cameray2))
+        vx, vy = Movement.getVelocity_speed(x, y, destx, desty, 4)
+        if vx == destx and vy == desty then
+            Controls.setDestination()
+        end
+    else
+        vx, vy = dirx * speed, diry * speed
+        if x + vx < camerax then
+            vx = camerax - x
+        elseif x + vx > camerax2 then
+            vx = camerax2 - x
+        end
+        if y + vy < cameray then
+            vy = cameray - y
+        elseif y + vy > cameray2 then
+            vy = cameray2 - y
+        end
     end
     Body.setVelocity(self, vx, vy)
 end
