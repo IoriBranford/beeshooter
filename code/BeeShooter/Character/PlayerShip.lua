@@ -296,8 +296,10 @@ function PlayerShip:updateHud(hud)
     end
     hud.status.lives:setString(livesstring)
 
-    local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
-    hud.status.speed:setString(speedstring)
+    if hud.status.speed then
+        local speedstring = "Speed "..s_rep("▶", self.speed == self.fastspeed and 2 or 1)
+        hud.status.speed:setString(speedstring)
+    end
 
     local power = tostring(self.power)
     hud.weapons.weaponA:changeTile(power.."A")
