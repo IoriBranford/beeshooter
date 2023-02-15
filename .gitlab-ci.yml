@@ -146,14 +146,11 @@ before_script:
 .build-android: &build-android
         <<: *debian
         stage: build
-        image: androidsdk/android-31:latest
+        image: ioribranford/build-love-android:11.4
         variables:
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
                 PROJECT_TITLE: "Honey Soldier"
                 PROJECT_TITLE_NOSPACE: Honey_Soldier
-        before_script:
-          - apt-get update
-          - apt-get install -y -qq git zip luajit make file python
         script:
                 - ./make-android.sh
         cache:
