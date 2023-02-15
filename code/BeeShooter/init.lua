@@ -57,11 +57,9 @@ return {
         --buildmegatilesets	(optional string)   Build megatilesets for all maps in the given text file
         --stage (optional string)               Name of stage to start
         --test (optional string)                Name of test to start
-    defaultconfig = {
+    defaultconfig = Platform.overrideConfig {
         _version = 1,
         drawbodies = false,
-        fullscreen = Platform.defaultSetting("fullscreen") or false,
-        maximize = Platform.supports("maximize"),
 
         key_left = "left",
         key_right = "right",
@@ -71,7 +69,7 @@ return {
         key_changeweapon = "x",
         key_changespeed = "c",
         key_pause = "pause",
-        key_pausemenu = Platform.defaultSetting("key_pausemenu") or "escape",
+        key_pausemenu = "escape",
         key_restart = "none",
 
         joy_deadzone = 0.25,

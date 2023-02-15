@@ -19,23 +19,19 @@ local features = {
         iOS = true,
         -- Web = true,
     },
-    maximize = {
-        Windows = true,
-        ["Mac OS X"] = true,
-        Linux = true,
-        Android = true,
-        iOS = true
-    }
 }
 
-local defaultconfig = {
+local configoverrides = {
     Web = {
-        key_pausemenu = "p"
+        key_pausemenu = "p",
+        maximize = false
     },
     Android = {
-        fullscreen = true
+        fullscreen = true,
+        resizable = false
     }
 }
+local configoverride = configoverrides[OS]
 
 function Platform.supports(feature)
     feature = features[feature]
@@ -43,8 +39,17 @@ function Platform.supports(feature)
 end
 
 function Platform.defaultSetting(setting)
-    local config = defaultconfig[OS]
-    return config and config[setting]
+    return configoverride and configoverride[setting]
+end
+
+function Platform.overrideConfig(config)
+    config = config or {}
+    if configoverride then
+        for k, v in pairs(configoverride) do
+            config[k] = v
+        end
+    end
+    return config
 end
 
 return Platform
