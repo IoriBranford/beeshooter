@@ -17,14 +17,34 @@
                     "value": ""
                 },
                 {
+                    "name": "color",
+                    "type": "color",
+                    "value": "#80808080"
+                },
+                {
+                    "name": "linecolor",
+                    "type": "color",
+                    "value": "#ffffffff"
+                },
+                {
                     "name": "presssound",
                     "type": "file",
                     "value": ""
                 },
                 {
+                    "name": "roundcorners",
+                    "type": "float",
+                    "value": 1
+                },
+                {
                     "name": "selectsound",
                     "type": "file",
                     "value": ""
+                },
+                {
+                    "name": "z",
+                    "type": "float",
+                    "value": 0
                 }
             ],
             "name": "BeeShooter.Gui.Button",
@@ -53,6 +73,11 @@
                     "name": "offsety",
                     "type": "float",
                     "value": 0
+                },
+                {
+                    "name": "roundcorners",
+                    "type": "float",
+                    "value": 1
                 }
             ],
             "name": "Gui.Cursor",
