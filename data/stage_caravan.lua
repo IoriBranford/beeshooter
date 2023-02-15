@@ -9,7 +9,7 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 213,
+  nextlayerid = 215,
   nextobjectid = 1903,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
@@ -2814,6 +2814,10 @@ return {
               compression = "zlib",
               chunks = {
                 {
+                  x = 0, y = 28, width = 16, height = 14,
+                  data = "eJxjYBgFo2BwgTmMDAw70fAsRuL1zsWidiYJZtATAAAzOQaR"
+                },
+                {
                   x = 16, y = 28, width = 16, height = 14,
                   data = "eJxjYBgFgwn04ZGbxohf7wyg/Bo88lsYcZsB0rsNiIvw6C/EYQZMbzuQHYJHfzAQt6KZgaw3k4Gw/eloZiDrJdZ+ZDOQ9ZJiP4xG1kuq/SAaAFDsHtU="
                 },
@@ -2998,11 +3002,11 @@ return {
               chunks = {
                 {
                   x = 0, y = 28, width = 16, height = 14,
-                  data = "eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA=="
+                  data = "eJxjYBgFo2AUwEAAHjl/IvRvZGRgmMyIKT4VKLYZizgAl1gDMA=="
                 },
                 {
                   x = 0, y = 42, width = 16, height = 14,
-                  data = "eJxjYMAErUBsw8jA0MYAwXZAdjsWdeiAlRFCpwNxBhrOhKphZ8Stlx/NflsoRrafF4cZIHE+ID4ItT8KqCYaimMYIfYfhqrhx9QO1w8zowKopxKKqxgRenHp1wZiUSQ1uLAYEOtiDwKwGToEMDa9sHBHDjc7pPizwRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAPHpIyE="
+                  data = "eJxjYMAEGxkZGDah4c2MWBSiAVaomnQgzkDDmVA17DjMAenlh7JbgdgGyLeFYjsgbofK8eIwAyTOB8QHofZHAdVEQ3EMI8T+w1A1/Jja4fphZlQA9VRCcRUjQi8u/dpALIqkBhcWA2Jd7EEANkOHAMamFxbuyOEGCrM2Bgi2wRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAGrHJL8="
                 },
                 {
                   x = 16, y = 42, width = 16, height = 14,
@@ -3164,10 +3168,6 @@ return {
               compression = "zlib",
               chunks = {
                 {
-                  x = 0, y = 28, width = 16, height = 14,
-                  data = "eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew=="
-                },
-                {
                   x = 16, y = 42, width = 16, height = 14,
                   data = "eJxjYBgFo4C6wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/KAEAa6AEjQ=="
                 },
@@ -3238,6 +3238,64 @@ return {
                 {
                   x = 0, y = 266, width = 16, height = 14,
                   data = "eJxjYKAMODFCsDMjefrrGCG4nkz9o2AU0BM4MlKW5msZUdM8AGZrBVE="
+                }
+              }
+            },
+            {
+              type = "tilelayer",
+              x = 0,
+              y = 0,
+              width = 30,
+              height = 20,
+              id = 213,
+              name = "waspbossbreakablefloor",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {
+                ["z"] = 0
+              },
+              encoding = "base64",
+              compression = "zlib",
+              chunks = {
+                {
+                  x = 0, y = 28, width = 16, height = 14,
+                  data = "eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1gVgUi14xINYlQn8r1AwdNAzS245FPQBeGwPM"
+                },
+                {
+                  x = 0, y = 42, width = 16, height = 14,
+                  data = "eJxjYMAErUDchobbsagbBaNgFFAGAKPKAyU="
+                }
+              }
+            },
+            {
+              type = "tilelayer",
+              x = 0,
+              y = 0,
+              width = 30,
+              height = 20,
+              id = 214,
+              name = "waspbossbreakableonfloor",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {
+                ["z"] = 0.125
+              },
+              encoding = "base64",
+              compression = "zlib",
+              chunks = {
+                {
+                  x = 0, y = 28, width = 16, height = 14,
+                  data = "eJxjYBgFo4A2wJGRgcGZkXy9ikCsBMROJJoD05sAxQ5AXE+C/lqg2jogtidDL7o5hPQCAKHtBng="
                 }
               }
             },

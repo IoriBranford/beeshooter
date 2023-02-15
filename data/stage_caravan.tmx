@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="213" nextobjectid="1903">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="215" nextobjectid="1903">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -103,6 +103,9 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="-0.125"/>
     </properties>
     <data encoding="base64" compression="zlib">
+     <chunk x="0" y="28" width="16" height="14">
+   eJxjYBgFo2BwgTmMDAw70fAsRuL1zsWidiYJZtATAAAzOQaR
+  </chunk>
      <chunk x="16" y="28" width="16" height="14">
    eJxjYBgFgwn04ZGbxohf7wyg/Bo88lsYcZsB0rsNiIvw6C/EYQZMbzuQHYJHfzAQt6KZgaw3k4Gw/eloZiDrJdZ+ZDOQ9ZJiP4xG1kuq/SAaAFDsHtU=
   </chunk>
@@ -231,10 +234,10 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="28" width="16" height="14">
-   eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA==
+   eJxjYBgFo2AUwEAAHjl/IvRvZGRgmMyIKT4VKLYZizgAl1gDMA==
   </chunk>
      <chunk x="0" y="42" width="16" height="14">
-   eJxjYMAErUBsw8jA0MYAwXZAdjsWdeiAlRFCpwNxBhrOhKphZ8Stlx/NflsoRrafF4cZIHE+ID4ItT8KqCYaimMYIfYfhqrhx9QO1w8zowKopxKKqxgRenHp1wZiUSQ1uLAYEOtiDwKwGToEMDa9sHBHDjc7pPizwRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAPHpIyE=
+   eJxjYMAEGxkZGDah4c2MWBSiAVaomnQgzkDDmVA17DjMAenlh7JbgdgGyLeFYjsgbofK8eIwAyTOB8QHofZHAdVEQ3EMI8T+w1A1/Jja4fphZlQA9VRCcRUjQi8u/dpALIqkBhcWA2Jd7EEANkOHAMamFxbuyOEGCrM2Bgi2wRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAGrHJL8=
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
    eJxjYBgFowABWBkZGNhwYHZGwvq1gVgHB9alobtBgJUI9+HzAy8RdvDjkcPnd1xhAAAtJAN7
@@ -345,9 +348,6 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="0.125"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="28" width="16" height="14">
-   eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew==
-  </chunk>
      <chunk x="16" y="42" width="16" height="14">
    eJxjYBgFo4C6wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/KAEAa6AEjQ==
   </chunk>
@@ -401,6 +401,29 @@ A brief chance to practice controls</text>
   </chunk>
      <chunk x="0" y="266" width="16" height="14">
    eJxjYKAMODFCsDMjefrrGCG4nkz9o2AU0BM4MlKW5msZUdM8AGZrBVE=
+  </chunk>
+    </data>
+   </layer>
+   <layer id="213" name="waspbossbreakablefloor" width="30" height="20">
+    <properties>
+     <property name="z" type="float" value="0"/>
+    </properties>
+    <data encoding="base64" compression="zlib">
+     <chunk x="0" y="28" width="16" height="14">
+   eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1gVgUi14xINYlQn8r1AwdNAzS245FPQBeGwPM
+  </chunk>
+     <chunk x="0" y="42" width="16" height="14">
+   eJxjYMAErUDchobbsagbBaNgFFAGAKPKAyU=
+  </chunk>
+    </data>
+   </layer>
+   <layer id="214" name="waspbossbreakableonfloor" width="30" height="20">
+    <properties>
+     <property name="z" type="float" value="0.125"/>
+    </properties>
+    <data encoding="base64" compression="zlib">
+     <chunk x="0" y="28" width="16" height="14">
+   eJxjYBgFo4A2wJGRgcGZkXy9ikCsBMROJJoD05sAxQ5AXE+C/lqg2jogtidDL7o5hPQCAKHtBng=
   </chunk>
     </data>
    </layer>
