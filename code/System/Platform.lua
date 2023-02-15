@@ -27,6 +27,7 @@ local configoverrides = {
         maximize = false
     },
     Android = {
+        key_pausemenu = "p",
         fullscreen = true,
         resizable = false
     }
