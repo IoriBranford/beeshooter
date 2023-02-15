@@ -81,6 +81,7 @@ function SceneTiled.newShapeObject(shapeobject)
     local id = shapeobject.id
     if shape == "rectangle" then
         sceneobject = new(drawRectangle, nil, nil, w, h, x, y, z, r, sx, sy)
+        sceneobject.roundcorners = shapeobject.roundcorners
     elseif shape == "ellipse" then
         sceneobject = new(drawEllipse, nil, nil, w, h, x, y, z, r, sx, sy)
     elseif shape == "polyline" then
