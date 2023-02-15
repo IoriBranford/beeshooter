@@ -38,14 +38,18 @@ function GuiObject:setPosition(x, y)
     self:translate(x - self.x, y - self.y)
 end
 
-function GuiObject:setHidden(hidden)
-    self.visible = not hidden
+function GuiObject:setSpriteHidden(hidden)
     if self.sprite then
-        self.sprite.hidden = hidden
+        self.sprite.hidden = hidden or not self.visible
     end
     for i = 1, #self do
-        self[i]:setHidden(hidden)
+        self[i]:setSpriteHidden(hidden)
     end
+end
+
+function GuiObject:setHidden(hidden)
+    self.visible = not hidden
+    self:setSpriteHidden(hidden)
 end
 
 return GuiObject
