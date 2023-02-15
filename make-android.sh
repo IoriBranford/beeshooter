@@ -22,29 +22,29 @@ ANDROID_MANIFEST=love-apk-src/app/src/main/AndroidManifest.xml
 BUILD_GRADLE=love-apk-src/app/build.gradle
 
 PROJECT=${PROJECT:=${PWD##*/}}
-PROJECT_TITLE=${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}
+PROJECT_TITLE="${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}"
 PROJECT_TITLE_NOSPACE=${PROJECT_TITLE_NOSPACE:="$(echo ${PROJECT_TITLE} | sed -e 's/\s\+/_/g')"}
 APPLICATION_ID=${APPLICATION_ID:=org.unknown.${PROJECT_TITLE_NOSPACE}}
 SCREEN_ORIENTATION=${SCREEN_ORIENTATION:=landscape}
 
 set_gradle_property() {
-	FILE=$1
-	KEY=$2
-	VALUE=$3
+	FILE="$1"
+	KEY="$2"
+	VALUE="$3"
 	sed -i -r -e "s#${KEY} .+#${KEY} ${VALUE}#" ${FILE}
 }
 
 set_manifest_property() {
-	FILE=$1
-	KEY=$2
-	VALUE=$3
+	FILE="$1"
+	KEY="$2"
+	VALUE="$3"
 	sed -i -r -e "s#${KEY}=\".*\"#${KEY}=\"${VALUE}\"#" ${FILE}
 }
 
 replace() {
-	FILE=$1
-	OLD=$2
-	NEW=$3
+	FILE="$1"
+	OLD="$2"
+	NEW="$3"
 	sed -i -r -e "s#${OLD}#${NEW}#" ${FILE}
 }
 
