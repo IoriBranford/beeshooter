@@ -33,6 +33,7 @@ history.db
 *.tar.*
 squashfs-root
 bin*/
+.gradle/
 love-apk-src/
 game-apk/
 apktool
