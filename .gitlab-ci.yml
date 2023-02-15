@@ -2,8 +2,8 @@
 
 # Fill in the project info
 variables:
-        PROJECT_TITLE: "Honey Soldier"
-        PROJECT_TITLE_NOSPACE: Honey_Soldier
+        PROJECT_TITLE: "Honey Guardian"
+        PROJECT_TITLE_NOSPACE: Honey_Guardian
         GIT_DEPTH: "1"
         GIT_SUBMODULE_STRATEGY: recursive
 
@@ -149,6 +149,8 @@ before_script:
         image: androidsdk/android-31:latest
         variables:
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
+                PROJECT_TITLE: "Honey Soldier"
+                PROJECT_TITLE_NOSPACE: Honey_Soldier
         before_script:
           - apt-get update
           - apt-get install -y -qq git zip luajit make file python
