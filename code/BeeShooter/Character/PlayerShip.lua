@@ -320,4 +320,12 @@ function PlayerShip:updateHud(hud)
     hud.status.bonus:fixedupdate()
 end
 
+function PlayerShip:updateTouchController(touchcontroller)
+    if self.defeated then
+        touchcontroller:hideMoveCursor()
+    elseif not touchcontroller.movecursor.visible then
+        touchcontroller:resetMoveCursor()
+    end
+end
+
 return PlayerShip

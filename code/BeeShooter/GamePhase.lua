@@ -32,8 +32,9 @@ C key / X button
 PRESS FIRE
 ]]
 
+local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
+
 function GamePhase.loadphase(startpoint)
-    local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
@@ -89,6 +90,7 @@ function GamePhase.fixedupdate()
     if not paused then
         Stage.fixedupdate()
         Stage.fixedupdateHud(hud)
+        Stage.fixedupdateTouchController(gui.touch.controls)
     end
     gui:fixedupdate()
 end
@@ -203,7 +205,9 @@ function GamePhase.startGame()
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
     gui.touch.mainmenu:setHidden(true)
-    gui:setActiveMenu(gui.touch.controls)
+    if IsMobile then
+        gui:setActiveMenu(gui.touch.controls)
+    end
     Stage.startGame()
 end
 

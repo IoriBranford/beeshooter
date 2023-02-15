@@ -290,6 +290,10 @@ function Stage.fixedupdateHud(hud)
     PlayerShip.updateHud(player, hud)
 end
 
+function Stage.fixedupdateTouchController(touchcontroller)
+    PlayerShip.updateTouchController(player, touchcontroller)
+end
+
 function Stage.fixedupdate()
     local stagey = stage.y
     local stagevely = stage.vely
