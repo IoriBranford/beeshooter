@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="18" nextobjectid="55">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="18" nextobjectid="56">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -108,7 +108,7 @@
   <objectgroup id="15" name="screen" visible="0" locked="1">
    <object id="20" x="-72" y="0" width="400" height="224"/>
   </objectgroup>
-  <objectgroup id="9" name="controls" class="Gui.Menu">
+  <objectgroup id="9" name="controls" class="BeeShooter.Gui.TouchController">
    <object id="35" name="fireA" class="BeeShooter.Gui.Button" x="264" y="112" width="48" height="48">
     <properties>
      <property name="action" value="fireWeaponA"/>
@@ -199,24 +199,28 @@
       <property name="z" type="float" value="1"/>
      </properties>
     </object>
+    <object id="55" name="Weapon Select" x="264" y="72" width="48" height="32">
+     <text fontfamily="Unifont" wrap="1" color="#ffffff" halign="center" valign="center">WEAPON
+SELECT</text>
+    </object>
    </objectgroup>
   </group>
   <objectgroup id="13" name="pausemenu" class="Gui.Menu">
-   <object id="46" name="resume" class="BeeShooter.Gui.Button" x="80" y="80" width="96" height="32">
+   <object id="46" name="resume" class="BeeShooter.Gui.Button" x="264" y="8" width="48" height="16">
     <properties>
      <property name="action" value="touchResumeGame"/>
      <property name="color" type="color" value="#00000000"/>
      <property name="linecolor" type="color" value="#ffffffff"/>
     </properties>
    </object>
-   <object id="47" name="end" class="BeeShooter.Gui.Button" x="80" y="128" width="96" height="32">
+   <object id="47" name="end" class="BeeShooter.Gui.Button" x="200" y="8" width="48" height="16">
     <properties>
      <property name="action" value="endGame"/>
      <property name="color" type="color" value="#00000000"/>
      <property name="linecolor" type="color" value="#ffffffff"/>
     </properties>
    </object>
-   <object id="54" name="cursor" class="Gui.Cursor" x="78" y="78" width="100" height="36">
+   <object id="54" name="cursor" class="Gui.Cursor" x="262" y="6" width="52" height="20">
     <properties>
      <property name="color" type="color" value="#00000000"/>
      <property name="linecolor" type="color" value="#ffffffff"/>
@@ -228,13 +232,13 @@
    <object id="42" name="PAUSE!" x="80" y="48" width="96" height="16">
     <text fontfamily="Unifont" wrap="1" color="#ffffff" halign="center">PAUSE!</text>
    </object>
-   <object id="43" name="Resume" class="BeeShooter.Gui.Button" x="80" y="80" width="96" height="32">
+   <object id="43" name="Resume" class="BeeShooter.Gui.Button" x="264" y="8" width="48" height="16">
     <properties>
      <property name="action" value="resumeGame"/>
     </properties>
     <text fontfamily="Unifont" wrap="1" color="#ffffff" halign="center" valign="center">RESUME</text>
    </object>
-   <object id="44" name="End" class="BeeShooter.Gui.Button" x="80" y="128" width="96" height="32">
+   <object id="44" name="End" class="BeeShooter.Gui.Button" x="200" y="8" width="48" height="16">
     <properties>
      <property name="action" value="endGame"/>
     </properties>

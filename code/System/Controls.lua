@@ -4,6 +4,8 @@ local Config = require "System.Config"
 local DefaultMapping = "%s,%s,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,platform:%s,"
 
 local buttonspressed = {}
+local destx, desty
+local buttontouches = {}
 
 function Controls.init()
 	if love.filesystem.getInfo("data/gamecontrollerdb.txt", "file") then
@@ -26,6 +28,25 @@ function Controls.init()
 		end
 	end
 	love.joystick.saveGamepadMappings("gamecontrollerdb.txt")
+end
+
+function Controls.setDestination(x, y)
+	destx, desty = x, y
+end
+
+function Controls.getDestination()
+	return destx, desty
+end
+
+function Controls.pressTouchButton(button, touchid)
+	if not buttontouches[button] then
+		buttonspressed[button] = true
+		buttontouches[button] = touchid
+	end
+end
+
+function Controls.releaseTouchButton(button)
+	buttontouches[button] = nil
 end
 
 function Controls.getDirectionInput()
@@ -72,7 +93,7 @@ function Controls.getDirectionInput()
 end
 
 function Controls.getButtonsDown()
-	local fire = love.keyboard.isDown(Config.key_fire)
+	local fire = love.keyboard.isDown(Config.key_fire) or buttontouches.fire
 	local changeweapon = love.keyboard.isDown(Config.key_changeweapon)
 	local changespeed = love.keyboard.isDown(Config.key_changespeed)
 
@@ -83,7 +104,7 @@ function Controls.getButtonsDown()
 		changeweapon = changeweapon or joystick:isGamepadDown(Config.joy_changeweapon)
 		changespeed  = changespeed  or joystick:isGamepadDown(Config.joy_changespeed)
 	end
-	return fire, changeweapon, changespeed
+	return fire, changeweapon, changespeed, buttontouches.weapona, buttontouches.weaponb
 end
 
 function Controls.getButtonsPressed()

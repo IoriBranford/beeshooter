@@ -65,33 +65,41 @@ function Menu:gamepadpressed(gamepad, button)
     end
 end
 
-function Menu:touchpressed(id, x, y)
-    if self.menutouchid then
-        return
-    end
-    self.menutouchid = id
-    self:touchmoved(id, x, y)
-end
-
-function Menu:touchmoved(id, x, y)
-    if self.menutouchid ~= id then
-        return
-    end
-    x, y = Canvas.inverseTransformPoint(x, y)
+function Menu:itemAtPoint(x, y)
     for i, menuitem in ipairs(self.menuitems) do
         if math.testrects(
             x, y, 0, 0,
             menuitem.x, menuitem.y,
             menuitem.width, menuitem.height
         ) then
-            self:selectButton(i)
-            return
+            return i, menuitem
         end
     end
-    self:selectButton()
 end
 
-function Menu:touchreleased(id)
+function Menu:touchpressed(id, x, y)
+    if self.menutouchid then
+        return
+    end
+    x, y = Canvas.inverseTransformPoint(x, y)
+    local i = self:itemAtPoint(x, y)
+    if not i then
+        return
+    end
+    self.menutouchid = id
+    self:selectButton(i)
+end
+
+function Menu:touchmoved(id, x, y, dx, dy)
+    if self.menutouchid ~= id then
+        return
+    end
+    x, y = Canvas.inverseTransformPoint(x, y)
+    local i = self:itemAtPoint(x, y)
+    self:selectButton(i)
+end
+
+function Menu:touchreleased(id, x, y)
     if self.menutouchid ~= id then
         return
     end
@@ -110,9 +118,7 @@ function Menu:selectButton(i)
         menuitem:onSelect()
         for _, cursor in ipairs(self.cursors) do
             cursor:setHidden(false)
-            cursor:setPosition(
-                menuitem.x + (cursor.offsetx or 0),
-                menuitem.y + (cursor.offsety or 0))
+            cursor:moveTo(menuitem)
             cursor:onSelect(i, menuitem)
         end
     else
