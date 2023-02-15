@@ -13,6 +13,7 @@ local paused
 local music
 local status
 local gui ---@type Gui
+local hud
 
 local TitleStatus = [[
 HONEY GUARDIAN
@@ -32,6 +33,7 @@ PRESS FIRE
 ]]
 
 function GamePhase.loadphase(startpoint)
+    local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
@@ -55,7 +57,13 @@ function GamePhase.loadphase(startpoint)
     gui = Gui.new("data/gui_gameplay.lua")
     gui.pausemenu:setHidden(true)
     gui.touch.pausemenu:setHidden(true)
-    gui.touch.hud:setHidden(true)
+    gui.touch.mainmenu:setHidden(not IsMobile)
+    gui.touch.hud:setHidden(not IsMobile)
+    gui.hud:setHidden(IsMobile)
+    hud = IsMobile and gui.touch.hud or gui.hud
+    if IsMobile then
+        gui:setActiveMenu(gui.touch.mainmenu)
+    end
     gui.touch.controls:setHidden(true)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
     Assets.get("music/Funkbuster.ogg")
@@ -69,6 +77,7 @@ function GamePhase.quitphase()
     status = nil
     music = nil
     gui = nil
+    hud = nil
     Audio.stop()
     Stage.quit()
     Tiled.clearCache()
@@ -79,7 +88,7 @@ end
 function GamePhase.fixedupdate()
     if not paused then
         Stage.fixedupdate()
-        Stage.fixedupdateHud(gui.hud)
+        Stage.fixedupdateHud(hud)
     end
     gui:fixedupdate()
 end
@@ -174,7 +183,6 @@ end
 
 function GamePhase.touchpressed(id, x, y)
     if status == TitleStatus then
-        GamePhase.startGame()
     elseif status then
         Stage.restart()
         return
@@ -194,6 +202,7 @@ function GamePhase.startGame()
     status = nil
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
+    gui.touch.mainmenu:setHidden(true)
     gui:setActiveMenu(gui.touch.controls)
     Stage.startGame()
 end

@@ -92,12 +92,12 @@ function SceneObject.drawRectangle(sceneobject)
 
     local r,g,b,a = sceneobject.red, sceneobject.green, sceneobject.blue, sceneobject.alpha
     love.graphics.setColor(r,g,b,a)
-    love.graphics.rectangle("fill", 0, 0, sceneobject.w, sceneobject.h, sceneobject.round or 0)
+    love.graphics.rectangle("fill", 0, 0, sceneobject.w, sceneobject.h, sceneobject.roundcorners or 0)
 
     r,g,b,a = sceneobject.linered, sceneobject.linegreen, sceneobject.lineblue, sceneobject.linealpha
     if a then
         love.graphics.setColor(r,g,b,a)
-        love.graphics.rectangle("line", 0, 0, sceneobject.w, sceneobject.h, sceneobject.round or 0)
+        love.graphics.rectangle("line", 0, 0, sceneobject.w, sceneobject.h, sceneobject.roundcorners or 0)
     end
 
     love.graphics.pop()
