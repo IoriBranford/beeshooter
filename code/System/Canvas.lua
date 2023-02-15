@@ -4,6 +4,8 @@ local Canvas = {}
 local maincanvas
 local canvases
 local transform
+local rotscale
+local canvasscale
 
 function Canvas.init(width, height)
     maincanvas = love.graphics.newCanvas(width, height)
@@ -18,7 +20,6 @@ function Canvas.init(width, height)
     local ghh = gh / 2
     local chw = maincanvas:getWidth() / 2
     local chh = maincanvas:getHeight() / 2
-    local canvasscale
 
     local rotation = math.rad(Config.rotation)
     local portraitrotation = Config.isPortraitRotation()
@@ -35,10 +36,13 @@ function Canvas.init(width, height)
     local filter = Config.canvasscalesoft and "linear" or "nearest"
     maincanvas:setFilter(filter, filter)
 
+    rotscale = love.math.newTransform()
+    rotscale:rotate(rotation)
+    rotscale:scale(canvasscale)
+
     transform = love.math.newTransform()
     transform:translate(math.floor(ghw), math.floor(ghh))
-    transform:rotate(rotation)
-    transform:scale(canvasscale)
+    transform:apply(rotscale)
     transform:translate(-chw, -chh)
 end
 
@@ -58,6 +62,10 @@ function Canvas.drawScaledToCanvas(draw)
     love.graphics.applyTransform(transform)
     draw()
     love.graphics.pop()
+end
+
+function Canvas.inverseTransformVector(vecx, vecy)
+    return rotscale:inverseTransformPoint(vecx, vecy)
 end
 
 function Canvas.inverseTransformPoint(x, y)
