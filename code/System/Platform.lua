@@ -1,3 +1,5 @@
+
+---@class Platform
 local Platform = {}
 
 local OS = love.system.getOS()
