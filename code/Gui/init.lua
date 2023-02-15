@@ -61,9 +61,9 @@ function Gui:touchpressed(id, x, y)
     end
 end
 
-function Gui:touchmoved(id, x, y)
+function Gui:touchmoved(id, x, y, dx, dy)
     if self.activemenu and self.activemenu.visible then
-        self.activemenu:touchmoved(id, x, y)
+        self.activemenu:touchmoved(id, x, y, dx, dy)
     end
 end
 

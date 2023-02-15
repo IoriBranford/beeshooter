@@ -12,7 +12,7 @@ local GamePhase = {}
 local paused
 local music
 local status
-local gui
+local gui ---@type Gui
 
 local TitleStatus = [[
 HONEY GUARDIAN
@@ -162,7 +162,7 @@ end
 
 function GamePhase.mousemoved(x, y, dx, dy, istouch)
     if not istouch and love.mouse.isDown(1) then
-        gui:touchmoved("mouse", x, y)
+        gui:touchmoved("mouse", x, y, dx, dy)
     end
 end
 
@@ -176,8 +176,8 @@ function GamePhase.touchpressed(id, x, y)
     gui:touchpressed(id, x, y)
 end
 
-function GamePhase.touchmoved(id, x, y)
-    gui:touchmoved(id, x, y)
+function GamePhase.touchmoved(id, x, y, dx, dy)
+    gui:touchmoved(id, x, y, dx, dy)
 end
 
 function GamePhase.touchreleased(id)
