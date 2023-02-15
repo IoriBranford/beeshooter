@@ -16,8 +16,7 @@ then
 	cp -r $(cat game-files.txt) $GAME_ASSET_PATH
 fi
 
-cp -r appicon/android/* love-apk-src/app/src/main/res
-
+git -C love-apk-src checkout app/src/main/AndroidManifest.xml
 ANDROID_MANIFEST=love-apk-src/app/src/main/AndroidManifest.xml
 BUILD_GRADLE=love-apk-src/app/build.gradle
 
@@ -34,30 +33,30 @@ set_gradle_property() {
 	sed -i -r -e "s#${KEY} .+#${KEY} ${VALUE}#" ${FILE}
 }
 
-set_manifest_property() {
-	FILE="$1"
-	KEY="$2"
-	VALUE="$3"
-	sed -i -r -e "s#${KEY}=\".*\"#${KEY}=\"${VALUE}\"#" ${FILE}
-}
-
-replace() {
-	FILE="$1"
-	OLD="$2"
-	NEW="$3"
-	sed -i -r -e "s#${OLD}#${NEW}#" ${FILE}
-}
-
 set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
 set_gradle_property $BUILD_GRADLE versionName "'`git describe --tags --always`'"
 set_gradle_property $BUILD_GRADLE versionCode 1
-set_manifest_property $ANDROID_MANIFEST "package" "$APPLICATION_ID.executable"
-set_manifest_property $ANDROID_MANIFEST "android:label" "$PROJECT_TITLE"
 
-# device may not honor this anymore
-# set_manifest_property $ANDROID_MANIFEST "android:screenOrientation" "$SCREEN_ORIENTATION"
+xmlstarlet ed -L \
+	-u "/manifest/@package" 							-v "$APPLICATION_ID.executable" 	\
+	-u "/manifest/application/@android:label" 			-v "$PROJECT_TITLE" 				\
+	-u "/manifest/application/activity/@android:label" 	-v "$PROJECT_TITLE" 				\
+	-u "/manifest/application/activity/@android:name" 	-v "$APPLICATION_ID.GameActivity" 	\
+	$ANDROID_MANIFEST
 
-replace $ANDROID_MANIFEST "android:name=\".+GameActivity\"" "android:name=\"$APPLICATION_ID.GameActivity\""
+if [ -d appicon/android ]
+then
+	cp -r appicon/android/* love-apk-src/app/src/main/res
+	xmlstarlet ed -L \
+		-u "/manifest/application/@android:icon" -v "@mipmap/ic_launcher" \
+		$ANDROID_MANIFEST
+	
+	# uncomment if really needed
+	# xmlstarlet ed -L \
+	# 	-i "/manifest/application" \
+	# 		-type attr -n "android:roundIcon" -v "@mipmap/ic_launcher_round" \
+	# 	$ANDROID_MANIFEST
+fi
 
 cd love-apk-src
 ./gradlew assembleEmbedNoRecordRelease bundleEmbedNoRecordRelease
