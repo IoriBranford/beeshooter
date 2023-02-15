@@ -156,7 +156,7 @@ end
 
 function GamePhase.mousepressed(x, y, button, istouch)
     if not istouch and button == 1 then
-        gui:touchpressed("mouse", x, y)
+        GamePhase.touchpressed("mouse", x, y)
     end
 end
 
@@ -173,6 +173,12 @@ function GamePhase.mousereleased(x, y, button, istouch)
 end
 
 function GamePhase.touchpressed(id, x, y)
+    if status == TitleStatus then
+        GamePhase.startGame()
+    elseif status then
+        Stage.restart()
+        return
+    end
     gui:touchpressed(id, x, y)
 end
 
@@ -195,6 +201,7 @@ end
 function GamePhase.touchSetPaused(pause)
     GamePhase.setPaused(pause, gui.touch.pausemenu)
     gui:setActiveMenu(pause and gui.touch.pausemenu or gui.touch.controls)
+    gui.touch.controls:setHidden(pause)
 end
 
 function GamePhase.setPaused(pause, pausemenu)
@@ -218,6 +225,8 @@ function GamePhase.win()
     status = "COMPLETE!\n\nPress %s key\nor START button"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
+    gui.touch.controls:setHidden(true)
+    gui:setActiveMenu()
 end
 
 function GamePhase.lose(reason)
@@ -225,6 +234,8 @@ function GamePhase.lose(reason)
     status = reason or "GAME OVER\n\nPress %s key\nor START button"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
+    gui.touch.controls:setHidden(true)
+    gui:setActiveMenu()
 end
 
 function GamePhase.draw(fixedfrac)
