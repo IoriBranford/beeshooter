@@ -62,6 +62,7 @@ function GamePhase.loadphase(startpoint)
     gui.touch.hud:setHidden(not IsMobile)
     gui.hud:setHidden(IsMobile)
     hud = IsMobile and gui.touch.hud or gui.hud
+    hud:setHidden(true)
     if IsMobile then
         gui:setActiveMenu(gui.touch.mainmenu)
     end
@@ -209,6 +210,7 @@ function GamePhase.startGame()
         gui:setActiveMenu(gui.touch.controls)
     end
     Stage.startGame()
+    hud:setHidden(false)
 end
 
 function GamePhase.touchSetPaused(pause)
