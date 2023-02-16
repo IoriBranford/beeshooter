@@ -60,6 +60,7 @@ function GamePhase.loadphase(startpoint)
     gui.touch.pausemenu:setHidden(true)
     gui.touch.mainmenu:setHidden(not IsMobile)
     gui.touch.hud:setHidden(not IsMobile)
+    gui.touch.help:setHidden(true)
     gui.hud:setHidden(IsMobile)
     hud = IsMobile and gui.touch.hud or gui.hud
     hud:setHidden(true)
