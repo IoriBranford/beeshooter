@@ -48,7 +48,7 @@ function PlayerShip:init()
     self.fastspeed = self.fastspeed or 4
     self.slowspeed = self.slowspeed or 2
     self.speed = self.slowspeed
-    self.weapon = "A"
+    self.weapon = nil
     self.nextlifeindex = 1
     return self
 end
@@ -71,6 +71,7 @@ function PlayerShip:recenter()
 end
 
 function PlayerShip:respawn()
+    self.weapon = self.weapon or "A"
     PlayerShip.recenter(self)
     self:setNextCoroutines(PlayerShip.fight)
 end
@@ -305,12 +306,9 @@ function PlayerShip:updateHud(hud)
     hud.weapons.weaponA:changeTile(power.."A")
     hud.weapons.weaponB:changeTile(power.."B")
 
-    local weapon = self.weapon
-    if weapon == "A" then
-        hud.weapons:selectButton(1)
-    elseif weapon == "B" then
-        hud.weapons:selectButton(2)
-    end
+    local weapon = self.weapon == "A"and 1
+        or self.weapon == "B" and 2
+    hud.weapons:selectButton(weapon)
 
     local bonus = self.bonus
     if bonus then
