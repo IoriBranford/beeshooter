@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 19,
-  nextobjectid = 67,
+  nextlayerid = 21,
+  nextobjectid = 70,
   properties = {},
   tilesets = {
     {
@@ -127,7 +127,7 @@ return {
       id = 7,
       name = "hud",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -274,7 +274,6 @@ return {
               gid = 7,
               visible = true,
               properties = {
-                ["name"] = "border",
                 ["z"] = -1
               }
             },
@@ -291,7 +290,6 @@ return {
               gid = 7,
               visible = true,
               properties = {
-                ["name"] = "border",
                 ["z"] = -1
               }
             },
@@ -308,7 +306,6 @@ return {
               gid = 5,
               visible = true,
               properties = {
-                ["name"] = "3A",
                 ["z"] = 1
               }
             },
@@ -325,7 +322,6 @@ return {
               gid = 2,
               visible = true,
               properties = {
-                ["name"] = "1B",
                 ["z"] = 1
               }
             },
@@ -342,10 +338,8 @@ return {
               gid = 8,
               visible = true,
               properties = {
-                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
                 ["offsety"] = 8,
-                ["roundcorners"] = 1,
                 ["z"] = 1
               }
             },
@@ -362,10 +356,8 @@ return {
               gid = 8,
               visible = true,
               properties = {
-                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
                 ["offsety"] = 8,
-                ["roundcorners"] = 1,
                 ["z"] = 1
               }
             },
@@ -382,10 +374,8 @@ return {
               gid = 8,
               visible = true,
               properties = {
-                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
                 ["offsety"] = -8,
-                ["roundcorners"] = 1,
                 ["z"] = 1
               }
             },
@@ -402,10 +392,8 @@ return {
               gid = 8,
               visible = true,
               properties = {
-                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
                 ["offsety"] = -8,
-                ["roundcorners"] = 1,
                 ["z"] = 1
               }
             }
@@ -463,13 +451,7 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "resumeGame",
-            ["color"] = "#80808080",
-            ["linecolor"] = "#ffffffff",
-            ["presssound"] = "",
-            ["roundcorners"] = 1,
-            ["selectsound"] = "",
-            ["z"] = 0
+            ["action"] = "resumeGame"
           }
         },
         {
@@ -489,13 +471,7 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "endGame",
-            ["color"] = "#80808080",
-            ["linecolor"] = "#ffffffff",
-            ["presssound"] = "",
-            ["roundcorners"] = 1,
-            ["selectsound"] = "",
-            ["z"] = 0
+            ["action"] = "endGame"
           }
         },
         {
@@ -515,9 +491,7 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["offsetx"] = -16,
-            ["offsety"] = 0,
-            ["roundcorners"] = 1
+            ["offsetx"] = -16
           }
         }
       }
@@ -592,11 +566,7 @@ return {
               properties = {
                 ["action"] = "changeWeapon",
                 ["color"] = "#80808080",
-                ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["linecolor"] = "#ffffffff"
               }
             },
             {
@@ -614,10 +584,7 @@ return {
                 ["action"] = "touchPauseGame",
                 ["color"] = "#80808080",
                 ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["roundcorners"] = 1
               }
             },
             {
@@ -849,7 +816,6 @@ return {
                   gid = 5,
                   visible = true,
                   properties = {
-                    ["name"] = "3A",
                     ["z"] = 1
                   }
                 },
@@ -866,7 +832,6 @@ return {
                   gid = 2,
                   visible = true,
                   properties = {
-                    ["name"] = "1B",
                     ["z"] = 1
                   }
                 },
@@ -883,10 +848,8 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
-                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
                     ["offsety"] = 8,
-                    ["roundcorners"] = 1,
                     ["z"] = 1
                   }
                 },
@@ -903,10 +866,8 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
-                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
                     ["offsety"] = 8,
-                    ["roundcorners"] = 1,
                     ["z"] = 1
                   }
                 },
@@ -923,10 +884,8 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
-                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
                     ["offsety"] = -8,
-                    ["roundcorners"] = 1,
                     ["z"] = 1
                   }
                 },
@@ -943,10 +902,8 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
-                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
                     ["offsety"] = -8,
-                    ["roundcorners"] = 1,
                     ["z"] = 1
                   }
                 },
@@ -980,7 +937,7 @@ return {
           id = 13,
           name = "pausemenu",
           class = "Gui.Menu",
-          visible = false,
+          visible = true,
           opacity = 1,
           offsetx = 0,
           offsety = 0,
@@ -1003,10 +960,7 @@ return {
                 ["action"] = "touchResumeGame",
                 ["color"] = "#80808080",
                 ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["roundcorners"] = 1
               }
             },
             {
@@ -1024,10 +978,7 @@ return {
                 ["action"] = "endGame",
                 ["color"] = "#80808080",
                 ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["roundcorners"] = 1
               }
             },
             {
@@ -1046,7 +997,7 @@ return {
                 ["linecolor"] = "#ffffffff",
                 ["offsetx"] = -2,
                 ["offsety"] = -2,
-                ["roundcorners"] = 1
+                ["roundcorners"] = 2
               }
             },
             {
@@ -1088,13 +1039,7 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "resumeGame",
-                ["color"] = "#80808080",
-                ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["action"] = "resumeGame"
               }
             },
             {
@@ -1116,13 +1061,7 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "endGame",
-                ["color"] = "#80808080",
-                ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["action"] = "endGame"
               }
             }
           }
@@ -1146,41 +1085,35 @@ return {
               name = "start",
               class = "BeeShooter.Gui.Button",
               shape = "rectangle",
-              x = 264,
-              y = 8,
-              width = 48,
-              height = 24,
+              x = 64,
+              y = 112,
+              width = 128,
+              height = 32,
               rotation = 0,
               visible = true,
               properties = {
                 ["action"] = "startGame",
                 ["color"] = "#80808080",
                 ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["roundcorners"] = 1
               }
             },
             {
-              id = 63,
-              name = "quit",
+              id = 68,
+              name = "help",
               class = "BeeShooter.Gui.Button",
               shape = "rectangle",
-              x = 200,
-              y = 8,
-              width = 48,
-              height = 24,
+              x = 64,
+              y = 160,
+              width = 128,
+              height = 32,
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "quitGame",
+                ["action"] = "showHelp",
                 ["color"] = "#80808080",
                 ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["roundcorners"] = 1
               }
             },
             {
@@ -1188,18 +1121,18 @@ return {
               name = "cursor",
               class = "Gui.Cursor",
               shape = "rectangle",
-              x = 262,
-              y = 6,
-              width = 52,
-              height = 28,
+              x = 56,
+              y = 104,
+              width = 144,
+              height = 48,
               rotation = 0,
               visible = true,
               properties = {
                 ["color"] = "#00000000",
                 ["linecolor"] = "#ffffffff",
-                ["offsetx"] = -2,
-                ["offsety"] = -2,
-                ["roundcorners"] = 1
+                ["offsetx"] = -8,
+                ["offsety"] = -8,
+                ["roundcorners"] = 2
               }
             },
             {
@@ -1207,13 +1140,13 @@ return {
               name = "Start",
               class = "BeeShooter.Gui.Button",
               shape = "text",
-              x = 264,
-              y = 16,
-              width = 48,
-              height = 8,
+              x = 64,
+              y = 120,
+              width = 128,
+              height = 16,
               rotation = 0,
               visible = true,
-              text = "START",
+              text = "START GAME",
               fontfamily = "Press Start 2P",
               pixelsize = 8,
               wrap = true,
@@ -1221,27 +1154,21 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "resumeGame",
-                ["color"] = "#80808080",
-                ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["action"] = "resumeGame"
               }
             },
             {
-              id = 66,
-              name = "Quit",
+              id = 69,
+              name = "Help",
               class = "BeeShooter.Gui.Button",
               shape = "text",
-              x = 200,
-              y = 16,
-              width = 48,
-              height = 8,
+              x = 64,
+              y = 168,
+              width = 128,
+              height = 16,
               rotation = 0,
               visible = true,
-              text = "QUIT",
+              text = "HOW TO PLAY",
               fontfamily = "Press Start 2P",
               pixelsize = 8,
               wrap = true,
@@ -1249,13 +1176,58 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "endGame",
-                ["color"] = "#80808080",
-                ["linecolor"] = "#ffffffff",
-                ["presssound"] = "",
-                ["roundcorners"] = 1,
-                ["selectsound"] = "",
-                ["z"] = 0
+                ["action"] = "resumeGame"
+              }
+            }
+          }
+        },
+        {
+          type = "group",
+          id = 19,
+          name = "help",
+          class = "",
+          visible = true,
+          opacity = 1,
+          offsetx = 0,
+          offsety = 0,
+          parallaxx = 1,
+          parallaxy = 1,
+          properties = {},
+          layers = {
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 20,
+              name = "movement",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 67,
+                  name = "instruction",
+                  class = "BeeShooter.Gui.Button",
+                  shape = "text",
+                  x = 8,
+                  y = 40,
+                  width = 240,
+                  height = 168,
+                  rotation = 0,
+                  visible = false,
+                  text = "Swipe to move Jenny's target position.\n\nYou do not have to put your finger on the target.",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  properties = {
+                    ["action"] = "endGame"
+                  }
+                }
               }
             }
           }
