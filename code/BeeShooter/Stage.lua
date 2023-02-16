@@ -169,7 +169,7 @@ function Stage.init(startpoint)
                 if triggers then
                     for _, trigger in ipairs(triggers) do
                         local timelinepos = -stagey - trigger.y
-                        if timelinepos >= 0 then
+                        if timelinepos >= 0 and not trigger.disabled then
                             stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
                         end
                     end

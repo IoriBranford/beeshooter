@@ -139,6 +139,16 @@
             "color": "#ff00ff00",
             "id": 1,
             "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "disabled",
+                    "type": "bool",
+                    "value": false
+                }
             ],
             "name": "Trigger",
             "type": "class",

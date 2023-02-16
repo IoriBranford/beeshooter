@@ -3,6 +3,7 @@
  <object class="Trigger">
   <properties>
    <property name="action" value="spawnCharacters"/>
+   <property name="disabled" type="bool" value="false"/>
   </properties>
   <point/>
  </object>
