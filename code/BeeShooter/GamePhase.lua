@@ -136,14 +136,14 @@ function GamePhase.gamepadpressed(joystick, button)
 end
 
 function GamePhase.keypressed(key)
-    if key == Config.key_pausemenu then
+    if key == Config.key_pausemenu or key == "escape" then
         if status == TitleStatus then
             if Platform.supports("quit") then
                 love.event.quit()
             end
         elseif status then
             Stage.restart()
-        else
+        elseif key == Config.key_pausemenu then
             GamePhase.setPaused(not paused, gui.pausemenu)
         end
     elseif key == "f2" then
