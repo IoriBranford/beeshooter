@@ -17,7 +17,7 @@ local hud
 
 local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
 
-local TitleStatus = IsMobile and "HONEY SOLDIER" or [[
+local TitleStatus = IsMobile and "" or [[
 HONEY GUARDIAN
 
 
@@ -212,6 +212,19 @@ function GamePhase.startGame()
     end
     Stage.startGame()
     hud:setHidden(false)
+end
+
+function GamePhase.touchOpenHelp()
+    gui.touch.mainmenu:setHidden(true)
+    gui.touch.help:setHidden(false)
+    gui.touch.help:setPage(1)
+    gui:setActiveMenu(gui.touch.help.controls)
+end
+
+function GamePhase.touchCloseHelp()
+    gui.touch.mainmenu:setHidden(false)
+    gui.touch.help:setHidden(true)
+    gui:setActiveMenu(gui.touch.mainmenu)
 end
 
 function GamePhase.touchSetPaused(pause)
