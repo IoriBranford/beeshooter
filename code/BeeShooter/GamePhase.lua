@@ -15,7 +15,9 @@ local status
 local gui ---@type Gui
 local hud
 
-local TitleStatus = [[
+local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
+
+local TitleStatus = IsMobile and "HONEY SOLDIER" or [[
 HONEY GUARDIAN
 
 
@@ -31,8 +33,6 @@ C key / X button
 
 PRESS FIRE
 ]]
-
-local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
