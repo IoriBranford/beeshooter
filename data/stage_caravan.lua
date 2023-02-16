@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 215,
-  nextobjectid = 1903,
+  nextobjectid = 1943,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -2839,11 +2839,15 @@ return {
                 },
                 {
                   x = -16, y = 70, width = 16, height = 14,
-                  data = "eJxjYBi6oJBC/cGj9g+o/Q8p1P+fQv2yjBQaQAUAAEAUBLw="
+                  data = "eJxjYBgF5IJCCvUHj9o/oPY/pFD/fwr1yzIyMAAA4mcEvA=="
                 },
                 {
                   x = 0, y = 70, width = 16, height = 14,
-                  data = "eJxjYMAOZBkZGP4xYGJpRhwayARtaLiIRP0ZaDhk1P4Btf8+ifofoOG/JOqndfqkNQAAVnYgRQ=="
+                  data = "eJxjYMAOZBkZGP4xYGJpRhwahihog+IiEvQUIunLgOIQEvQHI+kbtZ869t8nQf9DJH0PoPgvCfr/I+kjJ18g5y0A3fQlAA=="
+                },
+                {
+                  x = 16, y = 70, width = 16, height = 14,
+                  data = "eJxjYBjZoIhC/SGj9g+o/fcp1P+XQv3SjJTpBwAHmQS9"
                 },
                 {
                   x = 0, y = 84, width = 16, height = 14,
@@ -3022,11 +3026,15 @@ return {
                 },
                 {
                   x = -16, y = 70, width = 16, height = 14,
-                  data = "eJxjYCAfsDJSoBkItCnTPgpGwZAHAJjDADI="
+                  data = "eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg=="
                 },
                 {
                   x = 0, y = 70, width = 16, height = 14,
-                  data = "eJxjY2RgYEPC7EBMCtBBw7qkaR8Fo2BEAwBH0AEC"
+                  data = "eJxjYBhYwMYIweyMxOthZUTo02GAYF0S7NRmQOgbBaNgIAEANCMBMw=="
+                },
+                {
+                  x = 16, y = 70, width = 16, height = 14,
+                  data = "eJxjYBhYwM5ImX5d6jhjFIyCAQEAlz8ANg=="
                 },
                 {
                   x = 0, y = 84, width = 16, height = 14,
@@ -3257,7 +3265,7 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["z"] = 0
+                ["z"] = 0.001
               },
               encoding = "base64",
               compression = "zlib",
@@ -3288,7 +3296,7 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["z"] = 0.125
+                ["z"] = 0.126
               },
               encoding = "base64",
               compression = "zlib",
@@ -3367,7 +3375,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -3685,7 +3694,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -4073,7 +4083,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -4605,7 +4616,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -4675,7 +4687,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -4866,7 +4879,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -5227,7 +5241,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -5428,7 +5443,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -5643,7 +5659,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -5822,7 +5839,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -6047,7 +6065,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -6078,7 +6097,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -6237,7 +6257,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -6685,7 +6706,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -6756,7 +6778,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -7087,7 +7110,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -7216,7 +7240,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -7313,7 +7338,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -7444,7 +7470,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -7949,7 +7976,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -7980,7 +8008,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -8245,7 +8274,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -8472,7 +8502,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -8535,7 +8566,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -8636,7 +8668,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -8985,7 +9018,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -9096,7 +9130,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9292,7 +9327,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9584,7 +9620,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9664,7 +9701,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9744,7 +9782,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9824,7 +9863,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9904,7 +9944,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -9984,7 +10025,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10064,7 +10106,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10144,7 +10187,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10208,7 +10252,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10451,7 +10496,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10730,7 +10776,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10812,7 +10859,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10894,7 +10942,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -10976,7 +11025,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11058,7 +11108,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11140,7 +11191,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11222,7 +11274,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11304,7 +11357,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11386,7 +11440,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11468,7 +11523,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11550,7 +11606,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11612,7 +11669,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -11643,7 +11701,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11759,7 +11818,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11875,7 +11935,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -11991,7 +12052,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12107,7 +12169,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12223,7 +12286,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12339,7 +12403,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12455,7 +12520,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12571,7 +12637,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12687,7 +12754,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12803,7 +12871,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -12919,7 +12988,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13035,7 +13105,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13151,7 +13222,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13191,14 +13263,15 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 1272,
+                  x = -96,
+                  y = 1328,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13206,8 +13279,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 8,
-                  y = 1168,
+                  x = 232,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13225,8 +13298,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 16,
-                  y = 1184,
+                  x = 240,
+                  y = 1216,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13244,8 +13317,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 40,
-                  y = 1168,
+                  x = 16,
+                  y = 1216,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13263,8 +13336,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 48,
-                  y = 1184,
+                  x = 24,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13282,27 +13355,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 24,
-                  y = 1168,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 496,
-                  visible = true,
-                  properties = {
-                    ["spawncount"] = 60,
-                    ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAntClimbingDown",
-                    ["z"] = 0.75
-                  }
-                },
-                {
-                  id = 1291,
-                  name = "",
-                  class = "AntHole",
-                  shape = "rectangle",
-                  x = 32,
-                  y = 1184,
+                  x = 248,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13320,8 +13374,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 56,
-                  y = 1168,
+                  x = 8,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13339,8 +13393,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 8,
-                  y = 1120,
+                  x = 232,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13357,8 +13411,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 16,
-                  y = 1136,
+                  x = 240,
+                  y = 1168,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13375,16 +13429,16 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 40,
-                  y = 1120,
+                  x = 16,
+                  y = 1168,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 48 },
-                    { x = 0, y = 176 },
-                    { x = 0, y = 192 }
+                    { x = 0, y = 160 },
+                    { x = 0, y = 176 }
                   },
                   properties = {}
                 },
@@ -13393,26 +13447,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1136,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 48 },
-                    { x = 0, y = 160 },
-                    { x = 0, y = 176 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 1269,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
                   x = 24,
-                  y = 1120,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13425,20 +13461,20 @@ return {
                   properties = {}
                 },
                 {
-                  id = 1288,
+                  id = 1269,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 32,
-                  y = 1136,
+                  x = 248,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 48 },
-                    { x = 0, y = 160 },
-                    { x = 0, y = 176 }
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
                   },
                   properties = {}
                 },
@@ -13447,8 +13483,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 56,
-                  y = 1120,
+                  x = 8,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13465,8 +13501,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 8,
-                  y = 1312,
+                  x = 232,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13480,8 +13516,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 16,
-                  y = 1312,
+                  x = 240,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13495,8 +13531,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 40,
-                  y = 1312,
+                  x = 16,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13510,8 +13546,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 1312,
+                  x = 24,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13525,23 +13561,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 24,
-                  y = 1312,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "markDisappear"
-                  }
-                },
-                {
-                  id = 1285,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 32,
-                  y = 1312,
+                  x = 248,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13555,8 +13576,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 56,
-                  y = 1312,
+                  x = 8,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13579,15 +13600,18 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["allenemiesdefeatedbonus"] = 25000,
+                ["allenemiesdefeatedbonuswindow"] = 30
+              },
               objects = {
                 {
                   id = 1266,
                   name = "",
                   class = "Beetle",
                   shape = "rectangle",
-                  x = 80,
-                  y = 1304,
+                  x = 56,
+                  y = 1320,
                   width = 48,
                   height = 48,
                   rotation = 90,
@@ -13600,18 +13624,37 @@ return {
                   }
                 },
                 {
+                  id = 1903,
+                  name = "",
+                  class = "Beetle",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 1320,
+                  width = 48,
+                  height = 48,
+                  rotation = -90,
+                  gid = 546,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = 1
+                  }
+                },
+                {
                   id = 1267,
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -24,
-                  y = 1272,
+                  x = -48,
+                  y = 1288,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13619,8 +13662,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 80,
-                  y = 1304,
+                  x = 56,
+                  y = 1320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13629,9 +13672,30 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -16 },
                     { x = 0, y = -24 },
-                    { x = 0, y = -160 },
-                    { x = -16, y = -176 },
-                    { x = -112, y = -176 }
+                    { x = 0, y = -144 },
+                    { x = -16, y = -160 },
+                    { x = -112, y = -160 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1904,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1320,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = -144 },
+                    { x = 16, y = -160 },
+                    { x = 112, y = -160 }
                   },
                   properties = {}
                 },
@@ -13640,8 +13704,23 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1288,
+                  x = 56,
+                  y = 1304,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1908,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1304,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13655,8 +13734,23 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1280,
+                  x = 56,
+                  y = 1296,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startBeetleShoot"
+                  }
+                },
+                {
+                  id = 1907,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1296,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13670,8 +13764,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1144,
+                  x = 56,
+                  y = 1176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13682,12 +13776,28 @@ return {
                   }
                 },
                 {
+                  id = 1905,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1176,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
                   id = 1297,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1128,
+                  x = 40,
+                  y = 1160,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13695,6 +13805,22 @@ return {
                   properties = {
                     ["action"] = "PathPoint_Rotate",
                     ["delta"] = -45
+                  }
+                },
+                {
+                  id = 1906,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 1160,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
                   }
                 }
               }
@@ -13718,14 +13844,15 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -40,
-                  y = 1184,
+                  x = -64,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -13734,7 +13861,7 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 32,
-                  y = 1208,
+                  y = 1216,
                   width = 40,
                   height = 30,
                   rotation = 0,
@@ -13744,37 +13871,38 @@ return {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1675,
+                  id = 1913,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 32,
-                  y = 1208,
+                  x = 8,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
+                    { x = 24, y = 0 },
                     { x = 56, y = 0 },
-                    { x = 104, y = 8 },
+                    { x = 96, y = 8 },
                     { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = 136, y = 24 },
+                    { x = 152, y = 40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1676,
+                  id = 1914,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 1208,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13787,11 +13915,11 @@ return {
                   }
                 },
                 {
-                  id = 1677,
+                  id = 1915,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 152,
+                  x = 104,
                   y = 1224,
                   width = 0,
                   height = 0,
@@ -13802,12 +13930,12 @@ return {
                   }
                 },
                 {
-                  id = 1678,
+                  id = 1916,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 160,
-                  y = 1232,
+                  x = 144,
+                  y = 1240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13826,12 +13954,12 @@ return {
                   }
                 },
                 {
-                  id = 1679,
+                  id = 1917,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1264,
+                  x = 160,
+                  y = 1256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13841,12 +13969,12 @@ return {
                   }
                 },
                 {
-                  id = 1694,
+                  id = 1918,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 136,
-                  y = 1216,
+                  x = 128,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13854,6 +13982,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1919,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1232,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -13864,7 +14008,7 @@ return {
               id = 177,
               name = "r13fly2",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -13877,14 +14021,15 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 1176,
+                  x = -72,
+                  y = 1184,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = true
                   }
                 },
                 {
@@ -13893,7 +14038,7 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 48,
-                  y = 1224,
+                  y = 1232,
                   width = 40,
                   height = 30,
                   rotation = 0,
@@ -13903,6 +14048,7 @@ return {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13911,19 +14057,19 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1224,
+                  x = 24,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
+                    { x = 24, y = 0 },
                     { x = 56, y = 0 },
-                    { x = 104, y = 8 },
+                    { x = 96, y = 8 },
                     { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = 136, y = 24 },
+                    { x = 152, y = 40 }
                   },
                   properties = {}
                 },
@@ -13933,7 +14079,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 1224,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13950,8 +14096,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1240,
+                  x = 144,
+                  y = 1248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13965,8 +14111,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1248,
+                  x = 160,
+                  y = 1256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13989,8 +14135,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1280,
+                  x = 176,
+                  y = 1272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14004,8 +14150,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 152,
-                  y = 1232,
+                  x = 120,
+                  y = 1240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14013,6 +14159,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1910,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 1240,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -14043,7 +14205,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -14051,48 +14214,49 @@ return {
                   name = "",
                   class = "Wasp",
                   shape = "rectangle",
-                  x = 48,
-                  y = 1240,
+                  x = 224,
+                  y = 1176,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1689,
+                  id = 1936,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1240,
+                  x = 248,
+                  y = 1176,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = 56, y = 0 },
-                    { x = 104, y = 8 },
-                    { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = -24, y = 0 },
+                    { x = -56, y = 0 },
+                    { x = -96, y = 8 },
+                    { x = -120, y = 16 },
+                    { x = -136, y = 24 },
+                    { x = -152, y = 40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1690,
+                  id = 1937,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 1240,
+                  x = 224,
+                  y = 1176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14105,12 +14269,12 @@ return {
                   }
                 },
                 {
-                  id = 1691,
+                  id = 1938,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1256,
+                  x = 152,
+                  y = 1184,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14120,12 +14284,12 @@ return {
                   }
                 },
                 {
-                  id = 1692,
+                  id = 1939,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1264,
+                  x = 112,
+                  y = 1200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14144,12 +14308,12 @@ return {
                   }
                 },
                 {
-                  id = 1693,
+                  id = 1940,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1296,
+                  x = 96,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14159,12 +14323,12 @@ return {
                   }
                 },
                 {
-                  id = 1696,
+                  id = 1941,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 152,
-                  y = 1248,
+                  x = 128,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14172,6 +14336,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1942,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 1192,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -14182,7 +14362,7 @@ return {
               id = 179,
               name = "r14fly4",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14202,7 +14382,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = true
                   }
                 },
                 {
@@ -14210,48 +14391,49 @@ return {
                   name = "",
                   class = "Wasp",
                   shape = "rectangle",
-                  x = 64,
-                  y = 1256,
+                  x = 208,
+                  y = 1192,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484214,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1699,
+                  id = 1929,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 64,
-                  y = 1256,
+                  x = 232,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = 56, y = 0 },
-                    { x = 104, y = 8 },
-                    { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = -24, y = 0 },
+                    { x = -56, y = 0 },
+                    { x = -96, y = 8 },
+                    { x = -120, y = 16 },
+                    { x = -136, y = 24 },
+                    { x = -152, y = 40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1700,
+                  id = 1930,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1256,
+                  x = 208,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14264,12 +14446,12 @@ return {
                   }
                 },
                 {
-                  id = 1701,
+                  id = 1931,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 184,
-                  y = 1272,
+                  x = 112,
+                  y = 1208,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14279,12 +14461,12 @@ return {
                   }
                 },
                 {
-                  id = 1702,
+                  id = 1932,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1280,
+                  x = 96,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14303,12 +14485,12 @@ return {
                   }
                 },
                 {
-                  id = 1703,
+                  id = 1933,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 208,
-                  y = 1312,
+                  x = 80,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14318,12 +14500,12 @@ return {
                   }
                 },
                 {
-                  id = 1704,
+                  id = 1934,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1264,
+                  x = 136,
+                  y = 1200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14331,6 +14513,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1935,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 1200,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -14364,7 +14562,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -14597,7 +14796,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -14732,7 +14932,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -14867,7 +15068,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15002,7 +15204,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15143,7 +15346,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15284,7 +15488,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15425,7 +15630,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15566,7 +15772,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15707,7 +15914,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15848,7 +16056,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -15989,7 +16198,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16036,7 +16246,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16171,7 +16382,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16234,7 +16446,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16474,7 +16687,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16521,7 +16735,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16600,7 +16815,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16741,7 +16957,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -16882,7 +17099,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17023,7 +17241,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17164,7 +17383,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17365,7 +17585,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17566,7 +17787,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17767,7 +17989,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -17968,7 +18191,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -18169,7 +18393,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -18216,7 +18441,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -18703,7 +18929,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -18823,7 +19050,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -18854,7 +19082,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -18970,7 +19199,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19086,7 +19316,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19202,7 +19433,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19318,7 +19550,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19434,7 +19667,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19550,7 +19784,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19666,7 +19901,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19782,7 +20018,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -19914,7 +20151,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -19945,7 +20183,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -20061,7 +20300,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -20177,7 +20417,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -20293,7 +20534,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -20667,7 +20909,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -20844,7 +21087,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -21021,7 +21265,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -21744,7 +21989,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }
@@ -21775,7 +22021,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -22322,7 +22569,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23385,7 +23633,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23466,7 +23715,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23545,7 +23795,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23614,7 +23865,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23707,7 +23959,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23777,7 +24030,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23831,7 +24085,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -23931,7 +24186,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 },
                 {
@@ -24091,7 +24347,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24144,7 +24401,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24197,7 +24455,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24250,7 +24509,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24303,7 +24563,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24378,7 +24639,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24425,7 +24687,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24472,7 +24735,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24519,7 +24783,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24566,7 +24831,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24629,7 +24895,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24704,7 +24971,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
@@ -24779,7 +25047,8 @@ return {
               rotation = 0,
               visible = true,
               properties = {
-                ["action"] = "spawnCharacters"
+                ["action"] = "spawnCharacters",
+                ["disabled"] = false
               }
             },
             {
