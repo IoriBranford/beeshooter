@@ -209,9 +209,10 @@ function Tiled.addTileset(tileset)
     local alltilesets = Tiled.tilesets
 
     local tilesetname = tileset.name
-    if alltilesets[tilesetname] then
-        return alltilesets[tilesetname]
-    end
+    -- FIXME maps cannot share a tileset yet
+    -- if alltilesets[tilesetname] then
+    --     return alltilesets[tilesetname]
+    -- end
     alltilesets[tilesetname] = tileset
 
     local image = Tiled.loadImage(tileset.image)
