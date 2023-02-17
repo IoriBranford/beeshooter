@@ -472,7 +472,7 @@ function EnemyShip:BeetleShoot()
             wait(2)
         end
         shootAS(self, self.bullettype, centerangle, speeds[#speeds]+.25)
-        wait(24)
+        wait(45)
     end
 end
 
