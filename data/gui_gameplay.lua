@@ -2269,7 +2269,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["color"] = "#c0000000"
+                    ["color"] = "#e0000000"
                   }
                 },
                 {

@@ -261,7 +261,7 @@
    <objectgroup draworder="index" id="21" name="controls" class="Gui.Menu">
     <object id="77" name="backing" x="0" y="0" width="256" height="224">
      <properties>
-      <property name="color" type="color" value="#c0000000"/>
+      <property name="color" type="color" value="#e0000000"/>
      </properties>
     </object>
     <object id="73" template="gui/RectButton.tx" name="next" x="260" y="72" width="56" height="80">
