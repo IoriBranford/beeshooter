@@ -6,6 +6,7 @@ local Tiled = require "Data.Tiled"
 local Assets= require "System.Assets"
 local Database = require "Data.Database"
 local Platform = require "System.Platform"
+local Wallpaper = require "System.Wallpaper"
 local Gui      = require "Gui"
 local GamePhase = {}
 
@@ -74,6 +75,7 @@ end
 
 function GamePhase.resize()
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
+    Wallpaper.reload()
 end
 
 function GamePhase.quitphase()
@@ -271,6 +273,7 @@ function GamePhase.draw(fixedfrac)
     if paused then
         fixedfrac = 0
     end
+    Wallpaper.draw()
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
         if status then
