@@ -40,11 +40,6 @@
                     "name": "selectsound",
                     "type": "file",
                     "value": ""
-                },
-                {
-                    "name": "z",
-                    "type": "float",
-                    "value": 0
                 }
             ],
             "name": "BeeShooter.Gui.Button",
