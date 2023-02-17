@@ -19,6 +19,13 @@ local features = {
         iOS = true,
         -- Web = true,
     },
+    saveconfig = {
+        -- Windows = true,
+        -- ["Mac OS X"] = true,
+        -- Linux = true,
+        -- Android = true,
+        -- iOS = true,
+    }
 }
 
 local configoverrides = {

@@ -2,6 +2,7 @@ require "Math"
 require "Coroutine"
 local Audio = require "System.Audio"
 local Config = require "System.Config"
+local Platform = require "System.Platform"
 local Time   = require "System.Time"
 local Controls= require "System.Controls"
 local cute = require "cute"
@@ -95,7 +96,9 @@ function love.quit()
         love.quitphase()
     end
     Audio.stop()
-    Config.save()
+    if Platform.supports("saveconfig") then
+        Config.save()
+    end
 	if profile then
 		local filename = os.date("profile_%Y-%m-%d_%H-%M-%S")..".txt"
 		love.filesystem.write(filename, profile.report())
