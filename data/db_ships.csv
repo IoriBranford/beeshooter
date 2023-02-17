@@ -6,6 +6,7 @@ AntBigHead,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,,sounds/bug
 AntBigAbdomen,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,4,TRUE,,,sounds/bugkill2.mp3,250,KillSmall KillMedium DecalBlood,,,,,
 AcidAnt,BeeShooter.Character.EnemyShip,Walker,shootAtAimAngleOnDefeat,EnemyShip,2,1,TRUE,AcidBulletFalling,,sounds/bugkill1.mp3,200,KillSmall DecalAcid,,,-1.5707963267949,,
 HoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,,sounds/breakpot.mp3,,HoneyPotOpen Powerup,,,,,
+HoneyCell,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,1,TRUE,,,sounds/breakpot.mp3,,HoneyCellOpen Powerup,,,,,
 Fly,BeeShooter.Character.EnemyShip,Flyer,,EnemyShip,2,8,TRUE,FlyBullet,,sounds/bugkill2.mp3,500,KillSmall KillMedium DecalBlood,,,,,
 AntHole,BeeShooter.Character.EnemyShip,Spawner,,,,,,,,,,,,,,,
 AlienGunner,BeeShooter.Character.EnemyShip,Walker,,EnemyShip,2,8,TRUE,AlienGunnerBullet,,sounds/bugkill2.mp3,500,KillSmall KillMedium DecalBlood,,,,,

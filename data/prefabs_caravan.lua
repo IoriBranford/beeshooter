@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 11,
-  nextobjectid = 75,
+  nextobjectid = 76,
   properties = {},
   tilesets = {
     {
@@ -1740,6 +1740,22 @@ return {
           height = 32,
           rotation = 0,
           gid = 7,
+          visible = true,
+          properties = {
+            ["z"] = 1
+          }
+        },
+        {
+          id = 75,
+          name = "HoneyCellOpen",
+          class = "HoneyPotOpen",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 12,
           visible = true,
           properties = {
             ["z"] = 1
