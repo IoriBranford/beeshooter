@@ -2245,7 +2245,7 @@ return {
           layers = {
             {
               type = "objectgroup",
-              draworder = "topdown",
+              draworder = "index",
               id = 21,
               name = "controls",
               class = "Gui.Menu",
@@ -3239,7 +3239,7 @@ return {
                       height = 48,
                       rotation = 0,
                       visible = true,
-                      text = "Honeypots release Honey Crystals.\nWhen Jenny touches a Crystal, she gains a weapon level and a moment of invincibility.",
+                      text = "Shoot Honey Pots to release precious Honey Crystals.\n\nWhen Jenny touches a Crystal, she gains a weapon level and a moment of invincibility.",
                       fontfamily = "Press Start 2P",
                       pixelsize = 8,
                       wrap = true,
@@ -3447,48 +3447,6 @@ return {
                   properties = {},
                   objects = {
                     {
-                      id = 166,
-                      name = "weaponbackA",
-                      class = "",
-                      shape = "rectangle",
-                      x = 152,
-                      y = 64,
-                      width = 16,
-                      height = 16,
-                      rotation = 0,
-                      gid = 7,
-                      visible = true,
-                      properties = {}
-                    },
-                    {
-                      id = 167,
-                      name = "weaponbackB",
-                      class = "",
-                      shape = "rectangle",
-                      x = 200,
-                      y = 64,
-                      width = 16,
-                      height = 16,
-                      rotation = 0,
-                      gid = 7,
-                      visible = true,
-                      properties = {}
-                    },
-                    {
-                      id = 169,
-                      name = "weaponbackB",
-                      class = "",
-                      shape = "rectangle",
-                      x = 152,
-                      y = 112,
-                      width = 16,
-                      height = 16,
-                      rotation = 0,
-                      gid = 7,
-                      visible = true,
-                      properties = {}
-                    },
-                    {
                       id = 153,
                       name = "title",
                       class = "BeeShooter.Gui.Button",
@@ -3540,7 +3498,7 @@ return {
                       height = 48,
                       rotation = 0,
                       visible = true,
-                      text = "If Jenny is hit by a bullet or enemy flying at Jenny's height, she loses a weapon level.\nIf Jenny has no more weapon levels, she loses a life.",
+                      text = "If Jenny is hit by a bullet or enemy flying at her height, she loses a weapon level.\n\nIf Jenny has no more weapon levels, she loses a life.",
                       fontfamily = "Press Start 2P",
                       pixelsize = 8,
                       wrap = true,
@@ -3718,44 +3676,6 @@ return {
                       gid = 79,
                       visible = true,
                       properties = {}
-                    },
-                    {
-                      id = 177,
-                      name = "",
-                      class = "",
-                      shape = "polyline",
-                      x = -12,
-                      y = 192,
-                      width = 0,
-                      height = 0,
-                      rotation = 0,
-                      visible = true,
-                      polyline = {
-                        { x = 0, y = 0 },
-                        { x = 7, y = 7 }
-                      },
-                      properties = {
-                        ["color"] = "#ffff0000"
-                      }
-                    },
-                    {
-                      id = 178,
-                      name = "",
-                      class = "",
-                      shape = "polyline",
-                      x = -4,
-                      y = 192,
-                      width = 0,
-                      height = 0,
-                      rotation = 0,
-                      visible = true,
-                      polyline = {
-                        { x = -1, y = 0 },
-                        { x = -8, y = 7 }
-                      },
-                      properties = {
-                        ["color"] = "#ffff0000"
-                      }
                     }
                   }
                 }

@@ -258,7 +258,7 @@
    </object>
   </objectgroup>
   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
-   <objectgroup id="21" name="controls" class="Gui.Menu">
+   <objectgroup draworder="index" id="21" name="controls" class="Gui.Menu">
     <object id="77" name="backing" x="0" y="0" width="256" height="224">
      <properties>
       <property name="color" type="color" value="#c0000000"/>
@@ -459,7 +459,8 @@
       <properties>
        <property name="action" value="endGame"/>
       </properties>
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Honeypots release Honey Crystals.
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Shoot Honey Pots to release precious Honey Crystals.
+
 When Jenny touches a Crystal, she gains a weapon level and a moment of invincibility.</text>
      </object>
      <object id="134" gid="20" x="56" y="56" width="16" height="32"/>
@@ -477,9 +478,6 @@ When Jenny touches a Crystal, she gains a weapon level and a moment of invincibi
      <object id="137" gid="12" x="64" y="72" width="32" height="32" rotation="270"/>
     </objectgroup>
     <objectgroup draworder="index" id="28" name="damage">
-     <object id="166" name="weaponbackA" gid="7" x="152" y="64" width="16" height="16"/>
-     <object id="167" name="weaponbackB" gid="7" x="200" y="64" width="16" height="16"/>
-     <object id="169" name="weaponbackB" gid="7" x="152" y="112" width="16" height="16"/>
      <object id="153" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
       <properties>
        <property name="action" value="endGame"/>
@@ -493,7 +491,8 @@ When Jenny touches a Crystal, she gains a weapon level and a moment of invincibi
       <properties>
        <property name="action" value="endGame"/>
       </properties>
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">If Jenny is hit by a bullet or enemy flying at Jenny's height, she loses a weapon level.
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">If Jenny is hit by a bullet or enemy flying at her height, she loses a weapon level.
+
 If Jenny has no more weapon levels, she loses a life.</text>
      </object>
      <object id="156" gid="10" x="96" y="112" width="32" height="32"/>
@@ -517,18 +516,6 @@ If Jenny has no more weapon levels, she loses a life.</text>
      <object id="173" gid="63" x="56" y="72" width="32" height="32"/>
      <object id="174" gid="79" x="88" y="104" width="16" height="8" rotation="45"/>
      <object id="175" gid="79" x="72" y="88" width="16" height="8" rotation="45"/>
-     <object id="177" x="-12" y="192">
-      <properties>
-       <property name="color" type="color" value="#ffff0000"/>
-      </properties>
-      <polyline points="0,0 7,7"/>
-     </object>
-     <object id="178" x="-4" y="192">
-      <properties>
-       <property name="color" type="color" value="#ffff0000"/>
-      </properties>
-      <polyline points="-1,0 -8,7"/>
-     </object>
     </objectgroup>
    </group>
   </group>
