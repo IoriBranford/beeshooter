@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 215,
-  nextobjectid = 1943,
+  nextlayerid = 217,
+  nextobjectid = 1947,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -5420,8 +5420,56 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 25,
+              name = "room2powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 173,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 3568,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 174,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 3576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 40,
-              name = "room3fly1",
+              name = "r3fly1",
               class = "",
               visible = true,
               opacity = 1,
@@ -6026,56 +6074,8 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 25,
-              name = "room2powerup",
-              class = "",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 173,
-                  name = "",
-                  class = "HoneyPot",
-                  shape = "rectangle",
-                  x = 136,
-                  y = 3568,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 490,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 174,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -80,
-                  y = 3576,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "spawnCharacters",
-                    ["disabled"] = false
-                  }
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
               id = 28,
-              name = "room4fly1",
+              name = "r4fly1",
               class = "",
               visible = true,
               opacity = 1,
@@ -6234,6 +6234,54 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 215,
+              name = "room4powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1943,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 3184,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1944,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3192,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 36,
               name = "room5fly1",
               class = "",
@@ -6383,6 +6431,54 @@ return {
                   properties = {
                     ["action"] = "",
                     ["subscript"] = "self.speed = slowspeed or 2"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 216,
+              name = "r5powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1945,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 3056,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1946,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 3064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = false
                   }
                 }
               }

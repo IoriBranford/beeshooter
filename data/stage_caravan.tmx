@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="215" nextobjectid="1943">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="1947">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -643,7 +643,11 @@ A brief chance to practice controls</text>
      <polyline points="0,32 -88,-8"/>
     </object>
    </objectgroup>
-   <objectgroup id="40" name="room3fly1">
+   <objectgroup id="25" name="room2powerup">
+    <object id="173" template="enemies/HoneyPot.tx" x="136" y="3568"/>
+    <object id="174" template="triggers/SpawnCharacters.tx" x="-80" y="3576"/>
+   </objectgroup>
+   <objectgroup id="40" name="r3fly1">
     <object id="446" template="triggers/SpawnCharacters.tx" x="-56" y="3544"/>
     <object id="447" template="enemies/FlyBackground.tx" x="64" y="3616"/>
     <object id="448" template="enemies/FlyLeftBackground.tx" x="192" y="3616"/>
@@ -798,11 +802,7 @@ self.speed = slowspeed or 1</property>
      <point/>
     </object>
    </objectgroup>
-   <objectgroup id="25" name="room2powerup">
-    <object id="173" template="enemies/HoneyPot.tx" x="136" y="3568"/>
-    <object id="174" template="triggers/SpawnCharacters.tx" x="-80" y="3576"/>
-   </objectgroup>
-   <objectgroup id="28" name="room4fly1">
+   <objectgroup id="28" name="r4fly1">
     <object id="228" template="triggers/SpawnCharacters.tx" x="-56" y="3168"/>
     <object id="229" class="Path" x="-16" y="3144">
      <polyline points="0,88 48,48 88,32 120,32 144,40 160,48 168,64 168,72 160,80 144,88 104,96 72,112 48,144 40,184 40,224 56,264 88,296 160,336"/>
@@ -840,6 +840,10 @@ end</property>
       <property name="subscript" value="self.speed = slowspeed or 2"/>
      </properties>
     </object>
+   </objectgroup>
+   <objectgroup id="215" name="room4powerup">
+    <object id="1943" template="enemies/HoneyCell.tx" class="HoneyCell" x="192" y="3184"/>
+    <object id="1944" template="triggers/SpawnCharacters.tx" x="-56" y="3192"/>
    </objectgroup>
    <objectgroup id="36" name="room5fly1">
     <object id="385" template="triggers/SpawnCharacters.tx" x="-40" y="3064"/>
@@ -879,6 +883,10 @@ end</property>
       <property name="subscript" value="self.speed = slowspeed or 2"/>
      </properties>
     </object>
+   </objectgroup>
+   <objectgroup id="216" name="r5powerup">
+    <object id="1945" template="enemies/HoneyCell.tx" class="HoneyCell" x="64" y="3056"/>
+    <object id="1946" template="triggers/SpawnCharacters.tx" x="-72" y="3064"/>
    </objectgroup>
    <objectgroup id="20" name="room6fly">
     <object id="152" class="Path" x="272" y="2832">
