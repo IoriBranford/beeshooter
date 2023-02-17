@@ -15,6 +15,8 @@ local music
 local status
 local gui ---@type Gui
 local hud
+local mainmenu
+local touchcontrols
 
 local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
 
@@ -59,15 +61,19 @@ function GamePhase.loadphase(startpoint)
     gui = Gui.new("data/gui_gameplay.lua")
     gui.pausemenu:setHidden(true)
     gui.touch.pausemenu:setHidden(true)
+    mainmenu = IsMobile and gui.touch.mainmenu or gui.mainmenu
+    gui.mainmenu:setHidden(IsMobile)
     gui.touch.mainmenu:setHidden(not IsMobile)
     gui.touch.hud:setHidden(not IsMobile)
     gui.touch.help:setHidden(true)
     gui.hud:setHidden(IsMobile)
     hud = IsMobile and gui.touch.hud or gui.hud
     hud:setHidden(true)
-    if IsMobile then
-        gui:setActiveMenu(gui.touch.mainmenu)
+    gui:setActiveMenu(mainmenu)
+    if not IsMobile then
+        mainmenu:selectButton(1)
     end
+    touchcontrols = IsMobile and gui.touch.controls
     gui.touch.controls:setHidden(true)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
     Assets.get("music/Funkbuster.ogg")
@@ -94,7 +100,7 @@ function GamePhase.fixedupdate()
     if not paused then
         Stage.fixedupdate()
         Stage.fixedupdateHud(hud)
-        Stage.fixedupdateTouchController(gui.touch.controls)
+        Stage.fixedupdateTouchController(touchcontrols)
     end
     gui:fixedupdate()
 end
@@ -115,28 +121,16 @@ function GamePhase.gamepadpressed(joystick, button)
 
     if button == "start" then
         if status == TitleStatus then
-            GamePhase.startGame()
         elseif status then
             Stage.restart()
         else
             GamePhase.setPaused(not paused, gui.pausemenu)
+            gui.pausemenu:selectButton(1)
         end
         return
-    elseif button == Config.joy_fire then
-        if status == TitleStatus then
-            GamePhase.startGame()
-        elseif paused then
-            gui.pausemenu:pressSelectedButton()
-        end
-    elseif button == "dpup" then
-        if paused then
-            gui.pausemenu:moveCursor(-1)
-        end
-    elseif button == "dpdown" then
-        if paused then
-            gui.pausemenu:moveCursor(1)
-        end
     end
+
+    gui:gamepadpressed(joystick, button)
 end
 
 function GamePhase.keypressed(key)
@@ -149,24 +143,15 @@ function GamePhase.keypressed(key)
             Stage.restart()
         elseif key == Config.key_pausemenu then
             GamePhase.setPaused(not paused, gui.pausemenu)
+            gui.pausemenu:selectButton(1)
         end
+        return
     elseif key == "f2" then
         Stage.restart()
-    elseif key == Config.key_fire then
-        if status == TitleStatus then
-            GamePhase.startGame()
-        elseif paused then
-            gui.pausemenu:pressSelectedButton()
-        end
-    elseif key == Config.key_up then
-        if paused then
-            gui.pausemenu:moveCursor(-1)
-        end
-    elseif key == Config.key_down then
-        if paused then
-            gui.pausemenu:moveCursor(1)
-        end
+        return
     end
+
+    gui:keypressed(key)
 end
 
 function GamePhase.mousepressed(x, y, button, istouch)
@@ -208,30 +193,32 @@ function GamePhase.startGame()
     status = nil
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
-    gui.touch.mainmenu:setHidden(true)
+    mainmenu:setHidden(true)
     if IsMobile then
         gui:setActiveMenu(gui.touch.controls)
     end
     Stage.startGame()
     hud:setHidden(false)
+    gui.titleart:setHidden(true)
 end
 
 function GamePhase.touchOpenHelp()
-    gui.touch.mainmenu:setHidden(true)
+    mainmenu:setHidden(true)
     gui.touch.help:setHidden(false)
     gui.touch.help:setPage(1)
     gui:setActiveMenu(gui.touch.help.controls)
 end
 
 function GamePhase.touchCloseHelp()
-    gui.touch.mainmenu:setHidden(false)
     gui.touch.help:setHidden(true)
-    gui:setActiveMenu(gui.touch.mainmenu)
+    gui:setActiveMenu(mainmenu)
 end
 
 function GamePhase.touchSetPaused(pause)
     GamePhase.setPaused(pause, gui.touch.pausemenu)
-    gui:setActiveMenu(pause and gui.touch.pausemenu or gui.touch.controls)
+    if not pause then
+        gui:setActiveMenu(gui.touch.controls)
+    end
     gui.touch.controls:setHidden(pause)
 end
 
@@ -242,6 +229,9 @@ function GamePhase.setPaused(pause, pausemenu)
     -- end
     pausemenu = pausemenu or gui.pausemenu
     pausemenu:setHidden(not paused)
+    if pause then
+        gui:setActiveMenu(pausemenu)
+    end
 end
 
 function GamePhase.update(dsecs, fixedfrac)
