@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 29,
-  nextobjectid = 185,
+  nextlayerid = 32,
+  nextobjectid = 192,
   properties = {},
   tilesets = {
     {
@@ -1044,6 +1044,118 @@ return {
   },
   layers = {
     {
+      type = "imagelayer",
+      image = "titleart.png",
+      id = 29,
+      name = "titleart",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      repeatx = false,
+      repeaty = false,
+      properties = {}
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 31,
+      name = "mainmenu",
+      class = "Gui.Menu",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 188,
+          name = "Start",
+          class = "BeeShooter.Gui.Button",
+          shape = "text",
+          x = 112,
+          y = 160,
+          width = 64,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "Start",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["action"] = "startGame"
+          }
+        },
+        {
+          id = 189,
+          name = "Title",
+          class = "",
+          shape = "text",
+          x = 64,
+          y = 16,
+          width = 128,
+          height = 16,
+          rotation = 0,
+          visible = true,
+          text = "HONEY SOLDIER",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          halign = "center",
+          valign = "center",
+          properties = {}
+        },
+        {
+          id = 190,
+          name = "Quit",
+          class = "BeeShooter.Gui.Button",
+          shape = "text",
+          x = 112,
+          y = 176,
+          width = 64,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "Quit",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["action"] = "quitGame"
+          }
+        },
+        {
+          id = 191,
+          name = "cursor",
+          class = "Gui.Cursor",
+          shape = "text",
+          x = 96,
+          y = 160,
+          width = 8,
+          height = 8,
+          rotation = 0,
+          visible = true,
+          text = "▶",
+          fontfamily = "Press Start 2P",
+          pixelsize = 8,
+          wrap = true,
+          color = { 255, 255, 255 },
+          properties = {
+            ["offsetx"] = -16
+          }
+        }
+      }
+    },
+    {
       type = "group",
       id = 7,
       name = "hud",
@@ -1068,9 +1180,7 @@ return {
           offsety = 0,
           parallaxx = 1,
           parallaxy = 1,
-          properties = {
-            ["z"] = 0
-          },
+          properties = {},
           objects = {
             {
               id = 1,
@@ -1178,9 +1288,7 @@ return {
           offsety = 0,
           parallaxx = 1,
           parallaxy = 1,
-          properties = {
-            ["z"] = 0
-          },
+          properties = {},
           objects = {
             {
               id = 8,
@@ -1194,9 +1302,7 @@ return {
               rotation = 0,
               gid = 7,
               visible = true,
-              properties = {
-                ["z"] = -1
-              }
+              properties = {}
             },
             {
               id = 9,
@@ -1210,9 +1316,7 @@ return {
               rotation = 0,
               gid = 7,
               visible = true,
-              properties = {
-                ["z"] = -1
-              }
+              properties = {}
             },
             {
               id = 5,
@@ -1226,9 +1330,7 @@ return {
               rotation = 0,
               gid = 5,
               visible = true,
-              properties = {
-                ["z"] = 1
-              }
+              properties = {}
             },
             {
               id = 6,
@@ -1242,9 +1344,7 @@ return {
               rotation = 0,
               gid = 2,
               visible = true,
-              properties = {
-                ["z"] = 1
-              }
+              properties = {}
             },
             {
               id = 10,
@@ -1260,8 +1360,7 @@ return {
               visible = true,
               properties = {
                 ["offsetx"] = 8,
-                ["offsety"] = 8,
-                ["z"] = 1
+                ["offsety"] = 8
               }
             },
             {
@@ -1278,8 +1377,7 @@ return {
               visible = true,
               properties = {
                 ["offsetx"] = -8,
-                ["offsety"] = 8,
-                ["z"] = 1
+                ["offsety"] = 8
               }
             },
             {
@@ -1296,8 +1394,7 @@ return {
               visible = true,
               properties = {
                 ["offsetx"] = -8,
-                ["offsety"] = -8,
-                ["z"] = 1
+                ["offsety"] = -8
               }
             },
             {
@@ -1314,8 +1411,7 @@ return {
               visible = true,
               properties = {
                 ["offsetx"] = 8,
-                ["offsety"] = -8,
-                ["z"] = 1
+                ["offsety"] = -8
               }
             }
           }
@@ -1589,9 +1685,7 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {
-                ["z"] = 0
-              },
+              properties = {},
               objects = {
                 {
                   id = 49,
@@ -1720,9 +1814,7 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {
-                ["z"] = 0
-              },
+              properties = {},
               objects = {
                 {
                   id = 164,
@@ -1736,9 +1828,7 @@ return {
                   rotation = 0,
                   gid = 7,
                   visible = true,
-                  properties = {
-                    ["z"] = -1
-                  }
+                  properties = {}
                 },
                 {
                   id = 165,
@@ -1752,9 +1842,7 @@ return {
                   rotation = 0,
                   gid = 7,
                   visible = true,
-                  properties = {
-                    ["z"] = -1
-                  }
+                  properties = {}
                 },
                 {
                   id = 28,
@@ -1768,9 +1856,7 @@ return {
                   rotation = 0,
                   gid = 5,
                   visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
+                  properties = {}
                 },
                 {
                   id = 29,
@@ -1784,9 +1870,7 @@ return {
                   rotation = 0,
                   gid = 2,
                   visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
+                  properties = {}
                 },
                 {
                   id = 30,
@@ -1802,8 +1886,7 @@ return {
                   visible = true,
                   properties = {
                     ["offsetx"] = 8,
-                    ["offsety"] = 8,
-                    ["z"] = 1
+                    ["offsety"] = 8
                   }
                 },
                 {
@@ -1820,8 +1903,7 @@ return {
                   visible = true,
                   properties = {
                     ["offsetx"] = -8,
-                    ["offsety"] = 8,
-                    ["z"] = 1
+                    ["offsety"] = 8
                   }
                 },
                 {
@@ -1838,8 +1920,7 @@ return {
                   visible = true,
                   properties = {
                     ["offsetx"] = -8,
-                    ["offsety"] = -8,
-                    ["z"] = 1
+                    ["offsety"] = -8
                   }
                 },
                 {
@@ -1856,8 +1937,7 @@ return {
                   visible = true,
                   properties = {
                     ["offsetx"] = 8,
-                    ["offsety"] = -8,
-                    ["z"] = 1
+                    ["offsety"] = -8
                   }
                 },
                 {
@@ -2039,7 +2119,7 @@ return {
               class = "BeeShooter.Gui.Button",
               shape = "rectangle",
               x = 64,
-              y = 96,
+              y = 128,
               width = 128,
               height = 32,
               rotation = 0,
@@ -2057,7 +2137,7 @@ return {
               class = "BeeShooter.Gui.Button",
               shape = "rectangle",
               x = 64,
-              y = 144,
+              y = 176,
               width = 128,
               height = 32,
               rotation = 0,
@@ -2075,7 +2155,7 @@ return {
               class = "Gui.Cursor",
               shape = "rectangle",
               x = 56,
-              y = 88,
+              y = 120,
               width = 144,
               height = 48,
               rotation = 0,
@@ -2094,7 +2174,7 @@ return {
               class = "",
               shape = "text",
               x = 64,
-              y = 104,
+              y = 136,
               width = 128,
               height = 16,
               rotation = 0,
@@ -2114,7 +2194,7 @@ return {
               class = "",
               shape = "text",
               x = 64,
-              y = 48,
+              y = 16,
               width = 128,
               height = 16,
               rotation = 0,
@@ -2134,7 +2214,7 @@ return {
               class = "",
               shape = "text",
               x = 64,
-              y = 152,
+              y = 184,
               width = 128,
               height = 16,
               rotation = 0,
@@ -2189,8 +2269,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["color"] = "#c0000000",
-                    ["z"] = -1
+                    ["color"] = "#c0000000"
                   }
                 },
                 {
@@ -2246,8 +2325,7 @@ return {
                     { x = 32, y = 16 }
                   },
                   properties = {
-                    ["color"] = "#ffffffff",
-                    ["z"] = 1
+                    ["color"] = "#ffffffff"
                   }
                 },
                 {
@@ -2267,8 +2345,7 @@ return {
                     { x = -32, y = 16 }
                   },
                   properties = {
-                    ["color"] = "#ffffffff",
-                    ["z"] = 1
+                    ["color"] = "#ffffffff"
                   }
                 },
                 {
@@ -2931,9 +3008,7 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {
-                        ["z"] = 1
-                      }
+                      properties = {}
                     },
                     {
                       id = 115,
@@ -2947,9 +3022,7 @@ return {
                       rotation = 0,
                       gid = 2,
                       visible = true,
-                      properties = {
-                        ["z"] = 1
-                      }
+                      properties = {}
                     },
                     {
                       id = 116,
@@ -2965,8 +3038,7 @@ return {
                       visible = true,
                       properties = {
                         ["offsetx"] = 8,
-                        ["offsety"] = 8,
-                        ["z"] = 1
+                        ["offsety"] = 8
                       }
                     },
                     {
@@ -2983,8 +3055,7 @@ return {
                       visible = true,
                       properties = {
                         ["offsetx"] = -8,
-                        ["offsety"] = 8,
-                        ["z"] = 1
+                        ["offsety"] = 8
                       }
                     },
                     {
@@ -3001,8 +3072,7 @@ return {
                       visible = true,
                       properties = {
                         ["offsetx"] = -8,
-                        ["offsety"] = -8,
-                        ["z"] = 1
+                        ["offsety"] = -8
                       }
                     },
                     {
@@ -3019,8 +3089,7 @@ return {
                       visible = true,
                       properties = {
                         ["offsetx"] = 8,
-                        ["offsety"] = -8,
-                        ["z"] = 1
+                        ["offsety"] = -8
                       }
                     },
                     {
@@ -3389,9 +3458,7 @@ return {
                       rotation = 0,
                       gid = 7,
                       visible = true,
-                      properties = {
-                        ["z"] = -1
-                      }
+                      properties = {}
                     },
                     {
                       id = 167,
@@ -3405,9 +3472,7 @@ return {
                       rotation = 0,
                       gid = 7,
                       visible = true,
-                      properties = {
-                        ["z"] = -1
-                      }
+                      properties = {}
                     },
                     {
                       id = 169,
@@ -3421,9 +3486,7 @@ return {
                       rotation = 0,
                       gid = 7,
                       visible = true,
-                      properties = {
-                        ["z"] = -1
-                      }
+                      properties = {}
                     },
                     {
                       id = 153,
@@ -3464,9 +3527,7 @@ return {
                       color = { 255, 255, 255 },
                       halign = "right",
                       valign = "bottom",
-                      properties = {
-                        ["z"] = -1
-                      }
+                      properties = {}
                     },
                     {
                       id = 155,
@@ -3558,9 +3619,7 @@ return {
                       rotation = 0,
                       gid = 3,
                       visible = true,
-                      properties = {
-                        ["z"] = 1
-                      }
+                      properties = {}
                     },
                     {
                       id = 159,
@@ -3574,9 +3633,7 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {
-                        ["z"] = 1
-                      }
+                      properties = {}
                     },
                     {
                       id = 168,
@@ -3590,9 +3647,7 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {
-                        ["z"] = 1
-                      }
+                      properties = {}
                     },
                     {
                       id = 170,

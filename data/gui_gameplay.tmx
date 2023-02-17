@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="29" nextobjectid="185">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="32" nextobjectid="192">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -13,11 +13,34 @@
  <tileset firstgid="63" source="tilesets/Fly.tsx"/>
  <tileset firstgid="79" source="tilesets/FlyBullet.tsx"/>
  <tileset firstgid="81" source="tilesets/Controls.tsx"/>
+ <imagelayer id="29" name="titleart">
+  <image source="titleart.png" width="256" height="224"/>
+ </imagelayer>
+ <objectgroup id="31" name="mainmenu" class="Gui.Menu">
+  <object id="188" name="Start" class="BeeShooter.Gui.Button" x="112" y="160" width="64" height="8">
+   <properties>
+    <property name="action" value="startGame"/>
+   </properties>
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start</text>
+  </object>
+  <object id="189" name="Title" x="64" y="16" width="128" height="16">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
+  </object>
+  <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="112" y="176" width="64" height="8">
+   <properties>
+    <property name="action" value="quitGame"/>
+   </properties>
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
+  </object>
+  <object id="191" name="cursor" class="Gui.Cursor" x="96" y="160" width="8" height="8">
+   <properties>
+    <property name="offsetx" type="float" value="-16"/>
+   </properties>
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+  </object>
+ </objectgroup>
  <group id="7" name="hud">
   <objectgroup draworder="index" id="2" name="status">
-   <properties>
-    <property name="z" type="float" value="0"/>
-   </properties>
    <object id="1" name="score" x="8" y="8" width="112" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
    </object>
@@ -36,55 +59,32 @@
    </object>
   </objectgroup>
   <objectgroup draworder="index" id="6" name="weapons" class="Gui.Menu">
-   <properties>
-    <property name="z" type="float" value="0"/>
-   </properties>
-   <object id="8" name="weaponbackA" gid="7" x="220" y="192" width="16" height="16">
-    <properties>
-     <property name="z" type="float" value="-1"/>
-    </properties>
-   </object>
-   <object id="9" name="weaponbackB" gid="7" x="240" y="192" width="16" height="16">
-    <properties>
-     <property name="z" type="float" value="-1"/>
-    </properties>
-   </object>
-   <object id="5" name="weaponA" class="Gui.Button" gid="5" x="220" y="192" width="16" height="16">
-    <properties>
-     <property name="z" type="float" value="1"/>
-    </properties>
-   </object>
-   <object id="6" name="weaponB" class="Gui.Button" gid="2" x="240" y="192" width="16" height="16">
-    <properties>
-     <property name="z" type="float" value="1"/>
-    </properties>
-   </object>
+   <object id="8" name="weaponbackA" gid="7" x="220" y="192" width="16" height="16"/>
+   <object id="9" name="weaponbackB" gid="7" x="240" y="192" width="16" height="16"/>
+   <object id="5" name="weaponA" class="Gui.Button" gid="5" x="220" y="192" width="16" height="16"/>
+   <object id="6" name="weaponB" class="Gui.Button" gid="2" x="240" y="192" width="16" height="16"/>
    <object id="10" name="weaponcursor1" class="Gui.Cursor" gid="8" x="228" y="200" width="16" height="16">
     <properties>
      <property name="offsetx" type="float" value="8"/>
      <property name="offsety" type="float" value="8"/>
-     <property name="z" type="float" value="1"/>
     </properties>
    </object>
    <object id="11" name="weaponcursor2" class="Gui.Cursor" gid="8" x="212" y="200" width="16" height="16" rotation="90">
     <properties>
      <property name="offsetx" type="float" value="-8"/>
      <property name="offsety" type="float" value="8"/>
-     <property name="z" type="float" value="1"/>
     </properties>
    </object>
    <object id="12" name="weaponcursor3" class="Gui.Cursor" gid="8" x="212" y="184" width="16" height="16" rotation="180">
     <properties>
      <property name="offsetx" type="float" value="-8"/>
      <property name="offsety" type="float" value="-8"/>
-     <property name="z" type="float" value="1"/>
     </properties>
    </object>
    <object id="13" name="weaponcursor4" class="Gui.Cursor" gid="8" x="228" y="184" width="16" height="16" rotation="270">
     <properties>
      <property name="offsetx" type="float" value="8"/>
      <property name="offsety" type="float" value="-8"/>
-     <property name="z" type="float" value="1"/>
     </properties>
    </object>
   </objectgroup>
@@ -137,9 +137,6 @@
   </objectgroup>
   <group id="17" name="hud">
    <objectgroup draworder="index" id="16" name="status">
-    <properties>
-     <property name="z" type="float" value="0"/>
-    </properties>
     <object id="49" name="score" x="-68" y="24" width="64" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
     </object>
@@ -161,55 +158,32 @@
     </object>
    </objectgroup>
    <objectgroup draworder="index" id="12" name="weapons" class="Gui.Menu">
-    <properties>
-     <property name="z" type="float" value="0"/>
-    </properties>
-    <object id="164" name="weaponbackA" gid="7" x="272" y="144" width="16" height="16">
-     <properties>
-      <property name="z" type="float" value="-1"/>
-     </properties>
-    </object>
-    <object id="165" name="weaponbackB" gid="7" x="304" y="144" width="16" height="16">
-     <properties>
-      <property name="z" type="float" value="-1"/>
-     </properties>
-    </object>
-    <object id="28" name="weaponA" class="Gui.Button" gid="5" x="272" y="144" width="16" height="16">
-     <properties>
-      <property name="z" type="float" value="1"/>
-     </properties>
-    </object>
-    <object id="29" name="weaponB" class="Gui.Button" gid="2" x="304" y="144" width="16" height="16">
-     <properties>
-      <property name="z" type="float" value="1"/>
-     </properties>
-    </object>
+    <object id="164" name="weaponbackA" gid="7" x="272" y="144" width="16" height="16"/>
+    <object id="165" name="weaponbackB" gid="7" x="304" y="144" width="16" height="16"/>
+    <object id="28" name="weaponA" class="Gui.Button" gid="5" x="272" y="144" width="16" height="16"/>
+    <object id="29" name="weaponB" class="Gui.Button" gid="2" x="304" y="144" width="16" height="16"/>
     <object id="30" name="weaponcursor1" class="Gui.Cursor" gid="8" x="280" y="152" width="16" height="16">
      <properties>
       <property name="offsetx" type="float" value="8"/>
       <property name="offsety" type="float" value="8"/>
-      <property name="z" type="float" value="1"/>
      </properties>
     </object>
     <object id="31" name="weaponcursor2" class="Gui.Cursor" gid="8" x="264" y="152" width="16" height="16" rotation="90">
      <properties>
       <property name="offsetx" type="float" value="-8"/>
       <property name="offsety" type="float" value="8"/>
-      <property name="z" type="float" value="1"/>
      </properties>
     </object>
     <object id="32" name="weaponcursor3" class="Gui.Cursor" gid="8" x="264" y="136" width="16" height="16" rotation="180">
      <properties>
       <property name="offsetx" type="float" value="-8"/>
       <property name="offsety" type="float" value="-8"/>
-      <property name="z" type="float" value="1"/>
      </properties>
     </object>
     <object id="33" name="weaponcursor4" class="Gui.Cursor" gid="8" x="280" y="136" width="16" height="16" rotation="270">
      <properties>
       <property name="offsetx" type="float" value="8"/>
       <property name="offsety" type="float" value="-8"/>
-      <property name="z" type="float" value="1"/>
      </properties>
     </object>
     <object id="55" name="Weapon" x="264" y="120" width="48" height="8">
@@ -254,17 +228,17 @@
    </object>
   </objectgroup>
   <objectgroup id="18" name="mainmenu" class="Gui.Menu">
-   <object id="62" template="gui/RectButton.tx" name="start" class="BeeShooter.Gui.Button" x="64" y="96" width="128" height="32">
+   <object id="62" template="gui/RectButton.tx" name="start" class="BeeShooter.Gui.Button" x="64" y="128" width="128" height="32">
     <properties>
      <property name="action" value="startGame"/>
     </properties>
    </object>
-   <object id="68" template="gui/RectButton.tx" name="help" class="BeeShooter.Gui.Button" x="64" y="144" width="128" height="32">
+   <object id="68" template="gui/RectButton.tx" name="help" class="BeeShooter.Gui.Button" x="64" y="176" width="128" height="32">
     <properties>
      <property name="action" value="touchOpenHelp"/>
     </properties>
    </object>
-   <object id="64" name="cursor" class="Gui.Cursor" x="56" y="88" width="144" height="48">
+   <object id="64" name="cursor" class="Gui.Cursor" x="56" y="120" width="144" height="48">
     <properties>
      <property name="color" type="color" value="#00000000"/>
      <property name="linecolor" type="color" value="#ffffffff"/>
@@ -273,13 +247,13 @@
      <property name="roundcorners" type="float" value="2"/>
     </properties>
    </object>
-   <object id="65" name="Start" x="64" y="104" width="128" height="16">
+   <object id="65" name="Start" x="64" y="136" width="128" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">START GAME</text>
    </object>
-   <object id="181" name="Title" x="64" y="48" width="128" height="16">
+   <object id="181" name="Title" x="64" y="16" width="128" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
    </object>
-   <object id="69" name="Help" x="64" y="152" width="128" height="16">
+   <object id="69" name="Help" x="64" y="184" width="128" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HOW TO PLAY</text>
    </object>
   </objectgroup>
@@ -288,7 +262,6 @@
     <object id="77" name="backing" x="0" y="0" width="256" height="224">
      <properties>
       <property name="color" type="color" value="#c0000000"/>
-      <property name="z" type="float" value="-1"/>
      </properties>
     </object>
     <object id="73" template="gui/RectButton.tx" name="next" x="260" y="72" width="56" height="80">
@@ -304,14 +277,12 @@
     <object id="78" name="nextarrow" x="272" y="96">
      <properties>
       <property name="color" type="color" value="#ffffffff"/>
-      <property name="z" type="float" value="1"/>
      </properties>
      <polygon points="0,0 0,32 32,16"/>
     </object>
     <object id="79" name="prevarrow" x="-16" y="96">
      <properties>
       <property name="color" type="color" value="#ffffffff"/>
-      <property name="z" type="float" value="1"/>
      </properties>
      <polygon points="0,0 0,32 -32,16"/>
     </object>
@@ -434,42 +405,30 @@
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
      </object>
-     <object id="114" name="weaponA" class="Gui.Button" gid="1" x="48" y="104" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="1"/>
-      </properties>
-     </object>
-     <object id="115" name="weaponB" class="Gui.Button" gid="2" x="96" y="104" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="1"/>
-      </properties>
-     </object>
+     <object id="114" name="weaponA" class="Gui.Button" gid="1" x="48" y="104" width="16" height="16"/>
+     <object id="115" name="weaponB" class="Gui.Button" gid="2" x="96" y="104" width="16" height="16"/>
      <object id="116" name="weaponcursor1" class="Gui.Cursor" gid="8" x="104" y="112" width="16" height="16">
       <properties>
        <property name="offsetx" type="float" value="8"/>
        <property name="offsety" type="float" value="8"/>
-       <property name="z" type="float" value="1"/>
       </properties>
      </object>
      <object id="117" name="weaponcursor2" class="Gui.Cursor" gid="8" x="88" y="112" width="16" height="16" rotation="90">
       <properties>
        <property name="offsetx" type="float" value="-8"/>
        <property name="offsety" type="float" value="8"/>
-       <property name="z" type="float" value="1"/>
       </properties>
      </object>
      <object id="118" name="weaponcursor3" class="Gui.Cursor" gid="8" x="88" y="96" width="16" height="16" rotation="180">
       <properties>
        <property name="offsetx" type="float" value="-8"/>
        <property name="offsety" type="float" value="-8"/>
-       <property name="z" type="float" value="1"/>
       </properties>
      </object>
      <object id="119" name="weaponcursor4" class="Gui.Cursor" gid="8" x="104" y="96" width="16" height="16" rotation="270">
       <properties>
        <property name="offsetx" type="float" value="8"/>
        <property name="offsety" type="float" value="-8"/>
-       <property name="z" type="float" value="1"/>
       </properties>
      </object>
      <object id="125" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
@@ -518,21 +477,9 @@ When Jenny touches a Crystal, she gains a weapon level and a moment of invincibi
      <object id="137" gid="12" x="64" y="72" width="32" height="32" rotation="270"/>
     </objectgroup>
     <objectgroup draworder="index" id="28" name="damage">
-     <object id="166" name="weaponbackA" gid="7" x="152" y="64" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="-1"/>
-      </properties>
-     </object>
-     <object id="167" name="weaponbackB" gid="7" x="200" y="64" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="-1"/>
-      </properties>
-     </object>
-     <object id="169" name="weaponbackB" gid="7" x="152" y="112" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="-1"/>
-      </properties>
-     </object>
+     <object id="166" name="weaponbackA" gid="7" x="152" y="64" width="16" height="16"/>
+     <object id="167" name="weaponbackB" gid="7" x="200" y="64" width="16" height="16"/>
+     <object id="169" name="weaponbackB" gid="7" x="152" y="112" width="16" height="16"/>
      <object id="153" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
       <properties>
        <property name="action" value="endGame"/>
@@ -540,9 +487,6 @@ When Jenny touches a Crystal, she gains a weapon level and a moment of invincibi
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">DAMAGE &amp; DEATH</text>
      </object>
      <object id="154" name="lives" x="-12" y="128" width="8" height="88">
-      <properties>
-       <property name="z" type="float" value="-1"/>
-      </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="bottom">♥♥♥</text>
      </object>
      <object id="155" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
@@ -565,21 +509,9 @@ If Jenny has no more weapon levels, she loses a life.</text>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
      </object>
-     <object id="158" name="weaponA" class="Gui.Button" gid="3" x="152" y="64" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="1"/>
-      </properties>
-     </object>
-     <object id="159" name="weaponB" class="Gui.Button" gid="1" x="200" y="64" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="1"/>
-      </properties>
-     </object>
-     <object id="168" name="weaponB" class="Gui.Button" gid="1" x="152" y="112" width="16" height="16">
-      <properties>
-       <property name="z" type="float" value="1"/>
-      </properties>
-     </object>
+     <object id="158" name="weaponA" class="Gui.Button" gid="3" x="152" y="64" width="16" height="16"/>
+     <object id="159" name="weaponB" class="Gui.Button" gid="1" x="200" y="64" width="16" height="16"/>
+     <object id="168" name="weaponB" class="Gui.Button" gid="1" x="152" y="112" width="16" height="16"/>
      <object id="170" gid="13" x="200" y="112" width="32" height="32"/>
      <object id="172" gid="50" x="200" y="128" width="64" height="64"/>
      <object id="173" gid="63" x="56" y="72" width="32" height="32"/>
