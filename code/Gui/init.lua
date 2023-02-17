@@ -55,6 +55,18 @@ function Gui:setActiveMenu(menu)
     self.activemenu = menu
 end
 
+function Gui:keypressed(key)
+    if self.activemenu and self.activemenu.visible then
+        self.activemenu:keypressed(key)
+    end
+end
+
+function Gui:gamepadpressed(gamepad, button)
+    if self.activemenu and self.activemenu.visible then
+        self.activemenu:gamepadpressed(gamepad, button)
+    end
+end
+
 function Gui:touchpressed(id, x, y)
     if self.activemenu and self.activemenu.visible then
         self.activemenu:touchpressed(id, x, y)
