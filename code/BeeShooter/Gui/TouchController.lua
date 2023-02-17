@@ -63,4 +63,10 @@ function TouchController:touchreleased(id)
     Controls.releaseTouchButton("fire")
 end
 
+function TouchController:keypressed(key)
+end
+
+function TouchController:gamepadpressed(gamepad, button)
+end
+
 return TouchController
