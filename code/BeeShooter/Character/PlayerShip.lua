@@ -319,6 +319,9 @@ function PlayerShip:updateHud(hud)
 end
 
 function PlayerShip:updateTouchController(touchcontroller)
+    if not touchcontroller then
+        return
+    end
     if self.defeated then
         touchcontroller:hideMoveCursor()
     elseif not touchcontroller.movecursor.visible then
