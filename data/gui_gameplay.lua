@@ -1291,34 +1291,6 @@ return {
           properties = {},
           objects = {
             {
-              id = 8,
-              name = "weaponbackA",
-              class = "",
-              shape = "rectangle",
-              x = 220,
-              y = 192,
-              width = 16,
-              height = 16,
-              rotation = 0,
-              gid = 7,
-              visible = true,
-              properties = {}
-            },
-            {
-              id = 9,
-              name = "weaponbackB",
-              class = "",
-              shape = "rectangle",
-              x = 240,
-              y = 192,
-              width = 16,
-              height = 16,
-              rotation = 0,
-              gid = 7,
-              visible = true,
-              properties = {}
-            },
-            {
               id = 5,
               name = "weaponA",
               class = "Gui.Button",
@@ -1816,34 +1788,6 @@ return {
               parallaxy = 1,
               properties = {},
               objects = {
-                {
-                  id = 164,
-                  name = "weaponbackA",
-                  class = "",
-                  shape = "rectangle",
-                  x = 272,
-                  y = 144,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 7,
-                  visible = true,
-                  properties = {}
-                },
-                {
-                  id = 165,
-                  name = "weaponbackB",
-                  class = "",
-                  shape = "rectangle",
-                  x = 304,
-                  y = 144,
-                  width = 16,
-                  height = 16,
-                  rotation = 0,
-                  gid = 7,
-                  visible = true,
-                  properties = {}
-                },
                 {
                   id = 28,
                   name = "weaponA",
