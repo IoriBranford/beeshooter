@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="EnterBackground" class="PathPoint">
+  <properties>
+   <property name="action" value="enterBackground"/>
+  </properties>
+  <point/>
+ </object>
+</template>
