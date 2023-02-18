@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object class="PathPoint">
+ <object name="FaceLeft" class="PathPoint">
   <properties>
    <property name="action" value="faceLeft"/>
   </properties>

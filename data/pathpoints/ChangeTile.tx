@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object class="PathPoint">
+ <object name="ChangeTile" class="PathPoint">
   <properties>
    <property name="subscript" value="changeTile(self, pathpoint.tile)"/>
    <property name="tile" value=""/>
