@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="1947">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="2038">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -103,20 +103,23 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="-0.125"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="28" width="16" height="14">
+     <chunk x="0" y="14" width="16" height="14">
    eJxjYBgFo2BwgTmMDAw70fAsRuL1zsWidiYJZtATAAAzOQaR
+  </chunk>
+     <chunk x="0" y="28" width="16" height="14">
+   eJxjYBgFo2BgwRMy9DxCYjMxQsxoIxKD9TIi9CswQsx4zEAcBumVQ9IPM4ORSIysFwCR2RJD
   </chunk>
      <chunk x="16" y="28" width="16" height="14">
    eJxjYBgFgwn04ZGbxohf7wyg/Bo88lsYcZsB0rsNiIvw6C/EYQZMbzuQHYJHfzAQt6KZgaw3k4Gw/eloZiDrJdZ+ZDOQ9ZJiP4xG1kuq/SAaAFDsHtU=
   </chunk>
      <chunk x="0" y="42" width="16" height="14">
-   eJxjYBgFo2BgwRMy9DxCYjMxQsxoIxKD9TIi9CswQsx4zEAcBumVQ9IPM4ORSIysFwCR2RJD
+   eJxjYBgF1AKtQNwGxO0kysFAOhBnAHEmiXKj9g9d+wHZ/Bl1
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
    eJxrZ2BgyATidihdxIAbFAJxOhC3ItHIekH0fTz6H6LpTcei9y8e/f+xmIGuV5oRt35ZRkwziNWLywxS9GIzg1S96GaQoxfZjMEGgoE4AwcOIUI/KI224cD40jYMLAbiJTjwUhL8QSwAAF4LLjA=
   </chunk>
      <chunk x="0" y="56" width="16" height="14">
-   eJxjYBgFtACFQNyGBRcRqT8YiDOw4JBR++li/0Mc9t8nUv9/IH6ABf9FUwcAEkggNg==
+   eJxjYECAdCDOAOJMBkyATw4GWoG4DYjbSZQbtX/UfmrY/wRqxyMS5WCAiZGB4TGIwUiaHAwoAOUYgVgOixpccgBgriU/
   </chunk>
      <chunk x="16" y="56" width="16" height="14">
    eJxjYECAQiBuI4CLGHCDYCDOIIBD8Oin1P7FQLyEAF6KRz8loJUIt8NwOxb96QyEww6GM2lg/0MS7L+PRf9/IH5AJP6LRb8sIwPDPwbisDQjFgMoBMhpF18axQWQ0y6+NIoOAPGHQ/4=
@@ -125,7 +128,7 @@ A brief chance to practice controls</text>
    eJxjYBgF5IJCCvUHj9o/oPY/pFD/fwr1yzIyMAAA4mcEvA==
   </chunk>
      <chunk x="0" y="70" width="16" height="14">
-   eJxjYMAOZBkZGP4xYGJpRhwahihog+IiEvQUIunLgOIQEvQHI+kbtZ869t8nQf9DJH0PoPgvCfr/I+kjJ18g5y0A3fQlAA==
+   eJxjYBjZoA2Ki0jQU4ikLwOKQ0jQH4ykb9R+6th/nwT9D5H0PYDivyTo/4+k7x8USzMSr1+WEaEPAG+fH9A=
   </chunk>
      <chunk x="16" y="70" width="16" height="14">
    eJxjYBjZoIhC/SGj9g+o/fcp1P+XQv3SjJTpBwAHmQS9
@@ -236,17 +239,17 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="0"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="28" width="16" height="14">
+     <chunk x="0" y="14" width="16" height="14">
    eJxjYBgFo2AUwEAAHjl/IvRvZGRgmMyIKT4VKLYZizgAl1gDMA==
   </chunk>
-     <chunk x="0" y="42" width="16" height="14">
+     <chunk x="0" y="28" width="16" height="14">
    eJxjYMAEGxkZGDah4c2MWBSiAVaomnQgzkDDmVA17DjMAenlh7JbgdgGyLeFYjsgbofK8eIwAyTOB8QHofZHAdVEQ3EMI8T+w1A1/Jja4fphZlQA9VRCcRUjQi8u/dpALIqkBhcWA2Jd7EEANkOHAMamFxbuyOEGCrM2Bgi2wRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAGrHJL8=
+  </chunk>
+     <chunk x="0" y="42" width="16" height="14">
+   eJxjYBg+gJWRgYENiNkZSZODAW0g1gFiXRLlRsEoIBcAAOccATM=
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
    eJxjYBgFowABWBkZGNhwYHZGwvq1gVgHB9alobtBgJUI9+HzAy8RdvDjkcPnd1xhAAAtJAN7
-  </chunk>
-     <chunk x="0" y="56" width="16" height="14">
-   eJxjYBiegJWRgYENC2ZnJE6/NhDrYMG6tHLwKBiRAABaAgFm
   </chunk>
      <chunk x="16" y="56" width="16" height="14">
    eJxjYBgcgJWReLXsWNTykmAXPxYxbSDWIRLrkmDXKBgF+AAAX3kCOw==
@@ -354,11 +357,11 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="0.125"/>
     </properties>
     <data encoding="base64" compression="zlib">
+     <chunk x="0" y="42" width="16" height="14">
+   eJxjYBhewJGRgcGZkXQ5GKgFytfjUINPbhSMAnIAAHnRAwk=
+  </chunk>
      <chunk x="16" y="42" width="16" height="14">
    eJxjYBgFo4C6wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/KAEAa6AEjQ==
-  </chunk>
-     <chunk x="0" y="56" width="16" height="14">
-   eJxjYBi+wJGRgcEJCTszkqa/Fqi+DgnXk6h/FIwCQgAASDUDyw==
   </chunk>
      <chunk x="0" y="84" width="16" height="14">
    eJxjYMANHBkZGJwZ8SggAOKBehMp0F8L1FtPgf5RMAoGOwAABSMCRw==
@@ -415,10 +418,10 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="0.001"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="28" width="16" height="14">
+     <chunk x="0" y="14" width="16" height="14">
    eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1gVgUi14xINYlQn8r1AwdNAzS245FPQBeGwPM
   </chunk>
-     <chunk x="0" y="42" width="16" height="14">
+     <chunk x="0" y="28" width="16" height="14">
    eJxjYMAErUDchobbsagbBaNgFFAGAKPKAyU=
   </chunk>
     </data>
@@ -428,7 +431,7 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="0.126"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="28" width="16" height="14">
+     <chunk x="0" y="14" width="16" height="14">
    eJxjYBgFo4A2wJGRgcGZkXy9ikCsBMROJJoD05sAxQ5AXE+C/lqg2jogtidDL7o5hPQCAKHtBng=
   </chunk>
     </data>
@@ -438,7 +441,7 @@ A brief chance to practice controls</text>
      <property name="z" type="float" value="2"/>
     </properties>
     <data encoding="base64" compression="zlib">
-     <chunk x="0" y="42" width="16" height="14">
+     <chunk x="0" y="28" width="16" height="14">
    eJxjYEAF6Qy4QSYeORhoxSPXToR+Su0fqgBfuKEDbOGIL9zQwXAOx6EGAK6JBIk=
   </chunk>
     </data>
@@ -2013,19 +2016,19 @@ self.speed = 0.75</property>
       <property name="speed" type="float" value="3"/>
      </properties>
     </object>
-    <object id="1913" template="enemies/Path.tx" gid="0" x="32" y="1264" rotation="0">
+    <object id="1913" template="enemies/Path.tx" x="32" y="1264" rotation="0">
      <polyline points="0,0 56,0 96,-8 120,-16 136,-24 152,-40"/>
     </object>
-    <object id="1914" template="pathpoints/StartEnterForeground.tx" gid="0" x="32" y="1264" rotation="0">
+    <object id="1914" template="pathpoints/StartEnterForeground.tx" x="32" y="1264" rotation="0">
      <properties>
       <property name="time" type="int" value="45"/>
      </properties>
      <point/>
     </object>
-    <object id="1915" template="pathpoints/FinishEnterForeground.tx" gid="0" x="128" y="1256" rotation="0">
+    <object id="1915" template="pathpoints/FinishEnterForeground.tx" x="128" y="1256" rotation="0">
      <point/>
     </object>
-    <object id="1916" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" gid="0" x="168" y="1240" rotation="0">
+    <object id="1916" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="168" y="1240" rotation="0">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2034,16 +2037,16 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="1917" template="pathpoints/WaspAttack.tx" gid="0" x="184" y="1224" rotation="0">
+    <object id="1917" template="pathpoints/WaspAttack.tx" x="184" y="1224" rotation="0">
      <point/>
     </object>
-    <object id="1918" template="pathpoints/FaceX.tx" gid="0" x="152" y="1248" rotation="0">
+    <object id="1918" template="pathpoints/FaceX.tx" x="152" y="1248" rotation="0">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
      <point/>
     </object>
-    <object id="1919" template="pathpoints/SetSpeed.tx" gid="0" x="152" y="1248" rotation="0">
+    <object id="1919" template="pathpoints/SetSpeed.tx" x="152" y="1248" rotation="0">
      <point/>
     </object>
    </objectgroup>
@@ -2090,19 +2093,19 @@ self.speed = 0.75</property>
       <property name="speed" type="float" value="3"/>
      </properties>
     </object>
-    <object id="1936" template="enemies/Path.tx" gid="0" x="224" y="1224" rotation="0">
+    <object id="1936" template="enemies/Path.tx" x="224" y="1224" rotation="0">
      <polyline points="0,0 -56,0 -96,-8 -120,-16 -136,-24 -152,-40"/>
     </object>
-    <object id="1937" template="pathpoints/StartEnterForeground.tx" gid="0" x="224" y="1224" rotation="0">
+    <object id="1937" template="pathpoints/StartEnterForeground.tx" x="224" y="1224" rotation="0">
      <properties>
       <property name="time" type="int" value="45"/>
      </properties>
      <point/>
     </object>
-    <object id="1938" template="pathpoints/FinishEnterForeground.tx" gid="0" x="128" y="1216" rotation="0">
+    <object id="1938" template="pathpoints/FinishEnterForeground.tx" x="128" y="1216" rotation="0">
      <point/>
     </object>
-    <object id="1939" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" gid="0" x="88" y="1200" rotation="0">
+    <object id="1939" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="88" y="1200" rotation="0">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2111,16 +2114,16 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="1940" template="pathpoints/WaspAttack.tx" gid="0" x="72" y="1184" rotation="0">
+    <object id="1940" template="pathpoints/WaspAttack.tx" x="72" y="1184" rotation="0">
      <point/>
     </object>
-    <object id="1941" template="pathpoints/FaceX.tx" gid="0" x="104" y="1208" rotation="0">
+    <object id="1941" template="pathpoints/FaceX.tx" x="104" y="1208" rotation="0">
      <properties>
       <property name="facex" type="int" value="1"/>
      </properties>
      <point/>
     </object>
-    <object id="1942" template="pathpoints/SetSpeed.tx" gid="0" x="104" y="1208" rotation="0">
+    <object id="1942" template="pathpoints/SetSpeed.tx" x="104" y="1208" rotation="0">
      <point/>
     </object>
    </objectgroup>
@@ -2174,41 +2177,354 @@ self.speed = 0.75</property>
      <property name="allenemiesdefeatedbonus" type="int" value="25000"/>
      <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
     </properties>
-    <object id="1278" template="triggers/SpawnCharacters.tx" x="-24" y="1112"/>
-    <object id="1277" template="enemies/BeetleFromBelow.tx" x="96" y="1120" rotation="-90"/>
-    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="208" y="1120" rotation="90"/>
-    <object id="1280" template="enemies/Path.tx" x="96" y="1160">
-     <polyline points="0,-40 0,-56 0,-64 0,-192 16,-208 24,-208"/>
+    <object id="1278" template="triggers/SpawnCharacters.tx" x="-24" y="1072"/>
+    <object id="1277" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="104" y="1096" width="48" height="48" rotation="90">
+     <properties>
+      <property name="speed" type="float" value="1"/>
+     </properties>
     </object>
-    <object id="1298" template="enemies/Path.tx" x="208" y="1160">
-     <polyline points="0,-40 0,-56 0,-64 0,-192 -16,-208 -24,-208"/>
+    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484194" x="216" y="1096" rotation="90">
+     <properties>
+      <property name="speed" type="float" value="1"/>
+      <property name="z" type="float" value="-1"/>
+     </properties>
     </object>
-    <object id="1282" template="pathpoints/FinishEnterForeground.tx" x="96" y="1104"/>
-    <object id="1301" template="pathpoints/FinishEnterForeground.tx" x="208" y="1104"/>
-    <object id="1284" template="pathpoints/BeetleShoot.tx" x="96" y="1096"/>
-    <object id="1300" template="pathpoints/BeetleShoot.tx" x="208" y="1096"/>
-    <object id="1324" template="pathpoints/Rotate.tx" x="96" y="968">
+    <object id="1948" class="Path" x="40" y="856">
+     <polyline points="64,240 64,224 40,208 32,208 24,208 0,192 0,176 24,160 32,160 40,160 64,144 64,128 40,112 24,112 0,96 0,80 24,64 40,64 64,48 64,32 40,16 24,16 0,0 0,-16 24,-32 40,-32 64,-48 64,-64 40,-80 24,-80 0,-96 0,-112 16,-128 24,-128"/>
+    </object>
+    <object id="2023" class="Path" x="152" y="856">
+     <polyline points="64,240 64,224 40,208 32,208 24,208 0,192 0,176 24,160 32,160 40,160 64,144 64,128 40,112 24,112 0,96 0,80 24,64 40,64 64,48 64,32 40,16 24,16 0,0 0,-16 24,-32 40,-32 64,-48 64,-64 40,-80 24,-80 0,-96 0,-112 16,-128 24,-128"/>
+    </object>
+    <object id="1949" template="pathpoints/Rotate.tx" x="64" y="1064">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1998" template="pathpoints/Rotate.tx" x="176" y="1064">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1950" template="pathpoints/FaceRight.tx" x="64" y="1064"/>
+    <object id="1997" template="pathpoints/FaceRight.tx" x="176" y="1064"/>
+    <object id="1951" template="pathpoints/FaceLeft.tx" x="80" y="1016"/>
+    <object id="2004" template="pathpoints/FaceLeft.tx" x="192" y="1016"/>
+    <object id="1952" template="pathpoints/Rotate.tx" x="80" y="1016">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2003" template="pathpoints/Rotate.tx" x="192" y="1016">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1959" template="pathpoints/Rotate.tx" x="64" y="1016">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2002" template="pathpoints/Rotate.tx" x="176" y="1016">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1953" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="1080"/>
+    <object id="1993" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="1032"/>
+    <object id="1958" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="984"/>
+    <object id="2005" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="936"/>
+    <object id="1954" template="pathpoints/ChangeTile.tx" x="80" y="1064">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1996" template="pathpoints/ChangeTile.tx" x="192" y="1064">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1956" template="pathpoints/ChangeTile.tx" x="64" y="1064">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1994" template="pathpoints/ChangeTile.tx" x="176" y="1064">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1960" template="pathpoints/ChangeTile.tx" x="80" y="1016">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2001" template="pathpoints/ChangeTile.tx" x="192" y="1016">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1955" template="pathpoints/Rotate.tx" x="80" y="1064">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1995" template="pathpoints/Rotate.tx" x="192" y="1064">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1957" template="pathpoints/EnterBackground.tx" class="PathPoint" x="40" y="1032"/>
+    <object id="1999" template="pathpoints/EnterBackground.tx" class="PathPoint" x="216" y="984"/>
+    <object id="1961" template="pathpoints/ChangeTile.tx" x="64" y="1016">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2000" template="pathpoints/ChangeTile.tx" x="176" y="1016">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1962" template="pathpoints/Rotate.tx" x="64" y="968">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2010" template="pathpoints/Rotate.tx" x="176" y="968">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1963" template="pathpoints/FaceRight.tx" x="64" y="968"/>
+    <object id="2009" template="pathpoints/FaceRight.tx" x="176" y="968"/>
+    <object id="1964" template="pathpoints/FaceLeft.tx" x="80" y="920"/>
+    <object id="2016" template="pathpoints/FaceLeft.tx" x="192" y="920"/>
+    <object id="1965" template="pathpoints/Rotate.tx" x="80" y="920">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2015" template="pathpoints/Rotate.tx" x="192" y="920">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1966" template="pathpoints/Rotate.tx" x="64" y="920">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2014" template="pathpoints/Rotate.tx" x="176" y="920">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1967" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="888"/>
+    <object id="2017" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="840"/>
+    <object id="1968" template="pathpoints/ChangeTile.tx" x="80" y="968">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2008" template="pathpoints/ChangeTile.tx" x="192" y="968">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1969" template="pathpoints/ChangeTile.tx" x="64" y="968">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2007" template="pathpoints/ChangeTile.tx" x="176" y="968">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1970" template="pathpoints/ChangeTile.tx" x="80" y="920">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2013" template="pathpoints/ChangeTile.tx" x="192" y="920">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1971" template="pathpoints/Rotate.tx" x="80" y="968">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2006" template="pathpoints/Rotate.tx" x="192" y="968">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1972" template="pathpoints/EnterBackground.tx" class="PathPoint" x="40" y="936"/>
+    <object id="2011" template="pathpoints/EnterBackground.tx" class="PathPoint" x="216" y="888"/>
+    <object id="1973" template="pathpoints/ChangeTile.tx" x="64" y="920">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2012" template="pathpoints/ChangeTile.tx" x="176" y="920">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1974" template="pathpoints/Rotate.tx" x="64" y="872">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2022" template="pathpoints/Rotate.tx" x="176" y="872">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1975" template="pathpoints/FaceRight.tx" x="64" y="872"/>
+    <object id="2021" template="pathpoints/FaceRight.tx" x="176" y="872"/>
+    <object id="1976" template="pathpoints/FaceLeft.tx" x="80" y="824"/>
+    <object id="2029" template="pathpoints/FaceLeft.tx" x="192" y="824"/>
+    <object id="1977" template="pathpoints/Rotate.tx" x="80" y="824">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2028" template="pathpoints/Rotate.tx" x="192" y="824">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1978" template="pathpoints/Rotate.tx" x="64" y="824">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="2027" template="pathpoints/Rotate.tx" x="176" y="824">
+     <properties>
+      <property name="delta" type="float" value="-90"/>
+     </properties>
+    </object>
+    <object id="1979" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="792"/>
+    <object id="2030" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="744"/>
+    <object id="1980" template="pathpoints/ChangeTile.tx" x="80" y="872">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2020" template="pathpoints/ChangeTile.tx" x="192" y="872">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1981" template="pathpoints/ChangeTile.tx" x="64" y="872">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2019" template="pathpoints/ChangeTile.tx" x="176" y="872">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1982" template="pathpoints/ChangeTile.tx" x="80" y="824">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2026" template="pathpoints/ChangeTile.tx" x="192" y="824">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1983" template="pathpoints/Rotate.tx" x="80" y="872">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2018" template="pathpoints/Rotate.tx" x="192" y="872">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1984" template="pathpoints/EnterBackground.tx" class="PathPoint" x="40" y="840"/>
+    <object id="2024" template="pathpoints/EnterBackground.tx" class="PathPoint" x="216" y="792"/>
+    <object id="1985" template="pathpoints/ChangeTile.tx" x="64" y="824">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2025" template="pathpoints/ChangeTile.tx" x="176" y="824">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1986" template="pathpoints/Rotate.tx" x="64" y="776">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2035" template="pathpoints/Rotate.tx" x="176" y="776">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1987" template="pathpoints/FaceRight.tx" x="64" y="776"/>
+    <object id="2034" template="pathpoints/FaceRight.tx" x="176" y="776"/>
+    <object id="1988" template="pathpoints/ChangeTile.tx" x="80" y="776">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="2033" template="pathpoints/ChangeTile.tx" x="192" y="776">
+     <properties>
+      <property name="tile" value="walk1"/>
+     </properties>
+    </object>
+    <object id="1989" template="pathpoints/ChangeTile.tx" x="64" y="776">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="2032" template="pathpoints/ChangeTile.tx" x="176" y="776">
+     <properties>
+      <property name="tile" value="walk0"/>
+     </properties>
+    </object>
+    <object id="1990" template="pathpoints/Rotate.tx" x="80" y="776">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="2031" template="pathpoints/Rotate.tx" x="192" y="776">
+     <properties>
+      <property name="delta" type="float" value="90"/>
+     </properties>
+    </object>
+    <object id="1991" template="pathpoints/Rotate.tx" x="40" y="744">
      <properties>
       <property name="delta" type="float" value="45"/>
      </properties>
     </object>
-    <object id="1325" template="pathpoints/Rotate.tx" x="112" y="952">
+    <object id="2036" template="pathpoints/Rotate.tx" x="152" y="744">
      <properties>
       <property name="delta" type="float" value="45"/>
      </properties>
     </object>
-    <object id="1326" template="pathpoints/Rotate.tx" x="208" y="968">
+    <object id="1992" template="pathpoints/Rotate.tx" x="56" y="728">
      <properties>
-      <property name="delta" type="float" value="-45"/>
+      <property name="delta" type="float" value="45"/>
      </properties>
     </object>
-    <object id="1327" template="pathpoints/Rotate.tx" x="192" y="952">
+    <object id="2037" template="pathpoints/Rotate.tx" x="168" y="728">
      <properties>
-      <property name="delta" type="float" value="-45"/>
+      <property name="delta" type="float" value="45"/>
      </properties>
     </object>
    </objectgroup>
-   <objectgroup id="126" name="r14acidants1">
+   <objectgroup id="126" name="r14acidants1" visible="0">
     <object id="1302" template="triggers/SpawnCharacters.tx" x="-48" y="1128"/>
     <object id="1303" class="AntHole" gid="496" x="120" y="992" width="16" height="32">
      <properties>
@@ -2235,7 +2551,7 @@ self.speed = 0.75</property>
     <object id="1317" template="pathpoints/Disappear.tx" x="120" y="1136"/>
     <object id="1323" template="pathpoints/Disappear.tx" x="184" y="1136"/>
    </objectgroup>
-   <objectgroup id="130" name="r14acidants2">
+   <objectgroup id="130" name="r14acidants2" visible="0">
     <object id="1346" template="triggers/SpawnCharacters.tx" x="-48" y="1064"/>
     <object id="1348" class="AntHole" gid="496" x="128" y="1008" width="16" height="32">
      <properties>
@@ -2262,7 +2578,7 @@ self.speed = 0.75</property>
     <object id="1355" template="pathpoints/Disappear.tx" x="128" y="1136"/>
     <object id="1356" template="pathpoints/Disappear.tx" x="176" y="1136"/>
    </objectgroup>
-   <objectgroup id="131" name="r14acidants3">
+   <objectgroup id="131" name="r14acidants3" visible="0">
     <object id="1357" template="triggers/SpawnCharacters.tx" x="-48" y="1000"/>
     <object id="1360" class="AntHole" gid="496" x="168" y="992" width="16" height="32">
      <properties>
@@ -2289,7 +2605,7 @@ self.speed = 0.75</property>
     <object id="1366" template="pathpoints/Disappear.tx" x="136" y="1136"/>
     <object id="1367" template="pathpoints/Disappear.tx" x="168" y="1136"/>
    </objectgroup>
-   <objectgroup id="129" name="r14wasp1a">
+   <objectgroup id="129" name="r14wasp1a" visible="0">
     <object id="1340" template="triggers/SpawnCharacters.tx" x="-64" y="1008"/>
     <object id="1341" template="enemies/WaspShooter.tx" x="64" y="1072"/>
     <object id="1342" template="enemies/Path.tx" x="64" y="1072">
@@ -2311,7 +2627,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1433" template="pathpoints/WaspAttack.tx" x="64" y="1064"/>
    </objectgroup>
-   <objectgroup id="128" name="r14wasp1b">
+   <objectgroup id="128" name="r14wasp1b" visible="0">
     <object id="1334" template="triggers/SpawnCharacters.tx" x="-72" y="1000"/>
     <object id="1335" template="enemies/WaspShooter.tx" x="32" y="1096"/>
     <object id="1337" template="pathpoints/StartEnterForeground.tx" x="32" y="1096">
@@ -2333,7 +2649,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1432" template="pathpoints/WaspAttack.tx" x="32" y="1088"/>
    </objectgroup>
-   <objectgroup id="137" name="r14wasp3a">
+   <objectgroup id="137" name="r14wasp3a" visible="0">
     <object id="1398" template="triggers/SpawnCharacters.tx" x="-48" y="928"/>
     <object id="1399" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="1000" rotation="0"/>
     <object id="1401" template="pathpoints/StartEnterForeground.tx" x="232" y="1000">
@@ -2355,7 +2671,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1436" template="pathpoints/WaspAttack.tx" x="232" y="992"/>
    </objectgroup>
-   <objectgroup id="136" name="r14wasp3b">
+   <objectgroup id="136" name="r14wasp3b" visible="0">
     <object id="1392" template="triggers/SpawnCharacters.tx" x="-56" y="920"/>
     <object id="1393" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="1048" rotation="0"/>
     <object id="1395" template="pathpoints/StartEnterForeground.tx" x="232" y="1048">
@@ -2377,7 +2693,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1437" template="pathpoints/WaspAttack.tx" x="232" y="1040"/>
    </objectgroup>
-   <objectgroup id="132" name="r14wasp2a">
+   <objectgroup id="132" name="r14wasp2a" visible="0">
     <object id="1368" template="triggers/SpawnCharacters.tx" x="-88" y="888"/>
     <object id="1369" template="enemies/WaspShooter.tx" x="72" y="952"/>
     <object id="1371" template="pathpoints/StartEnterForeground.tx" x="72" y="952">
@@ -2399,7 +2715,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1435" template="pathpoints/WaspAttack.tx" x="72" y="944"/>
    </objectgroup>
-   <objectgroup id="133" name="r14wasp2b">
+   <objectgroup id="133" name="r14wasp2b" visible="0">
     <object id="1374" template="triggers/SpawnCharacters.tx" x="-96" y="880"/>
     <object id="1375" template="enemies/WaspShooter.tx" x="48" y="976"/>
     <object id="1377" template="pathpoints/StartEnterForeground.tx" x="48" y="976">
@@ -2421,7 +2737,7 @@ self.speed = 0.75</property>
     </object>
     <object id="1434" template="pathpoints/WaspAttack.tx" x="48" y="968"/>
    </objectgroup>
-   <objectgroup id="127" name="r14wasp2c">
+   <objectgroup id="127" name="r14wasp2c" visible="0">
     <object id="1328" template="triggers/SpawnCharacters.tx" x="-104" y="872"/>
     <object id="1329" template="enemies/WaspShooter.tx" x="24" y="1000"/>
     <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="1000">
@@ -2443,13 +2759,13 @@ self.speed = 0.75</property>
     </object>
     <object id="1431" template="pathpoints/WaspAttack.tx" x="24" y="992"/>
    </objectgroup>
-   <objectgroup id="138" name="r14powerup">
+   <objectgroup id="138" name="r14powerup" visible="0">
     <object id="1404" template="triggers/SpawnCharacters.tx" x="-16" y="960"/>
     <object id="1405" template="enemies/ReinforcedHoneyPot.tx" x="152" y="952"/>
    </objectgroup>
    <objectgroup id="144" name="r15acidants1">
-    <object id="1458" template="triggers/SpawnCharacters.tx" x="-72" y="880"/>
-    <object id="1459" class="AntHole" gid="496" x="40" y="784" width="16" height="32">
+    <object id="1458" template="triggers/SpawnCharacters.tx" x="-72" y="656"/>
+    <object id="1459" class="AntHole" gid="496" x="40" y="560" width="16" height="32">
      <properties>
       <property name="spawncount" type="float" value="15"/>
       <property name="spawninterval" type="float" value="15"/>
@@ -2457,30 +2773,30 @@ self.speed = 0.75</property>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1461" template="enemies/Path.tx" x="40" y="768">
+    <object id="1461" template="enemies/Path.tx" x="40" y="544">
      <polyline points="0,16 -16,24 -16,40 8,64 168,64 192,40 192,24 176,16"/>
     </object>
-    <object id="1465" template="pathpoints/Disappear.tx" x="216" y="784"/>
-    <object id="1512" template="pathpoints/FaceX.tx" x="24" y="808">
+    <object id="1465" template="pathpoints/Disappear.tx" x="216" y="560"/>
+    <object id="1512" template="pathpoints/FaceX.tx" x="24" y="584">
      <properties>
       <property name="facex" type="int" value="1"/>
      </properties>
     </object>
-    <object id="1513" template="pathpoints/FaceX.tx" x="232" y="792">
+    <object id="1513" template="pathpoints/FaceX.tx" x="232" y="568">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
     </object>
-    <object id="1638" template="pathpoints/FinishEnterForeground.tx" x="24" y="792"/>
+    <object id="1638" template="pathpoints/FinishEnterForeground.tx" x="24" y="568"/>
    </objectgroup>
    <objectgroup id="170" name="r15powerup">
-    <object id="1631" template="triggers/SpawnCharacters.tx" x="-32" y="832"/>
-    <object id="1632" template="enemies/HoneyPot.tx" x="168" y="816"/>
-    <object id="1633" template="enemies/HoneyPot.tx" x="88" y="816"/>
+    <object id="1631" template="triggers/SpawnCharacters.tx" x="-32" y="608"/>
+    <object id="1632" template="enemies/HoneyPot.tx" x="168" y="592"/>
+    <object id="1633" template="enemies/HoneyPot.tx" x="88" y="592"/>
    </objectgroup>
    <objectgroup id="145" name="r15acidants2">
-    <object id="1466" template="triggers/SpawnCharacters.tx" x="-56" y="816"/>
-    <object id="1467" class="AntHole" gid="496" x="184" y="680" width="16" height="32" visible="0">
+    <object id="1466" template="triggers/SpawnCharacters.tx" x="-56" y="592"/>
+    <object id="1467" class="AntHole" gid="496" x="184" y="456" width="16" height="32" visible="0">
      <properties>
       <property name="spawncount" type="float" value="15"/>
       <property name="spawninterval" type="float" value="15"/>
@@ -2488,7 +2804,7 @@ self.speed = 0.75</property>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1507" class="AntHole" gid="496" x="72" y="696" width="16" height="32">
+    <object id="1507" class="AntHole" gid="496" x="72" y="472" width="16" height="32">
      <properties>
       <property name="spawncount" type="float" value="15"/>
       <property name="spawninterval" type="float" value="15"/>
@@ -2496,60 +2812,60 @@ self.speed = 0.75</property>
       <property name="z" type="float" value="0.75"/>
      </properties>
     </object>
-    <object id="1468" template="enemies/Path.tx" x="184" y="688">
+    <object id="1468" template="enemies/Path.tx" x="184" y="464">
      <polyline points="0,-8 16,8 32,24 32,56 8,80 -120,80 -144,56 -144,24 -112,-8"/>
     </object>
-    <object id="1505" template="enemies/Path.tx" x="88" y="680">
+    <object id="1505" template="enemies/Path.tx" x="88" y="456">
      <polyline points="-16,16 -32,32 -32,48 -8,72 88,72 112,48 112,32 96,16"/>
     </object>
-    <object id="1469" template="pathpoints/Disappear.tx" x="72" y="680"/>
-    <object id="1506" template="pathpoints/Disappear.tx" x="184" y="696"/>
-    <object id="1508" template="pathpoints/FaceX.tx" x="56" y="728">
+    <object id="1469" template="pathpoints/Disappear.tx" x="72" y="456"/>
+    <object id="1506" template="pathpoints/Disappear.tx" x="184" y="472"/>
+    <object id="1508" template="pathpoints/FaceX.tx" x="56" y="504">
      <properties>
       <property name="facex" type="int" value="1"/>
      </properties>
     </object>
-    <object id="1509" template="pathpoints/FaceX.tx" x="40" y="712">
+    <object id="1509" template="pathpoints/FaceX.tx" x="40" y="488">
      <properties>
       <property name="facex" type="int" value="1"/>
      </properties>
     </object>
-    <object id="1510" template="pathpoints/FaceX.tx" x="200" y="712">
+    <object id="1510" template="pathpoints/FaceX.tx" x="200" y="488">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
     </object>
-    <object id="1511" template="pathpoints/FaceX.tx" x="216" y="744">
+    <object id="1511" template="pathpoints/FaceX.tx" x="216" y="520">
      <properties>
       <property name="facex" type="int" value="-1"/>
      </properties>
     </object>
-    <object id="1636" template="pathpoints/FinishEnterForeground.tx" x="56" y="712"/>
-    <object id="1637" template="pathpoints/FinishEnterForeground.tx" x="200" y="696"/>
+    <object id="1636" template="pathpoints/FinishEnterForeground.tx" x="56" y="488"/>
+    <object id="1637" template="pathpoints/FinishEnterForeground.tx" x="200" y="472"/>
    </objectgroup>
    <objectgroup id="153" name="r15powerup2">
-    <object id="1529" template="triggers/SpawnCharacters.tx" x="-16" y="744"/>
-    <object id="1634" template="enemies/ReinforcedHoneyPot.tx" x="128" y="736"/>
+    <object id="1529" template="triggers/SpawnCharacters.tx" x="-16" y="520"/>
+    <object id="1634" template="enemies/ReinforcedHoneyPot.tx" x="128" y="512"/>
    </objectgroup>
    <objectgroup id="150" name="r16powerup">
-    <object id="1514" template="triggers/SpawnCharacters.tx" x="-40" y="648"/>
-    <object id="1517" template="enemies/HoneyPot.tx" x="152" y="624"/>
-    <object id="1635" template="enemies/HoneyPot.tx" x="128" y="632"/>
-    <object id="1516" template="enemies/HoneyPot.tx" x="112" y="624"/>
+    <object id="1514" template="triggers/SpawnCharacters.tx" x="-40" y="424"/>
+    <object id="1517" template="enemies/HoneyPot.tx" x="152" y="400"/>
+    <object id="1635" template="enemies/HoneyPot.tx" x="128" y="408"/>
+    <object id="1516" template="enemies/HoneyPot.tx" x="112" y="400"/>
    </objectgroup>
    <objectgroup id="172" name="r16fly1a">
-    <object id="1645" template="triggers/SpawnCharacters.tx" x="-184" y="616"/>
-    <object id="1646" template="enemies/WaspShooter.tx" x="40" y="680"/>
-    <object id="1647" template="enemies/Path.tx" x="40" y="680">
+    <object id="1645" template="triggers/SpawnCharacters.tx" x="-184" y="392"/>
+    <object id="1646" template="enemies/WaspShooter.tx" x="40" y="456"/>
+    <object id="1647" template="enemies/Path.tx" x="40" y="456">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1648" template="pathpoints/StartEnterForeground.tx" x="40" y="680">
+    <object id="1648" template="pathpoints/StartEnterForeground.tx" x="40" y="456">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1649" template="pathpoints/FinishEnterForeground.tx" x="40" y="648"/>
-    <object id="1650" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="40" y="640">
+    <object id="1649" template="pathpoints/FinishEnterForeground.tx" x="40" y="424"/>
+    <object id="1650" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="40" y="416">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2557,21 +2873,21 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1651" template="pathpoints/WaspAttack.tx" x="40" y="672"/>
+    <object id="1651" template="pathpoints/WaspAttack.tx" x="40" y="448"/>
    </objectgroup>
    <objectgroup id="175" name="r16fly1b">
-    <object id="1666" template="triggers/SpawnCharacters.tx" x="-104" y="616"/>
-    <object id="1667" template="enemies/WaspShooter.tx" gid="2147484214" x="208" y="680" rotation="0"/>
-    <object id="1668" template="enemies/Path.tx" x="208" y="680">
+    <object id="1666" template="triggers/SpawnCharacters.tx" x="-104" y="392"/>
+    <object id="1667" template="enemies/WaspShooter.tx" gid="2147484214" x="208" y="456" rotation="0"/>
+    <object id="1668" template="enemies/Path.tx" x="208" y="456">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1669" template="pathpoints/StartEnterForeground.tx" x="208" y="680">
+    <object id="1669" template="pathpoints/StartEnterForeground.tx" x="208" y="456">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1670" template="pathpoints/FinishEnterForeground.tx" x="208" y="648"/>
-    <object id="1671" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="208" y="640">
+    <object id="1670" template="pathpoints/FinishEnterForeground.tx" x="208" y="424"/>
+    <object id="1671" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="208" y="416">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2579,21 +2895,21 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1672" template="pathpoints/WaspAttack.tx" x="208" y="672"/>
+    <object id="1672" template="pathpoints/WaspAttack.tx" x="208" y="448"/>
    </objectgroup>
    <objectgroup id="173" name="r16fly2a">
-    <object id="1652" template="triggers/SpawnCharacters.tx" x="-200" y="592"/>
-    <object id="1653" template="enemies/WaspShooter.tx" x="24" y="704"/>
-    <object id="1654" template="enemies/Path.tx" x="24" y="704">
+    <object id="1652" template="triggers/SpawnCharacters.tx" x="-200" y="368"/>
+    <object id="1653" template="enemies/WaspShooter.tx" x="24" y="480"/>
+    <object id="1654" template="enemies/Path.tx" x="24" y="480">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1655" template="pathpoints/StartEnterForeground.tx" x="24" y="704">
+    <object id="1655" template="pathpoints/StartEnterForeground.tx" x="24" y="480">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1656" template="pathpoints/FinishEnterForeground.tx" x="24" y="672"/>
-    <object id="1657" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="24" y="664">
+    <object id="1656" template="pathpoints/FinishEnterForeground.tx" x="24" y="448"/>
+    <object id="1657" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="24" y="440">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2601,21 +2917,21 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1658" template="pathpoints/WaspAttack.tx" x="24" y="696"/>
+    <object id="1658" template="pathpoints/WaspAttack.tx" x="24" y="472"/>
    </objectgroup>
    <objectgroup id="174" name="r16fly2b">
-    <object id="1659" template="triggers/SpawnCharacters.tx" x="-120" y="592"/>
-    <object id="1660" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="704" rotation="0"/>
-    <object id="1661" template="enemies/Path.tx" x="232" y="704">
+    <object id="1659" template="triggers/SpawnCharacters.tx" x="-120" y="368"/>
+    <object id="1660" template="enemies/WaspShooter.tx" gid="2147484214" x="232" y="480" rotation="0"/>
+    <object id="1661" template="enemies/Path.tx" x="232" y="480">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="1662" template="pathpoints/StartEnterForeground.tx" x="232" y="704">
+    <object id="1662" template="pathpoints/StartEnterForeground.tx" x="232" y="480">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1663" template="pathpoints/FinishEnterForeground.tx" x="232" y="672"/>
-    <object id="1664" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="232" y="664">
+    <object id="1663" template="pathpoints/FinishEnterForeground.tx" x="232" y="448"/>
+    <object id="1664" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="232" y="440">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2623,132 +2939,132 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="6"/>
      </properties>
     </object>
-    <object id="1665" template="pathpoints/WaspAttack.tx" x="232" y="696"/>
+    <object id="1665" template="pathpoints/WaspAttack.tx" x="232" y="472"/>
    </objectgroup>
    <objectgroup id="180" name="r16wasp1">
-    <object id="1705" template="triggers/SpawnCharacters.tx" x="-104" y="544"/>
-    <object id="1706" template="enemies/WaspBackground.tx" x="16" y="656" rotation="0"/>
-    <object id="1713" template="enemies/WaspBackground.tx" gid="2147484208" x="240" y="656" rotation="0"/>
-    <object id="1707" template="enemies/Path.tx" x="16" y="656">
+    <object id="1705" template="triggers/SpawnCharacters.tx" x="-104" y="320"/>
+    <object id="1706" template="enemies/WaspBackground.tx" x="16" y="432" rotation="0"/>
+    <object id="1713" template="enemies/WaspBackground.tx" gid="2147484208" x="240" y="432" rotation="0"/>
+    <object id="1707" template="enemies/Path.tx" x="16" y="432">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1712" template="enemies/Path.tx" x="240" y="656">
+    <object id="1712" template="enemies/Path.tx" x="240" y="432">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1708" template="pathpoints/StartEnterForeground.tx" x="16" y="656">
+    <object id="1708" template="pathpoints/StartEnterForeground.tx" x="16" y="432">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1711" template="pathpoints/StartEnterForeground.tx" x="240" y="656">
+    <object id="1711" template="pathpoints/StartEnterForeground.tx" x="240" y="432">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1709" template="pathpoints/FinishEnterForeground.tx" x="16" y="624"/>
-    <object id="1714" template="pathpoints/FinishEnterForeground.tx" x="240" y="624"/>
-    <object id="1710" template="pathpoints/WaspAttack.tx" class="PathPoint" x="16" y="616"/>
-    <object id="1715" template="pathpoints/WaspAttack.tx" class="PathPoint" x="240" y="616"/>
+    <object id="1709" template="pathpoints/FinishEnterForeground.tx" x="16" y="400"/>
+    <object id="1714" template="pathpoints/FinishEnterForeground.tx" x="240" y="400"/>
+    <object id="1710" template="pathpoints/WaspAttack.tx" class="PathPoint" x="16" y="392"/>
+    <object id="1715" template="pathpoints/WaspAttack.tx" class="PathPoint" x="240" y="392"/>
    </objectgroup>
    <objectgroup id="182" name="r16wasp3">
-    <object id="1727" template="triggers/SpawnCharacters.tx" x="-104" y="528"/>
-    <object id="1728" template="enemies/WaspBackground.tx" x="56" y="608" rotation="0"/>
-    <object id="1729" template="enemies/WaspBackground.tx" gid="2147484208" x="200" y="608" rotation="0"/>
-    <object id="1730" template="enemies/Path.tx" x="56" y="608">
+    <object id="1727" template="triggers/SpawnCharacters.tx" x="-104" y="304"/>
+    <object id="1728" template="enemies/WaspBackground.tx" x="56" y="384" rotation="0"/>
+    <object id="1729" template="enemies/WaspBackground.tx" gid="2147484208" x="200" y="384" rotation="0"/>
+    <object id="1730" template="enemies/Path.tx" x="56" y="384">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1731" template="enemies/Path.tx" x="200" y="608">
+    <object id="1731" template="enemies/Path.tx" x="200" y="384">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1732" template="pathpoints/StartEnterForeground.tx" x="56" y="608">
+    <object id="1732" template="pathpoints/StartEnterForeground.tx" x="56" y="384">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1733" template="pathpoints/StartEnterForeground.tx" x="200" y="608">
+    <object id="1733" template="pathpoints/StartEnterForeground.tx" x="200" y="384">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1734" template="pathpoints/FinishEnterForeground.tx" x="56" y="576"/>
-    <object id="1735" template="pathpoints/FinishEnterForeground.tx" x="200" y="576"/>
-    <object id="1736" template="pathpoints/WaspAttack.tx" class="PathPoint" x="56" y="568"/>
-    <object id="1737" template="pathpoints/WaspAttack.tx" class="PathPoint" x="200" y="568"/>
+    <object id="1734" template="pathpoints/FinishEnterForeground.tx" x="56" y="352"/>
+    <object id="1735" template="pathpoints/FinishEnterForeground.tx" x="200" y="352"/>
+    <object id="1736" template="pathpoints/WaspAttack.tx" class="PathPoint" x="56" y="344"/>
+    <object id="1737" template="pathpoints/WaspAttack.tx" class="PathPoint" x="200" y="344"/>
    </objectgroup>
    <objectgroup id="184" name="r16wasp5">
-    <object id="1749" template="triggers/SpawnCharacters.tx" x="-104" y="512"/>
-    <object id="1750" template="enemies/WaspBackground.tx" x="112" y="584" rotation="0"/>
-    <object id="1751" template="enemies/WaspBackground.tx" gid="2147484208" x="144" y="584" rotation="0"/>
-    <object id="1752" template="enemies/Path.tx" x="112" y="584">
+    <object id="1749" template="triggers/SpawnCharacters.tx" x="-104" y="288"/>
+    <object id="1750" template="enemies/WaspBackground.tx" x="112" y="360" rotation="0"/>
+    <object id="1751" template="enemies/WaspBackground.tx" gid="2147484208" x="144" y="360" rotation="0"/>
+    <object id="1752" template="enemies/Path.tx" x="112" y="360">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1753" template="enemies/Path.tx" x="144" y="584">
+    <object id="1753" template="enemies/Path.tx" x="144" y="360">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1754" template="pathpoints/StartEnterForeground.tx" x="112" y="584">
+    <object id="1754" template="pathpoints/StartEnterForeground.tx" x="112" y="360">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1755" template="pathpoints/StartEnterForeground.tx" x="144" y="584">
+    <object id="1755" template="pathpoints/StartEnterForeground.tx" x="144" y="360">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1756" template="pathpoints/FinishEnterForeground.tx" x="112" y="552"/>
-    <object id="1757" template="pathpoints/FinishEnterForeground.tx" x="144" y="552"/>
-    <object id="1758" template="pathpoints/WaspAttack.tx" class="PathPoint" x="112" y="544"/>
-    <object id="1759" template="pathpoints/WaspAttack.tx" class="PathPoint" x="144" y="544"/>
+    <object id="1756" template="pathpoints/FinishEnterForeground.tx" x="112" y="328"/>
+    <object id="1757" template="pathpoints/FinishEnterForeground.tx" x="144" y="328"/>
+    <object id="1758" template="pathpoints/WaspAttack.tx" class="PathPoint" x="112" y="320"/>
+    <object id="1759" template="pathpoints/WaspAttack.tx" class="PathPoint" x="144" y="320"/>
    </objectgroup>
    <objectgroup id="185" name="r16wasp7">
-    <object id="1760" template="triggers/SpawnCharacters.tx" x="-104" y="496"/>
-    <object id="1761" template="enemies/WaspBackground.tx" x="80" y="560" rotation="0"/>
-    <object id="1762" template="enemies/WaspBackground.tx" gid="2147484208" x="176" y="560" rotation="0"/>
-    <object id="1763" template="enemies/Path.tx" x="80" y="560">
+    <object id="1760" template="triggers/SpawnCharacters.tx" x="-104" y="272"/>
+    <object id="1761" template="enemies/WaspBackground.tx" x="80" y="336" rotation="0"/>
+    <object id="1762" template="enemies/WaspBackground.tx" gid="2147484208" x="176" y="336" rotation="0"/>
+    <object id="1763" template="enemies/Path.tx" x="80" y="336">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1764" template="enemies/Path.tx" x="176" y="560">
+    <object id="1764" template="enemies/Path.tx" x="176" y="336">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1765" template="pathpoints/StartEnterForeground.tx" x="80" y="560">
+    <object id="1765" template="pathpoints/StartEnterForeground.tx" x="80" y="336">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1766" template="pathpoints/StartEnterForeground.tx" x="176" y="560">
+    <object id="1766" template="pathpoints/StartEnterForeground.tx" x="176" y="336">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1767" template="pathpoints/FinishEnterForeground.tx" x="80" y="528"/>
-    <object id="1768" template="pathpoints/FinishEnterForeground.tx" x="176" y="528"/>
-    <object id="1769" template="pathpoints/WaspAttack.tx" class="PathPoint" x="80" y="520"/>
-    <object id="1770" template="pathpoints/WaspAttack.tx" class="PathPoint" x="176" y="520"/>
+    <object id="1767" template="pathpoints/FinishEnterForeground.tx" x="80" y="304"/>
+    <object id="1768" template="pathpoints/FinishEnterForeground.tx" x="176" y="304"/>
+    <object id="1769" template="pathpoints/WaspAttack.tx" class="PathPoint" x="80" y="296"/>
+    <object id="1770" template="pathpoints/WaspAttack.tx" class="PathPoint" x="176" y="296"/>
    </objectgroup>
    <objectgroup id="187" name="r16wasp9">
-    <object id="1782" template="triggers/SpawnCharacters.tx" x="-104" y="480"/>
-    <object id="1783" template="enemies/WaspBackground.tx" x="40" y="584" rotation="0"/>
-    <object id="1784" template="enemies/WaspBackground.tx" gid="2147484208" x="216" y="584" rotation="0"/>
-    <object id="1785" template="enemies/Path.tx" x="40" y="584">
+    <object id="1782" template="triggers/SpawnCharacters.tx" x="-104" y="256"/>
+    <object id="1783" template="enemies/WaspBackground.tx" x="40" y="360" rotation="0"/>
+    <object id="1784" template="enemies/WaspBackground.tx" gid="2147484208" x="216" y="360" rotation="0"/>
+    <object id="1785" template="enemies/Path.tx" x="40" y="360">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1786" template="enemies/Path.tx" x="216" y="584">
+    <object id="1786" template="enemies/Path.tx" x="216" y="360">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
-    <object id="1787" template="pathpoints/StartEnterForeground.tx" x="40" y="584">
+    <object id="1787" template="pathpoints/StartEnterForeground.tx" x="40" y="360">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1788" template="pathpoints/StartEnterForeground.tx" x="216" y="584">
+    <object id="1788" template="pathpoints/StartEnterForeground.tx" x="216" y="360">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
     </object>
-    <object id="1789" template="pathpoints/FinishEnterForeground.tx" x="40" y="552"/>
-    <object id="1790" template="pathpoints/FinishEnterForeground.tx" x="216" y="552"/>
-    <object id="1791" template="pathpoints/WaspAttack.tx" class="PathPoint" x="40" y="544"/>
-    <object id="1792" template="pathpoints/WaspAttack.tx" class="PathPoint" x="216" y="544"/>
+    <object id="1789" template="pathpoints/FinishEnterForeground.tx" x="40" y="328"/>
+    <object id="1790" template="pathpoints/FinishEnterForeground.tx" x="216" y="328"/>
+    <object id="1791" template="pathpoints/WaspAttack.tx" class="PathPoint" x="40" y="320"/>
+    <object id="1792" template="pathpoints/WaspAttack.tx" class="PathPoint" x="216" y="320"/>
    </objectgroup>
    <objectgroup id="201" name="r18powerup2">
     <object id="1835" template="triggers/SpawnCharacters.tx" x="-152" y="208"/>
