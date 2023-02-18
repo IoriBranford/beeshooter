@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.1" name="Beetle" tilewidth="48" tileheight="48" tilecount="20" columns="5" objectalignment="center">
+<tileset version="1.9" tiledversion="1.9.2" name="Beetle" tilewidth="48" tileheight="48" tilecount="20" columns="5" objectalignment="center">
  <image source="Beetle.png" width="240" height="192"/>
  <tile id="0">
+  <properties>
+   <property name="name" value="walk1"/>
+  </properties>
   <objectgroup draworder="index" id="2">
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -39,6 +42,9 @@
   </objectgroup>
  </tile>
  <tile id="5">
+  <properties>
+   <property name="name" value="walk3"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -76,6 +82,9 @@
   </objectgroup>
  </tile>
  <tile id="10">
+  <properties>
+   <property name="name" value="walk0"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
@@ -113,6 +122,9 @@
   </objectgroup>
  </tile>
  <tile id="15">
+  <properties>
+   <property name="name" value="walk2"/>
+  </properties>
   <objectgroup>
    <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
   </objectgroup>
