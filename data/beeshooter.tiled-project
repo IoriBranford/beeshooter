@@ -18,12 +18,12 @@
                 },
                 {
                     "name": "color",
-                    "type": "color",
+                    "type": "string",
                     "value": ""
                 },
                 {
                     "name": "linecolor",
-                    "type": "color",
+                    "type": "string",
                     "value": ""
                 },
                 {
@@ -138,11 +138,6 @@
                     "name": "action",
                     "type": "string",
                     "value": ""
-                },
-                {
-                    "name": "disabled",
-                    "type": "bool",
-                    "value": false
                 }
             ],
             "name": "Trigger",

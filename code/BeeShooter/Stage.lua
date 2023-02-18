@@ -166,10 +166,10 @@ function Stage.init(startpoint)
             end
             for _, stagespawn in ipairs(stagespawns) do
                 local triggers = stagespawn.triggers
-                if triggers then
+                if triggers and stagespawn.visible then
                     for _, trigger in ipairs(triggers) do
                         local timelinepos = -stagey - trigger.y
-                        if timelinepos >= 0 and not trigger.disabled then
+                        if timelinepos >= 0 and trigger.visible then
                             stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
                         end
                     end
