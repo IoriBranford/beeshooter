@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="2052">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="218" nextobjectid="2054">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -845,7 +845,7 @@ end</property>
     </object>
    </objectgroup>
    <objectgroup id="215" name="room4powerup">
-    <object id="1943" template="enemies/HoneyCell.tx" class="HoneyCell" x="192" y="3184"/>
+    <object id="1943" template="enemies/HoneyCell.tx" x="192" y="3184"/>
     <object id="1944" template="triggers/SpawnCharacters.tx" x="-56" y="3192"/>
    </objectgroup>
    <objectgroup id="36" name="room5fly1">
@@ -888,7 +888,7 @@ end</property>
     </object>
    </objectgroup>
    <objectgroup id="216" name="r5powerup">
-    <object id="1945" template="enemies/HoneyCell.tx" class="HoneyCell" x="64" y="3056"/>
+    <object id="1945" template="enemies/HoneyCell.tx" x="64" y="3056"/>
     <object id="1946" template="triggers/SpawnCharacters.tx" x="-72" y="3064"/>
    </objectgroup>
    <objectgroup id="20" name="room6fly">
@@ -2781,9 +2781,13 @@ self.speed = 0.75</property>
     </object>
     <object id="1431" template="pathpoints/WaspAttack.tx" x="24" y="992"/>
    </objectgroup>
-   <objectgroup id="138" name="r14powerup" visible="0">
-    <object id="1404" template="triggers/SpawnCharacters.tx" x="-16" y="960"/>
-    <object id="1405" template="enemies/ReinforcedHoneyPot.tx" x="152" y="952"/>
+   <objectgroup id="138" name="r14powerup1">
+    <object id="1404" template="triggers/SpawnCharacters.tx" x="-48" y="968"/>
+    <object id="1405" template="enemies/HoneyCell.tx" x="184" y="960"/>
+   </objectgroup>
+   <objectgroup id="217" name="r14powerup2">
+    <object id="2052" template="triggers/SpawnCharacters.tx" x="-160" y="840"/>
+    <object id="2053" template="enemies/HoneyCell.tx" x="72" y="832"/>
    </objectgroup>
    <objectgroup id="144" name="r15acidants1">
     <object id="1458" template="triggers/SpawnCharacters.tx" x="-72" y="656"/>

@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 217,
-  nextobjectid = 2052,
+  nextlayerid = 218,
+  nextobjectid = 2054,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -17779,9 +17779,9 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 138,
-              name = "r14powerup",
+              name = "r14powerup1",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -17794,8 +17794,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 960,
+                  x = -48,
+                  y = 968,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17807,14 +17807,61 @@ return {
                 {
                   id = 1405,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  class = "HoneyCell",
                   shape = "rectangle",
-                  x = 152,
-                  y = 952,
+                  x = 184,
+                  y = 960,
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 492,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 217,
+              name = "r14powerup2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2052,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -160,
+                  y = 840,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2053,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 72,
+                  y = 832,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
                   visible = true,
                   properties = {
                     ["z"] = 1
