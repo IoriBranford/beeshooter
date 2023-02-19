@@ -2182,7 +2182,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="125" name="r14beetles">
     <properties>
-     <property name="allenemiesdefeatedbonus" type="int" value="25000"/>
+     <property name="allenemiesdefeatedbonus" type="int" value="50000"/>
      <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
     </properties>
     <object id="1278" template="triggers/SpawnCharacters.tx" x="-24" y="1072"/>

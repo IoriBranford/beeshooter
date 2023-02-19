@@ -14594,7 +14594,7 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["allenemiesdefeatedbonus"] = 25000,
+                ["allenemiesdefeatedbonus"] = 50000,
                 ["allenemiesdefeatedbonuswindow"] = 30
               },
               objects = {
