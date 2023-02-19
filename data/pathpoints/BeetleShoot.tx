@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object class="PathPoint">
+ <object name="BeetleShoot" class="PathPoint">
   <properties>
    <property name="action" value="BeetleShoot"/>
    <property name="actiontype" value="addcoroutine"/>
-   <property name="bursts" type="int" value="5"/>
+   <property name="bursts" type="int" value="1"/>
    <property name="burstshots" type="int" value="4"/>
   </properties>
   <point/>
