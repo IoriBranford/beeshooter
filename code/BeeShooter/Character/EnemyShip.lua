@@ -457,11 +457,12 @@ function EnemyShip:startBeetleShoot()
 end
 
 function EnemyShip:BeetleShoot()
+    local pathpoint = self.pathpoint
     local centerangle = pi/2
     local arcs = {}
     local speeds = {}
-    local bursts = 5
-    local burstshots = 4
+    local bursts = pathpoint and pathpoint.bursts or 5
+    local burstshots = pathpoint and pathpoint.burstshots or 4
     for i = 1, burstshots do
         arcs[i] = self.scalex*(burstshots - i + 1)*pi/16
         speeds[i] = 1 + i/4
