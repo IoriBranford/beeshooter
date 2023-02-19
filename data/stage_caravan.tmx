@@ -1130,8 +1130,8 @@ self.speed = fastspeed or 3</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1151,8 +1151,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1160,8 +1160,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1252,8 +1252,8 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1261,8 +1261,8 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,3 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1280,8 +1280,8 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1289,8 +1289,8 @@ end</property>
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1317,8 +1317,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1326,8 +1326,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1335,8 +1335,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1344,8 +1344,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
+ wait(40)
  AlienGunner_shootAtPlayer(self)
- wait(20)
 end</property>
      </properties>
     </object>
@@ -1398,8 +1398,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
+ wait(60)
  AlienGunner_shootAtPlayer(self)
- wait(30)
 end</property>
      </properties>
     </object>
@@ -1407,8 +1407,8 @@ end</property>
      <properties>
       <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
+ wait(60)
  AlienGunner_shootAtPlayer(self)
- wait(30)
 end</property>
      </properties>
     </object>
@@ -2844,20 +2844,20 @@ self.speed = 0.75</property>
     <object id="2082" template="pathpoints/WaspAttack.tx" x="24" y="976"/>
    </objectgroup>
    <objectgroup id="225" name="r14wasp5a">
-    <object id="2116" template="triggers/SpawnCharacters.tx" gid="0" x="-88" y="808" rotation="0">
+    <object id="2116" template="triggers/SpawnCharacters.tx" x="-88" y="808" rotation="0">
      <point/>
     </object>
     <object id="2117" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="896" rotation="0"/>
-    <object id="2118" template="pathpoints/StartEnterForeground.tx" gid="0" x="232" y="896" rotation="0">
+    <object id="2118" template="pathpoints/StartEnterForeground.tx" x="232" y="896" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
      <point/>
     </object>
-    <object id="2119" template="pathpoints/FinishEnterForeground.tx" gid="0" x="232" y="864" rotation="0">
+    <object id="2119" template="pathpoints/FinishEnterForeground.tx" x="232" y="864" rotation="0">
      <point/>
     </object>
-    <object id="2120" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" gid="0" x="232" y="856" rotation="0">
+    <object id="2120" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="232" y="856" rotation="0">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2866,28 +2866,28 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="2121" template="enemies/Path.tx" gid="0" x="232" y="896" rotation="0">
+    <object id="2121" template="enemies/Path.tx" x="232" y="896" rotation="0">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="2122" template="pathpoints/WaspAttack.tx" gid="0" x="232" y="888" rotation="0">
+    <object id="2122" template="pathpoints/WaspAttack.tx" x="232" y="888" rotation="0">
      <point/>
     </object>
    </objectgroup>
    <objectgroup id="224" name="r14wasp5b">
-    <object id="2109" template="triggers/SpawnCharacters.tx" gid="0" x="-104" y="816" rotation="0">
+    <object id="2109" template="triggers/SpawnCharacters.tx" x="-104" y="816" rotation="0">
      <point/>
     </object>
     <object id="2110" template="enemies/WaspShooter.tx" gid="570" x="120" y="888" rotation="0"/>
-    <object id="2111" template="pathpoints/StartEnterForeground.tx" gid="0" x="120" y="888" rotation="0">
+    <object id="2111" template="pathpoints/StartEnterForeground.tx" x="120" y="888" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
      <point/>
     </object>
-    <object id="2112" template="pathpoints/FinishEnterForeground.tx" gid="0" x="120" y="856" rotation="0">
+    <object id="2112" template="pathpoints/FinishEnterForeground.tx" x="120" y="856" rotation="0">
      <point/>
     </object>
-    <object id="2113" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" gid="0" x="120" y="848" rotation="0">
+    <object id="2113" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="120" y="848" rotation="0">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2896,28 +2896,28 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="2114" template="enemies/Path.tx" gid="0" x="120" y="888" rotation="0">
+    <object id="2114" template="enemies/Path.tx" x="120" y="888" rotation="0">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="2115" template="pathpoints/WaspAttack.tx" gid="0" x="120" y="880" rotation="0">
+    <object id="2115" template="pathpoints/WaspAttack.tx" x="120" y="880" rotation="0">
      <point/>
     </object>
    </objectgroup>
    <objectgroup id="223" name="r14wasp5c">
-    <object id="2102" template="triggers/SpawnCharacters.tx" gid="0" x="-72" y="800" rotation="0">
+    <object id="2102" template="triggers/SpawnCharacters.tx" x="-72" y="800" rotation="0">
      <point/>
     </object>
     <object id="2103" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="920" rotation="0"/>
-    <object id="2104" template="pathpoints/StartEnterForeground.tx" gid="0" x="232" y="920" rotation="0">
+    <object id="2104" template="pathpoints/StartEnterForeground.tx" x="232" y="920" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
      </properties>
      <point/>
     </object>
-    <object id="2105" template="pathpoints/FinishEnterForeground.tx" gid="0" x="232" y="888" rotation="0">
+    <object id="2105" template="pathpoints/FinishEnterForeground.tx" x="232" y="888" rotation="0">
      <point/>
     </object>
-    <object id="2106" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" gid="0" x="232" y="880" rotation="0">
+    <object id="2106" template="pathpoints/SlowSpeedAndShootBurstsAtPlayer.tx" class="PathPoint" x="232" y="880" rotation="0">
      <properties>
       <property name="burstinterval" type="int" value="1"/>
       <property name="bursts" type="int" value="1"/>
@@ -2926,10 +2926,10 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="2107" template="enemies/Path.tx" gid="0" x="232" y="920" rotation="0">
+    <object id="2107" template="enemies/Path.tx" x="232" y="920" rotation="0">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
-    <object id="2108" template="pathpoints/WaspAttack.tx" gid="0" x="232" y="912" rotation="0">
+    <object id="2108" template="pathpoints/WaspAttack.tx" x="232" y="912" rotation="0">
      <point/>
     </object>
    </objectgroup>

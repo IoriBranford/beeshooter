@@ -7604,7 +7604,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -7735,7 +7735,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -7751,7 +7751,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8404,7 +8404,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8420,7 +8420,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8536,7 +8536,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8552,7 +8552,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8731,7 +8731,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8747,7 +8747,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8763,7 +8763,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8779,7 +8779,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -9150,7 +9150,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n wait(60)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -9166,7 +9166,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n wait(60)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
