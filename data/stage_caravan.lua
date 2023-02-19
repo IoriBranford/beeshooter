@@ -5626,7 +5626,7 @@ return {
                 },
                 {
                   id = 453,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 64,
@@ -5636,12 +5636,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
                   id = 454,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 192,
@@ -5651,7 +5651,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = 1"
                   }
                 },
                 {
@@ -5837,7 +5837,7 @@ return {
                 },
                 {
                   id = 442,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -5847,12 +5847,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
                   id = 443,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -5862,7 +5862,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
@@ -6046,7 +6046,7 @@ return {
                 },
                 {
                   id = 444,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
@@ -6056,12 +6056,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 },
                 {
                   id = 445,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
@@ -6071,7 +6071,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = slowspeed or 1"
                   }
                 }
               }
@@ -6158,7 +6158,7 @@ return {
                 },
                 {
                   id = 232,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = -16,
@@ -6168,12 +6168,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 4"
                   }
                 },
                 {
                   id = 233,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 144,
@@ -6183,12 +6183,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
                   id = 234,
-                  name = "FaceLeft",
+                  name = "turnX",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -6198,7 +6198,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "faceLeft"
+                    ["subscript"] = "faceSpriteX(self, -1)"
                   }
                 },
                 {
@@ -6360,7 +6360,7 @@ return {
                 },
                 {
                   id = 388,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 272,
@@ -6370,12 +6370,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)\nself.speed = fastspeed or 4"
                   }
                 },
                 {
                   id = 389,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 112,
@@ -6385,12 +6385,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
                   id = 390,
-                  name = "FaceRight",
+                  name = "turnX",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -6400,7 +6400,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "faceRight"
+                    ["subscript"] = "faceSpriteX(self, 1)"
                   }
                 },
                 {
@@ -6957,7 +6957,7 @@ return {
                 },
                 {
                   id = 241,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -6967,12 +6967,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 413,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -6982,12 +6982,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 247,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -6997,12 +6997,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 412,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -7012,12 +7012,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 243,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
@@ -7027,12 +7027,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 246,
-                  name = "EnterBackground",
+                  name = "toBack",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -7042,12 +7042,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterBackground"
+                    ["subscript"] = "enterBackground(self)"
                   }
                 },
                 {
                   id = 242,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
@@ -7057,12 +7057,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
                   id = 414,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
@@ -7072,12 +7072,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
                   id = 245,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
@@ -7087,12 +7087,12 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
                   id = 411,
-                  name = "EnterForeground",
+                  name = "toFront",
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
@@ -7102,7 +7102,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "enterForeground"
+                    ["subscript"] = "enterForeground(self)"
                   }
                 },
                 {
@@ -7117,7 +7117,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "markDisappear"
+                    ["action"] = "",
+                    ["subscript"] = "markDisappear(self)"
                   }
                 },
                 {
@@ -7132,7 +7133,8 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "markDisappear"
+                    ["action"] = "",
+                    ["subscript"] = "markDisappear(self)"
                   }
                 }
               }
