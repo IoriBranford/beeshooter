@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 218,
-  nextobjectid = 2054,
+  nextlayerid = 220,
+  nextobjectid = 2076,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -629,9 +629,9 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 12,
+      columns = 16,
       image = "tilesets/BeehiveObjects.png",
-      imagewidth = 192,
+      imagewidth = 256,
       imageheight = 32,
       objectalignment = "center",
       tilerendersize = "tile",
@@ -647,7 +647,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 12,
+      tilecount = 16,
       tiles = {
         {
           id = 0,
@@ -776,12 +776,172 @@ return {
               }
             }
           }
+        },
+        {
+          id = 7,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 16,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 9,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 11,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 13,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 15,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
         }
       }
     },
     {
       name = "Fly",
-      firstgid = 502,
+      firstgid = 506,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -909,7 +1069,7 @@ return {
     },
     {
       name = "Aliens",
-      firstgid = 518,
+      firstgid = 522,
       class = "",
       tilewidth = 24,
       tileheight = 16,
@@ -1172,7 +1332,7 @@ return {
     },
     {
       name = "Beetle",
-      firstgid = 536,
+      firstgid = 540,
       class = "",
       tilewidth = 48,
       tileheight = 48,
@@ -1943,7 +2103,7 @@ return {
     },
     {
       name = "AlienMind",
-      firstgid = 556,
+      firstgid = 560,
       class = "",
       tilewidth = 32,
       tileheight = 48,
@@ -2036,7 +2196,7 @@ return {
     },
     {
       name = "Wasp",
-      firstgid = 560,
+      firstgid = 564,
       class = "",
       tilewidth = 40,
       tileheight = 30,
@@ -2161,6 +2321,34 @@ return {
         },
         {
           id = 6,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 6,
@@ -2174,6 +2362,34 @@ return {
         },
         {
           id = 8,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 8,
@@ -2197,7 +2413,7 @@ return {
     },
     {
       name = "Tick",
-      firstgid = 572,
+      firstgid = 576,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -2269,7 +2485,7 @@ return {
     },
     {
       name = "WaspEgg",
-      firstgid = 574,
+      firstgid = 578,
       class = "",
       tilewidth = 8,
       tileheight = 8,
@@ -2316,7 +2532,7 @@ return {
     },
     {
       name = "WaspBoss",
-      firstgid = 577,
+      firstgid = 581,
       class = "",
       tilewidth = 100,
       tileheight = 100,
@@ -5512,7 +5728,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5530,7 +5746,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5727,7 +5943,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5745,7 +5961,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5906,7 +6122,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5924,7 +6140,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -6148,7 +6364,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -6350,7 +6566,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -6543,7 +6759,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -7347,7 +7563,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7444,7 +7660,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7460,7 +7676,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7575,7 +7791,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7591,7 +7807,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7607,7 +7823,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7623,7 +7839,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7639,7 +7855,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7655,7 +7871,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7897,7 +8113,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7911,7 +8127,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7925,7 +8141,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7939,7 +8155,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7953,7 +8169,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7967,7 +8183,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7981,7 +8197,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7995,7 +8211,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -8009,7 +8225,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -8023,7 +8239,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -8037,7 +8253,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -8051,7 +8267,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -8111,7 +8327,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8127,7 +8343,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8229,7 +8445,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8245,7 +8461,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8376,7 +8592,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8392,7 +8608,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8408,7 +8624,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8424,7 +8640,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8730,7 +8946,7 @@ return {
                   width = 32,
                   height = 48,
                   rotation = 0,
-                  gid = 556,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["leftflypath"] = { id = 371 },
@@ -11774,7 +11990,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -11890,7 +12106,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12006,7 +12222,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12122,7 +12338,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12238,7 +12454,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12354,7 +12570,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12470,7 +12686,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12586,7 +12802,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12702,7 +12918,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12818,7 +13034,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12934,7 +13150,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13050,7 +13266,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13166,7 +13382,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13660,7 +13876,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = 90,
-                  gid = 2147484194,
+                  gid = 2147484198,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13678,7 +13894,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = -90,
-                  gid = 546,
+                  gid = 550,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13907,14 +14123,14 @@ return {
                 {
                   id = 1674,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 32,
                   y = 1264,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14084,14 +14300,14 @@ return {
                 {
                   id = 1681,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 48,
                   y = 1232,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14260,14 +14476,14 @@ return {
                 {
                   id = 1688,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 224,
                   y = 1224,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14437,14 +14653,14 @@ return {
                 {
                   id = 1698,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 208,
                   y = 1192,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14623,7 +14839,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = 90,
-                  gid = 2147484194,
+                  gid = 2147484198,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14642,7 +14858,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = 90,
-                  gid = 2147484194,
+                  gid = 2147484198,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16794,7 +17010,7 @@ return {
               id = 129,
               name = "r14wasp1a",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -16808,7 +17024,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -64,
-                  y = 1008,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16820,14 +17036,14 @@ return {
                 {
                   id = 1341,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 64,
-                  y = 1072,
+                  x = 232,
+                  y = 1128,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16841,8 +17057,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 64,
-                  y = 1072,
+                  x = 232,
+                  y = 1128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16860,8 +17076,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1072,
+                  x = 232,
+                  y = 1128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16878,8 +17094,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1040,
+                  x = 232,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16893,8 +17109,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1032,
+                  x = 232,
+                  y = 1088,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16917,8 +17133,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1064,
+                  x = 232,
+                  y = 1120,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16935,7 +17151,7 @@ return {
               id = 128,
               name = "r14wasp1b",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -16949,7 +17165,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -72,
-                  y = 1000,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16961,14 +17177,14 @@ return {
                 {
                   id = 1335,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1120,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16982,8 +17198,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1120,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17000,8 +17216,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1064,
+                  x = 120,
+                  y = 1088,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17015,8 +17231,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1056,
+                  x = 120,
+                  y = 1080,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17039,8 +17255,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1120,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17058,8 +17274,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1088,
+                  x = 120,
+                  y = 1112,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17076,7 +17292,7 @@ return {
               id = 137,
               name = "r14wasp3a",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -17090,7 +17306,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -48,
-                  y = 928,
+                  y = 992,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17102,14 +17318,14 @@ return {
                 {
                   id = 1399,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1064,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17123,8 +17339,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17141,8 +17357,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 968,
+                  x = 24,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17156,8 +17372,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 960,
+                  x = 24,
+                  y = 1024,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17180,8 +17396,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17199,8 +17415,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 992,
+                  x = 24,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17217,7 +17433,7 @@ return {
               id = 136,
               name = "r14wasp3b",
               class = "",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -17231,7 +17447,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 920,
+                  y = 984,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17243,14 +17459,14 @@ return {
                 {
                   id = 1393,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 232,
-                  y = 1048,
+                  x = 136,
+                  y = 1056,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17264,8 +17480,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1048,
+                  x = 136,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17282,8 +17498,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1016,
+                  x = 136,
+                  y = 1024,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17297,8 +17513,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1008,
+                  x = 136,
+                  y = 1016,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17321,8 +17537,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 232,
-                  y = 1048,
+                  x = 136,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17340,8 +17556,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1040,
+                  x = 136,
+                  y = 1048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17372,7 +17588,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -88,
-                  y = 888,
+                  y = 824,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17384,14 +17600,14 @@ return {
                 {
                   id = 1369,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 72,
-                  y = 952,
+                  x = 232,
+                  y = 904,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17405,8 +17621,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 952,
+                  x = 232,
+                  y = 904,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17423,8 +17639,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 920,
+                  x = 232,
+                  y = 872,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17438,8 +17654,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 912,
+                  x = 232,
+                  y = 864,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17462,8 +17678,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 72,
-                  y = 952,
+                  x = 232,
+                  y = 904,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17481,8 +17697,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 944,
+                  x = 232,
+                  y = 896,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17513,7 +17729,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -96,
-                  y = 880,
+                  y = 816,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17525,14 +17741,14 @@ return {
                 {
                   id = 1375,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 48,
-                  y = 976,
+                  x = 128,
+                  y = 896,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17546,8 +17762,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 976,
+                  x = 128,
+                  y = 896,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17564,8 +17780,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 944,
+                  x = 128,
+                  y = 864,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17579,8 +17795,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 936,
+                  x = 128,
+                  y = 856,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17603,8 +17819,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 976,
+                  x = 128,
+                  y = 896,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17622,8 +17838,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 968,
+                  x = 128,
+                  y = 888,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17654,7 +17870,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 872,
+                  y = 808,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17666,14 +17882,14 @@ return {
                 {
                   id = 1329,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
-                  y = 1000,
+                  y = 888,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17688,7 +17904,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 1000,
+                  y = 888,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17706,7 +17922,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 968,
+                  y = 856,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17721,7 +17937,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 960,
+                  y = 848,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17745,7 +17961,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 24,
-                  y = 1000,
+                  y = 888,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17764,13 +17980,439 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 992,
+                  y = 880,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
                     ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 218,
+              name = "r14wasp4a",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2054,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -40,
+                  y = 736,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2055,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 128,
+                  y = 808,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2056,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2057,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2058,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2059,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 128,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2060,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 128,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 219,
+              name = "r14wasp4b",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2061,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -24,
+                  y = 728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2062,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 832,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2075,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 832,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2063,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2074,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2064,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2073,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2065,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2071,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2066,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 72,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = -8, y = -48 },
+                    { x = -24, y = -48 },
+                    { x = -40, y = -40 },
+                    { x = -48, y = -32 },
+                    { x = -48, y = -24 },
+                    { x = -48, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2070,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 184,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 8, y = -48 },
+                    { x = 24, y = -48 },
+                    { x = 40, y = -40 },
+                    { x = 48, y = -32 },
+                    { x = 48, y = -24 },
+                    { x = 48, y = 0 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2067,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2069,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2068,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 2072,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
                   }
                 }
               }
@@ -17794,8 +18436,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 968,
+                  x = -160,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17809,8 +18451,8 @@ return {
                   name = "",
                   class = "HoneyCell",
                   shape = "rectangle",
-                  x = 184,
-                  y = 960,
+                  x = 72,
+                  y = 992,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -17841,8 +18483,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -160,
-                  y = 840,
+                  x = -48,
+                  y = 872,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17856,8 +18498,8 @@ return {
                   name = "",
                   class = "HoneyCell",
                   shape = "rectangle",
-                  x = 72,
-                  y = 832,
+                  x = 184,
+                  y = 864,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -18465,14 +19107,14 @@ return {
                 {
                   id = 1646,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 40,
                   y = 456,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -18606,14 +19248,14 @@ return {
                 {
                   id = 1667,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 208,
                   y = 456,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -18747,14 +19389,14 @@ return {
                 {
                   id = 1653,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 480,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -18888,14 +19530,14 @@ return {
                 {
                   id = 1660,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 480,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19036,7 +19678,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19055,7 +19697,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19237,7 +19879,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19256,7 +19898,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19438,7 +20080,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19457,7 +20099,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19639,7 +20281,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19658,7 +20300,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19840,7 +20482,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19859,7 +20501,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20135,7 +20777,7 @@ return {
                   width = 100,
                   height = 100,
                   rotation = 0,
-                  gid = 577,
+                  gid = 581,
                   visible = true,
                   properties = {
                     ["startpoint"] = { id = 1884 },
@@ -20726,7 +21368,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20842,7 +21484,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20958,7 +21600,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21074,7 +21716,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21190,7 +21832,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21306,7 +21948,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21422,7 +22064,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21538,7 +22180,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21654,7 +22296,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21817,7 +22459,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -21933,7 +22575,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -22049,7 +22691,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -22165,7 +22807,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -25275,7 +25917,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = 0,
-                  gid = 541,
+                  gid = 545,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25417,7 +26059,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25486,7 +26128,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25525,7 +26167,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 180,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25579,7 +26221,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25649,7 +26291,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25703,7 +26345,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25726,7 +26368,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 120,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25749,7 +26391,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 240,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -25803,7 +26445,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25819,7 +26461,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25835,7 +26477,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25851,7 +26493,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25867,7 +26509,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25883,7 +26525,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25899,7 +26541,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -25963,7 +26605,7 @@ return {
               width = 72,
               height = 96,
               rotation = 210,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 5,
@@ -26016,7 +26658,7 @@ return {
               width = 72,
               height = 96,
               rotation = 330,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 7,
@@ -26069,7 +26711,7 @@ return {
               width = 72,
               height = 96,
               rotation = 315,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 4,
@@ -26122,7 +26764,7 @@ return {
               width = 72,
               height = 96,
               rotation = 135,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 0,
@@ -26175,7 +26817,7 @@ return {
               width = 72,
               height = 96,
               rotation = 120,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 1,
@@ -26197,7 +26839,7 @@ return {
               width = 72,
               height = 96,
               rotation = 60,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 3,
@@ -26501,7 +27143,7 @@ return {
               width = 72,
               height = 96,
               rotation = 180,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 1,
@@ -26523,7 +27165,7 @@ return {
               width = 72,
               height = 96,
               rotation = 0,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 5,
@@ -26576,7 +27218,7 @@ return {
               width = 72,
               height = 96,
               rotation = 135,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 0,
@@ -26598,7 +27240,7 @@ return {
               width = 72,
               height = 96,
               rotation = 315,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 4,
@@ -26651,7 +27293,7 @@ return {
               width = 72,
               height = 96,
               rotation = 90,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 7,
@@ -26673,7 +27315,7 @@ return {
               width = 72,
               height = 96,
               rotation = 270,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 3,
