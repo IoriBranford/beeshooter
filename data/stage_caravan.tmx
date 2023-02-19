@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="2038">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="217" nextobjectid="2052">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -1986,8 +1986,16 @@ self.speed = 0.75</property>
     </object>
     <object id="1281" template="pathpoints/FinishEnterForeground.tx" x="56" y="1304"/>
     <object id="1908" template="pathpoints/FinishEnterForeground.tx" x="200" y="1304"/>
-    <object id="1283" template="pathpoints/BeetleShoot.tx" x="56" y="1296"/>
-    <object id="1907" template="pathpoints/BeetleShoot.tx" x="200" y="1296"/>
+    <object id="1283" template="pathpoints/BeetleShoot.tx" x="56" y="1296">
+     <properties>
+      <property name="bursts" type="int" value="5"/>
+     </properties>
+    </object>
+    <object id="1907" template="pathpoints/BeetleShoot.tx" x="200" y="1296">
+     <properties>
+      <property name="bursts" type="int" value="5"/>
+     </properties>
+    </object>
     <object id="1296" template="pathpoints/Rotate.tx" x="56" y="1176">
      <properties>
       <property name="delta" type="float" value="-45"/>
@@ -2230,9 +2238,9 @@ self.speed = 0.75</property>
      </properties>
     </object>
     <object id="1953" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="1080"/>
-    <object id="1993" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="1032"/>
-    <object id="1958" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="984"/>
-    <object id="2005" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="936"/>
+    <object id="1993" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="1048"/>
+    <object id="1958" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="1000"/>
+    <object id="2005" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="952"/>
     <object id="1954" template="pathpoints/ChangeTile.tx" x="80" y="1064">
      <properties>
       <property name="tile" value="walk1"/>
@@ -2319,8 +2327,8 @@ self.speed = 0.75</property>
       <property name="delta" type="float" value="-90"/>
      </properties>
     </object>
-    <object id="1967" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="888"/>
-    <object id="2017" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="840"/>
+    <object id="1967" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="904"/>
+    <object id="2017" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="856"/>
     <object id="1968" template="pathpoints/ChangeTile.tx" x="80" y="968">
      <properties>
       <property name="tile" value="walk1"/>
@@ -2407,8 +2415,8 @@ self.speed = 0.75</property>
       <property name="delta" type="float" value="-90"/>
      </properties>
     </object>
-    <object id="1979" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="792"/>
-    <object id="2030" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="744"/>
+    <object id="1979" template="pathpoints/EnterForeground.tx" class="PathPoint" x="104" y="808"/>
+    <object id="2030" template="pathpoints/EnterForeground.tx" class="PathPoint" x="152" y="760"/>
     <object id="1980" template="pathpoints/ChangeTile.tx" x="80" y="872">
      <properties>
       <property name="tile" value="walk1"/>
@@ -2523,6 +2531,20 @@ self.speed = 0.75</property>
       <property name="delta" type="float" value="45"/>
      </properties>
     </object>
+    <object id="2038" template="pathpoints/BeetleShoot.tx" x="40" y="1048"/>
+    <object id="2041" template="pathpoints/BeetleShoot.tx" x="104" y="1000"/>
+    <object id="2043" template="pathpoints/BeetleShoot.tx" x="40" y="952"/>
+    <object id="2045" template="pathpoints/BeetleShoot.tx" x="104" y="904"/>
+    <object id="2047" template="pathpoints/BeetleShoot.tx" x="40" y="856"/>
+    <object id="2049" template="pathpoints/BeetleShoot.tx" x="104" y="808"/>
+    <object id="2051" template="pathpoints/BeetleShoot.tx" x="40" y="760"/>
+    <object id="2039" template="pathpoints/BeetleShoot.tx" x="152" y="1048"/>
+    <object id="2040" template="pathpoints/BeetleShoot.tx" x="216" y="1000"/>
+    <object id="2042" template="pathpoints/BeetleShoot.tx" x="152" y="952"/>
+    <object id="2044" template="pathpoints/BeetleShoot.tx" x="216" y="904"/>
+    <object id="2046" template="pathpoints/BeetleShoot.tx" x="152" y="856"/>
+    <object id="2048" template="pathpoints/BeetleShoot.tx" x="216" y="808"/>
+    <object id="2050" template="pathpoints/BeetleShoot.tx" x="152" y="760"/>
    </objectgroup>
    <objectgroup id="126" name="r14acidants1" visible="0">
     <object id="1302" template="triggers/SpawnCharacters.tx" x="-48" y="1128"/>

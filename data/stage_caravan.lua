@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 217,
-  nextobjectid = 2038,
+  nextobjectid = 2052,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -13775,7 +13775,7 @@ return {
                 },
                 {
                   id = 1283,
-                  name = "",
+                  name = "BeetleShoot",
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
@@ -13785,12 +13785,15 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startBeetleShoot"
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 5,
+                    ["burstshots"] = 4
                   }
                 },
                 {
                   id = 1907,
-                  name = "",
+                  name = "BeetleShoot",
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
@@ -13800,7 +13803,10 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startBeetleShoot"
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 5,
+                    ["burstshots"] = 4
                   }
                 },
                 {
@@ -14901,7 +14907,7 @@ return {
                 },
                 {
                   id = 1953,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
@@ -14916,11 +14922,11 @@ return {
                 },
                 {
                   id = 1993,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 1032,
+                  y = 1048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14931,11 +14937,11 @@ return {
                 },
                 {
                   id = 1958,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 984,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14946,11 +14952,11 @@ return {
                 },
                 {
                   id = 2005,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 936,
+                  y = 952,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15307,11 +15313,11 @@ return {
                 },
                 {
                   id = 1967,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 888,
+                  y = 904,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15322,11 +15328,11 @@ return {
                 },
                 {
                   id = 2017,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 840,
+                  y = 856,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15683,11 +15689,11 @@ return {
                 },
                 {
                   id = 1979,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 104,
-                  y = 792,
+                  y = 808,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15698,11 +15704,11 @@ return {
                 },
                 {
                   id = 2030,
-                  name = "EnterForegruond",
+                  name = "EnterForeground",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 744,
+                  y = 760,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16121,6 +16127,258 @@ return {
                   properties = {
                     ["action"] = "PathPoint_Rotate",
                     ["delta"] = 45
+                  }
+                },
+                {
+                  id = 2038,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 1048,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2041,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2043,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2045,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2047,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2049,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2051,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2039,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1048,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2040,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2042,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2044,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2046,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2048,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2050,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
                   }
                 }
               }
