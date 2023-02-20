@@ -35,6 +35,7 @@ local clearred, cleargreen, clearblue = 0, 0, 0
 local gametimer
 local gametimerstate
 local spriteshader
+local stagetiles
 
 local function readMapObjectLayer(objectlayer)
     local triggers, paths, pointdatas, characters
@@ -122,6 +123,7 @@ function Stage.init(startpoint)
         clearred, cleargreen, clearblue = 0, 0, 0
     end
 
+    stagetiles = map.tiles
     stage = map.layers.stage
     if stage then
         local stagey = stage.starty
@@ -358,6 +360,44 @@ function Stage.killTeam(teamname)
         for i = 1, #team do
             team[i]:defeat()
         end
+    end
+end
+
+function Stage.explodeTileLayer(layer, centerx, centery)
+    if type(layer) == "string" then
+        local tilelayers = stage.tilelayers
+        layer = tilelayers[layer]
+    end
+    -- if not layer or layer.type ~= "tilelayer" then
+    --     return
+    -- end
+
+    for _, chunk in ipairs(layer.chunks) do
+        chunk.sprite:setHidden(true)
+        -- WIP
+        -- local i = 0
+        -- for r = chunk.y, chunk.y + chunk.height do
+        --     for c = chunk.x, chunk.x + chunk.width do
+        --         i = i + 1
+        --         local gid = chunk.data[i]
+        --         gid = gid and Tiled.parseGid(gid)
+        --         local tile = stagetiles[gid]
+        --         if tile then
+        --             local x = c * chunk.tilewidth
+        --             local y = stage.y + r * chunk.tileheight
+        --             local velx = (x - centerx) / chunk.tilewidth
+        --             local vely = (x - centery) / chunk.tileheight
+        --             Stage.addCharacter({
+        --                 type = "ExplosionDebris",
+        --                 x = x,
+        --                 y = y,
+        --                 velx = velx,
+        --                 vely = vely,
+        --                 tile = tile
+        --             })
+        --         end
+        --     end
+        -- end
     end
 end
 

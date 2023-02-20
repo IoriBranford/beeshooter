@@ -3,12 +3,19 @@ local Movement = require "Component.Movement"
 local Body = require "BeeShooter.Character.Body"
 local class = require "pl.class"
 local CharacterGroup = require "BeeShooter.Character.Group"
+local Stage          = require "BeeShooter.Stage"
 
 local Sqrt2 = math.sqrt(2)
 local CosPiThird = math.cos(math.pi/3)
 
 ---@class WaspBoss:EnemyShip
 local WaspBoss = class(EnemyShip)
+
+function WaspBoss:Breakout()
+    Stage.explodeTileLayer("waspbossbreakablefloor", 128, 448)
+    Stage.explodeTileLayer("waspbossbreakableonfloor", 128, 448)
+    self:ChooseEntryPath()
+end
 
 function WaspBoss:ChooseEntryPath()
     local pathpoint = self.startpoint
