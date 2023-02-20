@@ -74,13 +74,14 @@ local function movePath(self, path, parent, meleedamage)
         return
     end
     meleedamage = meleedamage or 0
+    local x0, y0 = path.x, path.y
     local points = path.points
     local pointsdata = path.pointsdata
     for i = 2, #points, 2 do
         repeat
             SubScript.run(self)
-            local destx, desty = points[i-1], points[i]
             local parenty = parent and parent.y or 0
+            local destx, desty = x0 + points[i-1], y0 + points[i]
             local parentvely = parent and parent.vely or 0
             local velx, vely = Movement.getVelocity_speed(self.x, self.y - parenty, destx, desty, self.speed or 1)
             Body.setVelocity(self, velx, vely + parentvely)
@@ -105,7 +106,7 @@ local function walkPath(self, path)
 end
 
 function EnemyShip:flyPath(path, meleedamage)
-    movePath(self, path, path, meleedamage)
+    movePath(self, path, {y = self.stage.y}, meleedamage)
 end
 local flyPath = EnemyShip.flyPath
 
@@ -177,8 +178,9 @@ local function findPath(self)
     local x, y = self.x, self.y - stagey
     for i, path in ipairs(paths) do
         local points = path.points
-        local pathx = points[1]
-        local pathy = points[2]
+        local x0, y0 = path.x, path.y
+        local pathx = x0 + points[1]
+        local pathy = y0 + points[2]
         local dsq = distsq(x, y, pathx, pathy)
         if dsq < closestdsq then
             closestpath = path
