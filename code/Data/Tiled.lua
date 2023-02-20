@@ -177,17 +177,11 @@ local function processPoly(object)
     local poly = object.polygon or object.polyline
     if poly then
         local points = {}
-        local x = object.x
-        local y = object.y
-        object.x = 0
-        object.y = 0
         object.points = points
-        object.polygon = nil
-        object.polyline = nil
         for i = 1, #poly do
             local point = poly[i]
-            local px = x + point.x
-            local py = y + point.y
+            local px = point.x
+            local py = point.y
             points[#points+1] = px
             points[#points+1] = py
         end
