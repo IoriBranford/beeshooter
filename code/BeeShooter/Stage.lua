@@ -139,10 +139,12 @@ function Stage.init(startpoint)
         local drawbeforedecals = scene:addCustom(function()
             love.graphics.stencil(function()
                 for _, layer in ipairs(tilelayers) do
-                    local chunks = layer.chunks
-                    for _, chunk in ipairs(chunks) do
-                        local sprite = chunk.sprite
-                        sprite:draw()
+                    if layer.visible then
+                        local chunks = layer.chunks
+                        for _, chunk in ipairs(chunks) do
+                            local sprite = chunk.sprite
+                            sprite:draw()
+                        end
                     end
                 end
             end)
@@ -368,36 +370,39 @@ function Stage.explodeTileLayer(layer, centerx, centery)
         local tilelayers = stage.tilelayers
         layer = tilelayers[layer]
     end
-    -- if not layer or layer.type ~= "tilelayer" then
-    --     return
-    -- end
+    if not layer or layer.type ~= "tilelayer" or not layer.visible then
+        return
+    end
+    centery = -stage.y + centery
 
+    layer.visible = false
     for _, chunk in ipairs(layer.chunks) do
         chunk.sprite:setHidden(true)
-        -- WIP
-        -- local i = 0
-        -- for r = chunk.y, chunk.y + chunk.height do
-        --     for c = chunk.x, chunk.x + chunk.width do
-        --         i = i + 1
-        --         local gid = chunk.data[i]
-        --         gid = gid and Tiled.parseGid(gid)
-        --         local tile = stagetiles[gid]
-        --         if tile then
-        --             local x = c * chunk.tilewidth
-        --             local y = stage.y + r * chunk.tileheight
-        --             local velx = (x - centerx) / chunk.tilewidth
-        --             local vely = (x - centery) / chunk.tileheight
-        --             Stage.addCharacter({
-        --                 type = "ExplosionDebris",
-        --                 x = x,
-        --                 y = y,
-        --                 velx = velx,
-        --                 vely = vely,
-        --                 tile = tile
-        --             })
-        --         end
-        --     end
-        -- end
+        local data = chunk.data
+        local i = 0
+        for r = chunk.y, chunk.y + chunk.height - 1 do
+            for c = chunk.x, chunk.x + chunk.width - 1 do
+                i = i + 1
+                local gid = data[i]
+                gid = gid and Tiled.parseGid(gid)
+                local tile = stagetiles[gid]
+                if tile then
+                    local x = (c+.5) * chunk.tilewidth
+                    local y = stage.y + (r+.5) * chunk.tileheight
+                    local velx = (x - centerx) / chunk.tilewidth
+                    local vely = (y - centery) / chunk.tileheight
+                    Stage.addCharacter({
+                        type = "ExplosionDebris",
+                        x = x,
+                        y = y,
+                        velx = velx,
+                        vely = vely,
+                        tile = tile,
+                        visible = true,
+                    })
+                end
+            end
+        end
     end
 end
 
