@@ -2,6 +2,7 @@ local Audio      = require "System.Audio"
 local GuiObject    = require "Gui.GuiObject"
 local class        = require "pl.class"
 
+---@class Button:GuiObject
 local Button = class(GuiObject)
 Button.ismenuitem = true
 
@@ -11,6 +12,7 @@ function Button:init()
 end
 
 function Button:press()
+    self:onDeselect()
     if self.action then
         self:action()
     end
