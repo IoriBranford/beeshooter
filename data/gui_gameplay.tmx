@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="32" nextobjectid="192">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="32" nextobjectid="194">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -25,6 +25,9 @@
   </object>
   <object id="189" name="Title" x="64" y="16" width="128" height="16">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
+  </object>
+  <object id="192" name="Title" x="16" y="200" width="224" height="8">
+   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
   </object>
   <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="112" y="176" width="64" height="8">
    <properties>
@@ -198,15 +201,6 @@
      <property name="action" value="endGame"/>
     </properties>
    </object>
-   <object id="54" name="cursor" class="Gui.Cursor" x="262" y="6" width="60" height="28">
-    <properties>
-     <property name="color" type="color" value="#00000000"/>
-     <property name="linecolor" type="color" value="#ffffffff"/>
-     <property name="offsetx" type="float" value="-2"/>
-     <property name="offsety" type="float" value="-2"/>
-     <property name="roundcorners" type="float" value="2"/>
-    </properties>
-   </object>
    <object id="42" name="PAUSE!" x="80" y="104" width="96" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">PAUSE!</text>
    </object>
@@ -224,33 +218,27 @@
    </object>
   </objectgroup>
   <objectgroup id="18" name="mainmenu" class="Gui.Menu">
-   <object id="62" template="gui/RectButton.tx" name="start" class="BeeShooter.Gui.Button" x="64" y="128" width="128" height="32">
+   <object id="62" template="gui/RectButton.tx" name="start" class="BeeShooter.Gui.Button" x="24" y="152" width="96" height="32">
     <properties>
      <property name="action" value="startGame"/>
     </properties>
    </object>
-   <object id="68" template="gui/RectButton.tx" name="help" class="BeeShooter.Gui.Button" x="64" y="176" width="128" height="32">
+   <object id="68" template="gui/RectButton.tx" name="help" class="BeeShooter.Gui.Button" x="136" y="152" width="96" height="32">
     <properties>
      <property name="action" value="touchOpenHelp"/>
     </properties>
    </object>
-   <object id="64" name="cursor" class="Gui.Cursor" x="56" y="120" width="144" height="48">
-    <properties>
-     <property name="color" type="color" value="#00000000"/>
-     <property name="linecolor" type="color" value="#ffffffff"/>
-     <property name="offsetx" type="float" value="-8"/>
-     <property name="offsety" type="float" value="-8"/>
-     <property name="roundcorners" type="float" value="2"/>
-    </properties>
-   </object>
-   <object id="65" name="Start" x="64" y="136" width="128" height="16">
+   <object id="65" name="Start" x="24" y="160" width="96" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">START GAME</text>
    </object>
    <object id="181" name="Title" x="64" y="16" width="128" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
    </object>
-   <object id="69" name="Help" x="64" y="184" width="128" height="16">
+   <object id="69" name="Help" x="136" y="160" width="96" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HOW TO PLAY</text>
+   </object>
+   <object id="193" name="Title" x="16" y="200" width="224" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
    </object>
   </objectgroup>
   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
