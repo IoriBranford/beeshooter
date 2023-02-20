@@ -1,6 +1,7 @@
 local Config = require "System.Config"
 local Assets = require "System.Assets"
 
+---@class Audio
 local Audio = {}
 
 local music
