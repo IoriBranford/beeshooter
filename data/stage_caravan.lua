@@ -26,7 +26,7 @@ return {
       image = "tilesets/Beehive.png",
       imagewidth = 480,
       imageheight = 256,
-      objectalignment = "unspecified",
+      objectalignment = "center",
       tilerendersize = "tile",
       fillmode = "stretch",
       tileoffset = {
@@ -3043,7 +3043,7 @@ return {
               chunks = {
                 {
                   x = 0, y = 14, width = 16, height = 14,
-                  data = "eJxjYBgFo2BwgTmMDAw70fAsRuL1zsWidiYJZtATAAAzOQaR"
+                  data = "eJxjYBgFo2BwgTmMDAw70fAsRuL1zgXi7Wh4JpFmgNTOB+IFaHgh1Bxi9O/Fom4/Dv0AZ0URlQ=="
                 },
                 {
                   x = 0, y = 28, width = 16, height = 14,
