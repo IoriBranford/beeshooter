@@ -4,6 +4,7 @@ local Body = require "BeeShooter.Character.Body"
 local class = require "pl.class"
 local CharacterGroup = require "BeeShooter.Character.Group"
 local Stage          = require "BeeShooter.Stage"
+local Audio          = require "System.Audio"
 
 local Sqrt2 = math.sqrt(2)
 local CosPiThird = math.cos(math.pi/3)
@@ -12,8 +13,9 @@ local CosPiThird = math.cos(math.pi/3)
 local WaspBoss = class(EnemyShip)
 
 function WaspBoss:Breakout()
-    Stage.explodeTileLayer("waspbossbreakablefloor", 128, 448)
-    Stage.explodeTileLayer("waspbossbreakableonfloor", 128, 448)
+    Audio.play(self.entersound)
+    Stage.explodeTileLayer("waspbossbreakablefloor", self.x, self.y)
+    Stage.explodeTileLayer("waspbossbreakableonfloor", self.x, self.y)
     self:ChooseEntryPath()
 end
 
