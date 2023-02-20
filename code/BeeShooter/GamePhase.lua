@@ -125,7 +125,7 @@ function GamePhase.gamepadpressed(joystick, button)
             Stage.restart()
         else
             GamePhase.setPaused(not paused, gui.pausemenu)
-            gui.pausemenu:selectButton(1)
+            gui.pausemenu:selectButton(paused and 1)
         end
         return
     end
@@ -143,7 +143,7 @@ function GamePhase.keypressed(key)
             Stage.restart()
         elseif key == Config.key_pausemenu then
             GamePhase.setPaused(not paused, gui.pausemenu)
-            gui.pausemenu:selectButton(1)
+            gui.pausemenu:selectButton(paused and 1)
         end
         return
     elseif key == "f2" then
