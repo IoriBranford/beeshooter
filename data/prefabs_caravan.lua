@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 11,
-  nextobjectid = 76,
+  nextobjectid = 77,
   properties = {},
   tilesets = {
     {
@@ -187,9 +187,9 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 12,
+      columns = 16,
       image = "tilesets/BeehiveObjects.png",
-      imagewidth = 192,
+      imagewidth = 256,
       imageheight = 32,
       objectalignment = "center",
       tilerendersize = "tile",
@@ -205,7 +205,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 12,
+      tilecount = 16,
       tiles = {
         {
           id = 0,
@@ -334,12 +334,172 @@ return {
               }
             }
           }
+        },
+        {
+          id = 7,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 16,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 9,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 11,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 13,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 15,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
         }
       }
     },
     {
       name = "FlyBullet",
-      firstgid = 18,
+      firstgid = 22,
       class = "",
       tilewidth = 16,
       tileheight = 8,
@@ -411,7 +571,7 @@ return {
     },
     {
       name = "Ant",
-      firstgid = 20,
+      firstgid = 24,
       class = "",
       tilewidth = 16,
       tileheight = 16,
@@ -524,7 +684,7 @@ return {
     },
     {
       name = "Aliens",
-      firstgid = 24,
+      firstgid = 28,
       class = "",
       tilewidth = 24,
       tileheight = 16,
@@ -787,7 +947,7 @@ return {
     },
     {
       name = "AlienMind",
-      firstgid = 42,
+      firstgid = 46,
       class = "",
       tilewidth = 32,
       tileheight = 48,
@@ -880,7 +1040,7 @@ return {
     },
     {
       name = "Fly",
-      firstgid = 46,
+      firstgid = 50,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -1008,7 +1168,7 @@ return {
     },
     {
       name = "KillSmall",
-      firstgid = 62,
+      firstgid = 66,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -1103,7 +1263,7 @@ return {
     },
     {
       name = "KillMedium",
-      firstgid = 77,
+      firstgid = 81,
       class = "",
       tilewidth = 64,
       tileheight = 64,
@@ -1202,7 +1362,7 @@ return {
     },
     {
       name = "AcidBullet",
-      firstgid = 93,
+      firstgid = 97,
       class = "",
       tilewidth = 16,
       tileheight = 8,
@@ -1287,7 +1447,7 @@ return {
     },
     {
       name = "Tick",
-      firstgid = 97,
+      firstgid = 101,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -1359,7 +1519,7 @@ return {
     },
     {
       name = "WaspEgg",
-      firstgid = 99,
+      firstgid = 103,
       class = "",
       tilewidth = 8,
       tileheight = 8,
@@ -1406,7 +1566,7 @@ return {
     },
     {
       name = "Wasp",
-      firstgid = 102,
+      firstgid = 106,
       class = "",
       tilewidth = 40,
       tileheight = 30,
@@ -1531,6 +1691,34 @@ return {
         },
         {
           id = 6,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 6,
@@ -1544,6 +1732,34 @@ return {
         },
         {
           id = 8,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 8,
@@ -1567,7 +1783,7 @@ return {
     },
     {
       name = "Splats",
-      firstgid = 114,
+      firstgid = 118,
       class = "",
       tilewidth = 24,
       tileheight = 24,
@@ -1620,7 +1836,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 62,
+          gid = 66,
           visible = true,
           properties = {
             ["lifetime"] = "animation"
@@ -1636,10 +1852,29 @@ return {
           width = 64,
           height = 64,
           rotation = 0,
-          gid = 77,
+          gid = 81,
           visible = true,
           properties = {
             ["lifetime"] = "animation"
+          }
+        },
+        {
+          id = 76,
+          name = "AcidAntHole",
+          class = "AntHole",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 32,
+          rotation = 0,
+          gid = 12,
+          visible = true,
+          properties = {
+            ["spawncount"] = 60,
+            ["spawninterval"] = 6,
+            ["spawntype"] = "AcidAntClimbingDownLeft",
+            ["z"] = 0.75
           }
         }
       }
@@ -1849,7 +2084,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 18,
+          gid = 22,
           visible = true,
           properties = {
             ["z"] = 20
@@ -1865,7 +2100,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 18,
+          gid = 22,
           visible = true,
           properties = {
             ["z"] = 20
@@ -1881,7 +2116,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 93,
+          gid = 97,
           visible = true,
           properties = {
             ["z"] = 20
@@ -1897,7 +2132,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 93,
+          gid = 97,
           visible = true,
           properties = {
             ["z"] = 20
@@ -1913,7 +2148,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 95,
+          gid = 99,
           visible = true,
           properties = {
             ["z"] = 15
@@ -1945,7 +2180,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 20,
+          gid = 24,
           visible = true,
           properties = {
             ["z"] = 1
@@ -1961,7 +2196,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483668,
+          gid = 2147483672,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -1978,7 +2213,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 24,
+          gid = 28,
           visible = true,
           properties = {
             ["z"] = 1
@@ -1994,7 +2229,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 24,
+          gid = 28,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2012,7 +2247,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483672,
+          gid = 2147483676,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2028,7 +2263,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 30,
+          gid = 34,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2044,7 +2279,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483678,
+          gid = 2147483682,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2060,7 +2295,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 46,
+          gid = 50,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2094,7 +2329,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 2147483694,
+          gid = 2147483698,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2112,7 +2347,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 22,
+          gid = 26,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2128,7 +2363,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 22,
+          gid = 26,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2146,7 +2381,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483670,
+          gid = 2147483674,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2162,7 +2397,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483670,
+          gid = 2147483674,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2180,7 +2415,7 @@ return {
           width = 16,
           height = 16,
           rotation = 90,
-          gid = 22,
+          gid = 26,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2196,7 +2431,7 @@ return {
           width = 16,
           height = 16,
           rotation = -90,
-          gid = 2147483670,
+          gid = 2147483674,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2212,7 +2447,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 97,
+          gid = 101,
           visible = true,
           properties = {
             ["bitepoint"] = 0,
@@ -2234,7 +2469,7 @@ return {
           width = 8,
           height = 8,
           rotation = 0,
-          gid = 99,
+          gid = 103,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2250,7 +2485,7 @@ return {
           width = 40,
           height = 30,
           rotation = 0,
-          gid = 104,
+          gid = 108,
           visible = true,
           properties = {}
         }
@@ -2280,7 +2515,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 114,
+          gid = 118,
           visible = true,
           properties = {
             ["color"] = "#40aa0000",
@@ -2297,7 +2532,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 114,
+          gid = 118,
           visible = true,
           properties = {
             ["color"] = "#40555500",
@@ -2314,7 +2549,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 114,
+          gid = 118,
           visible = true,
           properties = {
             ["color"] = "#40aa0000",
@@ -2331,7 +2566,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 114,
+          gid = 118,
           visible = true,
           properties = {
             ["color"] = "#40aa0000",
