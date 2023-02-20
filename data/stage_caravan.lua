@@ -22232,7 +22232,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 224,
+                  y = 144,
                   width = 0,
                   height = 0,
                   rotation = 0,

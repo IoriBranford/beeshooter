@@ -3425,7 +3425,7 @@ self.speed = 0.75</property>
     <object id="1838" template="enemies/ReinforcedHoneyPot.tx" x="136" y="128"/>
    </objectgroup>
    <objectgroup id="76" name="waspboss">
-    <object id="863" template="triggers/StopStageScroll.tx" class="Trigger" x="-32" y="224"/>
+    <object id="863" template="triggers/StopStageScroll.tx" class="Trigger" x="-32" y="144"/>
     <object id="1862" template="enemies/WaspBoss.tx" x="128" y="440">
      <properties>
       <property name="collidable" type="bool" value="false"/>
