@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.5" name="Beehive" tilewidth="16" tileheight="16" tilecount="480" columns="30">
+<tileset version="1.9" tiledversion="1.9.2" name="Beehive" tilewidth="16" tileheight="16" tilecount="480" columns="30" objectalignment="center">
  <image source="Beehive.png" width="480" height="256"/>
  <wangsets>
   <wangset name="Unnamed Set" type="mixed" tile="-1">
