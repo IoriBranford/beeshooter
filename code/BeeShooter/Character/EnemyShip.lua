@@ -226,7 +226,7 @@ function EnemyShip:Faller()
             self.rotation = atan2(self.vely, self.velx)
         end
         yield()
-        if self:isSpriteOffScreenBottom() then
+        if not self:isSpriteOnScreen() then
             self:markDisappear()
         end
     end
