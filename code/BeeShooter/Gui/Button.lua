@@ -1,56 +1,66 @@
-local BaseButton    = require "Gui.Button"
+local Button    = require "Gui.Button"
 local Stage        = require "BeeShooter.Stage"
 local GamePhase    = require "BeeShooter.GamePhase"
 local class        = require "pl.class"
 local Controls     = require "System.Controls"
 local Platform     = require "System.Platform"
+local Color        = require "Data.Color"
 
-local Button = class(BaseButton)
+---@class GameButton:Button
+local GameButton = class(Button)
 
-function Button:startGame()
+function GameButton:onSelect()
+    self:setColor(Color.unpack(self.pressedcolor or Color.White))
+end
+
+function GameButton:onDeselect()
+    self:setColor(Color.unpack(self.color or Color.Grey))
+end
+
+function GameButton:startGame()
     GamePhase.startGame()
 end
 
-function Button:quitGame()
+function GameButton:quitGame()
     if Platform.supports("quit") then
         love.event.quit()
     end
 end
 
-function Button:resumeGame()
+function GameButton:resumeGame()
     GamePhase.setPaused(false)
 end
 
-function Button:endGame()
+function GameButton:endGame()
     Stage.restart()
 end
 
-function Button:touchPauseGame()
+function GameButton:touchPauseGame()
     GamePhase.touchSetPaused(true)
 end
 
-function Button:touchResumeGame()
+function GameButton:touchResumeGame()
     GamePhase.touchSetPaused(false)
 end
 
-function Button:changeWeapon()
+function GameButton:changeWeapon()
     Controls.tapButton("changeweapon")
 end
 
-function Button:touchOpenHelp()
+function GameButton:touchOpenHelp()
     GamePhase.touchOpenHelp()
 end
 
-function Button:touchCloseHelp()
+function GameButton:touchCloseHelp()
     GamePhase.touchCloseHelp()
 end
 
-function Button:nextHelpPage()
+function GameButton:nextHelpPage()
     self.helpscreen:incPage(1)
 end
 
-function Button:previousHelpPage()
+function GameButton:previousHelpPage()
     self.helpscreen:incPage(-1)
 end
 
-return Button
+return GameButton
