@@ -2,8 +2,9 @@
 <template>
  <object class="BeeShooter.Gui.Button" width="64" height="64">
   <properties>
-   <property name="color" type="color" value="#80808080"/>
-   <property name="linecolor" type="color" value="#ffffffff"/>
+   <property name="color" type="color" value="#80aa5500"/>
+   <property name="linecolor" type="color" value="#ffffff7f"/>
+   <property name="pressedcolor" type="color" value="#ffffaa00"/>
   </properties>
   <ellipse/>
  </object>
