@@ -18,13 +18,13 @@
                 },
                 {
                     "name": "color",
-                    "type": "color",
-                    "value": "#80808080"
+                    "type": "string",
+                    "value": ""
                 },
                 {
                     "name": "linecolor",
-                    "type": "color",
-                    "value": "#ffffffff"
+                    "type": "string",
+                    "value": ""
                 },
                 {
                     "name": "presssound",
@@ -34,17 +34,12 @@
                 {
                     "name": "roundcorners",
                     "type": "float",
-                    "value": 1
+                    "value": 0
                 },
                 {
                     "name": "selectsound",
                     "type": "file",
                     "value": ""
-                },
-                {
-                    "name": "z",
-                    "type": "float",
-                    "value": 0
                 }
             ],
             "name": "BeeShooter.Gui.Button",
@@ -77,7 +72,7 @@
                 {
                     "name": "roundcorners",
                     "type": "float",
-                    "value": 1
+                    "value": 0
                 }
             ],
             "name": "Gui.Cursor",
@@ -139,6 +134,11 @@
             "color": "#ff00ff00",
             "id": 1,
             "members": [
+                {
+                    "name": "action",
+                    "type": "string",
+                    "value": ""
+                }
             ],
             "name": "Trigger",
             "type": "class",

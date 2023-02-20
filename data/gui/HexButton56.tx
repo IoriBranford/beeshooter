@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object class="BeeShooter.Gui.Button">
+  <properties>
+   <property name="color" type="color" value="#80aa5500"/>
+   <property name="linecolor" type="color" value="#ffffff7f"/>
+   <property name="pressedcolor" type="color" value="#ffffaa00"/>
+  </properties>
+  <polygon points="4,0 -24,16 -24,48 4,64 32,48 32,16"/>
+ </object>
+</template>

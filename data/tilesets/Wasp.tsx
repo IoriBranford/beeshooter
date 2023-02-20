@@ -28,12 +28,18 @@
   </animation>
  </tile>
  <tile id="6">
+  <objectgroup>
+   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+  </objectgroup>
   <animation>
    <frame tileid="6" duration="100"/>
    <frame tileid="7" duration="100"/>
   </animation>
  </tile>
  <tile id="8">
+  <objectgroup>
+   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+  </objectgroup>
   <animation>
    <frame tileid="8" duration="100"/>
    <frame tileid="9" duration="100"/>

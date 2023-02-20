@@ -32,6 +32,7 @@ end
 
 function BonusText:coroutine()
     self:setHidden(false)
+    self.sprite.alpha = 1
     self:setPosition(self.x0, self.y0)
     local hue = 0
     local velhue = math.pi/3
@@ -43,7 +44,6 @@ function BonusText:coroutine()
     local vely = -1
     local moveuptime = 16
     local velalpha = -1/moveuptime
-    self.sprite.alpha = 1
     for _ = 1, moveuptime do
         self:setPosition(self.x, self.y + vely)
         hue = self:updateHue(hue, velhue)

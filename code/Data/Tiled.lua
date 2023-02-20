@@ -177,17 +177,11 @@ local function processPoly(object)
     local poly = object.polygon or object.polyline
     if poly then
         local points = {}
-        local x = object.x
-        local y = object.y
-        object.x = 0
-        object.y = 0
         object.points = points
-        object.polygon = nil
-        object.polyline = nil
         for i = 1, #poly do
             local point = poly[i]
-            local px = x + point.x
-            local py = y + point.y
+            local px = point.x
+            local py = point.y
             points[#points+1] = px
             points[#points+1] = py
         end
@@ -209,9 +203,10 @@ function Tiled.addTileset(tileset)
     local alltilesets = Tiled.tilesets
 
     local tilesetname = tileset.name
-    if alltilesets[tilesetname] then
-        return alltilesets[tilesetname]
-    end
+    -- FIXME maps cannot share a tileset yet
+    -- if alltilesets[tilesetname] then
+    --     return alltilesets[tilesetname]
+    -- end
     alltilesets[tilesetname] = tileset
 
     local image = Tiled.loadImage(tileset.image)

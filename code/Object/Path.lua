@@ -142,8 +142,9 @@ function Path.addPointData(path, pointdata)
     local pointsdata = path.pointsdata
     local points = path.points
     local x, y = pointdata.x, pointdata.y
+    local pathx, pathy = path.x, path.y
     for i = 2, #points, 2 do
-        if points[i-1] == x and points[i] == y then
+        if pathx + points[i-1] == x and pathy + points[i] == y then
             if not pointsdata then
                 pointsdata = {}
                 path.pointsdata = pointsdata

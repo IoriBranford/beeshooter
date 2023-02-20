@@ -11,6 +11,20 @@ function TouchController:init()
     Menu.init(self)
     Controls.setDestination()
     Controls.releaseTouchButton("fire")
+    local movecursor = self.movecursor
+    self.movecursorx0, self.movecursory0 = movecursor.x, movecursor.y
+end
+
+function TouchController:hideMoveCursor()
+    local movecursor = self.movecursor
+    movecursor:setHidden(true)
+end
+
+function TouchController:resetMoveCursor()
+    local movecursor = self.movecursor
+    movecursor:setHidden(false)
+    movecursor:setPosition(self.movecursorx0, self.movecursory0)
+    Controls.setDestination()
 end
 
 function TouchController:touchpressed(id, x, y)
@@ -47,6 +61,12 @@ function TouchController:touchreleased(id)
     end
     self.movetouchid = nil
     Controls.releaseTouchButton("fire")
+end
+
+function TouchController:keypressed(key)
+end
+
+function TouchController:gamepadpressed(gamepad, button)
 end
 
 return TouchController

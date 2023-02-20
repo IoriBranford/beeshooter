@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="11" nextobjectid="75">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="11" nextobjectid="77">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/AntBigParts.tsx"/>
  <tileset firstgid="3" source="tilesets/AntBig.tsx"/>
  <tileset firstgid="6" source="tilesets/BeehiveObjects.tsx"/>
- <tileset firstgid="18" source="tilesets/FlyBullet.tsx"/>
- <tileset firstgid="20" source="tilesets/Ant.tsx"/>
- <tileset firstgid="24" source="tilesets/Aliens.tsx"/>
- <tileset firstgid="42" source="tilesets/AlienMind.tsx"/>
- <tileset firstgid="46" source="tilesets/Fly.tsx"/>
- <tileset firstgid="62" source="tilesets/KillSmall.tsx"/>
- <tileset firstgid="77" source="tilesets/KillMedium.tsx"/>
- <tileset firstgid="93" source="tilesets/AcidBullet.tsx"/>
- <tileset firstgid="97" source="tilesets/Tick.tsx"/>
- <tileset firstgid="99" source="tilesets/WaspEgg.tsx"/>
- <tileset firstgid="102" source="tilesets/Wasp.tsx"/>
- <tileset firstgid="114" source="tilesets/Splats.tsx"/>
+ <tileset firstgid="22" source="tilesets/FlyBullet.tsx"/>
+ <tileset firstgid="24" source="tilesets/Ant.tsx"/>
+ <tileset firstgid="28" source="tilesets/Aliens.tsx"/>
+ <tileset firstgid="46" source="tilesets/AlienMind.tsx"/>
+ <tileset firstgid="50" source="tilesets/Fly.tsx"/>
+ <tileset firstgid="66" source="tilesets/KillSmall.tsx"/>
+ <tileset firstgid="81" source="tilesets/KillMedium.tsx"/>
+ <tileset firstgid="97" source="tilesets/AcidBullet.tsx"/>
+ <tileset firstgid="101" source="tilesets/Tick.tsx"/>
+ <tileset firstgid="103" source="tilesets/WaspEgg.tsx"/>
+ <tileset firstgid="106" source="tilesets/Wasp.tsx"/>
+ <tileset firstgid="118" source="tilesets/Splats.tsx"/>
  <objectgroup id="6" name="defeatdrops">
-  <object id="23" name="KillSmall" gid="62" x="0" y="8" width="32" height="32">
+  <object id="23" name="KillSmall" gid="66" x="0" y="8" width="32" height="32">
    <properties>
     <property name="lifetime" value="animation"/>
    </properties>
   </object>
-  <object id="24" name="KillMedium" gid="77" x="0" y="8" width="64" height="64">
+  <object id="24" name="KillMedium" gid="81" x="0" y="8" width="64" height="64">
    <properties>
     <property name="lifetime" value="animation"/>
+   </properties>
+  </object>
+  <object id="76" name="AcidAntHole" class="AntHole" gid="12" x="0" y="0" width="16" height="32">
+   <properties>
+    <property name="spawncount" type="float" value="60"/>
+    <property name="spawninterval" type="float" value="6"/>
+    <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+    <property name="z" type="float" value="0.75"/>
    </properties>
   </object>
  </objectgroup>
@@ -60,6 +68,11 @@
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
+  <object id="75" name="HoneyCellOpen" class="HoneyPotOpen" gid="12" x="0" y="0" width="16" height="32">
+   <properties>
+    <property name="z" type="float" value="1"/>
+   </properties>
+  </object>
   <object id="46" name="ReinforcedHoneyPotOpen" class="HoneyPotOpen" gid="9" x="0" y="0" width="16" height="32">
    <properties>
     <property name="z" type="float" value="1"/>
@@ -78,27 +91,27 @@
   </object>
  </objectgroup>
  <objectgroup id="4" name="enemybullets">
-  <object id="6" name="FlyBullet" gid="18" x="0" y="0" width="16" height="8">
+  <object id="6" name="FlyBullet" gid="22" x="0" y="0" width="16" height="8">
    <properties>
     <property name="z" type="float" value="20"/>
    </properties>
   </object>
-  <object id="26" name="AlienGunnerBullet" gid="18" x="0" y="0" width="16" height="8">
+  <object id="26" name="AlienGunnerBullet" gid="22" x="0" y="0" width="16" height="8">
    <properties>
     <property name="z" type="float" value="20"/>
    </properties>
   </object>
-  <object id="27" name="AcidBullet" gid="93" x="0" y="0" width="16" height="8">
+  <object id="27" name="AcidBullet" gid="97" x="0" y="0" width="16" height="8">
    <properties>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="44" name="AcidBulletFalling" gid="93" x="0" y="0" width="16" height="8">
+  <object id="44" name="AcidBulletFalling" gid="97" x="0" y="0" width="16" height="8">
    <properties>
     <property name="z" type="int" value="20"/>
    </properties>
   </object>
-  <object id="39" name="AcidBulletBeetle" gid="95" x="0" y="0" width="16" height="8">
+  <object id="39" name="AcidBulletBeetle" gid="99" x="0" y="0" width="16" height="8">
    <properties>
     <property name="z" type="int" value="15"/>
    </properties>
@@ -106,7 +119,7 @@
  </objectgroup>
  <objectgroup id="5" name="enemies">
   <object id="8" template="enemies/Ant.tx" name="Ant" x="0" y="0"/>
-  <object id="25" template="enemies/Ant.tx" name="AntFromBigAnt" gid="2147483668" x="-16" y="0" rotation="0">
+  <object id="25" template="enemies/Ant.tx" name="AntFromBigAnt" gid="2147483672" x="-16" y="0" rotation="0">
    <properties>
     <property name="applyspawnertransform" type="bool" value="true"/>
    </properties>
@@ -118,9 +131,9 @@
     <property name="color" type="color" value="#80ffffff"/>
    </properties>
   </object>
-  <object id="17" template="enemies/AlienGunner.tx" name="AlienGunnerLeft" gid="2147483672" x="0" y="0" rotation="0"/>
+  <object id="17" template="enemies/AlienGunner.tx" name="AlienGunnerLeft" gid="2147483676" x="0" y="0" rotation="0"/>
   <object id="11" template="enemies/AlienPillager.tx" name="AlienPillager" x="0" y="0"/>
-  <object id="18" template="enemies/AlienPillager.tx" name="AlienPillagerLeft" gid="2147483678" x="0" y="0" rotation="0"/>
+  <object id="18" template="enemies/AlienPillager.tx" name="AlienPillagerLeft" gid="2147483682" x="0" y="0" rotation="0"/>
   <object id="13" template="enemies/FlyBackground.tx" name="FlyBehind" x="0" y="0"/>
   <object id="14" name="InfiniteHoneyPotOpen" gid="9" x="0" y="0" width="16" height="32">
    <properties>
@@ -135,39 +148,39 @@
     <property name="color" type="color" value="#80ffffff"/>
    </properties>
   </object>
-  <object id="52" template="enemies/AcidAnt.tx" name="AcidAntLeft" gid="2147483670" x="0" y="0" rotation="0"/>
-  <object id="55" template="enemies/AcidAnt.tx" name="AcidAntLeftBehind" gid="2147483670" x="0" y="0" rotation="0">
+  <object id="52" template="enemies/AcidAnt.tx" name="AcidAntLeft" gid="2147483674" x="0" y="0" rotation="0"/>
+  <object id="55" template="enemies/AcidAnt.tx" name="AcidAntLeftBehind" gid="2147483674" x="0" y="0" rotation="0">
    <properties>
     <property name="collidable" type="bool" value="false"/>
     <property name="color" type="color" value="#80ffffff"/>
    </properties>
   </object>
   <object id="45" template="enemies/AcidAnt.tx" name="AcidAntClimbingDown" x="0" y="0" rotation="90"/>
-  <object id="49" template="enemies/AcidAnt.tx" name="AcidAntClimbingDownLeft" gid="2147483670" x="0" y="0" rotation="-90"/>
+  <object id="49" template="enemies/AcidAnt.tx" name="AcidAntClimbingDownLeft" gid="2147483674" x="0" y="0" rotation="-90"/>
   <object id="43" template="enemies/Tick.tx" name="Tick" x="0" y="0" width="24" height="32"/>
   <object id="50" template="enemies/WaspEgg.tx" name="WaspEgg" x="0" y="0"/>
-  <object id="51" name="WaspHatch" gid="104" x="0" y="0" width="40" height="30"/>
+  <object id="51" name="WaspHatch" gid="108" x="0" y="0" width="40" height="30"/>
  </objectgroup>
  <objectgroup id="10" name="decals">
-  <object id="56" name="DecalBlood" class="Decal" gid="114" x="0" y="0" width="24" height="24">
+  <object id="56" name="DecalBlood" class="Decal" gid="118" x="0" y="0" width="24" height="24">
    <properties>
     <property name="color" type="color" value="#40aa0000"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="74" name="DecalAcid" class="Decal" gid="114" x="0" y="0" width="24" height="24">
+  <object id="74" name="DecalAcid" class="Decal" gid="118" x="0" y="0" width="24" height="24">
    <properties>
     <property name="color" type="color" value="#40555500"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="72" name="DecalBloodBigAnt1" class="Decal" gid="114" x="-8" y="8" width="24" height="24">
+  <object id="72" name="DecalBloodBigAnt1" class="Decal" gid="118" x="-8" y="8" width="24" height="24">
    <properties>
     <property name="color" type="color" value="#40aa0000"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="73" name="DecalBloodBigAnt2" class="Decal" gid="114" x="8" y="8" width="24" height="24">
+  <object id="73" name="DecalBloodBigAnt2" class="Decal" gid="118" x="8" y="8" width="24" height="24">
    <properties>
     <property name="color" type="color" value="#40aa0000"/>
     <property name="z" type="float" value="0.25"/>

@@ -33,7 +33,7 @@ function Menu:init()
         return a.y < b.y
     end)
 
-    self:selectButton(1)
+    self:selectButton()
     return self
 end
 
@@ -69,7 +69,7 @@ function Menu:itemAtPoint(x, y)
     for i, menuitem in ipairs(self.menuitems) do
         if math.testrects(
             x, y, 0, 0,
-            menuitem.x, menuitem.y,
+            menuitem.leftx, menuitem.topy,
             menuitem.width, menuitem.height
         ) then
             return i, menuitem
@@ -131,7 +131,7 @@ end
 
 function Menu:moveCursor(dir)
     dir = dir / math.abs(dir)
-    local i = self.cursorposition
+    local i = self.cursorposition or 0
     local menuitems = self.menuitems
     i = i + dir
     if i < 1 then

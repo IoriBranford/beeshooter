@@ -40,8 +40,6 @@ function love.load(args)
     love.graphics.setNewFont("data/fonts/Press Start 2P 8.fnt")
     love.graphics.setLineStyle("rough")
 
-    -- Wallpaper.load()
-
     local startpoint = args.startpoint
     love.event.loadphase(firstphase, startpoint)
 end

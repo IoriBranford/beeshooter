@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 213,
-  nextobjectid = 1903,
+  nextlayerid = 231,
+  nextobjectid = 2180,
   backgroundcolor = { 58, 29, 4 },
   properties = {},
   tilesets = {
@@ -26,7 +26,7 @@ return {
       image = "tilesets/Beehive.png",
       imagewidth = 480,
       imageheight = 256,
-      objectalignment = "unspecified",
+      objectalignment = "center",
       tilerendersize = "tile",
       fillmode = "stretch",
       tileoffset = {
@@ -629,9 +629,9 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 12,
+      columns = 16,
       image = "tilesets/BeehiveObjects.png",
-      imagewidth = 192,
+      imagewidth = 256,
       imageheight = 32,
       objectalignment = "center",
       tilerendersize = "tile",
@@ -647,7 +647,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 12,
+      tilecount = 16,
       tiles = {
         {
           id = 0,
@@ -776,12 +776,172 @@ return {
               }
             }
           }
+        },
+        {
+          id = 7,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 16,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 9,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 11,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 13,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 0,
+                y = 6,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
+          id = 15,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 0,
+                width = 8,
+                height = 20,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
         }
       }
     },
     {
       name = "Fly",
-      firstgid = 502,
+      firstgid = 506,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -909,7 +1069,7 @@ return {
     },
     {
       name = "Aliens",
-      firstgid = 518,
+      firstgid = 522,
       class = "",
       tilewidth = 24,
       tileheight = 16,
@@ -1172,7 +1332,7 @@ return {
     },
     {
       name = "Beetle",
-      firstgid = 536,
+      firstgid = 540,
       class = "",
       tilewidth = 48,
       tileheight = 48,
@@ -1200,6 +1360,9 @@ return {
       tiles = {
         {
           id = 0,
+          properties = {
+            ["name"] = "walk1"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "index",
@@ -1383,6 +1546,9 @@ return {
         },
         {
           id = 5,
+          properties = {
+            ["name"] = "walk3"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "topdown",
@@ -1565,6 +1731,9 @@ return {
         },
         {
           id = 10,
+          properties = {
+            ["name"] = "walk0"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "topdown",
@@ -1747,6 +1916,9 @@ return {
         },
         {
           id = 15,
+          properties = {
+            ["name"] = "walk2"
+          },
           objectGroup = {
             type = "objectgroup",
             draworder = "topdown",
@@ -1931,7 +2103,7 @@ return {
     },
     {
       name = "AlienMind",
-      firstgid = 556,
+      firstgid = 560,
       class = "",
       tilewidth = 32,
       tileheight = 48,
@@ -2024,7 +2196,7 @@ return {
     },
     {
       name = "Wasp",
-      firstgid = 560,
+      firstgid = 564,
       class = "",
       tilewidth = 40,
       tileheight = 30,
@@ -2149,6 +2321,34 @@ return {
         },
         {
           id = 6,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 6,
@@ -2162,6 +2362,34 @@ return {
         },
         {
           id = 8,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 8,
+                y = 8,
+                width = 24,
+                height = 12,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 8,
@@ -2185,7 +2413,7 @@ return {
     },
     {
       name = "Tick",
-      firstgid = 572,
+      firstgid = 576,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -2257,7 +2485,7 @@ return {
     },
     {
       name = "WaspEgg",
-      firstgid = 574,
+      firstgid = 578,
       class = "",
       tilewidth = 8,
       tileheight = 8,
@@ -2304,7 +2532,7 @@ return {
     },
     {
       name = "WaspBoss",
-      firstgid = 577,
+      firstgid = 581,
       class = "",
       tilewidth = 100,
       tileheight = 100,
@@ -2814,12 +3042,20 @@ return {
               compression = "zlib",
               chunks = {
                 {
+                  x = 0, y = 14, width = 16, height = 14,
+                  data = "eJxjYBgFo2BwgTmMDAw70fAsRuL1zgXi7Wh4JpFmgNTOB+IFaHgh1Bxi9O/Fom4/Dv0AZ0URlQ=="
+                },
+                {
+                  x = 0, y = 28, width = 16, height = 14,
+                  data = "eJxjYBgFo2BgwRMy9DxCYjMxQsxoIxKD9TIi9CswQsx4zEAcBumVQ9IPM4ORSIysFwCR2RJD"
+                },
+                {
                   x = 16, y = 28, width = 16, height = 14,
                   data = "eJxjYBgFgwn04ZGbxohf7wyg/Bo88lsYcZsB0rsNiIvw6C/EYQZMbzuQHYJHfzAQt6KZgaw3k4Gw/eloZiDrJdZ+ZDOQ9ZJiP4xG1kuq/SAaAFDsHtU="
                 },
                 {
                   x = 0, y = 42, width = 16, height = 14,
-                  data = "eJxjYBgFo2BgwRMy9DxCYjMxQsxoIxKD9TIi9CswQsx4zEAcBumVQ9IPM4ORSIysFwCR2RJD"
+                  data = "eJxjYBgF1AKtQNwGxO0kysFAOhBnAHEmiXKj9g9d+wHZ/Bl1"
                 },
                 {
                   x = 16, y = 42, width = 16, height = 14,
@@ -2827,7 +3063,7 @@ return {
                 },
                 {
                   x = 0, y = 56, width = 16, height = 14,
-                  data = "eJxjYBgFtACFQNyGBRcRqT8YiDOw4JBR++li/0Mc9t8nUv9/IH6ABf9FUwcAEkggNg=="
+                  data = "eJxjYECAdCDOAOJMBkyATw4GWoG4DYjbSZQbtX/UfmrY/wRqxyMS5WCAiZGB4TGIwUiaHAwoAOUYgVgOixpccgBgriU/"
                 },
                 {
                   x = 16, y = 56, width = 16, height = 14,
@@ -2835,11 +3071,15 @@ return {
                 },
                 {
                   x = -16, y = 70, width = 16, height = 14,
-                  data = "eJxjYBi6oJBC/cGj9g+o/Q8p1P+fQv2yjBQaQAUAAEAUBLw="
+                  data = "eJxjYBgF5IJCCvUHj9o/oPY/pFD/fwr1yzIyMAAA4mcEvA=="
                 },
                 {
                   x = 0, y = 70, width = 16, height = 14,
-                  data = "eJxjYMAOZBkZGP4xYGJpRhwayARtaLiIRP0ZaDhk1P4Btf8+ifofoOG/JOqndfqkNQAAVnYgRQ=="
+                  data = "eJxjYBjZoA2Ki0jQU4ikLwOKQ0jQH4ykb9R+6th/nwT9D5H0PYDivyTo/4+k7x8USzMSr1+WEaEPAG+fH9A="
+                },
+                {
+                  x = 16, y = 70, width = 16, height = 14,
+                  data = "eJxjYBjZoIhC/SGj9g+o/fcp1P+XQv3SjJTpBwAHmQS9"
                 },
                 {
                   x = 0, y = 84, width = 16, height = 14,
@@ -2997,20 +3237,20 @@ return {
               compression = "zlib",
               chunks = {
                 {
+                  x = 0, y = 14, width = 16, height = 14,
+                  data = "eJxjYBgFo2AUwEAAHjl/IvRvZGRgmMyIKT4VKLYZizgAl1gDMA=="
+                },
+                {
                   x = 0, y = 28, width = 16, height = 14,
-                  data = "eJxjYBgFo2BwAVZGBgY2NMzOSLxePgbsmBgztIFYFIteMSDWJcL+VqgZOmgYpLcdi3oA9EgDXA=="
+                  data = "eJxjYMAEGxkZGDah4c2MWBSiAVaomnQgzkDDmVA17DjMAenlh7JbgdgGyLeFYjsgbofK8eIwAyTOB8QHofZHAdVEQ3EMI8T+w1A1/Jja4fphZlQA9VRCcRUjQi8u/dpALIqkBhcWA2Jd7EEANkOHAMamFxbuyOEGCrM2Bgi2wRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAGrHJL8="
                 },
                 {
                   x = 0, y = 42, width = 16, height = 14,
-                  data = "eJxjYMAErUBsw8jA0MYAwXZAdjsWdeiAlRFCpwNxBhrOhKphZ8Stlx/NflsoRrafF4cZIHE+ID4ItT8KqCYaimMYIfYfhqrhx9QO1w8zowKopxKKqxgRenHp1wZiUSQ1uLAYEOtiDwKwGToEMDa9sHBHDjc7pPizwRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAPHpIyE="
+                  data = "eJxjYBg+gJWRgYENiNkZSZODAW0g1gFiXRLlRsEoIBcAAOccATM="
                 },
                 {
                   x = 16, y = 42, width = 16, height = 14,
                   data = "eJxjYBgFowABWBkZGNhwYHZGwvq1gVgHB9alobtBgJUI9+HzAy8RdvDjkcPnd1xhAAAtJAN7"
-                },
-                {
-                  x = 0, y = 56, width = 16, height = 14,
-                  data = "eJxjYBiegJWRgYENC2ZnJE6/NhDrYMG6tHLwKBiRAABaAgFm"
                 },
                 {
                   x = 16, y = 56, width = 16, height = 14,
@@ -3018,11 +3258,15 @@ return {
                 },
                 {
                   x = -16, y = 70, width = 16, height = 14,
-                  data = "eJxjYCAfsDJSoBkItCnTPgpGwZAHAJjDADI="
+                  data = "eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg=="
                 },
                 {
                   x = 0, y = 70, width = 16, height = 14,
-                  data = "eJxjY2RgYEPC7EBMCtBBw7qkaR8Fo2BEAwBH0AEC"
+                  data = "eJxjYBhYwMYIweyMxOthZUTo02GAYF0S7NRmQOgbBaNgIAEANCMBMw=="
+                },
+                {
+                  x = 16, y = 70, width = 16, height = 14,
+                  data = "eJxjYBhYwM5ImX5d6jhjFIyCAQEAlz8ANg=="
                 },
                 {
                   x = 0, y = 84, width = 16, height = 14,
@@ -3164,16 +3408,12 @@ return {
               compression = "zlib",
               chunks = {
                 {
-                  x = 0, y = 28, width = 16, height = 14,
-                  data = "eJxjYBgFo2BwAUdGBgYnIHZmhLBBNCkgHqg+AYiVgFgRSjuRYE4tUJ09EDsAcR0Su54Ed9Qiqa/FoxcAbSIHew=="
+                  x = 0, y = 42, width = 16, height = 14,
+                  data = "eJxjYBhewJGRgcGZkXQ5GKgFytfjUINPbhSMAnIAAHnRAwk="
                 },
                 {
                   x = 16, y = 42, width = 16, height = 14,
                   data = "eJxjYBgFo4C6wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/KAEAa6AEjQ=="
-                },
-                {
-                  x = 0, y = 56, width = 16, height = 14,
-                  data = "eJxjYBi+wJGRgcEJCTszkqa/Fqi+DgnXk6h/FIwCQgAASDUDyw=="
                 },
                 {
                   x = 0, y = 84, width = 16, height = 14,
@@ -3247,6 +3487,64 @@ return {
               y = 0,
               width = 30,
               height = 20,
+              id = 213,
+              name = "waspbossbreakablefloor",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {
+                ["z"] = 0.001
+              },
+              encoding = "base64",
+              compression = "zlib",
+              chunks = {
+                {
+                  x = 0, y = 14, width = 16, height = 14,
+                  data = "eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1gVgUi14xINYlQn8r1AwdNAzS245FPQBeGwPM"
+                },
+                {
+                  x = 0, y = 28, width = 16, height = 14,
+                  data = "eJxjYMAErUDchobbsagbBaNgFFAGAKPKAyU="
+                }
+              }
+            },
+            {
+              type = "tilelayer",
+              x = 0,
+              y = 0,
+              width = 30,
+              height = 20,
+              id = 214,
+              name = "waspbossbreakableonfloor",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {
+                ["z"] = 0.126
+              },
+              encoding = "base64",
+              compression = "zlib",
+              chunks = {
+                {
+                  x = 0, y = 14, width = 16, height = 14,
+                  data = "eJxjYBgFo4A2wJGRgcGZkXy9ikCsBMROJJoD05sAxQ5AXE+C/lqg2jogtidDL7o5hPQCAKHtBng="
+                }
+              }
+            },
+            {
+              type = "tilelayer",
+              x = 0,
+              y = 0,
+              width = 30,
+              height = 20,
               id = 148,
               name = "overfloor",
               class = "",
@@ -3263,7 +3561,7 @@ return {
               compression = "zlib",
               chunks = {
                 {
-                  x = 0, y = 42, width = 16, height = 14,
+                  x = 0, y = 28, width = 16, height = 14,
                   data = "eJxjYEAF6Qy4QSYeORhoxSPXToR+Su0fqgBfuKEDbOGIL9zQwXAOx6EGAK6JBIk="
                 }
               }
@@ -3491,7 +3789,7 @@ return {
                 },
                 {
                   id = 1901,
-                  name = "",
+                  name = "FaceRight",
                   class = "PathPoint",
                   shape = "point",
                   x = 192,
@@ -3506,7 +3804,7 @@ return {
                 },
                 {
                   id = 1902,
-                  name = "",
+                  name = "FaceRight",
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
@@ -5347,8 +5645,55 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 25,
+              name = "room2powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 173,
+                  name = "",
+                  class = "HoneyPot",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 3568,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 490,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 174,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -80,
+                  y = 3576,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 40,
-              name = "room3fly1",
+              name = "r3fly1",
               class = "",
               visible = true,
               opacity = 1,
@@ -5383,7 +5728,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5401,7 +5746,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5527,7 +5872,7 @@ return {
                 },
                 {
                   id = 455,
-                  name = "",
+                  name = "SetSpeed",
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
@@ -5543,7 +5888,7 @@ return {
                 },
                 {
                   id = 456,
-                  name = "",
+                  name = "SetSpeed",
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
@@ -5598,7 +5943,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5616,7 +5961,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5777,7 +6122,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5795,7 +6140,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -5950,55 +6295,8 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
-              id = 25,
-              name = "room2powerup",
-              class = "",
-              visible = true,
-              opacity = 1,
-              offsetx = 0,
-              offsety = 0,
-              parallaxx = 1,
-              parallaxy = 1,
-              properties = {},
-              objects = {
-                {
-                  id = 173,
-                  name = "",
-                  class = "HoneyPot",
-                  shape = "rectangle",
-                  x = 136,
-                  y = 3568,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 490,
-                  visible = true,
-                  properties = {
-                    ["z"] = 1
-                  }
-                },
-                {
-                  id = 174,
-                  name = "",
-                  class = "Trigger",
-                  shape = "point",
-                  x = -80,
-                  y = 3576,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "spawnCharacters"
-                  }
-                }
-              }
-            },
-            {
-              type = "objectgroup",
-              draworder = "topdown",
               id = 28,
-              name = "room4fly1",
+              name = "r4fly1",
               class = "",
               visible = true,
               opacity = 1,
@@ -6066,7 +6364,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 502,
+                  gid = 506,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -6156,6 +6454,53 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 215,
+              name = "room4powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1943,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 192,
+                  y = 3184,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1944,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -56,
+                  y = 3192,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 36,
               name = "room5fly1",
               class = "",
@@ -6221,7 +6566,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -6311,6 +6656,53 @@ return {
             {
               type = "objectgroup",
               draworder = "topdown",
+              id = 216,
+              name = "r5powerup",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 1945,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 64,
+                  y = 3056,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1946,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 3064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
               id = 20,
               name = "room6fly",
               class = "",
@@ -6367,7 +6759,7 @@ return {
                   width = 32,
                   height = 32,
                   rotation = 0,
-                  gid = 2147484150,
+                  gid = 2147484154,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -7171,7 +7563,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7208,7 +7600,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -7268,7 +7660,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7284,7 +7676,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7339,7 +7731,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -7355,7 +7747,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -7399,7 +7791,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7415,7 +7807,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7431,7 +7823,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7447,7 +7839,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7463,7 +7855,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 524,
+                  gid = 528,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7479,7 +7871,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484172,
+                  gid = 2147484176,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7721,7 +8113,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7735,7 +8127,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7749,7 +8141,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7763,7 +8155,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7777,7 +8169,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7791,7 +8183,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7805,7 +8197,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7819,7 +8211,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7833,7 +8225,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 528,
+                  gid = 532,
                   visible = true,
                   properties = {}
                 },
@@ -7847,7 +8239,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7861,7 +8253,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7875,7 +8267,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484176,
+                  gid = 2147484180,
                   visible = true,
                   properties = {}
                 },
@@ -7935,7 +8327,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -7951,7 +8343,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8008,7 +8400,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8024,7 +8416,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,3 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8053,7 +8445,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8069,7 +8461,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8140,7 +8532,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8156,7 +8548,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "self.speed = slowspeed or 1\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8200,7 +8592,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8216,7 +8608,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 518,
+                  gid = 522,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8232,7 +8624,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8248,7 +8640,7 @@ return {
                   width = 24,
                   height = 16,
                   rotation = 0,
-                  gid = 2147484166,
+                  gid = 2147484170,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -8335,7 +8727,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8351,7 +8743,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8367,7 +8759,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8383,7 +8775,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n AlienGunner_shootAtPlayer(self)\n wait(20)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nfor i = 1,5 do\n wait(40)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 }
               }
@@ -8554,7 +8946,7 @@ return {
                   width = 32,
                   height = 48,
                   rotation = 0,
-                  gid = 556,
+                  gid = 560,
                   visible = true,
                   properties = {
                     ["leftflypath"] = { id = 371 },
@@ -8754,7 +9146,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n wait(60)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -8770,7 +9162,7 @@ return {
                   visible = true,
                   properties = {
                     ["action"] = "",
-                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n AlienGunner_shootAtPlayer(self)\n wait(30)\nend"
+                    ["subscript"] = "changeTile(self, \"gun_stand\")\nwhile true do\n wait(60)\n AlienGunner_shootAtPlayer(self)\nend"
                   }
                 },
                 {
@@ -11598,7 +11990,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -11714,7 +12106,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -11830,7 +12222,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -11946,7 +12338,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12062,7 +12454,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12178,7 +12570,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12294,7 +12686,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12410,7 +12802,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12526,7 +12918,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12642,7 +13034,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12758,7 +13150,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12874,7 +13266,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -12990,7 +13382,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13133,8 +13525,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 1272,
+                  x = -96,
+                  y = 1328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13148,8 +13540,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 8,
-                  y = 1168,
+                  x = 232,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13167,8 +13559,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 16,
-                  y = 1184,
+                  x = 240,
+                  y = 1216,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13186,8 +13578,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 40,
-                  y = 1168,
+                  x = 16,
+                  y = 1216,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13205,8 +13597,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 48,
-                  y = 1184,
+                  x = 24,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13224,27 +13616,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 24,
-                  y = 1168,
-                  width = 16,
-                  height = 32,
-                  rotation = 0,
-                  gid = 496,
-                  visible = true,
-                  properties = {
-                    ["spawncount"] = 60,
-                    ["spawninterval"] = 6,
-                    ["spawntype"] = "AcidAntClimbingDown",
-                    ["z"] = 0.75
-                  }
-                },
-                {
-                  id = 1291,
-                  name = "",
-                  class = "AntHole",
-                  shape = "rectangle",
-                  x = 32,
-                  y = 1184,
+                  x = 248,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13262,8 +13635,8 @@ return {
                   name = "",
                   class = "AntHole",
                   shape = "rectangle",
-                  x = 56,
-                  y = 1168,
+                  x = 8,
+                  y = 1200,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -13281,8 +13654,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 8,
-                  y = 1120,
+                  x = 232,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13299,8 +13672,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 16,
-                  y = 1136,
+                  x = 240,
+                  y = 1168,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13317,16 +13690,16 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 40,
-                  y = 1120,
+                  x = 16,
+                  y = 1168,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 48 },
-                    { x = 0, y = 176 },
-                    { x = 0, y = 192 }
+                    { x = 0, y = 160 },
+                    { x = 0, y = 176 }
                   },
                   properties = {}
                 },
@@ -13335,26 +13708,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1136,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  polyline = {
-                    { x = 0, y = 48 },
-                    { x = 0, y = 160 },
-                    { x = 0, y = 176 }
-                  },
-                  properties = {}
-                },
-                {
-                  id = 1269,
-                  name = "",
-                  class = "Path",
-                  shape = "polyline",
                   x = 24,
-                  y = 1120,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13367,20 +13722,20 @@ return {
                   properties = {}
                 },
                 {
-                  id = 1288,
+                  id = 1269,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 32,
-                  y = 1136,
+                  x = 248,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 48 },
-                    { x = 0, y = 160 },
-                    { x = 0, y = 176 }
+                    { x = 0, y = 176 },
+                    { x = 0, y = 192 }
                   },
                   properties = {}
                 },
@@ -13389,8 +13744,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 56,
-                  y = 1120,
+                  x = 8,
+                  y = 1152,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13407,8 +13762,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 8,
-                  y = 1312,
+                  x = 232,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13422,8 +13777,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 16,
-                  y = 1312,
+                  x = 240,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13437,8 +13792,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 40,
-                  y = 1312,
+                  x = 16,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13452,8 +13807,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 1312,
+                  x = 24,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13467,23 +13822,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 24,
-                  y = 1312,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "markDisappear"
-                  }
-                },
-                {
-                  id = 1285,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 32,
-                  y = 1312,
+                  x = 248,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13497,8 +13837,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 56,
-                  y = 1312,
+                  x = 8,
+                  y = 1344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13521,19 +13861,40 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["allenemiesdefeatedbonus"] = 25000,
+                ["allenemiesdefeatedbonuswindow"] = 30
+              },
               objects = {
                 {
                   id = 1266,
                   name = "",
                   class = "Beetle",
                   shape = "rectangle",
-                  x = 80,
-                  y = 1304,
+                  x = 56,
+                  y = 1320,
                   width = 48,
                   height = 48,
                   rotation = 90,
-                  gid = 2147484194,
+                  gid = 2147484198,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 1903,
+                  name = "",
+                  class = "Beetle",
+                  shape = "rectangle",
+                  x = 200,
+                  y = 1320,
+                  width = 48,
+                  height = 48,
+                  rotation = -90,
+                  gid = 550,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -13546,8 +13907,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -24,
-                  y = 1272,
+                  x = -48,
+                  y = 1288,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13561,8 +13922,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 80,
-                  y = 1304,
+                  x = 56,
+                  y = 1320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13571,9 +13932,30 @@ return {
                     { x = 0, y = 0 },
                     { x = 0, y = -16 },
                     { x = 0, y = -24 },
-                    { x = 0, y = -160 },
-                    { x = -16, y = -176 },
-                    { x = -112, y = -176 }
+                    { x = 0, y = -144 },
+                    { x = -16, y = -160 },
+                    { x = -112, y = -160 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 1904,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 200,
+                  y = 1320,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -16 },
+                    { x = 0, y = -24 },
+                    { x = 0, y = -144 },
+                    { x = 16, y = -160 },
+                    { x = 112, y = -160 }
                   },
                   properties = {}
                 },
@@ -13582,8 +13964,23 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1288,
+                  x = 56,
+                  y = 1304,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1908,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1304,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13594,26 +13991,47 @@ return {
                 },
                 {
                   id = 1283,
-                  name = "",
+                  name = "BeetleShoot",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1280,
+                  x = 56,
+                  y = 1296,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "startBeetleShoot"
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 5,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 1907,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 200,
+                  y = 1296,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 5,
+                    ["burstshots"] = 4
                   }
                 },
                 {
                   id = 1296,
-                  name = "",
+                  name = "Rotate",
                   class = "PathPoint",
                   shape = "point",
-                  x = 80,
-                  y = 1144,
+                  x = 56,
+                  y = 1176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13624,12 +14042,28 @@ return {
                   }
                 },
                 {
-                  id = 1297,
-                  name = "",
+                  id = 1905,
+                  name = "Rotate",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1128,
+                  x = 200,
+                  y = 1176,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
+                  id = 1297,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 1160,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13637,6 +14071,22 @@ return {
                   properties = {
                     ["action"] = "PathPoint_Rotate",
                     ["delta"] = -45
+                  }
+                },
+                {
+                  id = 1906,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 1160,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
                   }
                 }
               }
@@ -13660,8 +14110,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -40,
-                  y = 1184,
+                  x = -64,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13673,29 +14123,30 @@ return {
                 {
                   id = 1674,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 32,
-                  y = 1208,
+                  y = 1264,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1675,
+                  id = 1913,
                   name = "",
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 1208,
+                  y = 1264,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13703,20 +14154,20 @@ return {
                   polyline = {
                     { x = 0, y = 0 },
                     { x = 56, y = 0 },
-                    { x = 104, y = 8 },
-                    { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = 96, y = -8 },
+                    { x = 120, y = -16 },
+                    { x = 136, y = -24 },
+                    { x = 152, y = -40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1676,
+                  id = 1914,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 1208,
+                  y = 1264,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13725,16 +14176,16 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 45
+                    ["time"] = 75
                   }
                 },
                 {
-                  id = 1677,
+                  id = 1915,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
                   x = 152,
-                  y = 1224,
+                  y = 1248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13744,12 +14195,12 @@ return {
                   }
                 },
                 {
-                  id = 1678,
+                  id = 1916,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 160,
-                  y = 1232,
+                  x = 168,
+                  y = 1240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13768,12 +14219,12 @@ return {
                   }
                 },
                 {
-                  id = 1679,
+                  id = 1917,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1264,
+                  x = 184,
+                  y = 1224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13783,12 +14234,12 @@ return {
                   }
                 },
                 {
-                  id = 1694,
+                  id = 1918,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 136,
-                  y = 1216,
+                  x = 152,
+                  y = 1248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13796,6 +14247,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1919,
+                  name = "SetSpeed",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1248,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -13806,7 +14273,7 @@ return {
               id = 177,
               name = "r13fly2",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -13819,32 +14286,34 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -48,
-                  y = 1176,
+                  x = -72,
+                  y = 1184,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = true
                   }
                 },
                 {
                   id = 1681,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 48,
-                  y = 1224,
+                  y = 1232,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
@@ -13853,19 +14322,19 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1224,
+                  x = 24,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
+                    { x = 24, y = 0 },
                     { x = 56, y = 0 },
-                    { x = 104, y = 8 },
+                    { x = 96, y = 8 },
                     { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = 136, y = 24 },
+                    { x = 152, y = 40 }
                   },
                   properties = {}
                 },
@@ -13875,7 +14344,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 48,
-                  y = 1224,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13892,8 +14361,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1240,
+                  x = 144,
+                  y = 1248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13907,8 +14376,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1248,
+                  x = 160,
+                  y = 1256,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13931,8 +14400,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1280,
+                  x = 176,
+                  y = 1272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13946,8 +14415,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 152,
-                  y = 1232,
+                  x = 120,
+                  y = 1240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -13955,6 +14424,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1910,
+                  name = "SetSpeed",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 1240,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -13991,50 +14476,51 @@ return {
                 {
                   id = 1688,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 48,
-                  y = 1240,
+                  x = 224,
+                  y = 1224,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1689,
+                  id = 1936,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 1240,
+                  x = 224,
+                  y = 1224,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
                     { x = 0, y = 0 },
-                    { x = 56, y = 0 },
-                    { x = 104, y = 8 },
-                    { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = -56, y = 0 },
+                    { x = -96, y = -8 },
+                    { x = -120, y = -16 },
+                    { x = -136, y = -24 },
+                    { x = -152, y = -40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1690,
+                  id = 1937,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 1240,
+                  x = 224,
+                  y = 1224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14043,16 +14529,16 @@ return {
                     ["scalexy0"] = 0.5,
                     ["scalexy1"] = 1,
                     ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
-                    ["time"] = 45
+                    ["time"] = 75
                   }
                 },
                 {
-                  id = 1691,
+                  id = 1938,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1256,
+                  x = 104,
+                  y = 1208,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14062,12 +14548,12 @@ return {
                   }
                 },
                 {
-                  id = 1692,
+                  id = 1939,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 176,
-                  y = 1264,
+                  x = 88,
+                  y = 1200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14086,12 +14572,12 @@ return {
                   }
                 },
                 {
-                  id = 1693,
+                  id = 1940,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1296,
+                  x = 72,
+                  y = 1184,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14101,19 +14587,35 @@ return {
                   }
                 },
                 {
-                  id = 1696,
+                  id = 1941,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 152,
-                  y = 1248,
+                  x = 104,
+                  y = 1208,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["facex"] = -1,
+                    ["facex"] = 1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1942,
+                  name = "SetSpeed",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1208,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -14124,7 +14626,7 @@ return {
               id = 179,
               name = "r14fly4",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14144,56 +14646,58 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "spawnCharacters"
+                    ["action"] = "spawnCharacters",
+                    ["disabled"] = true
                   }
                 },
                 {
                   id = 1698,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 64,
-                  y = 1256,
+                  x = 208,
+                  y = 1192,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
                     ["scalexy"] = 0.5,
+                    ["speed"] = 3,
                     ["z"] = -10
                   }
                 },
                 {
-                  id = 1699,
+                  id = 1929,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 64,
-                  y = 1256,
+                  x = 232,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = 0 },
-                    { x = 56, y = 0 },
-                    { x = 104, y = 8 },
-                    { x = 120, y = 16 },
-                    { x = 128, y = 24 },
-                    { x = 144, y = 56 }
+                    { x = -24, y = 0 },
+                    { x = -56, y = 0 },
+                    { x = -96, y = 8 },
+                    { x = -120, y = 16 },
+                    { x = -136, y = 24 },
+                    { x = -152, y = 40 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1700,
+                  id = 1930,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1256,
+                  x = 208,
+                  y = 1192,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14206,12 +14710,12 @@ return {
                   }
                 },
                 {
-                  id = 1701,
+                  id = 1931,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 184,
-                  y = 1272,
+                  x = 112,
+                  y = 1208,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14221,12 +14725,12 @@ return {
                   }
                 },
                 {
-                  id = 1702,
+                  id = 1932,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 192,
-                  y = 1280,
+                  x = 96,
+                  y = 1216,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14245,12 +14749,12 @@ return {
                   }
                 },
                 {
-                  id = 1703,
+                  id = 1933,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 208,
-                  y = 1312,
+                  x = 80,
+                  y = 1232,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14260,12 +14764,12 @@ return {
                   }
                 },
                 {
-                  id = 1704,
+                  id = 1934,
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 168,
-                  y = 1264,
+                  x = 136,
+                  y = 1200,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14273,6 +14777,22 @@ return {
                   properties = {
                     ["facex"] = -1,
                     ["subscript"] = "faceSpriteX(self, pathpoint.facex)"
+                  }
+                },
+                {
+                  id = 1935,
+                  name = "SetSpeed",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 1200,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SetSpeed",
+                    ["speed"] = 1
                   }
                 }
               }
@@ -14290,7 +14810,7 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["allenemiesdefeatedbonus"] = 25000,
+                ["allenemiesdefeatedbonus"] = 50000,
                 ["allenemiesdefeatedbonuswindow"] = 30
               },
               objects = {
@@ -14300,7 +14820,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -24,
-                  y = 1112,
+                  y = 1072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14314,16 +14834,17 @@ return {
                   name = "",
                   class = "Beetle",
                   shape = "rectangle",
-                  x = 96,
-                  y = 1120,
+                  x = 104,
+                  y = 1096,
                   width = 48,
                   height = 48,
-                  rotation = -90,
-                  gid = 546,
+                  rotation = 90,
+                  gid = 2147484198,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
+                    ["speed"] = 1.25,
                     ["z"] = 1
                   }
                 },
@@ -14332,184 +14853,1842 @@ return {
                   name = "",
                   class = "Beetle",
                   shape = "rectangle",
-                  x = 208,
-                  y = 1120,
+                  x = 216,
+                  y = 1096,
                   width = 48,
                   height = 48,
                   rotation = 90,
-                  gid = 2147484194,
+                  gid = 2147484198,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["z"] = 1
+                    ["speed"] = 1.25,
+                    ["z"] = -1
                   }
                 },
                 {
-                  id = 1280,
+                  id = 1948,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 96,
-                  y = 1160,
+                  x = 40,
+                  y = 856,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = -40 },
-                    { x = 0, y = -56 },
-                    { x = 0, y = -64 },
-                    { x = 0, y = -192 },
-                    { x = 16, y = -208 },
-                    { x = 24, y = -208 }
+                    { x = 64, y = 240 },
+                    { x = 64, y = 224 },
+                    { x = 40, y = 208 },
+                    { x = 32, y = 208 },
+                    { x = 24, y = 208 },
+                    { x = 0, y = 192 },
+                    { x = 0, y = 176 },
+                    { x = 24, y = 160 },
+                    { x = 32, y = 160 },
+                    { x = 40, y = 160 },
+                    { x = 64, y = 144 },
+                    { x = 64, y = 128 },
+                    { x = 40, y = 112 },
+                    { x = 24, y = 112 },
+                    { x = 0, y = 96 },
+                    { x = 0, y = 80 },
+                    { x = 24, y = 64 },
+                    { x = 40, y = 64 },
+                    { x = 64, y = 48 },
+                    { x = 64, y = 32 },
+                    { x = 40, y = 16 },
+                    { x = 24, y = 16 },
+                    { x = 0, y = 0 },
+                    { x = 0, y = -16 },
+                    { x = 24, y = -32 },
+                    { x = 40, y = -32 },
+                    { x = 64, y = -48 },
+                    { x = 64, y = -64 },
+                    { x = 40, y = -80 },
+                    { x = 24, y = -80 },
+                    { x = 0, y = -96 },
+                    { x = 0, y = -112 },
+                    { x = 16, y = -128 },
+                    { x = 24, y = -128 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1298,
+                  id = 2023,
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 208,
-                  y = 1160,
+                  x = 152,
+                  y = 856,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   polyline = {
-                    { x = 0, y = -40 },
-                    { x = 0, y = -56 },
-                    { x = 0, y = -64 },
-                    { x = 0, y = -192 },
-                    { x = -16, y = -208 },
-                    { x = -24, y = -208 }
+                    { x = 64, y = 240 },
+                    { x = 64, y = 224 },
+                    { x = 40, y = 208 },
+                    { x = 32, y = 208 },
+                    { x = 24, y = 208 },
+                    { x = 0, y = 192 },
+                    { x = 0, y = 176 },
+                    { x = 24, y = 160 },
+                    { x = 32, y = 160 },
+                    { x = 40, y = 160 },
+                    { x = 64, y = 144 },
+                    { x = 64, y = 128 },
+                    { x = 40, y = 112 },
+                    { x = 24, y = 112 },
+                    { x = 0, y = 96 },
+                    { x = 0, y = 80 },
+                    { x = 24, y = 64 },
+                    { x = 40, y = 64 },
+                    { x = 64, y = 48 },
+                    { x = 64, y = 32 },
+                    { x = 40, y = 16 },
+                    { x = 24, y = 16 },
+                    { x = 0, y = 0 },
+                    { x = 0, y = -16 },
+                    { x = 24, y = -32 },
+                    { x = 40, y = -32 },
+                    { x = 64, y = -48 },
+                    { x = 64, y = -64 },
+                    { x = 40, y = -80 },
+                    { x = 24, y = -80 },
+                    { x = 0, y = -96 },
+                    { x = 0, y = -112 },
+                    { x = 16, y = -128 },
+                    { x = 24, y = -128 }
                   },
                   properties = {}
                 },
                 {
-                  id = 1282,
-                  name = "",
+                  id = 1949,
+                  name = "Rotate",
                   class = "PathPoint",
                   shape = "point",
-                  x = 96,
-                  y = 1104,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "enterForeground"
-                  }
-                },
-                {
-                  id = 1301,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 208,
-                  y = 1104,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "enterForeground"
-                  }
-                },
-                {
-                  id = 1284,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 96,
-                  y = 1096,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "startBeetleShoot"
-                  }
-                },
-                {
-                  id = 1300,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 208,
-                  y = 1096,
-                  width = 0,
-                  height = 0,
-                  rotation = 0,
-                  visible = true,
-                  properties = {
-                    ["action"] = "startBeetleShoot"
-                  }
-                },
-                {
-                  id = 1324,
-                  name = "",
-                  class = "PathPoint",
-                  shape = "point",
-                  x = 96,
-                  y = 968,
+                  x = 64,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
                     ["action"] = "PathPoint_Rotate",
-                    ["delta"] = 45
+                    ["delta"] = 90
                   }
                 },
                 {
-                  id = 1325,
-                  name = "",
+                  id = 1998,
+                  name = "Rotate",
                   class = "PathPoint",
                   shape = "point",
-                  x = 112,
-                  y = 952,
+                  x = 176,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
                     ["action"] = "PathPoint_Rotate",
-                    ["delta"] = 45
+                    ["delta"] = 90
                   }
                 },
                 {
-                  id = 1326,
-                  name = "",
+                  id = 1950,
+                  name = "FaceRight",
                   class = "PathPoint",
                   shape = "point",
-                  x = 208,
-                  y = 968,
+                  x = 64,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "PathPoint_Rotate",
-                    ["delta"] = -45
+                    ["action"] = "faceRight"
                   }
                 },
                 {
-                  id = 1327,
-                  name = "",
+                  id = 1997,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 1951,
+                  name = "FaceLeft",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 2004,
+                  name = "FaceLeft",
                   class = "PathPoint",
                   shape = "point",
                   x = 192,
-                  y = 952,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 1952,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1016,
                   width = 0,
                   height = 0,
                   rotation = 0,
                   visible = true,
                   properties = {
                     ["action"] = "PathPoint_Rotate",
-                    ["delta"] = -45
+                    ["delta"] = -90
                   }
+                },
+                {
+                  id = 2003,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1959,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 2002,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1953,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1080,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1993,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1048,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1958,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2005,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1954,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1996,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1956,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1994,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1960,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2001,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1955,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1995,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 1064,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1957,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 1032,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 1999,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 984,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 1961,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2000,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 1016,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1962,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2010,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1963,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 2009,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 1964,
+                  name = "FaceLeft",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 2016,
+                  name = "FaceLeft",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 1965,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 2015,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1966,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 2014,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1967,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2017,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1968,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2008,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1969,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2007,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1970,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2013,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1971,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2006,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1972,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 936,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 2011,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 1973,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2012,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1974,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2022,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1975,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 2021,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 1976,
+                  name = "FaceLeft",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 2029,
+                  name = "FaceLeft",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceLeft"
+                  }
+                },
+                {
+                  id = 1977,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 2028,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1978,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 2027,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = -90
+                  }
+                },
+                {
+                  id = 1979,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2030,
+                  name = "EnterForeground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 1980,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2020,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1981,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2019,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1982,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2026,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1983,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2018,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1984,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 840,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 2024,
+                  name = "EnterBackground",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterBackground"
+                  }
+                },
+                {
+                  id = 1985,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2025,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1986,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2035,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1987,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 2034,
+                  name = "FaceRight",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "faceRight"
+                  }
+                },
+                {
+                  id = 1988,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 2033,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk1"
+                  }
+                },
+                {
+                  id = 1989,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 64,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 2032,
+                  name = "ChangeTile",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 176,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["subscript"] = "changeTile(self, pathpoint.tile)",
+                    ["tile"] = "walk0"
+                  }
+                },
+                {
+                  id = 1990,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 80,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 2031,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 192,
+                  y = 776,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 90
+                  }
+                },
+                {
+                  id = 1991,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
+                  id = 2036,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 744,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
+                  id = 1992,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 56,
+                  y = 728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
+                  id = 2037,
+                  name = "Rotate",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 168,
+                  y = 728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_Rotate",
+                    ["delta"] = 45
+                  }
+                },
+                {
+                  id = 2038,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 1048,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2041,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2043,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2045,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2047,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2049,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 104,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2051,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 40,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2039,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 1048,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2040,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 1000,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2042,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2044,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 904,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2046,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2048,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 216,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2050,
+                  name = "BeetleShoot",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 152,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "BeetleShoot",
+                    ["actiontype"] = "addcoroutine",
+                    ["bursts"] = 1,
+                    ["burstshots"] = 4
+                  }
+                },
+                {
+                  id = 2097,
+                  name = "",
+                  class = "",
+                  shape = "text",
+                  x = -40,
+                  y = 996,
+                  width = 40,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "FIRE>",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "right",
+                  properties = {}
+                },
+                {
+                  id = 2099,
+                  name = "",
+                  class = "",
+                  shape = "text",
+                  x = -40,
+                  y = 860,
+                  width = 40,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "FIRE>",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "right",
+                  properties = {}
+                },
+                {
+                  id = 2101,
+                  name = "",
+                  class = "",
+                  shape = "text",
+                  x = -40,
+                  y = 728,
+                  width = 40,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "FIRE>",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "right",
+                  properties = {}
+                },
+                {
+                  id = 2098,
+                  name = "",
+                  class = "",
+                  shape = "text",
+                  x = 256,
+                  y = 932,
+                  width = 40,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "<FIRE",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  properties = {}
+                },
+                {
+                  id = 2100,
+                  name = "",
+                  class = "",
+                  shape = "text",
+                  x = 256,
+                  y = 796,
+                  width = 40,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "<FIRE",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  properties = {}
                 }
               }
             },
@@ -14519,7 +16698,7 @@ return {
               id = 126,
               name = "r14acidants1",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14654,7 +16833,7 @@ return {
               id = 130,
               name = "r14acidants2",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14789,7 +16968,7 @@ return {
               id = 131,
               name = "r14acidants3",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14924,7 +17103,7 @@ return {
               id = 129,
               name = "r14wasp1a",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -14938,7 +17117,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -64,
-                  y = 1008,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14950,14 +17129,14 @@ return {
                 {
                   id = 1341,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 64,
-                  y = 1072,
+                  x = 136,
+                  y = 1128,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -14971,8 +17150,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 64,
-                  y = 1072,
+                  x = 136,
+                  y = 1128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -14990,8 +17169,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1072,
+                  x = 136,
+                  y = 1128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15008,8 +17187,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1040,
+                  x = 136,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15023,8 +17202,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1032,
+                  x = 136,
+                  y = 1088,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15047,8 +17226,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 64,
-                  y = 1064,
+                  x = 136,
+                  y = 1120,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15065,7 +17244,7 @@ return {
               id = 128,
               name = "r14wasp1b",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -15079,7 +17258,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -72,
-                  y = 1000,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15091,14 +17270,14 @@ return {
                 {
                   id = 1335,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1136,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15112,8 +17291,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1136,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15130,8 +17309,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1064,
+                  x = 120,
+                  y = 1104,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15145,8 +17324,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1056,
+                  x = 120,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15169,8 +17348,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 32,
-                  y = 1096,
+                  x = 120,
+                  y = 1136,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15188,8 +17367,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 32,
-                  y = 1088,
+                  x = 120,
+                  y = 1128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15204,9 +17383,9 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 137,
-              name = "r14wasp3a",
+              name = "r14wasp2a",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -15220,7 +17399,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -48,
-                  y = 928,
+                  y = 992,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15232,14 +17411,14 @@ return {
                 {
                   id = 1399,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1072,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15253,8 +17432,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15271,8 +17450,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 968,
+                  x = 24,
+                  y = 1040,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15286,8 +17465,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 960,
+                  x = 24,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15310,8 +17489,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 232,
-                  y = 1000,
+                  x = 24,
+                  y = 1072,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15329,8 +17508,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 992,
+                  x = 24,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15345,7 +17524,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 136,
-              name = "r14wasp3b",
+              name = "r14wasp2b",
               class = "",
               visible = true,
               opacity = 1,
@@ -15361,7 +17540,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 920,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15373,14 +17552,14 @@ return {
                 {
                   id = 1393,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 232,
-                  y = 1048,
+                  x = 120,
+                  y = 1096,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15394,8 +17573,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1048,
+                  x = 120,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15412,8 +17591,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1016,
+                  x = 120,
+                  y = 1064,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15427,8 +17606,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1008,
+                  x = 120,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15451,8 +17630,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 232,
-                  y = 1048,
+                  x = 120,
+                  y = 1096,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15470,8 +17649,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 232,
-                  y = 1040,
+                  x = 120,
+                  y = 1088,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15486,7 +17665,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 132,
-              name = "r14wasp2a",
+              name = "r14wasp3a",
               class = "",
               visible = true,
               opacity = 1,
@@ -15502,7 +17681,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -88,
-                  y = 888,
+                  y = 976,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15514,14 +17693,14 @@ return {
                 {
                   id = 1369,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 72,
-                  y = 952,
+                  x = 136,
+                  y = 1056,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15535,8 +17714,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 952,
+                  x = 136,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15553,8 +17732,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 920,
+                  x = 136,
+                  y = 1024,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15568,8 +17747,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 912,
+                  x = 136,
+                  y = 1016,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15592,8 +17771,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 72,
-                  y = 952,
+                  x = 136,
+                  y = 1056,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15611,8 +17790,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 72,
-                  y = 944,
+                  x = 136,
+                  y = 1048,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15627,9 +17806,9 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 133,
-              name = "r14wasp2b",
+              name = "r14wasp3b",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -15643,7 +17822,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -96,
-                  y = 880,
+                  y = 936,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15655,14 +17834,14 @@ return {
                 {
                   id = 1375,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
-                  x = 48,
-                  y = 976,
+                  x = 232,
+                  y = 1032,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15676,8 +17855,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 976,
+                  x = 232,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15694,8 +17873,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 944,
+                  x = 232,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15709,8 +17888,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 936,
+                  x = 232,
+                  y = 992,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15733,8 +17912,8 @@ return {
                   name = "",
                   class = "Path",
                   shape = "polyline",
-                  x = 48,
-                  y = 976,
+                  x = 232,
+                  y = 1032,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15752,8 +17931,8 @@ return {
                   name = "",
                   class = "PathPoint",
                   shape = "point",
-                  x = 48,
-                  y = 968,
+                  x = 232,
+                  y = 1024,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15768,7 +17947,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 127,
-              name = "r14wasp2c",
+              name = "r14wasp4a",
               class = "",
               visible = true,
               opacity = 1,
@@ -15783,7 +17962,7 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -104,
+                  x = -88,
                   y = 872,
                   width = 0,
                   height = 0,
@@ -15796,14 +17975,14 @@ return {
                 {
                   id = 1329,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
-                  y = 1000,
+                  y = 960,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -15818,7 +17997,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 1000,
+                  y = 960,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15836,7 +18015,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 968,
+                  y = 928,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15851,7 +18030,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 960,
+                  y = 920,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15875,7 +18054,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 24,
-                  y = 1000,
+                  y = 960,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15894,7 +18073,1716 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 992,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 218,
+              name = "r14wasp4b",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2054,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2055,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 952,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2056,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2057,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2058,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 912,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2059,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 136,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2060,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 944,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 220,
+              name = "r14wasp4c",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2076,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -104,
+                  y = 864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2077,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 24,
+                  y = 984,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2078,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 984,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2079,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 952,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2080,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 944,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2081,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 24,
+                  y = 984,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2082,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 976,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 225,
+              name = "r14wasp5a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2116,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -88,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2117,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 232,
+                  y = 896,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2118,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 896,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2119,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2120,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2121,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 896,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2122,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 224,
+              name = "r14wasp5b",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2109,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -104,
+                  y = 816,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2110,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 888,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2111,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2112,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 856,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2113,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2114,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 120,
+                  y = 888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2115,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 223,
+              name = "r14wasp5c",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2102,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -72,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2103,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 232,
+                  y = 920,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2104,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2105,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 888,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2106,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 880,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2107,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 920,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2108,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 912,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 221,
+              name = "r14wasp6a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2083,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -120,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2084,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 24,
+                  y = 832,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2129,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 832,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2085,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2128,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2086,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2131,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2087,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2132,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2088,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 24,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2127,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 120,
+                  y = 832,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2089,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2130,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 824,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 228,
+              name = "r14wasp6b",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2133,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -120,
+                  y = 728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2134,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 24,
+                  y = 848,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2135,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 120,
+                  y = 848,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2136,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2137,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2138,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 816,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2139,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 816,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2140,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2141,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2142,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 24,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2143,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 120,
+                  y = 848,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2144,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 24,
+                  y = 840,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2145,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 120,
+                  y = 840,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 230,
+              name = "Copy of r14wasp6a",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2159,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -8,
+                  y = 728,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2160,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 800,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2161,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 232,
+                  y = 800,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2162,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2163,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2164,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2165,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2166,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2167,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2168,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 136,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2169,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2170,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2171,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 229,
+              name = "Copy of r14wasp6b",
+              class = "",
+              visible = false,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2146,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -8,
+                  y = 680,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2147,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 136,
+                  y = 800,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 570,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2148,
+                  name = "",
+                  class = "WaspShooter",
+                  shape = "rectangle",
+                  x = 232,
+                  y = 800,
+                  width = 40,
+                  height = 30,
+                  rotation = 0,
+                  gid = 2147484218,
+                  visible = true,
+                  properties = {
+                    ["collidable"] = false,
+                    ["color"] = "#80ffffff",
+                    ["scalexy"] = 0.5,
+                    ["z"] = -10
+                  }
+                },
+                {
+                  id = 2149,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2150,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["scalexy0"] = 0.5,
+                    ["scalexy1"] = 1,
+                    ["subscript"] = "setLerpingTime(self, \"scalexy\", pathpoint.scalexy0, pathpoint.scalexy1, pathpoint.time)",
+                    ["time"] = 30
+                  }
+                },
+                {
+                  id = 2151,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2152,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 768,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "enterForeground"
+                  }
+                },
+                {
+                  id = 2153,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2154,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 760,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "PathPoint_SlowSpeedAndShootBurstsAtTarget",
+                    ["actiontype"] = "addcoroutine",
+                    ["angleoffset"] = 0,
+                    ["burstdeltaangleoffset"] = 0,
+                    ["burstinterval"] = 1,
+                    ["bursts"] = 1,
+                    ["burstshots"] = 3,
+                    ["shotdeltaangleoffset"] = 0,
+                    ["shotinterval"] = 6,
+                    ["target"] = { id = 0 }
+                  }
+                },
+                {
+                  id = 2155,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 136,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2156,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 232,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = -32 },
+                    { x = 0, y = -40 },
+                    { x = 0, y = -8 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2157,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 136,
+                  y = 792,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "startWaspAttack"
+                  }
+                },
+                {
+                  id = 2158,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 232,
+                  y = 792,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15909,7 +19797,7 @@ return {
               type = "objectgroup",
               draworder = "topdown",
               id = 138,
-              name = "r14powerup",
+              name = "r14powerup1",
               class = "",
               visible = true,
               opacity = 1,
@@ -15924,8 +19812,8 @@ return {
                   name = "",
                   class = "Trigger",
                   shape = "point",
-                  x = -16,
-                  y = 960,
+                  x = -136,
+                  y = 1000,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15937,17 +19825,290 @@ return {
                 {
                   id = 1405,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  class = "HoneyCell",
                   shape = "rectangle",
-                  x = 152,
-                  y = 952,
+                  x = 72,
+                  y = 992,
                   width = 16,
                   height = 32,
                   rotation = 0,
-                  gid = 492,
+                  gid = 494,
                   visible = true,
                   properties = {
+                    ["defeatdrops"] = "Powerup AcidAntHole",
                     ["z"] = 1
+                  }
+                },
+                {
+                  id = 2172,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 72,
+                  y = 992,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 120 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2173,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 72,
+                  y = 1112,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 217,
+              name = "r14powerup2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2052,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 968,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2053,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 184,
+                  y = 960,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["defeatdrops"] = "Powerup AcidAntHole",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 2174,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 184,
+                  y = 960,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 152 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2175,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 184,
+                  y = 1112,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 227,
+              name = "r15powerup2",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2125,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -136,
+                  y = 808,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2126,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 72,
+                  y = 800,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["defeatdrops"] = "Powerup AcidAntHole",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 2178,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 72,
+                  y = 800,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 312 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2179,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 72,
+                  y = 1112,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 226,
+              name = "r15powerup1",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 2123,
+                  name = "",
+                  class = "Trigger",
+                  shape = "point",
+                  x = -48,
+                  y = 872,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "spawnCharacters"
+                  }
+                },
+                {
+                  id = 2124,
+                  name = "",
+                  class = "HoneyCell",
+                  shape = "rectangle",
+                  x = 184,
+                  y = 864,
+                  width = 16,
+                  height = 32,
+                  rotation = 0,
+                  gid = 494,
+                  visible = true,
+                  properties = {
+                    ["defeatdrops"] = "Powerup AcidAntHole",
+                    ["z"] = 1
+                  }
+                },
+                {
+                  id = 2176,
+                  name = "",
+                  class = "Path",
+                  shape = "polyline",
+                  x = 184,
+                  y = 864,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polyline = {
+                    { x = 0, y = 0 },
+                    { x = 0, y = 248 }
+                  },
+                  properties = {}
+                },
+                {
+                  id = 2177,
+                  name = "",
+                  class = "PathPoint",
+                  shape = "point",
+                  x = 184,
+                  y = 1112,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["action"] = "markDisappear"
                   }
                 }
               }
@@ -15972,7 +20133,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -72,
-                  y = 880,
+                  y = 656,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -15987,7 +20148,7 @@ return {
                   class = "AntHole",
                   shape = "rectangle",
                   x = 40,
-                  y = 784,
+                  y = 560,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16006,7 +20167,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 40,
-                  y = 768,
+                  y = 544,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16029,7 +20190,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 784,
+                  y = 560,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16044,7 +20205,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 808,
+                  y = 584,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16060,7 +20221,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 792,
+                  y = 568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16076,7 +20237,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 792,
+                  y = 568,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16107,7 +20268,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 832,
+                  y = 608,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16122,7 +20283,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 168,
-                  y = 816,
+                  y = 592,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16138,7 +20299,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 88,
-                  y = 816,
+                  y = 592,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16170,7 +20331,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -56,
-                  y = 816,
+                  y = 592,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16185,7 +20346,7 @@ return {
                   class = "AntHole",
                   shape = "rectangle",
                   x = 184,
-                  y = 680,
+                  y = 456,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16204,7 +20365,7 @@ return {
                   class = "AntHole",
                   shape = "rectangle",
                   x = 72,
-                  y = 696,
+                  y = 472,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16223,7 +20384,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 184,
-                  y = 688,
+                  y = 464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16247,7 +20408,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 88,
-                  y = 680,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16270,7 +20431,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 72,
-                  y = 680,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16285,7 +20446,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 184,
-                  y = 696,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16300,7 +20461,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
-                  y = 728,
+                  y = 504,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16316,7 +20477,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 712,
+                  y = 488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16332,7 +20493,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
-                  y = 712,
+                  y = 488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16348,7 +20509,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 744,
+                  y = 520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16364,7 +20525,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
-                  y = 712,
+                  y = 488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16379,7 +20540,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
-                  y = 696,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16410,7 +20571,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 744,
+                  y = 520,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16425,7 +20586,7 @@ return {
                   class = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 736,
+                  y = 512,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16457,7 +20618,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -40,
-                  y = 648,
+                  y = 424,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16472,7 +20633,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 152,
-                  y = 624,
+                  y = 400,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16488,7 +20649,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
-                  y = 632,
+                  y = 408,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16504,7 +20665,7 @@ return {
                   class = "HoneyPot",
                   shape = "rectangle",
                   x = 112,
-                  y = 624,
+                  y = 400,
                   width = 16,
                   height = 32,
                   rotation = 0,
@@ -16536,7 +20697,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -184,
-                  y = 616,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16548,14 +20709,14 @@ return {
                 {
                   id = 1646,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 40,
-                  y = 680,
+                  y = 472,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16570,7 +20731,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 40,
-                  y = 680,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16589,7 +20750,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 680,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16607,7 +20768,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 648,
+                  y = 440,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16622,7 +20783,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 640,
+                  y = 432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16646,7 +20807,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 672,
+                  y = 464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16677,7 +20838,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 616,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16689,14 +20850,14 @@ return {
                 {
                   id = 1667,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 208,
-                  y = 680,
+                  y = 472,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16711,7 +20872,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 208,
-                  y = 680,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16730,7 +20891,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 680,
+                  y = 472,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16748,7 +20909,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 648,
+                  y = 440,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16763,7 +20924,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 640,
+                  y = 432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16787,7 +20948,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 208,
-                  y = 672,
+                  y = 464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16818,7 +20979,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -200,
-                  y = 592,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16830,14 +20991,14 @@ return {
                 {
                   id = 1653,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
-                  y = 704,
+                  y = 496,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 566,
+                  gid = 570,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16852,7 +21013,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 24,
-                  y = 704,
+                  y = 496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16871,7 +21032,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 704,
+                  y = 496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16889,7 +21050,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 672,
+                  y = 464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16904,7 +21065,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 664,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16928,7 +21089,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 24,
-                  y = 696,
+                  y = 488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16959,7 +21120,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -120,
-                  y = 592,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -16971,14 +21132,14 @@ return {
                 {
                   id = 1660,
                   name = "",
-                  class = "Wasp",
+                  class = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
-                  y = 704,
+                  y = 496,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484214,
+                  gid = 2147484218,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -16993,7 +21154,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 232,
-                  y = 704,
+                  y = 496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17012,7 +21173,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 704,
+                  y = 496,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17030,7 +21191,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 672,
+                  y = 464,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17045,7 +21206,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 664,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17069,7 +21230,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 232,
-                  y = 696,
+                  y = 488,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17100,7 +21261,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 544,
+                  y = 344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17115,11 +21276,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 16,
-                  y = 656,
+                  y = 456,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17134,11 +21295,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 240,
-                  y = 656,
+                  y = 456,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17153,7 +21314,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 16,
-                  y = 656,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17171,7 +21332,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 240,
-                  y = 656,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17189,7 +21350,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 656,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17207,7 +21368,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 656,
+                  y = 456,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17225,7 +21386,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 624,
+                  y = 424,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17240,7 +21401,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 624,
+                  y = 424,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17255,7 +21416,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 616,
+                  y = 416,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17270,7 +21431,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 616,
+                  y = 416,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17301,7 +21462,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 528,
+                  y = 328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17316,11 +21477,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 56,
-                  y = 608,
+                  y = 408,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17335,11 +21496,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 200,
-                  y = 608,
+                  y = 408,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17354,7 +21515,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 56,
-                  y = 608,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17372,7 +21533,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 200,
-                  y = 608,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17390,7 +21551,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
-                  y = 608,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17408,7 +21569,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
-                  y = 608,
+                  y = 408,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17426,7 +21587,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
-                  y = 576,
+                  y = 376,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17441,7 +21602,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
-                  y = 576,
+                  y = 376,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17456,7 +21617,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 56,
-                  y = 568,
+                  y = 368,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17471,7 +21632,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 200,
-                  y = 568,
+                  y = 368,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17502,7 +21663,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 512,
+                  y = 312,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17517,11 +21678,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 112,
-                  y = 584,
+                  y = 384,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17536,11 +21697,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 144,
-                  y = 584,
+                  y = 384,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17555,7 +21716,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 112,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17573,7 +21734,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 144,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17591,7 +21752,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17609,7 +21770,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17627,7 +21788,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 552,
+                  y = 352,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17642,7 +21803,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 552,
+                  y = 352,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17657,7 +21818,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 112,
-                  y = 544,
+                  y = 344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17672,7 +21833,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 144,
-                  y = 544,
+                  y = 344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17703,7 +21864,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 496,
+                  y = 296,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17718,11 +21879,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 80,
-                  y = 560,
+                  y = 360,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17737,11 +21898,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 176,
-                  y = 560,
+                  y = 360,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17756,7 +21917,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 80,
-                  y = 560,
+                  y = 360,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17774,7 +21935,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 176,
-                  y = 560,
+                  y = 360,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17792,7 +21953,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 80,
-                  y = 560,
+                  y = 360,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17810,7 +21971,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 176,
-                  y = 560,
+                  y = 360,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17828,7 +21989,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 80,
-                  y = 528,
+                  y = 328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17843,7 +22004,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 176,
-                  y = 528,
+                  y = 328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17858,7 +22019,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 80,
-                  y = 520,
+                  y = 320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17873,7 +22034,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 176,
-                  y = 520,
+                  y = 320,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17904,7 +22065,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -104,
-                  y = 480,
+                  y = 280,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17919,11 +22080,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 40,
-                  y = 584,
+                  y = 384,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17938,11 +22099,11 @@ return {
                   class = "Wasp",
                   shape = "rectangle",
                   x = 216,
-                  y = 584,
+                  y = 384,
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 2147484208,
+                  gid = 2147484212,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -17957,7 +22118,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 40,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17975,7 +22136,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 216,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -17993,7 +22154,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18011,7 +22172,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 584,
+                  y = 384,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18029,7 +22190,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 552,
+                  y = 352,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18044,7 +22205,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 552,
+                  y = 352,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18059,7 +22220,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 544,
+                  y = 344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18074,7 +22235,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 544,
+                  y = 344,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18091,7 +22252,7 @@ return {
               id = 201,
               name = "r18powerup2",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -18138,7 +22299,7 @@ return {
               id = 202,
               name = "r18powerup3",
               class = "",
-              visible = true,
+              visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
@@ -18199,7 +22360,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -32,
-                  y = 0,
+                  y = 144,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18214,15 +22375,16 @@ return {
                   class = "WaspBoss",
                   shape = "rectangle",
                   x = 128,
-                  y = -48,
+                  y = 440,
                   width = 100,
                   height = 100,
                   rotation = 0,
-                  gid = 577,
+                  gid = 581,
                   visible = true,
                   properties = {
+                    ["collidable"] = false,
                     ["startpoint"] = { id = 1884 },
-                    ["z"] = 1
+                    ["z"] = -0.1
                   }
                 },
                 {
@@ -18231,7 +22393,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -80,
-                  y = -96,
+                  y = 128,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18251,7 +22413,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = -32,
-                  y = 48,
+                  y = 272,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18271,7 +22433,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18289,7 +22451,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18307,7 +22469,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18325,7 +22487,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18343,7 +22505,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 24,
+                  y = 248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18367,7 +22529,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18391,7 +22553,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 224,
-                  y = 24,
+                  y = 248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18415,7 +22577,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18439,7 +22601,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18459,7 +22621,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 224,
-                  y = 208,
+                  y = 432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18479,7 +22641,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 32,
-                  y = 208,
+                  y = 432,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18499,7 +22661,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 40,
-                  y = 104,
+                  y = 328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18519,7 +22681,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 120,
-                  y = 24,
+                  y = 248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18539,7 +22701,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 136,
-                  y = 24,
+                  y = 248,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18559,7 +22721,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 216,
-                  y = 104,
+                  y = 328,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18579,7 +22741,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 16,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18599,7 +22761,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 224,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18619,7 +22781,7 @@ return {
                   class = "PathPoint",
                   shape = "point",
                   x = 240,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18639,7 +22801,7 @@ return {
                   class = "Trigger",
                   shape = "point",
                   x = -16,
-                  y = 0,
+                  y = 224,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18654,7 +22816,7 @@ return {
                   class = "",
                   shape = "point",
                   x = 128,
-                  y = -48,
+                  y = 176,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18671,7 +22833,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18689,7 +22851,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 32,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18707,7 +22869,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18725,7 +22887,7 @@ return {
                   class = "Path",
                   shape = "polyline",
                   x = 224,
-                  y = 16,
+                  y = 240,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -18809,7 +22971,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -18925,7 +23087,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19041,7 +23203,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19157,7 +23319,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19273,7 +23435,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19389,7 +23551,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19505,7 +23667,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19621,7 +23783,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19737,7 +23899,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -19900,7 +24062,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20016,7 +24178,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20132,7 +24294,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -20248,7 +24410,7 @@ return {
                   width = 40,
                   height = 30,
                   rotation = 0,
-                  gid = 560,
+                  gid = 564,
                   visible = true,
                   properties = {
                     ["collidable"] = false,
@@ -23358,7 +27520,7 @@ return {
                   width = 48,
                   height = 48,
                   rotation = 0,
-                  gid = 541,
+                  gid = 545,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23500,7 +27662,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23569,7 +27731,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23608,7 +27770,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 180,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23662,7 +27824,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23732,7 +27894,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23786,7 +27948,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 0,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23809,7 +27971,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 120,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23832,7 +27994,7 @@ return {
                   width = 24,
                   height = 32,
                   rotation = 240,
-                  gid = 572,
+                  gid = 576,
                   visible = true,
                   properties = {
                     ["bitepoint"] = 0,
@@ -23886,7 +28048,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23902,7 +28064,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23918,7 +28080,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23934,7 +28096,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23950,7 +28112,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23966,7 +28128,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -23982,7 +28144,7 @@ return {
                   width = 8,
                   height = 8,
                   rotation = 0,
-                  gid = 574,
+                  gid = 578,
                   visible = true,
                   properties = {
                     ["z"] = 1
@@ -24046,7 +28208,7 @@ return {
               width = 72,
               height = 96,
               rotation = 210,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 5,
@@ -24099,7 +28261,7 @@ return {
               width = 72,
               height = 96,
               rotation = 330,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 7,
@@ -24152,7 +28314,7 @@ return {
               width = 72,
               height = 96,
               rotation = 315,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 4,
@@ -24205,7 +28367,7 @@ return {
               width = 72,
               height = 96,
               rotation = 135,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 0,
@@ -24258,7 +28420,7 @@ return {
               width = 72,
               height = 96,
               rotation = 120,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 1,
@@ -24280,7 +28442,7 @@ return {
               width = 72,
               height = 96,
               rotation = 60,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 3,
@@ -24584,7 +28746,7 @@ return {
               width = 72,
               height = 96,
               rotation = 180,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 1,
@@ -24606,7 +28768,7 @@ return {
               width = 72,
               height = 96,
               rotation = 0,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 5,
@@ -24659,7 +28821,7 @@ return {
               width = 72,
               height = 96,
               rotation = 135,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 0,
@@ -24681,7 +28843,7 @@ return {
               width = 72,
               height = 96,
               rotation = 315,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 4,
@@ -24734,7 +28896,7 @@ return {
               width = 72,
               height = 96,
               rotation = 90,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 7,
@@ -24756,7 +28918,7 @@ return {
               width = 72,
               height = 96,
               rotation = 270,
-              gid = 572,
+              gid = 576,
               visible = true,
               properties = {
                 ["bitepoint"] = 3,

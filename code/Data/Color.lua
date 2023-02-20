@@ -1,12 +1,14 @@
+---@class Color
 local Color = {
-    Red     = "ffff0000",
-    Green   = "ff00ff00",
-    Blue    = "ff0000ff",
-    Cyan    = "ff00ffff",
-    Magenta = "ffff00ff",
-    Yellow  = "ffffff00",
-    White   = "ffffffff",
-    Black   = "ff000000",
+    Red     = 0xffff0000,
+    Green   = 0xff00ff00,
+    Blue    = 0xff0000ff,
+    Cyan    = 0xff00ffff,
+    Magenta = 0xffff00ff,
+    Yellow  = 0xffffff00,
+    White   = 0xffffffff,
+    Grey    = 0xff808080,
+    Black   = 0xff000000,
 }
 
 function Color.normalize(r, g, b, a)

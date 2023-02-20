@@ -35,6 +35,7 @@ local clearred, cleargreen, clearblue = 0, 0, 0
 local gametimer
 local gametimerstate
 local spriteshader
+local stagetiles
 
 local function readMapObjectLayer(objectlayer)
     local triggers, paths, pointdatas, characters
@@ -95,12 +96,6 @@ function Stage.doStageSpawn(stagespawn)
     for _, character in ipairs(characters) do
         character.y = character.y + stagey
     end
-    local paths = stagespawn.paths
-    if paths then
-        for _, path in ipairs(paths) do
-            path.y = path.y + stagey
-        end
-    end
     Stage.addCharacters(stagespawn.characters)
     stagespawn.characters = nil
 end
@@ -122,6 +117,7 @@ function Stage.init(startpoint)
         clearred, cleargreen, clearblue = 0, 0, 0
     end
 
+    stagetiles = map.tiles
     stage = map.layers.stage
     if stage then
         local stagey = stage.starty
@@ -137,10 +133,12 @@ function Stage.init(startpoint)
         local drawbeforedecals = scene:addCustom(function()
             love.graphics.stencil(function()
                 for _, layer in ipairs(tilelayers) do
-                    local chunks = layer.chunks
-                    for _, chunk in ipairs(chunks) do
-                        local sprite = chunk.sprite
-                        sprite:draw()
+                    if layer.visible then
+                        local chunks = layer.chunks
+                        for _, chunk in ipairs(chunks) do
+                            local sprite = chunk.sprite
+                            sprite:draw()
+                        end
                     end
                 end
             end)
@@ -166,10 +164,10 @@ function Stage.init(startpoint)
             end
             for _, stagespawn in ipairs(stagespawns) do
                 local triggers = stagespawn.triggers
-                if triggers then
+                if triggers and stagespawn.visible then
                     for _, trigger in ipairs(triggers) do
                         local timelinepos = -stagey - trigger.y
-                        if timelinepos >= 0 then
+                        if timelinepos >= 0 and trigger.visible then
                             stagespawntimeline:addEvent(timelinepos, Trigger.activate, trigger)
                         end
                     end
@@ -290,6 +288,10 @@ function Stage.fixedupdateHud(hud)
     PlayerShip.updateHud(player, hud)
 end
 
+function Stage.fixedupdateTouchController(touchcontroller)
+    PlayerShip.updateTouchController(player, touchcontroller)
+end
+
 function Stage.fixedupdate()
     local stagey = stage.y
     local stagevely = stage.vely
@@ -353,6 +355,47 @@ function Stage.killTeam(teamname)
     if team then
         for i = 1, #team do
             team[i]:defeat()
+        end
+    end
+end
+
+function Stage.explodeTileLayer(layer, centerx, centery)
+    if type(layer) == "string" then
+        local tilelayers = stage.tilelayers
+        layer = tilelayers[layer]
+    end
+    if not layer or layer.type ~= "tilelayer" or not layer.visible then
+        return
+    end
+    centery = -stage.y + centery
+
+    layer.visible = false
+    for _, chunk in ipairs(layer.chunks) do
+        chunk.sprite:setHidden(true)
+        local data = chunk.data
+        local i = 0
+        for r = chunk.y, chunk.y + chunk.height - 1 do
+            for c = chunk.x, chunk.x + chunk.width - 1 do
+                i = i + 1
+                local gid = data[i]
+                gid = gid and Tiled.parseGid(gid)
+                local tile = stagetiles[gid]
+                if tile then
+                    local x = (c+.5) * chunk.tilewidth
+                    local y = stage.y + (r+.5) * chunk.tileheight
+                    local velx = (x - centerx) / chunk.tilewidth
+                    local vely = (y - centery) / chunk.tileheight
+                    Stage.addCharacter({
+                        type = "ExplosionDebris",
+                        x = x,
+                        y = y,
+                        velx = velx,
+                        vely = vely,
+                        tile = tile,
+                        visible = true,
+                    })
+                end
+            end
         end
     end
 end
