@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 32,
-  nextobjectid = 198,
+  nextobjectid = 200,
   properties = {},
   tilesets = {
     {
@@ -1465,6 +1465,25 @@ return {
               color = { 255, 255, 255 },
               halign = "right",
               properties = {}
+            },
+            {
+              id = 199,
+              name = "over",
+              class = "",
+              shape = "text",
+              x = 16,
+              y = 96,
+              width = 224,
+              height = 32,
+              rotation = 0,
+              visible = true,
+              text = "Press Esc key or\nStart button to continue",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              halign = "center",
+              properties = {}
             }
           }
         },
@@ -1951,6 +1970,25 @@ return {
                   pixelsize = 8,
                   wrap = true,
                   color = { 255, 255, 255 },
+                  properties = {}
+                },
+                {
+                  id = 198,
+                  name = "over",
+                  class = "",
+                  shape = "text",
+                  x = 16,
+                  y = 96,
+                  width = 224,
+                  height = 32,
+                  rotation = 0,
+                  visible = true,
+                  text = "Tap to continue",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
                   properties = {}
                 },
                 {

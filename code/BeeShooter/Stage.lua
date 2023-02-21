@@ -324,7 +324,7 @@ function Stage.fixedupdate()
         if gametimer <= 0 then
             player:setNextCoroutines(PlayerShip.timeout)
             local GamePhase = require "BeeShooter.GamePhase"
-            GamePhase.lose("TIME UP!\n\nPress %s key\nor START button")
+            GamePhase.lose("TIME UP!")
         end
     end
 end
