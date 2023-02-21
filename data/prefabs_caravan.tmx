@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="11" nextobjectid="77">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="12" nextobjectid="83">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
@@ -18,6 +18,9 @@
  <tileset firstgid="103" source="tilesets/WaspEgg.tsx"/>
  <tileset firstgid="106" source="tilesets/Wasp.tsx"/>
  <tileset firstgid="118" source="tilesets/Splats.tsx"/>
+ <tileset firstgid="134" source="tilesets/WaspBossPieces.tsx"/>
+ <tileset firstgid="138" source="tilesets/WaspBossWings.tsx"/>
+ <tileset firstgid="141" source="tilesets/WaspBoss.tsx"/>
  <objectgroup id="6" name="defeatdrops">
   <object id="23" name="KillSmall" gid="66" x="0" y="8" width="32" height="32">
    <properties>
@@ -160,6 +163,49 @@
   <object id="43" template="enemies/Tick.tx" name="Tick" x="0" y="0" width="24" height="32"/>
   <object id="50" template="enemies/WaspEgg.tx" name="WaspEgg" x="0" y="0"/>
   <object id="51" name="WaspHatch" gid="108" x="0" y="0" width="40" height="30"/>
+ </objectgroup>
+ <objectgroup id="11" name="defeatdrops_WaspBoss">
+  <object id="77" gid="141" x="0" y="0" width="100" height="100" visible="0"/>
+  <object id="78" name="WaspBossSting" gid="134" x="-16" y="40" width="32" height="32">
+   <properties>
+    <property name="applyspawnertransform" type="bool" value="true"/>
+    <property name="velx" type="float" value="-1"/>
+    <property name="vely" type="float" value="3"/>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="79" name="WaspBossAbdomen" gid="135" x="-16" y="16" width="32" height="32">
+   <properties>
+    <property name="applyspawnertransform" type="bool" value="true"/>
+    <property name="velx" type="float" value="-2"/>
+    <property name="vely" type="float" value="2"/>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="80" name="WaspBossHead" gid="136" x="32" y="8" width="32" height="32">
+   <properties>
+    <property name="applyspawnertransform" type="bool" value="true"/>
+    <property name="velx" type="float" value="1"/>
+    <property name="vely" type="float" value="1"/>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="81" name="WaspBossThorax" gid="137" x="8" y="0" width="32" height="32">
+   <properties>
+    <property name="applyspawnertransform" type="bool" value="true"/>
+    <property name="velx" type="float" value="1"/>
+    <property name="vely" type="float" value="-4"/>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
+  <object id="82" name="WaspBossWings" gid="138" x="-16" y="-16" width="64" height="64">
+   <properties>
+    <property name="applyspawnertransform" type="bool" value="true"/>
+    <property name="velx" type="float" value="-1"/>
+    <property name="vely" type="float" value="-4"/>
+    <property name="z" type="float" value="10"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="10" name="decals">
   <object id="56" name="DecalBlood" class="Decal" gid="118" x="0" y="0" width="24" height="24">
