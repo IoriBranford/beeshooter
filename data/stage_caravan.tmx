@@ -1248,7 +1248,7 @@ end</property>
     <object id="513" template="enemies/PathPoint.tx" x="80" y="2368">
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
-for i = 1,3 do
+for i = 1,2 do
  wait(40)
  AlienGunner_shootAtPlayer(self)
 end</property>
@@ -1257,7 +1257,7 @@ end</property>
     <object id="514" template="enemies/PathPoint.tx" x="176" y="2368">
      <properties>
       <property name="subscript">self.speed = slowspeed or 1
-for i = 1,3 do
+for i = 1,2 do
  wait(40)
  AlienGunner_shootAtPlayer(self)
 end</property>
@@ -3462,25 +3462,25 @@ self.speed = 0.75</property>
       <property name="z" type="float" value="-0.1"/>
      </properties>
     </object>
-    <object id="1863" class="Path" x="-80" y="128">
+    <object id="1863" class="Path" x="-80" y="48">
      <polyline points="208,120 192,136 160,152 128,136 112,112"/>
     </object>
-    <object id="1864" class="Path" x="-32" y="272">
+    <object id="1864" class="Path" x="-32" y="192">
      <polyline points="160,-24 176,-8 208,8 240,-8 256,-32"/>
     </object>
-    <object id="1868" class="Path" x="32" y="240">
+    <object id="1868" class="Path" x="32" y="160">
      <polyline points="0,8 0,96 0,192"/>
     </object>
-    <object id="1871" class="Path" x="224" y="240">
+    <object id="1871" class="Path" x="224" y="160">
      <polyline points="0,8 0,96 0,192"/>
     </object>
-    <object id="1869" class="Path" x="32" y="240">
+    <object id="1869" class="Path" x="32" y="160">
      <polyline points="8,0 96,0 208,0"/>
     </object>
-    <object id="1870" class="Path" x="224" y="240">
+    <object id="1870" class="Path" x="224" y="160">
      <polyline points="-8,0 -96,0 -208,0"/>
     </object>
-    <object id="1872" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="248">
+    <object id="1872" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="168">
      <properties>
       <property name="angle" type="float" value="45"/>
       <property name="bullettype" value="FlyBullet"/>
@@ -3488,7 +3488,7 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="1875" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="240">
+    <object id="1875" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="160">
      <properties>
       <property name="angle" type="float" value="45"/>
       <property name="bullettype" value="FlyBullet"/>
@@ -3496,7 +3496,7 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="1873" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="248">
+    <object id="1873" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="168">
      <properties>
       <property name="angle" type="float" value="135"/>
       <property name="bullettype" value="FlyBullet"/>
@@ -3504,7 +3504,7 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="1874" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="240">
+    <object id="1874" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="160">
      <properties>
       <property name="angle" type="float" value="135"/>
       <property name="bullettype" value="FlyBullet"/>
@@ -3512,7 +3512,7 @@ self.speed = 0.75</property>
       <property name="shotinterval" type="int" value="3"/>
      </properties>
     </object>
-    <object id="1876" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="32" y="240">
+    <object id="1876" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="32" y="160">
      <properties>
       <property name="horidiagonalpath" type="object" value="1897"/>
       <property name="horizontalpath" type="object" value="1869"/>
@@ -3520,14 +3520,14 @@ self.speed = 0.75</property>
       <property name="vertidiagonalpath" type="object" value="1896"/>
      </properties>
     </object>
-    <object id="1879" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="224" y="432"/>
-    <object id="1881" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="32" y="432"/>
-    <object id="1891" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="40" y="328"/>
-    <object id="1894" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="120" y="248"/>
-    <object id="1895" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="136" y="248"/>
-    <object id="1892" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="216" y="328"/>
-    <object id="1882" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="16" y="240"/>
-    <object id="1878" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="224" y="240">
+    <object id="1879" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="224" y="352"/>
+    <object id="1881" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="32" y="352"/>
+    <object id="1891" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="40" y="248"/>
+    <object id="1894" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="120" y="168"/>
+    <object id="1895" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="136" y="168"/>
+    <object id="1892" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="216" y="248"/>
+    <object id="1882" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="16" y="160"/>
+    <object id="1878" template="pathpoints/WaspBoss/ChooseSweepPath.tx" class="PathPoint" x="224" y="160">
      <properties>
       <property name="horidiagonalpath" type="object" value="1898"/>
       <property name="horizontalpath" type="object" value="1870"/>
@@ -3535,9 +3535,9 @@ self.speed = 0.75</property>
       <property name="vertidiagonalpath" type="object" value="1899"/>
      </properties>
     </object>
-    <object id="1880" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="240"/>
+    <object id="1880" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="160"/>
     <object id="1883" template="triggers/SpawnCharacters.tx" x="-16" y="224"/>
-    <object id="1884" name="startpoint" x="128" y="176">
+    <object id="1884" name="startpoint" x="128" y="96">
      <properties>
       <property name="leftpath" type="object" value="1863"/>
       <property name="rightpath" type="object" value="1864"/>
@@ -3545,16 +3545,16 @@ self.speed = 0.75</property>
      </properties>
      <point/>
     </object>
-    <object id="1896" class="Path" x="32" y="240">
+    <object id="1896" class="Path" x="32" y="160">
      <polyline points="0,8 0,96 88,8"/>
     </object>
-    <object id="1897" class="Path" x="32" y="240">
+    <object id="1897" class="Path" x="32" y="160">
      <polyline points="8,0 96,0 8,88"/>
     </object>
-    <object id="1898" class="Path" x="224" y="240">
+    <object id="1898" class="Path" x="224" y="160">
      <polyline points="-8,0 -96,0 -8,88"/>
     </object>
-    <object id="1899" class="Path" x="224" y="240">
+    <object id="1899" class="Path" x="224" y="160">
      <polyline points="0,8 0,96 -88,8"/>
     </object>
    </objectgroup>

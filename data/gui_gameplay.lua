@@ -1250,7 +1250,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "startGame"
+            ["action"] = "startGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1310,7 +1315,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "quitGame"
+            ["action"] = "quitGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1330,7 +1340,9 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["offsetx"] = -16
+            ["offsetx"] = -16,
+            ["offsety"] = 0,
+            ["roundcorners"] = 0
           }
         }
       }
@@ -1482,7 +1494,9 @@ return {
               rotation = 0,
               gid = 5,
               visible = true,
-              properties = {}
+              properties = {
+                ["name"] = "3A"
+              }
             },
             {
               id = 6,
@@ -1496,7 +1510,9 @@ return {
               rotation = 0,
               gid = 2,
               visible = true,
-              properties = {}
+              properties = {
+                ["name"] = "1B"
+              }
             },
             {
               id = 10,
@@ -1511,8 +1527,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
-                ["offsety"] = 8
+                ["offsety"] = 8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1528,8 +1546,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
-                ["offsety"] = 8
+                ["offsety"] = 8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1545,8 +1565,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
-                ["offsety"] = -8
+                ["offsety"] = -8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1562,8 +1584,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
-                ["offsety"] = -8
+                ["offsety"] = -8,
+                ["roundcorners"] = 0
               }
             }
           }
@@ -1620,7 +1644,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "resumeGame"
+            ["action"] = "resumeGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1640,7 +1669,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "endGame"
+            ["action"] = "endGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1660,7 +1694,9 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["offsetx"] = -16
+            ["offsetx"] = -16,
+            ["offsety"] = 0,
+            ["roundcorners"] = 0
           }
         }
       }
@@ -1742,9 +1778,12 @@ return {
               },
               properties = {
                 ["action"] = "changeWeapon",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -1768,9 +1807,12 @@ return {
               },
               properties = {
                 ["action"] = "touchPauseGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -1861,8 +1903,8 @@ return {
                   name = "score",
                   class = "",
                   shape = "text",
-                  x = -68,
-                  y = 24,
+                  x = 56,
+                  y = 8,
                   width = 64,
                   height = 8,
                   rotation = 0,
@@ -1880,10 +1922,10 @@ return {
                   name = "lives",
                   class = "",
                   shape = "text",
-                  x = -16,
-                  y = 128,
-                  width = 8,
-                  height = 88,
+                  x = 8,
+                  y = 208,
+                  width = 80,
+                  height = 8,
                   rotation = 0,
                   visible = true,
                   text = "♥♥♥♥♥♥♥♥♥",
@@ -1891,8 +1933,6 @@ return {
                   pixelsize = 8,
                   wrap = true,
                   color = { 255, 255, 255 },
-                  halign = "right",
-                  valign = "bottom",
                   properties = {}
                 },
                 {
@@ -1900,50 +1940,13 @@ return {
                   name = "time",
                   class = "",
                   shape = "text",
-                  x = -68,
-                  y = 96,
-                  width = 64,
-                  height = 8,
-                  rotation = 0,
-                  visible = true,
-                  text = "00:00:00",
-                  fontfamily = "Press Start 2P",
-                  pixelsize = 8,
-                  wrap = true,
-                  color = { 255, 255, 255 },
-                  halign = "right",
-                  properties = {}
-                },
-                {
-                  id = 56,
-                  name = "Time",
-                  class = "",
-                  shape = "text",
-                  x = -68,
-                  y = 80,
-                  width = 64,
-                  height = 8,
-                  rotation = 0,
-                  visible = true,
-                  text = "TIME",
-                  fontfamily = "Press Start 2P",
-                  pixelsize = 8,
-                  wrap = true,
-                  color = { 255, 255, 255 },
-                  properties = {}
-                },
-                {
-                  id = 57,
-                  name = "Score",
-                  class = "",
-                  shape = "text",
-                  x = -68,
+                  x = 136,
                   y = 8,
                   width = 64,
                   height = 8,
                   rotation = 0,
                   visible = true,
-                  text = "SCORE",
+                  text = "00:00:00",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
                   wrap = true,
@@ -1955,10 +1958,10 @@ return {
                   name = "bonus",
                   class = "BeeShooter.Gui.BonusText",
                   shape = "text",
-                  x = -68,
-                  y = 40,
-                  width = 64,
-                  height = 32,
+                  x = 16,
+                  y = 24,
+                  width = 104,
+                  height = 16,
                   rotation = 0,
                   visible = true,
                   text = "SECRET BONUS!\n25000",
@@ -1990,44 +1993,50 @@ return {
                   name = "weaponA",
                   class = "Gui.Button",
                   shape = "rectangle",
-                  x = 280,
-                  y = 136,
+                  x = 216,
+                  y = 208,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 5,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["name"] = "3A"
+                  }
                 },
                 {
                   id = 29,
                   name = "weaponB",
                   class = "Gui.Button",
                   shape = "rectangle",
-                  x = 304,
-                  y = 136,
+                  x = 240,
+                  y = 208,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 2,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["name"] = "1B"
+                  }
                 },
                 {
                   id = 30,
                   name = "weaponcursor1",
                   class = "Gui.Cursor",
                   shape = "rectangle",
-                  x = 288,
-                  y = 144,
+                  x = 224,
+                  y = 216,
                   width = 16,
                   height = 16,
                   rotation = 0,
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
-                    ["offsety"] = 8
+                    ["offsety"] = 8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2035,16 +2044,18 @@ return {
                   name = "weaponcursor2",
                   class = "Gui.Cursor",
                   shape = "rectangle",
-                  x = 272,
-                  y = 144,
+                  x = 208,
+                  y = 216,
                   width = 16,
                   height = 16,
                   rotation = 90,
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
-                    ["offsety"] = 8
+                    ["offsety"] = 8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2052,16 +2063,18 @@ return {
                   name = "weaponcursor3",
                   class = "Gui.Cursor",
                   shape = "rectangle",
-                  x = 272,
-                  y = 128,
+                  x = 208,
+                  y = 200,
                   width = 16,
                   height = 16,
                   rotation = 180,
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
-                    ["offsety"] = -8
+                    ["offsety"] = -8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2069,37 +2082,19 @@ return {
                   name = "weaponcursor4",
                   class = "Gui.Cursor",
                   shape = "rectangle",
-                  x = 288,
-                  y = 128,
+                  x = 224,
+                  y = 200,
                   width = 16,
                   height = 16,
                   rotation = 270,
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
-                    ["offsety"] = -8
+                    ["offsety"] = -8,
+                    ["roundcorners"] = 0
                   }
-                },
-                {
-                  id = 55,
-                  name = "Weapon",
-                  class = "",
-                  shape = "text",
-                  x = 264,
-                  y = 112,
-                  width = 56,
-                  height = 8,
-                  rotation = 0,
-                  visible = true,
-                  text = "WEAPON",
-                  fontfamily = "Press Start 2P",
-                  pixelsize = 8,
-                  wrap = true,
-                  color = { 255, 255, 255 },
-                  halign = "center",
-                  valign = "center",
-                  properties = {}
                 }
               }
             }
@@ -2140,9 +2135,12 @@ return {
               },
               properties = {
                 ["action"] = "touchResumeGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2166,9 +2164,12 @@ return {
               },
               properties = {
                 ["action"] = "endGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2272,9 +2273,12 @@ return {
               },
               properties = {
                 ["action"] = "startGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2298,9 +2302,12 @@ return {
               },
               properties = {
                 ["action"] = "touchOpenHelp",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2448,9 +2455,12 @@ return {
                   },
                   properties = {
                     ["action"] = "nextHelpPage",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2474,9 +2484,12 @@ return {
                   },
                   properties = {
                     ["action"] = "previousHelpPage",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2538,7 +2551,12 @@ return {
                   halign = "center",
                   valign = "center",
                   properties = {
-                    ["action"] = "endGame"
+                    ["action"] = "endGame",
+                    ["color"] = "",
+                    ["linecolor"] = "",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2562,9 +2580,12 @@ return {
                   },
                   properties = {
                     ["action"] = "touchCloseHelp",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2635,7 +2656,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2656,7 +2682,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2678,7 +2709,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2700,7 +2736,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2715,7 +2756,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 71,
@@ -2778,7 +2821,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2825,7 +2873,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 91,
@@ -2901,7 +2951,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3010,9 +3065,13 @@ return {
                         { x = 32, y = 16 }
                       },
                       properties = {
-                        ["color"] = "#80aa5500",
-                        ["linecolor"] = "#ffffff7f",
-                        ["pressedcolor"] = "#ffffaa00"
+                        ["action"] = "",
+                        ["color"] = "#80ffaa00",
+                        ["linecolor"] = "#ffffedb7",
+                        ["pressedcolor"] = "#80aa5500",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3052,7 +3111,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3067,7 +3131,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 106,
@@ -3081,7 +3147,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 102,
@@ -3158,7 +3226,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3180,7 +3253,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3195,7 +3273,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 115,
@@ -3209,7 +3289,9 @@ return {
                       rotation = 0,
                       gid = 2,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1B"
+                      }
                     },
                     {
                       id = 116,
@@ -3224,8 +3306,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = 8,
-                        ["offsety"] = 8
+                        ["offsety"] = 8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3241,8 +3325,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = -8,
-                        ["offsety"] = 8
+                        ["offsety"] = 8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3258,8 +3344,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = -8,
-                        ["offsety"] = -8
+                        ["offsety"] = -8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3275,8 +3363,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = 8,
-                        ["offsety"] = -8
+                        ["offsety"] = -8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3297,7 +3387,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3362,7 +3457,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3377,7 +3477,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 139,
@@ -3391,7 +3493,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 132,
@@ -3412,7 +3516,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3432,7 +3541,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3651,7 +3765,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3659,10 +3778,10 @@ return {
                       name = "lives",
                       class = "",
                       shape = "text",
-                      x = -16,
-                      y = 128,
-                      width = 8,
-                      height = 88,
+                      x = 8,
+                      y = 208,
+                      width = 72,
+                      height = 8,
                       rotation = 0,
                       visible = true,
                       text = "♥♥♥",
@@ -3670,8 +3789,6 @@ return {
                       pixelsize = 8,
                       wrap = true,
                       color = { 255, 255, 255 },
-                      halign = "right",
-                      valign = "bottom",
                       properties = {}
                     },
                     {
@@ -3691,7 +3808,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3706,7 +3828,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 157,
@@ -3727,7 +3851,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3749,7 +3878,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3764,7 +3898,9 @@ return {
                       rotation = 0,
                       gid = 3,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "2A"
+                      }
                     },
                     {
                       id = 159,
@@ -3778,7 +3914,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 168,
@@ -3792,7 +3930,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 170,
@@ -3806,7 +3946,9 @@ return {
                       rotation = 0,
                       gid = 13,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "die"
+                      }
                     },
                     {
                       id = 172,

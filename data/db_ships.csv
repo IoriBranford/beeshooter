@@ -21,5 +21,10 @@ Tick,BeeShooter.Character.EnemyShip.Tick,Tick,TickDefeat,EnemyShip,,8,TRUE,,,sou
 ReinforcedHoneyPot,BeeShooter.Character.EnemyShip,Idler,,EnemyShip,,16,TRUE,,,sounds/breakpot.mp3,,ReinforcedHoneyPotOpen PowerupLeft PowerupRight,,,,,,
 WaspEgg,BeeShooter.Character.EnemyShip,Egg,defeatDropItemIfLast,EnemyShip,,8,TRUE,WaspHatch,,sounds/bugkill1.mp3,1000,KillSmall KillMedium DecalBlood,,,,45,Powerup,
 WaspHatch,BeeShooter.Character.EnemyShip,WaspHatch,defeatDropItemIfLast,EnemyShip,1,3,TRUE,,,sounds/bugkill2.mp3,500,KillSmall KillMedium DecalBlood,,,,,Powerup,
-WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,Breakout,defeatBoss,EnemyShip,4,100,,WaspEgg,sounds/bugkill1.mp3,sounds/bugkill2.mp3,10000,KillSmall KillMedium DecalBlood,,,,,,sounds/rocksbreak.mp3
+WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,Breakout,defeatBoss,EnemyShip,4,100,,WaspEgg,sounds/bugkill1.mp3,sounds/monsterscream.mp3,10000,KillSmall KillMedium DecalBlood WaspBossHead WaspBossThorax WaspBossAbdomen WaspBossSting WaspBossWings,,,,,,sounds/rocksbreak.mp3
 ExplosionDebris,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,
+WaspBossHead,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,
+WaspBossThorax,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,
+WaspBossAbdomen,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,
+WaspBossSting,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,
+WaspBossWings,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,

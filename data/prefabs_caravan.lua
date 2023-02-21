@@ -9,8 +9,8 @@ return {
   height = 20,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 11,
-  nextobjectid = 77,
+  nextlayerid = 12,
+  nextobjectid = 83,
   properties = {},
   tilesets = {
     {
@@ -1809,6 +1809,184 @@ return {
       wangsets = {},
       tilecount = 16,
       tiles = {}
+    },
+    {
+      name = "WaspBossPieces",
+      firstgid = 134,
+      class = "",
+      tilewidth = 32,
+      tileheight = 32,
+      spacing = 0,
+      margin = 0,
+      columns = 4,
+      image = "tilesets/WaspBossPieces.png",
+      imagewidth = 128,
+      imageheight = 32,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 32
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 4,
+      tiles = {}
+    },
+    {
+      name = "WaspBossWings",
+      firstgid = 138,
+      class = "",
+      tilewidth = 64,
+      tileheight = 64,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspBossWings.png",
+      imagewidth = 192,
+      imageheight = 64,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 64,
+        height = 64
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "WaspBoss",
+      firstgid = 141,
+      class = "",
+      tilewidth = 100,
+      tileheight = 100,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspBoss.png",
+      imagewidth = 300,
+      imageheight = 100,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 100,
+        height = 100
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 25,
+                y = 40,
+                width = 50,
+                height = 25,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "sting",
+                class = "",
+                shape = "point",
+                x = 50,
+                y = 100,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 3,
+                name = "mouth",
+                class = "",
+                shape = "point",
+                x = 80,
+                y = 65,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -2216,6 +2394,7 @@ return {
           gid = 28,
           visible = true,
           properties = {
+            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2234,6 +2413,7 @@ return {
           properties = {
             ["collidable"] = false,
             ["color"] = "#80ffffff",
+            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2250,6 +2430,7 @@ return {
           gid = 2147483676,
           visible = true,
           properties = {
+            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2266,6 +2447,7 @@ return {
           gid = 34,
           visible = true,
           properties = {
+            ["name"] = "claw_walk",
             ["z"] = 1
           }
         },
@@ -2282,6 +2464,7 @@ return {
           gid = 2147483682,
           visible = true,
           properties = {
+            ["name"] = "claw_walk",
             ["z"] = 1
           }
         },
@@ -2487,7 +2670,134 @@ return {
           rotation = 0,
           gid = 108,
           visible = true,
+          properties = {
+            ["name"] = "hatch"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 11,
+      name = "defeatdrops_WaspBoss",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 77,
+          name = "",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 100,
+          height = 100,
+          rotation = 0,
+          gid = 141,
+          visible = false,
           properties = {}
+        },
+        {
+          id = 78,
+          name = "WaspBossSting",
+          class = "",
+          shape = "rectangle",
+          x = -16,
+          y = 40,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 134,
+          visible = true,
+          properties = {
+            ["applyspawnertransform"] = true,
+            ["velx"] = -1,
+            ["vely"] = 3,
+            ["z"] = 10
+          }
+        },
+        {
+          id = 79,
+          name = "WaspBossAbdomen",
+          class = "",
+          shape = "rectangle",
+          x = -16,
+          y = 16,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 135,
+          visible = true,
+          properties = {
+            ["applyspawnertransform"] = true,
+            ["velx"] = -2,
+            ["vely"] = 2,
+            ["z"] = 10
+          }
+        },
+        {
+          id = 80,
+          name = "WaspBossHead",
+          class = "",
+          shape = "rectangle",
+          x = 32,
+          y = 8,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 136,
+          visible = true,
+          properties = {
+            ["applyspawnertransform"] = true,
+            ["velx"] = 1,
+            ["vely"] = 1,
+            ["z"] = 10
+          }
+        },
+        {
+          id = 81,
+          name = "WaspBossThorax",
+          class = "",
+          shape = "rectangle",
+          x = 8,
+          y = 0,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          gid = 137,
+          visible = true,
+          properties = {
+            ["applyspawnertransform"] = true,
+            ["velx"] = 1,
+            ["vely"] = -4,
+            ["z"] = 10
+          }
+        },
+        {
+          id = 82,
+          name = "WaspBossWings",
+          class = "",
+          shape = "rectangle",
+          x = -16,
+          y = -16,
+          width = 64,
+          height = 64,
+          rotation = 0,
+          gid = 138,
+          visible = true,
+          properties = {
+            ["applyspawnertransform"] = true,
+            ["velx"] = -1,
+            ["vely"] = -4,
+            ["z"] = 10
+          }
         }
       }
     },

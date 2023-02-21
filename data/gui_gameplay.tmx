@@ -138,55 +138,46 @@
   </objectgroup>
   <group id="17" name="hud">
    <objectgroup draworder="index" id="16" name="status">
-    <object id="49" name="score" x="-68" y="24" width="64" height="8">
+    <object id="49" name="score" x="56" y="8" width="64" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00000000</text>
     </object>
-    <object id="50" name="lives" x="-16" y="128" width="8" height="88">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="bottom">♥♥♥♥♥♥♥♥♥</text>
+    <object id="50" name="lives" x="8" y="208" width="80" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥♥♥♥♥♥♥</text>
     </object>
-    <object id="52" name="time" x="-68" y="96" width="64" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">00:00:00</text>
+    <object id="52" name="time" x="136" y="8" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
     </object>
-    <object id="56" name="Time" x="-68" y="80" width="64" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">TIME</text>
-    </object>
-    <object id="57" name="Score" x="-68" y="8" width="64" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">SCORE</text>
-    </object>
-    <object id="53" name="bonus" class="BeeShooter.Gui.BonusText" x="-68" y="40" width="64" height="32">
+    <object id="53" name="bonus" class="BeeShooter.Gui.BonusText" x="16" y="24" width="104" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">SECRET BONUS!
 25000</text>
     </object>
    </objectgroup>
    <objectgroup draworder="index" id="12" name="weapons" class="Gui.Menu">
-    <object id="28" name="weaponA" class="Gui.Button" gid="5" x="280" y="136" width="16" height="16"/>
-    <object id="29" name="weaponB" class="Gui.Button" gid="2" x="304" y="136" width="16" height="16"/>
-    <object id="30" name="weaponcursor1" class="Gui.Cursor" gid="8" x="288" y="144" width="16" height="16">
+    <object id="28" name="weaponA" class="Gui.Button" gid="5" x="216" y="208" width="16" height="16"/>
+    <object id="29" name="weaponB" class="Gui.Button" gid="2" x="240" y="208" width="16" height="16"/>
+    <object id="30" name="weaponcursor1" class="Gui.Cursor" gid="8" x="224" y="216" width="16" height="16">
      <properties>
       <property name="offsetx" type="float" value="8"/>
       <property name="offsety" type="float" value="8"/>
      </properties>
     </object>
-    <object id="31" name="weaponcursor2" class="Gui.Cursor" gid="8" x="272" y="144" width="16" height="16" rotation="90">
+    <object id="31" name="weaponcursor2" class="Gui.Cursor" gid="8" x="208" y="216" width="16" height="16" rotation="90">
      <properties>
       <property name="offsetx" type="float" value="-8"/>
       <property name="offsety" type="float" value="8"/>
      </properties>
     </object>
-    <object id="32" name="weaponcursor3" class="Gui.Cursor" gid="8" x="272" y="128" width="16" height="16" rotation="180">
+    <object id="32" name="weaponcursor3" class="Gui.Cursor" gid="8" x="208" y="200" width="16" height="16" rotation="180">
      <properties>
       <property name="offsetx" type="float" value="-8"/>
       <property name="offsety" type="float" value="-8"/>
      </properties>
     </object>
-    <object id="33" name="weaponcursor4" class="Gui.Cursor" gid="8" x="288" y="128" width="16" height="16" rotation="270">
+    <object id="33" name="weaponcursor4" class="Gui.Cursor" gid="8" x="224" y="200" width="16" height="16" rotation="270">
      <properties>
       <property name="offsetx" type="float" value="8"/>
       <property name="offsety" type="float" value="-8"/>
      </properties>
-    </object>
-    <object id="55" name="Weapon" x="264" y="112" width="56" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">WEAPON</text>
     </object>
    </objectgroup>
   </group>
@@ -464,8 +455,8 @@ When Jenny touches a Crystal, she gains a weapon level and a moment of invincibi
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">DAMAGE &amp; DEATH</text>
      </object>
-     <object id="154" name="lives" x="-16" y="128" width="8" height="88">
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="bottom">♥♥♥</text>
+     <object id="154" name="lives" x="8" y="208" width="72" height="8">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥</text>
      </object>
      <object id="155" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
       <properties>
