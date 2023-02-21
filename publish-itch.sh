@@ -32,7 +32,7 @@ publish() {
 # publish win-32
 publish win-64
 # publish osx
-# publish android
+publish android
 # publish linux-x86_64
 # publish linux-i686
 # publish linux-armhf
