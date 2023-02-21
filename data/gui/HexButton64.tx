@@ -2,9 +2,9 @@
 <template>
  <object class="BeeShooter.Gui.Button">
   <properties>
-   <property name="color" type="color" value="#80aa5500"/>
-   <property name="linecolor" type="color" value="#ffffff7f"/>
-   <property name="pressedcolor" type="color" value="#ffffaa00"/>
+   <property name="color" type="color" value="#80ffaa00"/>
+   <property name="linecolor" type="color" value="#ffffedb7"/>
+   <property name="pressedcolor" type="color" value="#80aa5500"/>
   </properties>
   <polygon points="0,0 -32,16 -32,48 0,64 32,48 32,16"/>
  </object>

@@ -1250,7 +1250,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "startGame"
+            ["action"] = "startGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1310,7 +1315,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "quitGame"
+            ["action"] = "quitGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1330,7 +1340,9 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["offsetx"] = -16
+            ["offsetx"] = -16,
+            ["offsety"] = 0,
+            ["roundcorners"] = 0
           }
         }
       }
@@ -1482,7 +1494,9 @@ return {
               rotation = 0,
               gid = 5,
               visible = true,
-              properties = {}
+              properties = {
+                ["name"] = "3A"
+              }
             },
             {
               id = 6,
@@ -1496,7 +1510,9 @@ return {
               rotation = 0,
               gid = 2,
               visible = true,
-              properties = {}
+              properties = {
+                ["name"] = "1B"
+              }
             },
             {
               id = 10,
@@ -1511,8 +1527,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
-                ["offsety"] = 8
+                ["offsety"] = 8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1528,8 +1546,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
-                ["offsety"] = 8
+                ["offsety"] = 8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1545,8 +1565,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = -8,
-                ["offsety"] = -8
+                ["offsety"] = -8,
+                ["roundcorners"] = 0
               }
             },
             {
@@ -1562,8 +1584,10 @@ return {
               gid = 8,
               visible = true,
               properties = {
+                ["name"] = "cursorcorner",
                 ["offsetx"] = 8,
-                ["offsety"] = -8
+                ["offsety"] = -8,
+                ["roundcorners"] = 0
               }
             }
           }
@@ -1620,7 +1644,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "resumeGame"
+            ["action"] = "resumeGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1640,7 +1669,12 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["action"] = "endGame"
+            ["action"] = "endGame",
+            ["color"] = "",
+            ["linecolor"] = "",
+            ["presssound"] = "",
+            ["roundcorners"] = 0,
+            ["selectsound"] = ""
           }
         },
         {
@@ -1660,7 +1694,9 @@ return {
           wrap = true,
           color = { 255, 255, 255 },
           properties = {
-            ["offsetx"] = -16
+            ["offsetx"] = -16,
+            ["offsety"] = 0,
+            ["roundcorners"] = 0
           }
         }
       }
@@ -1742,9 +1778,12 @@ return {
               },
               properties = {
                 ["action"] = "changeWeapon",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -1768,9 +1807,12 @@ return {
               },
               properties = {
                 ["action"] = "touchPauseGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -1997,7 +2039,9 @@ return {
                   rotation = 0,
                   gid = 5,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["name"] = "3A"
+                  }
                 },
                 {
                   id = 29,
@@ -2011,7 +2055,9 @@ return {
                   rotation = 0,
                   gid = 2,
                   visible = true,
-                  properties = {}
+                  properties = {
+                    ["name"] = "1B"
+                  }
                 },
                 {
                   id = 30,
@@ -2026,8 +2072,10 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
-                    ["offsety"] = 8
+                    ["offsety"] = 8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2043,8 +2091,10 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
-                    ["offsety"] = 8
+                    ["offsety"] = 8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2060,8 +2110,10 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = -8,
-                    ["offsety"] = -8
+                    ["offsety"] = -8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2077,8 +2129,10 @@ return {
                   gid = 8,
                   visible = true,
                   properties = {
+                    ["name"] = "cursorcorner",
                     ["offsetx"] = 8,
-                    ["offsety"] = -8
+                    ["offsety"] = -8,
+                    ["roundcorners"] = 0
                   }
                 },
                 {
@@ -2140,9 +2194,12 @@ return {
               },
               properties = {
                 ["action"] = "touchResumeGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2166,9 +2223,12 @@ return {
               },
               properties = {
                 ["action"] = "endGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2272,9 +2332,12 @@ return {
               },
               properties = {
                 ["action"] = "startGame",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2298,9 +2361,12 @@ return {
               },
               properties = {
                 ["action"] = "touchOpenHelp",
-                ["color"] = "#80aa5500",
-                ["linecolor"] = "#ffffff7f",
-                ["pressedcolor"] = "#ffffaa00"
+                ["color"] = "#80ffaa00",
+                ["linecolor"] = "#ffffedb7",
+                ["pressedcolor"] = "#80aa5500",
+                ["presssound"] = "",
+                ["roundcorners"] = 0,
+                ["selectsound"] = ""
               }
             },
             {
@@ -2448,9 +2514,12 @@ return {
                   },
                   properties = {
                     ["action"] = "nextHelpPage",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2474,9 +2543,12 @@ return {
                   },
                   properties = {
                     ["action"] = "previousHelpPage",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2538,7 +2610,12 @@ return {
                   halign = "center",
                   valign = "center",
                   properties = {
-                    ["action"] = "endGame"
+                    ["action"] = "endGame",
+                    ["color"] = "",
+                    ["linecolor"] = "",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2562,9 +2639,12 @@ return {
                   },
                   properties = {
                     ["action"] = "touchCloseHelp",
-                    ["color"] = "#80aa5500",
-                    ["linecolor"] = "#ffffff7f",
-                    ["pressedcolor"] = "#ffffaa00"
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500",
+                    ["presssound"] = "",
+                    ["roundcorners"] = 0,
+                    ["selectsound"] = ""
                   }
                 },
                 {
@@ -2635,7 +2715,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2656,7 +2741,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2678,7 +2768,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2700,7 +2795,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2715,7 +2815,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 71,
@@ -2778,7 +2880,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -2825,7 +2932,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 91,
@@ -2901,7 +3010,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3010,9 +3124,13 @@ return {
                         { x = 32, y = 16 }
                       },
                       properties = {
-                        ["color"] = "#80aa5500",
-                        ["linecolor"] = "#ffffff7f",
-                        ["pressedcolor"] = "#ffffaa00"
+                        ["action"] = "",
+                        ["color"] = "#80ffaa00",
+                        ["linecolor"] = "#ffffedb7",
+                        ["pressedcolor"] = "#80aa5500",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3052,7 +3170,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3067,7 +3190,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 106,
@@ -3081,7 +3206,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 102,
@@ -3158,7 +3285,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3180,7 +3312,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3195,7 +3332,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 115,
@@ -3209,7 +3348,9 @@ return {
                       rotation = 0,
                       gid = 2,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1B"
+                      }
                     },
                     {
                       id = 116,
@@ -3224,8 +3365,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = 8,
-                        ["offsety"] = 8
+                        ["offsety"] = 8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3241,8 +3384,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = -8,
-                        ["offsety"] = 8
+                        ["offsety"] = 8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3258,8 +3403,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = -8,
-                        ["offsety"] = -8
+                        ["offsety"] = -8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3275,8 +3422,10 @@ return {
                       gid = 8,
                       visible = true,
                       properties = {
+                        ["name"] = "cursorcorner",
                         ["offsetx"] = 8,
-                        ["offsety"] = -8
+                        ["offsety"] = -8,
+                        ["roundcorners"] = 0
                       }
                     },
                     {
@@ -3297,7 +3446,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3362,7 +3516,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3377,7 +3536,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 139,
@@ -3391,7 +3552,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 132,
@@ -3412,7 +3575,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3432,7 +3600,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3651,7 +3824,12 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3691,7 +3869,12 @@ return {
                       wrap = true,
                       color = { 255, 255, 255 },
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3706,7 +3889,9 @@ return {
                       rotation = 0,
                       gid = 10,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "flyfastA"
+                      }
                     },
                     {
                       id = 157,
@@ -3727,7 +3912,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3749,7 +3939,12 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "endGame"
+                        ["action"] = "endGame",
+                        ["color"] = "",
+                        ["linecolor"] = "",
+                        ["presssound"] = "",
+                        ["roundcorners"] = 0,
+                        ["selectsound"] = ""
                       }
                     },
                     {
@@ -3764,7 +3959,9 @@ return {
                       rotation = 0,
                       gid = 3,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "2A"
+                      }
                     },
                     {
                       id = 159,
@@ -3778,7 +3975,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 168,
@@ -3792,7 +3991,9 @@ return {
                       rotation = 0,
                       gid = 1,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "1A"
+                      }
                     },
                     {
                       id = 170,
@@ -3806,7 +4007,9 @@ return {
                       rotation = 0,
                       gid = 13,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["name"] = "die"
+                      }
                     },
                     {
                       id = 172,
