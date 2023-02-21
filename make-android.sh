@@ -25,6 +25,7 @@ PROJECT_TITLE="${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}"
 PROJECT_TITLE_NOSPACE=${PROJECT_TITLE_NOSPACE:="$(echo ${PROJECT_TITLE} | sed -e 's/\s\+/_/g')"}
 APPLICATION_ID=${APPLICATION_ID:=org.unknown.${PROJECT_TITLE_NOSPACE}}
 SCREEN_ORIENTATION=${SCREEN_ORIENTATION:=landscape}
+ANDROID_VERSIONCODE=${ANDROID_VERSIONCODE:=1}
 
 set_gradle_property() {
 	FILE="$1"
@@ -35,7 +36,7 @@ set_gradle_property() {
 
 set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
 set_gradle_property $BUILD_GRADLE versionName "'`git describe --tags --always`'"
-set_gradle_property $BUILD_GRADLE versionCode 1
+set_gradle_property $BUILD_GRADLE versionCode $ANDROID_VERSIONCODE
 
 xmlstarlet ed -L \
 	-u "/manifest/@package" 							-v "$APPLICATION_ID.executable" 	\
