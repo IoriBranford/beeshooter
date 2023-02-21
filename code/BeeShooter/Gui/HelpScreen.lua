@@ -18,7 +18,7 @@ function HelpScreen:setPage(p)
     for i, page in ipairs(pages) do
         page:setHidden(p ~= i)
     end
-    local pagestring = string.format("%2d / %2d", p, #pages)
+    local pagestring = string.format("%d / %d", p, #pages)
     self.controls.page:setString(pagestring)
 end
 
