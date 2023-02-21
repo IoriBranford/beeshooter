@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="32" nextobjectid="198">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="38" nextobjectid="206">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -13,6 +13,8 @@
  <tileset firstgid="67" source="tilesets/Fly.tsx"/>
  <tileset firstgid="83" source="tilesets/FlyBullet.tsx"/>
  <tileset firstgid="85" source="tilesets/Controls.tsx"/>
+ <tileset firstgid="86" source="tilesets/AlienMind.tsx"/>
+ <tileset firstgid="90" source="tilesets/WaspBoss.tsx"/>
  <imagelayer id="29" name="titleart">
   <image source="titleart.png" width="256" height="224"/>
  </imagelayer>
@@ -59,6 +61,10 @@
    <object id="19" name="bonus" class="BeeShooter.Gui.BonusText" x="8" y="24" width="112" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">SECRET BONUS!
 25000</text>
+   </object>
+   <object id="199" name="over" x="16" y="96" width="224" height="32">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">Press Esc key or
+Start button to continue</text>
    </object>
   </objectgroup>
   <objectgroup draworder="index" id="6" name="weapons" class="Gui.Menu">
@@ -146,6 +152,9 @@
     </object>
     <object id="52" name="time" x="136" y="8" width="64" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
+    </object>
+    <object id="198" name="over" x="16" y="96" width="224" height="32">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">Tap to continue</text>
     </object>
     <object id="53" name="bonus" class="BeeShooter.Gui.BonusText" x="16" y="24" width="104" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">SECRET BONUS!
@@ -251,13 +260,13 @@
     </object>
     <object id="78" name="nextarrow" x="276" y="96">
      <properties>
-      <property name="color" type="color" value="#ffffff7f"/>
+      <property name="color" type="color" value="#ffffedb7"/>
      </properties>
      <polygon points="0,0 0,32 32,16"/>
     </object>
     <object id="79" name="prevarrow" x="-20" y="96">
      <properties>
-      <property name="color" type="color" value="#ffffff7f"/>
+      <property name="color" type="color" value="#ffffedb7"/>
      </properties>
      <polygon points="0,0 0,32 -32,16"/>
     </object>
@@ -488,6 +497,42 @@ If Jenny has no more weapon levels, she loses a life.</text>
      <object id="174" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
      <object id="175" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
     </objectgroup>
+    <group id="34" name="objective">
+     <imagelayer id="35" name="boss1" offsetx="64" offsety="72">
+      <image source="tilesets/MysteryBoss1.png" width="32" height="48"/>
+     </imagelayer>
+     <imagelayer id="36" name="boss2" offsetx="136" offsety="40">
+      <image source="tilesets/MysteryBoss2.png" width="100" height="100"/>
+     </imagelayer>
+     <objectgroup id="37" name="Object Layer 18">
+      <object id="202" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">OBJECTIVE</text>
+      </object>
+      <object id="203" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">You win if Jenny defeats the boss insects before the timer runs out.
+
+You lose if Jenny's lives or timer run out.</text>
+      </object>
+      <object id="204" class="BeeShooter.Gui.Button" x="72" y="88" width="16" height="16">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">?</text>
+      </object>
+      <object id="205" class="BeeShooter.Gui.Button" x="168" y="88" width="24" height="16">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">?</text>
+      </object>
+     </objectgroup>
+    </group>
    </group>
   </group>
  </group>

@@ -69,6 +69,7 @@ function GamePhase.loadphase(startpoint)
     gui.hud:setHidden(IsMobile)
     hud = IsMobile and gui.touch.hud or gui.hud
     hud:setHidden(true)
+    hud.status.over:setHidden(true)
     gui:setActiveMenu(mainmenu)
     if not IsMobile then
         mainmenu:selectButton(1)
@@ -243,19 +244,21 @@ end
 
 function GamePhase.win()
     Audio.fadeMusic()
-    status = "COMPLETE!\n\nPress %s key\nor START button"
+    status = "COMPLETE!"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
     gui.touch.controls:setHidden(true)
+    hud.status.over:setHidden(false)
     gui:setActiveMenu()
 end
 
 function GamePhase.lose(reason)
     Audio.fadeMusic()
-    status = reason or "GAME OVER\n\nPress %s key\nor START button"
+    status = reason or "GAME OVER"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
     gui.touch.controls:setHidden(true)
+    hud.status.over:setHidden(false)
     gui:setActiveMenu()
 end
 

@@ -158,8 +158,9 @@ function Stage.init(startpoint)
             end
             local startspawn = startpoint and stagespawns[startpoint]
             if startspawn and startspawn.triggers then
+                stagey = math.huge
                 for _, trigger in ipairs(startspawn.triggers) do
-                    stagey = math.max(stagey, -trigger.y - 1)
+                    stagey = math.min(stagey, -trigger.y - 1)
                 end
             end
             for _, stagespawn in ipairs(stagespawns) do
@@ -324,7 +325,7 @@ function Stage.fixedupdate()
         if gametimer <= 0 then
             player:setNextCoroutines(PlayerShip.timeout)
             local GamePhase = require "BeeShooter.GamePhase"
-            GamePhase.lose("TIME UP!\n\nPress %s key\nor START button")
+            GamePhase.lose("TIME UP!")
         end
     end
 end

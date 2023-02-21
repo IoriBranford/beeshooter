@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 32,
-  nextobjectid = 198,
+  nextlayerid = 38,
+  nextobjectid = 206,
   properties = {},
   tilesets = {
     {
@@ -1200,6 +1200,201 @@ return {
       wangsets = {},
       tilecount = 1,
       tiles = {}
+    },
+    {
+      name = "AlienMind",
+      firstgid = 86,
+      class = "",
+      tilewidth = 32,
+      tileheight = 48,
+      spacing = 0,
+      margin = 0,
+      columns = 4,
+      image = "tilesets/AlienMind.png",
+      imagewidth = 128,
+      imageheight = 48,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 32,
+        height = 48
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 4,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 4,
+                y = 8,
+                width = 24,
+                height = 24,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "brain",
+                class = "",
+                shape = "point",
+                x = 16,
+                y = 10,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 100
+            },
+            {
+              tileid = 1,
+              duration = 100
+            },
+            {
+              tileid = 2,
+              duration = 100
+            },
+            {
+              tileid = 3,
+              duration = 100
+            }
+          }
+        }
+      }
+    },
+    {
+      name = "WaspBoss",
+      firstgid = 90,
+      class = "",
+      tilewidth = 100,
+      tileheight = 100,
+      spacing = 0,
+      margin = 0,
+      columns = 3,
+      image = "tilesets/WaspBoss.png",
+      imagewidth = 300,
+      imageheight = 100,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 100,
+        height = 100
+      },
+      properties = {},
+      wangsets = {},
+      tilecount = 3,
+      tiles = {
+        {
+          id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                class = "",
+                shape = "rectangle",
+                x = 25,
+                y = 40,
+                width = 50,
+                height = 25,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 2,
+                name = "sting",
+                class = "",
+                shape = "point",
+                x = 50,
+                y = 100,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              },
+              {
+                id = 3,
+                name = "mouth",
+                class = "",
+                shape = "point",
+                x = 80,
+                y = 65,
+                width = 0,
+                height = 0,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
+          animation = {
+            {
+              tileid = 0,
+              duration = 50
+            },
+            {
+              tileid = 1,
+              duration = 50
+            },
+            {
+              tileid = 2,
+              duration = 50
+            }
+          }
+        }
+      }
     }
   },
   layers = {
@@ -1464,6 +1659,25 @@ return {
               wrap = true,
               color = { 255, 255, 255 },
               halign = "right",
+              properties = {}
+            },
+            {
+              id = 199,
+              name = "over",
+              class = "",
+              shape = "text",
+              x = 16,
+              y = 96,
+              width = 224,
+              height = 32,
+              rotation = 0,
+              visible = true,
+              text = "Press Esc key or\nStart button to continue",
+              fontfamily = "Press Start 2P",
+              pixelsize = 8,
+              wrap = true,
+              color = { 255, 255, 255 },
+              halign = "center",
               properties = {}
             }
           }
@@ -1951,6 +2165,25 @@ return {
                   pixelsize = 8,
                   wrap = true,
                   color = { 255, 255, 255 },
+                  properties = {}
+                },
+                {
+                  id = 198,
+                  name = "over",
+                  class = "",
+                  shape = "text",
+                  x = 16,
+                  y = 96,
+                  width = 224,
+                  height = 32,
+                  rotation = 0,
+                  visible = true,
+                  text = "Tap to continue",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
                   properties = {}
                 },
                 {
@@ -2509,7 +2742,7 @@ return {
                     { x = 32, y = 16 }
                   },
                   properties = {
-                    ["color"] = "#ffffff7f"
+                    ["color"] = "#ffffedb7"
                   }
                 },
                 {
@@ -2529,7 +2762,7 @@ return {
                     { x = -32, y = 16 }
                   },
                   properties = {
-                    ["color"] = "#ffffff7f"
+                    ["color"] = "#ffffedb7"
                   }
                 },
                 {
@@ -4005,6 +4238,174 @@ return {
                       gid = 83,
                       visible = true,
                       properties = {}
+                    }
+                  }
+                },
+                {
+                  type = "group",
+                  id = 34,
+                  name = "objective",
+                  class = "",
+                  visible = true,
+                  opacity = 1,
+                  offsetx = 0,
+                  offsety = 0,
+                  parallaxx = 1,
+                  parallaxy = 1,
+                  properties = {},
+                  layers = {
+                    {
+                      type = "imagelayer",
+                      image = "tilesets/MysteryBoss1.png",
+                      id = 35,
+                      name = "boss1",
+                      class = "",
+                      visible = true,
+                      opacity = 1,
+                      offsetx = 64,
+                      offsety = 72,
+                      parallaxx = 1,
+                      parallaxy = 1,
+                      repeatx = false,
+                      repeaty = false,
+                      properties = {}
+                    },
+                    {
+                      type = "imagelayer",
+                      image = "tilesets/MysteryBoss2.png",
+                      id = 36,
+                      name = "boss2",
+                      class = "",
+                      visible = true,
+                      opacity = 1,
+                      offsetx = 136,
+                      offsety = 40,
+                      parallaxx = 1,
+                      parallaxy = 1,
+                      repeatx = false,
+                      repeaty = false,
+                      properties = {}
+                    },
+                    {
+                      type = "objectgroup",
+                      draworder = "topdown",
+                      id = 37,
+                      name = "Object Layer 18",
+                      class = "",
+                      visible = true,
+                      opacity = 1,
+                      offsetx = 0,
+                      offsety = 0,
+                      parallaxx = 1,
+                      parallaxy = 1,
+                      properties = {},
+                      objects = {
+                        {
+                          id = 202,
+                          name = "title",
+                          class = "BeeShooter.Gui.Button",
+                          shape = "text",
+                          x = 8,
+                          y = 16,
+                          width = 240,
+                          height = 8,
+                          rotation = 0,
+                          visible = true,
+                          text = "OBJECTIVE",
+                          fontfamily = "Press Start 2P",
+                          pixelsize = 8,
+                          wrap = true,
+                          color = { 255, 255, 255 },
+                          halign = "center",
+                          properties = {
+                            ["action"] = "endGame",
+                            ["color"] = "",
+                            ["linecolor"] = "",
+                            ["presssound"] = "",
+                            ["roundcorners"] = 0,
+                            ["selectsound"] = ""
+                          }
+                        },
+                        {
+                          id = 203,
+                          name = "instruction",
+                          class = "BeeShooter.Gui.Button",
+                          shape = "text",
+                          x = 8,
+                          y = 152,
+                          width = 240,
+                          height = 48,
+                          rotation = 0,
+                          visible = true,
+                          text = "You win if Jenny defeats the bosses before the timer runs out.\n\nYou lose if Jenny's lives or timer run out.",
+                          fontfamily = "Press Start 2P",
+                          pixelsize = 8,
+                          wrap = true,
+                          color = { 255, 255, 255 },
+                          properties = {
+                            ["action"] = "endGame",
+                            ["color"] = "",
+                            ["linecolor"] = "",
+                            ["presssound"] = "",
+                            ["roundcorners"] = 0,
+                            ["selectsound"] = ""
+                          }
+                        },
+                        {
+                          id = 204,
+                          name = "",
+                          class = "BeeShooter.Gui.Button",
+                          shape = "text",
+                          x = 72,
+                          y = 88,
+                          width = 16,
+                          height = 16,
+                          rotation = 0,
+                          visible = true,
+                          text = "?",
+                          fontfamily = "Press Start 2P",
+                          pixelsize = 8,
+                          wrap = true,
+                          color = { 255, 255, 255 },
+                          halign = "center",
+                          valign = "center",
+                          properties = {
+                            ["action"] = "endGame",
+                            ["color"] = "",
+                            ["linecolor"] = "",
+                            ["presssound"] = "",
+                            ["roundcorners"] = 0,
+                            ["selectsound"] = ""
+                          }
+                        },
+                        {
+                          id = 205,
+                          name = "",
+                          class = "BeeShooter.Gui.Button",
+                          shape = "text",
+                          x = 168,
+                          y = 88,
+                          width = 24,
+                          height = 16,
+                          rotation = 0,
+                          visible = true,
+                          text = "?",
+                          fontfamily = "Press Start 2P",
+                          pixelsize = 8,
+                          wrap = true,
+                          color = { 255, 255, 255 },
+                          halign = "center",
+                          valign = "center",
+                          properties = {
+                            ["action"] = "endGame",
+                            ["color"] = "",
+                            ["linecolor"] = "",
+                            ["presssound"] = "",
+                            ["roundcorners"] = 0,
+                            ["selectsound"] = ""
+                          }
+                        }
+                      }
                     }
                   }
                 }
