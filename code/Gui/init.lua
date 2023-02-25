@@ -8,11 +8,21 @@ local Gui = class()
 
 ---@param map string|table Tiled map exported to Lua, either table or filename
 ---@return Gui
-function Gui.new(map)
+function Gui.new(map, rootpath)
     if type(map) == "string" then
         map = Tiled.load(map)
     end
     local self = map.layers
+    if type(rootpath) == "string" then
+        for layername in rootpath:gmatch("[^.]+") do
+            self = self[layername]
+            if not self then
+                print(string.format("W: root not found %s", rootpath))
+                self = map.layers
+                break
+            end
+        end
+    end
     self.width = map.width*map.tilewidth
     self.height = map.height*map.tileheight
     self.class = "Gui"
