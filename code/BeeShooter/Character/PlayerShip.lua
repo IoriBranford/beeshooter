@@ -7,6 +7,7 @@ local Movement = require "Component.Movement"
 local GamePhase= require "BeeShooter.GamePhase"
 local class    = require "pl.class"
 local Character = require "BeeShooter.Character"
+local HighScores= require "BeeShooter.HighScores"
 
 local cos = math.cos
 local sin = math.sin
@@ -190,6 +191,7 @@ end
 
 function PlayerShip:timeout()
     die(self)
+    HighScores.put(self.score)
 end
 
 function PlayerShip:defaultDefeat()
@@ -211,6 +213,7 @@ function PlayerShip:defaultDefeat()
 
     if self.lives <= 0 then
         GamePhase.lose()
+        HighScores.put(self.score)
         return
     end
 
@@ -250,6 +253,7 @@ function PlayerShip:win()
     PlayerShip.recenter(self)
     local timeleft = Stage.getTimeLeft()
     tallyBonuses(self, timeleft)
+    HighScores.put(self.score)
 end
 
 function PlayerShip:scorePoints(points)

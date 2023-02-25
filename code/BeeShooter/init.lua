@@ -3,6 +3,7 @@ local Config = require "System.Config"
 local Wallpaper             = require "System.Wallpaper"
 local Stage                 = require "BeeShooter.Stage"
 local Platform              = require "System.Platform"
+local HighScores            = require "BeeShooter.HighScores"
 
 local firstphase = "BeeShooter.GamePhase"
 local firstmap = "data/stage_caravan.lua"
@@ -42,6 +43,8 @@ function love.load(args)
 
     local startpoint = args.startpoint
     love.event.loadphase(firstphase, startpoint)
+
+    HighScores.load()
 end
 
 return {
