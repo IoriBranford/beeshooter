@@ -36,11 +36,11 @@ function GameButton:endGame()
 end
 
 function GameButton:touchPauseGame()
-    GamePhase.touchSetPaused(true)
+    GamePhase.setPaused(true)
 end
 
 function GameButton:touchResumeGame()
-    GamePhase.touchSetPaused(false)
+    GamePhase.setPaused(false)
 end
 
 function GameButton:changeWeapon()
