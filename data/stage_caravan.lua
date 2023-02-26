@@ -7036,7 +7036,10 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["allenemiesdefeatedbonus"] = 10000,
+                ["allenemiesdefeatedbonuswindow"] = 30
+              },
               objects = {
                 {
                   id = 276,
@@ -7367,7 +7370,10 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["allenemiesdefeatedbonus"] = 10000,
+                ["allenemiesdefeatedbonuswindow"] = 30
+              },
               objects = {
                 {
                   id = 457,
@@ -7566,7 +7572,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -7664,7 +7669,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -7681,7 +7685,6 @@ return {
                   gid = 2147484170,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -7797,7 +7800,6 @@ return {
                   gid = 528,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -7814,7 +7816,6 @@ return {
                   gid = 2147484176,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -7831,7 +7832,6 @@ return {
                   gid = 528,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -7848,7 +7848,6 @@ return {
                   gid = 2147484176,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -7865,7 +7864,6 @@ return {
                   gid = 528,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -7882,7 +7880,6 @@ return {
                   gid = 2147484176,
                   visible = true,
                   properties = {
-                    ["name"] = "claw_walk",
                     ["z"] = 1
                   }
                 },
@@ -8124,9 +8121,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 542,
@@ -8140,9 +8135,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 537,
@@ -8156,9 +8149,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 535,
@@ -8172,9 +8163,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 544,
@@ -8188,9 +8177,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 539,
@@ -8204,9 +8191,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 534,
@@ -8220,9 +8205,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 541,
@@ -8236,9 +8219,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 538,
@@ -8252,9 +8233,7 @@ return {
                   rotation = 0,
                   gid = 532,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 536,
@@ -8268,9 +8247,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 543,
@@ -8284,9 +8261,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 540,
@@ -8300,9 +8275,7 @@ return {
                   rotation = 0,
                   gid = 2147484180,
                   visible = true,
-                  properties = {
-                    ["name"] = "claw_scrape"
-                  }
+                  properties = {}
                 },
                 {
                   id = 545,
@@ -8363,7 +8336,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8380,7 +8352,6 @@ return {
                   gid = 2147484170,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8483,7 +8454,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8500,7 +8470,6 @@ return {
                   gid = 2147484170,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8632,7 +8601,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8649,7 +8617,6 @@ return {
                   gid = 522,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8666,7 +8633,6 @@ return {
                   gid = 2147484170,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -8683,7 +8649,6 @@ return {
                   gid = 2147484170,
                   visible = true,
                   properties = {
-                    ["name"] = "gun_walk",
                     ["z"] = 1
                   }
                 },
@@ -12036,7 +12001,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12153,7 +12117,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12270,7 +12233,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12387,7 +12349,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12504,7 +12465,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12621,7 +12581,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12738,7 +12697,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12855,7 +12813,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -12972,7 +12929,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -13089,7 +13045,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -13206,7 +13161,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -13323,7 +13277,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -13440,7 +13393,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -13935,7 +13887,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "walk0",
                     ["z"] = 1
                   }
                 },
@@ -13954,7 +13905,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "walk0",
                     ["z"] = 1
                   }
                 },
@@ -14900,7 +14850,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "walk0",
                     ["speed"] = 1.25,
                     ["z"] = 1
                   }
@@ -14920,7 +14869,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "walk0",
                     ["speed"] = 1.25,
                     ["z"] = -1
                   }
@@ -21343,7 +21291,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21363,7 +21310,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21546,7 +21492,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21566,7 +21511,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21749,7 +21693,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21769,7 +21712,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21952,7 +21894,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -21972,7 +21913,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -22155,7 +22095,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -22175,7 +22114,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23044,7 +22982,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23161,7 +23098,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23278,7 +23214,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23395,7 +23330,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23512,7 +23446,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23629,7 +23562,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23746,7 +23678,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23863,7 +23794,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -23980,7 +23910,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -24144,7 +24073,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -24261,7 +24189,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -24378,7 +24305,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -24495,7 +24421,6 @@ return {
                   properties = {
                     ["collidable"] = false,
                     ["color"] = "#80ffffff",
-                    ["name"] = "fly",
                     ["scalexy"] = 0.5,
                     ["z"] = -10
                   }
@@ -27604,7 +27529,6 @@ return {
                   gid = 545,
                   visible = true,
                   properties = {
-                    ["name"] = "walk3",
                     ["z"] = 1
                   }
                 },

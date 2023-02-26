@@ -980,6 +980,10 @@ self.speed = fastspeed or 3</property>
     <object id="476" template="triggers/SpawnCharacters.tx" x="-24" y="2816"/>
    </objectgroup>
    <objectgroup id="30" name="room5bigant">
+    <properties>
+     <property name="allenemiesdefeatedbonus" type="int" value="10000"/>
+     <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
+    </properties>
     <object id="276" template="enemies/AntBig.tx" x="64" y="2928">
      <properties>
       <property name="spawncount" type="float" value="200"/>
@@ -1073,6 +1077,10 @@ self.speed = fastspeed or 3</property>
     </object>
    </objectgroup>
    <objectgroup id="41" name="room6bigant">
+    <properties>
+     <property name="allenemiesdefeatedbonus" type="int" value="10000"/>
+     <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
+    </properties>
     <object id="457" template="enemies/AntBig.tx" x="216" y="2704" rotation="270">
      <properties>
       <property name="spawncount" type="float" value="100"/>
