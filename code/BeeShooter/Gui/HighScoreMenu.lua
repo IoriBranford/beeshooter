@@ -5,23 +5,25 @@ local HighScores= require "BeeShooter.HighScores"
 ---@class HighScoreMenu:GuiObject
 local HighScoreMenu = class(Menu)
 
-local function highScoreString(highscore)
-    local date = os.date("%Y/%m/%d %H:%M:%S", highscore.timestamp)
-    return string.format("%7d  %s", highscore.score, date)
-end
-
-function HighScoreMenu:init()
-    Menu.init(self)
-    self:refresh()
-end
-
 function HighScoreMenu:refresh()
     local highscores = HighScores.getLocalScores()
-    local text = {}
-    for _, highscore in ipairs(highscores) do
-        text[#text+1] = highScoreString(highscore)
+    for i = 1, 10 do
+        local highscore = highscores[i]
+        if highscore then
+            local ranktext = self["rank"..i]
+            local scoretext = self["score"..i]
+            local timetext = self["time"..i]
+            if ranktext then
+                ranktext:setString(i..'.')
+            end
+            if scoretext then
+                scoretext:setString(tostring(highscore.score))
+            end
+            if timetext then
+                timetext:setString(os.date("%Y/%m/%d %H:%M:%S", highscore.timestamp))
+            end
+        end
     end
-    self.text:setString(table.concat(text, '\n\n'))
 end
 
 return HighScoreMenu

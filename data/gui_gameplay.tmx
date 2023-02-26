@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="42" nextobjectid="222">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="42" nextobjectid="282">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -57,27 +57,6 @@
      <property name="color" type="color" value="#e0000000"/>
     </properties>
    </object>
-   <object id="215" name="text" x="16" y="32" width="224" height="152">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" valign="center">0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00</text>
-   </object>
    <object id="216" name="High Scores" x="16" y="16" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
    </object>
@@ -92,6 +71,96 @@
      <property name="offsetx" type="float" value="-16"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+   </object>
+   <object id="252" name="score1" x="64" y="32" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="253" name="score2" x="64" y="48" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="254" name="score3" x="64" y="64" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="255" name="score4" x="64" y="80" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="256" name="score5" x="64" y="96" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="257" name="score6" x="64" y="112" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="258" name="score7" x="64" y="128" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="259" name="score8" x="64" y="144" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="260" name="score9" x="64" y="160" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="261" name="score10" x="64" y="176" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="262" name="rank1" x="16" y="32" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="263" name="rank2" x="16" y="48" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="264" name="rank3" x="16" y="64" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="265" name="rank4" x="16" y="80" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="266" name="rank5" x="32" y="96" width="24" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="267" name="rank6" x="16" y="112" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="268" name="rank7" x="16" y="128" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="269" name="rank8" x="16" y="144" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="270" name="rank9" x="16" y="160" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="271" name="rank10" x="16" y="176" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="272" name="time1" x="136" y="32" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="273" name="time2" x="136" y="48" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="274" name="time3" x="136" y="64" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="275" name="time4" x="136" y="80" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="276" name="time5" x="136" y="96" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="277" name="time6" x="136" y="112" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="278" name="time7" x="136" y="128" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="279" name="time8" x="136" y="144" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="280" name="time9" x="136" y="160" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="281" name="time10" x="136" y="176" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
    </object>
   </objectgroup>
   <group id="7" name="hud">
@@ -310,27 +379,6 @@ Start button to continue</text>
      <property name="color" type="color" value="#e0000000"/>
     </properties>
    </object>
-   <object id="208" name="text" x="16" y="32" width="224" height="152">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" valign="center">0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00
-
-0000000  1970/01/01 00:00:00</text>
-   </object>
    <object id="212" name="High Scores" x="16" y="16" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
    </object>
@@ -344,6 +392,96 @@ Start button to continue</text>
      <property name="action" value="resumeGame"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
+   </object>
+   <object id="222" name="score1" x="64" y="32" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="226" name="score2" x="64" y="48" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="229" name="score3" x="64" y="64" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="232" name="score4" x="64" y="80" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="235" name="score5" x="64" y="96" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="238" name="score6" x="64" y="112" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="241" name="score7" x="64" y="128" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="244" name="score8" x="64" y="144" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="247" name="score9" x="64" y="160" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="250" name="score10" x="64" y="176" width="64" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+   </object>
+   <object id="224" name="rank1" x="16" y="32" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="225" name="rank2" x="16" y="48" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="228" name="rank3" x="16" y="64" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="231" name="rank4" x="16" y="80" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="234" name="rank5" x="32" y="96" width="24" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="237" name="rank6" x="16" y="112" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="240" name="rank7" x="16" y="128" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="243" name="rank8" x="16" y="144" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="246" name="rank9" x="16" y="160" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="249" name="rank10" x="16" y="176" width="40" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">1.</text>
+   </object>
+   <object id="223" name="time1" x="136" y="32" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="227" name="time2" x="136" y="48" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="230" name="time3" x="136" y="64" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="233" name="time4" x="136" y="80" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="236" name="time5" x="136" y="96" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="239" name="time6" x="136" y="112" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="242" name="time7" x="136" y="128" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="245" name="time8" x="136" y="144" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="248" name="time9" x="136" y="160" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+   </object>
+   <object id="251" name="time10" x="136" y="176" width="80" height="8">
+    <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
    </object>
   </objectgroup>
   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
