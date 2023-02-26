@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="40" nextobjectid="206">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="42" nextobjectid="222">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -20,25 +20,74 @@
    <image source="titleart.png" width="256" height="224"/>
   </imagelayer>
   <objectgroup id="31" name="mainmenu" class="Gui.Menu">
-   <object id="188" name="Start" class="BeeShooter.Gui.Button" x="112" y="160" width="64" height="8">
+   <object id="188" name="Start" class="BeeShooter.Gui.Button" x="96" y="144" width="64" height="8">
     <properties>
      <property name="action" value="startGame"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start</text>
    </object>
-   <object id="189" name="Title" x="64" y="16" width="128" height="16">
+   <object id="189" name="Title" x="64" y="16" width="128" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
    </object>
    <object id="192" name="Title" x="16" y="200" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
    </object>
-   <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="112" y="176" width="64" height="8">
+   <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
     <properties>
      <property name="action" value="quitGame"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
    </object>
-   <object id="191" name="cursor" class="Gui.Cursor" x="96" y="160" width="8" height="8">
+   <object id="221" name="Quit" class="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
+    <properties>
+     <property name="action" value="openHighScore"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
+   </object>
+   <object id="191" name="cursor" class="Gui.Cursor" x="80" y="144" width="8" height="8">
+    <properties>
+     <property name="offsetx" type="float" value="-16"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+   </object>
+  </objectgroup>
+  <objectgroup id="41" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+   <object id="214" name="backing" x="0" y="0" width="256" height="224">
+    <properties>
+     <property name="color" type="color" value="#e0000000"/>
+    </properties>
+   </object>
+   <object id="215" name="text" x="16" y="32" width="224" height="152">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" valign="center">0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00</text>
+   </object>
+   <object id="216" name="High Scores" x="16" y="16" width="224" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
+   </object>
+   <object id="219" name="Close" class="BeeShooter.Gui.Button" x="96" y="200" width="64" height="8">
+    <properties>
+     <property name="action" value="closeHighScore"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Back</text>
+   </object>
+   <object id="220" name="cursor" class="Gui.Cursor" x="80" y="200" width="8" height="8">
     <properties>
      <property name="offsetx" type="float" value="-16"/>
     </properties>
@@ -223,27 +272,78 @@ Start button to continue</text>
    </object>
   </objectgroup>
   <objectgroup id="18" name="mainmenu" class="Gui.Menu">
-   <object id="62" template="gui/HexButton96x56.tx" class="BeeShooter.Gui.Button" x="56" y="112">
+   <object id="62" template="gui/HexButton96x56.tx" name="start" class="BeeShooter.Gui.Button" x="112" y="112">
     <properties>
      <property name="action" value="startGame"/>
     </properties>
+    <polygon points="16,24 -32,40 -32,64 16,80 64,64 64,40"/>
    </object>
-   <object id="68" template="gui/HexButton96x56.tx" class="BeeShooter.Gui.Button" x="168" y="112">
+   <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="216" y="136">
     <properties>
      <property name="action" value="touchOpenHelp"/>
     </properties>
    </object>
-   <object id="65" name="Start" x="24" y="152" width="96" height="24">
+   <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
+    <properties>
+     <property name="action" value="openHighScore"/>
+    </properties>
+   </object>
+   <object id="65" name="Start" x="80" y="152" width="96" height="24">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">START GAME</text>
    </object>
-   <object id="181" name="Title" x="64" y="16" width="128" height="16">
+   <object id="181" name="Title" x="64" y="16" width="128" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
    </object>
-   <object id="69" name="Help" x="136" y="152" width="96" height="24">
+   <object id="69" name="Help" x="192" y="152" width="48" height="24">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HOW TO PLAY</text>
    </object>
-   <object id="193" name="Title" x="16" y="200" width="224" height="8">
+   <object id="207" name="High Scores" x="16" y="152" width="48" height="24">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
+   </object>
+   <object id="193" name="Copyright" x="16" y="200" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
+   </object>
+  </objectgroup>
+  <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+   <object id="213" name="backing" x="0" y="0" width="256" height="224">
+    <properties>
+     <property name="color" type="color" value="#e0000000"/>
+    </properties>
+   </object>
+   <object id="208" name="text" x="16" y="32" width="224" height="152">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" valign="center">0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00
+
+0000000  1970/01/01 00:00:00</text>
+   </object>
+   <object id="212" name="High Scores" x="16" y="16" width="224" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
+   </object>
+   <object id="210" template="gui/HexButton48.tx" name="closehighscores" class="BeeShooter.Gui.Button" x="292" y="8">
+    <properties>
+     <property name="action" value="closeHighScore"/>
+    </properties>
+   </object>
+   <object id="211" name="Close" x="268" y="24" width="48" height="24">
+    <properties>
+     <property name="action" value="resumeGame"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
    </object>
   </objectgroup>
   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">

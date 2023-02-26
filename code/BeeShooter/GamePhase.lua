@@ -57,6 +57,7 @@ function GamePhase.loadphase(startpoint)
     Stage.init(startpoint)
     gui = Gui.new("data/gui_gameplay.lua", IsMobile and "touchui" or "normalui")
     gui.pausemenu:setHidden(true)
+    gui.highscores:setHidden(true)
 
     if gui.help then
         gui.help:setHidden(true)
@@ -209,6 +210,19 @@ end
 function GamePhase.touchCloseHelp()
     gui.help:setHidden(true)
     gui:setActiveMenu(gui.mainmenu)
+end
+
+function GamePhase.setHighScoreScreen(visible)
+    gui.highscores:setHidden(not visible)
+    if visible then
+        gui.highscores:refresh()
+        gui:setActiveMenu(gui.highscores)
+        if not IsMobile then
+            gui.highscores:selectButton(1)
+        end
+    else
+        gui:setActiveMenu(gui.mainmenu)
+    end
 end
 
 function GamePhase.setPaused(pause)
