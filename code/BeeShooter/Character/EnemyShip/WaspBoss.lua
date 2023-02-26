@@ -16,7 +16,7 @@ function WaspBoss:Breakout()
     Audio.play(self.entersound)
     Stage.explodeTileLayer("waspbossbreakablefloor", self.x, self.y)
     Stage.explodeTileLayer("waspbossbreakableonfloor", self.x, self.y)
-    self:ChooseEntryPath()
+    self:setNextCoroutines("ChooseEntryPath DamageFlashRed")
 end
 
 function WaspBoss:ChooseEntryPath()

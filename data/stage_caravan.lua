@@ -22613,7 +22613,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChooseSweepPath",
+                    ["action"] = "ChooseSweepPath DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["horidiagonalpath"] = { id = 1897 },
                     ["horizontalpath"] = { id = 1869 },
@@ -22633,7 +22633,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22653,7 +22653,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22673,7 +22673,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22693,7 +22693,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22713,7 +22713,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22733,7 +22733,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22753,7 +22753,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,
@@ -22773,7 +22773,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChooseSweepPath",
+                    ["action"] = "ChooseSweepPath DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["horidiagonalpath"] = { id = 1898 },
                     ["horizontalpath"] = { id = 1870 },
@@ -22793,7 +22793,7 @@ return {
                   rotation = 0,
                   visible = true,
                   properties = {
-                    ["action"] = "ChargeAndLayEggs",
+                    ["action"] = "ChargeAndLayEggs DamageFlashRed",
                     ["actiontype"] = "setcoroutines",
                     ["egginterval"] = 10,
                     ["eggs"] = 4,

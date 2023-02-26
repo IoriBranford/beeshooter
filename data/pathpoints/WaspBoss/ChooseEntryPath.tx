@@ -2,7 +2,7 @@
 <template>
  <object class="PathPoint">
   <properties>
-   <property name="action" value="ChooseEntryPath"/>
+   <property name="action" value="ChooseEntryPath DamageFlashRed"/>
    <property name="actiontype" value="setcoroutines"/>
    <property name="leftpath" type="object" value="1863"/>
    <property name="rightpath" type="object" value="1864"/>

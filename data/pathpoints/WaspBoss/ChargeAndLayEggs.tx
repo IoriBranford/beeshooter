@@ -2,7 +2,7 @@
 <template>
  <object name="ChargeAndLayEggs" class="PathPoint">
   <properties>
-   <property name="action" value="ChargeAndLayEggs"/>
+   <property name="action" value="ChargeAndLayEggs DamageFlashRed"/>
    <property name="actiontype" value="setcoroutines"/>
    <property name="egginterval" type="int" value="10"/>
    <property name="eggs" type="int" value="4"/>
