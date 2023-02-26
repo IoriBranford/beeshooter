@@ -63,4 +63,12 @@ function GameButton:previousHelpPage()
     self.helpscreen:incPage(-1)
 end
 
+function GameButton:openHighScore()
+    GamePhase.setHighScoreScreen(true)
+end
+
+function GameButton:closeHighScore()
+    GamePhase.setHighScoreScreen(false)
+end
+
 return GameButton
