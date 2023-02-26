@@ -254,7 +254,9 @@ function GamePhase.win()
     status = "COMPLETE!"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
-    gui.controls:setHidden(true)
+    if gui.controls then
+        gui.controls:setHidden(true)
+    end
     gui.hud.status.over:setHidden(false)
     gui:setActiveMenu()
 end
@@ -264,7 +266,9 @@ function GamePhase.lose(reason)
     status = reason or "GAME OVER"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
-    gui.controls:setHidden(true)
+    if gui.controls then
+        gui.controls:setHidden(true)
+    end
     gui.hud.status.over:setHidden(false)
     gui:setActiveMenu()
 end
