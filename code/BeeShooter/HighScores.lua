@@ -25,8 +25,13 @@ local defaulttime = 0 -- os.time({
 -- 	["ALL CLEAR"]	= true
 -- }
 
-local MaxHighScores = 5
-local highscores = {}
+local MaxHighScores = 10
+
+---@class HighScore
+---@field score integer
+---@field timestamp integer
+
+local highscores = {} ---@type HighScore[]
 
 -- local onlinescoreboards = {}
 
@@ -74,7 +79,6 @@ function HighScores.load()
         local f, err = love.filesystem.load("highscores")
         if type(f) == "function" then
             highscores = f()
-			pl_pretty.dump(highscores)
         else
             print(err)
             return
