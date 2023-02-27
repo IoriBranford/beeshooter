@@ -20,6 +20,7 @@ function WaspBoss:Breakout()
 end
 
 function WaspBoss:ChooseEntryPath()
+    self.collidable = true
     local pathpoint = self.startpoint
     self.speed = pathpoint.speed or 6
     local leftpath = pathpoint.leftpath
@@ -94,8 +95,7 @@ function WaspBoss:ChargeAndLayEggs()
         coroutine.yield()
     until self.x == dest.x and self.y == dest.y
     self.sprite:setHidden(false)
-    self.collidable = true
-    self:setNextCoroutines(self.ChooseEntryPath)
+    self:setNextCoroutines("ChooseEntryPath DamageFlashRed")
 end
 
 return WaspBoss
