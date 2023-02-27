@@ -52,22 +52,23 @@ function EnemyShip:meleeAttack(damage)
 end
 local meleeAttack = EnemyShip.meleeAttack
 
-local function doPointData(self, pointdata)
+function EnemyShip:doPointData(pointdata)
     self.pathpoint = pointdata
-    local action = self[pointdata.action]
-    if type(action) == "function" then
-        local actiontype = pointdata.actiontype or "function"
-        if actiontype == "addcoroutine" then
-            self:addCoroutine(action)
-        elseif actiontype == "setcoroutines" then
-            self:setNextCoroutines(action)
-        else
-            action(self)
-        end
+    local actiontype = pointdata.actiontype or "function"
+    if actiontype == "addcoroutine" then
+        self:addCoroutine(pointdata.action)
+    elseif actiontype == "setcoroutines" then
+        self:setNextCoroutines(pointdata.action)
     else
-        SubScript.start(self, pointdata.subscript)
+        local action = self[pointdata.action]
+        if type(action) == "function" then
+            action(self)
+        else
+            SubScript.start(self, pointdata.subscript)
+        end
     end
 end
+local doPointData = EnemyShip.doPointData
 
 local function movePath(self, path, parent, meleedamage)
     if not path then
