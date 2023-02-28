@@ -1,6 +1,7 @@
 local class = require "pl.class"
 local GuiObject = require "Gui.GuiObject"
 
+---@class HelpScreen:GuiObject
 local HelpScreen = class(GuiObject)
 
 function HelpScreen:init()
@@ -8,7 +9,8 @@ function HelpScreen:init()
     for _, menuitem in ipairs(menuitems) do
         menuitem.helpscreen = self
     end
-    self:setPage(1)
+    self.controls.page:initPages()
+    self.controls.page:setValue(1)
 end
 
 function HelpScreen:setPage(p)
@@ -24,6 +26,10 @@ end
 
 function HelpScreen:incPage(delta)
     self:setPage(self.page + delta)
+end
+
+function HelpScreen:selectButton(i)
+    self.controls:selectButton(i)
 end
 
 return HelpScreen

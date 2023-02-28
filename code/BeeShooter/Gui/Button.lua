@@ -47,12 +47,12 @@ function GameButton:changeWeapon()
     Controls.tapButton("changeweapon")
 end
 
-function GameButton:touchOpenHelp()
-    GamePhase.touchOpenHelp()
+function GameButton:openHelp()
+    GamePhase.openHelp()
 end
 
-function GameButton:touchCloseHelp()
-    GamePhase.touchCloseHelp()
+function GameButton:closeHelp()
+    GamePhase.closeHelp()
 end
 
 function GameButton:nextHelpPage()

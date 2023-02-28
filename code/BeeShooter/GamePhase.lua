@@ -200,14 +200,17 @@ function GamePhase.startGame()
     gui.titleart:setHidden(true)
 end
 
-function GamePhase.touchOpenHelp()
+function GamePhase.openHelp()
     gui.mainmenu:setHidden(true)
     gui.help:setHidden(false)
     gui.help:setPage(1)
     gui:setActiveMenu(gui.help.controls)
+    if not IsMobile then
+        gui.help:selectButton(1)
+    end
 end
 
-function GamePhase.touchCloseHelp()
+function GamePhase.closeHelp()
     gui.help:setHidden(true)
     gui:setActiveMenu(gui.mainmenu)
 end

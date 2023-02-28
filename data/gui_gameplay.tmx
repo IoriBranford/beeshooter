@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="42" nextobjectid="282">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="54" nextobjectid="370">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -20,7 +20,7 @@
    <image source="titleart.png" width="256" height="224"/>
   </imagelayer>
   <objectgroup id="31" name="mainmenu" class="Gui.Menu">
-   <object id="188" name="Start" class="BeeShooter.Gui.Button" x="96" y="144" width="64" height="8">
+   <object id="188" name="Start" class="BeeShooter.Gui.Button" x="96" y="128" width="64" height="8">
     <properties>
      <property name="action" value="startGame"/>
     </properties>
@@ -29,7 +29,7 @@
    <object id="189" name="Title" x="64" y="16" width="128" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
    </object>
-   <object id="192" name="Title" x="16" y="200" width="224" height="8">
+   <object id="192" name="Copyright" x="16" y="200" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
    </object>
    <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
@@ -38,13 +38,19 @@
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
    </object>
-   <object id="221" name="Quit" class="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
+   <object id="221" name="High Scores" class="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
     <properties>
      <property name="action" value="openHighScore"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
    </object>
-   <object id="191" name="cursor" class="Gui.Cursor" x="80" y="144" width="8" height="8">
+   <object id="369" name="Help" class="BeeShooter.Gui.Button" x="96" y="144" width="88" height="8">
+    <properties>
+     <property name="action" value="openHelp"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">How to Play</text>
+   </object>
+   <object id="191" name="cursor" class="Gui.Cursor" x="80" y="128" width="8" height="8">
     <properties>
      <property name="offsetx" type="float" value="-16"/>
     </properties>
@@ -238,6 +244,279 @@ Start button to continue</text>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
    </object>
   </objectgroup>
+  <group id="42" name="help" class="BeeShooter.Gui.HelpScreen">
+   <objectgroup draworder="index" id="43" name="controls" class="Gui.Menu">
+    <object id="282" name="backing" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#e0000000"/>
+     </properties>
+    </object>
+    <object id="287" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
+     <properties>
+      <property name="action" value="closeHelp"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">1 / 9</text>
+    </object>
+    <object id="367" name="&lt;" x="48" y="208" width="16" height="16">
+     <properties>
+      <property name="action" value="closeHelp"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">&lt;</text>
+    </object>
+    <object id="368" name="&gt;" x="192" y="208" width="16" height="16">
+     <properties>
+      <property name="action" value="closeHelp"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">&gt;</text>
+    </object>
+   </objectgroup>
+   <group id="44" name="pages">
+    <objectgroup id="45" name="move">
+     <object id="290" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Drag anywhere on the screen to move Jenny's target position.</text>
+     </object>
+     <object id="291" name="Move" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">MOVEMENT</text>
+     </object>
+     <object id="292" name="↑" class="BeeShooter.Gui.Button" x="176" y="96" width="48" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→ → →</text>
+     </object>
+     <object id="293" name="↑" class="BeeShooter.Gui.Button" x="32" y="96" width="48" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→ → →</text>
+     </object>
+     <object id="294" gid="10" x="160" y="104" width="32" height="32"/>
+     <object id="295" gid="9" x="224" y="104" width="8" height="8"/>
+     <object id="296" gid="85" x="72" y="120" width="16" height="16"/>
+    </objectgroup>
+    <objectgroup id="46" name="shoot">
+     <object id="297" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Keep your finger on the screen to fire Jenny's sting weapon at the invading insects.</text>
+     </object>
+     <object id="298" x="72" y="96" width="16" height="16">
+      <properties>
+       <property name="color" type="color" value="#00000000"/>
+       <property name="linecolor" type="color" value="#ffffffff"/>
+      </properties>
+      <ellipse/>
+     </object>
+     <object id="299" x="76" y="100" width="8" height="8">
+      <properties>
+       <property name="color" type="color" value="#00000000"/>
+       <property name="linecolor" type="color" value="#ffffffff"/>
+      </properties>
+      <ellipse/>
+     </object>
+     <object id="300" gid="10" x="160" y="120" width="32" height="32"/>
+     <object id="301" gid="12" x="152" y="96" width="32" height="32" rotation="270"/>
+     <object id="302" gid="12" x="152" y="72" width="32" height="32" rotation="270"/>
+     <object id="303" gid="12" x="168" y="96" width="32" height="32" rotation="270"/>
+     <object id="304" gid="12" x="168" y="72" width="32" height="32" rotation="270"/>
+     <object id="305" name="Shoot" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">SHOOTING</text>
+     </object>
+     <object id="306" gid="35" x="152" y="56" width="16" height="16"/>
+     <object id="307" gid="35" x="168" y="56" width="16" height="16"/>
+     <object id="308" gid="39" x="152" y="56" width="32" height="32"/>
+     <object id="309" gid="39" x="168" y="56" width="32" height="32"/>
+     <object id="310" gid="85" x="72" y="120" width="16" height="16"/>
+    </objectgroup>
+    <objectgroup id="47" name="change">
+     <object id="311" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="288" y="156"/>
+     <object id="312" name="Change" x="268" y="184" width="48" height="8">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
+     </object>
+     <object id="313" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Tap the CHANGE button to change the weapon type.</text>
+     </object>
+     <object id="314" gid="10" x="160" y="104" width="32" height="32"/>
+     <object id="315" gid="10" x="208" y="104" width="32" height="32"/>
+     <object id="316" gid="12" x="152" y="80" width="32" height="32" rotation="270"/>
+     <object id="317" gid="12" x="208" y="80" width="32" height="32" rotation="270"/>
+     <object id="318" gid="12" x="168" y="80" width="32" height="32" rotation="270"/>
+     <object id="319" gid="12" x="208" y="128" width="32" height="32" rotation="90"/>
+     <object id="320" name="↑" class="BeeShooter.Gui.Button" x="176" y="96" width="16" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
+     </object>
+     <object id="321" name="↑" class="BeeShooter.Gui.Button" x="64" y="96" width="16" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
+     </object>
+     <object id="322" name="weaponA" class="Gui.Button" gid="1" x="48" y="104" width="16" height="16"/>
+     <object id="323" name="weaponB" class="Gui.Button" gid="2" x="96" y="104" width="16" height="16"/>
+     <object id="324" name="weaponcursor1" class="Gui.Cursor" gid="8" x="104" y="112" width="16" height="16">
+      <properties>
+       <property name="offsetx" type="float" value="8"/>
+       <property name="offsety" type="float" value="8"/>
+      </properties>
+     </object>
+     <object id="325" name="weaponcursor2" class="Gui.Cursor" gid="8" x="88" y="112" width="16" height="16" rotation="90">
+      <properties>
+       <property name="offsetx" type="float" value="-8"/>
+       <property name="offsety" type="float" value="8"/>
+      </properties>
+     </object>
+     <object id="326" name="weaponcursor3" class="Gui.Cursor" gid="8" x="88" y="96" width="16" height="16" rotation="180">
+      <properties>
+       <property name="offsetx" type="float" value="-8"/>
+       <property name="offsety" type="float" value="-8"/>
+      </properties>
+     </object>
+     <object id="327" name="weaponcursor4" class="Gui.Cursor" gid="8" x="104" y="96" width="16" height="16" rotation="270">
+      <properties>
+       <property name="offsetx" type="float" value="8"/>
+       <property name="offsety" type="float" value="-8"/>
+      </properties>
+     </object>
+     <object id="328" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
+     </object>
+     <object id="329" gid="85" x="284" y="208" width="16" height="16"/>
+    </objectgroup>
+    <objectgroup id="48" name="powerup">
+     <object id="330" gid="23" x="104" y="56" width="16" height="32"/>
+     <object id="331" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">HONEY CRYSTAL</text>
+     </object>
+     <object id="332" gid="10" x="56" y="120" width="32" height="32"/>
+     <object id="333" gid="10" x="184" y="120" width="32" height="32"/>
+     <object id="334" class="BeeShooter.Gui.Button" x="72" y="48" width="16" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
+     </object>
+     <object id="335" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Shoot Honey Pots to release precious Honey Crystals.
+
+When Jenny touches a Crystal, she gains a weapon level and a moment of invincibility.</text>
+     </object>
+     <object id="336" gid="20" x="56" y="56" width="16" height="32"/>
+     <object id="337" gid="12" x="48" y="96" width="32" height="32" rotation="270"/>
+     <object id="338" gid="12" x="176" y="96" width="32" height="32" rotation="270"/>
+     <object id="339" gid="12" x="176" y="72" width="32" height="32" rotation="270"/>
+     <object id="340" gid="12" x="168" y="104" width="32" height="32" rotation="225"/>
+     <object id="341" gid="12" x="152" y="88" width="32" height="32" rotation="225"/>
+     <object id="342" gid="12" x="48" y="72" width="32" height="32" rotation="270"/>
+     <object id="343" gid="12" x="64" y="96" width="32" height="32" rotation="270"/>
+     <object id="344" gid="12" x="192" y="96" width="32" height="32" rotation="270"/>
+     <object id="345" gid="12" x="192" y="72" width="32" height="32" rotation="270"/>
+     <object id="346" gid="12" x="200" y="104" width="32" height="32" rotation="315"/>
+     <object id="347" gid="12" x="216" y="88" width="32" height="32" rotation="315"/>
+     <object id="348" gid="12" x="64" y="72" width="32" height="32" rotation="270"/>
+    </objectgroup>
+    <objectgroup draworder="index" id="49" name="damage">
+     <object id="349" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">DAMAGE &amp; DEATH</text>
+     </object>
+     <object id="350" name="lives" x="8" y="208" width="72" height="8">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥♥♥</text>
+     </object>
+     <object id="351" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">If Jenny is hit by a bullet or enemy flying at her height, she loses a weapon level.
+
+If Jenny has no more weapon levels, she loses a life.</text>
+     </object>
+     <object id="352" gid="10" x="96" y="112" width="32" height="32"/>
+     <object id="353" name="↑" class="BeeShooter.Gui.Button" x="168" y="56" width="16" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
+     </object>
+     <object id="354" name="↑" class="BeeShooter.Gui.Button" x="168" y="104" width="16" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
+     </object>
+     <object id="355" name="weaponA" class="Gui.Button" gid="3" x="152" y="64" width="16" height="16"/>
+     <object id="356" name="weaponB" class="Gui.Button" gid="1" x="200" y="64" width="16" height="16"/>
+     <object id="357" name="weaponB" class="Gui.Button" gid="1" x="152" y="112" width="16" height="16"/>
+     <object id="358" gid="13" x="200" y="112" width="32" height="32"/>
+     <object id="359" gid="54" x="200" y="128" width="64" height="64"/>
+     <object id="360" gid="67" x="56" y="72" width="32" height="32"/>
+     <object id="361" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
+     <object id="362" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
+    </objectgroup>
+    <group id="50" name="objective">
+     <imagelayer id="51" name="boss1" offsetx="64" offsety="72">
+      <image source="tilesets/MysteryBoss1.png" width="32" height="48"/>
+     </imagelayer>
+     <imagelayer id="52" name="boss2" offsetx="136" offsety="40">
+      <image source="tilesets/MysteryBoss2.png" width="100" height="100"/>
+     </imagelayer>
+     <objectgroup id="53" name="Object Layer 18">
+      <object id="363" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">OBJECTIVE</text>
+      </object>
+      <object id="364" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">You win if Jenny defeats the boss insects before the timer runs out.
+
+You lose if Jenny's lives or timer run out.</text>
+      </object>
+      <object id="365" class="BeeShooter.Gui.Button" x="72" y="88" width="16" height="16">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">?</text>
+      </object>
+      <object id="366" class="BeeShooter.Gui.Button" x="168" y="88" width="24" height="16">
+       <properties>
+        <property name="action" value="endGame"/>
+       </properties>
+       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">?</text>
+      </object>
+     </objectgroup>
+    </group>
+   </group>
+  </group>
  </group>
  <group id="10" name="touchui">
   <imagelayer id="39" name="titleart">
@@ -349,7 +628,7 @@ Start button to continue</text>
    </object>
    <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="216" y="136">
     <properties>
-     <property name="action" value="touchOpenHelp"/>
+     <property name="action" value="openHelp"/>
     </properties>
    </object>
    <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
@@ -516,12 +795,13 @@ Start button to continue</text>
     <object id="81" name="page" class="BeeShooter.Gui.Button" x="80" y="208" width="96" height="16">
      <properties>
       <property name="action" value="endGame"/>
+      <property name="minvalue" type="int" value="1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center"> 1 / 10</text>
     </object>
     <object id="179" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="292" y="8">
      <properties>
-      <property name="action" value="touchCloseHelp"/>
+      <property name="action" value="closeHelp"/>
      </properties>
     </object>
     <object id="180" name="Close" x="264" y="32" width="56" height="8">
