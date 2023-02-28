@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 12,
-  nextobjectid = 83,
+  nextobjectid = 84,
   properties = {},
   tilesets = {
     {
@@ -1987,6 +1987,334 @@ return {
           }
         }
       }
+    },
+    {
+      name = "Beehive",
+      firstgid = 144,
+      class = "",
+      tilewidth = 16,
+      tileheight = 16,
+      spacing = 0,
+      margin = 0,
+      columns = 30,
+      image = "tilesets/Beehive.png",
+      imagewidth = 480,
+      imageheight = 256,
+      objectalignment = "center",
+      tilerendersize = "tile",
+      fillmode = "stretch",
+      tileoffset = {
+        x = 0,
+        y = 0
+      },
+      grid = {
+        orientation = "orthogonal",
+        width = 16,
+        height = 16
+      },
+      properties = {},
+      wangsets = {
+        {
+          name = "Unnamed Set",
+          class = "",
+          tile = -1,
+          properties = {},
+          colors = {
+            {
+              color = { 255, 0, 0 },
+              name = "Floor",
+              class = "",
+              probability = 1,
+              tile = -1,
+              properties = {}
+            },
+            {
+              color = { 0, 255, 0 },
+              name = "Honey",
+              class = "",
+              probability = 1,
+              tile = -1,
+              properties = {}
+            },
+            {
+              color = { 0, 0, 255 },
+              name = "Light floor",
+              class = "",
+              probability = 1,
+              tile = -1,
+              properties = {}
+            },
+            {
+              color = { 255, 119, 0 },
+              name = "Dark floor",
+              class = "",
+              probability = 1,
+              tile = -1,
+              properties = {}
+            }
+          },
+          wangtiles = {
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 240
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 241
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 242
+            },
+            {
+              wangid = { 2, 1, 2, 1, 2, 1, 2, 1 },
+              tileid = 245
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 270
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 271
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 272
+            },
+            {
+              wangid = { 1, 1, 2, 2, 2, 1, 1, 1 },
+              tileid = 273
+            },
+            {
+              wangid = { 1, 1, 2, 2, 2, 2, 2, 1 },
+              tileid = 274
+            },
+            {
+              wangid = { 1, 1, 1, 1, 2, 2, 2, 1 },
+              tileid = 275
+            },
+            {
+              wangid = { 2, 2, 1, 1, 1, 2, 2, 2 },
+              tileid = 276
+            },
+            {
+              wangid = { 2, 2, 1, 1, 1, 1, 1, 2 },
+              tileid = 277
+            },
+            {
+              wangid = { 2, 2, 2, 2, 1, 1, 1, 2 },
+              tileid = 278
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 2, 2, 0 },
+              tileid = 288
+            },
+            {
+              wangid = { 2, 0, 2, 2, 2, 2, 2, 2 },
+              tileid = 289
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 300
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 301
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 302
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 1, 1, 1 },
+              tileid = 303
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 2, 2, 2 },
+              tileid = 304
+            },
+            {
+              wangid = { 2, 1, 1, 1, 2, 2, 2, 2 },
+              tileid = 305
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 2, 2, 2 },
+              tileid = 306
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 307
+            },
+            {
+              wangid = { 1, 2, 2, 2, 1, 1, 1, 1 },
+              tileid = 308
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 0, 2, 2 },
+              tileid = 318
+            },
+            {
+              wangid = { 2, 2, 2, 0, 2, 2, 2, 2 },
+              tileid = 319
+            },
+            {
+              wangid = { 0, 0, 2, 2, 2, 0, 0, 0 },
+              tileid = 320
+            },
+            {
+              wangid = { 0, 0, 2, 2, 2, 2, 2, 0 },
+              tileid = 321
+            },
+            {
+              wangid = { 0, 0, 0, 0, 2, 2, 2, 0 },
+              tileid = 322
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 330
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 331
+            },
+            {
+              wangid = { 1, 1, 1, 1, 1, 1, 1, 1 },
+              tileid = 332
+            },
+            {
+              wangid = { 2, 2, 2, 1, 1, 1, 1, 1 },
+              tileid = 333
+            },
+            {
+              wangid = { 2, 2, 2, 1, 1, 1, 2, 2 },
+              tileid = 334
+            },
+            {
+              wangid = { 2, 1, 1, 1, 1, 1, 2, 2 },
+              tileid = 335
+            },
+            {
+              wangid = { 1, 1, 1, 2, 2, 2, 2, 2 },
+              tileid = 336
+            },
+            {
+              wangid = { 1, 1, 1, 2, 2, 2, 1, 1 },
+              tileid = 337
+            },
+            {
+              wangid = { 1, 2, 2, 2, 2, 2, 1, 1 },
+              tileid = 338
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 0, 0, 0 },
+              tileid = 350
+            },
+            {
+              wangid = { 2, 2, 2, 2, 2, 2, 2, 2 },
+              tileid = 351
+            },
+            {
+              wangid = { 2, 0, 0, 0, 2, 2, 2, 2 },
+              tileid = 352
+            },
+            {
+              wangid = { 3, 1, 3, 1, 3, 1, 3, 1 },
+              tileid = 362
+            },
+            {
+              wangid = { 4, 1, 4, 1, 4, 1, 4, 1 },
+              tileid = 365
+            },
+            {
+              wangid = { 2, 2, 2, 0, 0, 0, 0, 0 },
+              tileid = 380
+            },
+            {
+              wangid = { 2, 2, 2, 0, 0, 0, 2, 2 },
+              tileid = 381
+            },
+            {
+              wangid = { 2, 0, 0, 0, 0, 0, 2, 2 },
+              tileid = 382
+            },
+            {
+              wangid = { 1, 1, 3, 3, 3, 1, 1, 1 },
+              tileid = 390
+            },
+            {
+              wangid = { 1, 1, 3, 3, 3, 3, 3, 1 },
+              tileid = 391
+            },
+            {
+              wangid = { 1, 1, 1, 1, 3, 3, 3, 1 },
+              tileid = 392
+            },
+            {
+              wangid = { 1, 1, 4, 4, 4, 1, 1, 1 },
+              tileid = 393
+            },
+            {
+              wangid = { 1, 1, 4, 4, 4, 4, 4, 1 },
+              tileid = 394
+            },
+            {
+              wangid = { 1, 1, 1, 1, 4, 4, 4, 1 },
+              tileid = 395
+            },
+            {
+              wangid = { 3, 3, 3, 3, 3, 1, 1, 1 },
+              tileid = 420
+            },
+            {
+              wangid = { 3, 3, 3, 3, 3, 3, 3, 3 },
+              tileid = 421
+            },
+            {
+              wangid = { 3, 1, 1, 1, 3, 3, 3, 3 },
+              tileid = 422
+            },
+            {
+              wangid = { 4, 4, 4, 4, 4, 1, 1, 1 },
+              tileid = 423
+            },
+            {
+              wangid = { 4, 4, 4, 4, 4, 4, 4, 4 },
+              tileid = 424
+            },
+            {
+              wangid = { 4, 1, 1, 1, 4, 4, 4, 4 },
+              tileid = 425
+            },
+            {
+              wangid = { 3, 3, 3, 1, 1, 1, 1, 1 },
+              tileid = 450
+            },
+            {
+              wangid = { 3, 3, 3, 1, 1, 1, 3, 3 },
+              tileid = 451
+            },
+            {
+              wangid = { 3, 1, 1, 1, 1, 1, 3, 3 },
+              tileid = 452
+            },
+            {
+              wangid = { 4, 4, 4, 1, 1, 1, 1, 1 },
+              tileid = 453
+            },
+            {
+              wangid = { 4, 4, 4, 1, 1, 1, 4, 4 },
+              tileid = 454
+            },
+            {
+              wangid = { 4, 1, 1, 1, 1, 1, 4, 4 },
+              tileid = 455
+            }
+          }
+        }
+      },
+      tilecount = 480,
+      tiles = {}
     }
   },
   layers = {
@@ -2054,6 +2382,20 @@ return {
             ["spawntype"] = "AcidAntClimbingDownLeft",
             ["z"] = 0.75
           }
+        },
+        {
+          id = 83,
+          name = "DebrisFragment",
+          class = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 16,
+          height = 16,
+          rotation = 0,
+          gid = 378,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -2394,7 +2736,6 @@ return {
           gid = 28,
           visible = true,
           properties = {
-            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2413,7 +2754,6 @@ return {
           properties = {
             ["collidable"] = false,
             ["color"] = "#80ffffff",
-            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2430,7 +2770,6 @@ return {
           gid = 2147483676,
           visible = true,
           properties = {
-            ["name"] = "gun_walk",
             ["z"] = 1
           }
         },
@@ -2447,7 +2786,6 @@ return {
           gid = 34,
           visible = true,
           properties = {
-            ["name"] = "claw_walk",
             ["z"] = 1
           }
         },
@@ -2464,7 +2802,6 @@ return {
           gid = 2147483682,
           visible = true,
           properties = {
-            ["name"] = "claw_walk",
             ["z"] = 1
           }
         },
@@ -2670,9 +3007,7 @@ return {
           rotation = 0,
           gid = 108,
           visible = true,
-          properties = {
-            ["name"] = "hatch"
-          }
+          properties = {}
         }
       }
     },
