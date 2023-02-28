@@ -360,7 +360,7 @@ function Stage.killTeam(teamname)
     end
 end
 
-function Stage.explodeTileLayer(layer, centerx, centery)
+function Stage.explodeTileLayer(layer, centerx, centery, forcex, forcey, gravity)
     if type(layer) == "string" then
         local tilelayers = stage.tilelayers
         layer = tilelayers[layer]
@@ -371,10 +371,14 @@ function Stage.explodeTileLayer(layer, centerx, centery)
     centery = -stage.y + centery
 
     layer.visible = false
+    forcex = forcex or 1
+    forcey = forcey or 1
+    gravity = gravity or .5
     for _, chunk in ipairs(layer.chunks) do
         chunk.sprite:setHidden(true)
         local data = chunk.data
         local i = 0
+        local cellwidth, cellheight = chunk.tilewidth, chunk.tileheight
         for r = chunk.y, chunk.y + chunk.height - 1 do
             for c = chunk.x, chunk.x + chunk.width - 1 do
                 i = i + 1
@@ -382,10 +386,10 @@ function Stage.explodeTileLayer(layer, centerx, centery)
                 gid = gid and Tiled.parseGid(gid)
                 local tile = stagetiles[gid]
                 if tile then
-                    local x = (c+.5) * chunk.tilewidth
-                    local y = stage.y + (r+.5) * chunk.tileheight
-                    local velx = (x - centerx) / chunk.tilewidth
-                    local vely = (y - centery) / chunk.tileheight
+                    local x = (c+.5) * cellwidth
+                    local y = stage.y + (r+.5) * cellheight
+                    local velx = (x - centerx) * forcex / cellwidth
+                    local vely = (y - centery) * forcey / cellheight
                     Stage.addCharacter({
                         type = "ExplosionDebris",
                         x = x,
@@ -394,6 +398,9 @@ function Stage.explodeTileLayer(layer, centerx, centery)
                         vely = vely,
                         tile = tile,
                         visible = true,
+                        tumblespeed = .125,
+                        tumbleaxis = "random",
+                        accely = gravity
                     })
                 end
             end
