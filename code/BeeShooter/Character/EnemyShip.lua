@@ -222,12 +222,24 @@ function EnemyShip:Spawner()
 end
 
 function EnemyShip:Faller()
+    local tumbleaxis = self.tumbleaxis
+    if tumbleaxis == "random" then
+        tumbleaxis = love.math.random(2) == 1 and "x" or "y"
+    end
+    local tumblespeed = self.tumblespeed or 1
+    local tumble = love.math.random(0x10000)
     while true do
         local accely = self.accely or (1/8)
         self.vely = self.vely + accely
         if self.vely ~= 0 or self.velx ~= 0 then
             self.rotation = atan2(self.vely, self.velx)
         end
+        if tumbleaxis == "x" then
+            self.scalex = cos(tumble)
+        elseif tumbleaxis == "y" then
+            self.scaley = cos(tumble)
+        end
+        tumble = tumble + tumblespeed
         yield()
         if not self:isSpriteOnScreen() then
             self:markDisappear()
