@@ -223,11 +223,11 @@ end
 
 function EnemyShip:ShrinkingParticle()
     local angle = love.math.random() * math.pi * 2
-    local speed = love.math.random() * 8 + .125
+    local speed = love.math.random() * 4 + 4
     local velx, vely = cos(angle)*speed, sin(angle)*speed
     Body.setVelocity(self, velx, vely)
     self.rotation = angle
-    local shrinkawayspeed = self.shrinkawayspeed or (1/60)
+    local shrinkawayspeed = self.shrinkawayspeed or (1/15)
     self.scalexy = abs(self.scalexy or 1)
     while self.scalexy > 0 do
         self.scalexy = self.scalexy - shrinkawayspeed
