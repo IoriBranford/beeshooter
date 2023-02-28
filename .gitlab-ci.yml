@@ -164,6 +164,18 @@ before_script:
                         - "${PROJECT_TITLE_NOSPACE}*.apk"
                         - "${PROJECT_TITLE_NOSPACE}*.aab"
 
+web:
+        stage: build
+        image: node:lts-alpine
+        script:
+                - npm install
+                - ./make-web.sh
+                - cp -r public/* .
+        artifacts:
+                name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-web"
+                paths:
+                        - $(ls public)
+
 data:
         variables:
                 GAME_ASSET: "${CI_PROJECT_NAME}.love"
