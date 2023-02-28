@@ -221,6 +221,21 @@ function EnemyShip:Spawner()
     self:markDisappear()
 end
 
+function EnemyShip:ShrinkingParticle()
+    local angle = love.math.random() * math.pi * 2
+    local speed = love.math.random() * 8 + .125
+    local velx, vely = cos(angle)*speed, sin(angle)*speed
+    Body.setVelocity(self, velx, vely)
+    self.rotation = angle
+    local shrinkawayspeed = self.shrinkawayspeed or (1/60)
+    self.scalexy = abs(self.scalexy or 1)
+    while self.scalexy > 0 do
+        self.scalexy = self.scalexy - shrinkawayspeed
+        yield()
+    end
+    self:markDisappear()
+end
+
 function EnemyShip:Faller()
     local tumbleaxis = self.tumbleaxis
     if tumbleaxis == "random" then
