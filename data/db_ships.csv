@@ -22,7 +22,7 @@ ReinforcedHoneyPot,BeeShooter.Character.EnemyShip,Idler DamageFlashRed,,EnemyShi
 WaspEgg,BeeShooter.Character.EnemyShip,Egg DamageFlashRed,defeatDropItemIfLast,EnemyShip,,6,TRUE,WaspHatch,,sounds/bugkill1.mp3,2500,KillSmall KillMedium DecalBlood,,,,45,Powerup,,,
 WaspHatch,BeeShooter.Character.EnemyShip,WaspHatch DamageFlashRed,defeatDropItemIfLast,EnemyShip,1,3,TRUE,,,sounds/bugkill2.mp3,750,KillSmall KillMedium DecalBlood,,,,,Powerup,,,
 WaspBoss,BeeShooter.Character.EnemyShip.WaspBoss,Breakout,defeatBoss,EnemyShip,4,100,,WaspEgg,sounds/bugkill1.mp3,sounds/monsterscream.mp3,25000,KillSmall KillMedium DecalBlood WaspBossHead WaspBossThorax WaspBossAbdomen WaspBossSting WaspBossWings,,,,,,sounds/rocksbreak.mp3,,
-ExplosionDebris,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,1,TRUE,,,,100,DebrisFragment DebrisFragment DebrisFragment,,,,,,,random,0.125
+ExplosionDebris,BeeShooter.Character.EnemyShip,Faller,,EnemyShip,,1,TRUE,,,sounds/breakpot.mp3,100,DebrisFragment DebrisFragment DebrisFragment,,,,,,,random,0.125
 DebrisFragment,BeeShooter.Character.EnemyShip,ShrinkingParticle,,,,,,,,,,,,,,,,,,
 WaspBossHead,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,,,
 WaspBossThorax,BeeShooter.Character.EnemyShip,Faller,,,,,,,,,,,,,,,,,,
