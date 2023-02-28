@@ -360,7 +360,7 @@ function Stage.killTeam(teamname)
     end
 end
 
-function Stage.explodeTileLayer(layer, centerx, centery, forcex, forcey, gravity)
+function Stage.explodeTileLayer(layer, fragtype, centerx, centery, forcex, forcey)
     if type(layer) == "string" then
         local tilelayers = stage.tilelayers
         layer = tilelayers[layer]
@@ -373,12 +373,15 @@ function Stage.explodeTileLayer(layer, centerx, centery, forcex, forcey, gravity
     layer.visible = false
     forcex = forcex or 1
     forcey = forcey or 1
-    gravity = gravity or .5
     for _, chunk in ipairs(layer.chunks) do
         chunk.sprite:setHidden(true)
         local data = chunk.data
         local i = 0
         local cellwidth, cellheight = chunk.tilewidth, chunk.tileheight
+        local hitbox = {
+            x = -cellwidth/2, y = -cellheight/2,
+            width = cellwidth, height = cellheight
+        }
         for r = chunk.y, chunk.y + chunk.height - 1 do
             for c = chunk.x, chunk.x + chunk.width - 1 do
                 i = i + 1
@@ -391,16 +394,14 @@ function Stage.explodeTileLayer(layer, centerx, centery, forcex, forcey, gravity
                     local velx = (x - centerx) * forcex / cellwidth
                     local vely = (y - centery) * forcey / cellheight
                     Stage.addCharacter({
-                        type = "ExplosionDebris",
+                        type = fragtype,
                         x = x,
                         y = y,
                         velx = velx,
                         vely = vely,
                         tile = tile,
                         visible = true,
-                        tumblespeed = .125,
-                        tumbleaxis = "random",
-                        accely = gravity
+                        hitbox = hitbox,
                     })
                 end
             end

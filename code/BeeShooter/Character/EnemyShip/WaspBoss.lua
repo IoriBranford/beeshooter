@@ -14,8 +14,8 @@ local WaspBoss = class(EnemyShip)
 
 function WaspBoss:Breakout()
     Audio.play(self.entersound)
-    Stage.explodeTileLayer("waspbossbreakablefloor", self.x, self.y, .25, .5, .25)
-    Stage.explodeTileLayer("waspbossbreakableonfloor", self.x, self.y)
+    Stage.explodeTileLayer("waspbossbreakablefloor", "ExplosionDebris", self.x, self.y, .25, 1/3)
+    Stage.explodeTileLayer("waspbossbreakableonfloor", "ExplosionDebris", self.x, self.y)
     self:setNextCoroutines("ChooseEntryPath DamageFlashRed")
 end
 
