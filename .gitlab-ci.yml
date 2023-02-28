@@ -165,6 +165,7 @@ before_script:
                         - "${PROJECT_TITLE_NOSPACE}*.aab"
 
 web:
+        <<: *full
         stage: build
         image: node:lts-alpine
         script:
