@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="55" nextobjectid="422">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="57" nextobjectid="431">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -284,24 +284,24 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">MOVEMENT</text>
      </object>
      <object id="296" gid="87" x="80" y="80" width="16" height="16"/>
-     <object id="376" gid="87" x="136" y="40" width="16" height="16"/>
-     <object id="374" gid="87" x="192" y="80" width="16" height="16"/>
-     <object id="375" gid="87" x="192" y="80" width="16" height="16"/>
-     <object id="373" gid="87" x="136" y="120" width="16" height="16"/>
-     <object id="377" gid="88" x="104" y="40" width="16" height="16"/>
-     <object id="292" class="BeeShooter.Gui.Button" x="192" y="84" width="16" height="8">
+     <object id="376" gid="87" x="144" y="40" width="16" height="16"/>
+     <object id="374" gid="87" x="208" y="80" width="16" height="16"/>
+     <object id="375" gid="87" x="208" y="80" width="16" height="16"/>
+     <object id="373" gid="87" x="144" y="120" width="16" height="16"/>
+     <object id="377" gid="88" x="96" y="40" width="16" height="16"/>
+     <object id="292" class="BeeShooter.Gui.Button" x="208" y="84" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">→</text>
      </object>
-     <object id="370" class="BeeShooter.Gui.Button" x="136" y="44" width="16" height="8">
+     <object id="370" class="BeeShooter.Gui.Button" x="144" y="44" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">↑</text>
      </object>
-     <object id="293" class="BeeShooter.Gui.Button" x="136" y="124" width="16" height="8">
+     <object id="293" class="BeeShooter.Gui.Button" x="144" y="124" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
@@ -315,12 +315,12 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
      </object>
      <object id="294" gid="10" x="128" y="88" width="32" height="32"/>
      <object id="378" gid="92" x="120" y="40" width="16" height="16"/>
-     <object id="379" gid="91" x="48" y="80" width="16" height="16"/>
-     <object id="380" gid="95" x="64" y="80" width="16" height="16"/>
+     <object id="379" gid="91" x="32" y="80" width="16" height="16"/>
+     <object id="380" gid="95" x="56" y="80" width="16" height="16"/>
      <object id="381" gid="94" x="120" y="120" width="16" height="16"/>
-     <object id="382" gid="90" x="104" y="120" width="16" height="16"/>
+     <object id="382" gid="90" x="96" y="120" width="16" height="16"/>
      <object id="383" gid="89" x="160" y="80" width="16" height="16"/>
-     <object id="384" gid="93" x="176" y="80" width="16" height="16"/>
+     <object id="384" gid="93" x="184" y="80" width="16" height="16"/>
      <object id="393" class="BeeShooter.Gui.Button" x="144" y="80" width="16" height="16">
       <properties>
        <property name="action" value="endGame"/>
@@ -368,20 +368,22 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
      <object id="307" gid="35" x="168" y="56" width="16" height="16"/>
      <object id="308" gid="39" x="152" y="56" width="32" height="32"/>
      <object id="309" gid="39" x="168" y="56" width="32" height="32"/>
-     <object id="310" gid="102" x="80" y="112" width="16" height="16"/>
-     <object id="386" gid="87" x="96" y="112" width="16" height="16"/>
-     <object id="387" x="96" y="116" width="16" height="8">
+     <object id="310" gid="102" x="64" y="112" width="16" height="16"/>
+     <object id="386" gid="87" x="112" y="112" width="16" height="16"/>
+     <object id="387" x="112" y="116" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Z</text>
      </object>
+     <object id="428" x="80" y="112" width="32" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">or</text>
+     </object>
     </objectgroup>
     <objectgroup draworder="index" id="47" name="changeweapon">
-     <object id="311" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="288" y="156"/>
-     <object id="312" name="Change" x="268" y="184" width="48" height="8">
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
-     </object>
      <object id="313" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
       <properties>
        <property name="action" value="endGame"/>
@@ -438,21 +440,22 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
      </object>
-     <object id="329" gid="85" x="284" y="208" width="16" height="16"/>
-     <object id="389" gid="101" x="56" y="104" width="16" height="16"/>
-     <object id="390" gid="87" x="72" y="104" width="16" height="16"/>
-     <object id="391" x="72" y="108" width="16" height="8">
+     <object id="389" gid="101" x="40" y="112" width="16" height="16"/>
+     <object id="390" gid="87" x="88" y="112" width="16" height="16"/>
+     <object id="391" x="88" y="116" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">X</text>
      </object>
+     <object id="429" x="56" y="112" width="32" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">or</text>
+     </object>
     </objectgroup>
     <objectgroup draworder="index" id="54" name="changespeed">
-     <object id="397" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="288" y="156"/>
-     <object id="398" name="Change" x="268" y="184" width="48" height="8">
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
-     </object>
      <object id="399" name="instruction" x="8" y="152" width="240" height="48">
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Press the X button or C key to switch between slow and fast movement speed.</text>
      </object>
@@ -476,14 +479,19 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING SPEED</text>
      </object>
-     <object id="415" gid="85" x="284" y="208" width="16" height="16"/>
-     <object id="416" gid="103" x="56" y="80" width="16" height="16"/>
-     <object id="417" gid="87" x="72" y="80" width="16" height="16"/>
-     <object id="418" x="72" y="84" width="16" height="8">
+     <object id="416" gid="103" x="32" y="80" width="16" height="16"/>
+     <object id="417" gid="87" x="80" y="80" width="16" height="16"/>
+     <object id="418" x="80" y="84" width="16" height="8">
       <properties>
        <property name="action" value="endGame"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">C</text>
+     </object>
+     <object id="430" x="48" y="80" width="32" height="16">
+      <properties>
+       <property name="action" value="endGame"/>
+      </properties>
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">or</text>
      </object>
     </objectgroup>
     <objectgroup id="48" name="powerup">
@@ -563,6 +571,29 @@ If Jenny has no more weapon levels, she loses a life.</text>
      <object id="360" gid="67" x="56" y="72" width="32" height="32"/>
      <object id="361" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
      <object id="362" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
+    </objectgroup>
+    <objectgroup id="55" name="extends">
+     <object id="422" name="title" x="8" y="16" width="240" height="8">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">EXTRA LIVES</text>
+     </object>
+     <object id="423" name="instruction" x="8" y="152" width="240" height="56">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Score enough points and Jenny will earn an extra life!</text>
+     </object>
+     <object id="424" name="instruction" x="96" y="32" width="64" height="104">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥  10000
+
+♥  50000
+
+♥ 100000
+
+♥ 150000
+
+♥ 250000
+
+♥ 350000
+
+♥ 500000</text>
+     </object>
     </objectgroup>
     <group id="50" name="objective">
      <imagelayer id="51" name="boss1" offsetx="64" offsety="72">
@@ -877,11 +908,7 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <polygon points="0,0 0,32 -32,16"/>
     </object>
-    <object id="81" name="page" class="BeeShooter.Gui.Button" x="80" y="208" width="96" height="16">
-     <properties>
-      <property name="action" value="endGame"/>
-      <property name="minvalue" type="int" value="1"/>
-     </properties>
+    <object id="81" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center"> 1 / 10</text>
     </object>
     <object id="179" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="292" y="8">
@@ -924,7 +951,7 @@ You lose if Jenny's lives or timer run out.</text>
      </object>
      <object id="70" gid="10" x="160" y="104" width="32" height="32"/>
      <object id="71" gid="9" x="224" y="104" width="8" height="8"/>
-     <object id="184" gid="85" x="72" y="120" width="16" height="16"/>
+     <object id="184" gid="85" x="72" y="104" width="16" height="16"/>
     </objectgroup>
     <objectgroup id="24" name="shoot">
      <object id="83" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
@@ -962,7 +989,7 @@ You lose if Jenny's lives or timer run out.</text>
      <object id="150" gid="35" x="168" y="56" width="16" height="16"/>
      <object id="151" gid="39" x="152" y="56" width="32" height="32"/>
      <object id="152" gid="39" x="168" y="56" width="32" height="32"/>
-     <object id="183" gid="85" x="72" y="120" width="16" height="16"/>
+     <object id="183" gid="85" x="72" y="104" width="16" height="16"/>
     </objectgroup>
     <objectgroup id="25" name="change">
      <object id="87" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="288" y="156"/>
@@ -1025,7 +1052,7 @@ You lose if Jenny's lives or timer run out.</text>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
      </object>
-     <object id="182" gid="85" x="284" y="208" width="16" height="16"/>
+     <object id="182" gid="85" x="284" y="192" width="16" height="16"/>
     </objectgroup>
     <objectgroup id="26" name="powerup">
      <object id="129" gid="23" x="104" y="56" width="16" height="32"/>
@@ -1104,6 +1131,29 @@ If Jenny has no more weapon levels, she loses a life.</text>
      <object id="173" gid="67" x="56" y="72" width="32" height="32"/>
      <object id="174" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
      <object id="175" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
+    </objectgroup>
+    <objectgroup id="56" name="extends">
+     <object id="425" name="title" x="8" y="16" width="240" height="8">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">EXTRA LIVES</text>
+     </object>
+     <object id="426" name="instruction" x="8" y="152" width="240" height="56">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Score enough points and Jenny will earn an extra life!</text>
+     </object>
+     <object id="427" name="instruction" x="96" y="32" width="64" height="104">
+      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">♥  10000
+
+♥  50000
+
+♥ 100000
+
+♥ 150000
+
+♥ 250000
+
+♥ 350000
+
+♥ 500000</text>
+     </object>
     </objectgroup>
     <group id="34" name="objective">
      <imagelayer id="35" name="boss1" offsetx="64" offsety="72">
