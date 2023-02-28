@@ -147,8 +147,8 @@ end
 
 function Menu:changeSelectedSlider(dir)
     local slider = self.menuitems[self.cursorposition]
-    if slider and slider.change then
-        slider:change(dir)
+    if slider and slider.changeValue then
+        slider:changeValue(dir)
     end
 end
 
