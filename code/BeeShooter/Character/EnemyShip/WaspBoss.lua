@@ -1,4 +1,5 @@
 local EnemyShip = require "BeeShooter.Character.EnemyShip"
+local PlayerShip = require "BeeShooter.Character.PlayerShip"
 local Movement = require "Component.Movement"
 local Body = require "BeeShooter.Character.Body"
 local class = require "pl.class"
@@ -34,7 +35,7 @@ function WaspBoss:ChooseEntryPath()
     end
     self.path = path
     self:faceSpriteX(face)
-    self:flyPath(path)
+    self:flyPath(path, PlayerShip.InstantKillDamage)
 end
 
 function WaspBoss:ChooseSweepPath()
@@ -64,7 +65,7 @@ function WaspBoss:ChooseSweepPath()
         end
     end
     self.path = path
-    self:flyPath(path)
+    self:flyPath(path, PlayerShip.InstantKillDamage)
 end
 
 function WaspBoss:ChargeAndLayEggs()
@@ -83,7 +84,7 @@ function WaspBoss:ChargeAndLayEggs()
     EnemyShip.chargePlayer(self)
     self:waitForOnscreenState(true)
     while self:isSpriteOnScreen() do
-        self:meleeAttack(1)
+        self:meleeAttack(PlayerShip.InstantKillDamage)
         coroutine.yield()
     end
     self.collidable = false
