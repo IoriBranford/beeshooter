@@ -174,7 +174,13 @@ web:
         artifacts:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-web"
                 paths:
-                        - $(ls public)
+                        - game.data
+                        - game.js
+                        - index.html
+                        - love.js
+                        - love.wasm
+                        - love.worker.js
+                        - theme/
 
 data:
         variables:
