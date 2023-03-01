@@ -117,6 +117,13 @@ function GamePhase.gamepadpressed(joystick, button)
         return
     end
 
+    if button == "back" or button == "start" then
+        if gui.activemenu == gui.help.controls then
+            GamePhase.closeHelp()
+            return
+        end
+    end
+
     if button == "start" then
         if status == TitleStatus then
         elseif status then
@@ -133,7 +140,9 @@ end
 
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu or key == "escape" then
-        if status == TitleStatus then
+        if gui.activemenu == gui.help.controls then
+            GamePhase.closeHelp()
+        elseif status == TitleStatus then
             if Platform.supports("quit") then
                 love.event.quit()
             end
