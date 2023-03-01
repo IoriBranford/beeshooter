@@ -213,7 +213,7 @@ function HighScores.save()
 	--DEBUG
 	--love.filesystem.write("highscores.lua", code)
 
-	local f = load(code)
+	local f = loadstring(code)
 	love.filesystem.write("highscores", string.dump(f, true))
 end
 
