@@ -17,6 +17,12 @@ function WaspBoss:Breakout()
     Audio.play(self.entersound)
     Stage.explodeTileLayer("waspbossbreakablefloor", "ExplosionDebris", self.x, self.y, .25, 1/3)
     Stage.explodeTileLayer("waspbossbreakableonfloor", "ExplosionDebris", self.x, self.y)
+    local pathpoint = self.startpoint
+    repeat
+        local velx, vely = Movement.getVelocity_speed(self.x, self.y, pathpoint.x, pathpoint.y, self.speed or 6)
+        Body.setVelocity(self, velx, vely)
+        coroutine.yield()
+    until self.x == pathpoint.x and self.y == pathpoint.y
     self:setNextCoroutines("ChooseEntryPath DamageFlashRed")
 end
 
