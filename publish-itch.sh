@@ -37,6 +37,7 @@ publish android
 # publish linux-i686
 # publish linux-armhf
 publish data
+publish web
 # publish demo-win-32
 # publish demo-win-64
 # publish demo-osx
