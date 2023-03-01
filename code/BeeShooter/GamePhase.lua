@@ -203,7 +203,7 @@ end
 function GamePhase.openHelp()
     gui.mainmenu:setHidden(true)
     gui.help:setHidden(false)
-    gui.help:setPage(1)
+    gui.help.controls.page:setValue(1)
     gui:setActiveMenu(gui.help.controls)
     if not IsMobile then
         gui.help:selectButton(1)
