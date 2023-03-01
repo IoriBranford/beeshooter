@@ -220,7 +220,7 @@ win-64:
                 <<: *build-windows-variables
                 ARCH_BITS: "32"
 
-osx:
+.osx:
         <<: *build-osx
         <<: *full
 
