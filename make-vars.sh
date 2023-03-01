@@ -7,4 +7,4 @@ export DESCRIPTION="Caravan shooting"
 export COPYRIGHT="© 2022-2023 IoriBranford"
 export APPLICATION_ID="com.ioribranford.honeysoldier"
 export LOVE_VERSION="11.4"
-export ANDROID_VERSIONCODE=3
+export ANDROID_VERSIONCODE=4
