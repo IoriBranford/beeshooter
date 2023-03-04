@@ -4,6 +4,7 @@ local GuiObject = require "Gui.GuiObject"
 local Gauge = class(GuiObject)
 
 function Gauge:init()
+    GuiObject.init(self)
     self.gaugedirection = self.gaugedirection or "right"
     self:setPercent(self.gaugepercent or 1)
 

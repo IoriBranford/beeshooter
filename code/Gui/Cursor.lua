@@ -6,6 +6,7 @@ local Cursor = class(GuiObject)
 Cursor.iscursor = true
 
 function Cursor:init()
+    GuiObject.init(self)
     self.offsetx = self.offsetx or 0
     self.offsety = self.offsety or 0
 end

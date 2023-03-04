@@ -7,6 +7,7 @@ local BonusText = class(GuiObject)
 local yield = coroutine.yield
 
 function BonusText:init()
+    GuiObject.init(self)
     self.x0, self.y0 = self.x, self.y
     self:setHidden(true)
 end

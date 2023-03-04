@@ -3,10 +3,11 @@ local Config    = require "System.Config"
 local class     = require "pl.class"
 local Canvas    = require "System.Canvas"
 
----@class Menu
+---@class Menu:GuiObject
 local Menu = class(GuiObject)
 
 function Menu:init()
+    GuiObject.init(self)
     local platform = love.system.getOS()
 
     local cursors = {}

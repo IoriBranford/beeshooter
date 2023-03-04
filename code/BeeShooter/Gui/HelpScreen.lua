@@ -5,6 +5,7 @@ local GuiObject = require "Gui.GuiObject"
 local HelpScreen = class(GuiObject)
 
 function HelpScreen:init()
+    GuiObject.init(self)
     local menuitems = self.controls.menuitems
     for _, menuitem in ipairs(menuitems) do
         menuitem.helpscreen = self
