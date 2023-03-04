@@ -227,6 +227,7 @@ end
 function GamePhase.setHighScoreScreen(visible)
     gui.highscores:setHidden(not visible)
     if visible then
+        gui.mainmenu:setHidden(true)
         gui.highscores:refresh()
         gui:setActiveMenu(gui.highscores)
         if not IsMobile then
