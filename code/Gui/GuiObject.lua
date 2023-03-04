@@ -29,6 +29,8 @@ function GuiObject:translate(dx, dy)
         self.sprite.x = x
         self.sprite.y = y
     end
+    self.leftx = self.leftx + dx
+    self.topy = self.topy + dy
     for i = 1, #self do
         self[i]:translate(dx, dy)
     end
