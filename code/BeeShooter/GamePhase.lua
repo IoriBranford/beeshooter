@@ -72,13 +72,15 @@ function GamePhase.loadphase(startpoint)
     if gui.controls then
         gui.controls:setHidden(true)
     end
-    Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
+    GamePhase.resize(love.graphics.getWidth(), love.graphics.getHeight())
     Assets.get("music/Funkbuster.ogg")
 end
 
-function GamePhase.resize()
-    Canvas.init(Stage.CameraWidth, Stage.CameraHeight)
+function GamePhase.resize(screenwidth, screenheight)
+    Canvas.init(Stage.CameraWidth, Stage.CameraHeight, screenwidth, screenheight)
     Wallpaper.reload()
+    screenwidth, screenheight = Canvas.inverseTransformVector(screenwidth, screenheight)
+    gui:resize(screenwidth, screenheight)
 end
 
 function GamePhase.quitphase()

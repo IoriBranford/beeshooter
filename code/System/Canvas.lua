@@ -7,17 +7,15 @@ local transform
 local rotscale
 local canvasscale
 
-function Canvas.init(width, height)
+function Canvas.init(width, height, screenwidth, screenheight)
     maincanvas = love.graphics.newCanvas(width, height)
     canvases = {maincanvas}
     if love.graphics.getCanvasFormats().stencil8 then
         canvases.depthstencil = love.graphics.newCanvas(width, height, { format = "stencil8" })
     end
 
-    local gw = love.graphics.getWidth()
-    local gh = love.graphics.getHeight()
-    local ghw = gw / 2
-    local ghh = gh / 2
+    local ghw = screenwidth / 2
+    local ghh = screenheight / 2
     local chw = maincanvas:getWidth() / 2
     local chh = maincanvas:getHeight() / 2
 
