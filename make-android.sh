@@ -2,6 +2,7 @@
 set -e
 
 . ./make-vars.sh
+. ./make-vars-android.sh
 
 # see https://github.com/love2d/love-android/wiki/Game-Packaging
 
