@@ -4,6 +4,7 @@ local GuiObject = require "Gui.GuiObject"
 local class     = require "pl.class"
 
 ---@class Gui
+---@field activemenu Menu
 local Gui = class()
 
 ---@param map string|table Tiled map exported to Lua, either table or filename
@@ -56,6 +57,12 @@ end
 
 function Gui:init()
     Gui:cast(self)
+end
+
+function Gui:resize(screenwidth, screenheight)
+    for i = 1, #self do
+        self[i]:reanchor(self.width, self.height, screenwidth, screenheight)
+    end
 end
 
 function Gui:setActiveMenu(menu)
