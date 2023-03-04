@@ -4864,8 +4864,8 @@ return {
               name = "changeweapon",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
-              x = 288,
-              y = 156,
+              x = 208,
+              y = 144,
               width = 0,
               height = 0,
               rotation = 0,
@@ -4880,6 +4880,8 @@ return {
               },
               properties = {
                 ["action"] = "changeWeapon",
+                ["anchorx"] = 1,
+                ["anchory"] = 1,
                 ["color"] = "#80ffaa00",
                 ["linecolor"] = "#ffffedb7",
                 ["pressedcolor"] = "#80aa5500"
@@ -4890,8 +4892,8 @@ return {
               name = "",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
-              x = 292,
-              y = 8,
+              x = 212,
+              y = 16,
               width = 0,
               height = 0,
               rotation = 0,
@@ -4906,6 +4908,7 @@ return {
               },
               properties = {
                 ["action"] = "touchPauseGame",
+                ["anchorx"] = 1,
                 ["color"] = "#80ffaa00",
                 ["linecolor"] = "#ffffedb7",
                 ["pressedcolor"] = "#80aa5500"
@@ -4916,10 +4919,10 @@ return {
               name = "Pause",
               class = "",
               shape = "text",
-              x = 264,
+              x = 188,
               y = 32,
-              width = 56,
-              height = 8,
+              width = 48,
+              height = 24,
               rotation = 0,
               visible = true,
               text = "PAUSE",
@@ -4929,7 +4932,9 @@ return {
               color = { 255, 255, 255 },
               halign = "center",
               valign = "center",
-              properties = {}
+              properties = {
+                ["anchorx"] = 1
+              }
             },
             {
               id = 48,
@@ -4950,10 +4955,10 @@ return {
               name = "Change",
               class = "",
               shape = "text",
-              x = 268,
-              y = 184,
-              width = 48,
-              height = 8,
+              x = 184,
+              y = 168,
+              width = 56,
+              height = 16,
               rotation = 0,
               visible = true,
               text = "CHANGE",
@@ -4963,7 +4968,10 @@ return {
               color = { 255, 255, 255 },
               halign = "center",
               valign = "center",
-              properties = {}
+              properties = {
+                ["anchorx"] = 1,
+                ["anchory"] = 1
+              }
             }
           }
         },
@@ -5222,8 +5230,8 @@ return {
               name = "",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
-              x = 292,
-              y = 8,
+              x = 212,
+              y = 16,
               width = 0,
               height = 0,
               rotation = 0,
@@ -5238,6 +5246,7 @@ return {
               },
               properties = {
                 ["action"] = "touchResumeGame",
+                ["anchorx"] = 1,
                 ["color"] = "#80ffaa00",
                 ["linecolor"] = "#ffffedb7",
                 ["pressedcolor"] = "#80aa5500"
@@ -5248,8 +5257,8 @@ return {
               name = "",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
-              x = 220,
-              y = 8,
+              x = 148,
+              y = 16,
               width = 0,
               height = 0,
               rotation = 0,
@@ -5264,6 +5273,7 @@ return {
               },
               properties = {
                 ["action"] = "endGame",
+                ["anchorx"] = 1,
                 ["color"] = "#80ffaa00",
                 ["linecolor"] = "#ffffedb7",
                 ["pressedcolor"] = "#80aa5500"
@@ -5294,10 +5304,10 @@ return {
               name = "Resume",
               class = "",
               shape = "text",
-              x = 264,
+              x = 188,
               y = 32,
-              width = 56,
-              height = 8,
+              width = 48,
+              height = 24,
               rotation = 0,
               visible = true,
               text = "RESUME",
@@ -5308,7 +5318,8 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "resumeGame"
+                ["action"] = "resumeGame",
+                ["anchorx"] = 1
               }
             },
             {
@@ -5316,10 +5327,10 @@ return {
               name = "End",
               class = "",
               shape = "text",
-              x = 192,
+              x = 124,
               y = 32,
-              width = 56,
-              height = 8,
+              width = 48,
+              height = 24,
               rotation = 0,
               visible = true,
               text = "END",
@@ -5330,7 +5341,8 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "endGame"
+                ["action"] = "endGame",
+                ["anchorx"] = 1
               }
             }
           }
@@ -5583,8 +5595,8 @@ return {
               name = "closehighscores",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
-              x = 292,
-              y = 8,
+              x = 212,
+              y = 16,
               width = 0,
               height = 0,
               rotation = 0,
@@ -5599,6 +5611,8 @@ return {
               },
               properties = {
                 ["action"] = "closeHighScore",
+                ["anchorx"] = 1,
+                ["anchory"] = -1,
                 ["color"] = "#80ffaa00",
                 ["linecolor"] = "#ffffedb7",
                 ["pressedcolor"] = "#80aa5500"
@@ -5609,8 +5623,8 @@ return {
               name = "Close",
               class = "",
               shape = "text",
-              x = 268,
-              y = 24,
+              x = 188,
+              y = 32,
               width = 48,
               height = 24,
               rotation = 0,
@@ -5623,7 +5637,9 @@ return {
               halign = "center",
               valign = "center",
               properties = {
-                ["action"] = "resumeGame"
+                ["action"] = "resumeGame",
+                ["anchorx"] = 1,
+                ["anchory"] = -1
               }
             },
             {
@@ -6275,7 +6291,7 @@ return {
                   name = "",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = 288,
+                  x = 208,
                   y = 80,
                   width = 0,
                   height = 0,
@@ -6291,6 +6307,7 @@ return {
                   },
                   properties = {
                     ["action"] = "nextHelpPage",
+                    ["anchorx"] = 1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -6301,7 +6318,7 @@ return {
                   name = "",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = -40,
+                  x = 40,
                   y = 80,
                   width = 0,
                   height = 0,
@@ -6317,6 +6334,7 @@ return {
                   },
                   properties = {
                     ["action"] = "previousHelpPage",
+                    ["anchorx"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -6327,7 +6345,7 @@ return {
                   name = "nextarrow",
                   class = "",
                   shape = "polygon",
-                  x = 276,
+                  x = 196,
                   y = 96,
                   width = 0,
                   height = 0,
@@ -6339,6 +6357,7 @@ return {
                     { x = 32, y = 16 }
                   },
                   properties = {
+                    ["anchorx"] = 1,
                     ["color"] = "#ffffedb7"
                   }
                 },
@@ -6347,7 +6366,7 @@ return {
                   name = "prevarrow",
                   class = "",
                   shape = "polygon",
-                  x = -20,
+                  x = 60,
                   y = 96,
                   width = 0,
                   height = 0,
@@ -6359,6 +6378,7 @@ return {
                     { x = -32, y = 16 }
                   },
                   properties = {
+                    ["anchorx"] = -1,
                     ["color"] = "#ffffedb7"
                   }
                 },
@@ -6387,8 +6407,8 @@ return {
                   name = "",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = 292,
-                  y = 8,
+                  x = 212,
+                  y = 16,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -6403,6 +6423,8 @@ return {
                   },
                   properties = {
                     ["action"] = "closeHelp",
+                    ["anchorx"] = 1,
+                    ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -6413,10 +6435,10 @@ return {
                   name = "Close",
                   class = "",
                   shape = "text",
-                  x = 264,
+                  x = 188,
                   y = 32,
-                  width = 56,
-                  height = 8,
+                  width = 48,
+                  height = 24,
                   rotation = 0,
                   visible = true,
                   text = "CLOSE",
@@ -6427,7 +6449,9 @@ return {
                   halign = "center",
                   valign = "center",
                   properties = {
-                    ["action"] = "resumeGame"
+                    ["action"] = "resumeGame",
+                    ["anchorx"] = 1,
+                    ["anchory"] = -1
                   }
                 }
               }
@@ -6836,8 +6860,8 @@ return {
                       name = "",
                       class = "BeeShooter.Gui.Button",
                       shape = "polygon",
-                      x = 288,
-                      y = 156,
+                      x = 208,
+                      y = 144,
                       width = 0,
                       height = 0,
                       rotation = 0,
@@ -6851,6 +6875,8 @@ return {
                         { x = 32, y = 16 }
                       },
                       properties = {
+                        ["anchorx"] = 1,
+                        ["anchory"] = 1,
                         ["color"] = "#80ffaa00",
                         ["linecolor"] = "#ffffedb7",
                         ["pressedcolor"] = "#80aa5500"
@@ -6861,10 +6887,10 @@ return {
                       name = "Change",
                       class = "",
                       shape = "text",
-                      x = 268,
-                      y = 184,
-                      width = 48,
-                      height = 8,
+                      x = 184,
+                      y = 168,
+                      width = 56,
+                      height = 16,
                       rotation = 0,
                       visible = true,
                       text = "CHANGE",
@@ -6874,7 +6900,10 @@ return {
                       color = { 255, 255, 255 },
                       halign = "center",
                       valign = "center",
-                      properties = {}
+                      properties = {
+                        ["anchorx"] = 1,
+                        ["anchory"] = 1
+                      }
                     },
                     {
                       id = 98,
@@ -7146,14 +7175,17 @@ return {
                       name = "",
                       class = "",
                       shape = "rectangle",
-                      x = 284,
-                      y = 192,
+                      x = 204,
+                      y = 184,
                       width = 16,
                       height = 16,
                       rotation = 0,
                       gid = 85,
                       visible = true,
-                      properties = {}
+                      properties = {
+                        ["anchorx"] = 1,
+                        ["anchory"] = 1
+                      }
                     }
                   }
                 },

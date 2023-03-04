@@ -17,6 +17,16 @@
                     "value": ""
                 },
                 {
+                    "name": "anchorx",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "anchory",
+                    "type": "float",
+                    "value": 0
+                },
+                {
                     "name": "color",
                     "type": "string",
                     "value": ""

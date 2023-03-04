@@ -642,21 +642,31 @@ You lose if Jenny's lives or timer run out.</text>
    <object id="20" x="-72" y="0" width="400" height="224" visible="0"/>
   </objectgroup>
   <objectgroup id="9" name="controls" class="BeeShooter.Gui.TouchController">
-   <object id="36" template="gui/HexButton56.tx" name="changeweapon" class="BeeShooter.Gui.Button" x="288" y="156">
+   <object id="36" template="gui/HexButton56.tx" name="changeweapon" class="BeeShooter.Gui.Button" x="208" y="144">
     <properties>
      <property name="action" value="changeWeapon"/>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="1"/>
     </properties>
    </object>
-   <object id="40" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="292" y="8">
+   <object id="40" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="212" y="16">
     <properties>
      <property name="action" value="touchPauseGame"/>
+     <property name="anchorx" type="float" value="1"/>
     </properties>
    </object>
-   <object id="41" name="Pause" x="264" y="32" width="56" height="8">
+   <object id="41" name="Pause" x="188" y="32" width="48" height="24">
+    <properties>
+     <property name="anchorx" type="float" value="1"/>
+    </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">PAUSE</text>
    </object>
    <object id="48" name="movecursor" gid="9" x="128" y="192" width="8" height="8"/>
-   <object id="59" name="Change" x="268" y="184" width="48" height="8">
+   <object id="59" name="Change" x="184" y="168" width="56" height="16">
+    <properties>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="1"/>
+    </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
    </object>
   </objectgroup>
@@ -709,28 +719,32 @@ You lose if Jenny's lives or timer run out.</text>
    </objectgroup>
   </group>
   <objectgroup id="13" name="pausemenu" class="Gui.Menu">
-   <object id="46" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="292" y="8">
+   <object id="46" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="212" y="16">
     <properties>
      <property name="action" value="touchResumeGame"/>
+     <property name="anchorx" type="float" value="1"/>
     </properties>
    </object>
-   <object id="47" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="220" y="8">
+   <object id="47" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="148" y="16">
     <properties>
      <property name="action" value="endGame"/>
+     <property name="anchorx" type="float" value="1"/>
     </properties>
    </object>
    <object id="42" name="PAUSE!" x="80" y="104" width="96" height="16">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">PAUSE!</text>
    </object>
-   <object id="43" name="Resume" x="264" y="32" width="56" height="8">
+   <object id="43" name="Resume" x="188" y="32" width="48" height="24">
     <properties>
      <property name="action" value="resumeGame"/>
+     <property name="anchorx" type="float" value="1"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RESUME</text>
    </object>
-   <object id="44" name="End" x="192" y="32" width="56" height="8">
+   <object id="44" name="End" x="124" y="32" width="48" height="24">
     <properties>
      <property name="action" value="endGame"/>
+     <property name="anchorx" type="float" value="1"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">END</text>
    </object>
@@ -777,14 +791,18 @@ You lose if Jenny's lives or timer run out.</text>
    <object id="212" name="High Scores" x="16" y="16" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
    </object>
-   <object id="210" template="gui/HexButton48.tx" name="closehighscores" class="BeeShooter.Gui.Button" x="292" y="8">
+   <object id="210" template="gui/HexButton48.tx" name="closehighscores" class="BeeShooter.Gui.Button" x="212" y="16">
     <properties>
      <property name="action" value="closeHighScore"/>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="-1"/>
     </properties>
    </object>
-   <object id="211" name="Close" x="268" y="24" width="48" height="24">
+   <object id="211" name="Close" x="188" y="32" width="48" height="24">
     <properties>
      <property name="action" value="resumeGame"/>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="-1"/>
     </properties>
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
    </object>
@@ -886,24 +904,28 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="color" type="color" value="#e0000000"/>
      </properties>
     </object>
-    <object id="73" template="gui/HexButton56.tx" x="288" y="80">
+    <object id="73" template="gui/HexButton56.tx" x="208" y="80">
      <properties>
       <property name="action" value="nextHelpPage"/>
+      <property name="anchorx" type="float" value="1"/>
      </properties>
     </object>
-    <object id="74" template="gui/HexButton56.tx" x="-40" y="80">
+    <object id="74" template="gui/HexButton56.tx" x="40" y="80">
      <properties>
       <property name="action" value="previousHelpPage"/>
+      <property name="anchorx" type="float" value="-1"/>
      </properties>
     </object>
-    <object id="78" name="nextarrow" x="276" y="96">
+    <object id="78" name="nextarrow" x="196" y="96">
      <properties>
+      <property name="anchorx" type="float" value="1"/>
       <property name="color" type="color" value="#ffffedb7"/>
      </properties>
      <polygon points="0,0 0,32 32,16"/>
     </object>
-    <object id="79" name="prevarrow" x="-20" y="96">
+    <object id="79" name="prevarrow" x="60" y="96">
      <properties>
+      <property name="anchorx" type="float" value="-1"/>
       <property name="color" type="color" value="#ffffedb7"/>
      </properties>
      <polygon points="0,0 0,32 -32,16"/>
@@ -911,14 +933,18 @@ You lose if Jenny's lives or timer run out.</text>
     <object id="81" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center"> 1 / 10</text>
     </object>
-    <object id="179" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="292" y="8">
+    <object id="179" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="212" y="16">
      <properties>
       <property name="action" value="closeHelp"/>
+      <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
     </object>
-    <object id="180" name="Close" x="264" y="32" width="56" height="8">
+    <object id="180" name="Close" x="188" y="32" width="48" height="24">
      <properties>
       <property name="action" value="resumeGame"/>
+      <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
     </object>
@@ -992,8 +1018,17 @@ You lose if Jenny's lives or timer run out.</text>
      <object id="183" gid="85" x="72" y="104" width="16" height="16"/>
     </objectgroup>
     <objectgroup id="25" name="change">
-     <object id="87" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="288" y="156"/>
-     <object id="88" name="Change" x="268" y="184" width="48" height="8">
+     <object id="87" template="gui/HexButton56.tx" class="BeeShooter.Gui.Button" x="208" y="144">
+      <properties>
+       <property name="anchorx" type="float" value="1"/>
+       <property name="anchory" type="float" value="1"/>
+      </properties>
+     </object>
+     <object id="88" name="Change" x="184" y="168" width="56" height="16">
+      <properties>
+       <property name="anchorx" type="float" value="1"/>
+       <property name="anchory" type="float" value="1"/>
+      </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
      </object>
      <object id="98" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
@@ -1052,7 +1087,12 @@ You lose if Jenny's lives or timer run out.</text>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
      </object>
-     <object id="182" gid="85" x="284" y="192" width="16" height="16"/>
+     <object id="182" gid="85" x="204" y="184" width="16" height="16">
+      <properties>
+       <property name="anchorx" type="float" value="1"/>
+       <property name="anchory" type="float" value="1"/>
+      </properties>
+     </object>
     </objectgroup>
     <objectgroup id="26" name="powerup">
      <object id="129" gid="23" x="104" y="56" width="16" height="32"/>
