@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="57" nextobjectid="431">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="58" nextobjectid="447">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -780,6 +780,92 @@ You lose if Jenny's lives or timer run out.</text>
    </object>
    <object id="193" name="Copyright" x="16" y="200" width="224" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
+   </object>
+  </objectgroup>
+  <objectgroup id="57" name="optionmenu" class="Gui.Menu" visible="0">
+   <object id="431" name="backing" x="0" y="0" width="256" height="224">
+    <properties>
+     <property name="color" type="color" value="#e0000000"/>
+    </properties>
+   </object>
+   <object id="432" template="gui/HexButton48.tx" name="closeoptions" x="212" y="16">
+    <properties>
+     <property name="action" value="closeOptions"/>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="-1"/>
+    </properties>
+   </object>
+   <object id="433" name="Close" x="188" y="32" width="48" height="24">
+    <properties>
+     <property name="action" value="resumeGame"/>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="-1"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
+   </object>
+   <object id="434" template="gui/HexButton56.tx" name="moveChangeWeaponButton" x="124" y="144">
+    <properties>
+     <property name="action" value="moveChangeWeaponButton"/>
+     <property name="text" type="object" value="439"/>
+    </properties>
+   </object>
+   <object id="435" template="gui/HexButton56.tx" name="rightChangeButton" x="192" y="128">
+    <properties>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="1"/>
+     <property name="text" type="object" value="440"/>
+    </properties>
+   </object>
+   <object id="436" template="gui/HexButton56.tx" name="leftChangeButton" x="56" y="128">
+    <properties>
+     <property name="anchorx" type="float" value="-1"/>
+     <property name="anchory" type="float" value="1"/>
+     <property name="text" type="object" value="441"/>
+    </properties>
+   </object>
+   <object id="437" template="gui/HexButton56.tx" name="toggleMusic" x="88" y="72">
+    <properties>
+     <property name="action" value="toggleMusic"/>
+     <property name="text" type="object" value="442"/>
+    </properties>
+   </object>
+   <object id="438" template="gui/HexButton56.tx" name="toggleSound" x="160" y="72">
+    <properties>
+     <property name="action" value="toggleSound"/>
+     <property name="text" type="object" value="446"/>
+    </properties>
+   </object>
+   <object id="439" name="changeButtonSide" x="100" y="184" width="56" height="8">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RIGHT</text>
+   </object>
+   <object id="440" name="rightChangeButtonText" x="168" y="152" width="56" height="16">
+    <properties>
+     <property name="anchorx" type="float" value="1"/>
+     <property name="anchory" type="float" value="1"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
+   </object>
+   <object id="441" name="leftChangeButtonText" x="32" y="152" width="56" height="16">
+    <properties>
+     <property name="anchorx" type="float" value="-1"/>
+     <property name="anchory" type="float" value="1"/>
+    </properties>
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
+   </object>
+   <object id="442" name="music" x="64" y="104" width="56" height="16">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">ON</text>
+   </object>
+   <object id="443" name="Music" x="64" y="88" width="56" height="16">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Music</text>
+   </object>
+   <object id="444" name="Sound" x="136" y="88" width="56" height="16">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Sound</text>
+   </object>
+   <object id="445" name="Change Button" x="100" y="160" width="56" height="24">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE button</text>
+   </object>
+   <object id="446" name="sound" x="136" y="104" width="56" height="16">
+    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OFF</text>
    </object>
   </objectgroup>
   <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
