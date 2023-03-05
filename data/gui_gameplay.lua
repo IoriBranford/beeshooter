@@ -10,7 +10,7 @@ return {
   tilewidth = 16,
   tileheight = 16,
   nextlayerid = 64,
-  nextobjectid = 455,
+  nextobjectid = 457,
   properties = {},
   tilesets = {
     {
@@ -4952,10 +4952,10 @@ return {
               objects = {
                 {
                   id = 62,
-                  name = "start",
+                  name = "",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = 112,
+                  x = 40,
                   y = 112,
                   width = 0,
                   height = 0,
@@ -4981,7 +4981,7 @@ return {
                   name = "help",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = 216,
+                  x = 176,
                   y = 136,
                   width = 0,
                   height = 0,
@@ -5008,7 +5008,7 @@ return {
                   name = "highscores",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
-                  x = 40,
+                  x = 128,
                   y = 136,
                   width = 0,
                   height = 0,
@@ -5031,11 +5031,38 @@ return {
                   }
                 },
                 {
+                  id = 455,
+                  name = "optionbutton",
+                  class = "BeeShooter.Gui.Button",
+                  shape = "polygon",
+                  x = 224,
+                  y = 136,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polygon = {
+                    { x = 0, y = 0 },
+                    { x = -24, y = 16 },
+                    { x = -24, y = 40 },
+                    { x = 0, y = 56 },
+                    { x = 24, y = 40 },
+                    { x = 24, y = 16 }
+                  },
+                  properties = {
+                    ["action"] = "openMenu",
+                    ["color"] = "#80ffaa00",
+                    ["guipath"] = "titlescreen.optionmenu",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500"
+                  }
+                },
+                {
                   id = 65,
                   name = "Start",
                   class = "",
                   shape = "text",
-                  x = 80,
+                  x = 8,
                   y = 152,
                   width = 96,
                   height = 24,
@@ -5075,7 +5102,7 @@ return {
                   name = "Help",
                   class = "",
                   shape = "text",
-                  x = 192,
+                  x = 152,
                   y = 152,
                   width = 48,
                   height = 24,
@@ -5095,13 +5122,33 @@ return {
                   name = "High Scores",
                   class = "",
                   shape = "text",
-                  x = 16,
+                  x = 104,
                   y = 152,
                   width = 48,
                   height = 24,
                   rotation = 0,
                   visible = true,
                   text = "HIGH SCORES",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
+                  valign = "center",
+                  properties = {}
+                },
+                {
+                  id = 456,
+                  name = "Option",
+                  class = "",
+                  shape = "text",
+                  x = 200,
+                  y = 152,
+                  width = 48,
+                  height = 24,
+                  rotation = 0,
+                  visible = true,
+                  text = "OPTION",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
                   wrap = true,
@@ -5138,14 +5185,15 @@ return {
               id = 57,
               name = "optionmenu",
               class = "BeeShooter.Gui.Menu",
-              visible = false,
+              visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["backaction"] = "closeMenu"
+                ["backaction"] = "closeMenu",
+                ["openaction"] = "refreshOptions"
               },
               objects = {
                 {
@@ -5183,7 +5231,7 @@ return {
                     { x = 24, y = 16 }
                   },
                   properties = {
-                    ["action"] = "closeOptions",
+                    ["action"] = "closeMenu",
                     ["anchorx"] = 1,
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
@@ -5217,11 +5265,11 @@ return {
                 },
                 {
                   id = 434,
-                  name = "moveChangeWeaponButton",
+                  name = "movechangeweaponbutton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 124,
-                  y = 144,
+                  y = 80,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5237,9 +5285,11 @@ return {
                   properties = {
                     ["action"] = "moveChangeWeaponButton",
                     ["color"] = "#80ffaa00",
+                    ["label"] = { id = 439 },
+                    ["leftbutton"] = { id = 436 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500",
-                    ["text"] = { id = 439 }
+                    ["rightbutton"] = { id = 435 }
                   }
                 },
                 {
@@ -5265,9 +5315,9 @@ return {
                     ["anchorx"] = 1,
                     ["anchory"] = 1,
                     ["color"] = "#80ffaa00",
+                    ["label"] = { id = 440 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500",
-                    ["text"] = { id = 440 }
+                    ["pressedcolor"] = "#80aa5500"
                   }
                 },
                 {
@@ -5293,9 +5343,9 @@ return {
                     ["anchorx"] = -1,
                     ["anchory"] = 1,
                     ["color"] = "#80ffaa00",
+                    ["label"] = { id = 441 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500",
-                    ["text"] = { id = 441 }
+                    ["pressedcolor"] = "#80aa5500"
                   }
                 },
                 {
@@ -5308,7 +5358,7 @@ return {
                   width = 0,
                   height = 0,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   polygon = {
                     { x = 4, y = 0 },
                     { x = -24, y = 16 },
@@ -5335,7 +5385,7 @@ return {
                   width = 0,
                   height = 0,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   polygon = {
                     { x = 4, y = 0 },
                     { x = -24, y = 16 },
@@ -5358,7 +5408,7 @@ return {
                   class = "",
                   shape = "text",
                   x = 100,
-                  y = 184,
+                  y = 120,
                   width = 56,
                   height = 8,
                   rotation = 0,
@@ -5428,7 +5478,7 @@ return {
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   text = "ON",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5448,7 +5498,7 @@ return {
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   text = "Music",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5468,7 +5518,7 @@ return {
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   text = "Sound",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5484,7 +5534,7 @@ return {
                   class = "",
                   shape = "text",
                   x = 100,
-                  y = 160,
+                  y = 96,
                   width = 56,
                   height = 24,
                   rotation = 0,
@@ -5508,7 +5558,7 @@ return {
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = true,
+                  visible = false,
                   text = "OFF",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -7966,7 +8016,7 @@ return {
               objects = {
                 {
                   id = 36,
-                  name = "changeweapon",
+                  name = "rightchangebutton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 192,
@@ -7988,13 +8038,14 @@ return {
                     ["anchorx"] = 1,
                     ["anchory"] = 1,
                     ["color"] = "#80ffaa00",
+                    ["label"] = { id = 59 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
                   }
                 },
                 {
                   id = 453,
-                  name = "changeweapon",
+                  name = "leftchangebutton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 56,
@@ -8016,6 +8067,7 @@ return {
                     ["anchorx"] = -1,
                     ["anchory"] = 1,
                     ["color"] = "#80ffaa00",
+                    ["label"] = { id = 454 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
                   }

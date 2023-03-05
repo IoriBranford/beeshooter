@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="64" nextobjectid="455">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="64" nextobjectid="457">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -679,43 +679,52 @@ You lose if Jenny's lives or timer run out.</text>
     <properties>
      <property name="backaction" value="quitGame"/>
     </properties>
-    <object id="62" template="gui/HexButton96x56.tx" name="start" class="BeeShooter.Gui.Button" x="112" y="112">
+    <object id="62" template="gui/HexButton96x56.tx" class="BeeShooter.Gui.Button" x="40" y="112">
      <properties>
       <property name="action" value="startGame"/>
      </properties>
-     <polygon points="16,24 -32,40 -32,64 16,80 64,64 64,40"/>
     </object>
-    <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="216" y="136">
+    <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="176" y="136">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.help.controls"/>
      </properties>
     </object>
-    <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
+    <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="128" y="136">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.highscores"/>
      </properties>
     </object>
-    <object id="65" name="Start" x="80" y="152" width="96" height="24">
+    <object id="455" template="gui/HexButton48.tx" name="optionbutton" class="BeeShooter.Gui.Button" x="224" y="136">
+     <properties>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.optionmenu"/>
+     </properties>
+    </object>
+    <object id="65" name="Start" x="8" y="152" width="96" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">START GAME</text>
     </object>
     <object id="181" name="Title" x="64" y="16" width="128" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
     </object>
-    <object id="69" name="Help" x="192" y="152" width="48" height="24">
+    <object id="69" name="Help" x="152" y="152" width="48" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HOW TO PLAY</text>
     </object>
-    <object id="207" name="High Scores" x="16" y="152" width="48" height="24">
+    <object id="207" name="High Scores" x="104" y="152" width="48" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
+    </object>
+    <object id="456" name="Option" x="200" y="152" width="48" height="24">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OPTION</text>
     </object>
     <object id="193" name="Copyright" x="16" y="200" width="224" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
     </object>
    </objectgroup>
-   <objectgroup id="57" name="optionmenu" class="BeeShooter.Gui.Menu" visible="0">
+   <objectgroup id="57" name="optionmenu" class="BeeShooter.Gui.Menu">
     <properties>
      <property name="backaction" value="closeMenu"/>
+     <property name="openaction" value="refreshOptions"/>
     </properties>
     <object id="431" name="backing" x="0" y="0" width="256" height="224">
      <properties>
@@ -724,7 +733,7 @@ You lose if Jenny's lives or timer run out.</text>
     </object>
     <object id="432" template="gui/HexButton48.tx" name="closeoptions" x="216" y="16">
      <properties>
-      <property name="action" value="closeOptions"/>
+      <property name="action" value="closeMenu"/>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="-1"/>
      </properties>
@@ -737,39 +746,41 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
     </object>
-    <object id="434" template="gui/HexButton56.tx" name="moveChangeWeaponButton" x="124" y="144">
+    <object id="434" template="gui/HexButton56.tx" name="movechangeweaponbutton" x="124" y="80">
      <properties>
       <property name="action" value="moveChangeWeaponButton"/>
-      <property name="text" type="object" value="439"/>
+      <property name="label" type="object" value="439"/>
+      <property name="leftbutton" type="object" value="436"/>
+      <property name="rightbutton" type="object" value="435"/>
      </properties>
     </object>
     <object id="435" template="gui/HexButton56.tx" name="rightChangeButton" x="192" y="128">
      <properties>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
-      <property name="text" type="object" value="440"/>
+      <property name="label" type="object" value="440"/>
      </properties>
     </object>
     <object id="436" template="gui/HexButton56.tx" name="leftChangeButton" x="56" y="128">
      <properties>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
-      <property name="text" type="object" value="441"/>
+      <property name="label" type="object" value="441"/>
      </properties>
     </object>
-    <object id="437" template="gui/HexButton56.tx" name="toggleMusic" x="88" y="72">
+    <object id="437" template="gui/HexButton56.tx" name="toggleMusic" x="88" y="72" visible="0">
      <properties>
       <property name="action" value="toggleMusic"/>
       <property name="text" type="object" value="442"/>
      </properties>
     </object>
-    <object id="438" template="gui/HexButton56.tx" name="toggleSound" x="160" y="72">
+    <object id="438" template="gui/HexButton56.tx" name="toggleSound" x="160" y="72" visible="0">
      <properties>
       <property name="action" value="toggleSound"/>
       <property name="text" type="object" value="446"/>
      </properties>
     </object>
-    <object id="439" name="changeButtonSide" x="100" y="184" width="56" height="8">
+    <object id="439" name="changeButtonSide" x="100" y="120" width="56" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RIGHT</text>
     </object>
     <object id="440" name="rightChangeButtonText" x="168" y="152" width="56" height="16">
@@ -786,19 +797,19 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
     </object>
-    <object id="442" name="music" x="64" y="104" width="56" height="16">
+    <object id="442" name="music" x="64" y="104" width="56" height="16" visible="0">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">ON</text>
     </object>
-    <object id="443" name="Music" x="64" y="88" width="56" height="16">
+    <object id="443" name="Music" x="64" y="88" width="56" height="16" visible="0">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Music</text>
     </object>
-    <object id="444" name="Sound" x="136" y="88" width="56" height="16">
+    <object id="444" name="Sound" x="136" y="88" width="56" height="16" visible="0">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Sound</text>
     </object>
-    <object id="445" name="Change Button" x="100" y="160" width="56" height="24">
+    <object id="445" name="Change Button" x="100" y="96" width="56" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE button</text>
     </object>
-    <object id="446" name="sound" x="136" y="104" width="56" height="16">
+    <object id="446" name="sound" x="136" y="104" width="56" height="16" visible="0">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OFF</text>
     </object>
    </objectgroup>
@@ -1247,18 +1258,20 @@ You lose if Jenny's lives or timer run out.</text>
   </group>
   <group id="59" name="gamescreen">
    <objectgroup id="9" name="controls" class="BeeShooter.Gui.TouchController">
-    <object id="36" template="gui/HexButton56.tx" name="changeweapon" class="BeeShooter.Gui.Button" x="192" y="128">
+    <object id="36" template="gui/HexButton56.tx" name="rightchangebutton" class="BeeShooter.Gui.Button" x="192" y="128">
      <properties>
       <property name="action" value="changeWeapon"/>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
+      <property name="label" type="object" value="59"/>
      </properties>
     </object>
-    <object id="453" template="gui/HexButton56.tx" name="changeweapon" class="BeeShooter.Gui.Button" x="56" y="128">
+    <object id="453" template="gui/HexButton56.tx" name="leftchangebutton" class="BeeShooter.Gui.Button" x="56" y="128" visible="1">
      <properties>
       <property name="action" value="changeWeapon"/>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
+      <property name="label" type="object" value="454"/>
      </properties>
     </object>
     <object id="40" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="216" y="16">
