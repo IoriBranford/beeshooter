@@ -23,4 +23,10 @@ function GameMenu:endGame()
     GamePhase.restart()
 end
 
+function GameMenu:refreshOptions()
+    if self.movechangeweaponbutton then
+        self.movechangeweaponbutton:refreshChangeButtonSetting()
+    end
+end
+
 return GameMenu

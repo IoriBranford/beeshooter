@@ -2,6 +2,7 @@ local class = require "pl.class"
 local Canvas    = require "System.Canvas"
 local Menu      = require "BeeShooter.Gui.Menu"
 local Controls  = require "System.Controls"
+local Config    = require "System.Config"
 
 ---@class TouchController:GameMenu
 ---@field movecursor GuiObject
@@ -13,6 +14,12 @@ function TouchController:init()
     Controls.releaseTouchButton("fire")
     local movecursor = self.movecursor
     self.movecursorx0, self.movecursory0 = movecursor.x, movecursor.y
+end
+
+function TouchController:openaction()
+    local changebuttonside = Config.touch_changebutton
+    self.rightchangebutton:setHidden(changebuttonside == "LEFT")
+    self.leftchangebutton:setHidden(changebuttonside == "RIGHT")
 end
 
 function TouchController:hideMoveCursor()

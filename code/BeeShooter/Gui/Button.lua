@@ -4,6 +4,7 @@ local GamePhase    = require "BeeShooter.GamePhase"
 local class        = require "pl.class"
 local Controls     = require "System.Controls"
 local Color        = require "Data.Color"
+local Config       = require "System.Config"
 
 ---@class GameButton:Button
 local GameButton = class(Button)
@@ -46,6 +47,32 @@ end
 
 function GameButton:previousHelpPage()
     self.helpscreen:incPage(-1)
+end
+
+function GameButton:moveChangeWeaponButton()
+    local changebuttonside = Config.touch_changebutton
+    if changebuttonside == "BOTH" then
+        changebuttonside = "LEFT"
+    elseif changebuttonside == "LEFT" then
+        changebuttonside = "RIGHT"
+    else
+        changebuttonside = "BOTH"
+    end
+    Config.touch_changebutton = changebuttonside
+    self:refreshChangeButtonSetting()
+end
+
+function GameButton:refreshChangeButtonSetting()
+    local changebuttonside = Config.touch_changebutton
+    local rightbutton = self.rightbutton
+    local leftbutton = self.leftbutton
+    if rightbutton then
+        rightbutton:setHidden(changebuttonside == "LEFT")
+    end
+    if leftbutton then
+        leftbutton:setHidden(changebuttonside == "RIGHT")
+    end
+    self:setLabelString(changebuttonside)
 end
 
 return GameButton
