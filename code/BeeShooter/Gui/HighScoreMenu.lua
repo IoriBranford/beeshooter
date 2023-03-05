@@ -26,4 +26,6 @@ function HighScoreMenu:refresh()
     end
 end
 
+HighScoreMenu.openaction = "refresh"
+
 return HighScoreMenu
