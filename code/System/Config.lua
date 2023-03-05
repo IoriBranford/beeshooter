@@ -1,3 +1,4 @@
+---@class Config
 local Config = {}
 local pl_pretty = require "pl.pretty"
 

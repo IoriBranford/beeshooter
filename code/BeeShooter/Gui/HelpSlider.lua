@@ -15,8 +15,8 @@ function HelpSlider:initPages()
     end
 end
 
-function HelpSlider:onNewValue(value)
-    self.helpscreen:setPage(value)
+function HelpSlider:valuechangeaction()
+    self.helpscreen:setPage(self.value)
 end
 
 HelpSlider.closeMenu = GameButton.closeMenu

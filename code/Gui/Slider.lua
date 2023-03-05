@@ -1,6 +1,7 @@
 local Audio     = require "System.Audio"
 local Button    = require "Gui.Button"
 local class     = require "pl.class"
+local Config    = require "System.Config"
 
 ---@class Slider:Button
 local Slider = class(Button)
@@ -23,7 +24,7 @@ end
 function Slider:setValue(value)
     self.value = value
     self:setString(tostring(value))
-    self:onNewValue(value)
+    self:doAction("valuechangeaction")
 end
 
 function Slider:changeValue(dir)
@@ -73,7 +74,8 @@ function Slider:changeValue(dir)
     self:setValue(value)
 end
 
-function Slider:onNewValue(value)
+function Slider:updateConfigValue()
+    Config[self.configkey] = self.value
 end
 
 return Slider
