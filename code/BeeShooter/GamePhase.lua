@@ -14,8 +14,6 @@ local paused
 local music
 local gui ---@type Gui
 
-local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
-
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
@@ -37,14 +35,11 @@ function GamePhase.loadphase(startpoint)
     end)
     Stage.init(startpoint)
 
-    gui = Gui.new("data/gui_gameplay.lua", IsMobile and "touchui" or "normalui")
+    gui = Gui.new("data/gui_gameplay.lua", Platform.IsMobile and "touchui" or "normalui")
     gui.titlescreen:setHidden(false)
     gui.titlescreen:hideChildrenExcept("art", "mainmenu")
     gui.gamescreen:setHidden(true)
     gui:pushMenu(gui.titlescreen.mainmenu)
-    if not IsMobile then
-        gui.titlescreen.mainmenu:selectButton(1)
-    end
 
     GamePhase.resize(love.graphics.getWidth(), love.graphics.getHeight())
     Assets.get("music/Funkbuster.ogg")
@@ -168,9 +163,6 @@ function GamePhase.openHelp()
     gui.titlescreen.help:setHidden(false)
     gui.titlescreen.help.controls.page:setValue(1)
     gui:pushMenu(gui.titlescreen.help.controls)
-    if not IsMobile then
-        gui.titlescreen.help:selectButton(1)
-    end
 end
 
 function GamePhase.closeHelp()
@@ -185,9 +177,6 @@ end
 function GamePhase.openHighScore()
     gui:pushMenu(gui.titlescreen.highscores)
     gui.titlescreen.highscores:refresh()
-    if not IsMobile then
-        gui.titlescreen.highscores:selectButton(1)
-    end
 end
 
 function GamePhase.setPaused(pause)
@@ -219,9 +208,6 @@ function GamePhase.win()
     Stage.win()
     gui:clearMenuStack()
     gui:pushMenu(gui.gamescreen.gameovermenu)
-    if not IsMobile then
-        gui.gamescreen.gameovermenu:selectButton(1)
-    end
     gui.gamescreen.gameovermenu.result:setString("COMPLETE!")
 end
 
@@ -230,9 +216,6 @@ function GamePhase.lose(reason)
     Stage.lose()
     gui:clearMenuStack()
     gui:pushMenu(gui.gamescreen.gameovermenu)
-    if not IsMobile then
-        gui.gamescreen.gameovermenu:selectButton(1)
-    end
     gui.gamescreen.gameovermenu.result:setString(reason or "GAME OVER")
 end
 
