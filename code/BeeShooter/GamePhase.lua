@@ -55,23 +55,16 @@ function GamePhase.loadphase(startpoint)
         end
     end)
     Stage.init(startpoint)
+
     gui = Gui.new("data/gui_gameplay.lua", IsMobile and "touchui" or "normalui")
-    gui.gamescreen.pausemenu:setHidden(true)
-    gui.titlescreen.highscores:setHidden(true)
-
-    if gui.titlescreen.help then
-        gui.titlescreen.help:setHidden(true)
-    end
-
-    gui.gamescreen.hud:setHidden(true)
-    gui.gamescreen.hud.status.over:setHidden(true)
+    gui.titlescreen:setHidden(false)
+    gui.titlescreen:hideChildrenExcept("art", "mainmenu")
+    gui.gamescreen:setHidden(true)
     gui:pushMenu(gui.titlescreen.mainmenu)
     if not IsMobile then
         gui.titlescreen.mainmenu:selectButton(1)
     end
-    if gui.gamescreen.controls then
-        gui.gamescreen.controls:setHidden(true)
-    end
+
     GamePhase.resize(love.graphics.getWidth(), love.graphics.getHeight())
     Assets.get("music/Funkbuster.ogg")
 end
@@ -202,14 +195,16 @@ function GamePhase.startGame()
     status = nil
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
-    gui.titlescreen.mainmenu:setHidden(true)
+    gui.gamescreen:setHidden(false)
+    gui.gamescreen:hideChildrenExcept("hud")
+    gui.titlescreen:setHidden(true)
     gui:clearMenuStack()
     if gui.gamescreen.controls then
         gui:pushMenu(gui.gamescreen.controls)
     end
+    gui.gamescreen.hud.status.over:setHidden(true)
+
     Stage.startGame()
-    gui.gamescreen.hud:setHidden(false)
-    gui.titlescreen.art:setHidden(true)
 end
 
 function GamePhase.openHelp()
@@ -267,9 +262,6 @@ function GamePhase.win()
     status = "COMPLETE!"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
-    if gui.gamescreen.controls then
-        gui.gamescreen.controls:setHidden(true)
-    end
     gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
 end
@@ -279,9 +271,6 @@ function GamePhase.lose(reason)
     status = reason or "GAME OVER"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
-    if gui.gamescreen.controls then
-        gui.gamescreen.controls:setHidden(true)
-    end
     gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
 end
