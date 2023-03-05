@@ -19,6 +19,6 @@ function HelpSlider:onNewValue(value)
     self.helpscreen:setPage(value)
 end
 
-HelpSlider.closeHelp = GameButton.closeHelp
+HelpSlider.closeMenu = GameButton.closeMenu
 
 return HelpSlider

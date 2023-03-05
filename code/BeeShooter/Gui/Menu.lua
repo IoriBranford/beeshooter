@@ -6,9 +6,13 @@ local Stage        = require "BeeShooter.Stage"
 ---@class GameMenu:Menu
 local GameMenu = class(Menu)
 
-function GameMenu:closeHelp()
+function GameMenu:showHelp()
+    self.gui.titlescreen.help:setHidden(false)
+    self.gui.titlescreen.help.controls.page:setValue(1)
+end
+
+function GameMenu:hideHelp()
     self.gui.titlescreen.help:setHidden(true)
-    self.gui:popMenu()
 end
 
 function GameMenu:resumeGame()

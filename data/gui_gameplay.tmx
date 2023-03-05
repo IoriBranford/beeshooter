@@ -52,7 +52,8 @@
     </object>
     <object id="369" name="Help" class="BeeShooter.Gui.Button" x="96" y="144" width="88" height="8">
      <properties>
-      <property name="action" value="openHelp"/>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.help.controls"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">How to Play</text>
     </object>
@@ -182,8 +183,10 @@
    <group id="42" name="help" class="BeeShooter.Gui.HelpScreen">
     <objectgroup draworder="index" id="43" name="controls" class="BeeShooter.Gui.Menu">
      <properties>
-      <property name="backaction" value="closeHelp"/>
+      <property name="backaction" value="closeMenu"/>
+      <property name="closeaction" value="hideHelp"/>
       <property name="initialbutton" type="int" value="1"/>
+      <property name="openaction" value="showHelp"/>
      </properties>
      <object id="282" name="backing" x="0" y="0" width="256" height="224">
       <properties>
@@ -192,19 +195,19 @@
      </object>
      <object id="287" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
       <properties>
-       <property name="action" value="closeHelp"/>
+       <property name="action" value="closeMenu"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">1 / 9</text>
      </object>
      <object id="367" name="&lt;" x="48" y="208" width="16" height="16">
       <properties>
-       <property name="action" value="closeHelp"/>
+       <property name="action" value="closeMenu"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">&lt;</text>
      </object>
      <object id="368" name="&gt;" x="192" y="208" width="16" height="16">
       <properties>
-       <property name="action" value="closeHelp"/>
+       <property name="action" value="closeMenu"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">&gt;</text>
      </object>
@@ -684,7 +687,8 @@ You lose if Jenny's lives or timer run out.</text>
     </object>
     <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="216" y="136">
      <properties>
-      <property name="action" value="openHelp"/>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.help.controls"/>
      </properties>
     </object>
     <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
@@ -919,7 +923,9 @@ You lose if Jenny's lives or timer run out.</text>
    <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
     <objectgroup draworder="index" id="21" name="controls" class="BeeShooter.Gui.Menu">
      <properties>
-      <property name="backaction" value="closeHelp"/>
+      <property name="backaction" value="closeMenu"/>
+      <property name="closeaction" value="hideHelp"/>
+      <property name="openaction" value="showHelp"/>
      </properties>
      <object id="77" name="backing" x="0" y="0" width="256" height="224">
       <properties>
@@ -957,7 +963,7 @@ You lose if Jenny's lives or timer run out.</text>
      </object>
      <object id="179" template="gui/HexButton48.tx" name="closeButton" class="BeeShooter.Gui.Button" x="216" y="16">
       <properties>
-       <property name="action" value="closeHelp"/>
+       <property name="action" value="closeMenu"/>
        <property name="anchorx" type="float" value="1"/>
        <property name="anchory" type="float" value="-1"/>
       </properties>

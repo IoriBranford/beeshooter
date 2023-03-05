@@ -40,17 +40,6 @@ function GameButton:changeWeapon()
     Controls.tapButton("changeweapon")
 end
 
-function GameButton:openHelp()
-    self.gui.titlescreen.help:setHidden(false)
-    self.gui.titlescreen.help.controls.page:setValue(1)
-    self.gui:pushMenu(self.gui.titlescreen.help.controls)
-end
-
-function GameButton:closeHelp()
-    self.helpscreen:setHidden(true)
-    self.gui:popMenu()
-end
-
 function GameButton:nextHelpPage()
     self.helpscreen:incPage(1)
 end

@@ -1575,7 +1575,8 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
-                    ["action"] = "openHelp"
+                    ["action"] = "openMenu",
+                    ["guipath"] = "titlescreen.help.controls"
                   }
                 },
                 {
@@ -2320,8 +2321,10 @@ return {
                   parallaxx = 1,
                   parallaxy = 1,
                   properties = {
-                    ["backaction"] = "closeHelp",
-                    ["initialbutton"] = 1
+                    ["backaction"] = "closeMenu",
+                    ["closeaction"] = "hideHelp",
+                    ["initialbutton"] = 1,
+                    ["openaction"] = "showHelp"
                   },
                   objects = {
                     {
@@ -2358,7 +2361,7 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "closeHelp"
+                        ["action"] = "closeMenu"
                       }
                     },
                     {
@@ -2380,7 +2383,7 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "closeHelp"
+                        ["action"] = "closeMenu"
                       }
                     },
                     {
@@ -2402,7 +2405,7 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "closeHelp"
+                        ["action"] = "closeMenu"
                       }
                     }
                   }
@@ -4993,8 +4996,9 @@ return {
                     { x = 24, y = 16 }
                   },
                   properties = {
-                    ["action"] = "openHelp",
+                    ["action"] = "openMenu",
                     ["color"] = "#80ffaa00",
+                    ["guipath"] = "titlescreen.help.controls",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
                   }
@@ -6247,7 +6251,9 @@ return {
                   parallaxx = 1,
                   parallaxy = 1,
                   properties = {
-                    ["backaction"] = "closeHelp"
+                    ["backaction"] = "closeMenu",
+                    ["closeaction"] = "hideHelp",
+                    ["openaction"] = "showHelp"
                   },
                   objects = {
                     {
@@ -6401,7 +6407,7 @@ return {
                         { x = 24, y = 16 }
                       },
                       properties = {
-                        ["action"] = "closeHelp",
+                        ["action"] = "closeMenu",
                         ["anchorx"] = 1,
                         ["anchory"] = -1,
                         ["color"] = "#80ffaa00",
