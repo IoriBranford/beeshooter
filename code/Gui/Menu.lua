@@ -38,6 +38,13 @@ function Menu:init()
     return self
 end
 
+function Menu:doBackAction()
+    local backaction = self[self.backaction]
+    if type(backaction) == "function" then
+        backaction(self)
+    end
+end
+
 function Menu:keypressed(key)
     if key == Config.key_fire then
         self:pressSelectedButton()
@@ -49,6 +56,8 @@ function Menu:keypressed(key)
         self:changeSelectedSlider(-1)
     elseif key == Config.key_right then
         self:changeSelectedSlider(1)
+    elseif key == "escape" then
+        self:doBackAction()
     end
 end
 
@@ -63,6 +72,8 @@ function Menu:gamepadpressed(gamepad, button)
         self:changeSelectedSlider(1)
     elseif button == Config.joy_fire then
         self:pressSelectedButton()
+    elseif button == "back" then
+        self:doBackAction()
     end
 end
 
