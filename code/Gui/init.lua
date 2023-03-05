@@ -73,10 +73,6 @@ end
 function Gui:setActiveMenu(menu)
     if menu then
         menu:setHidden(false)
-        local initialbutton = menu.initialbutton
-        if initialbutton then
-            menu:selectButton(initialbutton)
-        end
     end
     self.activemenu = menu
 end
@@ -90,6 +86,10 @@ function Gui:pushMenu(menu)
     end
     self.menustack[#self.menustack+1] = menu
     self:setActiveMenu(menu)
+    local initialbutton = menu.initialbutton
+    if initialbutton then
+        menu:selectButton(initialbutton)
+    end
 end
 
 function Gui:popMenu()
