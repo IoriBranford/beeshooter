@@ -33,6 +33,11 @@ function Button:openURL()
     love.system.openURL(self.url)
 end
 
+function Button:openMenu()
+    local menu = self.gui:get(self.guipath)
+    self.gui:pushMenu(menu)
+end
+
 function Button:closeMenu()
     self.gui:popMenu()
 end
