@@ -3,7 +3,6 @@ local Stage        = require "BeeShooter.Stage"
 local GamePhase    = require "BeeShooter.GamePhase"
 local class        = require "pl.class"
 local Controls     = require "System.Controls"
-local Platform     = require "System.Platform"
 local Color        = require "Data.Color"
 
 ---@class GameButton:Button
@@ -42,11 +41,14 @@ function GameButton:changeWeapon()
 end
 
 function GameButton:openHelp()
-    GamePhase.openHelp()
+    self.gui.titlescreen.help:setHidden(false)
+    self.gui.titlescreen.help.controls.page:setValue(1)
+    self.gui:pushMenu(self.gui.titlescreen.help.controls)
 end
 
 function GameButton:closeHelp()
-    GamePhase.closeHelp()
+    self.helpscreen:setHidden(true)
+    self.gui:popMenu()
 end
 
 function GameButton:nextHelpPage()
@@ -58,7 +60,8 @@ function GameButton:previousHelpPage()
 end
 
 function GameButton:openHighScore()
-    GamePhase.openHighScore()
+    self.gui.titlescreen.highscores:refresh()
+    self.gui:pushMenu(self.gui.titlescreen.highscores)
 end
 
 return GameButton

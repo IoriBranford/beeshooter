@@ -159,26 +159,6 @@ function GamePhase.startGame()
     Stage.startGame()
 end
 
-function GamePhase.openHelp()
-    gui.titlescreen.help:setHidden(false)
-    gui.titlescreen.help.controls.page:setValue(1)
-    gui:pushMenu(gui.titlescreen.help.controls)
-end
-
-function GamePhase.closeHelp()
-    gui.titlescreen.help:setHidden(true)
-    gui:popMenu()
-end
-
-function GamePhase.popMenu()
-    gui:popMenu()
-end
-
-function GamePhase.openHighScore()
-    gui:pushMenu(gui.titlescreen.highscores)
-    gui.titlescreen.highscores:refresh()
-end
-
 function GamePhase.setPaused(pause)
     paused = pause
     -- if pause then

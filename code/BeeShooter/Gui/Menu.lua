@@ -7,7 +7,8 @@ local Stage        = require "BeeShooter.Stage"
 local GameMenu = class(Menu)
 
 function GameMenu:closeHelp()
-    GamePhase.closeHelp()
+    self.gui.titlescreen.help:setHidden(true)
+    self.gui:popMenu()
 end
 
 function GameMenu:resumeGame()
