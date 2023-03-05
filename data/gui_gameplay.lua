@@ -5592,7 +5592,7 @@ return {
             },
             {
               id = 210,
-              name = "closehighscores",
+              name = "closeMenu",
               class = "BeeShooter.Gui.Button",
               shape = "polygon",
               x = 212,
@@ -5610,7 +5610,7 @@ return {
                 { x = 24, y = 16 }
               },
               properties = {
-                ["action"] = "closeHighScore",
+                ["action"] = "closeMenu",
                 ["anchorx"] = 1,
                 ["anchory"] = -1,
                 ["color"] = "#80ffaa00",
@@ -6404,7 +6404,7 @@ return {
                 },
                 {
                   id = 179,
-                  name = "",
+                  name = "closeHelp",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 212,

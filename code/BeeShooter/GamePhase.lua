@@ -65,7 +65,7 @@ function GamePhase.loadphase(startpoint)
 
     gui.hud:setHidden(true)
     gui.hud.status.over:setHidden(true)
-    gui:setActiveMenu(gui.mainmenu)
+    gui:pushMenu(gui.mainmenu)
     if not IsMobile then
         gui.mainmenu:selectButton(1)
     end
@@ -203,8 +203,9 @@ function GamePhase.startGame()
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
     gui.mainmenu:setHidden(true)
+    gui:clearMenuStack()
     if gui.controls then
-        gui:setActiveMenu(gui.controls)
+        gui:pushMenu(gui.controls)
     end
     Stage.startGame()
     gui.hud:setHidden(false)
@@ -212,10 +213,9 @@ function GamePhase.startGame()
 end
 
 function GamePhase.openHelp()
-    gui.mainmenu:setHidden(true)
     gui.help:setHidden(false)
     gui.help.controls.page:setValue(1)
-    gui:setActiveMenu(gui.help.controls)
+    gui:pushMenu(gui.help.controls)
     if not IsMobile then
         gui.help:selectButton(1)
     end
@@ -223,20 +223,18 @@ end
 
 function GamePhase.closeHelp()
     gui.help:setHidden(true)
-    gui:setActiveMenu(gui.mainmenu)
+    gui:popMenu()
 end
 
-function GamePhase.setHighScoreScreen(visible)
-    gui.highscores:setHidden(not visible)
-    if visible then
-        gui.mainmenu:setHidden(true)
-        gui.highscores:refresh()
-        gui:setActiveMenu(gui.highscores)
-        if not IsMobile then
-            gui.highscores:selectButton(1)
-        end
-    else
-        gui:setActiveMenu(gui.mainmenu)
+function GamePhase.popMenu()
+    gui:popMenu()
+end
+
+function GamePhase.openHighScore()
+    gui:pushMenu(gui.highscores)
+    gui.highscores:refresh()
+    if not IsMobile then
+        gui.highscores:selectButton(1)
     end
 end
 
@@ -273,7 +271,7 @@ function GamePhase.win()
         gui.controls:setHidden(true)
     end
     gui.hud.status.over:setHidden(false)
-    gui:setActiveMenu()
+    gui:clearMenuStack()
 end
 
 function GamePhase.lose(reason)
@@ -285,7 +283,7 @@ function GamePhase.lose(reason)
         gui.controls:setHidden(true)
     end
     gui.hud.status.over:setHidden(false)
-    gui:setActiveMenu()
+    gui:clearMenuStack()
 end
 
 function GamePhase.draw(fixedfrac)

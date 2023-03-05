@@ -64,11 +64,11 @@ function GameButton:previousHelpPage()
 end
 
 function GameButton:openHighScore()
-    GamePhase.setHighScoreScreen(true)
+    GamePhase.openHighScore()
 end
 
-function GameButton:closeHighScore()
-    GamePhase.setHighScoreScreen(false)
+function GameButton:closeMenu()
+    GamePhase.popMenu()
 end
 
 return GameButton
