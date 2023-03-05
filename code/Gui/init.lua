@@ -3,10 +3,10 @@ local Tiled = require "Data.Tiled"
 local GuiObject = require "Gui.GuiObject"
 local class     = require "pl.class"
 
----@class Gui
+---@class Gui:GuiObject
 ---@field activemenu Menu
 ---@field menustack Menu[]
-local Gui = class()
+local Gui = class(GuiObject)
 
 ---@param map string|table Tiled map exported to Lua, either table or filename
 ---@return Gui
