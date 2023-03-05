@@ -14,17 +14,7 @@ function Gui.new(map, rootpath)
     if type(map) == "string" then
         map = Tiled.load(map)
     end
-    local self = map.layers
-    if type(rootpath) == "string" then
-        for layername in rootpath:gmatch("[^.]+") do
-            self = self[layername]
-            if not self then
-                print(string.format("W: root not found %s", rootpath))
-                self = map.layers
-                break
-            end
-        end
-    end
+    local self = Gui.get(map.layers, rootpath) or map.layers
     self.width = map.width*map.tilewidth
     self.height = map.height*map.tileheight
     self.class = "Gui"
@@ -58,6 +48,22 @@ function Gui.new(map, rootpath)
 
     init(self)
     return self
+end
+
+---@param path string separated by '.'
+---@return GuiObject?
+function Gui:get(path)
+    if type(path) ~= "string" then
+        return
+    end
+    local guiobject = self
+    for layername in path:gmatch("[^.]+") do
+        guiobject = guiobject[layername]
+        if not guiobject then
+            break
+        end
+    end
+    return guiobject
 end
 
 function Gui:init()
