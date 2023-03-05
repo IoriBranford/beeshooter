@@ -1,6 +1,7 @@
 ---@class Config
 local Config = {}
 local pl_pretty = require "pl.pretty"
+local Platform  = require "System.Platform"
 
 local filename = "config.lua"
 
@@ -42,6 +43,9 @@ function Config.load(defaultconfig)
 end
 
 function Config.save()
+	if not Platform.supports("saveconfig") then
+		return
+	end
 	local configtext = "return "..pl_pretty.write(config)
 	love.filesystem.write(filename, configtext)
 end

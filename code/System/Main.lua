@@ -99,9 +99,7 @@ function love.quit()
         love.quitphase()
     end
     Audio.stop()
-    if Platform.supports("saveconfig") then
-        Config.save()
-    end
+    Config.save()
 	if profile then
 		local filename = os.date("profile_%Y-%m-%d_%H-%M-%S")..".txt"
 		love.filesystem.write(filename, profile.report())
