@@ -45,6 +45,10 @@ function GamePhase.loadphase(startpoint)
     Assets.get("music/Funkbuster.ogg")
 end
 
+function GamePhase.restart()
+    love.event.loadphase("BeeShooter.GamePhase")
+end
+
 function GamePhase.resize(screenwidth, screenheight)
     Canvas.init(Stage.CameraWidth, Stage.CameraHeight, screenwidth, screenheight)
     Wallpaper.reload()
@@ -77,7 +81,7 @@ function GamePhase.gamepadpressed(joystick, button)
     if button == "start" and joystick:isGamepadDown("back")
     or button == "back" and joystick:isGamepadDown("start")
     then
-        Stage.restart()
+        GamePhase.restart()
         return
     end
 
@@ -97,7 +101,7 @@ end
 
 function GamePhase.keypressed(key)
     if key == "f2" then
-        Stage.restart()
+        GamePhase.restart()
         return
     end
 

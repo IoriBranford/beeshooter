@@ -25,7 +25,7 @@ function GameButton:resumeGame()
 end
 
 function GameButton:endGame()
-    Stage.restart()
+    GamePhase.restart()
 end
 
 function GameButton:touchPauseGame()

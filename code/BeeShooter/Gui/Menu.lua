@@ -16,7 +16,7 @@ function GameMenu:resumeGame()
 end
 
 function GameMenu:endGame()
-    Stage.restart()
+    GamePhase.restart()
 end
 
 return GameMenu

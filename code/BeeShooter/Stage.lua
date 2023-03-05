@@ -259,10 +259,6 @@ function Stage.quit()
     currentflyers = nil
 end
 
-function Stage.restart()
-    love.event.loadphase("BeeShooter.GamePhase")
-end
-
 local function prune(chars)
     local n = #chars
     for i = n, 1, -1 do
