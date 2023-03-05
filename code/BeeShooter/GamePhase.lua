@@ -79,29 +79,19 @@ function GamePhase.fixedupdate()
 end
 
 function GamePhase.gamepadpressed(joystick, button)
-    if gui.gamescreen.visible then
+    if button == "start" and joystick:isGamepadDown("back")
+    or button == "back" and joystick:isGamepadDown("start")
+    then
+        Stage.restart()
+        return
+    end
 
+    if gui.gamescreen.visible then
         if gui.activemenu == gui.gamescreen.gameovermenu then
         else
-            if button == "start" and joystick:isGamepadDown("back")
-            or button == "back" and joystick:isGamepadDown("start")
-            then
-                Stage.restart()
-                return
-            end
-            if button == "start" then
+            if button == Config.joy_pausemenu then
                 GamePhase.setPaused(not paused)
                 gui.gamescreen.pausemenu:selectButton(paused and 1)
-                return
-            end
-        end
-    elseif gui.titlescreen.visible then
-        if button == "back" then
-            if #gui.menustack > 1 then
-                gui:popMenu()
-                return
-            elseif Platform.supports("quit") then
-                love.event.quit()
                 return
             end
         end
@@ -111,30 +101,22 @@ function GamePhase.gamepadpressed(joystick, button)
 end
 
 function GamePhase.keypressed(key)
+    if key == "f2" then
+        Stage.restart()
+        return
+    end
+
     if gui.gamescreen.visible then
         if gui.activemenu == gui.gamescreen.gameovermenu then
         else
-            if key == "f2" then
-                Stage.restart()
-                return
-            end
             if key == Config.key_pausemenu then
                 GamePhase.setPaused(not paused)
                 gui.gamescreen.pausemenu:selectButton(paused and 1)
                 return
             end
         end
-    elseif gui.titlescreen.visible then
-        if key == "escape" then
-            if #gui.menustack > 1 then
-                gui:popMenu()
-                return
-            elseif Platform.supports("quit") then
-                love.event.quit()
-                return
-            end
-        end
     end
+
     gui:keypressed(key)
 end
 

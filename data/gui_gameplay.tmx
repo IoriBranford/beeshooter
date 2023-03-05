@@ -20,7 +20,10 @@
    <imagelayer id="29" name="art">
     <image source="titleart.png" width="256" height="224"/>
    </imagelayer>
-   <objectgroup id="31" name="mainmenu" class="Gui.Menu">
+   <objectgroup id="31" name="mainmenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="quitGame"/>
+    </properties>
     <object id="188" name="Start" class="BeeShooter.Gui.Button" x="96" y="128" width="64" height="8">
      <properties>
       <property name="action" value="startGame"/>
@@ -59,6 +62,9 @@
     </object>
    </objectgroup>
    <objectgroup id="41" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+    </properties>
     <object id="214" name="backing" x="0" y="0" width="256" height="224">
      <properties>
       <property name="color" type="color" value="#e0000000"/>
@@ -171,7 +177,10 @@
     </object>
    </objectgroup>
    <group id="42" name="help" class="BeeShooter.Gui.HelpScreen">
-    <objectgroup draworder="index" id="43" name="controls" class="Gui.Menu">
+    <objectgroup draworder="index" id="43" name="controls" class="BeeShooter.Gui.Menu">
+     <properties>
+      <property name="backaction" value="closeHelp"/>
+     </properties>
      <object id="282" name="backing" x="0" y="0" width="256" height="224">
       <properties>
        <property name="color" type="color" value="#e0000000"/>
@@ -609,7 +618,10 @@ You lose if Jenny's lives or timer run out.</text>
      </object>
     </objectgroup>
    </group>
-   <objectgroup id="5" name="pausemenu" class="Gui.Menu">
+   <objectgroup id="5" name="pausemenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="resumeGame"/>
+    </properties>
     <object id="14" name="PAUSE!" x="80" y="56" width="96" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">PAUSE!</text>
     </object>
@@ -632,7 +644,10 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
     </object>
    </objectgroup>
-   <objectgroup id="62" name="gameovermenu" class="Gui.Menu">
+   <objectgroup id="62" name="gameovermenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="endGame"/>
+    </properties>
     <object id="447" name="result" x="8" y="64" width="240" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">GAME OVER</text>
     </object>
@@ -651,7 +666,10 @@ You lose if Jenny's lives or timer run out.</text>
    <imagelayer id="39" name="art">
     <image source="titleart.png" width="256" height="224"/>
    </imagelayer>
-   <objectgroup id="18" name="mainmenu" class="Gui.Menu">
+   <objectgroup id="18" name="mainmenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="quitGame"/>
+    </properties>
     <object id="62" template="gui/HexButton96x56.tx" name="start" class="BeeShooter.Gui.Button" x="112" y="112">
      <properties>
       <property name="action" value="startGame"/>
@@ -684,7 +702,10 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2023 IoriBranford</text>
     </object>
    </objectgroup>
-   <objectgroup id="57" name="optionmenu" class="Gui.Menu" visible="0">
+   <objectgroup id="57" name="optionmenu" class="BeeShooter.Gui.Menu" visible="0">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+    </properties>
     <object id="431" name="backing" x="0" y="0" width="256" height="224">
      <properties>
       <property name="color" type="color" value="#e0000000"/>
@@ -771,6 +792,9 @@ You lose if Jenny's lives or timer run out.</text>
     </object>
    </objectgroup>
    <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+    </properties>
     <object id="213" name="backing" x="0" y="0" width="256" height="224">
      <properties>
       <property name="color" type="color" value="#e0000000"/>
@@ -886,7 +910,10 @@ You lose if Jenny's lives or timer run out.</text>
     </object>
    </objectgroup>
    <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
-    <objectgroup draworder="index" id="21" name="controls" class="Gui.Menu">
+    <objectgroup draworder="index" id="21" name="controls" class="BeeShooter.Gui.Menu">
+     <properties>
+      <property name="backaction" value="closeHelp"/>
+     </properties>
      <object id="77" name="backing" x="0" y="0" width="256" height="224">
       <properties>
        <property name="color" type="color" value="#e0000000"/>
@@ -1294,7 +1321,10 @@ You lose if Jenny's lives or timer run out.</text>
      </object>
     </objectgroup>
    </group>
-   <objectgroup id="13" name="pausemenu" class="Gui.Menu">
+   <objectgroup id="13" name="pausemenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="resumeGame"/>
+    </properties>
     <object id="46" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="212" y="16">
      <properties>
       <property name="action" value="touchResumeGame"/>
@@ -1325,7 +1355,10 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">END</text>
     </object>
    </objectgroup>
-   <objectgroup id="63" name="gameovermenu" class="Gui.Menu">
+   <objectgroup id="63" name="gameovermenu" class="BeeShooter.Gui.Menu">
+    <properties>
+     <property name="backaction" value="endGame"/>
+    </properties>
     <object id="450" template="gui/HexButton96x56.tx" x="112" y="80">
      <properties>
       <property name="action" value="endGame"/>

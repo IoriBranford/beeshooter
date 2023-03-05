@@ -1445,14 +1445,16 @@ return {
               draworder = "topdown",
               id = 31,
               name = "mainmenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "quitGame"
+              },
               objects = {
                 {
                   id = 188,
@@ -1608,7 +1610,9 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "closeMenu"
+              },
               objects = {
                 {
                   id = 214,
@@ -2305,14 +2309,16 @@ return {
                   draworder = "index",
                   id = 43,
                   name = "controls",
-                  class = "Gui.Menu",
+                  class = "BeeShooter.Gui.Menu",
                   visible = true,
                   opacity = 1,
                   offsetx = 0,
                   offsety = 0,
                   parallaxx = 1,
                   parallaxy = 1,
-                  properties = {},
+                  properties = {
+                    ["backaction"] = "closeHelp"
+                  },
                   objects = {
                     {
                       id = 282,
@@ -4704,14 +4710,16 @@ return {
               draworder = "topdown",
               id = 5,
               name = "pausemenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "resumeGame"
+              },
               objects = {
                 {
                   id = 14,
@@ -4799,14 +4807,16 @@ return {
               draworder = "topdown",
               id = 62,
               name = "gameovermenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "endGame"
+              },
               objects = {
                 {
                   id = 447,
@@ -4920,14 +4930,16 @@ return {
               draworder = "topdown",
               id = 18,
               name = "mainmenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "quitGame"
+              },
               objects = {
                 {
                   id = 62,
@@ -5114,14 +5126,16 @@ return {
               draworder = "topdown",
               id = 57,
               name = "optionmenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = false,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "closeMenu"
+              },
               objects = {
                 {
                   id = 431,
@@ -5507,7 +5521,9 @@ return {
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "closeMenu"
+              },
               objects = {
                 {
                   id = 213,
@@ -6216,14 +6232,16 @@ return {
                   draworder = "index",
                   id = 21,
                   name = "controls",
-                  class = "Gui.Menu",
+                  class = "BeeShooter.Gui.Menu",
                   visible = true,
                   opacity = 1,
                   offsetx = 0,
                   offsety = 0,
                   parallaxx = 1,
                   parallaxy = 1,
-                  properties = {},
+                  properties = {
+                    ["backaction"] = "closeHelp"
+                  },
                   objects = {
                     {
                       id = 77,
@@ -8279,14 +8297,16 @@ return {
               draworder = "topdown",
               id = 13,
               name = "pausemenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "resumeGame"
+              },
               objects = {
                 {
                   id = 46,
@@ -8415,14 +8435,16 @@ return {
               draworder = "topdown",
               id = 63,
               name = "gameovermenu",
-              class = "Gui.Menu",
+              class = "BeeShooter.Gui.Menu",
               visible = true,
               opacity = 1,
               offsetx = 0,
               offsety = 0,
               parallaxx = 1,
               parallaxy = 1,
-              properties = {},
+              properties = {
+                ["backaction"] = "endGame"
+              },
               objects = {
                 {
                   id = 450,
