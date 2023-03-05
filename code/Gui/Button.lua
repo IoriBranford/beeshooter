@@ -3,6 +3,7 @@ local GuiObject    = require "Gui.GuiObject"
 local class        = require "pl.class"
 
 ---@class Button:GuiObject
+---@field label GuiObject?
 local Button = class(GuiObject)
 Button.ismenuitem = true
 
@@ -10,6 +11,19 @@ function Button:init()
     GuiObject.init(self)
     local action = self.action
     self.action = self[action] or Button.playInvalidSound
+end
+
+function Button:setHidden(hidden)
+    GuiObject.setHidden(self, hidden)
+    if self.label then
+        self.label:setHidden(hidden)
+    end
+end
+
+function Button:setLabelString(string)
+    if self.label then
+        self.label:setString(string)
+    end
 end
 
 function Button:press()
