@@ -74,7 +74,11 @@ function Slider:changeValue(dir)
     self:setValue(value)
 end
 
-function Slider:updateConfigValue()
+function Slider:loadConfigValue()
+    self:setValue(Config[self.configkey])
+end
+
+function Slider:storeConfigValue()
     Config[self.configkey] = self.value
 end
 

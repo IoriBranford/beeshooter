@@ -174,4 +174,20 @@ function Menu:quitGame()
     love.event.quit()
 end
 
+function Menu:loadConfigValues()
+    for _, menuitem in ipairs(self.menuitems) do
+        if menuitem.loadConfigValue then
+            menuitem:loadConfigValue()
+        end
+    end
+end
+
+function Menu:storeConfigValues()
+    for _, menuitem in ipairs(self.menuitems) do
+        if menuitem.storeConfigValue then
+            menuitem:storeConfigValue()
+        end
+    end
+end
+
 return Menu
