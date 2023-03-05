@@ -79,6 +79,36 @@ function GuiObject:setHidden(hidden)
     self:setSpriteHidden(hidden)
 end
 
+function GuiObject:hideChildrenIf(condition)
+    if not condition then
+        return
+    end
+    for _, child in ipairs(self) do
+        child:setHidden(condition(child))
+    end
+end
+
+function GuiObject:hideChildrenExcept(...)
+    local n = select("#", ...)
+    if n < 1 then
+        return
+    end
+
+    for _, child in ipairs(self) do
+        local name = child.name or ""
+        local hidden = true
+        if name ~= "" then
+            for arg = 1, n do
+                if name == select(arg, ...) then
+                    hidden = false
+                    break
+                end
+            end
+        end
+        child:setHidden(hidden)
+    end
+end
+
 function GuiObject:reanchor(guiwidth, guiheight, screenwidth, screenheight)
     local anchorx = self.anchorx or 0
     local anchory = self.anchory or 0
