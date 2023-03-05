@@ -79,7 +79,7 @@ end
 function Gui:setActiveMenu(menu)
     if menu then
         menu:setHidden(false)
-        menu:doOpenAction()
+        menu:doAction(menu.openaction)
     end
     self.activemenu = menu
 end
@@ -105,6 +105,7 @@ function Gui:popMenu()
         return
     end
     menu:setHidden(true)
+    menu:doAction(menu.closeaction)
     self.menustack[#self.menustack] = nil
     self:setActiveMenu(self.menustack[#self.menustack])
 end

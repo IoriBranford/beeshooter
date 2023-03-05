@@ -38,17 +38,12 @@ function Menu:init()
     return self
 end
 
-function Menu:doOpenAction()
-    local openaction = self[self.openaction]
-    if type(openaction) == "function" then
-        openaction(self)
+function Menu:doAction(action)
+    if type(action) ~= "function" then
+        action = self[action]
     end
-end
-
-function Menu:doBackAction()
-    local backaction = self[self.backaction]
-    if type(backaction) == "function" then
-        backaction(self)
+    if type(action) == "function" then
+        action(self)
     end
 end
 
@@ -64,7 +59,7 @@ function Menu:keypressed(key)
     elseif key == Config.key_right then
         self:changeSelectedSlider(1)
     elseif key == "escape" then
-        self:doBackAction()
+        self:doAction(self.backaction)
     end
 end
 
@@ -80,7 +75,7 @@ function Menu:gamepadpressed(gamepad, button)
     elseif button == Config.joy_fire then
         self:pressSelectedButton()
     elseif button == "back" then
-        self:doBackAction()
+        self:doAction(self.backaction)
     end
 end
 
