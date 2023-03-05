@@ -1,9 +1,9 @@
 local class = require "pl.class"
 local Canvas    = require "System.Canvas"
-local Menu      = require "Gui.Menu"
+local Menu      = require "BeeShooter.Gui.Menu"
 local Controls  = require "System.Controls"
 
----@class TouchController:Menu
+---@class TouchController:GameMenu
 ---@field movecursor GuiObject
 local TouchController = class(Menu)
 

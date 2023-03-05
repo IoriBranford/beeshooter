@@ -1,8 +1,8 @@
 local class = require "pl.class"
-local Menu = require "Gui.Menu"
+local Menu = require "BeeShooter.Gui.Menu"
 local HighScores= require "BeeShooter.HighScores"
 
----@class HighScoreMenu:GuiObject
+---@class HighScoreMenu:GameMenu
 local HighScoreMenu = class(Menu)
 
 function HighScoreMenu:refresh()
