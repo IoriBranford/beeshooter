@@ -1,6 +1,7 @@
 local class = require "pl.class"
 
 ---@class GuiObject
+---@field gui Gui
 ---@field sprite SceneObject
 local GuiObject = class()
 
@@ -26,6 +27,15 @@ function GuiObject:init()
         self.leftx, self.topy = self.x, self.y
     end
     self.x0, self.y0 = self.x, self.y
+end
+
+function GuiObject:doAction(action)
+    if type(action) ~= "function" then
+        action = self[action]
+    end
+    if type(action) == "function" then
+        action(self)
+    end
 end
 
 function GuiObject:changeTile(tileid)

@@ -38,15 +38,6 @@ function Menu:init()
     return self
 end
 
-function Menu:doAction(action)
-    if type(action) ~= "function" then
-        action = self[action]
-    end
-    if type(action) == "function" then
-        action(self)
-    end
-end
-
 function Menu:keypressed(key)
     if key == Config.key_fire then
         self:pressSelectedButton()
@@ -82,12 +73,12 @@ end
 function Menu:itemAtPoint(x, y)
     for i, menuitem in ipairs(self.menuitems) do
         if menuitem.visible then
-        if math.testrects(
-            x, y, 0, 0,
-            menuitem.leftx, menuitem.topy,
-            menuitem.width, menuitem.height
-        ) then
-            return i, menuitem
+            if math.testrects(
+                x, y, 0, 0,
+                menuitem.leftx, menuitem.topy,
+                menuitem.width, menuitem.height
+            ) then
+                return i, menuitem
             end
         end
     end
