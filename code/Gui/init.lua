@@ -75,6 +75,9 @@ function Gui:setActiveMenu(menu)
 end
 
 function Gui:pushMenu(menu)
+    if not menu then
+        return
+    end
     for _, m in ipairs(self.menustack) do
         m:setHidden(true)
     end
@@ -84,6 +87,9 @@ end
 
 function Gui:popMenu()
     local menu = self.menustack[#self.menustack]
+    if not menu then
+        return
+    end
     menu:setHidden(true)
     self.menustack[#self.menustack] = nil
     self:setActiveMenu(self.menustack[#self.menustack])
