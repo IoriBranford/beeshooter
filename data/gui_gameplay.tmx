@@ -679,42 +679,42 @@ You lose if Jenny's lives or timer run out.</text>
     <properties>
      <property name="backaction" value="quitGame"/>
     </properties>
-    <object id="62" template="gui/HexButton96x56.tx" class="BeeShooter.Gui.Button" x="40" y="112">
+    <object id="62" template="gui/HexButton96x56.tx" class="BeeShooter.Gui.Button" x="112" y="112">
      <properties>
       <property name="action" value="startGame"/>
      </properties>
     </object>
-    <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="176" y="136">
+    <object id="68" template="gui/HexButton48.tx" name="help" class="BeeShooter.Gui.Button" x="216" y="136">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.help.controls"/>
      </properties>
     </object>
-    <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="128" y="136">
+    <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.highscores"/>
      </properties>
     </object>
-    <object id="455" template="gui/HexButton48.tx" name="optionbutton" class="BeeShooter.Gui.Button" x="224" y="136">
+    <object id="455" template="gui/HexButton48.tx" name="optionbutton" class="BeeShooter.Gui.Button" x="216" y="16">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.optionmenu"/>
      </properties>
     </object>
-    <object id="65" name="Start" x="8" y="152" width="96" height="24">
+    <object id="65" name="Start" x="80" y="152" width="96" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">START GAME</text>
     </object>
     <object id="181" name="Title" x="64" y="16" width="128" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
     </object>
-    <object id="69" name="Help" x="152" y="152" width="48" height="24">
+    <object id="69" name="Help" x="192" y="152" width="48" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HOW TO PLAY</text>
     </object>
-    <object id="207" name="High Scores" x="104" y="152" width="48" height="24">
+    <object id="207" name="High Scores" x="16" y="152" width="48" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
     </object>
-    <object id="456" name="Option" x="200" y="152" width="48" height="24">
+    <object id="456" name="Option" x="192" y="32" width="48" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OPTION</text>
     </object>
     <object id="193" name="Copyright" x="16" y="200" width="224" height="8">
@@ -724,6 +724,7 @@ You lose if Jenny's lives or timer run out.</text>
    <objectgroup id="57" name="optionmenu" class="BeeShooter.Gui.Menu">
     <properties>
      <property name="backaction" value="closeMenu"/>
+     <property name="closeaction" value="saveOptions"/>
      <property name="openaction" value="refreshOptions"/>
     </properties>
     <object id="431" name="backing" x="0" y="0" width="256" height="224">

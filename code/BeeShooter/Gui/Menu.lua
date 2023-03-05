@@ -2,6 +2,7 @@ local class        = require "pl.class"
 local Menu         = require "Gui.Menu"
 local GamePhase    = require "BeeShooter.GamePhase"
 local Stage        = require "BeeShooter.Stage"
+local Config       = require "System.Config"
 
 ---@class GameMenu:Menu
 local GameMenu = class(Menu)
@@ -27,6 +28,10 @@ function GameMenu:refreshOptions()
     if self.movechangeweaponbutton then
         self.movechangeweaponbutton:refreshChangeButtonSetting()
     end
+end
+
+function GameMenu:saveOptions()
+    Config.save()
 end
 
 return GameMenu
