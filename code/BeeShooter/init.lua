@@ -82,6 +82,8 @@ return {
         joy_changespeed = "x",
         joy_pause = "back",
         joy_pausemenu = "start",
-        joy_namingscheme = "XBOX"
+        joy_namingscheme = "XBOX",
+
+        touch_changebutton = "BOTH"
     }
 }
