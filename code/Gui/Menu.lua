@@ -81,12 +81,14 @@ end
 
 function Menu:itemAtPoint(x, y)
     for i, menuitem in ipairs(self.menuitems) do
+        if menuitem.visible then
         if math.testrects(
             x, y, 0, 0,
             menuitem.leftx, menuitem.topy,
             menuitem.width, menuitem.height
         ) then
             return i, menuitem
+            end
         end
     end
 end
