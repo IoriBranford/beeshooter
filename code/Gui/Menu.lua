@@ -38,6 +38,13 @@ function Menu:init()
     return self
 end
 
+function Menu:doOpenAction()
+    local openaction = self[self.openaction]
+    if type(openaction) == "function" then
+        openaction(self)
+    end
+end
+
 function Menu:doBackAction()
     local backaction = self[self.backaction]
     if type(backaction) == "function" then

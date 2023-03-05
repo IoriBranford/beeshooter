@@ -73,6 +73,7 @@ end
 function Gui:setActiveMenu(menu)
     if menu then
         menu:setHidden(false)
+        menu:doOpenAction()
     end
     self.activemenu = menu
 end
