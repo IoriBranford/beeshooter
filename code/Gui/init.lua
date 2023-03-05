@@ -51,6 +51,9 @@ function Gui.new(map, rootpath)
         end
         cls:cast(element)
         cls.init(element)
+        if element ~= self then
+            element.gui = self
+        end
     end
 
     init(self)
