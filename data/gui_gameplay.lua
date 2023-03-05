@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 62,
-  nextobjectid = 447,
+  nextlayerid = 64,
+  nextobjectid = 453,
   properties = {},
   tilesets = {
     {
@@ -4582,25 +4582,6 @@ return {
                       color = { 255, 255, 255 },
                       halign = "right",
                       properties = {}
-                    },
-                    {
-                      id = 199,
-                      name = "over",
-                      class = "",
-                      shape = "text",
-                      x = 16,
-                      y = 96,
-                      width = 224,
-                      height = 32,
-                      rotation = 0,
-                      visible = true,
-                      text = "Press Esc key or\nStart button to continue",
-                      fontfamily = "Press Start 2P",
-                      pixelsize = 8,
-                      wrap = true,
-                      color = { 255, 255, 255 },
-                      halign = "center",
-                      properties = {}
                     }
                   }
                 },
@@ -4798,6 +4779,81 @@ return {
                   shape = "text",
                   x = 88,
                   y = 88,
+                  width = 8,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "▶",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  properties = {
+                    ["offsetx"] = -16
+                  }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 62,
+              name = "gameovermenu",
+              class = "Gui.Menu",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 447,
+                  name = "result",
+                  class = "",
+                  shape = "text",
+                  x = 8,
+                  y = 64,
+                  width = 240,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "GAME OVER",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
+                  properties = {}
+                },
+                {
+                  id = 448,
+                  name = "return",
+                  class = "BeeShooter.Gui.Button",
+                  shape = "text",
+                  x = 104,
+                  y = 128,
+                  width = 64,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "Return",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  properties = {
+                    ["action"] = "endGame"
+                  }
+                },
+                {
+                  id = 449,
+                  name = "cursor",
+                  class = "Gui.Cursor",
+                  shape = "text",
+                  x = 88,
+                  y = 128,
                   width = 8,
                   height = 8,
                   rotation = 0,
@@ -7768,7 +7824,7 @@ return {
                             {
                               id = 202,
                               name = "title",
-                              class = "BeeShooter.Gui.Button",
+                              class = "",
                               shape = "text",
                               x = 8,
                               y = 16,
@@ -7782,9 +7838,7 @@ return {
                               wrap = true,
                               color = { 255, 255, 255 },
                               halign = "center",
-                              properties = {
-                                ["action"] = "endGame"
-                              }
+                              properties = {}
                             },
                             {
                               id = 203,
@@ -8086,25 +8140,6 @@ return {
                       properties = {}
                     },
                     {
-                      id = 198,
-                      name = "over",
-                      class = "",
-                      shape = "text",
-                      x = 16,
-                      y = 96,
-                      width = 224,
-                      height = 32,
-                      rotation = 0,
-                      visible = true,
-                      text = "Tap to continue",
-                      fontfamily = "Press Start 2P",
-                      pixelsize = 8,
-                      wrap = true,
-                      color = { 255, 255, 255 },
-                      halign = "center",
-                      properties = {}
-                    },
-                    {
                       id = 53,
                       name = "bonus",
                       class = "BeeShooter.Gui.BonusText",
@@ -8372,6 +8407,87 @@ return {
                     ["action"] = "endGame",
                     ["anchorx"] = 1
                   }
+                }
+              }
+            },
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 63,
+              name = "gameovermenu",
+              class = "Gui.Menu",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 450,
+                  name = "",
+                  class = "BeeShooter.Gui.Button",
+                  shape = "polygon",
+                  x = 112,
+                  y = 80,
+                  width = 0,
+                  height = 0,
+                  rotation = 0,
+                  visible = true,
+                  polygon = {
+                    { x = 16, y = 24 },
+                    { x = -32, y = 40 },
+                    { x = -32, y = 64 },
+                    { x = 16, y = 80 },
+                    { x = 64, y = 64 },
+                    { x = 64, y = 40 }
+                  },
+                  properties = {
+                    ["action"] = "endGame",
+                    ["color"] = "#80ffaa00",
+                    ["linecolor"] = "#ffffedb7",
+                    ["pressedcolor"] = "#80aa5500"
+                  }
+                },
+                {
+                  id = 451,
+                  name = "result",
+                  class = "",
+                  shape = "text",
+                  x = 8,
+                  y = 64,
+                  width = 240,
+                  height = 8,
+                  rotation = 0,
+                  visible = true,
+                  text = "GAME OVER",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
+                  properties = {}
+                },
+                {
+                  id = 452,
+                  name = "result",
+                  class = "",
+                  shape = "text",
+                  x = 80,
+                  y = 120,
+                  width = 96,
+                  height = 24,
+                  rotation = 0,
+                  visible = true,
+                  text = "RETURN",
+                  fontfamily = "Press Start 2P",
+                  pixelsize = 8,
+                  wrap = true,
+                  color = { 255, 255, 255 },
+                  halign = "center",
+                  valign = "center",
+                  properties = {}
                 }
               }
             }

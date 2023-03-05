@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="62" nextobjectid="447">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="64" nextobjectid="453">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -579,10 +579,6 @@ You lose if Jenny's lives or timer run out.</text>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">SECRET BONUS!
 25000</text>
      </object>
-     <object id="199" name="over" x="16" y="96" width="224" height="32">
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">Press Esc key or
-Start button to continue</text>
-     </object>
     </objectgroup>
     <objectgroup draworder="index" id="6" name="weapons" class="Gui.Menu">
      <object id="5" name="weaponA" class="Gui.Button" gid="5" x="220" y="192" width="16" height="16"/>
@@ -635,6 +631,18 @@ Start button to continue</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
     </object>
+   </objectgroup>
+   <objectgroup id="62" name="gameovermenu" class="Gui.Menu">
+    <object id="447" name="result" x="8" y="64" width="240" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">GAME OVER</text>
+    </object>
+    <object id="448" name="return" class="BeeShooter.Gui.Button" x="104" y="128" width="64" height="8">
+     <properties>
+      <property name="action" value="endGame"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Return</text>
+    </object>
+    <object id="449" template="gui/TextCursor.tx" x="88" y="128"/>
    </objectgroup>
   </group>
  </group>
@@ -1183,10 +1191,7 @@ If Jenny has no more weapon levels, she loses a life.</text>
        <image source="tilesets/MysteryBoss2.png" width="100" height="100"/>
       </imagelayer>
       <objectgroup id="37" name="Object Layer 18">
-       <object id="202" name="title" class="BeeShooter.Gui.Button" x="8" y="16" width="240" height="8">
-        <properties>
-         <property name="action" value="endGame"/>
-        </properties>
+       <object id="202" name="title" x="8" y="16" width="240" height="8">
         <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">OBJECTIVE</text>
        </object>
        <object id="203" name="instruction" class="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
@@ -1255,9 +1260,6 @@ You lose if Jenny's lives or timer run out.</text>
      <object id="52" name="time" x="136" y="8" width="64" height="8">
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">00:00:00</text>
      </object>
-     <object id="198" name="over" x="16" y="96" width="224" height="32">
-      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">Tap to continue</text>
-     </object>
      <object id="53" name="bonus" class="BeeShooter.Gui.BonusText" x="16" y="24" width="104" height="16">
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">SECRET BONUS!
 25000</text>
@@ -1321,6 +1323,19 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="anchorx" type="float" value="1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">END</text>
+    </object>
+   </objectgroup>
+   <objectgroup id="63" name="gameovermenu" class="Gui.Menu">
+    <object id="450" template="gui/HexButton96x56.tx" x="112" y="80">
+     <properties>
+      <property name="action" value="endGame"/>
+     </properties>
+    </object>
+    <object id="451" name="result" x="8" y="64" width="240" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">GAME OVER</text>
+    </object>
+    <object id="452" name="result" x="80" y="120" width="96" height="24">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RETURN</text>
     </object>
    </objectgroup>
   </group>

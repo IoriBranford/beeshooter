@@ -12,33 +12,14 @@ local GamePhase = {}
 
 local paused
 local music
-local status
 local gui ---@type Gui
 
 local IsMobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
-
-local TitleStatus = IsMobile and "" or [[
-HONEY GUARDIAN
-
-
-FIRE
-Z key / A button
-
-CHANGE WEAPON
-X key / B button
-
-CHANGE SPEED
-C key / X button
-
-
-PRESS FIRE
-]]
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
-    status = TitleStatus
     Database.load("data/db_ships.csv")
     Database.load("data/db_bullets.csv")
     Database.load("data/db_items.csv")
@@ -77,7 +58,6 @@ function GamePhase.resize(screenwidth, screenheight)
 end
 
 function GamePhase.quitphase()
-    status = nil
     music = nil
     gui = nil
     Audio.stop()
@@ -99,60 +79,62 @@ function GamePhase.fixedupdate()
 end
 
 function GamePhase.gamepadpressed(joystick, button)
-    if button == "start" and joystick:isGamepadDown("back")
-    or button == "back" and joystick:isGamepadDown("start")
-    then
-        if status == TitleStatus then
-            if Platform.supports("quit") then
-                love.event.quit()
+    if gui.gamescreen.visible then
+
+        if gui.activemenu == gui.gamescreen.gameovermenu then
+        else
+            if button == "start" and joystick:isGamepadDown("back")
+            or button == "back" and joystick:isGamepadDown("start")
+            then
+                Stage.restart()
+                return
             end
-        else
-            Stage.restart()
+            if button == "start" then
+                GamePhase.setPaused(not paused)
+                gui.gamescreen.pausemenu:selectButton(paused and 1)
+                return
+            end
         end
-        return
-    end
-
-    if button == "back" or button == "start" then
-        if gui.activemenu == gui.titlescreen.help.controls then
-            GamePhase.closeHelp()
-            return
+    elseif gui.titlescreen.visible then
+        if button == "back" then
+            if #gui.menustack > 1 then
+                gui:popMenu()
+                return
+            elseif Platform.supports("quit") then
+                love.event.quit()
+                return
+            end
         end
-    end
-
-    if button == "start" then
-        if status == TitleStatus then
-        elseif status then
-            Stage.restart()
-        else
-            GamePhase.setPaused(not paused)
-            gui.gamescreen.pausemenu:selectButton(paused and 1)
-        end
-        return
     end
 
     gui:gamepadpressed(joystick, button)
 end
 
 function GamePhase.keypressed(key)
-    if key == Config.key_pausemenu or key == "escape" then
-        if gui.activemenu == gui.titlescreen.help.controls then
-            GamePhase.closeHelp()
-        elseif status == TitleStatus then
-            if Platform.supports("quit") then
-                love.event.quit()
+    if gui.gamescreen.visible then
+        if gui.activemenu == gui.gamescreen.gameovermenu then
+        else
+            if key == "f2" then
+                Stage.restart()
+                return
             end
-        elseif status then
-            Stage.restart()
-        elseif key == Config.key_pausemenu then
-            GamePhase.setPaused(not paused)
-            gui.gamescreen.pausemenu:selectButton(paused and 1)
+            if key == Config.key_pausemenu then
+                GamePhase.setPaused(not paused)
+                gui.gamescreen.pausemenu:selectButton(paused and 1)
+                return
+            end
         end
-        return
-    elseif key == "f2" then
-        Stage.restart()
-        return
+    elseif gui.titlescreen.visible then
+        if key == "escape" then
+            if #gui.menustack > 1 then
+                gui:popMenu()
+                return
+            elseif Platform.supports("quit") then
+                love.event.quit()
+                return
+            end
+        end
     end
-
     gui:keypressed(key)
 end
 
@@ -175,11 +157,6 @@ function GamePhase.mousereleased(x, y, button, istouch)
 end
 
 function GamePhase.touchpressed(id, x, y)
-    if status == TitleStatus then
-    elseif status then
-        Stage.restart()
-        return
-    end
     gui:touchpressed(id, x, y)
 end
 
@@ -192,7 +169,6 @@ function GamePhase.touchreleased(id)
 end
 
 function GamePhase.startGame()
-    status = nil
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
     gui.gamescreen:setHidden(false)
@@ -202,7 +178,6 @@ function GamePhase.startGame()
     if gui.gamescreen.controls then
         gui:pushMenu(gui.gamescreen.controls)
     end
-    gui.gamescreen.hud.status.over:setHidden(true)
 
     Stage.startGame()
 end
@@ -259,20 +234,24 @@ end
 
 function GamePhase.win()
     Audio.fadeMusic()
-    status = "COMPLETE!"
-    status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
-    gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
+    gui:pushMenu(gui.gamescreen.gameovermenu)
+    if not IsMobile then
+        gui.gamescreen.gameovermenu:selectButton(1)
+    end
+    gui.gamescreen.gameovermenu.result:setString("COMPLETE!")
 end
 
 function GamePhase.lose(reason)
     Audio.fadeMusic()
-    status = reason or "GAME OVER"
-    status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
-    gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
+    gui:pushMenu(gui.gamescreen.gameovermenu)
+    if not IsMobile then
+        gui.gamescreen.gameovermenu:selectButton(1)
+    end
+    gui.gamescreen.gameovermenu.result:setString(reason or "GAME OVER")
 end
 
 function GamePhase.draw(fixedfrac)
@@ -282,9 +261,6 @@ function GamePhase.draw(fixedfrac)
     Wallpaper.draw()
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
-        if status then
-            love.graphics.printf(status, 0, 64, 256, "center")
-        end
     end)
     Canvas.drawCanvas()
     Canvas.drawScaledToCanvas(function()
