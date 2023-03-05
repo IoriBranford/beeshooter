@@ -5,6 +5,7 @@ local class     = require "pl.class"
 
 ---@class Gui
 ---@field activemenu Menu
+---@field menustack Menu[]
 local Gui = class()
 
 ---@param map string|table Tiled map exported to Lua, either table or filename
@@ -30,6 +31,7 @@ function Gui.new(map, rootpath)
     local scene = Scene.new()
     scene:addLayers(self)
     self.scene = scene
+    self.menustack = {}
 
     local function init(element)
         for i = 1, #element do
@@ -70,6 +72,30 @@ function Gui:setActiveMenu(menu)
         menu:setHidden(false)
     end
     self.activemenu = menu
+end
+
+function Gui:pushMenu(menu)
+    for _, m in ipairs(self.menustack) do
+        m:setHidden(true)
+    end
+    self.menustack[#self.menustack+1] = menu
+    self:setActiveMenu(menu)
+end
+
+function Gui:popMenu()
+    local menu = self.menustack[#self.menustack]
+    menu:setHidden(true)
+    self.menustack[#self.menustack] = nil
+    self:setActiveMenu(self.menustack[#self.menustack])
+end
+
+function Gui:clearMenuStack()
+    for i = #self.menustack, 1, -1 do
+        local menu = self.menustack[i]
+        menu:setHidden(true)
+        self.menustack[i] = nil
+    end
+    self:setActiveMenu()
 end
 
 function Gui:keypressed(key)
