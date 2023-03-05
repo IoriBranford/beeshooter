@@ -22,9 +22,7 @@ function GameButton:startGame()
 end
 
 function GameButton:quitGame()
-    if Platform.supports("quit") then
-        love.event.quit()
-    end
+    love.event.quit()
 end
 
 function GameButton:resumeGame()
