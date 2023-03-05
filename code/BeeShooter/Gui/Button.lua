@@ -59,8 +59,4 @@ function GameButton:previousHelpPage()
     self.helpscreen:incPage(-1)
 end
 
-function GameButton:openHighScore()
-    self.gui:pushMenu(self.gui.titlescreen.highscores)
-end
-
 return GameButton

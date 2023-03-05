@@ -45,7 +45,8 @@
     </object>
     <object id="221" name="High Scores" class="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
      <properties>
-      <property name="action" value="openHighScore"/>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.highscores"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
     </object>
@@ -688,7 +689,8 @@ You lose if Jenny's lives or timer run out.</text>
     </object>
     <object id="206" template="gui/HexButton48.tx" name="highscores" class="BeeShooter.Gui.Button" x="40" y="136">
      <properties>
-      <property name="action" value="openHighScore"/>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.highscores"/>
      </properties>
     </object>
     <object id="65" name="Start" x="80" y="152" width="96" height="24">
@@ -808,7 +810,7 @@ You lose if Jenny's lives or timer run out.</text>
     <object id="212" name="High Scores" x="16" y="16" width="224" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
     </object>
-    <object id="210" template="gui/HexButton48.tx" name="closeMenu" class="BeeShooter.Gui.Button" x="216" y="16">
+    <object id="210" template="gui/HexButton48.tx" name="closeButton" class="BeeShooter.Gui.Button" x="216" y="16">
      <properties>
       <property name="action" value="closeMenu"/>
       <property name="anchorx" type="float" value="1"/>
@@ -953,7 +955,7 @@ You lose if Jenny's lives or timer run out.</text>
      <object id="81" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center"> 1 / 10</text>
      </object>
-     <object id="179" template="gui/HexButton48.tx" name="closeHelp" class="BeeShooter.Gui.Button" x="216" y="16">
+     <object id="179" template="gui/HexButton48.tx" name="closeButton" class="BeeShooter.Gui.Button" x="216" y="16">
       <properties>
        <property name="action" value="closeHelp"/>
        <property name="anchorx" type="float" value="1"/>

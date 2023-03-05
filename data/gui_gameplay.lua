@@ -1554,7 +1554,8 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
-                    ["action"] = "openHighScore"
+                    ["action"] = "openMenu",
+                    ["guipath"] = "titlescreen.highscores"
                   }
                 },
                 {
@@ -5018,8 +5019,9 @@ return {
                     { x = 24, y = 16 }
                   },
                   properties = {
-                    ["action"] = "openHighScore",
+                    ["action"] = "openMenu",
                     ["color"] = "#80ffaa00",
+                    ["guipath"] = "titlescreen.highscores",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
                   }
@@ -5567,7 +5569,7 @@ return {
                 },
                 {
                   id = 210,
-                  name = "closeMenu",
+                  name = "closeButton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
@@ -6381,7 +6383,7 @@ return {
                     },
                     {
                       id = 179,
-                      name = "closeHelp",
+                      name = "closeButton",
                       class = "BeeShooter.Gui.Button",
                       shape = "polygon",
                       x = 216,
