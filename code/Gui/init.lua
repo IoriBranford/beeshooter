@@ -73,6 +73,10 @@ end
 function Gui:setActiveMenu(menu)
     if menu then
         menu:setHidden(false)
+        local initialbutton = menu.initialbutton
+        if initialbutton then
+            menu:selectButton(initialbutton)
+        end
     end
     self.activemenu = menu
 end

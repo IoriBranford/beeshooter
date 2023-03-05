@@ -67,6 +67,34 @@
         },
         {
             "color": "#ffa0a0a4",
+            "id": 6,
+            "members": [
+                {
+                    "name": "backaction",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "initialbutton",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "BeeShooter.Gui.Menu",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
             "id": 4,
             "members": [
                 {
@@ -86,24 +114,6 @@
                 }
             ],
             "name": "Gui.Cursor",
-            "type": "class",
-            "useAs": [
-                "property",
-                "map",
-                "layer",
-                "object",
-                "tile",
-                "tileset",
-                "wangcolor",
-                "wangset"
-            ]
-        },
-        {
-            "color": "#ffa0a0a4",
-            "id": 6,
-            "members": [
-            ],
-            "name": "Gui.Menu",
             "type": "class",
             "useAs": [
                 "property",
