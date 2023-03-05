@@ -56,21 +56,21 @@ function GamePhase.loadphase(startpoint)
     end)
     Stage.init(startpoint)
     gui = Gui.new("data/gui_gameplay.lua", IsMobile and "touchui" or "normalui")
-    gui.pausemenu:setHidden(true)
-    gui.highscores:setHidden(true)
+    gui.gamescreen.pausemenu:setHidden(true)
+    gui.titlescreen.highscores:setHidden(true)
 
-    if gui.help then
-        gui.help:setHidden(true)
+    if gui.titlescreen.help then
+        gui.titlescreen.help:setHidden(true)
     end
 
-    gui.hud:setHidden(true)
-    gui.hud.status.over:setHidden(true)
-    gui:pushMenu(gui.mainmenu)
+    gui.gamescreen.hud:setHidden(true)
+    gui.gamescreen.hud.status.over:setHidden(true)
+    gui:pushMenu(gui.titlescreen.mainmenu)
     if not IsMobile then
-        gui.mainmenu:selectButton(1)
+        gui.titlescreen.mainmenu:selectButton(1)
     end
-    if gui.controls then
-        gui.controls:setHidden(true)
+    if gui.gamescreen.controls then
+        gui.gamescreen.controls:setHidden(true)
     end
     GamePhase.resize(love.graphics.getWidth(), love.graphics.getHeight())
     Assets.get("music/Funkbuster.ogg")
@@ -97,9 +97,9 @@ end
 function GamePhase.fixedupdate()
     if not paused then
         Stage.fixedupdate()
-        Stage.fixedupdateHud(gui.hud)
-        if gui.controls then
-            Stage.fixedupdateTouchController(gui.controls)
+        Stage.fixedupdateHud(gui.gamescreen.hud)
+        if gui.gamescreen.controls then
+            Stage.fixedupdateTouchController(gui.gamescreen.controls)
         end
     end
     gui:fixedupdate()
@@ -120,7 +120,7 @@ function GamePhase.gamepadpressed(joystick, button)
     end
 
     if button == "back" or button == "start" then
-        if gui.activemenu == gui.help.controls then
+        if gui.activemenu == gui.titlescreen.help.controls then
             GamePhase.closeHelp()
             return
         end
@@ -132,7 +132,7 @@ function GamePhase.gamepadpressed(joystick, button)
             Stage.restart()
         else
             GamePhase.setPaused(not paused)
-            gui.pausemenu:selectButton(paused and 1)
+            gui.gamescreen.pausemenu:selectButton(paused and 1)
         end
         return
     end
@@ -142,7 +142,7 @@ end
 
 function GamePhase.keypressed(key)
     if key == Config.key_pausemenu or key == "escape" then
-        if gui.activemenu == gui.help.controls then
+        if gui.activemenu == gui.titlescreen.help.controls then
             GamePhase.closeHelp()
         elseif status == TitleStatus then
             if Platform.supports("quit") then
@@ -152,7 +152,7 @@ function GamePhase.keypressed(key)
             Stage.restart()
         elseif key == Config.key_pausemenu then
             GamePhase.setPaused(not paused)
-            gui.pausemenu:selectButton(paused and 1)
+            gui.gamescreen.pausemenu:selectButton(paused and 1)
         end
         return
     elseif key == "f2" then
@@ -202,27 +202,27 @@ function GamePhase.startGame()
     status = nil
     music = Audio.playMusic("music/Funkbuster.ogg")
     music:setLooping(true)
-    gui.mainmenu:setHidden(true)
+    gui.titlescreen.mainmenu:setHidden(true)
     gui:clearMenuStack()
-    if gui.controls then
-        gui:pushMenu(gui.controls)
+    if gui.gamescreen.controls then
+        gui:pushMenu(gui.gamescreen.controls)
     end
     Stage.startGame()
-    gui.hud:setHidden(false)
-    gui.titleart:setHidden(true)
+    gui.gamescreen.hud:setHidden(false)
+    gui.titlescreen.art:setHidden(true)
 end
 
 function GamePhase.openHelp()
-    gui.help:setHidden(false)
-    gui.help.controls.page:setValue(1)
-    gui:pushMenu(gui.help.controls)
+    gui.titlescreen.help:setHidden(false)
+    gui.titlescreen.help.controls.page:setValue(1)
+    gui:pushMenu(gui.titlescreen.help.controls)
     if not IsMobile then
-        gui.help:selectButton(1)
+        gui.titlescreen.help:selectButton(1)
     end
 end
 
 function GamePhase.closeHelp()
-    gui.help:setHidden(true)
+    gui.titlescreen.help:setHidden(true)
     gui:popMenu()
 end
 
@@ -231,10 +231,10 @@ function GamePhase.popMenu()
 end
 
 function GamePhase.openHighScore()
-    gui:pushMenu(gui.highscores)
-    gui.highscores:refresh()
+    gui:pushMenu(gui.titlescreen.highscores)
+    gui.titlescreen.highscores:refresh()
     if not IsMobile then
-        gui.highscores:selectButton(1)
+        gui.titlescreen.highscores:selectButton(1)
     end
 end
 
@@ -243,15 +243,15 @@ function GamePhase.setPaused(pause)
     -- if pause then
     --     Audio.play("sounds/pause.ogg")
     -- end
-    gui.pausemenu:setHidden(not paused)
+    gui.gamescreen.pausemenu:setHidden(not paused)
     if pause then
-        gui:setActiveMenu(gui.pausemenu)
+        gui:setActiveMenu(gui.gamescreen.pausemenu)
     end
-    if gui.controls then
+    if gui.gamescreen.controls then
         if not pause then
-            gui:setActiveMenu(gui.controls)
+            gui:setActiveMenu(gui.gamescreen.controls)
         end
-        gui.controls:setHidden(pause)
+        gui.gamescreen.controls:setHidden(pause)
     end
 end
 
@@ -267,10 +267,10 @@ function GamePhase.win()
     status = "COMPLETE!"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.win()
-    if gui.controls then
-        gui.controls:setHidden(true)
+    if gui.gamescreen.controls then
+        gui.gamescreen.controls:setHidden(true)
     end
-    gui.hud.status.over:setHidden(false)
+    gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
 end
 
@@ -279,10 +279,10 @@ function GamePhase.lose(reason)
     status = reason or "GAME OVER"
     status = string.format(status, string.upper(Config.key_pausemenu))
     Stage.lose()
-    if gui.controls then
-        gui.controls:setHidden(true)
+    if gui.gamescreen.controls then
+        gui.gamescreen.controls:setHidden(true)
     end
-    gui.hud.status.over:setHidden(false)
+    gui.gamescreen.hud.status.over:setHidden(false)
     gui:clearMenuStack()
 end
 
