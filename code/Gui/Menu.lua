@@ -171,4 +171,12 @@ function Menu:pressSelectedButton()
     end
 end
 
+function Menu:closeMenu()
+    self.gui:popMenu()
+end
+
+function Menu:quitGame()
+    love.event.quit()
+end
+
 return Menu

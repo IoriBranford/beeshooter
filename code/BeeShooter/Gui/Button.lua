@@ -21,10 +21,6 @@ function GameButton:startGame()
     GamePhase.startGame()
 end
 
-function GameButton:quitGame()
-    love.event.quit()
-end
-
 function GameButton:resumeGame()
     GamePhase.setPaused(false)
 end
@@ -63,10 +59,6 @@ end
 
 function GameButton:openHighScore()
     GamePhase.openHighScore()
-end
-
-function GameButton:closeMenu()
-    GamePhase.popMenu()
 end
 
 return GameButton

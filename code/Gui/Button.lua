@@ -33,4 +33,12 @@ function Button:openURL()
     love.system.openURL(self.url)
 end
 
+function Button:closeMenu()
+    self.gui:popMenu()
+end
+
+function Button:quitGame()
+    love.event.quit()
+end
+
 return Button
