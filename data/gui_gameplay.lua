@@ -1453,7 +1453,8 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["backaction"] = "quitGame"
+                ["backaction"] = "quitGame",
+                ["initialbutton"] = 1
               },
               objects = {
                 {
@@ -1611,7 +1612,8 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["backaction"] = "closeMenu"
+                ["backaction"] = "closeMenu",
+                ["initialbutton"] = 1
               },
               objects = {
                 {
@@ -2317,7 +2319,8 @@ return {
                   parallaxx = 1,
                   parallaxy = 1,
                   properties = {
-                    ["backaction"] = "closeHelp"
+                    ["backaction"] = "closeHelp",
+                    ["initialbutton"] = 1
                   },
                   objects = {
                     {
@@ -4718,7 +4721,8 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["backaction"] = "resumeGame"
+                ["backaction"] = "resumeGame",
+                ["initialbutton"] = 1
               },
               objects = {
                 {
@@ -4815,7 +4819,8 @@ return {
               parallaxx = 1,
               parallaxy = 1,
               properties = {
-                ["backaction"] = "endGame"
+                ["backaction"] = "endGame",
+                ["initialbutton"] = 1
               },
               objects = {
                 {
