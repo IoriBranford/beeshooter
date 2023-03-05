@@ -21,11 +21,12 @@ local features = {
         -- Web = true,
     },
     saveconfig = {
-        -- Windows = true,
-        -- ["Mac OS X"] = true,
-        -- Linux = true,
-        -- Android = true,
-        -- iOS = true,
+        Windows = true,
+        ["Mac OS X"] = true,
+        Linux = true,
+        Android = true,
+        iOS = true,
+        Web = true,
     }
 }
 
