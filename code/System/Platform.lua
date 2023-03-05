@@ -1,8 +1,9 @@
+local OS = love.system.getOS()
 
 ---@class Platform
-local Platform = {}
-
-local OS = love.system.getOS()
+local Platform = {
+    IsMobile = OS == "Android" or OS == "iOS"
+}
 
 local features = {
     quit = {
