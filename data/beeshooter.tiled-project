@@ -75,9 +75,19 @@
                     "value": ""
                 },
                 {
+                    "name": "closeaction",
+                    "type": "string",
+                    "value": ""
+                },
+                {
                     "name": "initialbutton",
                     "type": "int",
                     "value": 0
+                },
+                {
+                    "name": "openaction",
+                    "type": "string",
+                    "value": ""
                 }
             ],
             "name": "BeeShooter.Gui.Menu",
