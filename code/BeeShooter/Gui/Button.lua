@@ -1,5 +1,5 @@
 local Button    = require "Gui.Button"
-local Stage        = require "BeeShooter.Stage"
+local Audio       = require "System.Audio"
 local GamePhase    = require "BeeShooter.GamePhase"
 local class        = require "pl.class"
 local Controls     = require "System.Controls"
@@ -11,6 +11,7 @@ local GameButton = class(Button)
 
 function GameButton:onSelect()
     self:setColor(Color.unpack(self.pressedcolor or Color.White))
+    Audio.play(self.pressedsound)
 end
 
 function GameButton:onDeselect()
