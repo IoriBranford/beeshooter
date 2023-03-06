@@ -1279,11 +1279,13 @@ You lose if Jenny's lives or timer run out.</text>
      <properties>
       <property name="action" value="touchPauseGame"/>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
     </object>
     <object id="41" name="Pause" x="192" y="32" width="48" height="24">
      <properties>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">PAUSE</text>
     </object>
@@ -1356,12 +1358,14 @@ You lose if Jenny's lives or timer run out.</text>
      <properties>
       <property name="action" value="touchResumeGame"/>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
     </object>
     <object id="47" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="152" y="16">
      <properties>
       <property name="action" value="endGame"/>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
     </object>
     <object id="42" name="PAUSE!" x="80" y="104" width="96" height="16">
@@ -1371,6 +1375,7 @@ You lose if Jenny's lives or timer run out.</text>
      <properties>
       <property name="action" value="resumeGame"/>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RESUME</text>
     </object>
@@ -1378,6 +1383,7 @@ You lose if Jenny's lives or timer run out.</text>
      <properties>
       <property name="action" value="endGame"/>
       <property name="anchorx" type="float" value="1"/>
+      <property name="anchory" type="float" value="-1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">END</text>
     </object>

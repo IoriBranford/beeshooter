@@ -8095,6 +8095,7 @@ return {
                   properties = {
                     ["action"] = "touchPauseGame",
                     ["anchorx"] = 1,
+                    ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -8119,7 +8120,8 @@ return {
                   halign = "center",
                   valign = "center",
                   properties = {
-                    ["anchorx"] = 1
+                    ["anchorx"] = 1,
+                    ["anchory"] = -1
                   }
                 },
                 {
@@ -8439,6 +8441,7 @@ return {
                   properties = {
                     ["action"] = "touchResumeGame",
                     ["anchorx"] = 1,
+                    ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -8466,6 +8469,7 @@ return {
                   properties = {
                     ["action"] = "endGame",
                     ["anchorx"] = 1,
+                    ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500"
@@ -8511,7 +8515,8 @@ return {
                   valign = "center",
                   properties = {
                     ["action"] = "resumeGame",
-                    ["anchorx"] = 1
+                    ["anchorx"] = 1,
+                    ["anchory"] = -1
                   }
                 },
                 {
@@ -8534,7 +8539,8 @@ return {
                   valign = "center",
                   properties = {
                     ["action"] = "endGame",
-                    ["anchorx"] = 1
+                    ["anchorx"] = 1,
+                    ["anchory"] = -1
                   }
                 }
               }
