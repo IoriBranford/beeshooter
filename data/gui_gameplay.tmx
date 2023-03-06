@@ -755,14 +755,14 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="rightbutton" type="object" value="435"/>
      </properties>
     </object>
-    <object id="435" template="gui/HexButton56.tx" name="rightChangeButton" x="192" y="128">
+    <object id="435" template="gui/HexButton56.tx" name="rightChangeButton" x="184" y="120">
      <properties>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
       <property name="label" type="object" value="440"/>
      </properties>
     </object>
-    <object id="436" template="gui/HexButton56.tx" name="leftChangeButton" x="56" y="128">
+    <object id="436" template="gui/HexButton56.tx" name="leftChangeButton" x="64" y="120">
      <properties>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
@@ -784,14 +784,14 @@ You lose if Jenny's lives or timer run out.</text>
     <object id="439" name="changeButtonSide" x="100" y="120" width="56" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RIGHT</text>
     </object>
-    <object id="440" name="rightChangeButtonText" x="168" y="152" width="56" height="16">
+    <object id="440" name="rightChangeButtonText" x="160" y="144" width="56" height="16">
      <properties>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
     </object>
-    <object id="441" name="leftChangeButtonText" x="32" y="152" width="56" height="16">
+    <object id="441" name="leftChangeButtonText" x="40" y="144" width="56" height="16">
      <properties>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
@@ -1259,7 +1259,7 @@ You lose if Jenny's lives or timer run out.</text>
   </group>
   <group id="59" name="gamescreen">
    <objectgroup id="9" name="controls" class="BeeShooter.Gui.TouchController">
-    <object id="36" template="gui/HexButton56.tx" name="rightchangebutton" class="BeeShooter.Gui.Button" x="192" y="128">
+    <object id="36" template="gui/HexButton56.tx" name="rightchangebutton" class="BeeShooter.Gui.Button" x="184" y="120">
      <properties>
       <property name="action" value="changeWeapon"/>
       <property name="anchorx" type="float" value="1"/>
@@ -1267,7 +1267,7 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="label" type="object" value="59"/>
      </properties>
     </object>
-    <object id="453" template="gui/HexButton56.tx" name="leftchangebutton" class="BeeShooter.Gui.Button" x="56" y="128" visible="1">
+    <object id="453" template="gui/HexButton56.tx" name="leftchangebutton" class="BeeShooter.Gui.Button" x="64" y="120" visible="1">
      <properties>
       <property name="action" value="changeWeapon"/>
       <property name="anchorx" type="float" value="-1"/>
@@ -1290,14 +1290,14 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">PAUSE</text>
     </object>
     <object id="48" name="movecursor" gid="9" x="128" y="192" width="8" height="8"/>
-    <object id="59" name="Change" x="168" y="152" width="56" height="16">
+    <object id="59" name="Change" x="160" y="144" width="56" height="16">
      <properties>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
     </object>
-    <object id="454" name="Change" x="32" y="152" width="56" height="16">
+    <object id="454" name="Change" x="40" y="144" width="56" height="16">
      <properties>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
