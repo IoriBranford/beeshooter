@@ -28,6 +28,12 @@ function GameMenu:refreshOptions()
     if self.movechangeweaponbutton then
         self.movechangeweaponbutton:refreshChangeButtonSetting()
     end
+    if self.musicbutton then
+        self.musicbutton:refreshAudioSetting()
+    end
+    if self.soundbutton then
+        self.soundbutton:refreshAudioSetting()
+    end
 end
 
 function GameMenu:saveOptions()

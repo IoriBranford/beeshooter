@@ -62,6 +62,24 @@ function GameButton:moveChangeWeaponButton()
     self:refreshChangeButtonSetting()
 end
 
+function GameButton:toggleAudioSetting()
+    local configkey = self.configkey
+    local value = Config[configkey]
+    if value then
+        Config[configkey] = value == 0 and 0.5 or 0
+        self:refreshAudioSetting()
+    end
+end
+
+function GameButton:refreshAudioSetting()
+    local configkey = self.configkey
+    local value = Config[configkey]
+    local label = self.label
+    if label and value then
+        label:setString(value == 0 and "OFF" or "ON")
+    end
+end
+
 function GameButton:refreshChangeButtonSetting()
     local changebuttonside = Config.touch_changebutton
     local rightbutton = self.rightbutton
