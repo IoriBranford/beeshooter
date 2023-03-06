@@ -13,6 +13,7 @@ local GamePhase = {}
 local paused
 local music
 local gui ---@type Gui
+local PauseSound = "sounds/pause.mp3"
 
 function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
@@ -43,6 +44,7 @@ function GamePhase.loadphase(startpoint)
 
     GamePhase.resize(love.graphics.getWidth(), love.graphics.getHeight())
     Assets.get("music/Funkbuster.ogg")
+    Assets.get(PauseSound)
 end
 
 function GamePhase.restart()
@@ -171,6 +173,7 @@ function GamePhase.setPaused(pause)
     gui.gamescreen.pausemenu:setHidden(not paused)
     if pause then
         gui:setActiveMenu(gui.gamescreen.pausemenu)
+        Audio.play(PauseSound)
     end
     if gui.gamescreen.controls then
         if not pause then
