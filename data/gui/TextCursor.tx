@@ -2,6 +2,7 @@
 <template>
  <object name="cursor" class="Gui.Cursor" width="8" height="8">
   <properties>
+   <property name="movesound" type="file" value="../sounds/enemyshot1.mp3"/>
    <property name="offsetx" type="float" value="-16"/>
   </properties>
   <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>

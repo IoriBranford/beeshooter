@@ -1474,7 +1474,8 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
-                    ["action"] = "startGame"
+                    ["action"] = "startGame",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -1534,7 +1535,8 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
-                    ["action"] = "quitGame"
+                    ["action"] = "quitGame",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -1555,7 +1557,8 @@ return {
                   color = { 255, 255, 255 },
                   properties = {
                     ["action"] = "openMenu",
-                    ["guipath"] = "titlescreen.highscores"
+                    ["guipath"] = "titlescreen.highscores",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -1576,7 +1579,8 @@ return {
                   color = { 255, 255, 255 },
                   properties = {
                     ["action"] = "openMenu",
-                    ["guipath"] = "titlescreen.help.controls"
+                    ["guipath"] = "titlescreen.help.controls",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -2361,7 +2365,8 @@ return {
                       halign = "center",
                       valign = "center",
                       properties = {
-                        ["action"] = "closeMenu"
+                        ["action"] = "closeMenu",
+                        ["changesound"] = "sounds/enemyshot1.mp3"
                       }
                     },
                     {
@@ -4805,6 +4810,7 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
+                    ["movesound"] = "sounds/enemyshot1.mp3",
                     ["offsetx"] = -16
                   }
                 }
@@ -4883,6 +4889,7 @@ return {
                   wrap = true,
                   color = { 255, 255, 255 },
                   properties = {
+                    ["movesound"] = "sounds/enemyshot1.mp3",
                     ["offsetx"] = -16
                   }
                 }
@@ -4973,7 +4980,8 @@ return {
                     ["action"] = "startGame",
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5000,7 +5008,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["guipath"] = "titlescreen.help.controls",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5027,7 +5036,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["guipath"] = "titlescreen.highscores",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5054,7 +5064,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["guipath"] = "titlescreen.optionmenu",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5237,7 +5248,8 @@ return {
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5270,7 +5282,7 @@ return {
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 124,
-                  y = 80,
+                  y = 120,
                   width = 0,
                   height = 0,
                   rotation = 0,
@@ -5290,6 +5302,7 @@ return {
                     ["leftbutton"] = { id = 436 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3",
                     ["rightbutton"] = { id = 435 }
                   }
                 },
@@ -5318,7 +5331,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["label"] = { id = 440 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5346,20 +5360,21 @@ return {
                     ["color"] = "#80ffaa00",
                     ["label"] = { id = 441 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
                   id = 437,
-                  name = "toggleMusic",
+                  name = "musicbutton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 88,
-                  y = 72,
+                  y = 56,
                   width = 0,
                   height = 0,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   polygon = {
                     { x = 4, y = 0 },
                     { x = -24, y = 16 },
@@ -5369,24 +5384,26 @@ return {
                     { x = 32, y = 16 }
                   },
                   properties = {
-                    ["action"] = "toggleMusic",
+                    ["action"] = "toggleAudioSetting",
                     ["color"] = "#80ffaa00",
+                    ["configkey"] = "musicvolume",
+                    ["label"] = { id = 442 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500",
-                    ["text"] = { id = 442 }
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
                   id = 438,
-                  name = "toggleSound",
+                  name = "soundbutton",
                   class = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 160,
-                  y = 72,
+                  y = 56,
                   width = 0,
                   height = 0,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   polygon = {
                     { x = 4, y = 0 },
                     { x = -24, y = 16 },
@@ -5396,11 +5413,13 @@ return {
                     { x = 32, y = 16 }
                   },
                   properties = {
-                    ["action"] = "toggleSound",
+                    ["action"] = "toggleAudioSetting",
                     ["color"] = "#80ffaa00",
+                    ["configkey"] = "soundvolume",
+                    ["label"] = { id = 446 },
                     ["linecolor"] = "#ffffedb7",
                     ["pressedcolor"] = "#80aa5500",
-                    ["text"] = { id = 446 }
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -5409,7 +5428,7 @@ return {
                   class = "",
                   shape = "text",
                   x = 100,
-                  y = 120,
+                  y = 160,
                   width = 56,
                   height = 8,
                   rotation = 0,
@@ -5475,11 +5494,11 @@ return {
                   class = "",
                   shape = "text",
                   x = 64,
-                  y = 104,
+                  y = 88,
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   text = "ON",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5495,11 +5514,11 @@ return {
                   class = "",
                   shape = "text",
                   x = 64,
-                  y = 88,
+                  y = 72,
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   text = "Music",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5515,11 +5534,11 @@ return {
                   class = "",
                   shape = "text",
                   x = 136,
-                  y = 88,
+                  y = 72,
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   text = "Sound",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5535,7 +5554,7 @@ return {
                   class = "",
                   shape = "text",
                   x = 100,
-                  y = 96,
+                  y = 136,
                   width = 56,
                   height = 24,
                   rotation = 0,
@@ -5555,11 +5574,11 @@ return {
                   class = "",
                   shape = "text",
                   x = 136,
-                  y = 104,
+                  y = 88,
                   width = 56,
                   height = 16,
                   rotation = 0,
-                  visible = false,
+                  visible = true,
                   text = "OFF",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
@@ -5647,7 +5666,8 @@ return {
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -6346,7 +6366,8 @@ return {
                         ["anchorx"] = 1,
                         ["color"] = "#80ffaa00",
                         ["linecolor"] = "#ffffedb7",
-                        ["pressedcolor"] = "#80aa5500"
+                        ["pressedcolor"] = "#80aa5500",
+                        ["pressedsound"] = "sounds/enemyshot1.mp3"
                       }
                     },
                     {
@@ -6373,7 +6394,8 @@ return {
                         ["anchorx"] = -1,
                         ["color"] = "#80ffaa00",
                         ["linecolor"] = "#ffffedb7",
-                        ["pressedcolor"] = "#80aa5500"
+                        ["pressedcolor"] = "#80aa5500",
+                        ["pressedsound"] = "sounds/enemyshot1.mp3"
                       }
                     },
                     {
@@ -6463,7 +6485,8 @@ return {
                         ["anchory"] = -1,
                         ["color"] = "#80ffaa00",
                         ["linecolor"] = "#ffffedb7",
-                        ["pressedcolor"] = "#80aa5500"
+                        ["pressedcolor"] = "#80aa5500",
+                        ["pressedsound"] = "sounds/enemyshot1.mp3"
                       }
                     },
                     {
@@ -6913,7 +6936,8 @@ return {
                           properties = {
                             ["color"] = "#80ffaa00",
                             ["linecolor"] = "#ffffedb7",
-                            ["pressedcolor"] = "#80aa5500"
+                            ["pressedcolor"] = "#80aa5500",
+                            ["pressedsound"] = "sounds/enemyshot1.mp3"
                           }
                         },
                         {
@@ -8041,7 +8065,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["label"] = { id = 59 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = ""
                   }
                 },
                 {
@@ -8070,7 +8095,8 @@ return {
                     ["color"] = "#80ffaa00",
                     ["label"] = { id = 454 },
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = ""
                   }
                 },
                 {
@@ -8098,7 +8124,8 @@ return {
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = ""
                   }
                 },
                 {
@@ -8444,7 +8471,8 @@ return {
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -8472,7 +8500,8 @@ return {
                     ["anchory"] = -1,
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {
@@ -8584,7 +8613,8 @@ return {
                     ["action"] = "endGame",
                     ["color"] = "#80ffaa00",
                     ["linecolor"] = "#ffffedb7",
-                    ["pressedcolor"] = "#80aa5500"
+                    ["pressedcolor"] = "#80aa5500",
+                    ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },
                 {

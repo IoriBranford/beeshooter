@@ -5,6 +5,7 @@
    <property name="color" type="color" value="#80ffaa00"/>
    <property name="linecolor" type="color" value="#ffffedb7"/>
    <property name="pressedcolor" type="color" value="#80aa5500"/>
+   <property name="pressedsound" type="file" value="../sounds/enemyshot1.mp3"/>
   </properties>
   <polygon points="8,-4 -32,16 -32,64 8,84 48,64 48,16"/>
  </object>

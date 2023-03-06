@@ -28,6 +28,7 @@
     <object id="188" name="Start" class="BeeShooter.Gui.Button" x="96" y="128" width="64" height="8">
      <properties>
       <property name="action" value="startGame"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start</text>
     </object>
@@ -40,6 +41,7 @@
     <object id="190" name="Quit" class="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
      <properties>
       <property name="action" value="quitGame"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
     </object>
@@ -47,6 +49,7 @@
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.highscores"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
     </object>
@@ -54,6 +57,7 @@
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.help.controls"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">How to Play</text>
     </object>
@@ -196,6 +200,7 @@
      <object id="287" name="page" class="BeeShooter.Gui.HelpSlider" x="80" y="208" width="96" height="16">
       <properties>
        <property name="action" value="closeMenu"/>
+       <property name="changesound" type="file" value="sounds/enemyshot1.mp3"/>
       </properties>
       <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">1 / 9</text>
      </object>
@@ -645,12 +650,7 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">End</text>
     </object>
-    <object id="18" name="cursor" class="Gui.Cursor" x="88" y="88" width="8" height="8">
-     <properties>
-      <property name="offsetx" type="float" value="-16"/>
-     </properties>
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
-    </object>
+    <object id="18" template="gui/TextCursor.tx" class="Gui.Cursor" x="88" y="88"/>
    </objectgroup>
    <objectgroup id="62" name="gameovermenu" class="BeeShooter.Gui.Menu">
     <properties>
@@ -747,7 +747,7 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CLOSE</text>
     </object>
-    <object id="434" template="gui/HexButton56.tx" name="movechangeweaponbutton" x="124" y="80">
+    <object id="434" template="gui/HexButton56.tx" name="movechangeweaponbutton" x="124" y="120">
      <properties>
       <property name="action" value="moveChangeWeaponButton"/>
       <property name="label" type="object" value="439"/>
@@ -769,19 +769,21 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="label" type="object" value="441"/>
      </properties>
     </object>
-    <object id="437" template="gui/HexButton56.tx" name="toggleMusic" x="88" y="72" visible="0">
+    <object id="437" template="gui/HexButton56.tx" name="musicbutton" x="88" y="56" visible="1">
      <properties>
-      <property name="action" value="toggleMusic"/>
-      <property name="text" type="object" value="442"/>
+      <property name="action" value="toggleAudioSetting"/>
+      <property name="configkey" value="musicvolume"/>
+      <property name="label" type="object" value="442"/>
      </properties>
     </object>
-    <object id="438" template="gui/HexButton56.tx" name="toggleSound" x="160" y="72" visible="0">
+    <object id="438" template="gui/HexButton56.tx" name="soundbutton" x="160" y="56" visible="1">
      <properties>
-      <property name="action" value="toggleSound"/>
-      <property name="text" type="object" value="446"/>
+      <property name="action" value="toggleAudioSetting"/>
+      <property name="configkey" value="soundvolume"/>
+      <property name="label" type="object" value="446"/>
      </properties>
     </object>
-    <object id="439" name="changeButtonSide" x="100" y="120" width="56" height="8">
+    <object id="439" name="changeButtonSide" x="100" y="160" width="56" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">RIGHT</text>
     </object>
     <object id="440" name="rightChangeButtonText" x="160" y="144" width="56" height="16">
@@ -798,19 +800,19 @@ You lose if Jenny's lives or timer run out.</text>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE</text>
     </object>
-    <object id="442" name="music" x="64" y="104" width="56" height="16" visible="0">
+    <object id="442" name="music" x="64" y="88" width="56" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">ON</text>
     </object>
-    <object id="443" name="Music" x="64" y="88" width="56" height="16" visible="0">
+    <object id="443" name="Music" x="64" y="72" width="56" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Music</text>
     </object>
-    <object id="444" name="Sound" x="136" y="88" width="56" height="16" visible="0">
+    <object id="444" name="Sound" x="136" y="72" width="56" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Sound</text>
     </object>
-    <object id="445" name="Change Button" x="100" y="96" width="56" height="24">
+    <object id="445" name="Change Button" x="100" y="136" width="56" height="24">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">CHANGE button</text>
     </object>
-    <object id="446" name="sound" x="136" y="104" width="56" height="16" visible="0">
+    <object id="446" name="sound" x="136" y="88" width="56" height="16">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OFF</text>
     </object>
    </objectgroup>
@@ -1265,6 +1267,7 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="1"/>
       <property name="label" type="object" value="59"/>
+      <property name="pressedsound" type="file" value=""/>
      </properties>
     </object>
     <object id="453" template="gui/HexButton56.tx" name="leftchangebutton" class="BeeShooter.Gui.Button" x="64" y="120" visible="1">
@@ -1273,6 +1276,7 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="anchorx" type="float" value="-1"/>
       <property name="anchory" type="float" value="1"/>
       <property name="label" type="object" value="454"/>
+      <property name="pressedsound" type="file" value=""/>
      </properties>
     </object>
     <object id="40" template="gui/HexButton48.tx" class="BeeShooter.Gui.Button" x="216" y="16">
@@ -1280,6 +1284,7 @@ You lose if Jenny's lives or timer run out.</text>
       <property name="action" value="touchPauseGame"/>
       <property name="anchorx" type="float" value="1"/>
       <property name="anchory" type="float" value="-1"/>
+      <property name="pressedsound" type="file" value=""/>
      </properties>
     </object>
     <object id="41" name="Pause" x="192" y="32" width="48" height="24">
