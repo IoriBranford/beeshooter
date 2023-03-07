@@ -92,9 +92,6 @@ function love.handlers.gamepadpressed(...)
 end
 
 function love.quit()
-    if not Platform.supports("quit") then
-        return true
-    end
     if love.quitphase then
         love.quitphase()
     end

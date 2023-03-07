@@ -172,7 +172,9 @@ function Menu:closeMenu()
 end
 
 function Menu:quitGame()
-    love.event.quit()
+    if Platform.supports("quit") then
+        love.event.quit()
+    end
 end
 
 function Menu:loadConfigValues()

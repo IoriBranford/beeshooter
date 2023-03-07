@@ -1,6 +1,7 @@
 local Audio      = require "System.Audio"
 local GuiObject    = require "Gui.GuiObject"
 local class        = require "pl.class"
+local Platform     = require "System.Platform"
 
 ---@class Button:GuiObject
 ---@field label GuiObject?
@@ -57,7 +58,9 @@ function Button:closeMenu()
 end
 
 function Button:quitGame()
-    love.event.quit()
+    if Platform.supports("quit") then
+        love.event.quit()
+    end
 end
 
 return Button
