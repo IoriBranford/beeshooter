@@ -49,10 +49,10 @@ end
 
 return {
     cli = [[
-        --rotation                              (number default -1)	Screen orientation in degrees clockwise
-        --startpoint (optional string)          Name of stage start point
-        --drawbodies                            Draw physical bodies
-        ]],
+    --rotation                              (number default -1)	Screen orientation in degrees clockwise
+    --startpoint (optional string)          Name of stage start point
+    --drawbodies                            Draw physical bodies
+]],
         --drawai                                Draw AI information
         --exhibit                               Exhibit mode - disable options menu and quit
         --buildmegatilesets	(optional string)   Build megatilesets for all maps in the given text file
