@@ -104,7 +104,9 @@ function Menu:touchmoved(id, x, y, dx, dy)
     end
     x, y = Canvas.inverseTransformPoint(x, y)
     local i = self:itemAtPoint(x, y)
-    self:selectButton(i)
+    if i ~= self.cursorposition then
+        self:selectButton(i)
+    end
 end
 
 function Menu:touchreleased(id, x, y)
