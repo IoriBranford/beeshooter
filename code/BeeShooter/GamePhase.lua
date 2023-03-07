@@ -198,6 +198,7 @@ function GamePhase.win()
 end
 
 function GamePhase.lose(reason)
+    paused = true
     Audio.fadeMusic()
     Stage.lose()
     gui:clearMenuStack()
