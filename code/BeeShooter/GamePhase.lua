@@ -199,6 +199,7 @@ end
 
 function GamePhase.lose(reason)
     paused = true
+    gui.gamescreen.gameoverred:setHidden(false)
     Audio.fadeMusic()
     Stage.lose()
     gui:clearMenuStack()

@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 16,
   tileheight = 16,
-  nextlayerid = 64,
-  nextobjectid = 457,
+  nextlayerid = 66,
+  nextobjectid = 460,
   properties = {},
   tilesets = {
     {
@@ -4483,6 +4483,37 @@ return {
           properties = {},
           layers = {
             {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 64,
+              name = "gameoverred",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 458,
+                  name = "",
+                  class = "",
+                  shape = "rectangle",
+                  x = 0,
+                  y = 0,
+                  width = 256,
+                  height = 224,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["color"] = "#80800000"
+                  }
+                }
+              }
+            },
+            {
               type = "group",
               id = 7,
               name = "hud",
@@ -8025,6 +8056,37 @@ return {
           parallaxy = 1,
           properties = {},
           layers = {
+            {
+              type = "objectgroup",
+              draworder = "topdown",
+              id = 65,
+              name = "gameoverred",
+              class = "",
+              visible = true,
+              opacity = 1,
+              offsetx = 0,
+              offsety = 0,
+              parallaxx = 1,
+              parallaxy = 1,
+              properties = {},
+              objects = {
+                {
+                  id = 459,
+                  name = "",
+                  class = "",
+                  shape = "rectangle",
+                  x = 0,
+                  y = 0,
+                  width = 256,
+                  height = 224,
+                  rotation = 0,
+                  visible = true,
+                  properties = {
+                    ["color"] = "#80800000"
+                  }
+                }
+              }
+            },
             {
               type = "objectgroup",
               draworder = "topdown",

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="64" nextobjectid="457">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="66" nextobjectid="460">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -582,6 +582,13 @@ You lose if Jenny's lives or timer run out.</text>
    </group>
   </group>
   <group id="60" name="gamescreen">
+   <objectgroup id="64" name="gameoverred">
+    <object id="458" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#80800000"/>
+     </properties>
+    </object>
+   </objectgroup>
    <group id="7" name="hud">
     <objectgroup draworder="index" id="2" name="status">
      <object id="1" name="score" x="8" y="8" width="112" height="8">
@@ -1260,6 +1267,13 @@ You lose if Jenny's lives or timer run out.</text>
    </group>
   </group>
   <group id="59" name="gamescreen">
+   <objectgroup id="65" name="gameoverred">
+    <object id="459" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#80800000"/>
+     </properties>
+    </object>
+   </objectgroup>
    <objectgroup id="9" name="controls" class="BeeShooter.Gui.TouchController">
     <object id="36" template="gui/HexButton56.tx" name="rightchangebutton" class="BeeShooter.Gui.Button" x="184" y="120">
      <properties>
