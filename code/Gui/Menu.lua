@@ -2,13 +2,14 @@ local GuiObject = require "Gui.GuiObject"
 local Config    = require "System.Config"
 local class     = require "pl.class"
 local Canvas    = require "System.Canvas"
+local Platform  = require "System.Platform"
 
 ---@class Menu:GuiObject
 local Menu = class(GuiObject)
 
 function Menu:init()
     GuiObject.init(self)
-    local platform = love.system.getOS()
+    local platform = Platform.OS
 
     local cursors = {}
     local menuitems = {}

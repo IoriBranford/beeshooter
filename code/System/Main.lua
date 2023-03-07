@@ -115,22 +115,22 @@ function love.run()
 
     local cli = love.filesystem.getIdentity()..[[
 
-        --console               Output to a console window
-        --version               Print LOVE version
-        --fused                 Force running in fused mode
-        --debug                 Debug in Zerobrane Studio
-        --cute                  Run Cute unit tests
-        --fullscreen            Start in fullscreen mode
-        --windowed              Start in windowed mode
-        --drawstats             Draw performance stats
-        --profile               Profile code performance
-        --exclusive             Exclusive fullscreen
-    ]]
+    --console               Output to a console window
+    --version               Print LOVE version
+    --fused                 Force running in fused mode
+    --debug                 Debug in Zerobrane Studio
+    --cute                  Run Cute unit tests
+    --fullscreen            Start in fullscreen mode
+    --windowed              Start in windowed mode
+    --drawstats             Draw performance stats
+    --profile               Profile code performance
+    --exclusive             Exclusive fullscreen
+    --os (optional string)  Fake a certain OS for testing
+]]
     if not love.filesystem.isFused() then
-        cli = cli ..
-    [[
-        <game> (string)         Game assets location
-    ]]
+        cli = cli .. [[
+    <game> (string)         Game assets location
+]]
     end
     if game.cli then
         cli = cli..game.cli
@@ -139,6 +139,8 @@ function love.run()
 	local lapp = require "pl.lapp"
 	lapp.slack = true
 	local args = lapp (cli)
+
+    Platform.setOS(args.os)
 
 	if args.profile then
         profile = require "profile"

@@ -1,4 +1,5 @@
 local Config = require "System.Config"
+local Platform = require "System.Platform"
 
 local Controls = {}
 
@@ -15,7 +16,7 @@ function Controls.init()
     if love.filesystem.getInfo("gamecontrollerdb.txt", "file") then
         love.joystick.loadGamepadMappings("gamecontrollerdb.txt")
     end
-	local os = love.system.getOS()
+	local os = Platform.OS
 	local GCDBOS = {
 		["OS X"] = "Mac OS X"
 	}

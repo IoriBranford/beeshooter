@@ -1,9 +1,21 @@
-local OS = love.system.getOS()
-
 ---@class Platform
-local Platform = {
-    IsMobile = OS == "Android" or OS == "iOS"
+local Platform = {}
+
+local ValidOSes = {
+    Windows = true,
+    ["Mac OS X"] = true,
+    Linux = true,
+    Android = true,
+    iOS = true,
+    Web = true,
 }
+
+function Platform.setOS(os)
+    os = ValidOSes[os] and os or love.system.getOS()
+    Platform.OS = os
+    Platform.IsMobile = os == "Android" or os == "iOS"
+end
+Platform.setOS()
 
 local features = {
     quit = {
@@ -41,19 +53,15 @@ local configoverrides = {
         resizable = false
     }
 }
-local configoverride = configoverrides[OS]
 
 function Platform.supports(feature)
     feature = features[feature]
-    return feature ~= nil and feature[OS] == true
-end
-
-function Platform.defaultSetting(setting)
-    return configoverride and configoverride[setting]
+    return feature ~= nil and feature[Platform.OS] == true
 end
 
 function Platform.overrideConfig(config)
     config = config or {}
+    local configoverride = configoverrides[Platform.OS]
     if configoverride then
         for k, v in pairs(configoverride) do
             config[k] = v
