@@ -290,9 +290,6 @@ function Stage.fixedupdateTouchController(touchcontroller)
 end
 
 function Stage.fixedupdate()
-    if gametimer <= 0 then
-        return
-    end
     local stagey = stage.y
     local stagevely = stage.vely
     stagey = stagey + stagevely

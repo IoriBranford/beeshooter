@@ -217,13 +217,7 @@ function GamePhase.draw(fixedfrac)
     Canvas.drawOnCanvas(function()
         Stage.draw(fixedfrac)
     end)
-    if Stage.getTimeLeft() <= 0 then
-        love.graphics.setColor(1, 0, 0)
-        Canvas.drawCanvas()
-        love.graphics.setColor(1, 1, 1)
-    else
-        Canvas.drawCanvas()
-    end
+    Canvas.drawCanvas()
     Canvas.drawScaledToCanvas(function()
         gui:draw()
     end)

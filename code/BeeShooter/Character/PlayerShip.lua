@@ -209,7 +209,6 @@ function PlayerShip:defaultDefeat()
     wait(60)
 
     if self.lives <= 0 then
-        Stage.setTime(0)
         GamePhase.lose()
         HighScores.put(self.score)
         return
