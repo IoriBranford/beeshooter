@@ -73,6 +73,7 @@ end
 
 function PlayerShip:respawn()
     self.weapon = self.weapon or "A"
+    self.collidable = true
     PlayerShip.recenter(self)
     self:setNextCoroutines(PlayerShip.fight)
 end
@@ -216,7 +217,6 @@ function PlayerShip:defaultDefeat()
 
     Audio.play(self.respawnsound)
     self.lives = self.lives - 1
-    self.collidable = true
     self.defeated = false
     self.sprite:setHidden(false)
     self.health = self.maxhealth
