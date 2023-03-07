@@ -254,6 +254,7 @@ function PlayerShip:win()
     local timeleft = Stage.getTimeLeft()
     tallyBonuses(self, timeleft)
     HighScores.put(self.score)
+    GamePhase.openGameOverMenu()
 end
 
 function PlayerShip:scorePoints(points)

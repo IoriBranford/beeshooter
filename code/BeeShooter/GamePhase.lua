@@ -194,7 +194,6 @@ function GamePhase.win()
     Audio.fadeMusic()
     Stage.win()
     gui:clearMenuStack()
-    gui:pushMenu(gui.gamescreen.gameovermenu)
     gui.gamescreen.gameovermenu.result:setString("COMPLETE!")
 end
 
@@ -204,6 +203,10 @@ function GamePhase.lose(reason)
     gui:clearMenuStack()
     gui:pushMenu(gui.gamescreen.gameovermenu)
     gui.gamescreen.gameovermenu.result:setString(reason or "GAME OVER")
+end
+
+function GamePhase.openGameOverMenu()
+    gui:pushMenu(gui.gamescreen.gameovermenu)
 end
 
 function GamePhase.draw(fixedfrac)
