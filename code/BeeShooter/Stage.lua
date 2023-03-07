@@ -290,6 +290,9 @@ function Stage.fixedupdateTouchController(touchcontroller)
 end
 
 function Stage.fixedupdate()
+    if gametimer <= 0 then
+        return
+    end
     local stagey = stage.y
     local stagevely = stage.vely
     stagey = stagey + stagevely
@@ -319,7 +322,7 @@ function Stage.fixedupdate()
     if gametimerstate == "running" and gametimer > 0 then
         gametimer = gametimer - 1
         if gametimer <= 0 then
-            player:setNextCoroutines(PlayerShip.timeout)
+            player:timeout()
             local GamePhase = require "BeeShooter.GamePhase"
             GamePhase.lose("TIME UP!")
         end
