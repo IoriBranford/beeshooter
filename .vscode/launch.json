@@ -14,6 +14,15 @@
             "args": ["${workspaceFolder}", "--debug"]
         },
         {
+            "name": "Debug Android",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "love"
+            },
+            "args": ["${workspaceFolder}", "--debug", "--os", "Android"]
+        },
+        {
             "name": "Debug test content",
             "type": "lua-local",
             "request": "launch",
