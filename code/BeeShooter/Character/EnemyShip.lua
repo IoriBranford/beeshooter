@@ -587,6 +587,7 @@ local function dropDyingEffects(self)
 end
 
 function EnemyShip:defeatMidBoss()
+    self.player:giveInvincibleTime(240)
     Stage.pauseTimerUntilNextEnemy()
     Stage.addToTimer(60*60)
     self:giveDefeatPoints()
@@ -604,6 +605,7 @@ end
 EnemyShip.defeatAlienMind = EnemyShip.defeatMidBoss
 
 function EnemyShip:defeatBoss()
+    self.player:giveInvincibleTime(240)
     Stage.stop()
     self:giveDefeatPoints()
     self.collidable = false
