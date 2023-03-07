@@ -199,10 +199,7 @@ function PlayerShip:defaultDefeat()
     if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
         self.defeated = false
         self.health = self.maxhealth
-        local hurtinvincibletime = self.hurtinvincibletime or 60
-        if self.invincibletime < hurtinvincibletime then
-            self.invincibletime = hurtinvincibletime
-        end
+        self:giveInvincibleTime(self.hurtinvincibletime or 60)
         Audio.play(self.hurtsound)
         self:setNextCoroutines(PlayerShip.fight)
         return
@@ -246,6 +243,12 @@ local function tallyBonuses(self, timeleft)
     end
 end
 
+function PlayerShip:giveInvincibleTime(time)
+    if self.invincibletime < time then
+        self.invincibletime = time
+    end
+end
+
 function PlayerShip:win()
     self.collidable = false
     self.defeated = false
@@ -282,10 +285,7 @@ function PlayerShip:giveSecretBonus(points)
 end
 
 function PlayerShip:incPowerLevel()
-    local powerupinvincibletime = self.powerupinvincibletime or 60
-    if self.invincibletime < powerupinvincibletime then
-        self.invincibletime = powerupinvincibletime
-    end
+    self:giveInvincibleTime(self.powerupinvincibletime or 60)
     if self.power >= 3 then
         PlayerShip.scorePoints(self, 1000)
     else
