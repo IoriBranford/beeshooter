@@ -51,7 +51,6 @@ function Canvas.drawOnCanvas(draw)
 end
 
 function Canvas.drawCanvas()
-    love.graphics.setColor(1, 1, 1)
     love.graphics.draw(maincanvas, transform)
 end
 
