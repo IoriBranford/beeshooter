@@ -263,11 +263,15 @@ function PlayerShip:scorePoints(points)
     if nextlifescore then
         if newscore >= nextlifescore  then
             self.nextlifeindex = self.nextlifeindex + 1
-            self.lives = self.lives + 1
-            Audio.play(self.lifesound)
+            self:giveLife()
         end
     end
     self.score = newscore
+end
+
+function PlayerShip:giveLife()
+    self.lives = self.lives + 1
+    Audio.play(self.lifesound)
 end
 
 function PlayerShip:giveSecretBonus(points)
