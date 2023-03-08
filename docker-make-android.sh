@@ -7,4 +7,4 @@ docker run -i -t --rm \
 	-e KEYSTORE_ALIAS -e KEYSTORE_PASSWORD \
 	-e GRADLE_USER_HOME="$(pwd)/.gradle" \
 	ioribranford/build-love-android:$LOVE_VERSION \
-	bash -c "./setup-android.sh && ./setup-android-gme.sh && ./make-android.sh"
+	bash -c "./setup-android.sh && ./make-android.sh"

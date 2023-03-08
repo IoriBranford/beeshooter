@@ -153,7 +153,6 @@ before_script:
                 PROJECT_TITLE_NOSPACE: Honey_Soldier
         script:
                 - ./setup-android.sh
-                - ./setup-android-gme.sh
                 - ./make-android.sh
         cache:
                 key: "${CI_PROJECT_NAME}-android"
