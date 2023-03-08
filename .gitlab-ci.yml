@@ -164,6 +164,7 @@ before_script:
                 paths:
                         - "${PROJECT_TITLE_NOSPACE}*.apk"
                         - "${PROJECT_TITLE_NOSPACE}*.aab"
+                        - native-debug-symbols.zip
 
 web:
         <<: *full

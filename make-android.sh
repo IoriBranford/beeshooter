@@ -99,3 +99,7 @@ else
 	cp $LOVE_APK "${PROJECT_TITLE_NOSPACE}-unsigned.apk"
 	cp $LOVE_AAB "${PROJECT_TITLE_NOSPACE}-unsigned.aab"
 fi
+
+DEBUG_SYMBOLS_PATH=love-android/app/build/intermediates/merged_native_libs/embedNoRecordRelease/out/lib/
+cp -r $DEBUG_SYMBOLS_PATH/* .
+zip -r native-debug-symbols.zip arm64-v8a armeabi-v7a
