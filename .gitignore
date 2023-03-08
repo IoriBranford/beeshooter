@@ -34,7 +34,7 @@ history.db
 squashfs-root
 bin*/
 .gradle/
-love-apk-src/
+love-android/
 game-apk/
 apktool
 appimagetool

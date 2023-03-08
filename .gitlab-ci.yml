@@ -156,7 +156,7 @@ before_script:
         cache:
                 key: "${CI_PROJECT_NAME}-android"
                 paths:
-                        - love-apk-src
+                        - love-android
                         - .gradle
         artifacts:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-android"

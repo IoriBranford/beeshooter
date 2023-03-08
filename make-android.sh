@@ -10,16 +10,16 @@ set -e
 
 # Create a folder named assets in app/src/embed of the root of the love-android repository
 # and place your game in it
-GAME_ASSET_PATH=love-apk-src/app/src/embed/assets
+GAME_ASSET_PATH=love-android/app/src/embed/assets
 if [ -f game-files.txt ]
 then
 	mkdir -p $GAME_ASSET_PATH
 	cp -r $(cat game-files.txt) $GAME_ASSET_PATH
 fi
 
-git -C love-apk-src checkout app/src/main/AndroidManifest.xml
-ANDROID_MANIFEST=love-apk-src/app/src/main/AndroidManifest.xml
-BUILD_GRADLE=love-apk-src/app/build.gradle
+git -C love-android checkout app/src/main/AndroidManifest.xml
+ANDROID_MANIFEST=love-android/app/src/main/AndroidManifest.xml
+BUILD_GRADLE=love-android/app/build.gradle
 
 PROJECT=${PROJECT:=${PWD##*/}}
 PROJECT_TITLE="${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}"
@@ -48,7 +48,7 @@ xmlstarlet ed -L \
 
 if [ -d appicon/android ]
 then
-	cp -r appicon/android/* love-apk-src/app/src/main/res
+	cp -r appicon/android/* love-android/app/src/main/res
 	xmlstarlet ed -L \
 		-u "/manifest/application/@android:icon" -v "@mipmap/ic_launcher" \
 		$ANDROID_MANIFEST
@@ -60,13 +60,13 @@ then
 	# 	$ANDROID_MANIFEST
 fi
 
-cd love-apk-src
+cd love-android
 ./gradlew assembleEmbedNoRecordRelease bundleEmbedNoRecordRelease
 cd ..
 
-LOVE_APK=$(find love-apk-src/app/build/outputs/apk -name "*.apk")
+LOVE_APK=$(find love-android/app/build/outputs/apk -name "*.apk")
 GAME_APK=${GAME_APK:="${PROJECT_TITLE_NOSPACE}.apk"}
-LOVE_AAB=$(find love-apk-src/app/build/outputs/bundle -name "*.aab")
+LOVE_AAB=$(find love-android/app/build/outputs/bundle -name "*.aab")
 GAME_AAB=${GAME_AAB:="${PROJECT_TITLE_NOSPACE}.aab"}
 
 if [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
