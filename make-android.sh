@@ -6,20 +6,15 @@ set -e
 
 # see https://github.com/love2d/love-android/wiki/Game-Packaging
 
-./setup-android.sh
+cp -r android/* love-android
 
-# Create a folder named assets in app/src/embed of the root of the love-android repository
-# and place your game in it
+# package the apk with your own LÖVE game
 GAME_ASSET_PATH=love-android/app/src/embed/assets
 if [ -f game-files.txt ]
 then
 	mkdir -p $GAME_ASSET_PATH
 	cp -r $(cat game-files.txt) $GAME_ASSET_PATH
 fi
-
-git -C love-android checkout app/src/main/AndroidManifest.xml
-ANDROID_MANIFEST=love-android/app/src/main/AndroidManifest.xml
-BUILD_GRADLE=love-android/app/build.gradle
 
 PROJECT=${PROJECT:=${PWD##*/}}
 PROJECT_TITLE="${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}"
@@ -28,6 +23,10 @@ APPLICATION_ID=${APPLICATION_ID:=org.unknown.${PROJECT_TITLE_NOSPACE}}
 SCREEN_ORIENTATION=${SCREEN_ORIENTATION:=landscape}
 ANDROID_VERSIONCODE=${ANDROID_VERSIONCODE:=1}
 
+cd love-android
+
+BUILD_GRADLE=app/build.gradle
+
 set_gradle_property() {
 	FILE="$1"
 	KEY="$2"
@@ -35,33 +34,51 @@ set_gradle_property() {
 	sed -i -r -e "s#${KEY} .+#${KEY} ${VALUE}#" ${FILE}
 }
 
+# give your package a unique name
 set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
-set_gradle_property $BUILD_GRADLE versionName "'`git describe --tags --always`'"
-set_gradle_property $BUILD_GRADLE versionCode $ANDROID_VERSIONCODE
 
+# change the version
+set_gradle_property $BUILD_GRADLE versionCode $ANDROID_VERSIONCODE
+if [ ! -z "$ANDROID_VERSIONNAME" ]
+then
+	set_gradle_property $BUILD_GRADLE versionName "'$ANDROID_VERSIONNAME'"
+fi
+
+ANDROID_MANIFEST=app/src/main/AndroidManifest.xml
+git checkout $ANDROID_MANIFEST
+
+# change the title
 xmlstarlet ed -L \
 	-u "/manifest/@package" 							-v "$APPLICATION_ID.executable" 	\
 	-u "/manifest/application/@android:label" 			-v "$PROJECT_TITLE" 				\
 	-u "/manifest/application/activity/@android:label" 	-v "$PROJECT_TITLE" 				\
-	-u "/manifest/application/activity/@android:name" 	-v "$APPLICATION_ID.GameActivity" 	\
 	$ANDROID_MANIFEST
 
-if [ -d appicon/android ]
+# override the activity if you have special needs
+if [ ! -z "$ANDROID_ACTIVITY" ]
 then
-	cp -r appicon/android/* love-android/app/src/main/res
 	xmlstarlet ed -L \
-		-u "/manifest/application/@android:icon" -v "@mipmap/ic_launcher" \
+		-u "/manifest/application/activity/@android:name" 	-v "$ANDROID_ACTIVITY" 	\
 		$ANDROID_MANIFEST
-	
-	# uncomment if really needed
-	# xmlstarlet ed -L \
-	# 	-i "/manifest/application" \
-	# 		-type attr -n "android:roundIcon" -v "@mipmap/ic_launcher_round" \
-	# 	$ANDROID_MANIFEST
 fi
 
-cd love-android
+# change the icon
+if [ ! -z "$ANDROID_ICON" ]
+then
+	xmlstarlet ed -L \
+		-u "/manifest/application/@android:icon" -v "$ANDROID_ICON" \
+		$ANDROID_MANIFEST
+fi
+if [ ! -z "$ANDROID_ICON_ROUND" ]
+then
+	xmlstarlet ed -L \
+		-i "/manifest/application" \
+			-type attr -n "android:roundIcon" -v "$ANDROID_ICON_ROUND" \
+		$ANDROID_MANIFEST
+fi
+
 ./gradlew assembleEmbedNoRecordRelease bundleEmbedNoRecordRelease
+
 cd ..
 
 LOVE_APK=$(find love-android/app/build/outputs/apk -name "*.apk")
