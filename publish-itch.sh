@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. ./make-vars.sh
+
 # Set to your itch username
 ORG=ioribranford
 
@@ -32,7 +34,7 @@ publish() {
 # publish win-32
 publish win-64
 # publish osx
-publish android
+# publish android
 # publish linux-x86_64
 # publish linux-i686
 # publish linux-armhf
@@ -46,3 +48,13 @@ publish web
 # publish demo-linux-i686
 # publish demo-linux-armhf
 # publish demo-data
+
+. ./make-vars-android.sh
+
+ANDROID_FILE=${PROJECT}-${VERSION}-android.zip
+if [ -e ${FILE} ]
+then
+	ANDROID_APK=${PROJECT_TITLE_NOSPACE}.apk
+	unzip $ANDROID_FILE $ANDROID_APK
+	$BUTLER push --userversion ${VERSION} ${ANDROID_APK} ${ORG}/${PROJECT}:android
+fi
