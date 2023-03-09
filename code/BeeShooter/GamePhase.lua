@@ -102,6 +102,18 @@ function GamePhase.gamepadpressed(joystick, button)
 end
 
 function GamePhase.keypressed(key)
+    if key == "f12" then
+        local basename = os.date("shot_%Y-%m-%d_%H-%M-%S")
+        if love.filesystem.getInfo(basename..".png") then
+            local i = 0
+            repeat
+                i = i + 1
+            until not love.filesystem.getInfo(basename.."_"..i..".png")
+            basename = basename.."_"..i
+        end
+        love.graphics.captureScreenshot(basename..".png")
+        return
+    end
     if key == "f2" then
         GamePhase.restart()
         return
