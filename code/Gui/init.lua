@@ -29,7 +29,7 @@ function Gui.new(map, rootpath)
         end
 
         local ok
-        local cls = element.class
+        local cls = element.class or element.type or ""
         if cls ~= "" then
             ok, cls = pcall(require, cls)
             if not ok then
