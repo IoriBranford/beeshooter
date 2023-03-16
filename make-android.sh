@@ -85,13 +85,13 @@ GAME_APK=${GAME_APK:="${GAME_TITLE_NOSPACE}.apk"}
 LOVE_AAB=$(find love-android/app/build/outputs/bundle -name "*.aab")
 GAME_AAB=${GAME_AAB:="${GAME_TITLE_NOSPACE}.aab"}
 
-if [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
+if [ ! -z "$KEYSTORE_FILE" ] && [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
 then
-	apksigner sign --ks release.keystore \
+	apksigner sign --ks "$KEYSTORE_FILE" \
 		--ks-key-alias $KEYSTORE_ALIAS \
 		--ks-pass env:KEYSTORE_PASSWORD --key-pass env:KEYSTORE_PASSWORD \
 		--out $GAME_APK $LOVE_APK
-	jarsigner -verbose -keystore release.keystore \
+	jarsigner -verbose -keystore "$KEYSTORE_FILE" \
 		-storepass $KEYSTORE_PASSWORD \
 		-signedjar $GAME_AAB $LOVE_AAB $KEYSTORE_ALIAS
 else
@@ -101,4 +101,4 @@ fi
 
 DEBUG_SYMBOLS_PATH=love-android/app/build/intermediates/merged_native_libs/embedNoRecordRelease/out/lib/
 cp -r $DEBUG_SYMBOLS_PATH/* .
-zip -r native-debug-symbols.zip arm64-v8a armeabi-v7a
+zip -r native-debug-symbols.zip $(ls $DEBUG_SYMBOLS_PATH)
