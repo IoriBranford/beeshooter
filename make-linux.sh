@@ -32,7 +32,7 @@ APPIMAGETOOL_URL=https://github.com/AppImage/AppImageKit/releases/download/${APP
 
 GAME_APPDIR=${GAME_TITLE_NOSPACE}.AppDir
 GAME_DESKTOPFILE=${GAME_TITLE_NOSPACE}.desktop
-GAME_DIR=${GAME_DIR:="${GAME_TITLE_NOSPACE}-${ARCH}"}
+OUT_DIR=${OUT_DIR:="${GAME_TITLE_NOSPACE}-${ARCH}"}
 GAME_APPIMAGE=${GAME_APPIMAGE:="${GAME_TITLE_NOSPACE}-${ARCH}.AppImage"}
 
 LIBGME_VERSION=0.6.3-2
@@ -111,18 +111,18 @@ mv love-fused $LOVE_EXE
 chmod +x $LOVE_EXE
 cd ..
 
-mkdir -p $GAME_DIR
-appimagetool/AppRun ${GAME_APPDIR} $GAME_DIR/${GAME_APPIMAGE}
+mkdir -p $OUT_DIR
+appimagetool/AppRun ${GAME_APPDIR} $OUT_DIR/${GAME_APPIMAGE}
 
 STEAM_DLL=linux${ARCH_BITS}/libsteam_api.so
 LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v1.0.4/linux${ARCH_BITS}_luasteam.so
 
 if [ -e $STEAM_DLL ]
 then
-	curl -Lk -o $GAME_DIR/luasteam.so $LUASTEAM_DLL
-	cp $STEAM_DLL $GAME_DIR
+	curl -Lk -o $OUT_DIR/luasteam.so $LUASTEAM_DLL
+	cp $STEAM_DLL $OUT_DIR
 fi
 if [ -e steam_appid.txt ]
 then
-	cp steam_appid.txt $GAME_DIR
+	cp steam_appid.txt $OUT_DIR
 fi

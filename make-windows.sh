@@ -5,7 +5,7 @@ set -e
 
 PROJECT=${PROJECT:=${PWD##*/}}
 GAME_TITLE=${GAME_TITLE:=${PROJECT}${GAME_TYPE}}
-GAME_DIR=${GAME_DIR:="${GAME_TITLE}"}
+OUT_DIR=${OUT_DIR:="${GAME_TITLE}"}
 GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
 GAME_EXE=game-win/${GAME_TITLE}.exe
@@ -108,4 +108,4 @@ then
 	cp README.md game-win
 fi
 
-mv game-win "${GAME_DIR}"
+mv game-win "${OUT_DIR}"

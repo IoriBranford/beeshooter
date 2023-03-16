@@ -6,7 +6,7 @@ set -e
 PROJECT=${PROJECT:=${PWD##*/}}
 GAME_TYPE=${GAME_TYPE:=dev}
 GAME_TITLE=${GAME_TITLE:=${PROJECT}-${GAME_TYPE}}
-GAME_DIR=${GAME_DIR:="${GAME_TITLE}"}
+OUT_DIR=${OUT_DIR:="${GAME_TITLE}"}
 
 ARCH_BITS=${ARCH_BITS:=64}
 if [ ${ARCH_BITS} = 64 ]; then
@@ -41,6 +41,6 @@ find ${LOVE_DIR} -name .git | xargs rm -rf
 echo lovec game > ${LOVE_DIR}/${PROJECT}.bat
 mv bin/${ARCH}/gme.dll ${LOVE_DIR}
 
-mv ${LOVE_DIR} "${GAME_DIR}"
+mv ${LOVE_DIR} "${OUT_DIR}"
 
-#zip -r ${PROJECT_ZIP} "${GAME_DIR}"
+#zip -r ${PROJECT_ZIP} "${OUT_DIR}"
