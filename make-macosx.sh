@@ -4,12 +4,12 @@ set -e
 . ./make-vars.sh
 
 PROJECT=${PROJECT:=${PWD##*/}}
-PROJECT_TITLE=${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}
+GAME_TITLE=${GAME_TITLE:=${PROJECT}${GAME_TYPE}}
 GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
-GAME_APP=${GAME_APP:="${PROJECT_TITLE}.app"}
+GAME_APP=${GAME_APP:="${GAME_TITLE}.app"}
 
-CFBundleName=${CFBundleName:=${PROJECT_TITLE}}
+CFBundleName=${CFBundleName:=${GAME_TITLE}}
 CFBundleIdentifier=${CFBundleIdentifier:=org.unknown.${PROJECT}${GAME_TYPE}}
 NSHumanReadableCopyright=${NSHumanReadableCopyright:="© 2xxx unknown"}
 

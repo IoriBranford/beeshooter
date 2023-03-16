@@ -54,7 +54,7 @@ publish web
 ANDROID_FILE=${PROJECT}-${VERSION}-android.zip
 if [ -e ${FILE} ]
 then
-	ANDROID_APK=${PROJECT_TITLE_NOSPACE}.apk
+	ANDROID_APK=${GAME_TITLE_NOSPACE}.apk
 	unzip $ANDROID_FILE $ANDROID_APK
 	$BUTLER push --userversion ${VERSION} ${ANDROID_APK} ${ORG}/${PROJECT}:android
 fi

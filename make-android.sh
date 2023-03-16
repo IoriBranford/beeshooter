@@ -1,7 +1,6 @@
 #!/bin/sh
 set -e
 
-. ./make-vars.sh
 . ./make-vars-android.sh
 
 # see https://github.com/love2d/love-android/wiki/Game-Packaging
@@ -17,11 +16,11 @@ then
 fi
 
 PROJECT=${PROJECT:=${PWD##*/}}
-PROJECT_TITLE="${PROJECT_TITLE:=${PROJECT}${GAME_TYPE}}"
-PROJECT_TITLE_NOSPACE=${PROJECT_TITLE_NOSPACE:="$(echo ${PROJECT_TITLE} | sed -e 's/\s\+/_/g')"}
-APPLICATION_ID=${APPLICATION_ID:=org.unknown.${PROJECT_TITLE_NOSPACE}}
+GAME_TITLE="${GAME_TITLE:=${PROJECT}${GAME_TYPE}}"
+GAME_TITLE_NOSPACE=${GAME_TITLE_NOSPACE:="$(echo ${GAME_TITLE} | sed -e 's/\s\+/_/g')"}
+APPLICATION_ID=${APPLICATION_ID:=org.unknown.${GAME_TITLE_NOSPACE}}
 SCREEN_ORIENTATION=${SCREEN_ORIENTATION:=landscape}
-ANDROID_VERSIONCODE=${ANDROID_VERSIONCODE:=1}
+VERSION_CODE=${VERSION_CODE:=1}
 
 cd love-android
 
@@ -38,10 +37,10 @@ set_gradle_property() {
 set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
 
 # change the version
-set_gradle_property $BUILD_GRADLE versionCode $ANDROID_VERSIONCODE
-if [ ! -z "$ANDROID_VERSIONNAME" ]
+set_gradle_property $BUILD_GRADLE versionCode $VERSION_CODE
+if [ ! -z "$VERSION_NAME" ]
 then
-	set_gradle_property $BUILD_GRADLE versionName "'$ANDROID_VERSIONNAME'"
+	set_gradle_property $BUILD_GRADLE versionName "'$VERSION_NAME'"
 fi
 
 ANDROID_MANIFEST=app/src/main/AndroidManifest.xml
@@ -50,8 +49,8 @@ git checkout $ANDROID_MANIFEST
 # change the title
 xmlstarlet ed -L \
 	-u "/manifest/@package" 							-v "$APPLICATION_ID.executable" 	\
-	-u "/manifest/application/@android:label" 			-v "$PROJECT_TITLE" 				\
-	-u "/manifest/application/activity/@android:label" 	-v "$PROJECT_TITLE" 				\
+	-u "/manifest/application/@android:label" 			-v "$GAME_TITLE" 				\
+	-u "/manifest/application/activity/@android:label" 	-v "$GAME_TITLE" 				\
 	$ANDROID_MANIFEST
 
 # override the activity if you have special needs
@@ -63,17 +62,17 @@ then
 fi
 
 # change the icon
-if [ ! -z "$ANDROID_ICON" ]
+if [ ! -z "$ICON" ]
 then
 	xmlstarlet ed -L \
-		-u "/manifest/application/@android:icon" -v "$ANDROID_ICON" \
+		-u "/manifest/application/@android:icon" -v "$ICON" \
 		$ANDROID_MANIFEST
 fi
-if [ ! -z "$ANDROID_ICON_ROUND" ]
+if [ ! -z "$ICON_ROUND" ]
 then
 	xmlstarlet ed -L \
 		-i "/manifest/application" \
-			-type attr -n "android:roundIcon" -v "$ANDROID_ICON_ROUND" \
+			-type attr -n "android:roundIcon" -v "$ICON_ROUND" \
 		$ANDROID_MANIFEST
 fi
 
@@ -82,9 +81,9 @@ fi
 cd ..
 
 LOVE_APK=$(find love-android/app/build/outputs/apk -name "*.apk")
-GAME_APK=${GAME_APK:="${PROJECT_TITLE_NOSPACE}.apk"}
+GAME_APK=${GAME_APK:="${GAME_TITLE_NOSPACE}.apk"}
 LOVE_AAB=$(find love-android/app/build/outputs/bundle -name "*.aab")
-GAME_AAB=${GAME_AAB:="${PROJECT_TITLE_NOSPACE}.aab"}
+GAME_AAB=${GAME_AAB:="${GAME_TITLE_NOSPACE}.aab"}
 
 if [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
 then
@@ -96,8 +95,8 @@ then
 		-storepass $KEYSTORE_PASSWORD \
 		-signedjar $GAME_AAB $LOVE_AAB $KEYSTORE_ALIAS
 else
-	cp $LOVE_APK "${PROJECT_TITLE_NOSPACE}-unsigned.apk"
-	cp $LOVE_AAB "${PROJECT_TITLE_NOSPACE}-unsigned.aab"
+	cp $LOVE_APK "${GAME_TITLE_NOSPACE}-unsigned.apk"
+	cp $LOVE_AAB "${GAME_TITLE_NOSPACE}-unsigned.aab"
 fi
 
 DEBUG_SYMBOLS_PATH=love-android/app/build/intermediates/merged_native_libs/embedNoRecordRelease/out/lib/

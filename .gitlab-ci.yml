@@ -2,8 +2,8 @@
 
 # Fill in the project info
 variables:
-        PROJECT_TITLE: "Honey Guardian"
-        PROJECT_TITLE_NOSPACE: Honey_Guardian
+        GAME_TITLE: "Honey Guardian"
+        GAME_TITLE_NOSPACE: Honey_Guardian
         GIT_DEPTH: "1"
         GIT_SUBMODULE_STRATEGY: recursive
 
@@ -17,8 +17,8 @@ variables:
       - if: '$CI_COMMIT_TAG =~ /demo/'
   variables:
     <<: &demo-variables
-      PROJECT_TITLE: "BeeShooter Demo"
-      PROJECT_TITLE_NOSPACE: "Bee_Shooter_Demo"
+      GAME_TITLE: "BeeShooter Demo"
+      GAME_TITLE_NOSPACE: "Bee_Shooter_Demo"
       GAME_TYPE: demo
   artifacts:
     <<: &demo-artifacts-exclude
@@ -77,7 +77,7 @@ before_script:
                 <<: &build-linux-artifacts
                     name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-linux-${ARCH}"
                     paths:
-                        - ${PROJECT_TITLE_NOSPACE}-${ARCH}
+                        - ${GAME_TITLE_NOSPACE}-${ARCH}
 
 .build-windows: &build-windows
         <<: *debian
@@ -102,7 +102,7 @@ before_script:
                 <<: &build-windows-artifacts
                     name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-win-${ARCH_BITS}"
                     paths:
-                        - "${PROJECT_TITLE}"
+                        - "${GAME_TITLE}"
 
 .build-dev-windows: &build-dev-windows
         stage: build
@@ -119,7 +119,7 @@ before_script:
         artifacts:
                 name: "${CI_PROJECT_NAME}-dev-win-${ARCH_BITS}"
                 paths:
-                        - "${PROJECT_TITLE}"
+                        - "${GAME_TITLE}"
 
 .build-osx: &build-osx
         <<: *debian
@@ -141,7 +141,7 @@ before_script:
         artifacts:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-osx"
                 paths:
-                        - "${PROJECT_TITLE}.app"
+                        - "${GAME_TITLE}.app"
 
 .build-android: &build-android
         <<: *debian
@@ -149,8 +149,8 @@ before_script:
         image: ioribranford/build-love-android:11.4
         variables:
                 GRADLE_USER_HOME: "$CI_PROJECT_DIR/.gradle"
-                PROJECT_TITLE: "Honey Soldier"
-                PROJECT_TITLE_NOSPACE: Honey_Soldier
+                GAME_TITLE: "Honey Soldier"
+                GAME_TITLE_NOSPACE: Honey_Soldier
         script:
                 - ./setup-android.sh
                 - ./make-android.sh
@@ -162,8 +162,8 @@ before_script:
         artifacts:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-android"
                 paths:
-                        - "${PROJECT_TITLE_NOSPACE}*.apk"
-                        - "${PROJECT_TITLE_NOSPACE}*.aab"
+                        - "${GAME_TITLE_NOSPACE}*.apk"
+                        - "${GAME_TITLE_NOSPACE}*.aab"
                         - native-debug-symbols.zip
 
 web:

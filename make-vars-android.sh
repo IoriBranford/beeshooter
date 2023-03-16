@@ -1,8 +1,11 @@
 #!/bin/sh
 
-export PROJECT_TITLE="Honey Soldier"
-export PROJECT_TITLE_NOSPACE=Honey_Soldier
+. ./make-vars.sh
+
+export GAME_TITLE="Honey Soldier"
+export GAME_TITLE_NOSPACE=Honey_Soldier
 export APPLICATION_ID="com.ioribranford.honeysoldier"
-export ANDROID_ICON="@mipmap/ic_launcher"
-export ANDROID_VERSIONNAME="`git describe --tags --always`"
-export ANDROID_VERSIONCODE=7
+export ICON="@mipmap/ic_launcher"
+export ICONS_DIR="$PWD/android/app/src/main/res"
+export VERSION_NAME="`git describe --tags --always`"
+export VERSION_CODE=7

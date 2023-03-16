@@ -4,8 +4,8 @@ set -e
 . ./make-vars.sh
 
 PROJECT=${PROJECT:=${PWD##*/}}
-PROJECT_TITLE=${PROJECT_TITLE:="${PROJECT}${GAME_TYPE}"}
-PROJECT_TITLE_NOSPACE=${PROJECT_TITLE_NOSPACE:="$(echo ${PROJECT_TITLE} | sed -e 's/\s\+/_/g')"}
+GAME_TITLE=${GAME_TITLE:="${PROJECT}${GAME_TYPE}"}
+GAME_TITLE_NOSPACE=${GAME_TITLE_NOSPACE:="$(echo ${GAME_TITLE} | sed -e 's/\s\+/_/g')"}
 GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:="${GAME_TYPE}.love"}
 DESCRIPTION=${DESCRIPTION:="No description"}
@@ -30,10 +30,10 @@ APPIMAGETOOL=appimagetool-${ARCH}.AppImage
 APPIMAGETOOL_RELEASE=13
 APPIMAGETOOL_URL=https://github.com/AppImage/AppImageKit/releases/download/${APPIMAGETOOL_RELEASE}
 
-GAME_APPDIR=${PROJECT_TITLE_NOSPACE}.AppDir
-GAME_DESKTOPFILE=${PROJECT_TITLE_NOSPACE}.desktop
-GAME_DIR=${GAME_DIR:="${PROJECT_TITLE_NOSPACE}-${ARCH}"}
-GAME_APPIMAGE=${GAME_APPIMAGE:="${PROJECT_TITLE_NOSPACE}-${ARCH}.AppImage"}
+GAME_APPDIR=${GAME_TITLE_NOSPACE}.AppDir
+GAME_DESKTOPFILE=${GAME_TITLE_NOSPACE}.desktop
+GAME_DIR=${GAME_DIR:="${GAME_TITLE_NOSPACE}-${ARCH}"}
+GAME_APPIMAGE=${GAME_APPIMAGE:="${GAME_TITLE_NOSPACE}-${ARCH}.AppImage"}
 
 LIBGME_VERSION=0.6.3-2
 LIBGME_DEB=libgme0_${LIBGME_VERSION}_${DEB_ARCH}.deb
@@ -95,7 +95,7 @@ then
 	cp appicon/appicon.png $GAME_APPDIR
 fi
 cd ${GAME_APPDIR}
-set_property love.desktop Name "${PROJECT_TITLE}"
+set_property love.desktop Name "${GAME_TITLE}"
 set_property love.desktop Comment "${DESCRIPTION}"
 set_property love.desktop MimeType ""
 set_property love.desktop Categories "Game;"
@@ -105,7 +105,7 @@ then
 	ln -sf appicon.png .DirIcon
 	set_property love.desktop Icon "appicon"
 fi
-mv love.desktop ${PROJECT_TITLE_NOSPACE}.desktop
+mv love.desktop ${GAME_TITLE_NOSPACE}.desktop
 cat $LOVE_EXE ../${GAME_ASSET} > love-fused
 mv love-fused $LOVE_EXE
 chmod +x $LOVE_EXE
