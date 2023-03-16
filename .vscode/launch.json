@@ -11,7 +11,7 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}", "--debug"]
+            "args": ["${workspaceFolder}/game", "--debug"]
         },
         {
             "name": "Debug Android",
@@ -20,7 +20,7 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}", "--debug", "--os", "Android"]
+            "args": ["${workspaceFolder}/game", "--debug", "--os", "Android"]
         },
         {
             "name": "Debug test content",
@@ -29,7 +29,7 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}", "--startpoint", "teststart"]
+            "args": ["${workspaceFolder}/game", "--startpoint", "teststart"]
         },
         {
             "name": "Debug start at...",
@@ -38,7 +38,7 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}", "--startpoint", "${input:startpoint}"],
+            "args": ["${workspaceFolder}/game", "--startpoint", "${input:startpoint}"],
             
         },
     ],

@@ -6,12 +6,14 @@ set -e
 LUA=${LUA:=luajit}
 GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
+GAME_DIR=${GAME_DIR:="$PWD"}
 
 if [ -e $GAME_ASSET ]
 then
 	rm $GAME_ASSET
 fi
 
+OUTDIR="$PWD"
+cd "$GAME_DIR"
 git describe --tags --always > version
-export LUA_PATH="${LUA_PATH};./?.lua;./libraries/?.lua"
-zip -r ${GAME_ASSET} version $(cat game-files.txt)
+zip -r "$OUTDIR/${GAME_ASSET}" *

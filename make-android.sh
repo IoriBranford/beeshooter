@@ -9,10 +9,10 @@ cp -r android/* love-android
 
 # package the apk with your own LÖVE game
 GAME_ASSET_PATH=love-android/app/src/embed/assets
-if [ -f game-files.txt ]
+if [ -d "$GAME_DIR" ]
 then
 	mkdir -p $GAME_ASSET_PATH
-	cp -r $(cat game-files.txt) $GAME_ASSET_PATH
+	cp -r "$GAME_DIR/*" $GAME_ASSET_PATH
 fi
 
 PROJECT=${PROJECT:=${PWD##*/}}
