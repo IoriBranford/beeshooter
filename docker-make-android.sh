@@ -2,9 +2,9 @@
 
 . ./make-vars.sh
 
-docker run --rm \
-	-v $(pwd):$(pwd) -w $(pwd) \
-	-v ./outputs:/love-android/app/build/outputs \
+docker run -i -t --rm \
+	-v $(pwd):/prj -w /prj \
+	-e GITHUB_WORKSPACE="/prj" \
 	-e KEYSTORE_ALIAS -e KEYSTORE_PASSWORD \
-	ioribranford/build-love-android:$LOVE_VERSION-full \
-	sh -c '. ./make-vars-android.sh && cd /love-android && ./build.sh'
+	-e ENV_SCRIPT="make-vars-android.sh" \
+	ioribranford/build-love-android:$LOVE_VERSION-ghaction
