@@ -10,6 +10,8 @@ jobs:
     name: Build for Android
     steps:
       - uses: actions/checkout@v3
+        with:
+          lfs: true
       - id: build
         uses: ioribranford/docker-build-love-android@11.4
         env:
