@@ -16,15 +16,13 @@ jobs:
         uses: ioribranford/docker-build-love-android@11.4
         env:
           ENV_SCRIPT: "make-vars-android.sh"
-          ICONS_DIR: "$GITHUB_WORKSPACE/android/app/src/main/res"
-          KEYSTORE_FILE: "$GITHUB_WORKSPACE/release.keystore"
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
       - uses: actions/upload-artifact@v3
         with:
           name: android-builds
           path: |
-            ${{ steps.build.outputs.apkNoRecord }}
-            ${{ steps.build.outputs.apkRecord }}
-            ${{ steps.build.outputs.bundleNoRecord }}
-            ${{ steps.build.outputs.bundleRecord }}
+            ${{ steps.build.outputs.apksNoRecord }}
+            ${{ steps.build.outputs.apksRecord }}
+            ${{ steps.build.outputs.bundlesNoRecord }}
+            ${{ steps.build.outputs.bundlesRecord }}
