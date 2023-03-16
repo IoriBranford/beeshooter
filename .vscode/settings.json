@@ -10,5 +10,6 @@
         "libraries/?/init.lua",
         "code/?.lua",
         "code/?/init.lua"
-    ]
+    ],
+    "Lua.runtime.version": "LuaJIT"
 }
