@@ -50,7 +50,7 @@ function Tick:Tick()
         end
         Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, anglefromplayer, circlingdist))
         anglefromplayer = anglefromplayer + circlingspeed
-        self.rotation = anglefromplayer + pi
+        Body.setRotation(self, anglefromplayer + pi)
         yield()
     end
 
@@ -77,7 +77,7 @@ function Tick:Tick()
         Body.setVelocity(self, self:getCirclingVelocity(player.x, player.y, nextanglefromplayer, circlingdist))
         anglefromplayer = nextanglefromplayer
         biteindex = nextbiteindex
-        self.rotation = anglefromplayer + pi
+        Body.setRotation(self, anglefromplayer + pi)
         yield()
         timer = timer + 1
     end

@@ -114,7 +114,7 @@ local flyPath = EnemyShip.flyPath
 function EnemyShip:PathPoint_Rotate()
     local pathpoint = self.pathpoint
     local delta = pathpoint and pathpoint.delta or 0
-    self.rotation = self.rotation + math.rad(delta)
+    Body.setRotation(self, self.rotation + math.rad(delta))
 end
 
 function EnemyShip:Lerp(key, v0, v1, t)
@@ -226,7 +226,7 @@ function EnemyShip:ShrinkingParticle()
     local speed = love.math.random() * 4 + 4
     local velx, vely = cos(angle)*speed, sin(angle)*speed
     Body.setVelocity(self, velx, vely)
-    self.rotation = angle
+    Body.setRotation(self, angle)
     local shrinkawayspeed = self.shrinkawayspeed or (1/15)
     self.scalexy = abs(self.scalexy or 1)
     while self.scalexy > 0 do
@@ -247,7 +247,7 @@ function EnemyShip:Faller()
         local accely = self.accely or (1/8)
         self.vely = self.vely + accely
         if self.vely ~= 0 or self.velx ~= 0 then
-            self.rotation = atan2(self.vely, self.velx)
+            Body.setRotation(self, atan2(self.vely, self.velx))
         end
         if tumbleaxis == "x" then
             self.scalex = cos(tumble)
@@ -344,7 +344,7 @@ function EnemyShip:enterBackground()
 end
 
 function EnemyShip:climbUpToFloor()
-    self.rotation = 0
+    Body.setRotation(self, 0)
     self.z = abs(self.z)
     self.collidable = true
     self.sprite.red = 1
