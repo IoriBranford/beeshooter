@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.2",
+  tiledversion = "1.10.0",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -60,7 +60,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -92,7 +92,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 4,
@@ -154,7 +154,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 6,
                 y = 8,
@@ -226,7 +226,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -258,7 +258,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -290,7 +290,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 12,
@@ -322,7 +322,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 6,
@@ -354,7 +354,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 6,
@@ -386,7 +386,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 8,
                 y = 6,
@@ -418,7 +418,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 0,
@@ -450,7 +450,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 6,
@@ -482,7 +482,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 0,
@@ -544,7 +544,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 6,
                 y = 2,
@@ -616,7 +616,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 2,
@@ -657,7 +657,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 0,
                 y = 2,
@@ -732,7 +732,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -784,7 +784,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -828,7 +828,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -880,7 +880,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 2,
                 y = 2,
@@ -992,7 +992,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 8,
@@ -1005,7 +1005,7 @@ return {
               {
                 id = 2,
                 name = "brain",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 10,
@@ -1085,7 +1085,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 4,
                 y = 6,
@@ -1407,7 +1407,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 11,
                 y = 2,
@@ -1431,7 +1431,66 @@ return {
           }
         },
         {
+          id = 1,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 11,
+                y = 2,
+                width = 4,
+                height = 4,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          }
+        },
+        {
           id = 2,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 11,
+                y = 2,
+                width = 4,
+                height = 4,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 2,
@@ -1440,6 +1499,37 @@ return {
             {
               tileid = 3,
               duration = 100
+            }
+          }
+        },
+        {
+          id = 3,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "topdown",
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "rectangle",
+                x = 11,
+                y = 2,
+                width = 4,
+                height = 4,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
             }
           }
         }
@@ -1492,7 +1582,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 6,
                 y = 10,
@@ -1614,7 +1704,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 8,
                 y = 8,
@@ -1658,7 +1748,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 8,
                 y = 8,
@@ -1707,7 +1797,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 8,
                 y = 8,
@@ -1748,7 +1838,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 8,
                 y = 8,
@@ -1933,7 +2023,7 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
+                type = "",
                 shape = "rectangle",
                 x = 25,
                 y = 40,
@@ -1946,7 +2036,7 @@ return {
               {
                 id = 2,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 50,
                 y = 100,
@@ -1959,7 +2049,7 @@ return {
               {
                 id = 3,
                 name = "mouth",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 80,
                 y = 65,
@@ -2018,6 +2108,7 @@ return {
           name = "Unnamed Set",
           class = "",
           tile = -1,
+          wangsettype = "mixed",
           properties = {},
           colors = {
             {
@@ -2335,7 +2426,7 @@ return {
         {
           id = 23,
           name = "KillSmall",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 8,
@@ -2351,7 +2442,7 @@ return {
         {
           id = 24,
           name = "KillMedium",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 8,
@@ -2367,7 +2458,7 @@ return {
         {
           id = 76,
           name = "AcidAntHole",
-          class = "AntHole",
+          type = "AntHole",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2386,7 +2477,7 @@ return {
         {
           id = 83,
           name = "DebrisFragment",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2416,7 +2507,7 @@ return {
         {
           id = 1,
           name = "AntBigCorpse",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2433,7 +2524,7 @@ return {
         {
           id = 2,
           name = "AntBigHead",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 24,
           y = -8,
@@ -2452,7 +2543,7 @@ return {
         {
           id = 3,
           name = "AntBigAbdomen",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = -24,
           y = -8,
@@ -2487,7 +2578,7 @@ return {
         {
           id = 4,
           name = "HoneyPotOpen",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2503,7 +2594,7 @@ return {
         {
           id = 75,
           name = "HoneyCellOpen",
-          class = "HoneyPotOpen",
+          type = "HoneyPotOpen",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2519,7 +2610,7 @@ return {
         {
           id = 46,
           name = "ReinforcedHoneyPotOpen",
-          class = "HoneyPotOpen",
+          type = "HoneyPotOpen",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2535,7 +2626,7 @@ return {
         {
           id = 5,
           name = "Powerup",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2549,7 +2640,7 @@ return {
         {
           id = 47,
           name = "PowerupLeft",
-          class = "Powerup",
+          type = "Powerup",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2565,7 +2656,7 @@ return {
         {
           id = 48,
           name = "PowerupRight",
-          class = "Powerup",
+          type = "Powerup",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2597,7 +2688,7 @@ return {
         {
           id = 6,
           name = "FlyBullet",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2613,7 +2704,7 @@ return {
         {
           id = 26,
           name = "AlienGunnerBullet",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2629,7 +2720,7 @@ return {
         {
           id = 27,
           name = "AcidBullet",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2645,7 +2736,7 @@ return {
         {
           id = 44,
           name = "AcidBulletFalling",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2661,7 +2752,7 @@ return {
         {
           id = 39,
           name = "AcidBulletBeetle",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2693,7 +2784,7 @@ return {
         {
           id = 8,
           name = "Ant",
-          class = "Ant",
+          type = "Ant",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2709,7 +2800,7 @@ return {
         {
           id = 25,
           name = "AntFromBigAnt",
-          class = "Ant",
+          type = "Ant",
           shape = "rectangle",
           x = -16,
           y = 0,
@@ -2726,7 +2817,7 @@ return {
         {
           id = 10,
           name = "AlienGunner",
-          class = "AlienGunner",
+          type = "AlienGunner",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2742,7 +2833,7 @@ return {
         {
           id = 53,
           name = "AlienGunnerBackground",
-          class = "AlienGunner",
+          type = "AlienGunner",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2760,7 +2851,7 @@ return {
         {
           id = 17,
           name = "AlienGunnerLeft",
-          class = "AlienGunner",
+          type = "AlienGunner",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2776,7 +2867,7 @@ return {
         {
           id = 11,
           name = "AlienPillager",
-          class = "AlienPillager",
+          type = "AlienPillager",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2792,7 +2883,7 @@ return {
         {
           id = 18,
           name = "AlienPillagerLeft",
-          class = "AlienPillager",
+          type = "AlienPillager",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2808,7 +2899,7 @@ return {
         {
           id = 13,
           name = "FlyBehind",
-          class = "Fly",
+          type = "Fly",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2826,7 +2917,7 @@ return {
         {
           id = 14,
           name = "InfiniteHoneyPotOpen",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2842,7 +2933,7 @@ return {
         {
           id = 16,
           name = "FlyBehindLeft",
-          class = "Fly",
+          type = "Fly",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2860,7 +2951,7 @@ return {
         {
           id = 28,
           name = "AcidAnt",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2876,7 +2967,7 @@ return {
         {
           id = 54,
           name = "AcidAntBehind",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2894,7 +2985,7 @@ return {
         {
           id = 52,
           name = "AcidAntLeft",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2910,7 +3001,7 @@ return {
         {
           id = 55,
           name = "AcidAntLeftBehind",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2928,7 +3019,7 @@ return {
         {
           id = 45,
           name = "AcidAntClimbingDown",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2944,7 +3035,7 @@ return {
         {
           id = 49,
           name = "AcidAntClimbingDownLeft",
-          class = "AcidAnt",
+          type = "AcidAnt",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2960,7 +3051,7 @@ return {
         {
           id = 43,
           name = "Tick",
-          class = "Tick",
+          type = "Tick",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2982,7 +3073,7 @@ return {
         {
           id = 50,
           name = "WaspEgg",
-          class = "WaspEgg",
+          type = "WaspEgg",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -2998,7 +3089,7 @@ return {
         {
           id = 51,
           name = "WaspHatch",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -3028,7 +3119,7 @@ return {
         {
           id = 77,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -3042,7 +3133,7 @@ return {
         {
           id = 78,
           name = "WaspBossSting",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = -16,
           y = 40,
@@ -3061,7 +3152,7 @@ return {
         {
           id = 79,
           name = "WaspBossAbdomen",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = -16,
           y = 16,
@@ -3080,7 +3171,7 @@ return {
         {
           id = 80,
           name = "WaspBossHead",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 32,
           y = 8,
@@ -3099,7 +3190,7 @@ return {
         {
           id = 81,
           name = "WaspBossThorax",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 8,
           y = 0,
@@ -3118,7 +3209,7 @@ return {
         {
           id = 82,
           name = "WaspBossWings",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = -16,
           y = -16,
@@ -3153,7 +3244,7 @@ return {
         {
           id = 56,
           name = "DecalBlood",
-          class = "Decal",
+          type = "Decal",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -3170,7 +3261,7 @@ return {
         {
           id = 74,
           name = "DecalAcid",
-          class = "Decal",
+          type = "Decal",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -3187,7 +3278,7 @@ return {
         {
           id = 72,
           name = "DecalBloodBigAnt1",
-          class = "Decal",
+          type = "Decal",
           shape = "rectangle",
           x = -8,
           y = 8,
@@ -3204,7 +3295,7 @@ return {
         {
           id = 73,
           name = "DecalBloodBigAnt2",
-          class = "Decal",
+          type = "Decal",
           shape = "rectangle",
           x = 8,
           y = 8,
