@@ -1,2 +1,2 @@
-type,script,nextcoroutines,team,hitdamageself,collidable,scriptdefeat,defeatsound
-Powerup,BeeShooter.Character.Item,Powerup,EnemyShot,1,TRUE,PowerupPickedUp,sounds/powerup.mp3
+type,script,nextcoroutines,bodytype,team,enemyteams,hitdamageself,collidable,scriptdefeat,defeatsound
+Powerup,BeeShooter.Character.Item,Powerup,TRUE,EnemyShot,PlayerShip,1,TRUE,PowerupPickedUp,sounds/powerup.mp3
