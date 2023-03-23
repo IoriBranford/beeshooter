@@ -10,6 +10,7 @@ local Database     = require "Data.Database"
 local Trigger      = require "BeeShooter.Trigger"
 local CharacterGroup        = require "BeeShooter.Character.Group"
 local Z                     = require "BeeShooter.Z"
+local HC                    = require "HC"
 local PlayerShip
 
 local t_sort = table.sort
@@ -227,6 +228,7 @@ function Stage.addCharacter(object)
     characterclass:cast(object)
     local character = characterclass.init(object)
     character:addToScene(scene)
+    Body.addToWorld(character)
     local team = teams[character.team]
     if team then
         team[#team+1] = character
@@ -257,6 +259,7 @@ function Stage.quit()
     stagespawntimeline = nil
     flyingspawntimeline = nil
     currentflyers = nil
+    HC.removeAll()
 end
 
 local function prune(chars)
@@ -374,10 +377,6 @@ function Stage.explodeTileLayer(layer, fragtype, centerx, centery, forcex, force
         local data = chunk.data
         local i = 0
         local cellwidth, cellheight = chunk.tilewidth, chunk.tileheight
-        local hitbox = {
-            x = -cellwidth/2, y = -cellheight/2,
-            width = cellwidth, height = cellheight
-        }
         for r = chunk.y, chunk.y + chunk.height - 1 do
             for c = chunk.x, chunk.x + chunk.width - 1 do
                 i = i + 1
@@ -397,7 +396,7 @@ function Stage.explodeTileLayer(layer, fragtype, centerx, centery, forcex, force
                         vely = vely,
                         tile = tile,
                         visible = true,
-                        hitbox = hitbox,
+                        bodytype = true,
                     })
                 end
             end
@@ -446,7 +445,7 @@ function Stage.draw(fixedfrac)
     love.graphics.setShader()
     if Config.drawbodies then
         for i = 1, #everyone do
-            everyone[i]:drawBody()
+            Body.draw(everyone[i])
         end
     end
 end

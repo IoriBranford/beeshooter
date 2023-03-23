@@ -1,39 +1,30 @@
-local newCircleShape = love.physics.newCircleShape
-local newRectangleShape = love.physics.newRectangleShape
-local newPolygonShape = love.physics.newPolygonShape
-local newChainShape = love.physics.newChainShape
-local newBody = love.physics.newBody
-local newFixture = love.physics.newFixture
-
+local HC = require "HC"
 local Body = {}
 
-local function addFixtureToBody(body, shapeobject, offsetx, offsety)
+local function newShape(self, shapeobject, x, y)
     local shapetype = shapeobject.shape
-    local shape
     if shapetype == "rectangle" then
+        local offsetx = shapeobject.x or 0
+        local offsety = shapeobject.y or 0
         local w = shapeobject.width or 1
         local h = shapeobject.height or 1
-        shape = newRectangleShape(
-            offsetx+w/2, offsety+h/2, w, h)
+        local shape = HC.rectangle(x + offsetx, y + offsety, w, h)
+        shape:setRotation(self.rotation or 0, x, y)
+        shape.character = self
+        return shape
     elseif shapetype == "ellipse" then
+        local offsetx = shapeobject.x or 0
+        local offsety = shapeobject.y or 0
         local w = shapeobject.width or 1
         local h = shapeobject.height or 1
-        shape = newCircleShape(
-            offsetx+w/2, offsety+h/2, (w + h) / 4)
-    elseif shapetype == "polygon" then
-        local points = shapeobject.points
-        if #points <= 16 then
-            shape = newPolygonShape(points)
-        else
-            shape = newChainShape(true, points)
-        end
-    elseif shapetype == "polyline" then
-        shape = newChainShape(false, shapeobject.points)
-    end
-    local fixture = shape and newFixture(body, shape)
-    if fixture then
-        fixture:setFriction(shapeobject.friction or 0)
-        fixture:setSensor(shapeobject.sensor or false)
+        local shape = HC.circle(x + offsetx + w/2, y + offsety + h/2, (w + h) / 4)
+        shape:setRotation(self.rotation or 0, x, y)
+        shape.character = self
+        return shape
+    -- elseif shapetype == "polygon" then
+    --     local points = shapeobject.points
+    --     shape = HC.polygon(table.unpack(points))
+    --     shape:move(x, y)
     end
 end
 
@@ -42,19 +33,15 @@ function Body.addToWorld(self, world)
     local body = self.body
     if not body then
         local bodytype = self.bodytype
-        body = bodytype and newBody(world, x, y, bodytype)
+        body = bodytype and {}
         self.body = body
     end
     if not body then
         return
     end
 
-    body:setFixedRotation(not self.bodyrotation)
-    body:setAngle(self.bodyrotation and self.rotation or 0)
-    body:setLinearVelocity(self.velx or 0, self.vely or 0)
-    body:setSleepingAllowed(not self.bodystayawake)
-    for i, fixture in pairs(body:getFixtures()) do
-        fixture:destroy()
+    for i = #body, 1, -1 do
+        body[i] = nil
     end
     local tile = self.tile
     if tile then
@@ -62,76 +49,77 @@ function Body.addToWorld(self, world)
         if shapes then
             for i = 1, #shapes do
                 local shapeobject = shapes[i]
-                if shapeobject.collidable then
-                    addFixtureToBody(body, shapeobject,
-                        shapeobject.x, shapeobject.y)
+                if shapeobject.collidable or shapeobject.name=="hitbox" then
+                    body[#body+1] = newShape(self, shapeobject, x, y)
                 end
             end
+        else
+            local tilerect = tile.rectangle
+            if not tilerect then
+                tilerect = {
+                    shape = 'rectangle',
+                    x = -tile.objectoriginx,
+                    y = -tile.objectoriginy,
+                    width = tile.width,
+                    height = tile.height
+                }
+                tile.rectangle = tilerect
+            end
+            body[#body+1] = newShape(self, tilerect, x, y)
         end
     elseif self.collidable then
-        addFixtureToBody(body, self, 0, 0)
+        body[#body+1] = newShape(self, self, 0, 0)
     end
-    body:setBullet(self.bodybullet or false)
-    body:setUserData(self)
 end
 
 function Body.setPosition(self, x, y)
     local body = self.body
     if body then
-        body:setPosition(x, y)
+        local dx, dy = x - self.x, y - self.y
+        for _, shape in ipairs(body) do
+            shape:move(dx, dy)
+        end
     end
     self.x, self.y = x, y
 end
 
 function Body.setVelocity(self, velx, vely)
-    local body = self.body
-    if body then
-        body:setLinearVelocity(velx, vely)
-    end
     self.velx, self.vely = velx, vely
 end
 
 function Body.setRotation(self, angle)
     local body = self.body
     if body then
-        body:setAngle(angle)
+        local x, y = self.x, self.y
+        for _, shape in ipairs(body) do
+            shape:setRotation(angle, x, y)
+        end
     end
     self.rotation = angle
 end
 
 function Body.getPosition(self)
-    local body = self.body
-    if body then
-        return body:getPosition(self)
-    end
     return self.x, self.y
 end
 
 function Body.getVelocity(self)
-    local body = self.body
-    if body then
-        return body:getLinearVelocity()
-    end
     return self.velx, self.vely
 end
 
 function Body.getRotation(self)
-    local body = self.body
-    if body then
-        return body:getAngle()
-    end
     return self.rotation
 end
 
 function Body.fixedupdateBody(self)
     local body = self.body
+    local velx, vely = self.velx, self.vely
     if body then
-        self.x, self.y = body:getPosition()
-        self.velx, self.vely = body:getLinearVelocity()
-    else
-        self.x = self.x + self.velx
-        self.y = self.y + self.vely
+        for _, shape in ipairs(body) do
+            shape:move(velx, vely)
+        end
     end
+    self.x = self.x + velx
+    self.y = self.y + vely
 end
 
 function Body.respondToCollisions(self, response)
@@ -139,18 +127,28 @@ function Body.respondToCollisions(self, response)
     if not body then
         return
     end
-    local contacts = body:getContacts()
-    for i = 1, #contacts do
-        local contact = contacts[i]
-        if contact:isTouching() then
-            local f1, f2 = contact:getFixtures()
-            local b1, b2 = f1:getBody(), f2:getBody()
-            if b2 == body then
-                b1, b2 = b2, b1
+    for _, shape in ipairs(body) do
+        local contacts = HC.collisions(shape)
+        for othershape in pairs(contacts) do
+            local othercharacter = othershape.character
+            if othercharacter then
+                response(self, othercharacter)
             end
-            local other = b2:getUserData()
-            if other then
-                response(self, other)
+        end
+    end
+end
+
+function Body.collidesWith(self, other)
+    local body = self.body
+    if not body then
+        return false
+    end
+    for _, shape in ipairs(body) do
+        local contacts = HC.collisions(shape)
+        for othershape in pairs(contacts) do
+            local othercharacter = othershape.character
+            if othercharacter == other then
+                return true
             end
         end
     end
@@ -159,13 +157,25 @@ end
 function Body.remove(self)
     local body = self.body
     if body then
-        for _, fixture in pairs(body:getFixtures()) do
-            fixture:destroy()
+        for i = #body, 1, -1 do
+            local shape = body[i]
+            HC.remove(shape)
+            shape.character = nil
+            body[i] = nil
         end
-        body:setUserData(nil)
-        body:destroy()
         self.body = nil
     end
+end
+
+function Body.draw(self)
+    local body = self.body
+    if not body then
+        return
+    end
+    for _, shape in ipairs(body) do
+        shape:draw('line')
+    end
+    love.graphics.circle("line", self.x, self.y, 1)
 end
 
 return Body

@@ -3,6 +3,7 @@ local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 local Movement = require "Component.Movement"
 local class = require "pl.class"
+local Body  = require "BeeShooter.Character.Body"
 local cos, sin = math.cos, math.sin
 local huge = math.huge
 local testrects = math.testrects
@@ -217,37 +218,7 @@ function Character:defeat()
 end
 
 function Character:testCollisionWith(other)
-    if other.collidable then
-        local hitbox = self.hitbox or DefaultHitbox
-        local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
-        local hitbox2 = other.hitbox or DefaultHitbox
-        local x2, y2, w2, h2 =
-            hitbox2.x + other.x,
-            hitbox2.y + other.y,
-            hitbox2.width, hitbox2.height
-        return testrects(x, y, w, h, x2, y2, w2, h2)
-    end
-end
-
-local function respondToCollisions(self, others, collide)
-    if not others or not self.collidable or not self:isSpriteOnScreen() then
-        return
-    end
-    local hitbox = self.hitbox or DefaultHitbox
-    local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
-    for i = 1, #others do
-        local other = others[i]
-        if other and other.collidable then
-            local hitbox2 = other.hitbox or DefaultHitbox
-            local x2, y2, w2, h2 =
-                hitbox2.x + other.x,
-                hitbox2.y + other.y,
-                hitbox2.width, hitbox2.height
-            if testrects(x, y, w, h, x2, y2, w2, h2) then
-                collide(self, other)
-            end
-        end
-    end
+    return other.collidable and Body.collidesWith(self, other)
 end
 
 function Character:addCoroutine(f)
@@ -311,15 +282,24 @@ local function fixedupdateDamage(self)
     if invincibletime > 0 then
         return
     end
-    local enemies = self.enemies
-    if not enemies then
-        return
-    end
     local damage = 0
     local hitdamageself = self.hitdamageself or 0
-    respondToCollisions(self, enemies, function(_, enemy)
-        damage = damage + enemy.hitdamageenemy + hitdamageself
-    end)
+    local myteam = self.team
+    local myenemy = self.enemyteams
+    if myteam and myenemy and self.collidable and self:isSpriteOnScreen() then
+        Body.respondToCollisions(self, function(_, enemy)
+            if not enemy.collidable then
+                return
+            end
+            local theirteam = enemy.team
+            local theirenemy = enemy.enemyteams
+            if not theirenemy or not theirenemy:find(myteam)
+            or not theirteam or not myenemy:find(theirteam) then
+                return
+            end
+            damage = damage + enemy.hitdamageenemy + hitdamageself
+        end)
+    end
     self.health = self.health - damage
     if self.health < 1 then
         self:defeat()
@@ -421,15 +401,7 @@ end
 
 function Character:disappear()
     Sprite.remove(self, "sprite")
-end
-
-function Character:drawBody()
-    if not self.collidable then
-        return
-    end
-    local hitbox = self.hitbox or DefaultHitbox
-    local x, y, w, h = self.x + hitbox.x, self.y + hitbox.y, hitbox.width, hitbox.height
-    love.graphics.rectangle("line", x, y, w, h)
+    Body.remove(self)
 end
 
 return Character
