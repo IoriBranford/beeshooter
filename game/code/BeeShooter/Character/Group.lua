@@ -1,4 +1,3 @@
-local class = require "pl.class"
 
 ---@class CharacterGroup
 local CharacterGroup = class()

@@ -1,4 +1,3 @@
-local class = require "pl.class"
 
 ---@class GuiObject
 ---@field gui Gui

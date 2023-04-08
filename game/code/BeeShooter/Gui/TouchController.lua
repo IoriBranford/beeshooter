@@ -1,4 +1,3 @@
-local class = require "pl.class"
 local Canvas    = require "System.Canvas"
 local Menu      = require "BeeShooter.Gui.Menu"
 local Controls  = require "System.Controls"

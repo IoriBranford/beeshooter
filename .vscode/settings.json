@@ -11,5 +11,8 @@
         "game/code/?.lua",
         "game/code/?/init.lua"
     ],
+    "Lua.diagnostics.globals": [
+        "class"
+    ],
     "Lua.runtime.version": "LuaJIT"
 }

@@ -1,4 +1,3 @@
-local class = require "pl.class"
 local EnemyShip = require "BeeShooter.Character.EnemyShip"
 local Audio     = require "System.Audio"
 local Body      = require "BeeShooter.Character.Body"

@@ -2,7 +2,6 @@ local Sprite = require "Component.Sprite"
 local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 local Movement = require "Component.Movement"
-local class = require "pl.class"
 local Body  = require "BeeShooter.Character.Body"
 local cos, sin = math.cos, math.sin
 local huge = math.huge

@@ -1,4 +1,3 @@
-local class = require "pl.class"
 local GuiObject = require "Gui.GuiObject"
 
 local Gauge = class(GuiObject)

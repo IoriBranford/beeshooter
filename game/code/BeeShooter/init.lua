@@ -1,3 +1,4 @@
+class = require "pl.class"
 local Tiled = require "Data.Tiled"
 local Config = require "System.Config"
 local Wallpaper             = require "System.Wallpaper"

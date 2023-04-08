@@ -1,4 +1,3 @@
-local class = require "pl.class"
 
 local Trigger = class()
 

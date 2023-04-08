@@ -1,4 +1,3 @@
-local class = require "pl.class"
 local Slider= require "Gui.Slider"
 local GameButton= require "BeeShooter.Gui.Button"
 

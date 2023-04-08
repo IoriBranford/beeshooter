@@ -1,4 +1,3 @@
-local class = require "pl.class"
 local Menu = require "BeeShooter.Gui.Menu"
 local HighScores= require "BeeShooter.HighScores"
 
