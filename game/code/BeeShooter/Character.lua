@@ -3,6 +3,7 @@ local Database = require "Data.Database"
 local Audio    = require "System.Audio"
 local Movement = require "Component.Movement"
 local Body  = require "BeeShooter.Character.Body"
+local Coroutines = require "BeeShooter.Character.Coroutines"
 local cos, sin = math.cos, math.sin
 local huge = math.huge
 local testrects = math.testrects
@@ -81,6 +82,9 @@ function Character:init()
     end
     self:setShooting(self.shootfunc, self.shootinterval, self.shootcount)
     Audio.play(self.spawnsound)
+    if self.nextcoroutines then
+        self:setNextCoroutines(self.nextcoroutines)
+    end
     return self
 end
 
@@ -221,59 +225,17 @@ function Character:testCollisionWith(other)
 end
 
 function Character:addCoroutine(f)
-    if type(f) ~= "function" then
-        f = self[f]
+    if not self.coroutines then
+        self.coroutines = Coroutines(self)
     end
-    self[#self+1] = type(f) == "function" and co_create(f)
-end
-
-function Character:startNextCoroutines()
-    local nextcoroutines = self.nextcoroutines
-    if nextcoroutines then
-        self.nextcoroutines = nil
-        self:clearCoroutines()
-        if type(nextcoroutines) == "string" then
-            for f in nextcoroutines:gmatch("%S+") do
-                self:addCoroutine(f)
-            end
-        elseif type(nextcoroutines) == "table" then
-            for _, f in ipairs(nextcoroutines) do
-                self:addCoroutine(f)
-            end
-        elseif type(nextcoroutines) == "function" then
-            self:addCoroutine(nextcoroutines)
-        end
-    end
-end
-
-function Character:runCoroutines()
-    for i, co in ipairs(self) do
-        if co then
-            local ok, err = co_resume(co, self)
-            if not ok then
-                error(debug.traceback(err))
-            elseif co_status(co) == "dead" then
-                self[i] = false
-            end
-        end
-    end
-    for i = #self, 1, -1 do
-        if self[i] == false then
-            self[i] = nil
-        else
-            break
-        end
-    end
+    self.coroutines:add(f)
 end
 
 function Character:setNextCoroutines(funcs)
-    self.nextcoroutines = funcs
-end
-
-function Character:clearCoroutines()
-    for i = #self, 1, -1 do
-        self[i] = nil
+    if not self.coroutines then
+        self.coroutines = Coroutines(self)
     end
+    self.coroutines:setNext(funcs)
 end
 
 local function fixedupdateDamage(self)
@@ -379,8 +341,11 @@ function Character:fixedupdate()
     fixedupdateDamage(self)
     fixedupdateShoot(self)
     fixedupdateLerp(self)
-    self:startNextCoroutines()
-    self:runCoroutines()
+    local coroutines = self.coroutines
+    if coroutines then
+        coroutines:startNext()
+        coroutines:run()
+    end
     if self.lifetime > 0 and self.age >= self.lifetime then
         self:markDisappear()
     end
