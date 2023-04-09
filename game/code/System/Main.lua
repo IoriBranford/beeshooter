@@ -1,3 +1,4 @@
+class = require "pl.class"
 require "Math"
 require "Coroutine"
 local Audio = require "System.Audio"
