@@ -48,6 +48,7 @@ function love.load(args)
 end
 
 return {
+    controls = require "BeeShooter.Controls",
     cli = [[
     --rotation                              (number default -1)	Screen orientation in degrees clockwise
     --startpoint (optional string)          Name of stage start point

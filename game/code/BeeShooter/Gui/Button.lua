@@ -1,7 +1,7 @@
 local Button    = require "Gui.Button"
 local Audio       = require "System.Audio"
 local GamePhase    = require "BeeShooter.GamePhase"
-local Controls     = require "System.Controls"
+local Controls     = require "BeeShooter.Controls"
 local Color        = require "Data.Color"
 local Config       = require "System.Config"
 

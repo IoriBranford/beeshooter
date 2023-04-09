@@ -109,6 +109,7 @@ function love.run()
     cute.go(love.arg.parseGameArguments(arg))
 
     Config.load(game.defaultconfig)
+    Controls = game.controls or Controls
     Controls.init()
 
     local cli = love.filesystem.getIdentity()..[[

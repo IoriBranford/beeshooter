@@ -1,4 +1,4 @@
-local Controls = require "System.Controls"
+local Controls = require "BeeShooter.Controls"
 local Body     = require "BeeShooter.Character.Body"
 local Database = require "Data.Database"
 local Audio    = require "System.Audio"

@@ -1,6 +1,6 @@
 local Canvas    = require "System.Canvas"
 local Menu      = require "BeeShooter.Gui.Menu"
-local Controls  = require "System.Controls"
+local Controls  = require "BeeShooter.Controls"
 local Config    = require "System.Config"
 
 ---@class TouchController:GameMenu
