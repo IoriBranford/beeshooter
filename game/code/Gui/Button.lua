@@ -1,6 +1,5 @@
 local Audio      = require "System.Audio"
 local GuiObject    = require "Gui.GuiObject"
-local class        = require "pl.class"
 local Platform     = require "System.Platform"
 
 ---@class Button:GuiObject

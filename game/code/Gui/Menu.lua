@@ -1,6 +1,5 @@
 local GuiObject = require "Gui.GuiObject"
 local Config    = require "System.Config"
-local class     = require "pl.class"
 local Canvas    = require "System.Canvas"
 local Platform  = require "System.Platform"
 

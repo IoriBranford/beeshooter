@@ -1,6 +1,5 @@
 local Audio     = require "System.Audio"
 local Button    = require "Gui.Button"
-local class     = require "pl.class"
 local Config    = require "System.Config"
 
 ---@class Slider:Button

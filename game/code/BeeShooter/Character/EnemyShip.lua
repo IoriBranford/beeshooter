@@ -8,8 +8,6 @@ local PlayerShip    = require "BeeShooter.Character.PlayerShip"
 local Database      = require "Data.Database"
 local Sprite        = require "Component.Sprite"
 local Character = require "BeeShooter.Character"
-local class     = require "pl.class"
-
 ---@class EnemyShip:Character
 local EnemyShip = class(Character)
 

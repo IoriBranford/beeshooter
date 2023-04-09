@@ -5,7 +5,6 @@ local Audio    = require "System.Audio"
 local Stage    = require "BeeShooter.Stage"
 local Movement = require "Component.Movement"
 local GamePhase= require "BeeShooter.GamePhase"
-local class    = require "pl.class"
 local Character = require "BeeShooter.Character"
 local HighScores= require "BeeShooter.HighScores"
 

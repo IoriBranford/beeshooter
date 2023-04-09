@@ -1,4 +1,3 @@
-local class        = require "pl.class"
 local Menu         = require "Gui.Menu"
 local GamePhase    = require "BeeShooter.GamePhase"
 local Stage        = require "BeeShooter.Stage"

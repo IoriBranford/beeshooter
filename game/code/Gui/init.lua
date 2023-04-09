@@ -1,8 +1,6 @@
 local Scene = require "System.Scene"
 local Tiled = require "Data.Tiled"
 local GuiObject = require "Gui.GuiObject"
-local class     = require "pl.class"
-
 ---@class Gui:GuiObject
 ---@field activemenu Menu
 ---@field menustack Menu[]
