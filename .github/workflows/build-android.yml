@@ -23,6 +23,4 @@ jobs:
           name: android-builds
           path: |
             ${{ steps.build.outputs.apksNoRecord }}
-            ${{ steps.build.outputs.apksRecord }}
             ${{ steps.build.outputs.bundlesNoRecord }}
-            ${{ steps.build.outputs.bundlesRecord }}
