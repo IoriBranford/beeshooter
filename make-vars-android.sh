@@ -9,4 +9,4 @@ export ICON="@mipmap/ic_launcher"
 export ICONS_DIR="$PWD/android/app/src/main/res"
 export KEYSTORE_FILE="$PWD/release.keystore"
 export VERSION_NAME="`git describe --tags --always`"
-export VERSION_CODE=7
+export VERSION_CODE=8
