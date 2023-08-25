@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="12" nextobjectid="84">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="12" nextobjectid="84">
  <editorsettings>
   <export target="prefabs_caravan.lua" format="lua"/>
  </editorsettings>
@@ -25,15 +25,17 @@
  <objectgroup id="6" name="defeatdrops">
   <object id="23" name="KillSmall" gid="66" x="0" y="8" width="32" height="32">
    <properties>
+    <property name="color" type="color" value="#ffc800c8"/>
     <property name="lifetime" value="animation"/>
    </properties>
   </object>
   <object id="24" name="KillMedium" gid="81" x="0" y="8" width="64" height="64">
    <properties>
+    <property name="color" type="color" value="#ffc800c8"/>
     <property name="lifetime" value="animation"/>
    </properties>
   </object>
-  <object id="76" name="AcidAntHole" class="AntHole" gid="12" x="0" y="0" width="16" height="32">
+  <object id="76" name="AcidAntHole" type="AntHole" gid="12" x="0" y="0" width="16" height="32">
    <properties>
     <property name="spawncount" type="float" value="60"/>
     <property name="spawninterval" type="float" value="6"/>
@@ -73,23 +75,23 @@
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
-  <object id="75" name="HoneyCellOpen" class="HoneyPotOpen" gid="12" x="0" y="0" width="16" height="32">
+  <object id="75" name="HoneyCellOpen" type="HoneyPotOpen" gid="12" x="0" y="0" width="16" height="32">
    <properties>
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
-  <object id="46" name="ReinforcedHoneyPotOpen" class="HoneyPotOpen" gid="9" x="0" y="0" width="16" height="32">
+  <object id="46" name="ReinforcedHoneyPotOpen" type="HoneyPotOpen" gid="9" x="0" y="0" width="16" height="32">
    <properties>
     <property name="z" type="float" value="1"/>
    </properties>
   </object>
   <object id="5" name="Powerup" gid="10" x="0" y="0" width="16" height="32"/>
-  <object id="47" name="PowerupLeft" class="Powerup" gid="10" x="0" y="0" width="16" height="32">
+  <object id="47" name="PowerupLeft" type="Powerup" gid="10" x="0" y="0" width="16" height="32">
    <properties>
     <property name="wavedir" type="float" value="-1"/>
    </properties>
   </object>
-  <object id="48" name="PowerupRight" class="Powerup" gid="10" x="0" y="0" width="16" height="32">
+  <object id="48" name="PowerupRight" type="Powerup" gid="10" x="0" y="0" width="16" height="32">
    <properties>
     <property name="wavedir" type="float" value="1"/>
    </properties>
@@ -130,7 +132,7 @@
    </properties>
   </object>
   <object id="10" template="enemies/AlienGunner.tx" name="AlienGunner" x="0" y="0"/>
-  <object id="53" template="enemies/AlienGunnerBackground.tx" class="AlienGunner" x="0" y="0">
+  <object id="53" template="enemies/AlienGunnerBackground.tx" type="AlienGunner" x="0" y="0">
    <properties>
     <property name="collidable" type="bool" value="false"/>
     <property name="color" type="color" value="#80ffffff"/>
@@ -210,27 +212,27 @@
   </object>
  </objectgroup>
  <objectgroup id="10" name="decals">
-  <object id="56" name="DecalBlood" class="Decal" gid="118" x="0" y="0" width="24" height="24">
+  <object id="56" name="DecalBlood" type="Decal" gid="118" x="0" y="0" width="24" height="24">
    <properties>
-    <property name="color" type="color" value="#40aa0000"/>
+    <property name="color" type="color" value="#40aa00aa"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="74" name="DecalAcid" class="Decal" gid="118" x="0" y="0" width="24" height="24">
+  <object id="74" name="DecalAcid" type="Decal" gid="118" x="0" y="0" width="24" height="24">
    <properties>
     <property name="color" type="color" value="#40555500"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="72" name="DecalBloodBigAnt1" class="Decal" gid="118" x="-8" y="8" width="24" height="24">
+  <object id="72" name="DecalBloodBigAnt1" type="Decal" gid="118" x="-8" y="8" width="24" height="24">
    <properties>
-    <property name="color" type="color" value="#40aa0000"/>
+    <property name="color" type="color" value="#40aa00aa"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>
-  <object id="73" name="DecalBloodBigAnt2" class="Decal" gid="118" x="8" y="8" width="24" height="24">
+  <object id="73" name="DecalBloodBigAnt2" type="Decal" gid="118" x="8" y="8" width="24" height="24">
    <properties>
-    <property name="color" type="color" value="#40aa0000"/>
+    <property name="color" type="color" value="#40aa00aa"/>
     <property name="z" type="float" value="0.25"/>
    </properties>
   </object>

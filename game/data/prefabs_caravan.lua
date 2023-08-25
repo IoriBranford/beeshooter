@@ -1,7 +1,7 @@
 return {
   version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.10.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -2436,6 +2436,7 @@ return {
           gid = 66,
           visible = true,
           properties = {
+            ["color"] = "#ffc800c8",
             ["lifetime"] = "animation"
           }
         },
@@ -2452,6 +2453,7 @@ return {
           gid = 81,
           visible = true,
           properties = {
+            ["color"] = "#ffc800c8",
             ["lifetime"] = "animation"
           }
         },
@@ -3254,7 +3256,7 @@ return {
           gid = 118,
           visible = true,
           properties = {
-            ["color"] = "#40aa0000",
+            ["color"] = "#40aa00aa",
             ["z"] = 0.25
           }
         },
@@ -3288,7 +3290,7 @@ return {
           gid = 118,
           visible = true,
           properties = {
-            ["color"] = "#40aa0000",
+            ["color"] = "#40aa00aa",
             ["z"] = 0.25
           }
         },
@@ -3305,7 +3307,7 @@ return {
           gid = 118,
           visible = true,
           properties = {
-            ["color"] = "#40aa0000",
+            ["color"] = "#40aa00aa",
             ["z"] = 0.25
           }
         }
