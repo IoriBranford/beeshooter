@@ -7,9 +7,7 @@
   </properties>
   <objectgroup draworder="index" id="3">
    <object id="2" name="hitbox" x="12" y="12" width="8" height="8">
-    <properties>
-     <property name="ishitbox" type="bool" value="true"/>
-    </properties>
+    <ellipse/>
    </object>
    <object id="3" name="sting" x="16" y="28">
     <point/>
@@ -29,9 +27,7 @@
     <point/>
    </object>
    <object id="2" name="hitbox" x="12" y="12" width="8" height="8">
-    <properties>
-     <property name="ishitbox" type="bool" value="true"/>
-    </properties>
+    <ellipse/>
    </object>
   </objectgroup>
   <animation>
@@ -42,9 +38,7 @@
  <tile id="2">
   <objectgroup draworder="index" id="2">
    <object id="1" name="hitbox" x="10" y="10" width="12" height="12">
-    <properties>
-     <property name="ishitbox" type="bool" value="true"/>
-    </properties>
+    <ellipse/>
    </object>
   </objectgroup>
  </tile>

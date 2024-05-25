@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -63,22 +63,20 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 8,
                 height = 8,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               },
               {
                 id = 3,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -122,7 +120,7 @@ return {
               {
                 id = 1,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -135,17 +133,15 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 8,
                 height = 8,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               }
             }
           },
@@ -179,17 +175,15 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 10,
                 y = 10,
                 width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               }
             }
           }
@@ -360,7 +354,7 @@ return {
         {
           id = 32,
           name = "JennyShotU",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = -6,
@@ -374,7 +368,7 @@ return {
         {
           id = 35,
           name = "JennyShotD",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 0,
           y = 6,
@@ -388,7 +382,7 @@ return {
         {
           id = 34,
           name = "JennyShotUL",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = -6,
@@ -402,7 +396,7 @@ return {
         {
           id = 37,
           name = "JennyShotUR",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = -6,
@@ -416,7 +410,7 @@ return {
         {
           id = 40,
           name = "JennyShotL",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = 0,
@@ -430,7 +424,7 @@ return {
         {
           id = 41,
           name = "JennyShotR",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = 0,
@@ -444,7 +438,7 @@ return {
         {
           id = 39,
           name = "JennyShotDL",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = 6,
@@ -458,7 +452,7 @@ return {
         {
           id = 38,
           name = "JennyShotDR",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = 6,
@@ -472,7 +466,7 @@ return {
         {
           id = 36,
           name = "JennyShotU1",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = -6,
           y = -6,
@@ -486,7 +480,7 @@ return {
         {
           id = 33,
           name = "JennyShotU2",
-          class = "JennyShot",
+          type = "JennyShot",
           shape = "rectangle",
           x = 6,
           y = -6,
@@ -518,7 +512,7 @@ return {
         {
           id = 30,
           name = "JennyKilled",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -534,7 +528,7 @@ return {
         {
           id = 1,
           name = "Jenny",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 0,
@@ -548,7 +542,7 @@ return {
         {
           id = 31,
           name = "JennyKilledSplat",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 8,

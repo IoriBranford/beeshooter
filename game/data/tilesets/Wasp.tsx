@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.9" tiledversion="1.9.2" name="Wasp" tilewidth="40" tileheight="30" tilecount="12" columns="6" objectalignment="center">
+<tileset version="1.10" tiledversion="1.10.2" name="Wasp" tilewidth="40" tileheight="30" tilecount="12" columns="6" objectalignment="center">
  <image source="Wasp.png" width="240" height="60"/>
  <tile id="0">
   <properties>
    <property name="name" value="fly"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+   <object id="1" name="hitbox" x="8" y="3" width="24" height="24">
+    <ellipse/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="100"/>
@@ -18,7 +20,9 @@
    <property name="name" value="hatch"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+   <object id="1" name="hitbox" x="8" y="8" width="24" height="12">
+    <ellipse/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="2" duration="100"/>
@@ -29,7 +33,9 @@
  </tile>
  <tile id="6">
   <objectgroup>
-   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+   <object id="1" name="hitbox" x="8" y="3" width="24" height="24">
+    <ellipse/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="6" duration="100"/>
@@ -38,7 +44,9 @@
  </tile>
  <tile id="8">
   <objectgroup>
-   <object id="1" name="hitbox" x="8" y="8" width="24" height="12"/>
+   <object id="1" name="hitbox" x="8" y="8" width="24" height="12">
+    <ellipse/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="8" duration="100"/>

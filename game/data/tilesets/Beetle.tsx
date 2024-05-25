@@ -6,7 +6,7 @@
    <property name="name" value="walk1"/>
   </properties>
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="100"/>
@@ -16,12 +16,12 @@
  </tile>
  <tile id="1">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="2">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="3">
@@ -29,7 +29,7 @@
    <property name="name" value="spray3"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="3" duration="100"/>
@@ -38,7 +38,7 @@
  </tile>
  <tile id="4">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="5">
@@ -46,7 +46,7 @@
    <property name="name" value="walk3"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="5" duration="100"/>
@@ -56,12 +56,12 @@
  </tile>
  <tile id="6">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="7">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="8">
@@ -69,7 +69,7 @@
    <property name="name" value="spray1"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="8" duration="100"/>
@@ -78,7 +78,7 @@
  </tile>
  <tile id="9">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="10">
@@ -86,7 +86,7 @@
    <property name="name" value="walk0"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="10" duration="100"/>
@@ -96,12 +96,12 @@
  </tile>
  <tile id="11">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="12">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="13">
@@ -109,7 +109,7 @@
    <property name="name" value="spray2"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="13" duration="100"/>
@@ -118,7 +118,7 @@
  </tile>
  <tile id="14">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="15">
@@ -126,7 +126,7 @@
    <property name="name" value="walk2"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="15" duration="100"/>
@@ -136,12 +136,12 @@
  </tile>
  <tile id="16">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="17">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
  <tile id="18">
@@ -149,7 +149,7 @@
    <property name="name" value="spray0"/>
   </properties>
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="18" duration="100"/>
@@ -158,7 +158,7 @@
  </tile>
  <tile id="19">
   <objectgroup>
-   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"/>
+   <object id="1" name="hitbox" x="12" y="12" width="24" height="24"><ellipse/></object>
   </objectgroup>
  </tile>
 </tileset>

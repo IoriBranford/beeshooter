@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -44,6 +44,7 @@ return {
           name = "Unnamed Set",
           class = "",
           tile = -1,
+          wangsettype = "mixed",
           properties = {},
           colors = {
             {
@@ -389,11 +390,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = 2,
                 y = 2,
-                width = 16,
+                width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
@@ -430,11 +431,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = 2,
                 y = 2,
-                width = 16,
+                width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
@@ -502,12 +503,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 6,
-                y = 8,
-                width = 48,
-                height = 24,
+                type = "",
+                shape = "ellipse",
+                x = 10,
+                y = 0,
+                width = 40,
+                height = 40,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -574,8 +575,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 4,
                 width = 16,
@@ -606,8 +607,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 4,
                 width = 16,
@@ -668,8 +669,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -700,8 +701,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -732,8 +733,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -764,11 +765,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = -2,
                 y = 6,
-                width = 16,
+                width = 20,
                 height = 20,
                 rotation = 0,
                 visible = true,
@@ -796,11 +797,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = -2,
                 y = 6,
-                width = 16,
+                width = 20,
                 height = 20,
                 rotation = 0,
                 visible = true,
@@ -828,8 +829,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
                 y = 6,
                 width = 8,
@@ -860,8 +861,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 0,
                 width = 8,
@@ -892,8 +893,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 6,
                 width = 8,
@@ -924,8 +925,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 0,
                 width = 8,
@@ -986,12 +987,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
-                y = 6,
+                y = 4,
                 width = 24,
-                height = 20,
+                height = 24,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1117,12 +1118,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 2,
-                y = 2,
-                width = 20,
-                height = 12,
+                type = "",
+                shape = "ellipse",
+                x = 4,
+                y = 0,
+                width = 16,
+                height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1169,12 +1170,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 2,
-                y = 2,
-                width = 20,
-                height = 12,
+                type = "",
+                shape = "ellipse",
+                x = 4,
+                y = 0,
+                width = 16,
+                height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1213,12 +1214,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 2,
-                y = 2,
-                width = 20,
-                height = 12,
+                type = "",
+                shape = "ellipse",
+                x = 4,
+                y = 0,
+                width = 16,
+                height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1265,12 +1266,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 2,
-                y = 2,
-                width = 20,
-                height = 12,
+                type = "",
+                shape = "ellipse",
+                x = 4,
+                y = 0,
+                width = 16,
+                height = 16,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1380,8 +1381,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1425,8 +1426,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1456,8 +1457,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1490,8 +1491,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1531,8 +1532,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1565,8 +1566,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1610,8 +1611,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1641,8 +1642,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1675,8 +1676,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1716,8 +1717,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1750,8 +1751,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1795,8 +1796,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1826,8 +1827,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1860,8 +1861,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1901,8 +1902,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1935,8 +1936,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -1980,8 +1981,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -2011,8 +2012,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -2045,8 +2046,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -2086,8 +2087,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 24,
@@ -2148,8 +2149,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 8,
                 width = 24,
@@ -2161,7 +2162,7 @@ return {
               {
                 id = 2,
                 name = "brain",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 10,
@@ -2244,12 +2245,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
-                y = 8,
+                y = 3,
                 width = 24,
-                height = 12,
+                height = 24,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -2288,8 +2289,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
                 y = 8,
                 width = 24,
@@ -2337,12 +2338,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
-                y = 8,
+                y = 3,
                 width = 24,
-                height = 12,
+                height = 24,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -2378,8 +2379,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
                 y = 8,
                 width = 24,
@@ -2458,8 +2459,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 6,
                 y = 10,
                 width = 12,
@@ -2513,6 +2514,35 @@ return {
       tiles = {
         {
           id = 0,
+          objectGroup = {
+            type = "objectgroup",
+            draworder = "index",
+            id = 2,
+            name = "",
+            class = "",
+            visible = true,
+            opacity = 1,
+            offsetx = 0,
+            offsety = 0,
+            parallaxx = 1,
+            parallaxy = 1,
+            properties = {},
+            objects = {
+              {
+                id = 1,
+                name = "hitbox",
+                type = "",
+                shape = "ellipse",
+                x = 0,
+                y = 0,
+                width = 8,
+                height = 8,
+                rotation = 0,
+                visible = true,
+                properties = {}
+              }
+            }
+          },
           animation = {
             {
               tileid = 0,
@@ -2577,12 +2607,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 25,
-                y = 40,
+                y = 25,
                 width = 50,
-                height = 25,
+                height = 50,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -2590,7 +2620,7 @@ return {
               {
                 id = 2,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 50,
                 y = 100,
@@ -2603,7 +2633,7 @@ return {
               {
                 id = 3,
                 name = "mouth",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 80,
                 y = 65,
@@ -2651,7 +2681,7 @@ return {
         {
           id = 44,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 0,
@@ -2669,7 +2699,7 @@ return {
         {
           id = 45,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 224,
@@ -2687,7 +2717,7 @@ return {
         {
           id = 46,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 448,
@@ -2705,7 +2735,7 @@ return {
         {
           id = 47,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 672,
@@ -2723,7 +2753,7 @@ return {
         {
           id = 48,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 896,
@@ -2741,7 +2771,7 @@ return {
         {
           id = 49,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 1120,
@@ -2759,7 +2789,7 @@ return {
         {
           id = 50,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 1344,
@@ -2777,7 +2807,7 @@ return {
         {
           id = 51,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 1568,
@@ -2795,7 +2825,7 @@ return {
         {
           id = 52,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 1792,
@@ -2813,7 +2843,7 @@ return {
         {
           id = 53,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 2016,
@@ -2831,7 +2861,7 @@ return {
         {
           id = 54,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 2240,
@@ -2849,7 +2879,7 @@ return {
         {
           id = 55,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 2464,
@@ -2867,7 +2897,7 @@ return {
         {
           id = 56,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 2688,
@@ -2885,7 +2915,7 @@ return {
         {
           id = 57,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 2912,
@@ -2903,7 +2933,7 @@ return {
         {
           id = 58,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 3136,
@@ -2921,7 +2951,7 @@ return {
         {
           id = 59,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 3360,
@@ -2939,7 +2969,7 @@ return {
         {
           id = 60,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 3584,
@@ -2957,7 +2987,7 @@ return {
         {
           id = 61,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 3808,
@@ -2975,7 +3005,7 @@ return {
         {
           id = 62,
           name = "",
-          class = "",
+          type = "",
           shape = "text",
           x = -256,
           y = 4032,
@@ -3598,7 +3628,7 @@ return {
                 {
                   id = 415,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3976,
@@ -3613,7 +3643,7 @@ return {
                 {
                   id = 416,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 4016,
@@ -3629,7 +3659,7 @@ return {
                 {
                   id = 417,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 272,
                   y = 4016,
@@ -3645,7 +3675,7 @@ return {
                 {
                   id = 418,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 280,
                   y = 4016,
@@ -3661,7 +3691,7 @@ return {
                 {
                   id = 419,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 296,
                   y = 4016,
@@ -3677,7 +3707,7 @@ return {
                 {
                   id = 420,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 288,
                   y = 4016,
@@ -3693,7 +3723,7 @@ return {
                 {
                   id = 427,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 4056,
@@ -3712,7 +3742,7 @@ return {
                 {
                   id = 428,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 4064,
@@ -3731,7 +3761,7 @@ return {
                 {
                   id = 429,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 280,
                   y = 4072,
@@ -3750,7 +3780,7 @@ return {
                 {
                   id = 430,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 288,
                   y = 4080,
@@ -3770,7 +3800,7 @@ return {
                 {
                   id = 431,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 296,
                   y = 4088,
@@ -3790,7 +3820,7 @@ return {
                 {
                   id = 1901,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 3976,
@@ -3805,7 +3835,7 @@ return {
                 {
                   id = 1902,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 3984,
@@ -3836,7 +3866,7 @@ return {
                 {
                   id = 422,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -16,
                   y = 3992,
@@ -3852,7 +3882,7 @@ return {
                 {
                   id = 425,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -24,
                   y = 3992,
@@ -3868,7 +3898,7 @@ return {
                 {
                   id = 424,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -40,
                   y = 3992,
@@ -3884,7 +3914,7 @@ return {
                 {
                   id = 421,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3992,
@@ -3900,7 +3930,7 @@ return {
                 {
                   id = 423,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -32,
                   y = 3992,
@@ -3916,7 +3946,7 @@ return {
                 {
                   id = 426,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 3960,
@@ -3931,7 +3961,7 @@ return {
                 {
                   id = 435,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 4032,
@@ -3950,7 +3980,7 @@ return {
                 {
                   id = 436,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 4024,
@@ -3969,7 +3999,7 @@ return {
                 {
                   id = 437,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -24,
                   y = 4016,
@@ -3988,7 +4018,7 @@ return {
                 {
                   id = 438,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -32,
                   y = 4024,
@@ -4006,7 +4036,7 @@ return {
                 {
                   id = 439,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -40,
                   y = 4032,
@@ -4041,7 +4071,7 @@ return {
                 {
                   id = 1,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 0,
                   y = 3912,
@@ -4064,7 +4094,7 @@ return {
                 {
                   id = 2,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3912,
@@ -4080,7 +4110,7 @@ return {
                 {
                   id = 38,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -168,
                   y = 3912,
@@ -4096,7 +4126,7 @@ return {
                 {
                   id = 28,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -88,
                   y = 3912,
@@ -4112,7 +4142,7 @@ return {
                 {
                   id = 3,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -24,
                   y = 3912,
@@ -4128,7 +4158,7 @@ return {
                 {
                   id = 36,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -184,
                   y = 3912,
@@ -4144,7 +4174,7 @@ return {
                 {
                   id = 27,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -104,
                   y = 3912,
@@ -4160,7 +4190,7 @@ return {
                 {
                   id = 4,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -40,
                   y = 3912,
@@ -4176,7 +4206,7 @@ return {
                 {
                   id = 34,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -200,
                   y = 3912,
@@ -4192,7 +4222,7 @@ return {
                 {
                   id = 26,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -120,
                   y = 3912,
@@ -4208,7 +4238,7 @@ return {
                 {
                   id = 5,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -56,
                   y = 3912,
@@ -4224,7 +4254,7 @@ return {
                 {
                   id = 32,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -216,
                   y = 3912,
@@ -4240,7 +4270,7 @@ return {
                 {
                   id = 25,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -136,
                   y = 3912,
@@ -4256,7 +4286,7 @@ return {
                 {
                   id = 6,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -72,
                   y = 3912,
@@ -4272,7 +4302,7 @@ return {
                 {
                   id = 30,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -232,
                   y = 3912,
@@ -4288,7 +4318,7 @@ return {
                 {
                   id = 24,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -152,
                   y = 3912,
@@ -4304,7 +4334,7 @@ return {
                 {
                   id = 11,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3904,
@@ -4335,7 +4365,7 @@ return {
                 {
                   id = 64,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3840,
@@ -4356,7 +4386,7 @@ return {
                 {
                   id = 65,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3840,
@@ -4372,7 +4402,7 @@ return {
                 {
                   id = 96,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3880,
@@ -4388,7 +4418,7 @@ return {
                 {
                   id = 66,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 424,
                   y = 3840,
@@ -4404,7 +4434,7 @@ return {
                 {
                   id = 95,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 424,
                   y = 3880,
@@ -4420,7 +4450,7 @@ return {
                 {
                   id = 67,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 344,
                   y = 3840,
@@ -4436,7 +4466,7 @@ return {
                 {
                   id = 94,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 344,
                   y = 3880,
@@ -4452,7 +4482,7 @@ return {
                 {
                   id = 68,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 280,
                   y = 3840,
@@ -4468,7 +4498,7 @@ return {
                 {
                   id = 93,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 280,
                   y = 3880,
@@ -4484,7 +4514,7 @@ return {
                 {
                   id = 69,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 440,
                   y = 3840,
@@ -4500,7 +4530,7 @@ return {
                 {
                   id = 92,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 440,
                   y = 3880,
@@ -4516,7 +4546,7 @@ return {
                 {
                   id = 70,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 360,
                   y = 3840,
@@ -4532,7 +4562,7 @@ return {
                 {
                   id = 91,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 360,
                   y = 3880,
@@ -4548,7 +4578,7 @@ return {
                 {
                   id = 71,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 296,
                   y = 3840,
@@ -4564,7 +4594,7 @@ return {
                 {
                   id = 90,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 296,
                   y = 3880,
@@ -4580,7 +4610,7 @@ return {
                 {
                   id = 72,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 456,
                   y = 3840,
@@ -4596,7 +4626,7 @@ return {
                 {
                   id = 89,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 456,
                   y = 3880,
@@ -4612,7 +4642,7 @@ return {
                 {
                   id = 73,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 376,
                   y = 3840,
@@ -4628,7 +4658,7 @@ return {
                 {
                   id = 88,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 376,
                   y = 3880,
@@ -4644,7 +4674,7 @@ return {
                 {
                   id = 74,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 312,
                   y = 3840,
@@ -4660,7 +4690,7 @@ return {
                 {
                   id = 87,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 312,
                   y = 3880,
@@ -4676,7 +4706,7 @@ return {
                 {
                   id = 75,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 472,
                   y = 3840,
@@ -4692,7 +4722,7 @@ return {
                 {
                   id = 86,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 472,
                   y = 3880,
@@ -4708,7 +4738,7 @@ return {
                 {
                   id = 76,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 392,
                   y = 3840,
@@ -4724,7 +4754,7 @@ return {
                 {
                   id = 85,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 392,
                   y = 3880,
@@ -4740,7 +4770,7 @@ return {
                 {
                   id = 77,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 328,
                   y = 3840,
@@ -4756,7 +4786,7 @@ return {
                 {
                   id = 84,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 328,
                   y = 3880,
@@ -4772,7 +4802,7 @@ return {
                 {
                   id = 78,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 488,
                   y = 3840,
@@ -4788,7 +4818,7 @@ return {
                 {
                   id = 83,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 488,
                   y = 3880,
@@ -4804,7 +4834,7 @@ return {
                 {
                   id = 79,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 408,
                   y = 3840,
@@ -4820,7 +4850,7 @@ return {
                 {
                   id = 82,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 408,
                   y = 3880,
@@ -4836,7 +4866,7 @@ return {
                 {
                   id = 80,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3832,
@@ -4851,7 +4881,7 @@ return {
                 {
                   id = 81,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 3880,
@@ -4890,7 +4920,7 @@ return {
                 {
                   id = 97,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 80,
                   y = 3752,
@@ -4906,7 +4936,7 @@ return {
                 {
                   id = 105,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 3768,
@@ -4937,7 +4967,7 @@ return {
                 {
                   id = 106,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3632,
@@ -4953,7 +4983,7 @@ return {
                 {
                   id = 124,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3608,
@@ -4969,7 +4999,7 @@ return {
                 {
                   id = 122,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3664,
@@ -4985,7 +5015,7 @@ return {
                 {
                   id = 126,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3640,
@@ -5001,7 +5031,7 @@ return {
                 {
                   id = 110,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3656,
@@ -5017,7 +5047,7 @@ return {
                 {
                   id = 121,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3688,
@@ -5033,7 +5063,7 @@ return {
                 {
                   id = 112,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3680,
@@ -5049,7 +5079,7 @@ return {
                 {
                   id = 120,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3712,
@@ -5065,7 +5095,7 @@ return {
                 {
                   id = 114,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3704,
@@ -5081,7 +5111,7 @@ return {
                 {
                   id = 119,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3736,
@@ -5097,7 +5127,7 @@ return {
                 {
                   id = 107,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3680,
@@ -5112,7 +5142,7 @@ return {
                 {
                   id = 108,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3632,
@@ -5129,7 +5159,7 @@ return {
                 {
                   id = 123,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3616,
@@ -5146,7 +5176,7 @@ return {
                 {
                   id = 118,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3672,
@@ -5163,7 +5193,7 @@ return {
                 {
                   id = 125,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3656,
@@ -5180,7 +5210,7 @@ return {
                 {
                   id = 109,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3648,
@@ -5197,7 +5227,7 @@ return {
                 {
                   id = 117,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3688,
@@ -5214,7 +5244,7 @@ return {
                 {
                   id = 111,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3664,
@@ -5231,7 +5261,7 @@ return {
                 {
                   id = 116,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3704,
@@ -5248,7 +5278,7 @@ return {
                 {
                   id = 113,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3680,
@@ -5265,7 +5295,7 @@ return {
                 {
                   id = 115,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3720,
@@ -5298,7 +5328,7 @@ return {
                 {
                   id = 130,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3640,
@@ -5314,7 +5344,7 @@ return {
                 {
                   id = 131,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3616,
@@ -5330,7 +5360,7 @@ return {
                 {
                   id = 132,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3672,
@@ -5346,7 +5376,7 @@ return {
                 {
                   id = 133,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3648,
@@ -5362,7 +5392,7 @@ return {
                 {
                   id = 134,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3664,
@@ -5378,7 +5408,7 @@ return {
                 {
                   id = 135,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3696,
@@ -5394,7 +5424,7 @@ return {
                 {
                   id = 136,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3688,
@@ -5410,7 +5440,7 @@ return {
                 {
                   id = 137,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3720,
@@ -5426,7 +5456,7 @@ return {
                 {
                   id = 138,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = -8,
                   y = 3712,
@@ -5442,7 +5472,7 @@ return {
                 {
                   id = 139,
                   name = "",
-                  class = "Ant",
+                  type = "Ant",
                   shape = "rectangle",
                   x = 264,
                   y = 3744,
@@ -5458,7 +5488,7 @@ return {
                 {
                   id = 140,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3616,
@@ -5473,7 +5503,7 @@ return {
                 {
                   id = 141,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3624,
@@ -5490,7 +5520,7 @@ return {
                 {
                   id = 142,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3608,
@@ -5507,7 +5537,7 @@ return {
                 {
                   id = 143,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3664,
@@ -5524,7 +5554,7 @@ return {
                 {
                   id = 144,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3648,
@@ -5541,7 +5571,7 @@ return {
                 {
                   id = 145,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3640,
@@ -5558,7 +5588,7 @@ return {
                 {
                   id = 146,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3680,
@@ -5575,7 +5605,7 @@ return {
                 {
                   id = 147,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3656,
@@ -5592,7 +5622,7 @@ return {
                 {
                   id = 148,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3696,
@@ -5609,7 +5639,7 @@ return {
                 {
                   id = 149,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 3672,
@@ -5626,7 +5656,7 @@ return {
                 {
                   id = 150,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 3712,
@@ -5659,7 +5689,7 @@ return {
                 {
                   id = 173,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 136,
                   y = 3568,
@@ -5675,7 +5705,7 @@ return {
                 {
                   id = 174,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -80,
                   y = 3576,
@@ -5706,7 +5736,7 @@ return {
                 {
                   id = 446,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3544,
@@ -5721,7 +5751,7 @@ return {
                 {
                   id = 447,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 64,
                   y = 3616,
@@ -5739,7 +5769,7 @@ return {
                 {
                   id = 448,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 192,
                   y = 3616,
@@ -5757,7 +5787,7 @@ return {
                 {
                   id = 449,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 0,
                   y = 3504,
@@ -5784,7 +5814,7 @@ return {
                 {
                   id = 450,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 3496,
@@ -5811,7 +5841,7 @@ return {
                 {
                   id = 451,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 88,
                   y = 3576,
@@ -5827,7 +5857,7 @@ return {
                 {
                   id = 452,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 3576,
@@ -5843,7 +5873,7 @@ return {
                 {
                   id = 453,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 3616,
@@ -5858,7 +5888,7 @@ return {
                 {
                   id = 454,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 3616,
@@ -5873,7 +5903,7 @@ return {
                 {
                   id = 455,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 3640,
@@ -5889,7 +5919,7 @@ return {
                 {
                   id = 456,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 3640,
@@ -5921,7 +5951,7 @@ return {
                 {
                   id = 100,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3448,
@@ -5936,7 +5966,7 @@ return {
                 {
                   id = 101,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 104,
                   y = 3496,
@@ -5954,7 +5984,7 @@ return {
                 {
                   id = 104,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 152,
                   y = 3496,
@@ -5972,7 +6002,7 @@ return {
                 {
                   id = 102,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 0,
                   y = 3408,
@@ -5997,7 +6027,7 @@ return {
                 {
                   id = 103,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 3400,
@@ -6022,7 +6052,7 @@ return {
                 {
                   id = 127,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 88,
                   y = 3480,
@@ -6038,7 +6068,7 @@ return {
                 {
                   id = 128,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 3480,
@@ -6054,7 +6084,7 @@ return {
                 {
                   id = 442,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3496,
@@ -6069,7 +6099,7 @@ return {
                 {
                   id = 443,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3496,
@@ -6100,7 +6130,7 @@ return {
                 {
                   id = 395,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3352,
@@ -6115,7 +6145,7 @@ return {
                 {
                   id = 396,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 40,
                   y = 3544,
@@ -6133,7 +6163,7 @@ return {
                 {
                   id = 397,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 216,
                   y = 3544,
@@ -6151,7 +6181,7 @@ return {
                 {
                   id = 398,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -32,
                   y = 3560,
@@ -6175,7 +6205,7 @@ return {
                 {
                   id = 399,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 288,
                   y = 3560,
@@ -6199,7 +6229,7 @@ return {
                 {
                   id = 400,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 3504,
@@ -6215,7 +6245,7 @@ return {
                 {
                   id = 401,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 3504,
@@ -6231,7 +6261,7 @@ return {
                 {
                   id = 440,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 3424,
@@ -6247,7 +6277,7 @@ return {
                 {
                   id = 441,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 3424,
@@ -6263,7 +6293,7 @@ return {
                 {
                   id = 444,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 3544,
@@ -6278,7 +6308,7 @@ return {
                 {
                   id = 445,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 3544,
@@ -6309,7 +6339,7 @@ return {
                 {
                   id = 228,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3168,
@@ -6324,7 +6354,7 @@ return {
                 {
                   id = 229,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 3144,
@@ -6357,7 +6387,7 @@ return {
                 {
                   id = 230,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = -16,
                   y = 3224,
@@ -6375,7 +6405,7 @@ return {
                 {
                   id = 232,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = -16,
                   y = 3232,
@@ -6390,7 +6420,7 @@ return {
                 {
                   id = 233,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 3192,
@@ -6405,7 +6435,7 @@ return {
                 {
                   id = 234,
                   name = "turnX",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3208,
@@ -6420,7 +6450,7 @@ return {
                 {
                   id = 235,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 3232,
@@ -6436,7 +6466,7 @@ return {
                 {
                   id = 279,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3176,
@@ -6468,7 +6498,7 @@ return {
                 {
                   id = 1943,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 192,
                   y = 3184,
@@ -6484,7 +6514,7 @@ return {
                 {
                   id = 1944,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 3192,
@@ -6515,7 +6545,7 @@ return {
                 {
                   id = 385,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 3064,
@@ -6530,7 +6560,7 @@ return {
                 {
                   id = 386,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 3104,
@@ -6559,7 +6589,7 @@ return {
                 {
                   id = 387,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 272,
                   y = 3192,
@@ -6577,7 +6607,7 @@ return {
                 {
                   id = 388,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 272,
                   y = 3192,
@@ -6592,7 +6622,7 @@ return {
                 {
                   id = 389,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 3096,
@@ -6607,7 +6637,7 @@ return {
                 {
                   id = 390,
                   name = "turnX",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3120,
@@ -6622,7 +6652,7 @@ return {
                 {
                   id = 391,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 3088,
@@ -6638,7 +6668,7 @@ return {
                 {
                   id = 392,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3160,
@@ -6670,7 +6700,7 @@ return {
                 {
                   id = 1945,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 64,
                   y = 3056,
@@ -6686,7 +6716,7 @@ return {
                 {
                   id = 1946,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 3064,
@@ -6717,7 +6747,7 @@ return {
                 {
                   id = 152,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 2832,
@@ -6752,7 +6782,7 @@ return {
                 {
                   id = 153,
                   name = "",
-                  class = "Fly",
+                  type = "Fly",
                   shape = "rectangle",
                   x = 272,
                   y = 2832,
@@ -6770,7 +6800,7 @@ return {
                 {
                   id = 154,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 280,
                   y = 2936,
@@ -6786,7 +6816,7 @@ return {
                 {
                   id = 155,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 2912,
@@ -6802,7 +6832,7 @@ return {
                 {
                   id = 157,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 2984,
@@ -6818,7 +6848,7 @@ return {
                 {
                   id = 165,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 296,
                   y = 2952,
@@ -6834,7 +6864,7 @@ return {
                 {
                   id = 166,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 288,
                   y = 2952,
@@ -6850,7 +6880,7 @@ return {
                 {
                   id = 167,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 296,
                   y = 2952,
@@ -6866,7 +6896,7 @@ return {
                 {
                   id = 172,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 2832,
@@ -6882,7 +6912,7 @@ return {
                 {
                   id = 159,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 2984,
@@ -6898,7 +6928,7 @@ return {
                 {
                   id = 171,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 2832,
@@ -6914,7 +6944,7 @@ return {
                 {
                   id = 160,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 2944,
@@ -6930,7 +6960,7 @@ return {
                 {
                   id = 161,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 2912,
@@ -6946,7 +6976,7 @@ return {
                 {
                   id = 169,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 2944,
@@ -6962,7 +6992,7 @@ return {
                 {
                   id = 162,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 2856,
@@ -6978,7 +7008,7 @@ return {
                 {
                   id = 168,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 2856,
@@ -6994,7 +7024,7 @@ return {
                 {
                   id = 164,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 272,
                   y = 2832,
@@ -7010,7 +7040,7 @@ return {
                 {
                   id = 476,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -24,
                   y = 2816,
@@ -7044,7 +7074,7 @@ return {
                 {
                   id = 276,
                   name = "",
-                  class = "AntBig",
+                  type = "AntBig",
                   shape = "rectangle",
                   x = 64,
                   y = 2928,
@@ -7064,7 +7094,7 @@ return {
                 {
                   id = 277,
                   name = "",
-                  class = "AntBig",
+                  type = "AntBig",
                   shape = "rectangle",
                   x = 192,
                   y = 2928,
@@ -7084,7 +7114,7 @@ return {
                 {
                   id = 278,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -88,
                   y = 3472,
@@ -7099,7 +7129,7 @@ return {
                 {
                   id = 177,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 208,
                   y = 2936,
@@ -7138,7 +7168,7 @@ return {
                 {
                   id = 244,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 48,
                   y = 2936,
@@ -7177,7 +7207,7 @@ return {
                 {
                   id = 241,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3152,
@@ -7192,7 +7222,7 @@ return {
                 {
                   id = 413,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3280,
@@ -7207,7 +7237,7 @@ return {
                 {
                   id = 247,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3152,
@@ -7222,7 +7252,7 @@ return {
                 {
                   id = 412,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3280,
@@ -7237,7 +7267,7 @@ return {
                 {
                   id = 243,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 3024,
@@ -7252,7 +7282,7 @@ return {
                 {
                   id = 246,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 3024,
@@ -7267,7 +7297,7 @@ return {
                 {
                   id = 242,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3088,
@@ -7282,7 +7312,7 @@ return {
                 {
                   id = 414,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 3216,
@@ -7297,7 +7327,7 @@ return {
                 {
                   id = 245,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3088,
@@ -7312,7 +7342,7 @@ return {
                 {
                   id = 411,
                   name = "toFront",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 3216,
@@ -7327,7 +7357,7 @@ return {
                 {
                   id = 546,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 3312,
@@ -7343,7 +7373,7 @@ return {
                 {
                   id = 547,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 3312,
@@ -7378,7 +7408,7 @@ return {
                 {
                   id = 457,
                   name = "",
-                  class = "AntBig",
+                  type = "AntBig",
                   shape = "rectangle",
                   x = 216,
                   y = 2704,
@@ -7398,7 +7428,7 @@ return {
                 {
                   id = 458,
                   name = "",
-                  class = "AntBig",
+                  type = "AntBig",
                   shape = "rectangle",
                   x = 40,
                   y = 2704,
@@ -7418,7 +7448,7 @@ return {
                 {
                   id = 459,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 2944,
@@ -7433,7 +7463,7 @@ return {
                 {
                   id = 472,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 28,
                   y = 2736,
@@ -7451,7 +7481,7 @@ return {
                 {
                   id = 475,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 212,
                   y = 2736,
@@ -7469,7 +7499,7 @@ return {
                 {
                   id = 473,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 36,
                   y = 2880,
@@ -7484,7 +7514,7 @@ return {
                 {
                   id = 474,
                   name = "toBack",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 220,
                   y = 2880,
@@ -7499,7 +7529,7 @@ return {
                 {
                   id = 548,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 12,
                   y = 2904,
@@ -7515,7 +7545,7 @@ return {
                 {
                   id = 549,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 244,
                   y = 2904,
@@ -7547,7 +7577,7 @@ return {
                 {
                   id = 280,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 2504,
@@ -7562,7 +7592,7 @@ return {
                 {
                   id = 281,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 112,
                   y = 2496,
@@ -7578,7 +7608,7 @@ return {
                 {
                   id = 282,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 112,
                   y = 2496,
@@ -7596,7 +7626,7 @@ return {
                 {
                   id = 283,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 2536,
@@ -7612,7 +7642,7 @@ return {
                 {
                   id = 356,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 2472,
@@ -7644,7 +7674,7 @@ return {
                 {
                   id = 284,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -80,
                   y = 2448,
@@ -7659,7 +7689,7 @@ return {
                 {
                   id = 293,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 48,
                   y = 2440,
@@ -7675,7 +7705,7 @@ return {
                 {
                   id = 296,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 208,
                   y = 2440,
@@ -7691,7 +7721,7 @@ return {
                 {
                   id = 292,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 48,
                   y = 2440,
@@ -7709,7 +7739,7 @@ return {
                 {
                   id = 295,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = 2440,
@@ -7727,7 +7757,7 @@ return {
                 {
                   id = 291,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 2480,
@@ -7743,7 +7773,7 @@ return {
                 {
                   id = 294,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 2480,
@@ -7775,7 +7805,7 @@ return {
                 {
                   id = 298,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 2432,
@@ -7790,7 +7820,7 @@ return {
                 {
                   id = 338,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = -8,
                   y = 2496,
@@ -7806,7 +7836,7 @@ return {
                 {
                   id = 343,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 264,
                   y = 2496,
@@ -7822,7 +7852,7 @@ return {
                 {
                   id = 339,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = -16,
                   y = 2512,
@@ -7838,7 +7868,7 @@ return {
                 {
                   id = 342,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 272,
                   y = 2512,
@@ -7854,7 +7884,7 @@ return {
                 {
                   id = 340,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = -24,
                   y = 2528,
@@ -7870,7 +7900,7 @@ return {
                 {
                   id = 341,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 280,
                   y = 2528,
@@ -7886,7 +7916,7 @@ return {
                 {
                   id = 344,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -24,
                   y = 2528,
@@ -7905,7 +7935,7 @@ return {
                 {
                   id = 345,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 2512,
@@ -7924,7 +7954,7 @@ return {
                 {
                   id = 346,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 2496,
@@ -7943,7 +7973,7 @@ return {
                 {
                   id = 347,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 2496,
@@ -7962,7 +7992,7 @@ return {
                 {
                   id = 348,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 2512,
@@ -7981,7 +8011,7 @@ return {
                 {
                   id = 349,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 2528,
@@ -8000,7 +8030,7 @@ return {
                 {
                   id = 350,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 2480,
@@ -8016,7 +8046,7 @@ return {
                 {
                   id = 351,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 2448,
@@ -8032,7 +8062,7 @@ return {
                 {
                   id = 352,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 2464,
@@ -8048,7 +8078,7 @@ return {
                 {
                   id = 353,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 2448,
@@ -8064,7 +8094,7 @@ return {
                 {
                   id = 354,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 2464,
@@ -8080,7 +8110,7 @@ return {
                 {
                   id = 355,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 2480,
@@ -8112,7 +8142,7 @@ return {
                 {
                   id = 533,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 120,
                   y = 2368,
@@ -8126,7 +8156,7 @@ return {
                 {
                   id = 542,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 120,
                   y = 2312,
@@ -8140,7 +8170,7 @@ return {
                 {
                   id = 537,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 112,
                   y = 2336,
@@ -8154,7 +8184,7 @@ return {
                 {
                   id = 535,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 144,
                   y = 2360,
@@ -8168,7 +8198,7 @@ return {
                 {
                   id = 544,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 136,
                   y = 2320,
@@ -8182,7 +8212,7 @@ return {
                 {
                   id = 539,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 144,
                   y = 2336,
@@ -8196,7 +8226,7 @@ return {
                 {
                   id = 534,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 104,
                   y = 2352,
@@ -8210,7 +8240,7 @@ return {
                 {
                   id = 541,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 88,
                   y = 2304,
@@ -8224,7 +8254,7 @@ return {
                 {
                   id = 538,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 96,
                   y = 2320,
@@ -8238,7 +8268,7 @@ return {
                 {
                   id = 536,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 152,
                   y = 2344,
@@ -8252,7 +8282,7 @@ return {
                 {
                   id = 543,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 168,
                   y = 2304,
@@ -8266,7 +8296,7 @@ return {
                 {
                   id = 540,
                   name = "",
-                  class = "AlienPillager",
+                  type = "AlienPillager",
                   shape = "rectangle",
                   x = 160,
                   y = 2320,
@@ -8280,7 +8310,7 @@ return {
                 {
                   id = 545,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 2376,
@@ -8311,7 +8341,7 @@ return {
                 {
                   id = 481,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 2360,
@@ -8326,7 +8356,7 @@ return {
                 {
                   id = 511,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 80,
                   y = 2352,
@@ -8342,7 +8372,7 @@ return {
                 {
                   id = 516,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 176,
                   y = 2352,
@@ -8358,7 +8388,7 @@ return {
                 {
                   id = 512,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 88,
                   y = 2352,
@@ -8377,7 +8407,7 @@ return {
                 {
                   id = 515,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 152,
                   y = 2352,
@@ -8396,7 +8426,7 @@ return {
                 {
                   id = 513,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 2368,
@@ -8412,7 +8442,7 @@ return {
                 {
                   id = 514,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 2368,
@@ -8444,7 +8474,7 @@ return {
                 {
                   id = 527,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = -16,
                   y = 2392,
@@ -8460,7 +8490,7 @@ return {
                 {
                   id = 528,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 272,
                   y = 2392,
@@ -8476,7 +8506,7 @@ return {
                 {
                   id = 529,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 2392,
@@ -8502,7 +8532,7 @@ return {
                 {
                   id = 530,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 2392,
@@ -8528,7 +8558,7 @@ return {
                 {
                   id = 531,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 2392,
@@ -8544,7 +8574,7 @@ return {
                 {
                   id = 532,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 2392,
@@ -8576,7 +8606,7 @@ return {
                 {
                   id = 500,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 2264,
@@ -8591,7 +8621,7 @@ return {
                 {
                   id = 501,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 80,
                   y = 2256,
@@ -8607,7 +8637,7 @@ return {
                 {
                   id = 520,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 72,
                   y = 2240,
@@ -8623,7 +8653,7 @@ return {
                 {
                   id = 518,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 184,
                   y = 2248,
@@ -8639,7 +8669,7 @@ return {
                 {
                   id = 523,
                   name = "",
-                  class = "AlienGunner",
+                  type = "AlienGunner",
                   shape = "rectangle",
                   x = 192,
                   y = 2232,
@@ -8655,7 +8685,7 @@ return {
                 {
                   id = 502,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 96,
                   y = 2248,
@@ -8672,7 +8702,7 @@ return {
                 {
                   id = 521,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 88,
                   y = 2232,
@@ -8689,7 +8719,7 @@ return {
                 {
                   id = 519,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 160,
                   y = 2248,
@@ -8706,7 +8736,7 @@ return {
                 {
                   id = 524,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 168,
                   y = 2232,
@@ -8723,7 +8753,7 @@ return {
                 {
                   id = 503,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 2288,
@@ -8739,7 +8769,7 @@ return {
                 {
                   id = 522,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 2272,
@@ -8755,7 +8785,7 @@ return {
                 {
                   id = 517,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 2288,
@@ -8771,7 +8801,7 @@ return {
                 {
                   id = 525,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 2272,
@@ -8803,7 +8833,7 @@ return {
                 {
                   id = 477,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 2272,
@@ -8818,7 +8848,7 @@ return {
                 {
                   id = 478,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 136,
                   y = 2256,
@@ -8834,7 +8864,7 @@ return {
                 {
                   id = 480,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = 2264,
@@ -8866,7 +8896,7 @@ return {
                 {
                   id = 373,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 2184,
@@ -8881,7 +8911,7 @@ return {
                 {
                   id = 374,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = 2160,
@@ -8897,7 +8927,7 @@ return {
                 {
                   id = 375,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 144,
                   y = 2168,
@@ -8913,7 +8943,7 @@ return {
                 {
                   id = 376,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 2176,
@@ -8945,7 +8975,7 @@ return {
                 {
                   id = 357,
                   name = "",
-                  class = "AlienMind",
+                  type = "AlienMind",
                   shape = "rectangle",
                   x = 128,
                   y = 1984,
@@ -8967,7 +8997,7 @@ return {
                 {
                   id = 358,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 2016,
@@ -8982,7 +9012,7 @@ return {
                 {
                   id = 363,
                   name = "center",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = 2040,
@@ -8999,7 +9029,7 @@ return {
                 {
                   id = 365,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 96,
                   y = 2096,
@@ -9024,7 +9054,7 @@ return {
                 {
                   id = 366,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 160,
                   y = 2096,
@@ -9048,7 +9078,7 @@ return {
                 {
                   id = 367,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -8,
                   y = 2072,
@@ -9068,7 +9098,7 @@ return {
                 {
                   id = 369,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 256,
                   y = 2048,
@@ -9088,7 +9118,7 @@ return {
                 {
                   id = 371,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 2256,
@@ -9115,7 +9145,7 @@ return {
                 {
                   id = 372,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 208,
                   y = 2256,
@@ -9142,7 +9172,7 @@ return {
                 {
                   id = 377,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 2072,
@@ -9158,7 +9188,7 @@ return {
                 {
                   id = 378,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 2072,
@@ -9174,7 +9204,7 @@ return {
                 {
                   id = 379,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 2144,
@@ -9190,7 +9220,7 @@ return {
                 {
                   id = 380,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 2144,
@@ -9206,7 +9236,7 @@ return {
                 {
                   id = 381,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 2192,
@@ -9221,7 +9251,7 @@ return {
                 {
                   id = 382,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 2192,
@@ -9236,7 +9266,7 @@ return {
                 {
                   id = 383,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 2224,
@@ -9252,7 +9282,7 @@ return {
                 {
                   id = 384,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 2224,
@@ -9268,7 +9298,7 @@ return {
                 {
                   id = 393,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 2040,
@@ -9284,7 +9314,7 @@ return {
                 {
                   id = 394,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 2040,
@@ -9316,7 +9346,7 @@ return {
                 {
                   id = 887,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -24,
                   y = 2008,
@@ -9347,7 +9377,7 @@ return {
                 {
                   id = 869,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 216,
                   y = 1904,
@@ -9363,7 +9393,7 @@ return {
                 {
                   id = 870,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 184,
                   y = 1928,
@@ -9379,7 +9409,7 @@ return {
                 {
                   id = 871,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 200,
                   y = 1920,
@@ -9395,7 +9425,7 @@ return {
                 {
                   id = 872,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 168,
                   y = 1928,
@@ -9411,7 +9441,7 @@ return {
                 {
                   id = 873,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 152,
                   y = 1920,
@@ -9427,7 +9457,7 @@ return {
                 {
                   id = 886,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 1856,
@@ -9442,7 +9472,7 @@ return {
                 {
                   id = 1030,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 152,
                   y = 1920,
@@ -9460,7 +9490,7 @@ return {
                 {
                   id = 1032,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 168,
                   y = 1928,
@@ -9478,7 +9508,7 @@ return {
                 {
                   id = 1034,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 184,
                   y = 1928,
@@ -9496,7 +9526,7 @@ return {
                 {
                   id = 1036,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 1920,
@@ -9514,7 +9544,7 @@ return {
                 {
                   id = 1038,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 216,
                   y = 1904,
@@ -9532,7 +9562,7 @@ return {
                 {
                   id = 1031,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1880,
@@ -9547,7 +9577,7 @@ return {
                 {
                   id = 1033,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 1888,
@@ -9562,7 +9592,7 @@ return {
                 {
                   id = 1035,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 1888,
@@ -9577,7 +9607,7 @@ return {
                 {
                   id = 1037,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1880,
@@ -9592,7 +9622,7 @@ return {
                 {
                   id = 1039,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 1864,
@@ -9623,7 +9653,7 @@ return {
                 {
                   id = 885,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 1840,
@@ -9638,7 +9668,7 @@ return {
                 {
                   id = 1046,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 104,
                   y = 1904,
@@ -9654,7 +9684,7 @@ return {
                 {
                   id = 1047,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 72,
                   y = 1904,
@@ -9670,7 +9700,7 @@ return {
                 {
                   id = 1048,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 88,
                   y = 1912,
@@ -9686,7 +9716,7 @@ return {
                 {
                   id = 1049,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 56,
                   y = 1896,
@@ -9702,7 +9732,7 @@ return {
                 {
                   id = 1050,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 40,
                   y = 1888,
@@ -9718,7 +9748,7 @@ return {
                 {
                   id = 1051,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 1888,
@@ -9736,7 +9766,7 @@ return {
                 {
                   id = 1052,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 1896,
@@ -9754,7 +9784,7 @@ return {
                 {
                   id = 1053,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 72,
                   y = 1904,
@@ -9772,7 +9802,7 @@ return {
                 {
                   id = 1054,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 88,
                   y = 1912,
@@ -9790,7 +9820,7 @@ return {
                 {
                   id = 1055,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 104,
                   y = 1904,
@@ -9808,7 +9838,7 @@ return {
                 {
                   id = 1056,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 1848,
@@ -9823,7 +9853,7 @@ return {
                 {
                   id = 1057,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1856,
@@ -9838,7 +9868,7 @@ return {
                 {
                   id = 1058,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 1864,
@@ -9853,7 +9883,7 @@ return {
                 {
                   id = 1059,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 88,
                   y = 1872,
@@ -9868,7 +9898,7 @@ return {
                 {
                   id = 1060,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1864,
@@ -9899,7 +9929,7 @@ return {
                 {
                   id = 952,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 232,
                   y = 1816,
@@ -9915,7 +9945,7 @@ return {
                 {
                   id = 964,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1760,
@@ -9930,7 +9960,7 @@ return {
                 {
                   id = 1001,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 264,
                   y = 1784,
@@ -9948,7 +9978,7 @@ return {
                 {
                   id = 1011,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 1776,
@@ -9979,7 +10009,7 @@ return {
                 {
                   id = 1101,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 200,
                   y = 1816,
@@ -9995,7 +10025,7 @@ return {
                 {
                   id = 1102,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1752,
@@ -10010,7 +10040,7 @@ return {
                 {
                   id = 1103,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 1784,
@@ -10028,7 +10058,7 @@ return {
                 {
                   id = 1104,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1776,
@@ -10059,7 +10089,7 @@ return {
                 {
                   id = 1105,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 168,
                   y = 1816,
@@ -10075,7 +10105,7 @@ return {
                 {
                   id = 1106,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1744,
@@ -10090,7 +10120,7 @@ return {
                 {
                   id = 1107,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 1784,
@@ -10108,7 +10138,7 @@ return {
                 {
                   id = 1108,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 1776,
@@ -10139,7 +10169,7 @@ return {
                 {
                   id = 1121,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 136,
                   y = 1816,
@@ -10155,7 +10185,7 @@ return {
                 {
                   id = 1122,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1736,
@@ -10170,7 +10200,7 @@ return {
                 {
                   id = 1123,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 168,
                   y = 1784,
@@ -10188,7 +10218,7 @@ return {
                 {
                   id = 1124,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1776,
@@ -10219,7 +10249,7 @@ return {
                 {
                   id = 1109,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 120,
                   y = 1808,
@@ -10235,7 +10265,7 @@ return {
                 {
                   id = 1110,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1728,
@@ -10250,7 +10280,7 @@ return {
                 {
                   id = 1111,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 152,
                   y = 1776,
@@ -10268,7 +10298,7 @@ return {
                 {
                   id = 1112,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1768,
@@ -10299,7 +10329,7 @@ return {
                 {
                   id = 1113,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 88,
                   y = 1800,
@@ -10315,7 +10345,7 @@ return {
                 {
                   id = 1114,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1720,
@@ -10330,7 +10360,7 @@ return {
                 {
                   id = 1115,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 1768,
@@ -10348,7 +10378,7 @@ return {
                 {
                   id = 1116,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 88,
                   y = 1760,
@@ -10379,7 +10409,7 @@ return {
                 {
                   id = 1117,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 56,
                   y = 1800,
@@ -10395,7 +10425,7 @@ return {
                 {
                   id = 1118,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1712,
@@ -10410,7 +10440,7 @@ return {
                 {
                   id = 1119,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 88,
                   y = 1768,
@@ -10428,7 +10458,7 @@ return {
                 {
                   id = 1120,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1760,
@@ -10459,7 +10489,7 @@ return {
                 {
                   id = 1125,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 24,
                   y = 1800,
@@ -10475,7 +10505,7 @@ return {
                 {
                   id = 1126,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1704,
@@ -10490,7 +10520,7 @@ return {
                 {
                   id = 1127,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 1768,
@@ -10508,7 +10538,7 @@ return {
                 {
                   id = 1128,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1760,
@@ -10539,7 +10569,7 @@ return {
                 {
                   id = 965,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 1632,
@@ -10554,7 +10584,7 @@ return {
                 {
                   id = 1071,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1808,
@@ -10572,7 +10602,7 @@ return {
                 {
                   id = 967,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1736,
@@ -10590,7 +10620,7 @@ return {
                 {
                   id = 1078,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1712,
@@ -10608,7 +10638,7 @@ return {
                 {
                   id = 1072,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1784,
@@ -10626,7 +10656,7 @@ return {
                 {
                   id = 1076,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1760,
@@ -10644,7 +10674,7 @@ return {
                 {
                   id = 969,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1688,
@@ -10662,7 +10692,7 @@ return {
                 {
                   id = 970,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1856,
@@ -10680,7 +10710,7 @@ return {
                 {
                   id = 971,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1664,
@@ -10698,7 +10728,7 @@ return {
                 {
                   id = 972,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1832,
@@ -10716,7 +10746,7 @@ return {
                 {
                   id = 973,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = 1640,
@@ -10734,7 +10764,7 @@ return {
                 {
                   id = 982,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = 1616,
@@ -10751,7 +10781,7 @@ return {
                 {
                   id = 1176,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 272,
                   y = 1640,
@@ -10782,7 +10812,7 @@ return {
                 {
                   id = 1061,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -88,
                   y = 1584,
@@ -10797,7 +10827,7 @@ return {
                 {
                   id = 1062,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1792,
@@ -10815,7 +10845,7 @@ return {
                 {
                   id = 1074,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1720,
@@ -10833,7 +10863,7 @@ return {
                 {
                   id = 1063,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1672,
@@ -10851,7 +10881,7 @@ return {
                 {
                   id = 1073,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1696,
@@ -10869,7 +10899,7 @@ return {
                 {
                   id = 1064,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1768,
@@ -10887,7 +10917,7 @@ return {
                 {
                   id = 1065,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1648,
@@ -10905,7 +10935,7 @@ return {
                 {
                   id = 1066,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1744,
@@ -10923,7 +10953,7 @@ return {
                 {
                   id = 1067,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1624,
@@ -10941,7 +10971,7 @@ return {
                 {
                   id = 1068,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1600,
@@ -10959,7 +10989,7 @@ return {
                 {
                   id = 1069,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = 1576,
@@ -10977,7 +11007,7 @@ return {
                 {
                   id = 1070,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -16,
                   y = 1576,
@@ -10994,7 +11024,7 @@ return {
                 {
                   id = 1175,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = -16,
                   y = 1576,
@@ -11025,7 +11055,7 @@ return {
                 {
                   id = 899,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 248,
                   y = 1720,
@@ -11043,7 +11073,7 @@ return {
                 {
                   id = 909,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 248,
                   y = 1736,
@@ -11061,7 +11091,7 @@ return {
                 {
                   id = 910,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1632,
@@ -11076,7 +11106,7 @@ return {
                 {
                   id = 1028,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 248,
                   y = 1712,
@@ -11107,7 +11137,7 @@ return {
                 {
                   id = 1129,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 224,
                   y = 1720,
@@ -11125,7 +11155,7 @@ return {
                 {
                   id = 1130,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 1736,
@@ -11143,7 +11173,7 @@ return {
                 {
                   id = 1131,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1624,
@@ -11158,7 +11188,7 @@ return {
                 {
                   id = 1132,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1712,
@@ -11189,7 +11219,7 @@ return {
                 {
                   id = 1133,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 200,
                   y = 1720,
@@ -11207,7 +11237,7 @@ return {
                 {
                   id = 1134,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 1736,
@@ -11225,7 +11255,7 @@ return {
                 {
                   id = 1135,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1616,
@@ -11240,7 +11270,7 @@ return {
                 {
                   id = 1136,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1712,
@@ -11271,7 +11301,7 @@ return {
                 {
                   id = 1137,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 176,
                   y = 1720,
@@ -11289,7 +11319,7 @@ return {
                 {
                   id = 1138,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = 1736,
@@ -11307,7 +11337,7 @@ return {
                 {
                   id = 1139,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1608,
@@ -11322,7 +11352,7 @@ return {
                 {
                   id = 1140,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1712,
@@ -11353,7 +11383,7 @@ return {
                 {
                   id = 1141,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 152,
                   y = 1720,
@@ -11371,7 +11401,7 @@ return {
                 {
                   id = 1142,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 152,
                   y = 1736,
@@ -11389,7 +11419,7 @@ return {
                 {
                   id = 1143,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1600,
@@ -11404,7 +11434,7 @@ return {
                 {
                   id = 1144,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1712,
@@ -11435,7 +11465,7 @@ return {
                 {
                   id = 1145,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 128,
                   y = 1704,
@@ -11453,7 +11483,7 @@ return {
                 {
                   id = 1146,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = 1720,
@@ -11471,7 +11501,7 @@ return {
                 {
                   id = 1147,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1592,
@@ -11486,7 +11516,7 @@ return {
                 {
                   id = 1148,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 1696,
@@ -11517,7 +11547,7 @@ return {
                 {
                   id = 1153,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 104,
                   y = 1704,
@@ -11535,7 +11565,7 @@ return {
                 {
                   id = 1154,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 104,
                   y = 1720,
@@ -11553,7 +11583,7 @@ return {
                 {
                   id = 1155,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1584,
@@ -11568,7 +11598,7 @@ return {
                 {
                   id = 1156,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1696,
@@ -11599,7 +11629,7 @@ return {
                 {
                   id = 1157,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 80,
                   y = 1704,
@@ -11617,7 +11647,7 @@ return {
                 {
                   id = 1158,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 80,
                   y = 1720,
@@ -11635,7 +11665,7 @@ return {
                 {
                   id = 1159,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1576,
@@ -11650,7 +11680,7 @@ return {
                 {
                   id = 1160,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1696,
@@ -11681,7 +11711,7 @@ return {
                 {
                   id = 1161,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 56,
                   y = 1704,
@@ -11699,7 +11729,7 @@ return {
                 {
                   id = 1162,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 1720,
@@ -11717,7 +11747,7 @@ return {
                 {
                   id = 1163,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1568,
@@ -11732,7 +11762,7 @@ return {
                 {
                   id = 1164,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1696,
@@ -11763,7 +11793,7 @@ return {
                 {
                   id = 1165,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 32,
                   y = 1704,
@@ -11781,7 +11811,7 @@ return {
                 {
                   id = 1166,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 1720,
@@ -11799,7 +11829,7 @@ return {
                 {
                   id = 1167,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1560,
@@ -11814,7 +11844,7 @@ return {
                 {
                   id = 1168,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1696,
@@ -11845,7 +11875,7 @@ return {
                 {
                   id = 1169,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 8,
                   y = 1704,
@@ -11863,7 +11893,7 @@ return {
                 {
                   id = 1170,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 8,
                   y = 1720,
@@ -11881,7 +11911,7 @@ return {
                 {
                   id = 1171,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1552,
@@ -11896,7 +11926,7 @@ return {
                 {
                   id = 1172,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 8,
                   y = 1696,
@@ -11927,7 +11957,7 @@ return {
                 {
                   id = 888,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = 1656,
@@ -11943,7 +11973,7 @@ return {
                 {
                   id = 889,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -96,
                   y = 1664,
@@ -11974,7 +12004,7 @@ return {
                 {
                   id = 1225,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1456,
@@ -11989,7 +12019,7 @@ return {
                 {
                   id = 1226,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 96,
                   y = 1512,
@@ -12008,7 +12038,7 @@ return {
                 {
                   id = 1227,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 96,
                   y = 1512,
@@ -12026,7 +12056,7 @@ return {
                 {
                   id = 1228,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 1512,
@@ -12044,7 +12074,7 @@ return {
                 {
                   id = 1229,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 1480,
@@ -12059,7 +12089,7 @@ return {
                 {
                   id = 1230,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 1472,
@@ -12090,7 +12120,7 @@ return {
                 {
                   id = 1219,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1472,
@@ -12105,7 +12135,7 @@ return {
                 {
                   id = 1220,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 128,
                   y = 1528,
@@ -12124,7 +12154,7 @@ return {
                 {
                   id = 1221,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = 1528,
@@ -12142,7 +12172,7 @@ return {
                 {
                   id = 1222,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 1528,
@@ -12160,7 +12190,7 @@ return {
                 {
                   id = 1223,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 1496,
@@ -12175,7 +12205,7 @@ return {
                 {
                   id = 1224,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 1488,
@@ -12206,7 +12236,7 @@ return {
                 {
                   id = 1213,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 1488,
@@ -12221,7 +12251,7 @@ return {
                 {
                   id = 1214,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 160,
                   y = 1544,
@@ -12240,7 +12270,7 @@ return {
                 {
                   id = 1215,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 160,
                   y = 1544,
@@ -12258,7 +12288,7 @@ return {
                 {
                   id = 1216,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 1544,
@@ -12276,7 +12306,7 @@ return {
                 {
                   id = 1217,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 1512,
@@ -12291,7 +12321,7 @@ return {
                 {
                   id = 1218,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 1504,
@@ -12322,7 +12352,7 @@ return {
                 {
                   id = 1207,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1392,
@@ -12337,7 +12367,7 @@ return {
                 {
                   id = 1208,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 80,
                   y = 1448,
@@ -12356,7 +12386,7 @@ return {
                 {
                   id = 1209,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 80,
                   y = 1448,
@@ -12374,7 +12404,7 @@ return {
                 {
                   id = 1210,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1448,
@@ -12392,7 +12422,7 @@ return {
                 {
                   id = 1211,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1416,
@@ -12407,7 +12437,7 @@ return {
                 {
                   id = 1212,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1408,
@@ -12438,7 +12468,7 @@ return {
                 {
                   id = 1201,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = 1384,
@@ -12453,7 +12483,7 @@ return {
                 {
                   id = 1202,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 56,
                   y = 1472,
@@ -12472,7 +12502,7 @@ return {
                 {
                   id = 1203,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 1472,
@@ -12490,7 +12520,7 @@ return {
                 {
                   id = 1204,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1472,
@@ -12508,7 +12538,7 @@ return {
                 {
                   id = 1205,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1440,
@@ -12523,7 +12553,7 @@ return {
                 {
                   id = 1206,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1432,
@@ -12554,7 +12584,7 @@ return {
                 {
                   id = 1195,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 1376,
@@ -12569,7 +12599,7 @@ return {
                 {
                   id = 1196,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 32,
                   y = 1496,
@@ -12588,7 +12618,7 @@ return {
                 {
                   id = 1197,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 1496,
@@ -12606,7 +12636,7 @@ return {
                 {
                   id = 1198,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1496,
@@ -12624,7 +12654,7 @@ return {
                 {
                   id = 1199,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1464,
@@ -12639,7 +12669,7 @@ return {
                 {
                   id = 1200,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1456,
@@ -12670,7 +12700,7 @@ return {
                 {
                   id = 1189,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 1416,
@@ -12685,7 +12715,7 @@ return {
                 {
                   id = 1190,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 176,
                   y = 1472,
@@ -12704,7 +12734,7 @@ return {
                 {
                   id = 1191,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = 1472,
@@ -12722,7 +12752,7 @@ return {
                 {
                   id = 1192,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1472,
@@ -12740,7 +12770,7 @@ return {
                 {
                   id = 1193,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1440,
@@ -12755,7 +12785,7 @@ return {
                 {
                   id = 1194,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1432,
@@ -12786,7 +12816,7 @@ return {
                 {
                   id = 1183,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 1408,
@@ -12801,7 +12831,7 @@ return {
                 {
                   id = 1184,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 200,
                   y = 1496,
@@ -12820,7 +12850,7 @@ return {
                 {
                   id = 1185,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 1496,
@@ -12838,7 +12868,7 @@ return {
                 {
                   id = 1186,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1496,
@@ -12856,7 +12886,7 @@ return {
                 {
                   id = 1187,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1464,
@@ -12871,7 +12901,7 @@ return {
                 {
                   id = 1188,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1456,
@@ -12902,7 +12932,7 @@ return {
                 {
                   id = 1177,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -24,
                   y = 1400,
@@ -12917,7 +12947,7 @@ return {
                 {
                   id = 1178,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 224,
                   y = 1520,
@@ -12936,7 +12966,7 @@ return {
                 {
                   id = 1179,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 1520,
@@ -12954,7 +12984,7 @@ return {
                 {
                   id = 1180,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1520,
@@ -12972,7 +13002,7 @@ return {
                 {
                   id = 1181,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1488,
@@ -12987,7 +13017,7 @@ return {
                 {
                   id = 1182,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1480,
@@ -13018,7 +13048,7 @@ return {
                 {
                   id = 1249,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -80,
                   y = 1336,
@@ -13033,7 +13063,7 @@ return {
                 {
                   id = 1250,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 48,
                   y = 1416,
@@ -13052,7 +13082,7 @@ return {
                 {
                   id = 1251,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 48,
                   y = 1416,
@@ -13070,7 +13100,7 @@ return {
                 {
                   id = 1252,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 1416,
@@ -13088,7 +13118,7 @@ return {
                 {
                   id = 1253,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 1384,
@@ -13103,7 +13133,7 @@ return {
                 {
                   id = 1254,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 1376,
@@ -13134,7 +13164,7 @@ return {
                 {
                   id = 1243,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 1336,
@@ -13149,7 +13179,7 @@ return {
                 {
                   id = 1244,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 208,
                   y = 1416,
@@ -13168,7 +13198,7 @@ return {
                 {
                   id = 1245,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 208,
                   y = 1416,
@@ -13186,7 +13216,7 @@ return {
                 {
                   id = 1246,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 1416,
@@ -13204,7 +13234,7 @@ return {
                 {
                   id = 1247,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 1384,
@@ -13219,7 +13249,7 @@ return {
                 {
                   id = 1248,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 1376,
@@ -13250,7 +13280,7 @@ return {
                 {
                   id = 1237,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = 1312,
@@ -13265,7 +13295,7 @@ return {
                 {
                   id = 1238,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 32,
                   y = 1504,
@@ -13284,7 +13314,7 @@ return {
                 {
                   id = 1239,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 1504,
@@ -13302,7 +13332,7 @@ return {
                 {
                   id = 1240,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1504,
@@ -13320,7 +13350,7 @@ return {
                 {
                   id = 1241,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1472,
@@ -13335,7 +13365,7 @@ return {
                 {
                   id = 1242,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1464,
@@ -13366,7 +13396,7 @@ return {
                 {
                   id = 1231,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 1312,
@@ -13381,7 +13411,7 @@ return {
                 {
                   id = 1232,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 224,
                   y = 1504,
@@ -13400,7 +13430,7 @@ return {
                 {
                   id = 1233,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 1504,
@@ -13418,7 +13448,7 @@ return {
                 {
                   id = 1234,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1504,
@@ -13436,7 +13466,7 @@ return {
                 {
                   id = 1235,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1472,
@@ -13451,7 +13481,7 @@ return {
                 {
                   id = 1236,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1464,
@@ -13482,7 +13512,7 @@ return {
                 {
                   id = 1173,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 1368,
@@ -13497,7 +13527,7 @@ return {
                 {
                   id = 1174,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  type = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 1360,
@@ -13529,7 +13559,7 @@ return {
                 {
                   id = 1255,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -96,
                   y = 1328,
@@ -13544,7 +13574,7 @@ return {
                 {
                   id = 1257,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 232,
                   y = 1200,
@@ -13563,7 +13593,7 @@ return {
                 {
                   id = 1293,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 240,
                   y = 1216,
@@ -13582,7 +13612,7 @@ return {
                 {
                   id = 1276,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 16,
                   y = 1216,
@@ -13601,7 +13631,7 @@ return {
                 {
                   id = 1292,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 24,
                   y = 1200,
@@ -13620,7 +13650,7 @@ return {
                 {
                   id = 1270,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 248,
                   y = 1200,
@@ -13639,7 +13669,7 @@ return {
                 {
                   id = 1273,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 8,
                   y = 1200,
@@ -13658,7 +13688,7 @@ return {
                 {
                   id = 1263,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 1152,
@@ -13676,7 +13706,7 @@ return {
                 {
                   id = 1290,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 240,
                   y = 1168,
@@ -13694,7 +13724,7 @@ return {
                 {
                   id = 1275,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = 1168,
@@ -13712,7 +13742,7 @@ return {
                 {
                   id = 1289,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 1152,
@@ -13730,7 +13760,7 @@ return {
                 {
                   id = 1269,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 248,
                   y = 1152,
@@ -13748,7 +13778,7 @@ return {
                 {
                   id = 1274,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 8,
                   y = 1152,
@@ -13766,7 +13796,7 @@ return {
                 {
                   id = 1265,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 1344,
@@ -13781,7 +13811,7 @@ return {
                 {
                   id = 1287,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 1344,
@@ -13796,7 +13826,7 @@ return {
                 {
                   id = 1272,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 1344,
@@ -13811,7 +13841,7 @@ return {
                 {
                   id = 1286,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1344,
@@ -13826,7 +13856,7 @@ return {
                 {
                   id = 1268,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 248,
                   y = 1344,
@@ -13841,7 +13871,7 @@ return {
                 {
                   id = 1271,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 8,
                   y = 1344,
@@ -13875,7 +13905,7 @@ return {
                 {
                   id = 1266,
                   name = "",
-                  class = "Beetle",
+                  type = "Beetle",
                   shape = "rectangle",
                   x = 56,
                   y = 1320,
@@ -13893,7 +13923,7 @@ return {
                 {
                   id = 1903,
                   name = "",
-                  class = "Beetle",
+                  type = "Beetle",
                   shape = "rectangle",
                   x = 200,
                   y = 1320,
@@ -13911,7 +13941,7 @@ return {
                 {
                   id = 1267,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1288,
@@ -13926,7 +13956,7 @@ return {
                 {
                   id = 1279,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 1320,
@@ -13947,7 +13977,7 @@ return {
                 {
                   id = 1904,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 1320,
@@ -13968,7 +13998,7 @@ return {
                 {
                   id = 1281,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1304,
@@ -13983,7 +14013,7 @@ return {
                 {
                   id = 1908,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1304,
@@ -13998,7 +14028,7 @@ return {
                 {
                   id = 1283,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1296,
@@ -14016,7 +14046,7 @@ return {
                 {
                   id = 1907,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1296,
@@ -14034,7 +14064,7 @@ return {
                 {
                   id = 1296,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 1176,
@@ -14050,7 +14080,7 @@ return {
                 {
                   id = 1905,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 1176,
@@ -14066,7 +14096,7 @@ return {
                 {
                   id = 1297,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 1160,
@@ -14082,7 +14112,7 @@ return {
                 {
                   id = 1906,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 1160,
@@ -14114,7 +14144,7 @@ return {
                 {
                   id = 1673,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = 1192,
@@ -14129,7 +14159,7 @@ return {
                 {
                   id = 1674,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 32,
                   y = 1264,
@@ -14149,7 +14179,7 @@ return {
                 {
                   id = 1913,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 1264,
@@ -14170,7 +14200,7 @@ return {
                 {
                   id = 1914,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 1264,
@@ -14188,7 +14218,7 @@ return {
                 {
                   id = 1915,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1248,
@@ -14203,7 +14233,7 @@ return {
                 {
                   id = 1916,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 1240,
@@ -14227,7 +14257,7 @@ return {
                 {
                   id = 1917,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 1224,
@@ -14242,7 +14272,7 @@ return {
                 {
                   id = 1918,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1248,
@@ -14258,7 +14288,7 @@ return {
                 {
                   id = 1919,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1248,
@@ -14290,7 +14320,7 @@ return {
                 {
                   id = 1680,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 1184,
@@ -14306,7 +14336,7 @@ return {
                 {
                   id = 1681,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 48,
                   y = 1232,
@@ -14326,7 +14356,7 @@ return {
                 {
                   id = 1682,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 1232,
@@ -14347,7 +14377,7 @@ return {
                 {
                   id = 1683,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 48,
                   y = 1232,
@@ -14365,7 +14395,7 @@ return {
                 {
                   id = 1684,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 1248,
@@ -14380,7 +14410,7 @@ return {
                 {
                   id = 1685,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = 1256,
@@ -14404,7 +14434,7 @@ return {
                 {
                   id = 1686,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1272,
@@ -14419,7 +14449,7 @@ return {
                 {
                   id = 1695,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1240,
@@ -14435,7 +14465,7 @@ return {
                 {
                   id = 1910,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1240,
@@ -14467,7 +14497,7 @@ return {
                 {
                   id = 1687,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1152,
@@ -14482,7 +14512,7 @@ return {
                 {
                   id = 1688,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 224,
                   y = 1224,
@@ -14502,7 +14532,7 @@ return {
                 {
                   id = 1936,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 1224,
@@ -14523,7 +14553,7 @@ return {
                 {
                   id = 1937,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 1224,
@@ -14541,7 +14571,7 @@ return {
                 {
                   id = 1938,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1208,
@@ -14556,7 +14586,7 @@ return {
                 {
                   id = 1939,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 88,
                   y = 1200,
@@ -14580,7 +14610,7 @@ return {
                 {
                   id = 1940,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 1184,
@@ -14595,7 +14625,7 @@ return {
                 {
                   id = 1941,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1208,
@@ -14611,7 +14641,7 @@ return {
                 {
                   id = 1942,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1208,
@@ -14643,7 +14673,7 @@ return {
                 {
                   id = 1697,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1144,
@@ -14659,7 +14689,7 @@ return {
                 {
                   id = 1698,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 208,
                   y = 1192,
@@ -14679,7 +14709,7 @@ return {
                 {
                   id = 1929,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 1192,
@@ -14700,7 +14730,7 @@ return {
                 {
                   id = 1930,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 1192,
@@ -14718,7 +14748,7 @@ return {
                 {
                   id = 1931,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 1208,
@@ -14733,7 +14763,7 @@ return {
                 {
                   id = 1932,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = 1216,
@@ -14757,7 +14787,7 @@ return {
                 {
                   id = 1933,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1232,
@@ -14772,7 +14802,7 @@ return {
                 {
                   id = 1934,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1200,
@@ -14788,7 +14818,7 @@ return {
                 {
                   id = 1935,
                   name = "SetSpeed",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1200,
@@ -14823,7 +14853,7 @@ return {
                 {
                   id = 1278,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -24,
                   y = 1072,
@@ -14838,7 +14868,7 @@ return {
                 {
                   id = 1277,
                   name = "",
-                  class = "Beetle",
+                  type = "Beetle",
                   shape = "rectangle",
                   x = 104,
                   y = 1096,
@@ -14857,7 +14887,7 @@ return {
                 {
                   id = 1299,
                   name = "",
-                  class = "Beetle",
+                  type = "Beetle",
                   shape = "rectangle",
                   x = 216,
                   y = 1096,
@@ -14876,7 +14906,7 @@ return {
                 {
                   id = 1948,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 856,
@@ -14925,7 +14955,7 @@ return {
                 {
                   id = 2023,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 152,
                   y = 856,
@@ -14974,7 +15004,7 @@ return {
                 {
                   id = 1949,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 1064,
@@ -14990,7 +15020,7 @@ return {
                 {
                   id = 1998,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1064,
@@ -15006,7 +15036,7 @@ return {
                 {
                   id = 1950,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 1064,
@@ -15021,7 +15051,7 @@ return {
                 {
                   id = 1997,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1064,
@@ -15036,7 +15066,7 @@ return {
                 {
                   id = 1951,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1016,
@@ -15051,7 +15081,7 @@ return {
                 {
                   id = 2004,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 1016,
@@ -15066,7 +15096,7 @@ return {
                 {
                   id = 1952,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1016,
@@ -15082,7 +15112,7 @@ return {
                 {
                   id = 2003,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 1016,
@@ -15098,7 +15128,7 @@ return {
                 {
                   id = 1959,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 1016,
@@ -15114,7 +15144,7 @@ return {
                 {
                   id = 2002,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1016,
@@ -15130,7 +15160,7 @@ return {
                 {
                   id = 1953,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1080,
@@ -15145,7 +15175,7 @@ return {
                 {
                   id = 1993,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1048,
@@ -15160,7 +15190,7 @@ return {
                 {
                   id = 1958,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1000,
@@ -15175,7 +15205,7 @@ return {
                 {
                   id = 2005,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 952,
@@ -15190,7 +15220,7 @@ return {
                 {
                   id = 1954,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1064,
@@ -15206,7 +15236,7 @@ return {
                 {
                   id = 1996,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 1064,
@@ -15222,7 +15252,7 @@ return {
                 {
                   id = 1956,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 1064,
@@ -15238,7 +15268,7 @@ return {
                 {
                   id = 1994,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1064,
@@ -15254,7 +15284,7 @@ return {
                 {
                   id = 1960,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1016,
@@ -15270,7 +15300,7 @@ return {
                 {
                   id = 2001,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 1016,
@@ -15286,7 +15316,7 @@ return {
                 {
                   id = 1955,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 1064,
@@ -15302,7 +15332,7 @@ return {
                 {
                   id = 1995,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 1064,
@@ -15318,7 +15348,7 @@ return {
                 {
                   id = 1957,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 1032,
@@ -15333,7 +15363,7 @@ return {
                 {
                   id = 1999,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 984,
@@ -15348,7 +15378,7 @@ return {
                 {
                   id = 1961,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 1016,
@@ -15364,7 +15394,7 @@ return {
                 {
                   id = 2000,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1016,
@@ -15380,7 +15410,7 @@ return {
                 {
                   id = 1962,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 968,
@@ -15396,7 +15426,7 @@ return {
                 {
                   id = 2010,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 968,
@@ -15412,7 +15442,7 @@ return {
                 {
                   id = 1963,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 968,
@@ -15427,7 +15457,7 @@ return {
                 {
                   id = 2009,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 968,
@@ -15442,7 +15472,7 @@ return {
                 {
                   id = 1964,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 920,
@@ -15457,7 +15487,7 @@ return {
                 {
                   id = 2016,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 920,
@@ -15472,7 +15502,7 @@ return {
                 {
                   id = 1965,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 920,
@@ -15488,7 +15518,7 @@ return {
                 {
                   id = 2015,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 920,
@@ -15504,7 +15534,7 @@ return {
                 {
                   id = 1966,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 920,
@@ -15520,7 +15550,7 @@ return {
                 {
                   id = 2014,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 920,
@@ -15536,7 +15566,7 @@ return {
                 {
                   id = 1967,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 904,
@@ -15551,7 +15581,7 @@ return {
                 {
                   id = 2017,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 856,
@@ -15566,7 +15596,7 @@ return {
                 {
                   id = 1968,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 968,
@@ -15582,7 +15612,7 @@ return {
                 {
                   id = 2008,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 968,
@@ -15598,7 +15628,7 @@ return {
                 {
                   id = 1969,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 968,
@@ -15614,7 +15644,7 @@ return {
                 {
                   id = 2007,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 968,
@@ -15630,7 +15660,7 @@ return {
                 {
                   id = 1970,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 920,
@@ -15646,7 +15676,7 @@ return {
                 {
                   id = 2013,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 920,
@@ -15662,7 +15692,7 @@ return {
                 {
                   id = 1971,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 968,
@@ -15678,7 +15708,7 @@ return {
                 {
                   id = 2006,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 968,
@@ -15694,7 +15724,7 @@ return {
                 {
                   id = 1972,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 936,
@@ -15709,7 +15739,7 @@ return {
                 {
                   id = 2011,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 888,
@@ -15724,7 +15754,7 @@ return {
                 {
                   id = 1973,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 920,
@@ -15740,7 +15770,7 @@ return {
                 {
                   id = 2012,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 920,
@@ -15756,7 +15786,7 @@ return {
                 {
                   id = 1974,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 872,
@@ -15772,7 +15802,7 @@ return {
                 {
                   id = 2022,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 872,
@@ -15788,7 +15818,7 @@ return {
                 {
                   id = 1975,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 872,
@@ -15803,7 +15833,7 @@ return {
                 {
                   id = 2021,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 872,
@@ -15818,7 +15848,7 @@ return {
                 {
                   id = 1976,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 824,
@@ -15833,7 +15863,7 @@ return {
                 {
                   id = 2029,
                   name = "FaceLeft",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 824,
@@ -15848,7 +15878,7 @@ return {
                 {
                   id = 1977,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 824,
@@ -15864,7 +15894,7 @@ return {
                 {
                   id = 2028,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 824,
@@ -15880,7 +15910,7 @@ return {
                 {
                   id = 1978,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 824,
@@ -15896,7 +15926,7 @@ return {
                 {
                   id = 2027,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 824,
@@ -15912,7 +15942,7 @@ return {
                 {
                   id = 1979,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 808,
@@ -15927,7 +15957,7 @@ return {
                 {
                   id = 2030,
                   name = "EnterForeground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 760,
@@ -15942,7 +15972,7 @@ return {
                 {
                   id = 1980,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 872,
@@ -15958,7 +15988,7 @@ return {
                 {
                   id = 2020,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 872,
@@ -15974,7 +16004,7 @@ return {
                 {
                   id = 1981,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 872,
@@ -15990,7 +16020,7 @@ return {
                 {
                   id = 2019,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 872,
@@ -16006,7 +16036,7 @@ return {
                 {
                   id = 1982,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 824,
@@ -16022,7 +16052,7 @@ return {
                 {
                   id = 2026,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 824,
@@ -16038,7 +16068,7 @@ return {
                 {
                   id = 1983,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 872,
@@ -16054,7 +16084,7 @@ return {
                 {
                   id = 2018,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 872,
@@ -16070,7 +16100,7 @@ return {
                 {
                   id = 1984,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 840,
@@ -16085,7 +16115,7 @@ return {
                 {
                   id = 2024,
                   name = "EnterBackground",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 792,
@@ -16100,7 +16130,7 @@ return {
                 {
                   id = 1985,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 824,
@@ -16116,7 +16146,7 @@ return {
                 {
                   id = 2025,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 824,
@@ -16132,7 +16162,7 @@ return {
                 {
                   id = 1986,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 776,
@@ -16148,7 +16178,7 @@ return {
                 {
                   id = 2035,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 776,
@@ -16164,7 +16194,7 @@ return {
                 {
                   id = 1987,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 776,
@@ -16179,7 +16209,7 @@ return {
                 {
                   id = 2034,
                   name = "FaceRight",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 776,
@@ -16194,7 +16224,7 @@ return {
                 {
                   id = 1988,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 776,
@@ -16210,7 +16240,7 @@ return {
                 {
                   id = 2033,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 776,
@@ -16226,7 +16256,7 @@ return {
                 {
                   id = 1989,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = 776,
@@ -16242,7 +16272,7 @@ return {
                 {
                   id = 2032,
                   name = "ChangeTile",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 776,
@@ -16258,7 +16288,7 @@ return {
                 {
                   id = 1990,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 776,
@@ -16274,7 +16304,7 @@ return {
                 {
                   id = 2031,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = 776,
@@ -16290,7 +16320,7 @@ return {
                 {
                   id = 1991,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 744,
@@ -16306,7 +16336,7 @@ return {
                 {
                   id = 2036,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 744,
@@ -16322,7 +16352,7 @@ return {
                 {
                   id = 1992,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 728,
@@ -16338,7 +16368,7 @@ return {
                 {
                   id = 2037,
                   name = "Rotate",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 728,
@@ -16354,7 +16384,7 @@ return {
                 {
                   id = 2038,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 1048,
@@ -16372,7 +16402,7 @@ return {
                 {
                   id = 2041,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 1000,
@@ -16390,7 +16420,7 @@ return {
                 {
                   id = 2043,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 952,
@@ -16408,7 +16438,7 @@ return {
                 {
                   id = 2045,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 904,
@@ -16426,7 +16456,7 @@ return {
                 {
                   id = 2047,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 856,
@@ -16444,7 +16474,7 @@ return {
                 {
                   id = 2049,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 104,
                   y = 808,
@@ -16462,7 +16492,7 @@ return {
                 {
                   id = 2051,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 760,
@@ -16480,7 +16510,7 @@ return {
                 {
                   id = 2039,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 1048,
@@ -16498,7 +16528,7 @@ return {
                 {
                   id = 2040,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 1000,
@@ -16516,7 +16546,7 @@ return {
                 {
                   id = 2042,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 952,
@@ -16534,7 +16564,7 @@ return {
                 {
                   id = 2044,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 904,
@@ -16552,7 +16582,7 @@ return {
                 {
                   id = 2046,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 856,
@@ -16570,7 +16600,7 @@ return {
                 {
                   id = 2048,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 808,
@@ -16588,7 +16618,7 @@ return {
                 {
                   id = 2050,
                   name = "BeetleShoot",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 152,
                   y = 760,
@@ -16606,7 +16636,7 @@ return {
                 {
                   id = 2097,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = -40,
                   y = 996,
@@ -16625,7 +16655,7 @@ return {
                 {
                   id = 2099,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = -40,
                   y = 860,
@@ -16644,7 +16674,7 @@ return {
                 {
                   id = 2101,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = -40,
                   y = 728,
@@ -16663,7 +16693,7 @@ return {
                 {
                   id = 2098,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 256,
                   y = 932,
@@ -16681,7 +16711,7 @@ return {
                 {
                   id = 2100,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 256,
                   y = 796,
@@ -16715,7 +16745,7 @@ return {
                 {
                   id = 1302,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1128,
@@ -16730,7 +16760,7 @@ return {
                 {
                   id = 1303,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 120,
                   y = 992,
@@ -16749,7 +16779,7 @@ return {
                 {
                   id = 1309,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 184,
                   y = 992,
@@ -16768,7 +16798,7 @@ return {
                 {
                   id = 1310,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 976,
@@ -16786,7 +16816,7 @@ return {
                 {
                   id = 1316,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 184,
                   y = 976,
@@ -16804,7 +16834,7 @@ return {
                 {
                   id = 1317,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1136,
@@ -16819,7 +16849,7 @@ return {
                 {
                   id = 1323,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 1136,
@@ -16850,7 +16880,7 @@ return {
                 {
                   id = 1346,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1064,
@@ -16865,7 +16895,7 @@ return {
                 {
                   id = 1348,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 128,
                   y = 1008,
@@ -16884,7 +16914,7 @@ return {
                 {
                   id = 1350,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 176,
                   y = 1008,
@@ -16903,7 +16933,7 @@ return {
                 {
                   id = 1353,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = 992,
@@ -16921,7 +16951,7 @@ return {
                 {
                   id = 1354,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = 992,
@@ -16939,7 +16969,7 @@ return {
                 {
                   id = 1355,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = 1136,
@@ -16954,7 +16984,7 @@ return {
                 {
                   id = 1356,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 1136,
@@ -16985,7 +17015,7 @@ return {
                 {
                   id = 1357,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 1000,
@@ -17000,7 +17030,7 @@ return {
                 {
                   id = 1360,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 168,
                   y = 992,
@@ -17019,7 +17049,7 @@ return {
                 {
                   id = 1362,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 136,
                   y = 992,
@@ -17038,7 +17068,7 @@ return {
                 {
                   id = 1364,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 976,
@@ -17056,7 +17086,7 @@ return {
                 {
                   id = 1365,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 168,
                   y = 976,
@@ -17074,7 +17104,7 @@ return {
                 {
                   id = 1366,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1136,
@@ -17089,7 +17119,7 @@ return {
                 {
                   id = 1367,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 168,
                   y = 1136,
@@ -17120,7 +17150,7 @@ return {
                 {
                   id = 1340,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = 1064,
@@ -17135,7 +17165,7 @@ return {
                 {
                   id = 1341,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 136,
                   y = 1128,
@@ -17154,7 +17184,7 @@ return {
                 {
                   id = 1342,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 1128,
@@ -17173,7 +17203,7 @@ return {
                 {
                   id = 1343,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1128,
@@ -17191,7 +17221,7 @@ return {
                 {
                   id = 1344,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1096,
@@ -17206,7 +17236,7 @@ return {
                 {
                   id = 1345,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1088,
@@ -17230,7 +17260,7 @@ return {
                 {
                   id = 1433,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1120,
@@ -17261,7 +17291,7 @@ return {
                 {
                   id = 1334,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 1056,
@@ -17276,7 +17306,7 @@ return {
                 {
                   id = 1335,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 120,
                   y = 1136,
@@ -17295,7 +17325,7 @@ return {
                 {
                   id = 1337,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1136,
@@ -17313,7 +17343,7 @@ return {
                 {
                   id = 1338,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1104,
@@ -17328,7 +17358,7 @@ return {
                 {
                   id = 1339,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1096,
@@ -17352,7 +17382,7 @@ return {
                 {
                   id = 1424,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 1136,
@@ -17371,7 +17401,7 @@ return {
                 {
                   id = 1432,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1128,
@@ -17402,7 +17432,7 @@ return {
                 {
                   id = 1398,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 992,
@@ -17417,7 +17447,7 @@ return {
                 {
                   id = 1399,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 1072,
@@ -17436,7 +17466,7 @@ return {
                 {
                   id = 1401,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1072,
@@ -17454,7 +17484,7 @@ return {
                 {
                   id = 1402,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1040,
@@ -17469,7 +17499,7 @@ return {
                 {
                   id = 1403,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1032,
@@ -17493,7 +17523,7 @@ return {
                 {
                   id = 1430,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 1072,
@@ -17512,7 +17542,7 @@ return {
                 {
                   id = 1436,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 1064,
@@ -17543,7 +17573,7 @@ return {
                 {
                   id = 1392,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 1032,
@@ -17558,7 +17588,7 @@ return {
                 {
                   id = 1393,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 120,
                   y = 1096,
@@ -17577,7 +17607,7 @@ return {
                 {
                   id = 1395,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1096,
@@ -17595,7 +17625,7 @@ return {
                 {
                   id = 1396,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1064,
@@ -17610,7 +17640,7 @@ return {
                 {
                   id = 1397,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1056,
@@ -17634,7 +17664,7 @@ return {
                 {
                   id = 1429,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 1096,
@@ -17653,7 +17683,7 @@ return {
                 {
                   id = 1437,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 1088,
@@ -17684,7 +17714,7 @@ return {
                 {
                   id = 1368,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -88,
                   y = 976,
@@ -17699,7 +17729,7 @@ return {
                 {
                   id = 1369,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 136,
                   y = 1056,
@@ -17718,7 +17748,7 @@ return {
                 {
                   id = 1371,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1056,
@@ -17736,7 +17766,7 @@ return {
                 {
                   id = 1372,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1024,
@@ -17751,7 +17781,7 @@ return {
                 {
                   id = 1373,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1016,
@@ -17775,7 +17805,7 @@ return {
                 {
                   id = 1426,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 1056,
@@ -17794,7 +17824,7 @@ return {
                 {
                   id = 1435,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 1048,
@@ -17825,7 +17855,7 @@ return {
                 {
                   id = 1374,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -96,
                   y = 936,
@@ -17840,7 +17870,7 @@ return {
                 {
                   id = 1375,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 1032,
@@ -17859,7 +17889,7 @@ return {
                 {
                   id = 1377,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 1032,
@@ -17877,7 +17907,7 @@ return {
                 {
                   id = 1378,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 1000,
@@ -17892,7 +17922,7 @@ return {
                 {
                   id = 1379,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 992,
@@ -17916,7 +17946,7 @@ return {
                 {
                   id = 1427,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 1032,
@@ -17935,7 +17965,7 @@ return {
                 {
                   id = 1434,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 1024,
@@ -17966,7 +17996,7 @@ return {
                 {
                   id = 1328,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -88,
                   y = 872,
@@ -17981,7 +18011,7 @@ return {
                 {
                   id = 1329,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 960,
@@ -18000,7 +18030,7 @@ return {
                 {
                   id = 1331,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 960,
@@ -18018,7 +18048,7 @@ return {
                 {
                   id = 1332,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 928,
@@ -18033,7 +18063,7 @@ return {
                 {
                   id = 1333,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 920,
@@ -18057,7 +18087,7 @@ return {
                 {
                   id = 1425,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 960,
@@ -18076,7 +18106,7 @@ return {
                 {
                   id = 1431,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 952,
@@ -18107,7 +18137,7 @@ return {
                 {
                   id = 2054,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 880,
@@ -18122,7 +18152,7 @@ return {
                 {
                   id = 2055,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 136,
                   y = 952,
@@ -18141,7 +18171,7 @@ return {
                 {
                   id = 2056,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 952,
@@ -18159,7 +18189,7 @@ return {
                 {
                   id = 2057,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 920,
@@ -18174,7 +18204,7 @@ return {
                 {
                   id = 2058,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 912,
@@ -18198,7 +18228,7 @@ return {
                 {
                   id = 2059,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 952,
@@ -18217,7 +18247,7 @@ return {
                 {
                   id = 2060,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 944,
@@ -18248,7 +18278,7 @@ return {
                 {
                   id = 2076,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 864,
@@ -18263,7 +18293,7 @@ return {
                 {
                   id = 2077,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 984,
@@ -18282,7 +18312,7 @@ return {
                 {
                   id = 2078,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 984,
@@ -18300,7 +18330,7 @@ return {
                 {
                   id = 2079,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 952,
@@ -18315,7 +18345,7 @@ return {
                 {
                   id = 2080,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 944,
@@ -18339,7 +18369,7 @@ return {
                 {
                   id = 2081,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 984,
@@ -18358,7 +18388,7 @@ return {
                 {
                   id = 2082,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 976,
@@ -18389,7 +18419,7 @@ return {
                 {
                   id = 2116,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -88,
                   y = 808,
@@ -18404,7 +18434,7 @@ return {
                 {
                   id = 2117,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 896,
@@ -18423,7 +18453,7 @@ return {
                 {
                   id = 2118,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 896,
@@ -18441,7 +18471,7 @@ return {
                 {
                   id = 2119,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 864,
@@ -18456,7 +18486,7 @@ return {
                 {
                   id = 2120,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 856,
@@ -18480,7 +18510,7 @@ return {
                 {
                   id = 2121,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 896,
@@ -18499,7 +18529,7 @@ return {
                 {
                   id = 2122,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 888,
@@ -18530,7 +18560,7 @@ return {
                 {
                   id = 2109,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 816,
@@ -18545,7 +18575,7 @@ return {
                 {
                   id = 2110,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 120,
                   y = 888,
@@ -18564,7 +18594,7 @@ return {
                 {
                   id = 2111,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 888,
@@ -18582,7 +18612,7 @@ return {
                 {
                   id = 2112,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 856,
@@ -18597,7 +18627,7 @@ return {
                 {
                   id = 2113,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 848,
@@ -18621,7 +18651,7 @@ return {
                 {
                   id = 2114,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 888,
@@ -18640,7 +18670,7 @@ return {
                 {
                   id = 2115,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 880,
@@ -18671,7 +18701,7 @@ return {
                 {
                   id = 2102,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 800,
@@ -18686,7 +18716,7 @@ return {
                 {
                   id = 2103,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 920,
@@ -18705,7 +18735,7 @@ return {
                 {
                   id = 2104,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 920,
@@ -18723,7 +18753,7 @@ return {
                 {
                   id = 2105,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 888,
@@ -18738,7 +18768,7 @@ return {
                 {
                   id = 2106,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 880,
@@ -18762,7 +18792,7 @@ return {
                 {
                   id = 2107,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 920,
@@ -18781,7 +18811,7 @@ return {
                 {
                   id = 2108,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 912,
@@ -18812,7 +18842,7 @@ return {
                 {
                   id = 2083,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -120,
                   y = 760,
@@ -18827,7 +18857,7 @@ return {
                 {
                   id = 2084,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 832,
@@ -18846,7 +18876,7 @@ return {
                 {
                   id = 2129,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 120,
                   y = 832,
@@ -18865,7 +18895,7 @@ return {
                 {
                   id = 2085,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 832,
@@ -18883,7 +18913,7 @@ return {
                 {
                   id = 2128,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 832,
@@ -18901,7 +18931,7 @@ return {
                 {
                   id = 2086,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 800,
@@ -18916,7 +18946,7 @@ return {
                 {
                   id = 2131,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 800,
@@ -18931,7 +18961,7 @@ return {
                 {
                   id = 2087,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 792,
@@ -18955,7 +18985,7 @@ return {
                 {
                   id = 2132,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 792,
@@ -18979,7 +19009,7 @@ return {
                 {
                   id = 2088,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 832,
@@ -18998,7 +19028,7 @@ return {
                 {
                   id = 2127,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 832,
@@ -19017,7 +19047,7 @@ return {
                 {
                   id = 2089,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 824,
@@ -19032,7 +19062,7 @@ return {
                 {
                   id = 2130,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 824,
@@ -19063,7 +19093,7 @@ return {
                 {
                   id = 2133,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -120,
                   y = 728,
@@ -19078,7 +19108,7 @@ return {
                 {
                   id = 2134,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 848,
@@ -19097,7 +19127,7 @@ return {
                 {
                   id = 2135,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 120,
                   y = 848,
@@ -19116,7 +19146,7 @@ return {
                 {
                   id = 2136,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 848,
@@ -19134,7 +19164,7 @@ return {
                 {
                   id = 2137,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 848,
@@ -19152,7 +19182,7 @@ return {
                 {
                   id = 2138,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 816,
@@ -19167,7 +19197,7 @@ return {
                 {
                   id = 2139,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 816,
@@ -19182,7 +19212,7 @@ return {
                 {
                   id = 2140,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 808,
@@ -19206,7 +19236,7 @@ return {
                 {
                   id = 2141,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 808,
@@ -19230,7 +19260,7 @@ return {
                 {
                   id = 2142,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 848,
@@ -19249,7 +19279,7 @@ return {
                 {
                   id = 2143,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 120,
                   y = 848,
@@ -19268,7 +19298,7 @@ return {
                 {
                   id = 2144,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 840,
@@ -19283,7 +19313,7 @@ return {
                 {
                   id = 2145,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 840,
@@ -19314,7 +19344,7 @@ return {
                 {
                   id = 2159,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -8,
                   y = 728,
@@ -19329,7 +19359,7 @@ return {
                 {
                   id = 2160,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 136,
                   y = 800,
@@ -19348,7 +19378,7 @@ return {
                 {
                   id = 2161,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 800,
@@ -19367,7 +19397,7 @@ return {
                 {
                   id = 2162,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 800,
@@ -19385,7 +19415,7 @@ return {
                 {
                   id = 2163,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 800,
@@ -19403,7 +19433,7 @@ return {
                 {
                   id = 2164,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 768,
@@ -19418,7 +19448,7 @@ return {
                 {
                   id = 2165,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 768,
@@ -19433,7 +19463,7 @@ return {
                 {
                   id = 2166,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 760,
@@ -19457,7 +19487,7 @@ return {
                 {
                   id = 2167,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 760,
@@ -19481,7 +19511,7 @@ return {
                 {
                   id = 2168,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 800,
@@ -19500,7 +19530,7 @@ return {
                 {
                   id = 2169,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 800,
@@ -19519,7 +19549,7 @@ return {
                 {
                   id = 2170,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 792,
@@ -19534,7 +19564,7 @@ return {
                 {
                   id = 2171,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 792,
@@ -19565,7 +19595,7 @@ return {
                 {
                   id = 2146,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -8,
                   y = 680,
@@ -19580,7 +19610,7 @@ return {
                 {
                   id = 2147,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 136,
                   y = 800,
@@ -19599,7 +19629,7 @@ return {
                 {
                   id = 2148,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 800,
@@ -19618,7 +19648,7 @@ return {
                 {
                   id = 2149,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 800,
@@ -19636,7 +19666,7 @@ return {
                 {
                   id = 2150,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 800,
@@ -19654,7 +19684,7 @@ return {
                 {
                   id = 2151,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 768,
@@ -19669,7 +19699,7 @@ return {
                 {
                   id = 2152,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 768,
@@ -19684,7 +19714,7 @@ return {
                 {
                   id = 2153,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 760,
@@ -19708,7 +19738,7 @@ return {
                 {
                   id = 2154,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 760,
@@ -19732,7 +19762,7 @@ return {
                 {
                   id = 2155,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 136,
                   y = 800,
@@ -19751,7 +19781,7 @@ return {
                 {
                   id = 2156,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 800,
@@ -19770,7 +19800,7 @@ return {
                 {
                   id = 2157,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 792,
@@ -19785,7 +19815,7 @@ return {
                 {
                   id = 2158,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 792,
@@ -19816,7 +19846,7 @@ return {
                 {
                   id = 1404,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -136,
                   y = 1000,
@@ -19831,7 +19861,7 @@ return {
                 {
                   id = 1405,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 72,
                   y = 992,
@@ -19848,7 +19878,7 @@ return {
                 {
                   id = 2172,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 72,
                   y = 992,
@@ -19865,7 +19895,7 @@ return {
                 {
                   id = 2173,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 1112,
@@ -19896,7 +19926,7 @@ return {
                 {
                   id = 2052,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 968,
@@ -19911,7 +19941,7 @@ return {
                 {
                   id = 2053,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 184,
                   y = 960,
@@ -19928,7 +19958,7 @@ return {
                 {
                   id = 2174,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 184,
                   y = 960,
@@ -19945,7 +19975,7 @@ return {
                 {
                   id = 2175,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 1112,
@@ -19976,7 +20006,7 @@ return {
                 {
                   id = 2125,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -136,
                   y = 808,
@@ -19991,7 +20021,7 @@ return {
                 {
                   id = 2126,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 72,
                   y = 800,
@@ -20008,7 +20038,7 @@ return {
                 {
                   id = 2178,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 72,
                   y = 800,
@@ -20025,7 +20055,7 @@ return {
                 {
                   id = 2179,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 1112,
@@ -20056,7 +20086,7 @@ return {
                 {
                   id = 2123,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = 872,
@@ -20071,7 +20101,7 @@ return {
                 {
                   id = 2124,
                   name = "",
-                  class = "HoneyCell",
+                  type = "HoneyCell",
                   shape = "rectangle",
                   x = 184,
                   y = 864,
@@ -20088,7 +20118,7 @@ return {
                 {
                   id = 2176,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 184,
                   y = 864,
@@ -20105,7 +20135,7 @@ return {
                 {
                   id = 2177,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 1112,
@@ -20136,7 +20166,7 @@ return {
                 {
                   id = 1458,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = 656,
@@ -20151,7 +20181,7 @@ return {
                 {
                   id = 1459,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 40,
                   y = 560,
@@ -20170,7 +20200,7 @@ return {
                 {
                   id = 1461,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 544,
@@ -20193,7 +20223,7 @@ return {
                 {
                   id = 1465,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 560,
@@ -20208,7 +20238,7 @@ return {
                 {
                   id = 1512,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 584,
@@ -20224,7 +20254,7 @@ return {
                 {
                   id = 1513,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 568,
@@ -20240,7 +20270,7 @@ return {
                 {
                   id = 1638,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 568,
@@ -20271,7 +20301,7 @@ return {
                 {
                   id = 1631,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 608,
@@ -20286,7 +20316,7 @@ return {
                 {
                   id = 1632,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 168,
                   y = 592,
@@ -20302,7 +20332,7 @@ return {
                 {
                   id = 1633,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 88,
                   y = 592,
@@ -20334,7 +20364,7 @@ return {
                 {
                   id = 1466,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = 592,
@@ -20349,7 +20379,7 @@ return {
                 {
                   id = 1467,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 184,
                   y = 456,
@@ -20368,7 +20398,7 @@ return {
                 {
                   id = 1507,
                   name = "",
-                  class = "AntHole",
+                  type = "AntHole",
                   shape = "rectangle",
                   x = 72,
                   y = 472,
@@ -20387,7 +20417,7 @@ return {
                 {
                   id = 1468,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 184,
                   y = 464,
@@ -20411,7 +20441,7 @@ return {
                 {
                   id = 1505,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 88,
                   y = 456,
@@ -20434,7 +20464,7 @@ return {
                 {
                   id = 1469,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 72,
                   y = 456,
@@ -20449,7 +20479,7 @@ return {
                 {
                   id = 1506,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 184,
                   y = 472,
@@ -20464,7 +20494,7 @@ return {
                 {
                   id = 1508,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 504,
@@ -20480,7 +20510,7 @@ return {
                 {
                   id = 1509,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 488,
@@ -20496,7 +20526,7 @@ return {
                 {
                   id = 1510,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 488,
@@ -20512,7 +20542,7 @@ return {
                 {
                   id = 1511,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 520,
@@ -20528,7 +20558,7 @@ return {
                 {
                   id = 1636,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 488,
@@ -20543,7 +20573,7 @@ return {
                 {
                   id = 1637,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 472,
@@ -20574,7 +20604,7 @@ return {
                 {
                   id = 1529,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 520,
@@ -20589,7 +20619,7 @@ return {
                 {
                   id = 1634,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  type = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 512,
@@ -20621,7 +20651,7 @@ return {
                 {
                   id = 1514,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = 424,
@@ -20636,7 +20666,7 @@ return {
                 {
                   id = 1517,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 152,
                   y = 400,
@@ -20652,7 +20682,7 @@ return {
                 {
                   id = 1635,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = 408,
@@ -20668,7 +20698,7 @@ return {
                 {
                   id = 1516,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 112,
                   y = 400,
@@ -20700,7 +20730,7 @@ return {
                 {
                   id = 1645,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -184,
                   y = 408,
@@ -20715,7 +20745,7 @@ return {
                 {
                   id = 1646,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 40,
                   y = 472,
@@ -20734,7 +20764,7 @@ return {
                 {
                   id = 1647,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 472,
@@ -20753,7 +20783,7 @@ return {
                 {
                   id = 1648,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 472,
@@ -20771,7 +20801,7 @@ return {
                 {
                   id = 1649,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 440,
@@ -20786,7 +20816,7 @@ return {
                 {
                   id = 1650,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 432,
@@ -20810,7 +20840,7 @@ return {
                 {
                   id = 1651,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 464,
@@ -20841,7 +20871,7 @@ return {
                 {
                   id = 1666,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 408,
@@ -20856,7 +20886,7 @@ return {
                 {
                   id = 1667,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 208,
                   y = 472,
@@ -20875,7 +20905,7 @@ return {
                 {
                   id = 1668,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 208,
                   y = 472,
@@ -20894,7 +20924,7 @@ return {
                 {
                   id = 1669,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 472,
@@ -20912,7 +20942,7 @@ return {
                 {
                   id = 1670,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 440,
@@ -20927,7 +20957,7 @@ return {
                 {
                   id = 1671,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 432,
@@ -20951,7 +20981,7 @@ return {
                 {
                   id = 1672,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 208,
                   y = 464,
@@ -20982,7 +21012,7 @@ return {
                 {
                   id = 1652,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -200,
                   y = 384,
@@ -20997,7 +21027,7 @@ return {
                 {
                   id = 1653,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 24,
                   y = 496,
@@ -21016,7 +21046,7 @@ return {
                 {
                   id = 1654,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = 496,
@@ -21035,7 +21065,7 @@ return {
                 {
                   id = 1655,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 496,
@@ -21053,7 +21083,7 @@ return {
                 {
                   id = 1656,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 464,
@@ -21068,7 +21098,7 @@ return {
                 {
                   id = 1657,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 456,
@@ -21092,7 +21122,7 @@ return {
                 {
                   id = 1658,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 24,
                   y = 488,
@@ -21123,7 +21153,7 @@ return {
                 {
                   id = 1659,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -120,
                   y = 384,
@@ -21138,7 +21168,7 @@ return {
                 {
                   id = 1660,
                   name = "",
-                  class = "WaspShooter",
+                  type = "WaspShooter",
                   shape = "rectangle",
                   x = 232,
                   y = 496,
@@ -21157,7 +21187,7 @@ return {
                 {
                   id = 1661,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 232,
                   y = 496,
@@ -21176,7 +21206,7 @@ return {
                 {
                   id = 1662,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 496,
@@ -21194,7 +21224,7 @@ return {
                 {
                   id = 1663,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 464,
@@ -21209,7 +21239,7 @@ return {
                 {
                   id = 1664,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 456,
@@ -21233,7 +21263,7 @@ return {
                 {
                   id = 1665,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 232,
                   y = 488,
@@ -21264,7 +21294,7 @@ return {
                 {
                   id = 1705,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 344,
@@ -21279,7 +21309,7 @@ return {
                 {
                   id = 1706,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 16,
                   y = 456,
@@ -21298,7 +21328,7 @@ return {
                 {
                   id = 1713,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 240,
                   y = 456,
@@ -21317,7 +21347,7 @@ return {
                 {
                   id = 1707,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = 456,
@@ -21335,7 +21365,7 @@ return {
                 {
                   id = 1712,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 240,
                   y = 456,
@@ -21353,7 +21383,7 @@ return {
                 {
                   id = 1708,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 456,
@@ -21371,7 +21401,7 @@ return {
                 {
                   id = 1711,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 456,
@@ -21389,7 +21419,7 @@ return {
                 {
                   id = 1709,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 424,
@@ -21404,7 +21434,7 @@ return {
                 {
                   id = 1714,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 424,
@@ -21419,7 +21449,7 @@ return {
                 {
                   id = 1710,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 416,
@@ -21434,7 +21464,7 @@ return {
                 {
                   id = 1715,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 416,
@@ -21465,7 +21495,7 @@ return {
                 {
                   id = 1727,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 328,
@@ -21480,7 +21510,7 @@ return {
                 {
                   id = 1728,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 56,
                   y = 408,
@@ -21499,7 +21529,7 @@ return {
                 {
                   id = 1729,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 200,
                   y = 408,
@@ -21518,7 +21548,7 @@ return {
                 {
                   id = 1730,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 56,
                   y = 408,
@@ -21536,7 +21566,7 @@ return {
                 {
                   id = 1731,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 200,
                   y = 408,
@@ -21554,7 +21584,7 @@ return {
                 {
                   id = 1732,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 408,
@@ -21572,7 +21602,7 @@ return {
                 {
                   id = 1733,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 408,
@@ -21590,7 +21620,7 @@ return {
                 {
                   id = 1734,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 376,
@@ -21605,7 +21635,7 @@ return {
                 {
                   id = 1735,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 376,
@@ -21620,7 +21650,7 @@ return {
                 {
                   id = 1736,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 56,
                   y = 368,
@@ -21635,7 +21665,7 @@ return {
                 {
                   id = 1737,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 200,
                   y = 368,
@@ -21666,7 +21696,7 @@ return {
                 {
                   id = 1749,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 312,
@@ -21681,7 +21711,7 @@ return {
                 {
                   id = 1750,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 112,
                   y = 384,
@@ -21700,7 +21730,7 @@ return {
                 {
                   id = 1751,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 144,
                   y = 384,
@@ -21719,7 +21749,7 @@ return {
                 {
                   id = 1752,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 112,
                   y = 384,
@@ -21737,7 +21767,7 @@ return {
                 {
                   id = 1753,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 144,
                   y = 384,
@@ -21755,7 +21785,7 @@ return {
                 {
                   id = 1754,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 384,
@@ -21773,7 +21803,7 @@ return {
                 {
                   id = 1755,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 384,
@@ -21791,7 +21821,7 @@ return {
                 {
                   id = 1756,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 352,
@@ -21806,7 +21836,7 @@ return {
                 {
                   id = 1757,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 352,
@@ -21821,7 +21851,7 @@ return {
                 {
                   id = 1758,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 112,
                   y = 344,
@@ -21836,7 +21866,7 @@ return {
                 {
                   id = 1759,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 144,
                   y = 344,
@@ -21867,7 +21897,7 @@ return {
                 {
                   id = 1760,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 296,
@@ -21882,7 +21912,7 @@ return {
                 {
                   id = 1761,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 80,
                   y = 360,
@@ -21901,7 +21931,7 @@ return {
                 {
                   id = 1762,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 176,
                   y = 360,
@@ -21920,7 +21950,7 @@ return {
                 {
                   id = 1763,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 80,
                   y = 360,
@@ -21938,7 +21968,7 @@ return {
                 {
                   id = 1764,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = 360,
@@ -21956,7 +21986,7 @@ return {
                 {
                   id = 1765,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 360,
@@ -21974,7 +22004,7 @@ return {
                 {
                   id = 1766,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 360,
@@ -21992,7 +22022,7 @@ return {
                 {
                   id = 1767,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 328,
@@ -22007,7 +22037,7 @@ return {
                 {
                   id = 1768,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 328,
@@ -22022,7 +22052,7 @@ return {
                 {
                   id = 1769,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = 320,
@@ -22037,7 +22067,7 @@ return {
                 {
                   id = 1770,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = 320,
@@ -22068,7 +22098,7 @@ return {
                 {
                   id = 1782,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -104,
                   y = 280,
@@ -22083,7 +22113,7 @@ return {
                 {
                   id = 1783,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 40,
                   y = 384,
@@ -22102,7 +22132,7 @@ return {
                 {
                   id = 1784,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 216,
                   y = 384,
@@ -22121,7 +22151,7 @@ return {
                 {
                   id = 1785,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 40,
                   y = 384,
@@ -22139,7 +22169,7 @@ return {
                 {
                   id = 1786,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 216,
                   y = 384,
@@ -22157,7 +22187,7 @@ return {
                 {
                   id = 1787,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 384,
@@ -22175,7 +22205,7 @@ return {
                 {
                   id = 1788,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 384,
@@ -22193,7 +22223,7 @@ return {
                 {
                   id = 1789,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 352,
@@ -22208,7 +22238,7 @@ return {
                 {
                   id = 1790,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 352,
@@ -22223,7 +22253,7 @@ return {
                 {
                   id = 1791,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 344,
@@ -22238,7 +22268,7 @@ return {
                 {
                   id = 1792,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 344,
@@ -22269,7 +22299,7 @@ return {
                 {
                   id = 1835,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -152,
                   y = 208,
@@ -22284,7 +22314,7 @@ return {
                 {
                   id = 1836,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  type = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = 192,
@@ -22316,7 +22346,7 @@ return {
                 {
                   id = 1837,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -184,
                   y = 144,
@@ -22331,7 +22361,7 @@ return {
                 {
                   id = 1838,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  type = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 136,
                   y = 128,
@@ -22363,7 +22393,7 @@ return {
                 {
                   id = 863,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = 144,
@@ -22378,7 +22408,7 @@ return {
                 {
                   id = 1862,
                   name = "",
-                  class = "WaspBoss",
+                  type = "WaspBoss",
                   shape = "rectangle",
                   x = 128,
                   y = 440,
@@ -22396,7 +22426,7 @@ return {
                 {
                   id = 1863,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -80,
                   y = 48,
@@ -22416,7 +22446,7 @@ return {
                 {
                   id = 1864,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = -32,
                   y = 192,
@@ -22436,7 +22466,7 @@ return {
                 {
                   id = 1868,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 160,
@@ -22454,7 +22484,7 @@ return {
                 {
                   id = 1871,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 160,
@@ -22472,7 +22502,7 @@ return {
                 {
                   id = 1869,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 160,
@@ -22490,7 +22520,7 @@ return {
                 {
                   id = 1870,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 160,
@@ -22508,7 +22538,7 @@ return {
                 {
                   id = 1872,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 168,
@@ -22532,7 +22562,7 @@ return {
                 {
                   id = 1875,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 160,
@@ -22556,7 +22586,7 @@ return {
                 {
                   id = 1873,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 168,
@@ -22580,7 +22610,7 @@ return {
                 {
                   id = 1874,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 160,
@@ -22604,7 +22634,7 @@ return {
                 {
                   id = 1876,
                   name = "ChooseSweepPath",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 160,
@@ -22624,7 +22654,7 @@ return {
                 {
                   id = 1879,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 352,
@@ -22644,7 +22674,7 @@ return {
                 {
                   id = 1881,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = 352,
@@ -22664,7 +22694,7 @@ return {
                 {
                   id = 1891,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 40,
                   y = 248,
@@ -22684,7 +22714,7 @@ return {
                 {
                   id = 1894,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 120,
                   y = 168,
@@ -22704,7 +22734,7 @@ return {
                 {
                   id = 1895,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 136,
                   y = 168,
@@ -22724,7 +22754,7 @@ return {
                 {
                   id = 1892,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 216,
                   y = 248,
@@ -22744,7 +22774,7 @@ return {
                 {
                   id = 1882,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 16,
                   y = 160,
@@ -22764,7 +22794,7 @@ return {
                 {
                   id = 1878,
                   name = "ChooseSweepPath",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = 160,
@@ -22784,7 +22814,7 @@ return {
                 {
                   id = 1880,
                   name = "ChargeAndLayEggs",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 240,
                   y = 160,
@@ -22804,7 +22834,7 @@ return {
                 {
                   id = 1883,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = 224,
@@ -22819,7 +22849,7 @@ return {
                 {
                   id = 1884,
                   name = "startpoint",
-                  class = "",
+                  type = "",
                   shape = "point",
                   x = 128,
                   y = 96,
@@ -22836,7 +22866,7 @@ return {
                 {
                   id = 1896,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 160,
@@ -22854,7 +22884,7 @@ return {
                 {
                   id = 1897,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = 160,
@@ -22872,7 +22902,7 @@ return {
                 {
                   id = 1898,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 160,
@@ -22890,7 +22920,7 @@ return {
                 {
                   id = 1899,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = 160,
@@ -22924,7 +22954,7 @@ return {
                 {
                   id = 562,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -224,
@@ -22955,7 +22985,7 @@ return {
                 {
                   id = 550,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = -296,
@@ -22970,7 +23000,7 @@ return {
                 {
                   id = 551,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 96,
                   y = -240,
@@ -22989,7 +23019,7 @@ return {
                 {
                   id = 552,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 96,
                   y = -240,
@@ -23007,7 +23037,7 @@ return {
                 {
                   id = 553,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -240,
@@ -23025,7 +23055,7 @@ return {
                 {
                   id = 554,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -272,
@@ -23040,7 +23070,7 @@ return {
                 {
                   id = 555,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -280,
@@ -23071,7 +23101,7 @@ return {
                 {
                   id = 556,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = -312,
@@ -23086,7 +23116,7 @@ return {
                 {
                   id = 557,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 128,
                   y = -256,
@@ -23105,7 +23135,7 @@ return {
                 {
                   id = 558,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = -256,
@@ -23123,7 +23153,7 @@ return {
                 {
                   id = 559,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = -256,
@@ -23141,7 +23171,7 @@ return {
                 {
                   id = 560,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = -288,
@@ -23156,7 +23186,7 @@ return {
                 {
                   id = 561,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = -296,
@@ -23187,7 +23217,7 @@ return {
                 {
                   id = 569,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = -328,
@@ -23202,7 +23232,7 @@ return {
                 {
                   id = 570,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 160,
                   y = -272,
@@ -23221,7 +23251,7 @@ return {
                 {
                   id = 571,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 160,
                   y = -272,
@@ -23239,7 +23269,7 @@ return {
                 {
                   id = 572,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -272,
@@ -23257,7 +23287,7 @@ return {
                 {
                   id = 573,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -304,
@@ -23272,7 +23302,7 @@ return {
                 {
                   id = 574,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -312,
@@ -23303,7 +23333,7 @@ return {
                 {
                   id = 563,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = -360,
@@ -23318,7 +23348,7 @@ return {
                 {
                   id = 564,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 96,
                   y = -304,
@@ -23337,7 +23367,7 @@ return {
                 {
                   id = 565,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 96,
                   y = -304,
@@ -23355,7 +23385,7 @@ return {
                 {
                   id = 566,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -304,
@@ -23373,7 +23403,7 @@ return {
                 {
                   id = 567,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -336,
@@ -23388,7 +23418,7 @@ return {
                 {
                   id = 568,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 96,
                   y = -344,
@@ -23419,7 +23449,7 @@ return {
                 {
                   id = 581,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = -376,
@@ -23434,7 +23464,7 @@ return {
                 {
                   id = 582,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 64,
                   y = -288,
@@ -23453,7 +23483,7 @@ return {
                 {
                   id = 583,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 64,
                   y = -288,
@@ -23471,7 +23501,7 @@ return {
                 {
                   id = 584,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = -288,
@@ -23489,7 +23519,7 @@ return {
                 {
                   id = 585,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = -320,
@@ -23504,7 +23534,7 @@ return {
                 {
                   id = 586,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 64,
                   y = -328,
@@ -23535,7 +23565,7 @@ return {
                 {
                   id = 575,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -72,
                   y = -392,
@@ -23550,7 +23580,7 @@ return {
                 {
                   id = 576,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 32,
                   y = -272,
@@ -23569,7 +23599,7 @@ return {
                 {
                   id = 577,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = -272,
@@ -23587,7 +23617,7 @@ return {
                 {
                   id = 578,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -272,
@@ -23605,7 +23635,7 @@ return {
                 {
                   id = 579,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -304,
@@ -23620,7 +23650,7 @@ return {
                 {
                   id = 580,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -312,
@@ -23651,7 +23681,7 @@ return {
                 {
                   id = 611,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = -408,
@@ -23666,7 +23696,7 @@ return {
                 {
                   id = 612,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 160,
                   y = -352,
@@ -23685,7 +23715,7 @@ return {
                 {
                   id = 613,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 160,
                   y = -352,
@@ -23703,7 +23733,7 @@ return {
                 {
                   id = 614,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -352,
@@ -23721,7 +23751,7 @@ return {
                 {
                   id = 615,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -384,
@@ -23736,7 +23766,7 @@ return {
                 {
                   id = 616,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 160,
                   y = -392,
@@ -23767,7 +23797,7 @@ return {
                 {
                   id = 605,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = -424,
@@ -23782,7 +23812,7 @@ return {
                 {
                   id = 606,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 192,
                   y = -336,
@@ -23801,7 +23831,7 @@ return {
                 {
                   id = 607,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 192,
                   y = -336,
@@ -23819,7 +23849,7 @@ return {
                 {
                   id = 608,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = -336,
@@ -23837,7 +23867,7 @@ return {
                 {
                   id = 609,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = -368,
@@ -23852,7 +23882,7 @@ return {
                 {
                   id = 610,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 192,
                   y = -376,
@@ -23883,7 +23913,7 @@ return {
                 {
                   id = 599,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -24,
                   y = -440,
@@ -23898,7 +23928,7 @@ return {
                 {
                   id = 600,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 224,
                   y = -320,
@@ -23917,7 +23947,7 @@ return {
                 {
                   id = 601,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = -320,
@@ -23935,7 +23965,7 @@ return {
                 {
                   id = 602,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -320,
@@ -23953,7 +23983,7 @@ return {
                 {
                   id = 603,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -352,
@@ -23968,7 +23998,7 @@ return {
                 {
                   id = 604,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -360,
@@ -23999,7 +24029,7 @@ return {
                 {
                   id = 641,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = -440,
@@ -24015,7 +24045,7 @@ return {
                 {
                   id = 642,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -48,
                   y = -424,
@@ -24046,7 +24076,7 @@ return {
                 {
                   id = 617,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -80,
                   y = -520,
@@ -24061,7 +24091,7 @@ return {
                 {
                   id = 618,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 32,
                   y = -408,
@@ -24080,7 +24110,7 @@ return {
                 {
                   id = 619,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 32,
                   y = -408,
@@ -24098,7 +24128,7 @@ return {
                 {
                   id = 620,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -408,
@@ -24116,7 +24146,7 @@ return {
                 {
                   id = 621,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -440,
@@ -24131,7 +24161,7 @@ return {
                 {
                   id = 622,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 32,
                   y = -448,
@@ -24162,7 +24192,7 @@ return {
                 {
                   id = 629,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -528,
@@ -24177,7 +24207,7 @@ return {
                 {
                   id = 630,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 224,
                   y = -432,
@@ -24196,7 +24226,7 @@ return {
                 {
                   id = 631,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 224,
                   y = -432,
@@ -24214,7 +24244,7 @@ return {
                 {
                   id = 632,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -432,
@@ -24232,7 +24262,7 @@ return {
                 {
                   id = 633,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -464,
@@ -24247,7 +24277,7 @@ return {
                 {
                   id = 634,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 224,
                   y = -472,
@@ -24278,7 +24308,7 @@ return {
                 {
                   id = 623,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -64,
                   y = -544,
@@ -24293,7 +24323,7 @@ return {
                 {
                   id = 624,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 80,
                   y = -328,
@@ -24312,7 +24342,7 @@ return {
                 {
                   id = 625,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 80,
                   y = -328,
@@ -24330,7 +24360,7 @@ return {
                 {
                   id = 626,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = -328,
@@ -24348,7 +24378,7 @@ return {
                 {
                   id = 627,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = -360,
@@ -24363,7 +24393,7 @@ return {
                 {
                   id = 628,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 80,
                   y = -368,
@@ -24394,7 +24424,7 @@ return {
                 {
                   id = 635,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -32,
                   y = -552,
@@ -24409,7 +24439,7 @@ return {
                 {
                   id = 636,
                   name = "",
-                  class = "Wasp",
+                  type = "Wasp",
                   shape = "rectangle",
                   x = 176,
                   y = -352,
@@ -24428,7 +24458,7 @@ return {
                 {
                   id = 637,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 176,
                   y = -352,
@@ -24446,7 +24476,7 @@ return {
                 {
                   id = 638,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = -352,
@@ -24464,7 +24494,7 @@ return {
                 {
                   id = 639,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = -384,
@@ -24479,7 +24509,7 @@ return {
                 {
                   id = 640,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 176,
                   y = -392,
@@ -24510,7 +24540,7 @@ return {
                 {
                   id = 729,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = -792,
@@ -24526,7 +24556,7 @@ return {
                 {
                   id = 731,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -80,
                   y = -792,
@@ -24542,7 +24572,7 @@ return {
                 {
                   id = 733,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -192,
                   y = -792,
@@ -24558,7 +24588,7 @@ return {
                 {
                   id = 735,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -32,
                   y = -792,
@@ -24574,7 +24604,7 @@ return {
                 {
                   id = 737,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -144,
                   y = -792,
@@ -24590,7 +24620,7 @@ return {
                 {
                   id = 739,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -96,
                   y = -792,
@@ -24606,7 +24636,7 @@ return {
                 {
                   id = 741,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -208,
                   y = -792,
@@ -24622,7 +24652,7 @@ return {
                 {
                   id = 743,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -48,
                   y = -792,
@@ -24638,7 +24668,7 @@ return {
                 {
                   id = 745,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -160,
                   y = -792,
@@ -24654,7 +24684,7 @@ return {
                 {
                   id = 747,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -112,
                   y = -792,
@@ -24670,7 +24700,7 @@ return {
                 {
                   id = 749,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -224,
                   y = -792,
@@ -24686,7 +24716,7 @@ return {
                 {
                   id = 751,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -64,
                   y = -792,
@@ -24702,7 +24732,7 @@ return {
                 {
                   id = 753,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -176,
                   y = -792,
@@ -24718,7 +24748,7 @@ return {
                 {
                   id = 755,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -128,
                   y = -792,
@@ -24734,7 +24764,7 @@ return {
                 {
                   id = 757,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -240,
                   y = -792,
@@ -24750,7 +24780,7 @@ return {
                 {
                   id = 761,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = -744,
@@ -24768,7 +24798,7 @@ return {
                 {
                   id = 793,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = -792,
@@ -24799,7 +24829,7 @@ return {
                 {
                   id = 829,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -152,
                   y = -616,
@@ -24815,7 +24845,7 @@ return {
                 {
                   id = 830,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -32,
                   y = -616,
@@ -24831,7 +24861,7 @@ return {
                 {
                   id = 832,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -80,
                   y = -616,
@@ -24847,7 +24877,7 @@ return {
                 {
                   id = 835,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -128,
                   y = -616,
@@ -24863,7 +24893,7 @@ return {
                 {
                   id = 837,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -176,
                   y = -616,
@@ -24879,7 +24909,7 @@ return {
                 {
                   id = 838,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -56,
                   y = -616,
@@ -24895,7 +24925,7 @@ return {
                 {
                   id = 840,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -104,
                   y = -616,
@@ -24911,7 +24941,7 @@ return {
                 {
                   id = 841,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -200,
                   y = -616,
@@ -24927,7 +24957,7 @@ return {
                 {
                   id = 842,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = -568,
@@ -24945,7 +24975,7 @@ return {
                 {
                   id = 843,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -616,
@@ -24976,7 +25006,7 @@ return {
                 {
                   id = 844,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 408,
                   y = -664,
@@ -24992,7 +25022,7 @@ return {
                 {
                   id = 845,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -664,
@@ -25008,7 +25038,7 @@ return {
                 {
                   id = 846,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -664,
@@ -25024,7 +25054,7 @@ return {
                 {
                   id = 847,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -664,
@@ -25040,7 +25070,7 @@ return {
                 {
                   id = 848,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -664,
@@ -25056,7 +25086,7 @@ return {
                 {
                   id = 849,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 312,
                   y = -664,
@@ -25072,7 +25102,7 @@ return {
                 {
                   id = 850,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 360,
                   y = -664,
@@ -25088,7 +25118,7 @@ return {
                 {
                   id = 851,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 456,
                   y = -664,
@@ -25104,7 +25134,7 @@ return {
                 {
                   id = 852,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -664,
@@ -25122,7 +25152,7 @@ return {
                 {
                   id = 853,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -664,
@@ -25137,7 +25167,7 @@ return {
                 {
                   id = 854,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 408,
                   y = -568,
@@ -25153,7 +25183,7 @@ return {
                 {
                   id = 855,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -568,
@@ -25169,7 +25199,7 @@ return {
                 {
                   id = 856,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -568,
@@ -25185,7 +25215,7 @@ return {
                 {
                   id = 857,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -568,
@@ -25201,7 +25231,7 @@ return {
                 {
                   id = 858,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -568,
@@ -25217,7 +25247,7 @@ return {
                 {
                   id = 859,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 312,
                   y = -568,
@@ -25233,7 +25263,7 @@ return {
                 {
                   id = 860,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 360,
                   y = -568,
@@ -25249,7 +25279,7 @@ return {
                 {
                   id = 861,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 456,
                   y = -568,
@@ -25265,7 +25295,7 @@ return {
                 {
                   id = 862,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -568,
@@ -25299,7 +25329,7 @@ return {
                 {
                   id = 794,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = -920,
@@ -25316,7 +25346,7 @@ return {
                 {
                   id = 795,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -8,
                   y = -936,
@@ -25333,7 +25363,7 @@ return {
                 {
                   id = 796,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -80,
                   y = -920,
@@ -25350,7 +25380,7 @@ return {
                 {
                   id = 797,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -72,
                   y = -936,
@@ -25367,7 +25397,7 @@ return {
                 {
                   id = 798,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -192,
                   y = -920,
@@ -25384,7 +25414,7 @@ return {
                 {
                   id = 799,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -184,
                   y = -936,
@@ -25401,7 +25431,7 @@ return {
                 {
                   id = 800,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -32,
                   y = -920,
@@ -25418,7 +25448,7 @@ return {
                 {
                   id = 801,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -24,
                   y = -936,
@@ -25435,7 +25465,7 @@ return {
                 {
                   id = 802,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -144,
                   y = -920,
@@ -25452,7 +25482,7 @@ return {
                 {
                   id = 803,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -136,
                   y = -936,
@@ -25469,7 +25499,7 @@ return {
                 {
                   id = 804,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -96,
                   y = -920,
@@ -25486,7 +25516,7 @@ return {
                 {
                   id = 805,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -88,
                   y = -936,
@@ -25503,7 +25533,7 @@ return {
                 {
                   id = 806,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -208,
                   y = -920,
@@ -25520,7 +25550,7 @@ return {
                 {
                   id = 807,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -200,
                   y = -936,
@@ -25537,7 +25567,7 @@ return {
                 {
                   id = 808,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -48,
                   y = -920,
@@ -25554,7 +25584,7 @@ return {
                 {
                   id = 809,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -40,
                   y = -936,
@@ -25571,7 +25601,7 @@ return {
                 {
                   id = 810,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -160,
                   y = -920,
@@ -25588,7 +25618,7 @@ return {
                 {
                   id = 811,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -152,
                   y = -936,
@@ -25605,7 +25635,7 @@ return {
                 {
                   id = 812,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -112,
                   y = -920,
@@ -25622,7 +25652,7 @@ return {
                 {
                   id = 813,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -104,
                   y = -936,
@@ -25639,7 +25669,7 @@ return {
                 {
                   id = 814,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -224,
                   y = -920,
@@ -25656,7 +25686,7 @@ return {
                 {
                   id = 815,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -216,
                   y = -936,
@@ -25673,7 +25703,7 @@ return {
                 {
                   id = 816,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -64,
                   y = -920,
@@ -25690,7 +25720,7 @@ return {
                 {
                   id = 817,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -56,
                   y = -936,
@@ -25707,7 +25737,7 @@ return {
                 {
                   id = 818,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -176,
                   y = -920,
@@ -25724,7 +25754,7 @@ return {
                 {
                   id = 819,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -168,
                   y = -936,
@@ -25741,7 +25771,7 @@ return {
                 {
                   id = 820,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -128,
                   y = -920,
@@ -25758,7 +25788,7 @@ return {
                 {
                   id = 821,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -120,
                   y = -936,
@@ -25775,7 +25805,7 @@ return {
                 {
                   id = 822,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -240,
                   y = -920,
@@ -25792,7 +25822,7 @@ return {
                 {
                   id = 823,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -232,
                   y = -936,
@@ -25809,7 +25839,7 @@ return {
                 {
                   id = 824,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = -872,
@@ -25827,7 +25857,7 @@ return {
                 {
                   id = 825,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 24,
                   y = -888,
@@ -25845,7 +25875,7 @@ return {
                 {
                   id = 826,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = -968,
@@ -25876,7 +25906,7 @@ return {
                 {
                   id = 728,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -56,
                   y = -840,
@@ -25891,7 +25921,7 @@ return {
                 {
                   id = 759,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = -840,
@@ -25907,7 +25937,7 @@ return {
                 {
                   id = 760,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = -744,
@@ -25923,7 +25953,7 @@ return {
                 {
                   id = 763,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -792,
@@ -25941,7 +25971,7 @@ return {
                 {
                   id = 764,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -696,
@@ -25959,7 +25989,7 @@ return {
                 {
                   id = 765,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -840,
@@ -25975,7 +26005,7 @@ return {
                 {
                   id = 766,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -744,
@@ -25991,7 +26021,7 @@ return {
                 {
                   id = 767,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 448,
                   y = -840,
@@ -26007,7 +26037,7 @@ return {
                 {
                   id = 768,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 448,
                   y = -744,
@@ -26023,7 +26053,7 @@ return {
                 {
                   id = 769,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -840,
@@ -26039,7 +26069,7 @@ return {
                 {
                   id = 770,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -744,
@@ -26055,7 +26085,7 @@ return {
                 {
                   id = 771,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 400,
                   y = -840,
@@ -26071,7 +26101,7 @@ return {
                 {
                   id = 772,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 400,
                   y = -744,
@@ -26087,7 +26117,7 @@ return {
                 {
                   id = 773,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 352,
                   y = -840,
@@ -26103,7 +26133,7 @@ return {
                 {
                   id = 774,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 352,
                   y = -744,
@@ -26119,7 +26149,7 @@ return {
                 {
                   id = 775,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 464,
                   y = -840,
@@ -26135,7 +26165,7 @@ return {
                 {
                   id = 776,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 464,
                   y = -744,
@@ -26151,7 +26181,7 @@ return {
                 {
                   id = 777,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 304,
                   y = -840,
@@ -26167,7 +26197,7 @@ return {
                 {
                   id = 778,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 304,
                   y = -744,
@@ -26183,7 +26213,7 @@ return {
                 {
                   id = 779,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 416,
                   y = -840,
@@ -26199,7 +26229,7 @@ return {
                 {
                   id = 780,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 416,
                   y = -744,
@@ -26215,7 +26245,7 @@ return {
                 {
                   id = 781,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 368,
                   y = -840,
@@ -26231,7 +26261,7 @@ return {
                 {
                   id = 782,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 368,
                   y = -744,
@@ -26247,7 +26277,7 @@ return {
                 {
                   id = 783,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 480,
                   y = -840,
@@ -26263,7 +26293,7 @@ return {
                 {
                   id = 784,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 480,
                   y = -744,
@@ -26279,7 +26309,7 @@ return {
                 {
                   id = 785,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 320,
                   y = -840,
@@ -26295,7 +26325,7 @@ return {
                 {
                   id = 786,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 320,
                   y = -744,
@@ -26311,7 +26341,7 @@ return {
                 {
                   id = 787,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -840,
@@ -26327,7 +26357,7 @@ return {
                 {
                   id = 788,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -744,
@@ -26343,7 +26373,7 @@ return {
                 {
                   id = 789,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -840,
@@ -26359,7 +26389,7 @@ return {
                 {
                   id = 790,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -744,
@@ -26375,7 +26405,7 @@ return {
                 {
                   id = 791,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 496,
                   y = -840,
@@ -26391,7 +26421,7 @@ return {
                 {
                   id = 792,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 496,
                   y = -744,
@@ -26423,7 +26453,7 @@ return {
                 {
                   id = 661,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1096,
@@ -26438,7 +26468,7 @@ return {
                 {
                   id = 662,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = -968,
@@ -26454,7 +26484,7 @@ return {
                 {
                   id = 696,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -16,
                   y = -1064,
@@ -26470,7 +26500,7 @@ return {
                 {
                   id = 674,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -80,
                   y = -968,
@@ -26486,7 +26516,7 @@ return {
                 {
                   id = 697,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -80,
                   y = -1064,
@@ -26502,7 +26532,7 @@ return {
                 {
                   id = 675,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -192,
                   y = -968,
@@ -26518,7 +26548,7 @@ return {
                 {
                   id = 698,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -192,
                   y = -1064,
@@ -26534,7 +26564,7 @@ return {
                 {
                   id = 668,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -32,
                   y = -968,
@@ -26550,7 +26580,7 @@ return {
                 {
                   id = 699,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -32,
                   y = -1064,
@@ -26566,7 +26596,7 @@ return {
                 {
                   id = 681,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -144,
                   y = -968,
@@ -26582,7 +26612,7 @@ return {
                 {
                   id = 700,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -144,
                   y = -1064,
@@ -26598,7 +26628,7 @@ return {
                 {
                   id = 673,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -96,
                   y = -968,
@@ -26614,7 +26644,7 @@ return {
                 {
                   id = 701,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -96,
                   y = -1064,
@@ -26630,7 +26660,7 @@ return {
                 {
                   id = 676,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -208,
                   y = -968,
@@ -26646,7 +26676,7 @@ return {
                 {
                   id = 702,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -208,
                   y = -1064,
@@ -26662,7 +26692,7 @@ return {
                 {
                   id = 669,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -48,
                   y = -968,
@@ -26678,7 +26708,7 @@ return {
                 {
                   id = 703,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -48,
                   y = -1064,
@@ -26694,7 +26724,7 @@ return {
                 {
                   id = 680,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -160,
                   y = -968,
@@ -26710,7 +26740,7 @@ return {
                 {
                   id = 704,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -160,
                   y = -1064,
@@ -26726,7 +26756,7 @@ return {
                 {
                   id = 672,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -112,
                   y = -968,
@@ -26742,7 +26772,7 @@ return {
                 {
                   id = 705,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -112,
                   y = -1064,
@@ -26758,7 +26788,7 @@ return {
                 {
                   id = 677,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -224,
                   y = -968,
@@ -26774,7 +26804,7 @@ return {
                 {
                   id = 706,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -224,
                   y = -1064,
@@ -26790,7 +26820,7 @@ return {
                 {
                   id = 670,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -64,
                   y = -968,
@@ -26806,7 +26836,7 @@ return {
                 {
                   id = 707,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -64,
                   y = -1064,
@@ -26822,7 +26852,7 @@ return {
                 {
                   id = 679,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -176,
                   y = -968,
@@ -26838,7 +26868,7 @@ return {
                 {
                   id = 708,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -176,
                   y = -1064,
@@ -26854,7 +26884,7 @@ return {
                 {
                   id = 671,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -128,
                   y = -968,
@@ -26870,7 +26900,7 @@ return {
                 {
                   id = 709,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -128,
                   y = -1064,
@@ -26886,7 +26916,7 @@ return {
                 {
                   id = 678,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -240,
                   y = -968,
@@ -26902,7 +26932,7 @@ return {
                 {
                   id = 710,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = -240,
                   y = -1064,
@@ -26918,7 +26948,7 @@ return {
                 {
                   id = 663,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = -984,
@@ -26934,7 +26964,7 @@ return {
                 {
                   id = 711,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 272,
                   y = -1080,
@@ -26950,7 +26980,7 @@ return {
                 {
                   id = 666,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = -920,
@@ -26968,7 +26998,7 @@ return {
                 {
                   id = 712,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 16,
                   y = -1016,
@@ -26986,7 +27016,7 @@ return {
                 {
                   id = 667,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -936,
@@ -27004,7 +27034,7 @@ return {
                 {
                   id = 713,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 272,
                   y = -1032,
@@ -27022,7 +27052,7 @@ return {
                 {
                   id = 682,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -984,
@@ -27038,7 +27068,7 @@ return {
                 {
                   id = 714,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 336,
                   y = -1080,
@@ -27054,7 +27084,7 @@ return {
                 {
                   id = 683,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 448,
                   y = -984,
@@ -27070,7 +27100,7 @@ return {
                 {
                   id = 715,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 448,
                   y = -1080,
@@ -27086,7 +27116,7 @@ return {
                 {
                   id = 684,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -984,
@@ -27102,7 +27132,7 @@ return {
                 {
                   id = 716,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 288,
                   y = -1080,
@@ -27118,7 +27148,7 @@ return {
                 {
                   id = 685,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 400,
                   y = -984,
@@ -27134,7 +27164,7 @@ return {
                 {
                   id = 717,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 400,
                   y = -1080,
@@ -27150,7 +27180,7 @@ return {
                 {
                   id = 686,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 352,
                   y = -984,
@@ -27166,7 +27196,7 @@ return {
                 {
                   id = 718,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 352,
                   y = -1080,
@@ -27182,7 +27212,7 @@ return {
                 {
                   id = 687,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 464,
                   y = -984,
@@ -27198,7 +27228,7 @@ return {
                 {
                   id = 719,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 464,
                   y = -1080,
@@ -27214,7 +27244,7 @@ return {
                 {
                   id = 688,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 304,
                   y = -984,
@@ -27230,7 +27260,7 @@ return {
                 {
                   id = 720,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 304,
                   y = -1080,
@@ -27246,7 +27276,7 @@ return {
                 {
                   id = 689,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 416,
                   y = -984,
@@ -27262,7 +27292,7 @@ return {
                 {
                   id = 721,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 416,
                   y = -1080,
@@ -27278,7 +27308,7 @@ return {
                 {
                   id = 690,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 368,
                   y = -984,
@@ -27294,7 +27324,7 @@ return {
                 {
                   id = 722,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 368,
                   y = -1080,
@@ -27310,7 +27340,7 @@ return {
                 {
                   id = 691,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 480,
                   y = -984,
@@ -27326,7 +27356,7 @@ return {
                 {
                   id = 723,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 480,
                   y = -1080,
@@ -27342,7 +27372,7 @@ return {
                 {
                   id = 692,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 320,
                   y = -984,
@@ -27358,7 +27388,7 @@ return {
                 {
                   id = 724,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 320,
                   y = -1080,
@@ -27374,7 +27404,7 @@ return {
                 {
                   id = 693,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -984,
@@ -27390,7 +27420,7 @@ return {
                 {
                   id = 725,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 432,
                   y = -1080,
@@ -27406,7 +27436,7 @@ return {
                 {
                   id = 694,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -984,
@@ -27422,7 +27452,7 @@ return {
                 {
                   id = 726,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 384,
                   y = -1080,
@@ -27438,7 +27468,7 @@ return {
                 {
                   id = 695,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 496,
                   y = -984,
@@ -27454,7 +27484,7 @@ return {
                 {
                   id = 727,
                   name = "",
-                  class = "AcidAnt",
+                  type = "AcidAnt",
                   shape = "rectangle",
                   x = 496,
                   y = -1080,
@@ -27486,7 +27516,7 @@ return {
                 {
                   id = 587,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1208,
@@ -27501,7 +27531,7 @@ return {
                 {
                   id = 589,
                   name = "",
-                  class = "Path",
+                  type = "Path",
                   shape = "polyline",
                   x = 128,
                   y = -1144,
@@ -27519,7 +27549,7 @@ return {
                 {
                   id = 590,
                   name = "",
-                  class = "Beetle",
+                  type = "Beetle",
                   shape = "rectangle",
                   x = 128,
                   y = -1144,
@@ -27535,7 +27565,7 @@ return {
                 {
                   id = 591,
                   name = "",
-                  class = "PathPoint",
+                  type = "PathPoint",
                   shape = "point",
                   x = 128,
                   y = -1176,
@@ -27567,7 +27597,7 @@ return {
                 {
                   id = 653,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1256,
@@ -27582,7 +27612,7 @@ return {
                 {
                   id = 654,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = -1272,
@@ -27598,7 +27628,7 @@ return {
                 {
                   id = 655,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 144,
                   y = -1280,
@@ -27614,7 +27644,7 @@ return {
                 {
                   id = 656,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 128,
                   y = -1288,
@@ -27646,7 +27676,7 @@ return {
                 {
                   id = 643,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1344,
@@ -27661,7 +27691,7 @@ return {
                 {
                   id = 644,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -16,
                   y = -1360,
@@ -27683,7 +27713,7 @@ return {
                 {
                   id = 1544,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = -1360,
@@ -27715,7 +27745,7 @@ return {
                 {
                   id = 645,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1416,
@@ -27730,7 +27760,7 @@ return {
                 {
                   id = 646,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -16,
                   y = -1432,
@@ -27753,7 +27783,7 @@ return {
                 {
                   id = 1542,
                   name = "",
-                  class = "HoneyPot",
+                  type = "HoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = -1424,
@@ -27769,7 +27799,7 @@ return {
                 {
                   id = 648,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -40,
                   y = -1432,
@@ -27808,7 +27838,7 @@ return {
                 {
                   id = 649,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1664,
@@ -27823,7 +27853,7 @@ return {
                 {
                   id = 650,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -16,
                   y = -1680,
@@ -27846,7 +27876,7 @@ return {
                 {
                   id = 1543,
                   name = "",
-                  class = "ReinforcedHoneyPot",
+                  type = "ReinforcedHoneyPot",
                   shape = "rectangle",
                   x = 120,
                   y = -1680,
@@ -27878,7 +27908,7 @@ return {
                 {
                   id = 651,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -40,
                   y = -1672,
@@ -27893,7 +27923,7 @@ return {
                 {
                   id = 652,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -40,
                   y = -1688,
@@ -27932,7 +27962,7 @@ return {
                 {
                   id = 1545,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1504,
@@ -27947,7 +27977,7 @@ return {
                 {
                   id = 1546,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -16,
                   y = -1520,
@@ -27970,7 +28000,7 @@ return {
                 {
                   id = 1548,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -40,
                   y = -1520,
@@ -27993,7 +28023,7 @@ return {
                 {
                   id = 1550,
                   name = "",
-                  class = "Tick",
+                  type = "Tick",
                   shape = "rectangle",
                   x = -64,
                   y = -1520,
@@ -28032,7 +28062,7 @@ return {
                 {
                   id = 1446,
                   name = "",
-                  class = "Trigger",
+                  type = "Trigger",
                   shape = "point",
                   x = -16,
                   y = -1792,
@@ -28047,7 +28077,7 @@ return {
                 {
                   id = 1447,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 40,
                   y = -1776,
@@ -28063,7 +28093,7 @@ return {
                 {
                   id = 1448,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 24,
                   y = -1720,
@@ -28079,7 +28109,7 @@ return {
                 {
                   id = 1449,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 88,
                   y = -1648,
@@ -28095,7 +28125,7 @@ return {
                 {
                   id = 1450,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 176,
                   y = -1664,
@@ -28111,7 +28141,7 @@ return {
                 {
                   id = 1451,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 216,
                   y = -1728,
@@ -28127,7 +28157,7 @@ return {
                 {
                   id = 1452,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 168,
                   y = -1776,
@@ -28143,7 +28173,7 @@ return {
                 {
                   id = 1453,
                   name = "",
-                  class = "WaspEgg",
+                  type = "WaspEgg",
                   shape = "rectangle",
                   x = 168,
                   y = -1776,
@@ -28192,7 +28222,7 @@ return {
             {
               id = 1804,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 432,
@@ -28207,7 +28237,7 @@ return {
             {
               id = 1805,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = -160,
               y = 576,
@@ -28245,7 +28275,7 @@ return {
             {
               id = 1811,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 392,
@@ -28260,7 +28290,7 @@ return {
             {
               id = 1812,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 408,
               y = 536,
@@ -28298,7 +28328,7 @@ return {
             {
               id = 1815,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 320,
@@ -28313,7 +28343,7 @@ return {
             {
               id = 1816,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = -160,
               y = 464,
@@ -28351,7 +28381,7 @@ return {
             {
               id = 1813,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -24,
               y = 320,
@@ -28366,7 +28396,7 @@ return {
             {
               id = 1814,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 408,
               y = 464,
@@ -28404,7 +28434,7 @@ return {
             {
               id = 1839,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -72,
               y = 272,
@@ -28419,7 +28449,7 @@ return {
             {
               id = 1840,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 424,
               y = 400,
@@ -28441,7 +28471,7 @@ return {
             {
               id = 1841,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = -176,
               y = 400,
@@ -28479,7 +28509,7 @@ return {
             {
               id = 1817,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -80,
               y = 432,
@@ -28494,7 +28524,7 @@ return {
             {
               id = 1818,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 104,
               y = 424,
@@ -28526,7 +28556,7 @@ return {
             {
               id = 1819,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -80,
               y = 392,
@@ -28541,7 +28571,7 @@ return {
             {
               id = 1820,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 152,
               y = 384,
@@ -28573,7 +28603,7 @@ return {
             {
               id = 1821,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -80,
               y = 320,
@@ -28588,7 +28618,7 @@ return {
             {
               id = 1822,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 72,
               y = 312,
@@ -28620,7 +28650,7 @@ return {
             {
               id = 1823,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -96,
               y = 320,
@@ -28635,7 +28665,7 @@ return {
             {
               id = 1824,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 184,
               y = 312,
@@ -28667,7 +28697,7 @@ return {
             {
               id = 1833,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -56,
               y = 272,
@@ -28682,7 +28712,7 @@ return {
             {
               id = 1834,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 112,
               y = 256,
@@ -28698,7 +28728,7 @@ return {
             {
               id = 1842,
               name = "",
-              class = "HoneyPot",
+              type = "HoneyPot",
               shape = "rectangle",
               x = 128,
               y = 264,
@@ -28730,7 +28760,7 @@ return {
             {
               id = 1843,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 216,
@@ -28745,7 +28775,7 @@ return {
             {
               id = 1844,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 472,
               y = 184,
@@ -28767,7 +28797,7 @@ return {
             {
               id = 1845,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 336,
               y = 184,
@@ -28805,7 +28835,7 @@ return {
             {
               id = 1846,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 192,
@@ -28820,7 +28850,7 @@ return {
             {
               id = 1847,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 448.167,
               y = -8,
@@ -28842,7 +28872,7 @@ return {
             {
               id = 1848,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 352,
               y = 88.1665,
@@ -28880,7 +28910,7 @@ return {
             {
               id = 1849,
               name = "",
-              class = "Trigger",
+              type = "Trigger",
               shape = "point",
               x = -40,
               y = 168,
@@ -28895,7 +28925,7 @@ return {
             {
               id = 1850,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 336,
               y = -136,
@@ -28917,7 +28947,7 @@ return {
             {
               id = 1851,
               name = "",
-              class = "Tick",
+              type = "Tick",
               shape = "rectangle",
               x = 336,
               y = 1.42109e-14,

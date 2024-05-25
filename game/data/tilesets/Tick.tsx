@@ -3,7 +3,7 @@
  <image source="Tick.png" width="48" height="32"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="6" y="10" width="12" height="12"/>
+   <object id="1" name="hitbox" x="6" y="10" width="12" height="12"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="50"/>

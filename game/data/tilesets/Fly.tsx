@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.5" name="Fly" tilewidth="32" tileheight="32" tilecount="16" columns="16" objectalignment="center">
+<tileset version="1.10" tiledversion="1.10.2" name="Fly" tilewidth="32" tileheight="32" tilecount="16" columns="16" objectalignment="center">
  <image source="Fly.png" width="512" height="32"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="4" y="6" width="24" height="20"/>
+   <object id="1" name="hitbox" x="4" y="4" width="24" height="24">
+    <ellipse/>
+   </object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="50"/>

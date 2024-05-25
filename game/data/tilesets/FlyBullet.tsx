@@ -3,7 +3,7 @@
  <image source="FlyBullet.png" width="32" height="8"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
-   <object id="1" name="hitbox" x="6" y="2" width="4" height="4"/>
+   <object id="1" name="hitbox" x="6" y="2" width="4" height="4"><ellipse/></object>
   </objectgroup>
   <animation>
    <frame tileid="0" duration="100"/>
