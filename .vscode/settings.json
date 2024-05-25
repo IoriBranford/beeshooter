@@ -14,5 +14,6 @@
     "Lua.diagnostics.globals": [
         "class"
     ],
-    "Lua.runtime.version": "LuaJIT"
+    "Lua.runtime.version": "LuaJIT",
+    "workbench.colorTheme": "Bee Theme"
 }
