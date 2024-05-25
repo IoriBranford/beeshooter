@@ -177,7 +177,11 @@ web:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-web"
                 paths:
                         - index.html
-                        - play/
+                        - 11.5/
+                        - game.js
+                        - nogame.love
+                        - player.js
+                        - style.js
 
 data:
         variables:

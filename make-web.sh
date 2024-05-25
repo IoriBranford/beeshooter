@@ -23,9 +23,9 @@ then
 fi
 
 rm -rf $WEB_DIR
-mkdir -p $WEB_DIR/play/$LOVE_VERSION
+mkdir -p $WEB_DIR/$LOVE_VERSION
 
-cp -r love.js-$LoveJsVersion/$LOVE_VERSION/release $WEB_DIR/play/$LOVE_VERSION/release
-cp love.js-$LoveJsVersion/*.js love.js-$LoveJsVersion/*.css $WEB_DIR/play
-cp love.js-$LoveJsVersion/index.html $WEB_DIR/index.html 
-cp $GAME_ASSET $WEB_DIR/play/nogame.love
+cp -r love.js-$LoveJsVersion/$LOVE_VERSION/release $WEB_DIR/$LOVE_VERSION/release
+cp love.js-$LoveJsVersion/*.js love.js-$LoveJsVersion/*.css $WEB_DIR
+cp love-js/index.html $WEB_DIR/index.html
+cp $GAME_ASSET $WEB_DIR/nogame.love

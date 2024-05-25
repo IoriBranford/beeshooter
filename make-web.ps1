@@ -23,8 +23,8 @@ if (Test-Path $WebDir) {
     Remove-Item -Force -Recurse $WebDir
 }
 
-mkdir $WebDir\play
-Copy-Item -Recurse love.js-$LoveJsVersion\$LoveVersion\release $WebDir\play\$LoveVersion\release
-Copy-Item love.js-$LoveJsVersion\* $WebDir\play -Include *.js,*.css
-Copy-Item love.js-$LoveJsVersion\index.html $WebDir\index.html 
-Copy-Item $GameAsset $WebDir\play\nogame.love
+mkdir $WebDir
+Copy-Item -Recurse love.js-$LoveJsVersion\$LoveVersion\release $WebDir\$LoveVersion\release
+Copy-Item love.js-$LoveJsVersion\* $WebDir -Include *.js,*.css
+Copy-Item love-js\index.html $WebDir\index.html 
+Copy-Item $GameAsset $WebDir\nogame.love
