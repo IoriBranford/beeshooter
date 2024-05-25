@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.2",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -170,22 +170,20 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 8,
                 height = 8,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               },
               {
                 id = 3,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -229,7 +227,7 @@ return {
               {
                 id = 1,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 28,
@@ -242,17 +240,15 @@ return {
               {
                 id = 2,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 12,
                 y = 12,
                 width = 8,
                 height = 8,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               }
             }
           },
@@ -286,17 +282,15 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 10,
                 y = 10,
                 width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
-                properties = {
-                  ["ishitbox"] = true
-                }
+                properties = {}
               }
             }
           }
@@ -406,8 +400,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -438,8 +432,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -470,8 +464,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 12,
                 width = 16,
@@ -502,11 +496,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = -2,
                 y = 6,
-                width = 16,
+                width = 20,
                 height = 20,
                 rotation = 0,
                 visible = true,
@@ -534,11 +528,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = -2,
                 y = 6,
-                width = 16,
+                width = 20,
                 height = 20,
                 rotation = 0,
                 visible = true,
@@ -566,8 +560,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 8,
                 y = 6,
                 width = 8,
@@ -598,8 +592,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 0,
                 width = 8,
@@ -630,8 +624,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 0,
                 y = 6,
                 width = 8,
@@ -662,8 +656,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 0,
                 width = 8,
@@ -724,11 +718,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = 2,
                 y = 2,
-                width = 16,
+                width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
@@ -765,11 +759,11 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
-                x = 0,
+                type = "",
+                shape = "ellipse",
+                x = 2,
                 y = 2,
-                width = 16,
+                width = 12,
                 height = 12,
                 rotation = 0,
                 visible = true,
@@ -1019,12 +1013,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
-                y = 6,
+                y = 4,
                 width = 24,
-                height = 20,
+                height = 24,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1147,8 +1141,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 6,
                 y = 2,
                 width = 4,
@@ -1248,8 +1242,8 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 4,
                 y = 8,
                 width = 24,
@@ -1261,7 +1255,7 @@ return {
               {
                 id = 2,
                 name = "brain",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 16,
                 y = 10,
@@ -1341,12 +1335,12 @@ return {
               {
                 id = 1,
                 name = "hitbox",
-                class = "",
-                shape = "rectangle",
+                type = "",
+                shape = "ellipse",
                 x = 25,
-                y = 40,
+                y = 25,
                 width = 50,
-                height = 25,
+                height = 50,
                 rotation = 0,
                 visible = true,
                 properties = {}
@@ -1354,7 +1348,7 @@ return {
               {
                 id = 2,
                 name = "sting",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 50,
                 y = 100,
@@ -1367,7 +1361,7 @@ return {
               {
                 id = 3,
                 name = "mouth",
-                class = "",
+                type = "",
                 shape = "point",
                 x = 80,
                 y = 65,
@@ -1460,7 +1454,7 @@ return {
                 {
                   id = 188,
                   name = "Start",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 96,
                   y = 128,
@@ -1481,7 +1475,7 @@ return {
                 {
                   id = 189,
                   name = "Title",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 16,
@@ -1501,7 +1495,7 @@ return {
                 {
                   id = 192,
                   name = "Copyright",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 200,
@@ -1509,7 +1503,7 @@ return {
                   height = 8,
                   rotation = 0,
                   visible = true,
-                  text = "© 2022-2023 IoriBranford",
+                  text = "© 2022-2024 IoriBranford",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
                   wrap = true,
@@ -1521,7 +1515,7 @@ return {
                 {
                   id = 190,
                   name = "Quit",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 96,
                   y = 176,
@@ -1542,7 +1536,7 @@ return {
                 {
                   id = 221,
                   name = "High Scores",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 96,
                   y = 160,
@@ -1564,7 +1558,7 @@ return {
                 {
                   id = 369,
                   name = "Help",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 96,
                   y = 144,
@@ -1586,7 +1580,7 @@ return {
                 {
                   id = 191,
                   name = "cursor",
-                  class = "Gui.Cursor",
+                  type = "Gui.Cursor",
                   shape = "text",
                   x = 80,
                   y = 128,
@@ -1625,7 +1619,7 @@ return {
                 {
                   id = 214,
                   name = "backing",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 0,
                   y = 0,
@@ -1640,7 +1634,7 @@ return {
                 {
                   id = 216,
                   name = "High Scores",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 16,
@@ -1660,7 +1654,7 @@ return {
                 {
                   id = 219,
                   name = "Close",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 96,
                   y = 200,
@@ -1680,7 +1674,7 @@ return {
                 {
                   id = 220,
                   name = "cursor",
-                  class = "Gui.Cursor",
+                  type = "Gui.Cursor",
                   shape = "text",
                   x = 80,
                   y = 200,
@@ -1700,7 +1694,7 @@ return {
                 {
                   id = 252,
                   name = "score1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 32,
@@ -1720,7 +1714,7 @@ return {
                 {
                   id = 253,
                   name = "score2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 48,
@@ -1740,7 +1734,7 @@ return {
                 {
                   id = 254,
                   name = "score3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 64,
@@ -1760,7 +1754,7 @@ return {
                 {
                   id = 255,
                   name = "score4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 80,
@@ -1780,7 +1774,7 @@ return {
                 {
                   id = 256,
                   name = "score5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 96,
@@ -1800,7 +1794,7 @@ return {
                 {
                   id = 257,
                   name = "score6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 112,
@@ -1820,7 +1814,7 @@ return {
                 {
                   id = 258,
                   name = "score7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 128,
@@ -1840,7 +1834,7 @@ return {
                 {
                   id = 259,
                   name = "score8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 144,
@@ -1860,7 +1854,7 @@ return {
                 {
                   id = 260,
                   name = "score9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 160,
@@ -1880,7 +1874,7 @@ return {
                 {
                   id = 261,
                   name = "score10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 176,
@@ -1900,7 +1894,7 @@ return {
                 {
                   id = 262,
                   name = "rank1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 32,
@@ -1920,7 +1914,7 @@ return {
                 {
                   id = 263,
                   name = "rank2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 48,
@@ -1940,7 +1934,7 @@ return {
                 {
                   id = 264,
                   name = "rank3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 64,
@@ -1960,7 +1954,7 @@ return {
                 {
                   id = 265,
                   name = "rank4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 80,
@@ -1980,7 +1974,7 @@ return {
                 {
                   id = 266,
                   name = "rank5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 32,
                   y = 96,
@@ -2000,7 +1994,7 @@ return {
                 {
                   id = 267,
                   name = "rank6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 112,
@@ -2020,7 +2014,7 @@ return {
                 {
                   id = 268,
                   name = "rank7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 128,
@@ -2040,7 +2034,7 @@ return {
                 {
                   id = 269,
                   name = "rank8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 144,
@@ -2060,7 +2054,7 @@ return {
                 {
                   id = 270,
                   name = "rank9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 160,
@@ -2080,7 +2074,7 @@ return {
                 {
                   id = 271,
                   name = "rank10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 176,
@@ -2100,7 +2094,7 @@ return {
                 {
                   id = 272,
                   name = "time1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 32,
@@ -2120,7 +2114,7 @@ return {
                 {
                   id = 273,
                   name = "time2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 48,
@@ -2140,7 +2134,7 @@ return {
                 {
                   id = 274,
                   name = "time3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 64,
@@ -2160,7 +2154,7 @@ return {
                 {
                   id = 275,
                   name = "time4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 80,
@@ -2180,7 +2174,7 @@ return {
                 {
                   id = 276,
                   name = "time5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 96,
@@ -2200,7 +2194,7 @@ return {
                 {
                   id = 277,
                   name = "time6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 112,
@@ -2220,7 +2214,7 @@ return {
                 {
                   id = 278,
                   name = "time7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 128,
@@ -2240,7 +2234,7 @@ return {
                 {
                   id = 279,
                   name = "time8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 144,
@@ -2260,7 +2254,7 @@ return {
                 {
                   id = 280,
                   name = "time9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 160,
@@ -2280,7 +2274,7 @@ return {
                 {
                   id = 281,
                   name = "time10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 176,
@@ -2334,7 +2328,7 @@ return {
                     {
                       id = 282,
                       name = "backing",
-                      class = "",
+                      type = "",
                       shape = "rectangle",
                       x = 0,
                       y = 0,
@@ -2349,7 +2343,7 @@ return {
                     {
                       id = 287,
                       name = "page",
-                      class = "BeeShooter.Gui.HelpSlider",
+                      type = "BeeShooter.Gui.HelpSlider",
                       shape = "text",
                       x = 80,
                       y = 208,
@@ -2372,7 +2366,7 @@ return {
                     {
                       id = 367,
                       name = "<",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 48,
                       y = 208,
@@ -2394,7 +2388,7 @@ return {
                     {
                       id = 368,
                       name = ">",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 192,
                       y = 208,
@@ -2445,7 +2439,7 @@ return {
                         {
                           id = 290,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -2463,7 +2457,7 @@ return {
                         {
                           id = 291,
                           name = "Move",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -2484,7 +2478,7 @@ return {
                         {
                           id = 296,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 80,
                           y = 80,
@@ -2498,7 +2492,7 @@ return {
                         {
                           id = 376,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 144,
                           y = 40,
@@ -2512,7 +2506,7 @@ return {
                         {
                           id = 374,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 208,
                           y = 80,
@@ -2526,7 +2520,7 @@ return {
                         {
                           id = 375,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 208,
                           y = 80,
@@ -2540,7 +2534,7 @@ return {
                         {
                           id = 373,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 144,
                           y = 120,
@@ -2554,7 +2548,7 @@ return {
                         {
                           id = 377,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 96,
                           y = 40,
@@ -2568,7 +2562,7 @@ return {
                         {
                           id = 292,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 208,
                           y = 84,
@@ -2590,7 +2584,7 @@ return {
                         {
                           id = 370,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 144,
                           y = 44,
@@ -2612,7 +2606,7 @@ return {
                         {
                           id = 293,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 144,
                           y = 124,
@@ -2634,7 +2628,7 @@ return {
                         {
                           id = 371,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 80,
                           y = 84,
@@ -2656,7 +2650,7 @@ return {
                         {
                           id = 294,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 128,
                           y = 88,
@@ -2670,7 +2664,7 @@ return {
                         {
                           id = 378,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 120,
                           y = 40,
@@ -2684,7 +2678,7 @@ return {
                         {
                           id = 379,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 32,
                           y = 80,
@@ -2698,7 +2692,7 @@ return {
                         {
                           id = 380,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 80,
@@ -2712,7 +2706,7 @@ return {
                         {
                           id = 381,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 120,
                           y = 120,
@@ -2726,7 +2720,7 @@ return {
                         {
                           id = 382,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 96,
                           y = 120,
@@ -2740,7 +2734,7 @@ return {
                         {
                           id = 383,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 160,
                           y = 80,
@@ -2754,7 +2748,7 @@ return {
                         {
                           id = 384,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 184,
                           y = 80,
@@ -2768,7 +2762,7 @@ return {
                         {
                           id = 393,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 144,
                           y = 80,
@@ -2790,7 +2784,7 @@ return {
                         {
                           id = 394,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 120,
                           y = 104,
@@ -2812,7 +2806,7 @@ return {
                         {
                           id = 395,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 96,
                           y = 80,
@@ -2834,7 +2828,7 @@ return {
                         {
                           id = 396,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 120,
                           y = 56,
@@ -2872,7 +2866,7 @@ return {
                         {
                           id = 297,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -2892,7 +2886,7 @@ return {
                         {
                           id = 300,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 160,
                           y = 120,
@@ -2906,7 +2900,7 @@ return {
                         {
                           id = 301,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 96,
@@ -2920,7 +2914,7 @@ return {
                         {
                           id = 302,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 72,
@@ -2934,7 +2928,7 @@ return {
                         {
                           id = 303,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 96,
@@ -2948,7 +2942,7 @@ return {
                         {
                           id = 304,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 72,
@@ -2962,7 +2956,7 @@ return {
                         {
                           id = 305,
                           name = "Shoot",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -2983,7 +2977,7 @@ return {
                         {
                           id = 306,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 56,
@@ -2997,7 +2991,7 @@ return {
                         {
                           id = 307,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 56,
@@ -3011,7 +3005,7 @@ return {
                         {
                           id = 308,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 56,
@@ -3025,7 +3019,7 @@ return {
                         {
                           id = 309,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 56,
@@ -3039,7 +3033,7 @@ return {
                         {
                           id = 310,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 64,
                           y = 112,
@@ -3053,7 +3047,7 @@ return {
                         {
                           id = 386,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 112,
                           y = 112,
@@ -3067,7 +3061,7 @@ return {
                         {
                           id = 387,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 112,
                           y = 116,
@@ -3089,7 +3083,7 @@ return {
                         {
                           id = 428,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 80,
                           y = 112,
@@ -3127,7 +3121,7 @@ return {
                         {
                           id = 313,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -3147,7 +3141,7 @@ return {
                         {
                           id = 314,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 160,
                           y = 88,
@@ -3161,7 +3155,7 @@ return {
                         {
                           id = 315,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 208,
                           y = 88,
@@ -3175,7 +3169,7 @@ return {
                         {
                           id = 316,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 64,
@@ -3189,7 +3183,7 @@ return {
                         {
                           id = 317,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 208,
                           y = 64,
@@ -3203,7 +3197,7 @@ return {
                         {
                           id = 318,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 64,
@@ -3217,7 +3211,7 @@ return {
                         {
                           id = 319,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 208,
                           y = 112,
@@ -3231,7 +3225,7 @@ return {
                         {
                           id = 320,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 176,
                           y = 80,
@@ -3253,7 +3247,7 @@ return {
                         {
                           id = 321,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 64,
                           y = 80,
@@ -3275,7 +3269,7 @@ return {
                         {
                           id = 322,
                           name = "weaponA",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 48,
                           y = 88,
@@ -3289,7 +3283,7 @@ return {
                         {
                           id = 323,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 96,
                           y = 88,
@@ -3303,7 +3297,7 @@ return {
                         {
                           id = 324,
                           name = "weaponcursor1",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 104,
                           y = 96,
@@ -3320,7 +3314,7 @@ return {
                         {
                           id = 325,
                           name = "weaponcursor2",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 88,
                           y = 96,
@@ -3337,7 +3331,7 @@ return {
                         {
                           id = 326,
                           name = "weaponcursor3",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 88,
                           y = 80,
@@ -3354,7 +3348,7 @@ return {
                         {
                           id = 327,
                           name = "weaponcursor4",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 104,
                           y = 80,
@@ -3371,7 +3365,7 @@ return {
                         {
                           id = 328,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -3392,7 +3386,7 @@ return {
                         {
                           id = 389,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 40,
                           y = 112,
@@ -3406,7 +3400,7 @@ return {
                         {
                           id = 390,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 88,
                           y = 112,
@@ -3420,7 +3414,7 @@ return {
                         {
                           id = 391,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 88,
                           y = 116,
@@ -3442,7 +3436,7 @@ return {
                         {
                           id = 429,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 56,
                           y = 112,
@@ -3480,7 +3474,7 @@ return {
                         {
                           id = 399,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -3498,7 +3492,7 @@ return {
                         {
                           id = 400,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 144,
                           y = 64,
@@ -3512,7 +3506,7 @@ return {
                         {
                           id = 401,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 144,
                           y = 120,
@@ -3526,7 +3520,7 @@ return {
                         {
                           id = 406,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 160,
                           y = 56,
@@ -3546,7 +3540,7 @@ return {
                         {
                           id = 420,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 144,
                           y = 32,
@@ -3565,7 +3559,7 @@ return {
                         {
                           id = 421,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 144,
                           y = 88,
@@ -3584,7 +3578,7 @@ return {
                         {
                           id = 419,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 160,
                           y = 112,
@@ -3604,7 +3598,7 @@ return {
                         {
                           id = 414,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -3625,7 +3619,7 @@ return {
                         {
                           id = 416,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 32,
                           y = 80,
@@ -3639,7 +3633,7 @@ return {
                         {
                           id = 417,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 80,
                           y = 80,
@@ -3653,7 +3647,7 @@ return {
                         {
                           id = 418,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 80,
                           y = 84,
@@ -3675,7 +3669,7 @@ return {
                         {
                           id = 430,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 48,
                           y = 80,
@@ -3713,7 +3707,7 @@ return {
                         {
                           id = 330,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 104,
                           y = 56,
@@ -3727,7 +3721,7 @@ return {
                         {
                           id = 331,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -3748,7 +3742,7 @@ return {
                         {
                           id = 332,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 120,
@@ -3762,7 +3756,7 @@ return {
                         {
                           id = 333,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 184,
                           y = 120,
@@ -3776,7 +3770,7 @@ return {
                         {
                           id = 334,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 72,
                           y = 48,
@@ -3798,7 +3792,7 @@ return {
                         {
                           id = 335,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -3818,7 +3812,7 @@ return {
                         {
                           id = 336,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 56,
@@ -3832,7 +3826,7 @@ return {
                         {
                           id = 337,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 48,
                           y = 96,
@@ -3846,7 +3840,7 @@ return {
                         {
                           id = 338,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 176,
                           y = 96,
@@ -3860,7 +3854,7 @@ return {
                         {
                           id = 339,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 176,
                           y = 72,
@@ -3874,7 +3868,7 @@ return {
                         {
                           id = 340,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 104,
@@ -3888,7 +3882,7 @@ return {
                         {
                           id = 341,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 88,
@@ -3902,7 +3896,7 @@ return {
                         {
                           id = 342,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 48,
                           y = 72,
@@ -3916,7 +3910,7 @@ return {
                         {
                           id = 343,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 64,
                           y = 96,
@@ -3930,7 +3924,7 @@ return {
                         {
                           id = 344,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 96,
@@ -3944,7 +3938,7 @@ return {
                         {
                           id = 345,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 72,
@@ -3958,7 +3952,7 @@ return {
                         {
                           id = 346,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 104,
@@ -3972,7 +3966,7 @@ return {
                         {
                           id = 347,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 216,
                           y = 88,
@@ -3986,7 +3980,7 @@ return {
                         {
                           id = 348,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 64,
                           y = 72,
@@ -4016,7 +4010,7 @@ return {
                         {
                           id = 349,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -4037,7 +4031,7 @@ return {
                         {
                           id = 350,
                           name = "lives",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 208,
@@ -4055,7 +4049,7 @@ return {
                         {
                           id = 351,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -4075,7 +4069,7 @@ return {
                         {
                           id = 352,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 96,
                           y = 112,
@@ -4089,7 +4083,7 @@ return {
                         {
                           id = 353,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 168,
                           y = 56,
@@ -4111,7 +4105,7 @@ return {
                         {
                           id = 354,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 168,
                           y = 104,
@@ -4133,7 +4127,7 @@ return {
                         {
                           id = 355,
                           name = "weaponA",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 152,
                           y = 64,
@@ -4147,7 +4141,7 @@ return {
                         {
                           id = 356,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 200,
                           y = 64,
@@ -4161,7 +4155,7 @@ return {
                         {
                           id = 357,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 152,
                           y = 112,
@@ -4175,7 +4169,7 @@ return {
                         {
                           id = 358,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 112,
@@ -4189,7 +4183,7 @@ return {
                         {
                           id = 359,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 128,
@@ -4203,7 +4197,7 @@ return {
                         {
                           id = 360,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 72,
@@ -4217,7 +4211,7 @@ return {
                         {
                           id = 361,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 88,
                           y = 104,
@@ -4231,7 +4225,7 @@ return {
                         {
                           id = 362,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 72,
                           y = 88,
@@ -4261,7 +4255,7 @@ return {
                         {
                           id = 422,
                           name = "title",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -4280,7 +4274,7 @@ return {
                         {
                           id = 423,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -4298,7 +4292,7 @@ return {
                         {
                           id = 424,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 96,
                           y = 32,
@@ -4377,7 +4371,7 @@ return {
                             {
                               id = 363,
                               name = "title",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 8,
                               y = 16,
@@ -4398,7 +4392,7 @@ return {
                             {
                               id = 364,
                               name = "instruction",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 8,
                               y = 152,
@@ -4418,7 +4412,7 @@ return {
                             {
                               id = 365,
                               name = "",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 72,
                               y = 88,
@@ -4440,7 +4434,7 @@ return {
                             {
                               id = 366,
                               name = "",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 168,
                               y = 88,
@@ -4499,7 +4493,7 @@ return {
                 {
                   id = 458,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 0,
                   y = 0,
@@ -4543,7 +4537,7 @@ return {
                     {
                       id = 1,
                       name = "score",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 8,
                       y = 8,
@@ -4562,7 +4556,7 @@ return {
                     {
                       id = 3,
                       name = "lives",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 8,
                       y = 208,
@@ -4580,7 +4574,7 @@ return {
                     {
                       id = 4,
                       name = "speed",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 184,
                       y = 208,
@@ -4598,7 +4592,7 @@ return {
                     {
                       id = 2,
                       name = "time",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 136,
                       y = 8,
@@ -4616,7 +4610,7 @@ return {
                     {
                       id = 19,
                       name = "bonus",
-                      class = "BeeShooter.Gui.BonusText",
+                      type = "BeeShooter.Gui.BonusText",
                       shape = "text",
                       x = 8,
                       y = 24,
@@ -4651,7 +4645,7 @@ return {
                     {
                       id = 5,
                       name = "weaponA",
-                      class = "Gui.Button",
+                      type = "Gui.Button",
                       shape = "rectangle",
                       x = 220,
                       y = 192,
@@ -4665,7 +4659,7 @@ return {
                     {
                       id = 6,
                       name = "weaponB",
-                      class = "Gui.Button",
+                      type = "Gui.Button",
                       shape = "rectangle",
                       x = 240,
                       y = 192,
@@ -4679,7 +4673,7 @@ return {
                     {
                       id = 10,
                       name = "weaponcursor1",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 228,
                       y = 200,
@@ -4696,7 +4690,7 @@ return {
                     {
                       id = 11,
                       name = "weaponcursor2",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 212,
                       y = 200,
@@ -4713,7 +4707,7 @@ return {
                     {
                       id = 12,
                       name = "weaponcursor3",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 212,
                       y = 184,
@@ -4730,7 +4724,7 @@ return {
                     {
                       id = 13,
                       name = "weaponcursor4",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 228,
                       y = 184,
@@ -4768,7 +4762,7 @@ return {
                 {
                   id = 14,
                   name = "PAUSE!",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 80,
                   y = 56,
@@ -4787,7 +4781,7 @@ return {
                 {
                   id = 15,
                   name = "Resume",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 104,
                   y = 88,
@@ -4807,7 +4801,7 @@ return {
                 {
                   id = 16,
                   name = "End",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 104,
                   y = 104,
@@ -4827,7 +4821,7 @@ return {
                 {
                   id = 18,
                   name = "cursor",
-                  class = "Gui.Cursor",
+                  type = "Gui.Cursor",
                   shape = "text",
                   x = 88,
                   y = 88,
@@ -4867,7 +4861,7 @@ return {
                 {
                   id = 447,
                   name = "result",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 8,
                   y = 64,
@@ -4886,7 +4880,7 @@ return {
                 {
                   id = 448,
                   name = "return",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "text",
                   x = 104,
                   y = 128,
@@ -4906,7 +4900,7 @@ return {
                 {
                   id = 449,
                   name = "cursor",
-                  class = "Gui.Cursor",
+                  type = "Gui.Cursor",
                   shape = "text",
                   x = 88,
                   y = 128,
@@ -4991,7 +4985,7 @@ return {
                 {
                   id = 62,
                   name = "",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 112,
                   y = 112,
@@ -5018,7 +5012,7 @@ return {
                 {
                   id = 68,
                   name = "help",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 136,
@@ -5046,7 +5040,7 @@ return {
                 {
                   id = 206,
                   name = "highscores",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 40,
                   y = 136,
@@ -5074,7 +5068,7 @@ return {
                 {
                   id = 455,
                   name = "optionbutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 16,
@@ -5102,7 +5096,7 @@ return {
                 {
                   id = 65,
                   name = "Start",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 80,
                   y = 152,
@@ -5122,7 +5116,7 @@ return {
                 {
                   id = 181,
                   name = "Title",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 16,
@@ -5142,7 +5136,7 @@ return {
                 {
                   id = 69,
                   name = "Help",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 152,
@@ -5162,7 +5156,7 @@ return {
                 {
                   id = 207,
                   name = "High Scores",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 152,
@@ -5182,7 +5176,7 @@ return {
                 {
                   id = 456,
                   name = "Option",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 32,
@@ -5202,7 +5196,7 @@ return {
                 {
                   id = 193,
                   name = "Copyright",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 200,
@@ -5210,7 +5204,7 @@ return {
                   height = 8,
                   rotation = 0,
                   visible = true,
-                  text = "© 2022-2023 IoriBranford",
+                  text = "© 2022-2024 IoriBranford",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
                   wrap = true,
@@ -5242,7 +5236,7 @@ return {
                 {
                   id = 431,
                   name = "backing",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 0,
                   y = 0,
@@ -5257,7 +5251,7 @@ return {
                 {
                   id = 432,
                   name = "closeoptions",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 16,
@@ -5286,7 +5280,7 @@ return {
                 {
                   id = 433,
                   name = "Close",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 32,
@@ -5310,7 +5304,7 @@ return {
                 {
                   id = 434,
                   name = "movechangeweaponbutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 124,
                   y = 120,
@@ -5340,7 +5334,7 @@ return {
                 {
                   id = 435,
                   name = "rightChangeButton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 184,
                   y = 120,
@@ -5369,7 +5363,7 @@ return {
                 {
                   id = 436,
                   name = "leftChangeButton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 64,
                   y = 120,
@@ -5398,7 +5392,7 @@ return {
                 {
                   id = 437,
                   name = "musicbutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 88,
                   y = 56,
@@ -5427,7 +5421,7 @@ return {
                 {
                   id = 438,
                   name = "soundbutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 160,
                   y = 56,
@@ -5456,7 +5450,7 @@ return {
                 {
                   id = 439,
                   name = "changeButtonSide",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 100,
                   y = 160,
@@ -5476,7 +5470,7 @@ return {
                 {
                   id = 440,
                   name = "rightChangeButtonText",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 160,
                   y = 144,
@@ -5499,7 +5493,7 @@ return {
                 {
                   id = 441,
                   name = "leftChangeButtonText",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 40,
                   y = 144,
@@ -5522,7 +5516,7 @@ return {
                 {
                   id = 442,
                   name = "music",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 88,
@@ -5542,7 +5536,7 @@ return {
                 {
                   id = 443,
                   name = "Music",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 72,
@@ -5562,7 +5556,7 @@ return {
                 {
                   id = 444,
                   name = "Sound",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 72,
@@ -5582,7 +5576,7 @@ return {
                 {
                   id = 445,
                   name = "Change Button",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 100,
                   y = 136,
@@ -5602,7 +5596,7 @@ return {
                 {
                   id = 446,
                   name = "sound",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 88,
@@ -5640,7 +5634,7 @@ return {
                 {
                   id = 213,
                   name = "backing",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 0,
                   y = 0,
@@ -5655,7 +5649,7 @@ return {
                 {
                   id = 212,
                   name = "High Scores",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 16,
@@ -5675,7 +5669,7 @@ return {
                 {
                   id = 210,
                   name = "closeButton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 16,
@@ -5704,7 +5698,7 @@ return {
                 {
                   id = 211,
                   name = "Close",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 32,
@@ -5728,7 +5722,7 @@ return {
                 {
                   id = 222,
                   name = "score1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 32,
@@ -5748,7 +5742,7 @@ return {
                 {
                   id = 226,
                   name = "score2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 48,
@@ -5768,7 +5762,7 @@ return {
                 {
                   id = 229,
                   name = "score3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 64,
@@ -5788,7 +5782,7 @@ return {
                 {
                   id = 232,
                   name = "score4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 80,
@@ -5808,7 +5802,7 @@ return {
                 {
                   id = 235,
                   name = "score5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 96,
@@ -5828,7 +5822,7 @@ return {
                 {
                   id = 238,
                   name = "score6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 112,
@@ -5848,7 +5842,7 @@ return {
                 {
                   id = 241,
                   name = "score7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 128,
@@ -5868,7 +5862,7 @@ return {
                 {
                   id = 244,
                   name = "score8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 144,
@@ -5888,7 +5882,7 @@ return {
                 {
                   id = 247,
                   name = "score9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 160,
@@ -5908,7 +5902,7 @@ return {
                 {
                   id = 250,
                   name = "score10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 64,
                   y = 176,
@@ -5928,7 +5922,7 @@ return {
                 {
                   id = 224,
                   name = "rank1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 32,
@@ -5948,7 +5942,7 @@ return {
                 {
                   id = 225,
                   name = "rank2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 48,
@@ -5968,7 +5962,7 @@ return {
                 {
                   id = 228,
                   name = "rank3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 64,
@@ -5988,7 +5982,7 @@ return {
                 {
                   id = 231,
                   name = "rank4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 80,
@@ -6008,7 +6002,7 @@ return {
                 {
                   id = 234,
                   name = "rank5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 32,
                   y = 96,
@@ -6028,7 +6022,7 @@ return {
                 {
                   id = 237,
                   name = "rank6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 112,
@@ -6048,7 +6042,7 @@ return {
                 {
                   id = 240,
                   name = "rank7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 128,
@@ -6068,7 +6062,7 @@ return {
                 {
                   id = 243,
                   name = "rank8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 144,
@@ -6088,7 +6082,7 @@ return {
                 {
                   id = 246,
                   name = "rank9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 160,
@@ -6108,7 +6102,7 @@ return {
                 {
                   id = 249,
                   name = "rank10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 16,
                   y = 176,
@@ -6128,7 +6122,7 @@ return {
                 {
                   id = 223,
                   name = "time1",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 32,
@@ -6148,7 +6142,7 @@ return {
                 {
                   id = 227,
                   name = "time2",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 48,
@@ -6168,7 +6162,7 @@ return {
                 {
                   id = 230,
                   name = "time3",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 64,
@@ -6188,7 +6182,7 @@ return {
                 {
                   id = 233,
                   name = "time4",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 80,
@@ -6208,7 +6202,7 @@ return {
                 {
                   id = 236,
                   name = "time5",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 96,
@@ -6228,7 +6222,7 @@ return {
                 {
                   id = 239,
                   name = "time6",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 112,
@@ -6248,7 +6242,7 @@ return {
                 {
                   id = 242,
                   name = "time7",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 128,
@@ -6268,7 +6262,7 @@ return {
                 {
                   id = 245,
                   name = "time8",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 144,
@@ -6288,7 +6282,7 @@ return {
                 {
                   id = 248,
                   name = "time9",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 160,
@@ -6308,7 +6302,7 @@ return {
                 {
                   id = 251,
                   name = "time10",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 136,
                   y = 176,
@@ -6361,7 +6355,7 @@ return {
                     {
                       id = 77,
                       name = "backing",
-                      class = "",
+                      type = "",
                       shape = "rectangle",
                       x = 0,
                       y = 0,
@@ -6376,7 +6370,7 @@ return {
                     {
                       id = 73,
                       name = "",
-                      class = "BeeShooter.Gui.Button",
+                      type = "BeeShooter.Gui.Button",
                       shape = "polygon",
                       x = 192,
                       y = 80,
@@ -6404,7 +6398,7 @@ return {
                     {
                       id = 74,
                       name = "",
-                      class = "BeeShooter.Gui.Button",
+                      type = "BeeShooter.Gui.Button",
                       shape = "polygon",
                       x = 56,
                       y = 80,
@@ -6432,7 +6426,7 @@ return {
                     {
                       id = 78,
                       name = "nextarrow",
-                      class = "",
+                      type = "",
                       shape = "polygon",
                       x = 180,
                       y = 96,
@@ -6453,7 +6447,7 @@ return {
                     {
                       id = 79,
                       name = "prevarrow",
-                      class = "",
+                      type = "",
                       shape = "polygon",
                       x = 76,
                       y = 96,
@@ -6474,7 +6468,7 @@ return {
                     {
                       id = 81,
                       name = "page",
-                      class = "BeeShooter.Gui.HelpSlider",
+                      type = "BeeShooter.Gui.HelpSlider",
                       shape = "text",
                       x = 80,
                       y = 208,
@@ -6494,7 +6488,7 @@ return {
                     {
                       id = 179,
                       name = "closeButton",
-                      class = "BeeShooter.Gui.Button",
+                      type = "BeeShooter.Gui.Button",
                       shape = "polygon",
                       x = 216,
                       y = 16,
@@ -6523,7 +6517,7 @@ return {
                     {
                       id = 180,
                       name = "Close",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 192,
                       y = 32,
@@ -6576,7 +6570,7 @@ return {
                         {
                           id = 67,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -6596,7 +6590,7 @@ return {
                         {
                           id = 99,
                           name = "Move",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -6617,7 +6611,7 @@ return {
                         {
                           id = 72,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 176,
                           y = 96,
@@ -6639,7 +6633,7 @@ return {
                         {
                           id = 90,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 32,
                           y = 96,
@@ -6661,7 +6655,7 @@ return {
                         {
                           id = 70,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 160,
                           y = 104,
@@ -6675,7 +6669,7 @@ return {
                         {
                           id = 71,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 224,
                           y = 104,
@@ -6689,7 +6683,7 @@ return {
                         {
                           id = 184,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 72,
                           y = 104,
@@ -6719,7 +6713,7 @@ return {
                         {
                           id = 83,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -6739,7 +6733,7 @@ return {
                         {
                           id = 126,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "ellipse",
                           x = 72,
                           y = 96,
@@ -6755,7 +6749,7 @@ return {
                         {
                           id = 127,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "ellipse",
                           x = 76,
                           y = 100,
@@ -6771,7 +6765,7 @@ return {
                         {
                           id = 85,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 160,
                           y = 120,
@@ -6785,7 +6779,7 @@ return {
                         {
                           id = 91,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 96,
@@ -6799,7 +6793,7 @@ return {
                         {
                           id = 94,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 72,
@@ -6813,7 +6807,7 @@ return {
                         {
                           id = 92,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 96,
@@ -6827,7 +6821,7 @@ return {
                         {
                           id = 93,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 72,
@@ -6841,7 +6835,7 @@ return {
                         {
                           id = 100,
                           name = "Shoot",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -6862,7 +6856,7 @@ return {
                         {
                           id = 149,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 56,
@@ -6876,7 +6870,7 @@ return {
                         {
                           id = 150,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 56,
@@ -6890,7 +6884,7 @@ return {
                         {
                           id = 151,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 56,
@@ -6904,7 +6898,7 @@ return {
                         {
                           id = 152,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 56,
@@ -6918,7 +6912,7 @@ return {
                         {
                           id = 183,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 72,
                           y = 104,
@@ -6948,7 +6942,7 @@ return {
                         {
                           id = 87,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "polygon",
                           x = 72,
                           y = 72,
@@ -6974,7 +6968,7 @@ return {
                         {
                           id = 88,
                           name = "Change",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 48,
                           y = 96,
@@ -6994,7 +6988,7 @@ return {
                         {
                           id = 98,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -7014,7 +7008,7 @@ return {
                         {
                           id = 101,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 144,
                           y = 96,
@@ -7028,7 +7022,7 @@ return {
                         {
                           id = 106,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 96,
@@ -7042,7 +7036,7 @@ return {
                         {
                           id = 102,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 136,
                           y = 72,
@@ -7056,7 +7050,7 @@ return {
                         {
                           id = 103,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 72,
@@ -7070,7 +7064,7 @@ return {
                         {
                           id = 104,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 72,
@@ -7084,7 +7078,7 @@ return {
                         {
                           id = 105,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 120,
@@ -7098,7 +7092,7 @@ return {
                         {
                           id = 107,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 160,
                           y = 88,
@@ -7120,7 +7114,7 @@ return {
                         {
                           id = 124,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 64,
                           y = 48,
@@ -7142,7 +7136,7 @@ return {
                         {
                           id = 114,
                           name = "weaponA",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 56,
                           y = 56,
@@ -7156,7 +7150,7 @@ return {
                         {
                           id = 115,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 96,
                           y = 56,
@@ -7170,7 +7164,7 @@ return {
                         {
                           id = 116,
                           name = "weaponcursor1",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 104,
                           y = 64,
@@ -7187,7 +7181,7 @@ return {
                         {
                           id = 117,
                           name = "weaponcursor2",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 88,
                           y = 64,
@@ -7204,7 +7198,7 @@ return {
                         {
                           id = 118,
                           name = "weaponcursor3",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 88,
                           y = 48,
@@ -7221,7 +7215,7 @@ return {
                         {
                           id = 119,
                           name = "weaponcursor4",
-                          class = "Gui.Cursor",
+                          type = "Gui.Cursor",
                           shape = "rectangle",
                           x = 104,
                           y = 48,
@@ -7238,7 +7232,7 @@ return {
                         {
                           id = 125,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -7259,7 +7253,7 @@ return {
                         {
                           id = 182,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 68,
                           y = 112,
@@ -7289,7 +7283,7 @@ return {
                         {
                           id = 129,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 104,
                           y = 56,
@@ -7303,7 +7297,7 @@ return {
                         {
                           id = 130,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -7324,7 +7318,7 @@ return {
                         {
                           id = 131,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 120,
@@ -7338,7 +7332,7 @@ return {
                         {
                           id = 139,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 184,
                           y = 120,
@@ -7352,7 +7346,7 @@ return {
                         {
                           id = 132,
                           name = "",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 72,
                           y = 48,
@@ -7374,7 +7368,7 @@ return {
                         {
                           id = 133,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -7394,7 +7388,7 @@ return {
                         {
                           id = 134,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 56,
@@ -7408,7 +7402,7 @@ return {
                         {
                           id = 135,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 48,
                           y = 96,
@@ -7422,7 +7416,7 @@ return {
                         {
                           id = 141,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 176,
                           y = 96,
@@ -7436,7 +7430,7 @@ return {
                         {
                           id = 146,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 176,
                           y = 72,
@@ -7450,7 +7444,7 @@ return {
                         {
                           id = 143,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 168,
                           y = 104,
@@ -7464,7 +7458,7 @@ return {
                         {
                           id = 144,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 152,
                           y = 88,
@@ -7478,7 +7472,7 @@ return {
                         {
                           id = 138,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 48,
                           y = 72,
@@ -7492,7 +7486,7 @@ return {
                         {
                           id = 136,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 64,
                           y = 96,
@@ -7506,7 +7500,7 @@ return {
                         {
                           id = 140,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 96,
@@ -7520,7 +7514,7 @@ return {
                         {
                           id = 145,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 192,
                           y = 72,
@@ -7534,7 +7528,7 @@ return {
                         {
                           id = 142,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 104,
@@ -7548,7 +7542,7 @@ return {
                         {
                           id = 147,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 216,
                           y = 88,
@@ -7562,7 +7556,7 @@ return {
                         {
                           id = 137,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 64,
                           y = 72,
@@ -7592,7 +7586,7 @@ return {
                         {
                           id = 153,
                           name = "title",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -7613,7 +7607,7 @@ return {
                         {
                           id = 154,
                           name = "lives",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 208,
@@ -7631,7 +7625,7 @@ return {
                         {
                           id = 155,
                           name = "instruction",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -7651,7 +7645,7 @@ return {
                         {
                           id = 156,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 96,
                           y = 112,
@@ -7665,7 +7659,7 @@ return {
                         {
                           id = 157,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 168,
                           y = 56,
@@ -7687,7 +7681,7 @@ return {
                         {
                           id = 171,
                           name = "↑",
-                          class = "BeeShooter.Gui.Button",
+                          type = "BeeShooter.Gui.Button",
                           shape = "text",
                           x = 168,
                           y = 104,
@@ -7709,7 +7703,7 @@ return {
                         {
                           id = 158,
                           name = "weaponA",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 152,
                           y = 64,
@@ -7723,7 +7717,7 @@ return {
                         {
                           id = 159,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 200,
                           y = 64,
@@ -7737,7 +7731,7 @@ return {
                         {
                           id = 168,
                           name = "weaponB",
-                          class = "Gui.Button",
+                          type = "Gui.Button",
                           shape = "rectangle",
                           x = 152,
                           y = 112,
@@ -7751,7 +7745,7 @@ return {
                         {
                           id = 170,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 112,
@@ -7765,7 +7759,7 @@ return {
                         {
                           id = 172,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 200,
                           y = 128,
@@ -7779,7 +7773,7 @@ return {
                         {
                           id = 173,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 56,
                           y = 72,
@@ -7793,7 +7787,7 @@ return {
                         {
                           id = 174,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 88,
                           y = 104,
@@ -7807,7 +7801,7 @@ return {
                         {
                           id = 175,
                           name = "",
-                          class = "",
+                          type = "",
                           shape = "rectangle",
                           x = 72,
                           y = 88,
@@ -7837,7 +7831,7 @@ return {
                         {
                           id = 425,
                           name = "title",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 16,
@@ -7856,7 +7850,7 @@ return {
                         {
                           id = 426,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 8,
                           y = 152,
@@ -7874,7 +7868,7 @@ return {
                         {
                           id = 427,
                           name = "instruction",
-                          class = "",
+                          type = "",
                           shape = "text",
                           x = 96,
                           y = 32,
@@ -7953,7 +7947,7 @@ return {
                             {
                               id = 202,
                               name = "title",
-                              class = "",
+                              type = "",
                               shape = "text",
                               x = 8,
                               y = 16,
@@ -7972,7 +7966,7 @@ return {
                             {
                               id = 203,
                               name = "instruction",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 8,
                               y = 152,
@@ -7992,7 +7986,7 @@ return {
                             {
                               id = 204,
                               name = "",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 72,
                               y = 88,
@@ -8014,7 +8008,7 @@ return {
                             {
                               id = 205,
                               name = "",
-                              class = "BeeShooter.Gui.Button",
+                              type = "BeeShooter.Gui.Button",
                               shape = "text",
                               x = 168,
                               y = 88,
@@ -8073,7 +8067,7 @@ return {
                 {
                   id = 459,
                   name = "",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 0,
                   y = 0,
@@ -8104,7 +8098,7 @@ return {
                 {
                   id = 36,
                   name = "rightchangebutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 184,
                   y = 120,
@@ -8134,7 +8128,7 @@ return {
                 {
                   id = 453,
                   name = "leftchangebutton",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 64,
                   y = 120,
@@ -8164,7 +8158,7 @@ return {
                 {
                   id = 40,
                   name = "",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 16,
@@ -8193,7 +8187,7 @@ return {
                 {
                   id = 41,
                   name = "Pause",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 32,
@@ -8216,7 +8210,7 @@ return {
                 {
                   id = 48,
                   name = "movecursor",
-                  class = "",
+                  type = "",
                   shape = "rectangle",
                   x = 128,
                   y = 192,
@@ -8230,7 +8224,7 @@ return {
                 {
                   id = 59,
                   name = "Change",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 160,
                   y = 144,
@@ -8253,7 +8247,7 @@ return {
                 {
                   id = 454,
                   name = "Change",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 40,
                   y = 144,
@@ -8305,7 +8299,7 @@ return {
                     {
                       id = 49,
                       name = "score",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 56,
                       y = 8,
@@ -8324,7 +8318,7 @@ return {
                     {
                       id = 50,
                       name = "lives",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 8,
                       y = 208,
@@ -8342,7 +8336,7 @@ return {
                     {
                       id = 52,
                       name = "time",
-                      class = "",
+                      type = "",
                       shape = "text",
                       x = 136,
                       y = 8,
@@ -8360,7 +8354,7 @@ return {
                     {
                       id = 53,
                       name = "bonus",
-                      class = "BeeShooter.Gui.BonusText",
+                      type = "BeeShooter.Gui.BonusText",
                       shape = "text",
                       x = 16,
                       y = 24,
@@ -8395,7 +8389,7 @@ return {
                     {
                       id = 28,
                       name = "weaponA",
-                      class = "Gui.Button",
+                      type = "Gui.Button",
                       shape = "rectangle",
                       x = 216,
                       y = 208,
@@ -8409,7 +8403,7 @@ return {
                     {
                       id = 29,
                       name = "weaponB",
-                      class = "Gui.Button",
+                      type = "Gui.Button",
                       shape = "rectangle",
                       x = 240,
                       y = 208,
@@ -8423,7 +8417,7 @@ return {
                     {
                       id = 30,
                       name = "weaponcursor1",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 224,
                       y = 216,
@@ -8440,7 +8434,7 @@ return {
                     {
                       id = 31,
                       name = "weaponcursor2",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 208,
                       y = 216,
@@ -8457,7 +8451,7 @@ return {
                     {
                       id = 32,
                       name = "weaponcursor3",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 208,
                       y = 200,
@@ -8474,7 +8468,7 @@ return {
                     {
                       id = 33,
                       name = "weaponcursor4",
-                      class = "Gui.Cursor",
+                      type = "Gui.Cursor",
                       shape = "rectangle",
                       x = 224,
                       y = 200,
@@ -8511,7 +8505,7 @@ return {
                 {
                   id = 46,
                   name = "",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 216,
                   y = 16,
@@ -8540,7 +8534,7 @@ return {
                 {
                   id = 47,
                   name = "",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 152,
                   y = 16,
@@ -8569,7 +8563,7 @@ return {
                 {
                   id = 42,
                   name = "PAUSE!",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 80,
                   y = 104,
@@ -8589,7 +8583,7 @@ return {
                 {
                   id = 43,
                   name = "Resume",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 192,
                   y = 32,
@@ -8613,7 +8607,7 @@ return {
                 {
                   id = 44,
                   name = "End",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 128,
                   y = 32,
@@ -8655,7 +8649,7 @@ return {
                 {
                   id = 450,
                   name = "",
-                  class = "BeeShooter.Gui.Button",
+                  type = "BeeShooter.Gui.Button",
                   shape = "polygon",
                   x = 112,
                   y = 80,
@@ -8682,7 +8676,7 @@ return {
                 {
                   id = 451,
                   name = "result",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 8,
                   y = 64,
@@ -8701,7 +8695,7 @@ return {
                 {
                   id = 452,
                   name = "result",
-                  class = "",
+                  type = "",
                   shape = "text",
                   x = 80,
                   y = 120,
