@@ -169,9 +169,8 @@ before_script:
 web:
         <<: *full
         stage: build
-        image: node:lts-alpine
         script:
-                - npm install
+                - apk add curl
                 - ./make-web.sh
                 - cp -r public/* .
         artifacts:
