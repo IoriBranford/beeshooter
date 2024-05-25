@@ -177,13 +177,8 @@ web:
         artifacts:
                 name: "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-web"
                 paths:
-                        - game.data
-                        - game.js
                         - index.html
-                        - love.js
-                        - love.wasm
-                        - love.worker.js
-                        - theme/
+                        - play/
 
 data:
         variables:

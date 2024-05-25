@@ -59,3 +59,4 @@ steamcmd/
 *.log
 
 node_modules
+love.js*/
