@@ -28,6 +28,14 @@ function EnemyShip:waitForOnscreenState(onscreenstate)
 end
 local waitForOnscreenState = EnemyShip.waitForOnscreenState
 
+---@param condition fun(self:EnemyShip)
+function EnemyShip:waitFor(condition)
+    while not condition(self) do
+        SubScript.run(self)
+        yield()
+    end
+end
+
 function EnemyShip:meleeAttack(damage)
     if not self.collidable then
         return
@@ -192,7 +200,6 @@ end
 function EnemyShip:Walker()
     walkPath(self, self.path or findPath(self))
     Body.setVelocity(self, 0, self.stage.vely)
-    waitForOnscreenState(self, true)
     waitForOnscreenState(self, false)
     self:markDisappear()
 end
@@ -214,8 +221,7 @@ function EnemyShip:Spawner()
         wait(spawninterval)
         self:spawnTypes(spawntype)
     end
-    waitForOnscreenState(self, true)
-    waitForOnscreenState(self, false)
+    self:waitFor(self.isSpriteOffScreenBottom)
     self:markDisappear()
 end
 
@@ -456,7 +462,7 @@ end
 
 function EnemyShip:WaspCharge()
     EnemyShip.chargePlayer(self)
-    waitForOnscreenState(self, true)
+    self:waitFor(self.isSpriteOnScreen)
     while self:isSpriteOnScreen() do
         meleeAttack(self, 1)
         yield()
