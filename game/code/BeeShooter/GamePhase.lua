@@ -122,7 +122,7 @@ function GamePhase.keypressed(key)
     if gui.gamescreen.visible then
         if gui.activemenu == gui.gamescreen.gameovermenu then
         else
-            if key == Config.key_pausemenu then
+            if key == "escape" or key == Config.key_pausemenu then
                 GamePhase.setPaused(not paused)
                 gui.gamescreen.pausemenu:selectButton(paused and 1)
                 return
