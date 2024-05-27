@@ -1530,6 +1530,7 @@ return {
                   color = { 255, 255, 255 },
                   properties = {
                     ["action"] = "quitGame",
+                    ["platforms"] = "Windows\nMac OS X\nLinux",
                     ["pressedsound"] = "sounds/enemyshot1.mp3"
                   }
                 },

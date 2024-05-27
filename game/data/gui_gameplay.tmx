@@ -41,6 +41,9 @@
     <object id="190" name="Quit" type="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
      <properties>
       <property name="action" value="quitGame"/>
+      <property name="platforms">Windows
+Mac OS X
+Linux</property>
       <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
