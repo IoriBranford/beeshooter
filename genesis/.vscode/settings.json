@@ -1,4 +1,9 @@
 { 
     "workbench.colorTheme": "Bee Theme",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.associations": {
+        "*.lua": "lua",
+        "*.h": "c",
+        "*.c": "c"
+    }
 }
