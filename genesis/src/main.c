@@ -6,6 +6,7 @@
 #include <genesis.h>
 
 #include "res_gfx.h"
+#include "res_audio.h"
 
 int main()
 {
@@ -20,12 +21,17 @@ int main()
         TILE_ATTR_FULL(0, FALSE, FALSE, FALSE, TILE_USER_INDEX));
 
     VDP_setBackgroundColor(1);
-    
+
     fix32 y = FIX32(4352);
+    MAP_scrollTo(bg, 0, fix32ToInt(y));
+    SYS_doVBlankProcess();
+
+    XGM2_play(bgm);
+
     while(1)
     {
-        MAP_scrollTo(bg, 0, fix32ToInt(y));
         y += -FIX32(3) / 4;
+        MAP_scrollTo(bg, 0, fix32ToInt(y));
         SYS_doVBlankProcess();
     }
     return (0);
