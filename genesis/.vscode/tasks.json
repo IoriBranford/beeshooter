@@ -28,7 +28,7 @@
         },
         {
             "label": "Start debug server",
-            "command": "${config:gens.path} out${pathSeparator}rom.out",
+            "command": "${config:gens.path} out${pathSeparator}rom.bin",
             "problemMatcher": "$gcc",
             "isBackground": true
         }
