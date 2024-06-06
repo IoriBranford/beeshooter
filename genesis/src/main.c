@@ -6,7 +6,6 @@
 #include <genesis.h>
 
 #include "res_gfx.h"
-#include "res_spr.h"
 #include "res_audio.h"
 
 int main()
@@ -26,7 +25,7 @@ int main()
 
     VDP_setBackgroundColor(1);
 
-    Sprite* player = SPR_addSprite(&sprPlayerFastA, 128-16, 112-16, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+    Sprite* player = SPR_addSprite(&sprPlayer, 128-16, 112-16, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
 
     fix32 y = FIX32(4352);
     MAP_scrollTo(bg, 0, fix32ToInt(y));

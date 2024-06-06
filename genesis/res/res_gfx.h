@@ -4,5 +4,8 @@
 extern const Palette bgPalette;
 extern const TileSet bgTileset;
 extern const MapDefinition bgMap;
+extern const Palette palPlayer;
+extern const SpriteDefinition sprPlayer;
+extern const SpriteDefinition sprPlayerShot;
 
 #endif // _RES_RES_GFX_H_
