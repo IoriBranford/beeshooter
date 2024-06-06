@@ -5,13 +5,15 @@
 
 #include "player.h"
 
-static bool paused;
+static bool paused, running;
 static PlayerObject player;
 
 static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     if (joy == JOY_1) {
         if (button == BUTTON_START && (state & button)) {
-            if (!paused) {
+            if (state & (BUTTON_A|BUTTON_B|BUTTON_C)) {
+                running = false;
+            } else if (!paused) {
                 paused = true;
                 XGM2_pause();
             } else {
@@ -50,7 +52,8 @@ int gameplay() {
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
 
-    while(1)
+    running = true;
+    while(running)
     {
         if (paused) {
         } else {
@@ -63,6 +66,7 @@ int gameplay() {
     }
 
     MAP_release(bg);
+    XGM2_stop();
 
     return result;
 }
