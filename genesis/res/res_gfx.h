@@ -8,5 +8,7 @@ extern const Palette palPlayer;
 extern const TileSet font;
 extern const SpriteDefinition sprPlayer;
 extern const SpriteDefinition sprPlayerShot;
+extern const SpriteDefinition sprUiWeapons;
+extern const SpriteDefinition sprUiWeaponsCursor;
 
 #endif // _RES_RES_GFX_H_
