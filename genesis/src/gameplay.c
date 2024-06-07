@@ -47,7 +47,7 @@ int gameplay() {
     DMA_setMaxTransferSize(8192);
 
     PAL_setPalette(PAL0, bgPalette.data, DMA);
-    PAL_setPalette(PAL1, palPlayer.data, DMA);
+    PAL_setPalette(PLAYERPAL, palPlayer.data, DMA);
 
     VDP_loadTileSet(&bgTileset, TILE_USER_INDEX, DMA);
     Map *bg = MAP_create(&bgMap, BG_B,
@@ -55,7 +55,7 @@ int gameplay() {
 
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
-    VDP_setTextPalette(PAL1);
+    VDP_setTextPalette(PLAYERPAL);
     VDP_setBackgroundColor(1);
 
     fix32 y = FIX32(4256);

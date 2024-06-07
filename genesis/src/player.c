@@ -74,7 +74,7 @@ void PLAYER_shoot(PlayerObject *self) {
             bullet->sprite = SPR_addSprite(
                 &sprPlayerShot,
                 fix16ToInt(bullet->centerX), fix16ToInt(bullet->centerY),
-                TILE_ATTR(PAL1, TRUE, bullet->velY < 0, bullet->velX < 0));
+                TILE_ATTR(PLAYERPAL, TRUE, bullet->velY < 0, bullet->velX < 0));
 
             s16 anim = fix16ToInt(abs(sinFix16(shot->angle)) * 2);
             SPR_setAnim(bullet->sprite, anim);
@@ -184,7 +184,7 @@ void PLAYER_init(PlayerObject *self) {
     self->sprite = SPR_addSprite(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
-        TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+        TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);

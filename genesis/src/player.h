@@ -3,6 +3,8 @@
 
 #include "gobject.h"
 
+#define PLAYERPAL PAL3
+
 enum PlayerWeapon {
     WEAPON_A,
     WEAPON_B

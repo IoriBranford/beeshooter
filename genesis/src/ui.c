@@ -5,8 +5,8 @@
 Sprite *weaponSelectSprite, *weaponCursorSprite;
 
 void UI_initHud() {
-    weaponSelectSprite = SPR_addSprite(&sprUiWeapons, 208, 184, TILE_ATTR(PAL1, true, false, false));
-    weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PAL1, true, false, false));
+    weaponSelectSprite = SPR_addSprite(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false));
+    weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false));
 }
 
 void UI_drawHud(PlayerObject *player) {
