@@ -1,5 +1,6 @@
 #include "gobject.h"
 #include "gameplay.h"
+#include "maths.h"
 
 typedef struct BulletDefinition BulletDefinition;
 

@@ -1,5 +1,6 @@
 #include "gobject.h"
 #include "gameplay.h"
+#include "maths.h"
 
 void GOBJ_init(GameObject *self) {
     self->velX = self->velY = 0;
