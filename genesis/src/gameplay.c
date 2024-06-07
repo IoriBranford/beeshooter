@@ -13,11 +13,12 @@ static Pool *gobjPool;
 static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     if (joy == JOY_1) {
         if (button == BUTTON_START && (state & button)) {
-            if (state & (BUTTON_A|BUTTON_B|BUTTON_C)) {
+            if ((state & (BUTTON_A|BUTTON_B|BUTTON_C)) == (BUTTON_A|BUTTON_B|BUTTON_C)) {
                 running = false;
             } else if (!paused) {
                 paused = true;
                 XGM2_pause();
+                XGM2_playPCMEx(wavPause, sizeof(wavPause), SOUND_PCM_CH1, 15, false, false);
             } else {
                 paused = false;
                 XGM2_resume();

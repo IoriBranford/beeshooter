@@ -4,6 +4,7 @@
 
 #include <genesis.h>
 
+#include "res_audio.h"
 #include "res_gfx.h"
 
 enum PlayerWeapon {
@@ -20,6 +21,7 @@ enum PlayerAnimation {
 const u8 SHOOTINTERVAL = 6;
 const fix16 MARGIN = FIX16(8);
 static const u32 POWERLEVELS = 3;
+const SoundPCMChannel WAVCHANNEL = SOUND_PCM_CH2;
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -93,6 +95,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
         if (self->shootTimer == 0) {
             self->shootTimer = SHOOTINTERVAL;
             PLAYER_shoot(self);
+            XGM2_playPCMEx(wavPlayerShot, sizeof(wavPlayerShot), WAVCHANNEL, 8, false, false);
         }
     }
 }
@@ -119,9 +122,18 @@ void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
     if (state & button) {
         if (button == BUTTON_A) {
-            PLAYER_setSpeed(self, self->speed > 2 ? 2 : 4);
+            u8 speed;
+            if (self->speed > 2) {
+                speed = 2;
+                XGM2_playPCMEx(wavChangeSpeedSlow, sizeof(wavChangeSpeedSlow), WAVCHANNEL, 15, false, false);
+            } else {
+                speed = 4;
+                XGM2_playPCMEx(wavChangeSpeedFast, sizeof(wavChangeSpeedFast), WAVCHANNEL, 15, false, false);
+            }
+            PLAYER_setSpeed(self, speed);
         } else if (button == BUTTON_C) {
             PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
+            XGM2_playPCMEx(wavChangeWeapon, sizeof(wavChangeWeapon), WAVCHANNEL, 15, false, false);
         }
     }
 }
