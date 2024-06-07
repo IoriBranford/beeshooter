@@ -58,7 +58,7 @@ int gameplay() {
     VDP_setTextPalette(PAL1);
     VDP_setBackgroundColor(1);
 
-    fix32 y = FIX32(4352);
+    fix32 y = FIX32(4256);
     MAP_scrollTo(bg, 0, fix32ToInt(y));
     SYS_doVBlankProcess();
 
@@ -92,6 +92,7 @@ int gameplay() {
     MAP_release(bg);
     XGM2_stop();
     POOL_destroy(gobjPool);
+    gobjPool = NULL;
 
     return result;
 }
