@@ -5,8 +5,10 @@
 
 typedef struct {
     GameObject;
-    u8 speed, weapon, power;
-    u8 shootTimer;
+    u8 speed, weapon, power, lives;
+    u32 score;
+    u16 timeLeft;
+    u8 shootTimer, invulTimer;
 } PlayerObject;
 
 void PLAYER_init(PlayerObject *self);
