@@ -22,6 +22,12 @@ const u8 SHOOTINTERVAL = 6;
 const fix16 MARGIN = FIX16(8);
 static const u32 POWERLEVELS = 3;
 const SoundPCMChannel WAVCHANNEL = SOUND_PCM_CH2;
+const fix16 STARTENTERX = GAME_BOUNDW >> 1;
+const fix16 STARTENTERY = GAME_BOUNDH + 16;
+const fix16 ENTERVELY = FIX16(-4);
+const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
+const u8 ENTERINVUL = 240;
+const u16 GAMETIME = 60*60;
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -139,25 +145,52 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
 }
 
 void PLAYER_updateSprite(PlayerObject *self) {
+    SPR_setVisibility(self->sprite, (self->invulTimer % 2) ? HIDDEN : VISIBLE);
     GOBJ_updateSprite((GameObject*)self);
 }
 
 void PLAYER_updatePlay(PlayerObject *self) {
-    if (self->shootTimer > 0)
+    if (self->timeLeft)
+        self->timeLeft--;
+    if (self->shootTimer)
         self->shootTimer--;
+    if (self->invulTimer)
+        self->invulTimer--;
     PLAYER_joyUpdate(self, JOY_readJoypad(JOY_1));
     PLAYER_updateSprite(self);
 }
 
-void PLAYER_init(PlayerObject *self) {
-    self->centerX = FIX16(128);
-    self->centerY = FIX16(200);
-    self->speed = 2;
-    self->weapon = WEAPON_A;
+void PLAYER_updateEnter(PlayerObject *self) {
+    self->centerX = STARTENTERX;
+    self->centerY += ENTERVELY;
+    if (self->centerY <= STARTFIGHTY) {
+        self->centerY = STARTFIGHTY;
+        self->update = (ObjectCallback*)PLAYER_updatePlay;
+    }
+    PLAYER_updateSprite(self);
+}
+
+void PLAYER_spawn(PlayerObject *self) {
+    self->lives--;
+    self->centerX = STARTENTERX;
+    self->centerY = STARTENTERY;
     self->power = 1;
     self->shootTimer = 0;
-    self->sprite = SPR_addSprite(&sprPlayer, 128 - 16, 200 - 16, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
+    self->invulTimer = ENTERINVUL;
+    self->update = (ObjectCallback*)PLAYER_updateEnter;
+}
+
+void PLAYER_init(PlayerObject *self) {
+    self->score = 0;
+    self->timeLeft = GAMETIME;
+    self->lives = 3;
+    self->weapon = WEAPON_A;
+    self->speed = 2;
+    self->sprite = SPR_addSprite(
+        &sprPlayer,
+        fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
+        TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
     PLAYER_setWeapon(self, WEAPON_A);
-    self->update = (ObjectCallback*)PLAYER_updatePlay;
+    PLAYER_spawn(self);
 }
