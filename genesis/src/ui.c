@@ -20,7 +20,7 @@ void UI_drawHud(PlayerObject *player) {
     if (lives > 9)
         numPrinted = sprintf(string, "{ %d", lives);
     else
-        numPrinted = sprintf(string, "%.*s", lives, "{{{{{{{{{");
+        numPrinted = sprintf(string, "%.*s", lives, "\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e");
     VDP_drawText(string, 1, 208>>3);
     VDP_clearText(numPrinted + 1, 208>>3, 9 - numPrinted);
 

@@ -52,7 +52,9 @@ int gameplay() {
     Map *bg = MAP_create(&bgMap, BG_B,
         TILE_ATTR_FULL(PAL0, TRUE, FALSE, FALSE, TILE_USER_INDEX));
 
+    VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
+    VDP_setTextPalette(PAL1);
     VDP_setBackgroundColor(1);
 
     fix32 y = FIX32(4352);
