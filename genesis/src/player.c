@@ -84,5 +84,5 @@ void PLAYER_init(PlayerObject *self) {
     self->sprite = SPR_addSprite(&sprPlayer, 128 - 16, 200 - 16, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
     PLAYER_setWeapon(self, WEAPON_A);
-    OBJ_setUpdateMethod((Object*)self, (ObjectCallback*)PLAYER_updatePlay);
+    self->update = (ObjectCallback*)PLAYER_updatePlay;
 }
