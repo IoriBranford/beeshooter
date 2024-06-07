@@ -49,6 +49,7 @@ int gameplay() {
     PAL_setPalette(PAL0, bgPalette.data, DMA);
     PAL_setPalette(PLAYERPAL, palPlayer.data, DMA);
 
+    VDP_setHilightShadow(true);
     VDP_loadTileSet(&bgTileset, TILE_USER_INDEX, DMA);
     Map *bg = MAP_create(&bgMap, BG_B,
         TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX));
