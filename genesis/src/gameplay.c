@@ -4,6 +4,7 @@
 #include "res_audio.h"
 
 #include "player.h"
+#include "ui.h"
 
 static bool paused, running;
 static PlayerObject player;
@@ -48,9 +49,10 @@ int gameplay() {
     PAL_setPalette(PAL1, palPlayer.data, DMA);
 
     VDP_loadTileSet(&bgTileset, TILE_USER_INDEX, DMA);
-    Map *bg = MAP_create(&bgMap, BG_A,
-        TILE_ATTR_FULL(0, FALSE, FALSE, FALSE, TILE_USER_INDEX));
+    Map *bg = MAP_create(&bgMap, BG_B,
+        TILE_ATTR_FULL(PAL0, TRUE, FALSE, FALSE, TILE_USER_INDEX));
 
+    VDP_setTextPriority(1);
     VDP_setBackgroundColor(1);
 
     fix32 y = FIX32(4352);
@@ -78,6 +80,7 @@ int gameplay() {
             MAP_scrollTo(bg, 0, fix32ToRoundedInt(y));
             SPR_update();
         }
+        UI_drawHud(&player);
         SYS_doVBlankProcess();
     }
 
