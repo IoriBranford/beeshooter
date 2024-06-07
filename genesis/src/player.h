@@ -5,7 +5,7 @@
 
 typedef struct {
     GameObject;
-    u8 speed, weapon;
+    u8 speed, weapon, power;
     u8 shootTimer;
 } PlayerObject;
 
