@@ -3,6 +3,11 @@
 
 #include "gobject.h"
 
+enum PlayerWeapon {
+    WEAPON_A,
+    WEAPON_B
+};
+
 typedef struct {
     GameObject;
     u8 speed, weapon, power, lives;

@@ -7,11 +7,6 @@
 #include "res_audio.h"
 #include "res_gfx.h"
 
-enum PlayerWeapon {
-    WEAPON_A,
-    WEAPON_B
-};
-
 enum PlayerAnimation {
     ANI_FLYA,
     ANI_FLYB,
