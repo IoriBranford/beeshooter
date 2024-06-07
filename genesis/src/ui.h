@@ -3,6 +3,7 @@
 
 #include "player.h"
 
+void UI_initHud();
 void UI_drawHud(PlayerObject *player);
 
 #endif

@@ -70,6 +70,7 @@ int gameplay() {
 
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
+    UI_initHud();
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
 

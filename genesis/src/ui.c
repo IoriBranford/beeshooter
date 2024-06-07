@@ -1,5 +1,13 @@
 #include <genesis.h>
 #include "ui.h"
+#include "res_gfx.h"
+
+Sprite *weaponSelectSprite, *weaponCursorSprite;
+
+void UI_initHud() {
+    weaponSelectSprite = SPR_addSprite(&sprUiWeapons, 208, 184, TILE_ATTR(PAL1, true, false, false));
+    weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PAL1, true, false, false));
+}
 
 void UI_drawHud(PlayerObject *player) {
     char string[16];
@@ -23,6 +31,9 @@ void UI_drawHud(PlayerObject *player) {
         numPrinted = sprintf(string, "%.*s", lives, "\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e");
     VDP_drawText(string, 1, 208>>3);
     VDP_clearText(numPrinted + 1, 208>>3, 9 - numPrinted);
+
+    u8 weapon = player->weapon;
+    SPR_setPosition(weaponCursorSprite, weapon == WEAPON_A ? 204 : 228, 180);
 
     u8 speed = player->speed > 2 ? 2 : 1;
     numPrinted = sprintf(string, "Speed %.*s", speed, "\x7f\x7f");
