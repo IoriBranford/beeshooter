@@ -1,4 +1,9 @@
 #include "player.h"
+#include "bullet.h"
+#include "gameplay.h"
+
+#include <genesis.h>
+
 #include "res_gfx.h"
 
 enum PlayerWeapon {
@@ -13,24 +18,81 @@ enum PlayerAnimation {
 };
 
 const u8 SHOOTINTERVAL = 6;
-const fix16 BOUNDW = FIX16(256);
-const fix16 BOUNDH = FIX16(224);
 const fix16 MARGIN = FIX16(8);
+static const u32 POWERLEVELS = 3;
+
+typedef struct {
+    fix16 offsetX, offsetY;
+    u16 angle;
+} PlayerShot;
+
+static const PlayerShot PLAYER_WEAPONSA[][2] = {
+    {
+        {.offsetX = -FIX16(8), .angle = 768},
+        {.offsetX = FIX16(8), .angle = 768},
+    },
+    {
+        {.angle = 768 - 128},
+        {.angle = 768 + 128},
+    },
+    {
+        {.angle = 256 - 128},
+        {.angle = 256 + 128},
+    },
+};
+
+static const PlayerShot PLAYER_WEAPONSB[][2] = {
+    {
+        {.angle = 768},
+        {.angle = 256},
+    },
+    {
+        {.angle = 512},
+        {.angle = 0},
+    },
+    {
+        {.angle = 768 - 128},
+        {.angle = 768 + 128},
+    },
+};
+
+void PLAYER_shoot(PlayerObject *self) {
+    u16 speed = 16;
+    for (int w = 0; w < self->power; ++w) {
+        PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
+        for (int s = 0; s < 2; ++s) {
+            const PlayerShot *shot = &shots[s];
+
+            GameObject *bullet = BULLET_createAS(
+                self->centerX + shot->offsetX,
+                self->centerY + shot->offsetY,
+                shot->angle, speed);
+
+            bullet->sprite = SPR_addSprite(
+                &sprPlayerShot,
+                fix16ToInt(bullet->centerX), fix16ToInt(bullet->centerY),
+                TILE_ATTR(PAL1, TRUE, bullet->velY < 0, bullet->velX < 0));
+
+            s16 anim = fix16ToInt(abs(sinFix16(shot->angle)) * 2);
+            SPR_setAnim(bullet->sprite, anim);
+        }
+    }
+}
 
 void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
     s16 velX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
     s16 velY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
     velX = FIX16(velX * self->speed);
     velY = FIX16(velY * self->speed);
-    velX = max(MARGIN - self->centerX, min(velX, BOUNDW - MARGIN - self->centerX));
-    velY = max(MARGIN - self->centerY, min(velY, BOUNDH - MARGIN - self->centerY));
+    velX = max(MARGIN - self->centerX, min(velX, GAME_BOUNDW - MARGIN - self->centerX));
+    velY = max(MARGIN - self->centerY, min(velY, GAME_BOUNDH - MARGIN - self->centerY));
     self->centerX += velX;
     self->centerY += velY;
 
     if (state & BUTTON_B) {
         if (self->shootTimer == 0) {
             self->shootTimer = SHOOTINTERVAL;
-            // fire
+            PLAYER_shoot(self);
         }
     }
 }
@@ -80,6 +142,7 @@ void PLAYER_init(PlayerObject *self) {
     self->centerY = FIX16(200);
     self->speed = 2;
     self->weapon = WEAPON_A;
+    self->power = 1;
     self->shootTimer = 0;
     self->sprite = SPR_addSprite(&sprPlayer, 128 - 16, 200 - 16, TILE_ATTR(PAL1, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
