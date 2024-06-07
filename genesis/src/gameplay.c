@@ -64,7 +64,7 @@ int gameplay() {
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
 
-    gobjPool = OBJ_createObjectPool(64, sizeof(GameObject));
+    gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
 
     running = true;
     while(running)
