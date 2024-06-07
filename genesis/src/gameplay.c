@@ -62,6 +62,8 @@ int gameplay() {
     MAP_scrollTo(bg, 0, fix32ToInt(y));
     SYS_doVBlankProcess();
 
+    XGM2_setFMVolume(50);
+    XGM2_setPSGVolume(50);
     XGM2_play(bgm);
 
     SPR_reset();
