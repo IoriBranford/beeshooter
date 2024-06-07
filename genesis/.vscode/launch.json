@@ -27,7 +27,7 @@
                     "text": "set directories '${workspaceFolder};$cwd;$cdir'"
                 }
             ],
-            "preLaunchTask": "Start debug server"
+            "preLaunchTask": "Build and start debug server"
         }
     ]
 }
