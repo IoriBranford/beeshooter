@@ -7,6 +7,7 @@
 
 static bool paused, running;
 static PlayerObject player;
+static Pool *gobjPool;
 
 static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     if (joy == JOY_1) {
@@ -24,6 +25,17 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
             PLAYER_joyEvent(&player, button, state);
         }
     }
+}
+
+GameObject* GAME_createObject() {
+    GameObject *gobj = (GameObject*)OBJ_create(gobjPool);
+    GOBJ_init(gobj);
+    return gobj;
+}
+
+void GAME_releaseObject(GameObject *gobj) {
+    GOBJ_release(gobj);
+    OBJ_release(gobjPool, (Object*)gobj, true);
 }
 
 int gameplay() {
@@ -52,12 +64,16 @@ int gameplay() {
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
 
+    gobjPool = OBJ_createObjectPool(64, sizeof(GameObject));
+
     running = true;
     while(running)
     {
         if (paused) {
         } else {
             player.update((Object*)&player);
+            OBJ_updateAll(gobjPool);
+
             y += -FIX32(3) / 4;
             MAP_scrollTo(bg, 0, fix32ToRoundedInt(y));
             SPR_update();
@@ -67,6 +83,7 @@ int gameplay() {
 
     MAP_release(bg);
     XGM2_stop();
+    POOL_destroy(gobjPool);
 
     return result;
 }
