@@ -51,7 +51,7 @@ int gameplay() {
 
     VDP_loadTileSet(&bgTileset, TILE_USER_INDEX, DMA);
     Map *bg = MAP_create(&bgMap, BG_B,
-        TILE_ATTR_FULL(PAL0, TRUE, FALSE, FALSE, TILE_USER_INDEX));
+        TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX));
 
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
