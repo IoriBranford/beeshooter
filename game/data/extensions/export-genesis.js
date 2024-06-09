@@ -18,20 +18,17 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
      * @param {string} fileName 
      */
     write: (map, fileName) => {
-        /**
-         * @type {string[]}
-         */
-        let cCode = []
-        /**
-         * @type {string[]}
-         */
-        let hCode = []
-
+        /** @type {Record<string, string>} */
+        let triggerActions = {}
+        /** @type {Record<string, string>} */
+        let pathPointActions = {}
+        /** @type {Record<string, string>} */
+        let objectDefs = {}
         /**
          * 
-         * @param {LevelObjectGroup} objectgroup 
+         * @param {ObjectGroup} objectgroup 
          */
-        let doObjectGroup = (objectgroup) => {
+        let genObjectGroup = (objectgroup) => {
             let objects = {
                 /** @type {MapObject[]} */
                 Trigger: [],
@@ -55,86 +52,123 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
                 }
             })
 
-            cCode.push(`{`)
+            /** @type {string[]} */
+            let cCode = [`// ${objectgroup.name}`]
+            let cName = objectgroup.name.replace(/\W+/g, '_')
+            
+            let triggersCName = `${cName}_triggers`
+            cCode.push(`Trigger ${triggersCName}[] = {`,
+                ...objects.Trigger.map((trigger) => {
+                    let action = trigger.resolvedProperty('action')
+                    triggerActions[action] = `void ${action}(Trigger *trigger);`
+                    return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}},`
+                }),
+                `};`)
 
-            cCode.push(`.triggers = {`)
-            objects.Trigger.forEach((trigger) => {
-                cCode.push(`{`,
-                    `.y = ${Math.ceil(trigger.y)},`,
-                    `.action = ${trigger.resolvedProperty('action')},`,
-                    '},')
-            })
-            cCode.push(`},`) // triggers
-
-            cCode.push(`.paths = {`)
             objects.Path.forEach((path) => {
-                cCode.push(`{`,
-                    `.x = ${path.x}, .y = ${path.y},`,
-                    `.points = {`)
-                path.polygon.forEach((point) => {
+                let pointsData = {}
+                path.polygon.forEach((point, i) => {
                     let pathPoints = objects.PathPoint.filter(
-                        (pathPoint) => pathPoint.pos == path.pos + point)
-                    cCode.push(`{`,
-                        `.x = ${point.x}, .y = ${point.y},`,
-                        `.actions = {`)
-                    cCode.push(...pathPoints.map((pathPoint) =>
-                        `${pathPoint.resolvedProperty('action')},`))
-                    cCode.push(`}`) // actions
-                    cCode.push(`},`) // path point
+                        (pathPoint) => pathPoint.x == path.x + point.x && pathPoint.y == path.y + point.y)
+                    pointsData[i] = pathPoints
+                    if (pathPoints.length == 0)
+                        return
+
+                    let pathPointActionsCName = `path${path.id}_${i}_actions`
+
+                    cCode.push(`ActionFunction ${pathPointActionsCName}[] = {`,
+                        ...pathPoints.map((pathPoint) => {
+                            let action = pathPoint.resolvedProperty('action')
+                            pathPointActions[action] = `void ${action}(GameObject *self, PathPoint *pathPoint);`
+                            return `${action},`
+                        }),
+                        '};')
                 })
-                cCode.push(`},`) // points
-                cCode.push(`},`) // path
+                
+                let pathPointsCName = `path${path.id}_points`
+                cCode.push(`PathPoint ${pathPointsCName}[] = {`,
+                    ...path.polygon.map((point, i) =>
+                        `{.x = ${point.x}, .y = ${point.y}, .numActions = ${pointsData[i].length}, .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : 'NULL'}},`),
+                    '};')
             })
-            cCode.push(`},`) // paths
+            
+            let pathsCName = `${cName}_paths`
+            cCode.push(`Path ${pathsCName}[] = {`,
+                ...objects.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points},`),
+                '};')
 
-            cCode.push(`.characters = {`)
-            objects.Character.forEach((character) => {
-                let tile = character.tile
-                if (!tile || !tile.tileset) return
-                cCode.push(
-                    `{`,
-                    `.x = ${character.x}, .y = ${character.y},`,
-                    `.priority = ${(character.resolvedProperty('z') || 0) >= 0},`,
-                    `.flipx = ${character.tileFlippedHorizontally},`,
-                    `.flipy = ${character.tileFlippedVertically},`,
-                    `.spritedef = spr${tile.tileset.name},`,
-                    `.animInd = ${tile.id}`
-                )
-                cCode.push(`},`) // character
-            })
-            cCode.push(`}`) // characters
+            let charactersCName = `${cName}_characters`
+            cCode.push(`Character ${charactersCName}[] = {`,
+                ...objects.Character.map(character => {
+                    let definition = `def${character.className}`
+                    objectDefs[character.className] = `extern GameObjectDefinition *${definition};`
+                    return [
+                        `{`,
+                        `.x = ${character.x}, .y = ${character.y},`,
+                        `.priority = ${(character.resolvedProperty('z') || 0) >= 0},`,
+                        `.flipx = ${character.tileFlippedHorizontally},`,
+                        `.flipy = ${character.tileFlippedVertically},`,
+                        `.definition = ${definition},`,
+                        `.animInd = ${character.tile?.id || 0}`,
+                        '},'
+                    ].join('\n')
+                }),
+                '};'
+            )
 
-            cCode.push(`},`) // objectgroup
+            cCode.push(`LevelObjectGroup ${cName} = {`,
+                `.numTriggers = ${objects.Trigger.length},`,
+                `.triggers = ${cName}_triggers,`,
+                `.numPaths = ${objects.Path.length},`,
+                `.paths = ${cName}_paths,`,
+                `.numCharacters = ${objects.Character.length},`,
+                `.characters = ${cName}_characters`,
+                '};')
+
+            return {cName, cCode}
         }
 
         /**
          * 
          * @param {Layer[]} layers 
          */
-        let doLayers = (layers) => {
+        let genObjectGroups = (layers, objectGroups) => {
             layers.forEach(layer => {
                 if (layer.isGroupLayer) {
                     /** @type {GroupLayer} */
                     let group = layer
-                    doLayers(group.layers)
+                    genObjectGroups(group.layers, objectGroups)
                 } else if (layer.isObjectLayer) {
-                    doObjectGroup(layer)
+                    objectGroups.push(genObjectGroup(layer))
                 }
             });
+            return objectGroups
         }
 
+        let stage = map.layers.find((layer) => layer.name == 'stage')
+        let objectGroups = genObjectGroups(stage.layers, [])
+
+        /**
+         * @type {string[]}
+         */
+        let hCode = []
         hCode.push(
-            `#ifndef _${fileName.replace('\W', '_')}`,
-            `#define _${fileName.replace('\W', '_')}`,
+            `#ifndef _${ fileName.replace(/\W+/g, '_')}`,
+            `#define _${fileName.replace(/\W+/g, '_')}`,
             '#include "lobject.h"',
-            `const LevelObjectGroup OBJECTGROUPS[];`)
+            ...Object.values(objectDefs),
+            ...Object.values(triggerActions),
+            ...Object.values(pathPointActions),
+            `extern LevelObjectGroup *OBJECTGROUPS[];`)
         hCode.push('#endif')
 
-        cCode.push('#include "lobject.h"')
-        cCode.push(`static const LevelObjectGroup OBJECTGROUPS[] = {`)
-        let stage = map.layers.find((layer) => layer.name == 'stage')
-        doLayers(stage.layers)
-        cCode.push(`};`)
+        /** @type {string[]} */
+        let cCode = []
+        cCode.push('#include "lobject.h"',
+            ...objectGroups.map(({cCode}) => cCode.join('\n')),
+            `LevelObjectGroup *OBJECTGROUPS[] = {`,
+            ...objectGroups.map(({cName}) => `&${cName},`),
+            '};')
 
         let cFile = new TextFile(fileName, TextFile.WriteOnly)
         cCode.forEach(line => cFile.writeLine(line))
