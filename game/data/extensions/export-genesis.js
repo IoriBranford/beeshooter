@@ -60,7 +60,10 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
             cCode.push(`Trigger ${triggersCName}[] = {`,
                 ...objects.Trigger.map((trigger) => {
                     let action = trigger.resolvedProperty('action')
-                    triggerActions[action] = `void ${action}(Trigger *trigger);`
+                    if (action)
+                        triggerActions[action] = `void ${action}(Trigger *trigger);`
+                    else
+                        action = `NULL /* to be assigned */`
                     return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}},`
                 }),
                 `};`)
@@ -79,7 +82,10 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
                     cCode.push(`ActionFunction ${pathPointActionsCName}[] = {`,
                         ...pathPoints.map((pathPoint) => {
                             let action = pathPoint.resolvedProperty('action')
-                            pathPointActions[action] = `void ${action}(GameObject *self, PathPoint *pathPoint);`
+                            if (action)
+                                pathPointActions[action] = `void ${action}(GameObject *self, PathPoint *pathPoint);`
+                            else
+                                action = `NULL /* to be assigned */`
                             return `${action},`
                         }),
                         '};')
@@ -100,8 +106,13 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
             let charactersCName = `${cName}_characters`
             cCode.push(`Character ${charactersCName}[] = {`,
                 ...objects.Character.map(character => {
-                    let definition = `def${character.className}`
-                    objectDefs[character.className] = `extern GameObjectDefinition *${definition};`
+                    let definition
+                    if (character.className.length > 0) {
+                        definition = `def${character.className}`
+                        objectDefs[character.className] = `extern GameObjectDefinition *${definition};`
+                    } else {
+                        definition = 'NULL /* to be assigned */'
+                    }
                     return [
                         `{`,
                         `.x = ${character.x}, .y = ${character.y},`,
