@@ -105,7 +105,7 @@ void GOBJ_updatePathFollow(GameObject *self) {
     }
 
     self->velX = velX;
-    self->velY = LEVEL_velY() + velY;
+    self->velY = fix32ToFix16(LEVEL_velY()) + velY;
     self->centerX += self->velX;
     self->centerY += self->velY;
 
