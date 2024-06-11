@@ -13,35 +13,37 @@
 #define BG_BASE_TILE (TILE_ATTR_FULL(BG_PALETTE, FALSE, FALSE, FALSE, BG_TILESET_START_INDEX))
 
 static Map *bg;
-static fix32 bgY, bgVelY;
+static fix32 cameraY, cameraVelY;
 static Trigger *nextTrigger;
 static u32 nextTriggerIndex;
+static u32 numTriggers;
 
 void LEVEL_init() {
-    bgY = FIX32(4256);
-    bgVelY = -FIX32(3) / 4;
+    cameraY = FIX32(4256);
+    cameraVelY = -FIX32(3) / 4;
 
     PAL_setPalette(BG_PALETTE, bgPalette.data, DMA);
     VDP_loadTileSet(&bgTileset, BG_TILESET_START_INDEX, DMA);
     bg = MAP_create(&bgMap, BG_B, BG_BASE_TILE);
-    MAP_scrollTo(bg, 0, fix32ToRoundedInt(bgY));
+    MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
+    numTriggers = stage_caravan_numTriggers;
     nextTriggerIndex = 0;
     nextTrigger = stage_caravan_triggers;
 }
 
 void LEVEL_update() {
-    bgY += bgVelY;
-    if (bgVelY) {
-        while (nextTriggerIndex < stage_caravan_numTriggers
-        && nextTrigger && FIX32(nextTrigger->y) >= bgY) {
+    cameraY += cameraVelY;
+    if (cameraVelY) {
+        while (nextTriggerIndex < numTriggers
+        && nextTrigger && FIX32(nextTrigger->y) >= cameraY) {
             if (nextTrigger->action)
                 nextTrigger->action(nextTrigger);
             ++nextTrigger;
             ++nextTriggerIndex;
         }
     }
-    MAP_scrollTo(bg, 0, fix32ToRoundedInt(bgY));
+    MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 }
 
 void LEVEL_destroy() {
@@ -50,19 +52,19 @@ void LEVEL_destroy() {
 }
 
 fix16 LEVEL_toScreenY(fix32 yWorld) {
-    return fix32ToFix16(yWorld - bgY);
+    return fix32ToFix16(yWorld - cameraY);
 }
 
 fix32 LEVEL_toWorldY(fix16 yScreen) {
-    return fix16ToFix32(yScreen) + bgY;
+    return fix16ToFix32(yScreen) + cameraY;
 }
 
-fix32 LEVEL_velY() {
-    return bgVelY;
+fix32 LEVEL_cameraVelY() {
+    return cameraVelY;
 }
 
 void LEVEL_setVelY(fix32 velY) {
-    bgVelY = velY;
+    cameraVelY = velY;
 }
 
 Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {

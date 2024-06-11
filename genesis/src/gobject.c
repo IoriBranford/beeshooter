@@ -91,7 +91,7 @@ void GOBJ_followPath(GameObject *self) {
     Path *path = self->path;
     u32 pathIndex = self->pathIndex;
     if (!path || pathIndex >= path->numPoints) {
-        self->velY += fix32ToFix16(LEVEL_velY());
+        self->velY -= fix32ToFix16(LEVEL_cameraVelY());
         return;
     }
 
@@ -117,7 +117,7 @@ void GOBJ_followPath(GameObject *self) {
     }
 
     self->velX = velX;
-    self->velY = fix32ToFix16(LEVEL_velY()) + velY;
+    self->velY = velY - fix32ToFix16(LEVEL_cameraVelY());
     self->centerX += self->velX;
     self->centerY += self->velY;
 
