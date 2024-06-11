@@ -29,10 +29,35 @@ void LEVEL_destroy() {
     bg = NULL;
 }
 
-fix32 LEVEL_toScreenY(fix32 y) {
-    return y - bgY;
+fix16 LEVEL_toScreenY(fix32 yWorld) {
+    return fix32ToFix16(yWorld - bgY);
+}
+
+fix32 LEVEL_toWorldY(fix16 yScreen) {
+    return fix16ToFix32(yScreen) + bgY;
 }
 
 fix32 LEVEL_velY() {
     return bgVelY;
+}
+
+Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {
+    Path *path = group->paths;
+    if (!path)
+        return NULL;
+
+    Path *closest = 0;
+    fix32 closestDist = 0x7FFFFFFF;
+    for (int i = 0; i < group->numPaths; ++i) {
+        PathPoint *point0 = path->points;
+        fix32 pathX = FIX32(path->x + point0->x);
+        fix32 pathY = FIX32(path->y + point0->y);
+        fix32 dist = getApproximatedDistance(pathX - xWorld, pathY - yWorld);
+        if (dist < closestDist) {
+            closest = path;
+            closestDist = dist;
+        }
+        path++;
+    }
+    return closest;
 }
