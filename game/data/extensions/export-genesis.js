@@ -184,7 +184,7 @@ extern LevelObjectGroup *OBJECTGROUPS[];
         let cCode = []
         cCode.push(`#include "${baseName}.h"`,
             ...objectGroups.map(({cCode}) => cCode.join('\n')),
-            `static LevelObjectGroup *OBJECTGROUPS[] = {`,
+            `LevelObjectGroup *OBJECTGROUPS[] = {`,
             objectGroups.map(({cName}) => `&${cName}`).join(',\n'),
             '};')
 
