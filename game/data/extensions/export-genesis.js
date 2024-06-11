@@ -1,3 +1,18 @@
+/**
+* @typedef {Object} LevelObjectGroup
+* @property {string} cName
+* @property {string[]} cCode
+* @property {MapObject[]} Trigger
+* @property {MapObject[]} Path
+* @property {MapObject[]} PathPoint
+* @property {MapObject[]} LevelObject
+*/
+
+/**
+ * @param {string} name
+ */
+let toCName = (name) => name.replace(/\W+/g, '_')
+
 tiled.registerMapFormat("Honey Guardian C level", {
     name: "Honey Guardian C level",
     extension: "c",
@@ -20,60 +35,24 @@ tiled.registerMapFormat("Honey Guardian C level", {
     write: (map, fileName) => {
         let baseName = fileName.match(/([^//\\]+).c$/)[1]
         /** @type {Record<string, string>} */
-        let triggerActions = {}
-        /** @type {Record<string, string>} */
         let pathPointActions = {}
         /** @type {Record<string, string>} */
         let objectDefs = {}
+
         /**
          * 
-         * @param {ObjectGroup} objectgroup 
+         * @param {LevelObjectGroup} levelObjectGroup 
+         * @returns cCode
          */
-        let genObjectGroup = (objectgroup) => {
-            let objects = {
-                /** @type {MapObject[]} */
-                Trigger: [],
-                /** @type {MapObject[]} */
-                Path: [],
-                /** @type {MapObject[]} */
-                PathPoint: [],
-                /** @type {MapObject[]} */
-                LevelObject: []
-            }
-            objectgroup.objects.forEach((object) => {
-                switch (object.className) {
-                    case 'Trigger':
-                    case 'Path':
-                    case 'PathPoint':
-                        objects[object.className].push(object)
-                        break;
-                    default: 
-                        objects.LevelObject.push(object)
-                        break;
-                }
-            })
-
+        let genLevelObjectGroupCode = (levelObjectGroup) => {
+            let cName = levelObjectGroup.cName
             /** @type {string[]} */
-            let cName = objectgroup.name.replace(/\W+/g, '_')
             let cCode = [`extern LevelObjectGroup ${cName};`]
             
-            if (objects.Trigger.length > 0) {
-                let triggersCName = `${cName}_triggers`
-                cCode.push(`static Trigger ${triggersCName}[] = {`,
-                    objects.Trigger.map((trigger) => {
-                        let action = trigger.resolvedProperty('action')
-                        if (action)
-                            triggerActions[action] = `void ${action}(Trigger *trigger);`
-                        else
-                            action = `0 /* to be assigned */`
-                        return `{.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${cName}}`
-                    }).join(',\n'),
-                    `};`)
-            }
-            objects.Path.forEach((path) => {
+            levelObjectGroup.Path.forEach((path) => {
                 let pointsData = {}
                 path.polygon.forEach((point, i) => {
-                    let pathPoints = objects.PathPoint.filter(
+                    let pathPoints = levelObjectGroup.PathPoint.filter(
                         (pathPoint) => pathPoint.x == path.x + point.x && pathPoint.y == path.y + point.y)
                     pointsData[i] = pathPoints
                     if (pathPoints.length == 0)
@@ -102,17 +81,17 @@ tiled.registerMapFormat("Honey Guardian C level", {
                     '};')
             })
             
-            if (objects.Path.length > 0) {
+            if (levelObjectGroup.Path.length > 0) {
                 let pathsCName = `${cName}_paths`
                 cCode.push(`static Path ${pathsCName}[] = {`,
-                    objects.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
+                    levelObjectGroup.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
                     '};')
             }
 
-            if (objects.LevelObject.length > 0) {
+            if (levelObjectGroup.LevelObject.length > 0) {
                 let objectsCName = `${cName}_objects`
                 cCode.push(`static LevelObject ${objectsCName}[] = {`,
-                    objects.LevelObject.map(object => {
+                    levelObjectGroup.LevelObject.map(object => {
                         let definition
                         if (object.className.length > 0) {
                             definition = `&def${object.className}`
@@ -135,33 +114,94 @@ tiled.registerMapFormat("Honey Guardian C level", {
 
             cCode.push(
 `LevelObjectGroup ${cName} = {
-    .numTriggers = ${objects.Trigger.length}, .triggers = ${objects.Trigger.length > 0 ? `${cName}_triggers` : '0'},
-    .numPaths = ${objects.Path.length}, .paths = ${objects.Path.length > 0 ? `${cName}_paths` : '0'},
-    .numObjects = ${objects.LevelObject.length}, .objects = ${objects.LevelObject.length > 0 ? `${cName}_objects` : '0'}
+    .numPaths = ${levelObjectGroup.Path.length}, .paths = ${levelObjectGroup.Path.length > 0 ? `${cName}_paths` : '0'},
+    .numObjects = ${levelObjectGroup.LevelObject.length}, .objects = ${levelObjectGroup.LevelObject.length > 0 ? `${cName}_objects` : '0'}
 };`)
 
-            return {cName, cCode}
+            return cCode
         }
 
         /**
          * 
-         * @param {Layer[]} layers 
+         * @param {ObjectGroup} objectgroup 
          */
-        let genObjectGroups = (layers, objectGroups) => {
+        let buildLevelObjectGroup = (objectgroup) => {
+            /**
+             * @type LevelObjectGroup
+             */
+            let levelObjectGroup = {
+                cName: toCName(objectgroup.name),
+                Trigger: [],
+                Path: [],
+                PathPoint: [],
+                LevelObject: []
+            }
+            objectgroup.objects.forEach((object) => {
+                switch (object.className) {
+                    case 'Trigger':
+                    case 'Path':
+                    case 'PathPoint':
+                        levelObjectGroup[object.className].push(object)
+                        break;
+                    default: 
+                        levelObjectGroup.LevelObject.push(object)
+                        break;
+                }
+            })
+            levelObjectGroup.cCode = genLevelObjectGroupCode(levelObjectGroup)
+            return levelObjectGroup
+        }
+
+        /**
+         * 
+         * @param {Layer[]} layers
+         * @param {LevelObjectGroup[]} objectGroups
+         */
+        let buildLevelObjectGroups = (layers, objectGroups) => {
             layers.forEach(layer => {
                 if (layer.isGroupLayer) {
                     /** @type {GroupLayer} */
                     let group = layer
-                    genObjectGroups(group.layers, objectGroups)
+                    buildLevelObjectGroups(group.layers, objectGroups)
                 } else if (layer.isObjectLayer) {
-                    objectGroups.push(genObjectGroup(layer))
+                    objectGroups.push(buildLevelObjectGroup(layer))
                 }
             });
             return objectGroups
         }
 
         let stage = map.layers.find((layer) => layer.name == 'stage')
-        let objectGroups = genObjectGroups(stage.layers, [])
+        let objectGroups = buildLevelObjectGroups(stage.layers, [])
+        /**
+         * @type MapObject[]
+         */
+        let triggers = objectGroups.reduce((triggers, levelObjectGroup) => {
+            triggers.push(...levelObjectGroup.Trigger)
+            return triggers
+        }, [])
+        triggers.sort((a, b) => {
+            if (b.y == a.y)
+                return b.x - a.x
+            return b.y - a.y
+        })
+
+        /** @type {Record<string, string>} */
+        let triggerActions = {}
+
+        /** @type {string[]} */
+        let cCode = []
+        cCode.push(`#include "${baseName}.h"`,
+            ...objectGroups.map(({cCode}) => cCode.join('\n')),
+            `Trigger ${baseName}_triggers[] = {`,
+            triggers.map(trigger => {
+                let action = trigger.resolvedProperty('action')
+                if (action)
+                    triggerActions[action] = `void ${action}(Trigger *trigger);`
+                else
+                    action = `0 /* to be assigned */`
+                return `{.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${toCName(trigger.layer.name)}}`
+            }).join(',\n'),
+            '};')
 
         /**
          * @type {string[]}
@@ -173,20 +213,14 @@ tiled.registerMapFormat("Honey Guardian C level", {
 
 #include "level.h"
 
-extern LevelObjectGroup *OBJECTGROUPS[];
+#define ${baseName}_numTriggers (${triggers.length})
+
+extern Trigger ${baseName}_triggers[];
 `,
             ...Object.values(objectDefs),
             ...Object.values(triggerActions),
             ...Object.values(pathPointActions))
         hCode.push('#endif')
-
-        /** @type {string[]} */
-        let cCode = []
-        cCode.push(`#include "${baseName}.h"`,
-            ...objectGroups.map(({cCode}) => cCode.join('\n')),
-            `LevelObjectGroup *OBJECTGROUPS[] = {`,
-            objectGroups.map(({cName}) => `&${cName}`).join(',\n'),
-            '};')
 
         let cFile = new TextFile(fileName, TextFile.WriteOnly)
         cCode.forEach(line => cFile.writeLine(line))
