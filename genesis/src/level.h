@@ -1,6 +1,8 @@
 #ifndef _LEVEL_H
 #define _LEVEL_H
 
+#include "types.h"
+
 typedef struct Trigger Trigger;
 typedef struct PathPoint PathPoint;
 typedef struct Path Path;
@@ -12,29 +14,36 @@ typedef void (*TriggerFunction)(Trigger *self);
 typedef void (*GObjPathPointFunction)(GameObject *self, PathPoint *pathPoint);
 
 struct Trigger {
-    short x, y;
+    s16 x, y;
     TriggerFunction action;
 };
 struct PathPoint {
-    short x, y;
-    unsigned int numActions;
+    s16 x, y;
+    u32 numActions;
     GObjPathPointFunction *actions;
 };
 struct Path {
-    short x, y;
-    unsigned int numPoints;
+    s16 x, y;
+    u32 numPoints;
     PathPoint *points;
 };
 struct LevelObject {
     const GameObjectDefinition *definition;
-    short x, y;
-    unsigned short animInd, flags;
+    s16 x, y;
+    u16 animInd, flags;
 };
 struct LevelObjectGroup {
-    unsigned char numTriggers, numPaths, numObjects, _;
+    u8 numTriggers, numPaths, numObjects, _;
     Trigger *triggers;
     Path *paths;
     LevelObject *objects;
 };
+
+void LEVEL_init();
+void LEVEL_update();
+void LEVEL_destroy();
+
+fix32 LEVEL_toScreenY(fix32 y);
+fix32 LEVEL_velY();
 
 #endif

@@ -4,6 +4,7 @@
 #include "res_audio.h"
 
 #include "player.h"
+#include "level.h"
 #include "ui.h"
 
 static bool paused, running;
@@ -46,21 +47,16 @@ int gameplay() {
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
 
-    PAL_setPalette(PAL0, bgPalette.data, DMA);
     PAL_setPalette(PLAYERPAL, palPlayer.data, DMA);
 
     VDP_setHilightShadow(true);
-    VDP_loadTileSet(&bgTileset, TILE_USER_INDEX, DMA);
-    Map *bg = MAP_create(&bgMap, BG_B,
-        TILE_ATTR_FULL(PAL0, FALSE, FALSE, FALSE, TILE_USER_INDEX));
 
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
     VDP_setTextPalette(PLAYERPAL);
     VDP_setBackgroundColor(1);
 
-    fix32 y = FIX32(4256);
-    MAP_scrollTo(bg, 0, fix32ToInt(y));
+    LEVEL_init();
     SYS_doVBlankProcess();
 
     XGM2_setFMVolume(50);
@@ -83,15 +79,14 @@ int gameplay() {
             player.update((Object*)&player);
             OBJ_updateAll(gobjPool);
 
-            y += -FIX32(3) / 4;
-            MAP_scrollTo(bg, 0, fix32ToRoundedInt(y));
+            LEVEL_update();
             SPR_update();
         }
         UI_drawHud(&player);
         SYS_doVBlankProcess();
     }
 
-    MAP_release(bg);
+    LEVEL_destroy();
     XGM2_stop();
     POOL_destroy(gobjPool);
     gobjPool = NULL;
