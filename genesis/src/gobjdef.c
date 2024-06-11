@@ -1,5 +1,6 @@
 #include "gobjdef.h"
 #include "maths.h"
+#include "map.h"
 #include "res_gfx.h"
 
 const GameObjectDefinition defAnt = {
