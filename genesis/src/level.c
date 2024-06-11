@@ -87,7 +87,7 @@ Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld)
 }
 
 GameObject* LEVEL_createObject(LevelObject *lobj) {
-    static Palette *lastPalette = 0;
+    static const Palette *lastPalette = 0;
 
     const GameObjectDefinition *def = lobj->definition;
     GameObject *obj = GOBJ_createFromDef(def, FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
