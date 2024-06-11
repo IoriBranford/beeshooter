@@ -77,6 +77,21 @@ void GOBJ_release(GameObject *self) {
     SPR_releaseSprite(self->sprite);
 }
 
+void GOBJ_followStage(GameObject *self) {
+    self->velX = 0;
+    self->velY = -fix32ToFix16(LEVEL_cameraVelY());
+    self->centerY += self->velY;
+}
+
+void GOBJ_updateIdleOnStage(GameObject *self) {
+    GOBJ_followStage(self);
+    if (GOBJ_isSpriteOnScreen(self)) {
+        GOBJ_updateSprite(self);
+    } else {
+        GAME_releaseObject(self);
+    }
+}
+
 void GOBJ_updatePathWalker(GameObject *self) {
     Path *path = self->path;
     if (!path) {
@@ -97,9 +112,7 @@ void GOBJ_followPath(GameObject *self) {
     Path *path = self->path;
     u32 pathIndex = self->pathIndex;
     if (!path || pathIndex >= path->numPoints) {
-        self->velX = 0;
-        self->velY = -fix32ToFix16(LEVEL_cameraVelY());
-        self->centerY += self->velY;
+        GOBJ_followStage(self);
         return;
     }
 
