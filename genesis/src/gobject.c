@@ -18,6 +18,7 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
     obj->centerX = centerX;
     obj->centerY = centerY;
     obj->health = def->health;
+    obj->speed = def->speed;
     obj->definition = def;
     if (def->update)
         OBJ_setUpdateMethod((Object*)obj, (ObjectCallback*)def->update);
@@ -29,7 +30,7 @@ void GOBJ_initSprite(GameObject *self, u16 attr) {
     if (!spriteDef)
         return;
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
-    SPR_addSprite(spriteDef, fix16ToInt(tl.x), fix16ToInt(tl.y), attr);
+    self->sprite = SPR_addSprite(spriteDef, fix16ToInt(tl.x), fix16ToInt(tl.y), attr);
 }
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
@@ -91,7 +92,9 @@ void GOBJ_followPath(GameObject *self) {
     Path *path = self->path;
     u32 pathIndex = self->pathIndex;
     if (!path || pathIndex >= path->numPoints) {
-        self->velY -= fix32ToFix16(LEVEL_cameraVelY());
+        self->velX = 0;
+        self->velY = -fix32ToFix16(LEVEL_cameraVelY());
+        self->centerY += self->velY;
         return;
     }
 
