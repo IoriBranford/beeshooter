@@ -46,6 +46,10 @@ fix32 LEVEL_velY() {
     return bgVelY;
 }
 
+void LEVEL_setVelY(fix32 velY) {
+    bgVelY = velY;
+}
+
 Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {
     Path *path = group->paths;
     if (!path)
