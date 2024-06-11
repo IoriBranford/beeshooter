@@ -23,8 +23,6 @@ const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
 const u16 GAMETIME = 60*60;
-const fix16 NORMALSPEED = FIX16(2);
-const fix16 FASTSPEED = FIX16(4);
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -103,7 +101,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
     }
 }
 
-void PLAYER_setSpeed(PlayerObject *self, u8 speed) {
+void PLAYER_setSpeed(PlayerObject *self, fix16 speed) {
     self->speed = speed;
     s16 animInd = self->sprite->animInd;
     if (animInd == ANI_FLYA || animInd == ANI_FLYB) {
@@ -125,12 +123,12 @@ void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
     if (state & button) {
         if (button == BUTTON_A) {
-            u8 speed = self->speed;
-            if (speed > NORMALSPEED) {
-                speed = FASTSPEED;
+            fix16 speed = self->speed;
+            if (speed > PLAYER_NORMALSPEED) {
+                speed = PLAYER_NORMALSPEED;
                 XGM2_playPCMEx(wavChangeSpeedSlow, sizeof(wavChangeSpeedSlow), WAVCHANNEL, 15, false, false);
             } else {
-                speed = NORMALSPEED;
+                speed = PLAYER_FASTSPEED;
                 XGM2_playPCMEx(wavChangeSpeedFast, sizeof(wavChangeSpeedFast), WAVCHANNEL, 15, false, false);
             }
             PLAYER_setSpeed(self, speed);
@@ -182,7 +180,7 @@ void PLAYER_init(PlayerObject *self) {
     self->timeLeft = GAMETIME;
     self->lives = 3;
     self->weapon = WEAPON_A;
-    self->speed = NORMALSPEED;
+    self->speed = PLAYER_NORMALSPEED;
     self->sprite = SPR_addSprite(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
