@@ -59,7 +59,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
             
             if (objects.Trigger.length > 0) {
                 let triggersCName = `${cName}_triggers`
-                cCode.push(`Trigger ${triggersCName}[] = {`,
+                cCode.push(`static Trigger ${triggersCName}[] = {`,
                     objects.Trigger.map((trigger) => {
                         let action = trigger.resolvedProperty('action')
                         if (action)
@@ -81,7 +81,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
 
                     let pathPointActionsCName = `path${path.id}_${i}_actions`
 
-                    cCode.push(`GObjPathPointFunction ${pathPointActionsCName}[] = {`,
+                    cCode.push(`static GObjPathPointFunction ${pathPointActionsCName}[] = {`,
                         pathPoints.map((pathPoint) => {
                             let action = pathPoint.resolvedProperty('action')
                             if (action) {
@@ -96,7 +96,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                 })
                 
                 let pathPointsCName = `path${path.id}_points`
-                cCode.push(`PathPoint ${pathPointsCName}[] = {`,
+                cCode.push(`static PathPoint ${pathPointsCName}[] = {`,
                     path.polygon.map((point, i) =>
                         `{.x = ${point.x}, .y = ${point.y}, .numActions = ${pointsData[i].length}, .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}}`).join(',\n'),
                     '};')
@@ -104,14 +104,14 @@ tiled.registerMapFormat("Honey Guardian C level", {
             
             if (objects.Path.length > 0) {
                 let pathsCName = `${cName}_paths`
-                cCode.push(`Path ${pathsCName}[] = {`,
+                cCode.push(`static Path ${pathsCName}[] = {`,
                     objects.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
                     '};')
             }
 
             if (objects.LevelObject.length > 0) {
                 let objectsCName = `${cName}_objects`
-                cCode.push(`LevelObject ${objectsCName}[] = {`,
+                cCode.push(`static LevelObject ${objectsCName}[] = {`,
                     objects.LevelObject.map(object => {
                         let definition
                         if (object.className.length > 0) {
@@ -134,7 +134,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
             }
 
             cCode.push(
-`LevelObjectGroup ${cName} = {
+`static LevelObjectGroup ${cName} = {
     .numTriggers = ${objects.Trigger.length}, .triggers = ${objects.Trigger.length > 0 ? `${cName}_triggers` : '0'},
     .numPaths = ${objects.Path.length}, .paths = ${objects.Path.length > 0 ? `${cName}_paths` : '0'},
     .numObjects = ${objects.LevelObject.length}, .objects = ${objects.LevelObject.length > 0 ? `${cName}_objects` : '0'}
@@ -184,8 +184,8 @@ extern LevelObjectGroup *OBJECTGROUPS[];
         let cCode = []
         cCode.push(`#include "${baseName}.h"`,
             ...objectGroups.map(({cCode}) => cCode.join('\n')),
-            `LevelObjectGroup *OBJECTGROUPS[] = {`,
-            ...objectGroups.map(({cName}) => `&${cName},`),
+            `static LevelObjectGroup *OBJECTGROUPS[] = {`,
+            objectGroups.map(({cName}) => `&${cName}`).join(',\n'),
             '};')
 
         let cFile = new TextFile(fileName, TextFile.WriteOnly)
