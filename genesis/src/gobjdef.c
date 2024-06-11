@@ -11,7 +11,18 @@ const GameObjectDefinition defAnt = {
     .palette = &palAnt,
     .update = GOBJ_updatePathWalker
 };
-const GameObjectDefinition defHoneyPot;
+const GameObjectDefinition defHoneyPot = {
+    .health = 1,
+    .spriteDef = &sprHoneyPot,
+    .palette = &palFlyAndHoney,
+    .update = GOBJ_updateIdleOnStage
+};
+const GameObjectDefinition defPowerup = {
+    .health = 1,
+    .spriteDef = &sprPowerup,
+    .palette = &palPlayer,
+    .update = GOBJ_updateIdleOnStage
+};
 const GameObjectDefinition defFly;
 const GameObjectDefinition defHoneyCell;
 const GameObjectDefinition defAntBig;
