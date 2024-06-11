@@ -80,9 +80,9 @@ int gameplay() {
             OBJ_updateAll(gobjPool);
 
             LEVEL_update();
-            SPR_update();
         }
         UI_drawHud(&player);
+        SPR_update();
         SYS_doVBlankProcess();
     }
 
