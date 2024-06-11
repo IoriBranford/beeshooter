@@ -4,12 +4,20 @@
 #include "types.h"
 #include "object.h"
 #include "sprite_eng.h"
+#include "level.h"
 
-typedef struct {
+typedef struct GameObject {
     Object;
+
+    const GameObjectDefinition *definition;
+    LevelObjectGroup *group;
+
     Sprite *sprite;
     fix16 centerX, centerY;
     fix16 velX, velY;
+    Path *path;
+    u16 pathIndex;
+    fix16 speed;
 } GameObject;
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);

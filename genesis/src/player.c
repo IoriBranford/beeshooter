@@ -23,6 +23,8 @@ const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
 const u16 GAMETIME = 60*60;
+const fix16 NORMALSPEED = FIX16(2);
+const fix16 FASTSPEED = FIX16(4);
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -60,7 +62,7 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
 };
 
 void PLAYER_shoot(PlayerObject *self) {
-    u16 speed = 16;
+    u16 bulletSpeed = 16;
     for (int w = 0; w < self->power; ++w) {
         PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
         for (int s = 0; s < 2; ++s) {
@@ -69,7 +71,7 @@ void PLAYER_shoot(PlayerObject *self) {
             GameObject *bullet = BULLET_createAS(
                 self->centerX + shot->offsetX,
                 self->centerY + shot->offsetY,
-                shot->angle, speed);
+                shot->angle, bulletSpeed);
 
             bullet->sprite = SPR_addSprite(
                 &sprPlayerShot,
@@ -83,10 +85,10 @@ void PLAYER_shoot(PlayerObject *self) {
 }
 
 void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
-    s16 velX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
-    s16 velY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
-    velX = FIX16(velX * self->speed);
-    velY = FIX16(velY * self->speed);
+    s16 dirX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
+    s16 dirY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
+    fix16 velX = (dirX * self->speed);
+    fix16 velY = (dirY * self->speed);
     velX = max(MARGIN - self->centerX, min(velX, GAME_BOUNDW - MARGIN - self->centerX));
     velY = max(MARGIN - self->centerY, min(velY, GAME_BOUNDH - MARGIN - self->centerY));
     self->centerX += velX;
@@ -123,12 +125,12 @@ void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
     if (state & button) {
         if (button == BUTTON_A) {
-            u8 speed;
-            if (self->speed > 2) {
-                speed = 2;
+            u8 speed = self->speed;
+            if (speed > NORMALSPEED) {
+                speed = FASTSPEED;
                 XGM2_playPCMEx(wavChangeSpeedSlow, sizeof(wavChangeSpeedSlow), WAVCHANNEL, 15, false, false);
             } else {
-                speed = 4;
+                speed = NORMALSPEED;
                 XGM2_playPCMEx(wavChangeSpeedFast, sizeof(wavChangeSpeedFast), WAVCHANNEL, 15, false, false);
             }
             PLAYER_setSpeed(self, speed);
@@ -180,7 +182,7 @@ void PLAYER_init(PlayerObject *self) {
     self->timeLeft = GAMETIME;
     self->lives = 3;
     self->weapon = WEAPON_A;
-    self->speed = 2;
+    self->speed = NORMALSPEED;
     self->sprite = SPR_addSprite(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
