@@ -10,5 +10,14 @@ extern const SpriteDefinition sprPlayer;
 extern const SpriteDefinition sprPlayerShot;
 extern const SpriteDefinition sprUiWeapons;
 extern const SpriteDefinition sprUiWeaponsCursor;
+extern const Palette palAnt;
+extern const Palette palFly;
+extern const Palette palAlien;
+extern const SpriteDefinition sprAnt;
+extern const SpriteDefinition sprAntBig;
+extern const SpriteDefinition sprFly;
+extern const SpriteDefinition sprAlien;
+extern const SpriteDefinition sprAlienMind;
+extern const Palette palAnt2;
 
 #endif // _RES_RES_GFX_H_
