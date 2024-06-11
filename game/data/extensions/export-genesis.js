@@ -170,7 +170,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
             return objectGroups
         }
 
-        let stage = map.layers.find((layer) => layer.name == 'stage')
+        let stage = map.layers.find((layer) => layer.name == 'stagemd')
         let objectGroups = buildLevelObjectGroups(stage.layers, [])
         /**
          * @type MapObject[]

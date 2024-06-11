@@ -6,7 +6,7 @@
 
 const GameObjectDefinition defAnt = {
     .health = 1, .speed = FIX16(2),
-    .defeatPoints = 100,
+    .defeatPoints = 200,
     .spriteDef = &sprAnt,
     .palette = &palAnt,
     .update = GOBJ_updatePathWalker
