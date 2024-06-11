@@ -1,5 +1,5 @@
-tiled.registerMapFormat("Honey Guardian Genesis level", {
-    name: "Honey Guardian Genesis level",
+tiled.registerMapFormat("Honey Guardian C level", {
+    name: "Honey Guardian C level",
     extension: "c",
 
     /**
@@ -18,6 +18,7 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
      * @param {string} fileName 
      */
     write: (map, fileName) => {
+        let baseName = fileName.match(/([^//\\]+).c$/)[1]
         /** @type {Record<string, string>} */
         let triggerActions = {}
         /** @type {Record<string, string>} */
@@ -37,7 +38,7 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
                 /** @type {MapObject[]} */
                 PathPoint: [],
                 /** @type {MapObject[]} */
-                Character: []
+                LevelObject: []
             }
             objectgroup.objects.forEach((object) => {
                 switch (object.className) {
@@ -47,7 +48,7 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
                         objects[object.className].push(object)
                         break;
                     default: 
-                        objects.Character.push(object)
+                        objects.LevelObject.push(object)
                         break;
                 }
             })
@@ -56,18 +57,19 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
             let cCode = [`// ${objectgroup.name}`]
             let cName = objectgroup.name.replace(/\W+/g, '_')
             
-            let triggersCName = `${cName}_triggers`
-            cCode.push(`Trigger ${triggersCName}[] = {`,
-                ...objects.Trigger.map((trigger) => {
-                    let action = trigger.resolvedProperty('action')
-                    if (action)
-                        triggerActions[action] = `void ${action}(Trigger *trigger);`
-                    else
-                        action = `NULL /* to be assigned */`
-                    return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}},`
-                }),
-                `};`)
-
+            if (objects.Trigger.length > 0) {
+                let triggersCName = `${cName}_triggers`
+                cCode.push(`Trigger ${triggersCName}[] = {`,
+                    objects.Trigger.map((trigger) => {
+                        let action = trigger.resolvedProperty('action')
+                        if (action)
+                            triggerActions[action] = `void ${action}(Trigger *trigger);`
+                        else
+                            action = `0 /* to be assigned */`
+                        return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}}`
+                    }).join(',\n'),
+                    `};`)
+            }
             objects.Path.forEach((path) => {
                 let pointsData = {}
                 path.polygon.forEach((point, i) => {
@@ -79,62 +81,64 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
 
                     let pathPointActionsCName = `path${path.id}_${i}_actions`
 
-                    cCode.push(`ActionFunction ${pathPointActionsCName}[] = {`,
-                        ...pathPoints.map((pathPoint) => {
+                    cCode.push(`GObjPathPointFunction ${pathPointActionsCName}[] = {`,
+                        pathPoints.map((pathPoint) => {
                             let action = pathPoint.resolvedProperty('action')
-                            if (action)
+                            if (action) {
+                                action = action.replace(/\W/, '_')
                                 pathPointActions[action] = `void ${action}(GameObject *self, PathPoint *pathPoint);`
-                            else
-                                action = `NULL /* to be assigned */`
-                            return `${action},`
-                        }),
+                            } else {
+                                action = `0 /* to be assigned */`
+                            }
+                            return `${action}`
+                        }).join(',\n'),
                         '};')
                 })
                 
                 let pathPointsCName = `path${path.id}_points`
                 cCode.push(`PathPoint ${pathPointsCName}[] = {`,
-                    ...path.polygon.map((point, i) =>
-                        `{.x = ${point.x}, .y = ${point.y}, .numActions = ${pointsData[i].length}, .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : 'NULL'}},`),
+                    path.polygon.map((point, i) =>
+                        `{.x = ${point.x}, .y = ${point.y}, .numActions = ${pointsData[i].length}, .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}}`).join(',\n'),
                     '};')
             })
             
-            let pathsCName = `${cName}_paths`
-            cCode.push(`Path ${pathsCName}[] = {`,
-                ...objects.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points},`),
-                '};')
+            if (objects.Path.length > 0) {
+                let pathsCName = `${cName}_paths`
+                cCode.push(`Path ${pathsCName}[] = {`,
+                    objects.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
+                    '};')
+            }
 
-            let charactersCName = `${cName}_characters`
-            cCode.push(`Character ${charactersCName}[] = {`,
-                ...objects.Character.map(character => {
-                    let definition
-                    if (character.className.length > 0) {
-                        definition = `def${character.className}`
-                        objectDefs[character.className] = `extern GameObjectDefinition *${definition};`
-                    } else {
-                        definition = 'NULL /* to be assigned */'
-                    }
-                    return [
-                        `{`,
-                        `.x = ${character.x}, .y = ${character.y},`,
-                        `.priority = ${(character.resolvedProperty('z') || 0) >= 0},`,
-                        `.flipx = ${character.tileFlippedHorizontally},`,
-                        `.flipy = ${character.tileFlippedVertically},`,
-                        `.definition = ${definition},`,
-                        `.animInd = ${character.tile?.id || 0}`,
-                        '},'
-                    ].join('\n')
-                }),
-                '};'
-            )
+            if (objects.LevelObject.length > 0) {
+                let objectsCName = `${cName}_objects`
+                cCode.push(`LevelObject ${objectsCName}[] = {`,
+                    objects.LevelObject.map(object => {
+                        let definition
+                        if (object.className.length > 0) {
+                            definition = `&def${object.className}`
+                            objectDefs[object.className] = `extern const GameObjectDefinition def${object.className};`
+                        } else {
+                            definition = '0 /* to be assigned */'
+                        }
+                        let flags = 0
+                        if ((object.resolvedProperty('z') || 0) >= 0)
+                            flags += 0x08000
+                        if (object.tileFlippedVertically)
+                            flags += 0x01000
+                        if (object.tileFlippedHorizontally)
+                            flags += 0x00800
+                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${object.tile?.id || 0}, .flags = ${flags}}`
+                    }).join(',\n'),
+                    '};'
+                )
+            }
 
-            cCode.push(`LevelObjectGroup ${cName} = {`,
-                `.numTriggers = ${objects.Trigger.length},`,
-                `.triggers = ${cName}_triggers,`,
-                `.numPaths = ${objects.Path.length},`,
-                `.paths = ${cName}_paths,`,
-                `.numCharacters = ${objects.Character.length},`,
-                `.characters = ${cName}_characters`,
-                '};')
+            cCode.push(
+`LevelObjectGroup ${cName} = {
+    .numTriggers = ${objects.Trigger.length}, .triggers = ${objects.Trigger.length > 0 ? `${cName}_triggers` : '0'},
+    .numPaths = ${objects.Path.length}, .paths = ${objects.Path.length > 0 ? `${cName}_paths` : '0'},
+    .numObjects = ${objects.LevelObject.length}, .objects = ${objects.LevelObject.length > 0 ? `${cName}_objects` : '0'}
+};`)
 
             return {cName, cCode}
         }
@@ -164,18 +168,21 @@ tiled.registerMapFormat("Honey Guardian Genesis level", {
          */
         let hCode = []
         hCode.push(
-            `#ifndef _${ fileName.replace(/\W+/g, '_')}`,
-            `#define _${fileName.replace(/\W+/g, '_')}`,
-            '#include "lobject.h"',
+`#ifndef _${baseName.replace(/\W+/g, '_')}_h
+#define _${baseName.replace(/\W+/g, '_')}_h
+
+#include "level.h"
+
+extern LevelObjectGroup *OBJECTGROUPS[];
+`,
             ...Object.values(objectDefs),
             ...Object.values(triggerActions),
-            ...Object.values(pathPointActions),
-            `extern LevelObjectGroup *OBJECTGROUPS[];`)
+            ...Object.values(pathPointActions))
         hCode.push('#endif')
 
         /** @type {string[]} */
         let cCode = []
-        cCode.push('#include "lobject.h"',
+        cCode.push(`#include "${baseName}.h"`,
             ...objectGroups.map(({cCode}) => cCode.join('\n')),
             `LevelObjectGroup *OBJECTGROUPS[] = {`,
             ...objectGroups.map(({cName}) => `&${cName},`),
