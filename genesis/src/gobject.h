@@ -28,7 +28,9 @@ bool GOBJ_isSpriteOnScreen(GameObject *self);
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
 
+GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY);
 void GOBJ_init(GameObject *self);
+void GOBJ_initSprite(GameObject *self, u16 attr);
 void GOBJ_updateSprite(GameObject *this);
 void GOBJ_release(GameObject *self);
 

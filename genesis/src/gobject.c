@@ -2,9 +2,34 @@
 #include "gobjdef.h"
 #include "gameplay.h"
 #include "maths.h"
+#include "types.h"
 
 void GOBJ_init(GameObject *self) {
     self->velX = self->velY = 0;
+    self->path = 0;
+    self->pathIndex = 0;
+    self->definition = 0;
+    self->sprite = 0;
+    self->group = 0;
+}
+
+GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY) {
+    GameObject *obj = GAME_createObject();
+    obj->centerX = centerX;
+    obj->centerY = centerY;
+    obj->health = def->health;
+    obj->definition = def;
+    if (def->update)
+        OBJ_setUpdateMethod((Object*)obj, (ObjectCallback*)def->update);
+    return obj;
+}
+
+void GOBJ_initSprite(GameObject *self, u16 attr) {
+    const SpriteDefinition *spriteDef = self->definition->spriteDef;
+    if (!spriteDef)
+        return;
+    Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
+    SPR_addSprite(spriteDef, fix16ToInt(tl.x), fix16ToInt(tl.y), attr);
 }
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
@@ -24,7 +49,6 @@ Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
 }
 
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h) {
-    Sprite *sprite = self->sprite;
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     Vect2D_f16 br = GOBJ_getAnchorPoint(self, 1, 1);
     return (br.x > x && tl.x < x + w && br.y > y && tl.y < y + h);
