@@ -87,23 +87,22 @@ Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld)
 }
 
 GameObject* LEVEL_createObject(LevelObject *lobj) {
+    static Palette *lastPalette = 0;
+
     const GameObjectDefinition *def = lobj->definition;
-    GameObject *obj = GAME_createObject();
-    obj->centerX = FIX16(lobj->x);
-    obj->centerY = LEVEL_toScreenY(FIX32(lobj->y));
+    GameObject *obj = GOBJ_createFromDef(def, FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
     obj->group = lobj->group;
-    obj->health = def->health;
-    obj->definition = def;
-    const SpriteDefinition *spriteDef = def->spriteDef;
-    if (spriteDef) {
-        Vect2D_f16 tl = GOBJ_getAnchorPoint(obj, -1, -1);
-        // TODO:
-        // Palette data from def->paletteData
-        // Get palette slot that palette data is already in,
-        // or find free palette slot for palette data
-        u16 palette = PAL3;
-        SPR_addSprite(spriteDef, fix16ToInt(tl.x), fix16ToInt(tl.y),
-            (palette << TILE_ATTR_PALETTE_SFT) | lobj->flags);
+
+    // To be managed by palette manager.
+    // Find the slot that my palette is already in,
+    // or pick the slot that no current objects are using
+    u16 paletteSlot = PAL2;
+
+    const Palette *palette = def->palette;
+    if (palette && palette != lastPalette) {
+        PAL_setPalette(paletteSlot, palette->data, DMA_QUEUE);
+        lastPalette = palette;
     }
+    GOBJ_initSprite(obj, (paletteSlot << TILE_ATTR_PALETTE_SFT) | lobj->flags);
     return obj;
 }
