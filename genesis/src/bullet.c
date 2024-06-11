@@ -1,8 +1,7 @@
 #include "gobject.h"
+#include "gobjdef.h"
 #include "gameplay.h"
 #include "maths.h"
-
-typedef struct BulletDefinition BulletDefinition;
 
 void BULLET_update(GameObject *self) {
     self->centerX += self->velX;
@@ -33,4 +32,11 @@ GameObject* BULLET_createAS(fix16 centerX, fix16 centerY, u16 angle, u16 speed) 
     return BULLET_createVXVY(
         centerX, centerY,
         speed * cosFix16(angle), speed * sinFix16(angle));
+}
+
+GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
+    GameObject *self = BULLET_createAS(centerX, centerY, angle, def->speed);
+    if (def->update)
+        OBJ_setUpdateMethod((Object*)self, def->update);
+    return self;
 }
