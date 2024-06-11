@@ -35,16 +35,21 @@ void GOBJ_initSprite(GameObject *self, u16 attr) {
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
     Vect2D_f16 v = {self->centerX, self->centerY};
-    Sprite *sprite = self->sprite;
-    if (sprite) {
+    const SpriteDefinition *spriteDef = 0;
+    if (self->sprite) {
+        spriteDef = self->sprite->definition;
+    } else if (self->definition) {
+        spriteDef = self->definition->spriteDef;
+    }
+    if (spriteDef) {
         if (ax < 0)
-            v.x -= FIX16(sprite->definition->w >> 1);
+            v.x -= FIX16(spriteDef->w >> 1);
         else if (ax > 0)
-            v.x += FIX16(sprite->definition->w >> 1);
+            v.x += FIX16(spriteDef->w >> 1);
         if (ay < 0)
-            v.y -= FIX16(sprite->definition->h >> 1);
+            v.y -= FIX16(spriteDef->h >> 1);
         else if (ay > 0)
-            v.y += FIX16(sprite->definition->h >> 1);
+            v.y += FIX16(spriteDef->h >> 1);
     }
     return v;
 }
