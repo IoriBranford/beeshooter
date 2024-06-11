@@ -5,7 +5,15 @@
 
 void spawnCharacters(Trigger *trigger)
 {
+    LevelObject *object = trigger->group->objects;
+    if (!object)
+        return;
+    for (int i = 0; i < trigger->group->numObjects; ++i) {
+        LEVEL_createObject(object);
+        object++;
+    }
 }
+
 void stopStageScroll(Trigger *trigger)
 {
     LEVEL_setVelY(0);

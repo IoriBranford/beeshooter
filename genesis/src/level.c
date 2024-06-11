@@ -90,4 +90,5 @@ GameObject* LEVEL_createObject(LevelObject *lobj) {
         SPR_addSprite(spriteDef, fix16ToInt(tl.x), fix16ToInt(tl.y),
             (palette << TILE_ATTR_PALETTE_SFT) | lobj->flags);
     }
+    return obj;
 }
