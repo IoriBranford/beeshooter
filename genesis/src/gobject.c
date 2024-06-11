@@ -76,7 +76,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
     if (!path) {
         path = LEVEL_findNearestPath(self->group,
             fix16ToFix32(self->centerX),
-            fix16ToFix32(self->centerY));
+            LEVEL_toWorldY(self->centerY));
         self->path = path;
     }
     GOBJ_followPath(self);
