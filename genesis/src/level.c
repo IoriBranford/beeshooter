@@ -2,6 +2,7 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "gameplay.h"
+#include "stage_caravan.h"
 
 #include <genesis.h>
 
@@ -13,6 +14,8 @@
 
 static Map *bg;
 static fix32 bgY, bgVelY;
+static Trigger *nextTrigger;
+static u32 nextTriggerIndex;
 
 void LEVEL_init() {
     bgY = FIX32(4256);
@@ -22,10 +25,22 @@ void LEVEL_init() {
     VDP_loadTileSet(&bgTileset, BG_TILESET_START_INDEX, DMA);
     bg = MAP_create(&bgMap, BG_B, BG_BASE_TILE);
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(bgY));
+
+    nextTriggerIndex = 0;
+    nextTrigger = stage_caravan_triggers;
 }
 
 void LEVEL_update() {
     bgY += bgVelY;
+    if (bgVelY) {
+        while (nextTriggerIndex < stage_caravan_numTriggers
+        && nextTrigger && FIX32(nextTrigger->y) >= bgY) {
+            if (nextTrigger->action)
+                nextTrigger->action(nextTrigger);
+            ++nextTrigger;
+            ++nextTriggerIndex;
+        }
+    }
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(bgY));
 }
 
