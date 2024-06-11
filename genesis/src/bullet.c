@@ -37,6 +37,6 @@ GameObject* BULLET_createAS(fix16 centerX, fix16 centerY, u16 angle, u16 speed) 
 GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
     GameObject *self = BULLET_createAS(centerX, centerY, angle, def->speed);
     if (def->update)
-        OBJ_setUpdateMethod((Object*)self, def->update);
+        OBJ_setUpdateMethod((Object*)self, (ObjectCallback*)def->update);
     return self;
 }
