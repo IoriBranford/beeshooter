@@ -7,12 +7,27 @@ void GOBJ_init(GameObject *self) {
     self->velX = self->velY = 0;
 }
 
+Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
+    Vect2D_f16 v = {self->centerX, self->centerY};
+    Sprite *sprite = self->sprite;
+    if (sprite) {
+        if (ax < 0)
+            v.x -= FIX16(sprite->definition->w >> 1);
+        else if (ax > 0)
+            v.x += FIX16(sprite->definition->w >> 1);
+        if (ay < 0)
+            v.y -= FIX16(sprite->definition->h >> 1);
+        else if (ay > 0)
+            v.y += FIX16(sprite->definition->h >> 1);
+    }
+    return v;
+}
+
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h) {
     Sprite *sprite = self->sprite;
-    fix16 hw = FIX16(sprite->definition->w >> 1);
-    fix16 hh = FIX16(sprite->definition->h >> 1);
-    return (self->centerX + hw > x && self->centerX - hw < x + w
-        && self->centerY + hh > y && self->centerY - hh < y + h);
+    Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
+    Vect2D_f16 br = GOBJ_getAnchorPoint(self, 1, 1);
+    return (br.x > x && tl.x < x + w && br.y > y && tl.y < y + h);
 }
 
 bool GOBJ_isSpriteOnScreen(GameObject *self) {
