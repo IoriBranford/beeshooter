@@ -8,6 +8,7 @@ void spawnCharacters(Trigger *trigger)
 }
 void stopStageScroll(Trigger *trigger)
 {
+    LEVEL_setVelY(0);
 }
 
 void faceRight(GameObject *self, PathPoint *pathPoint)
