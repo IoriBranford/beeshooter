@@ -54,8 +54,8 @@ tiled.registerMapFormat("Honey Guardian C level", {
             })
 
             /** @type {string[]} */
-            let cCode = [`// ${objectgroup.name}`]
             let cName = objectgroup.name.replace(/\W+/g, '_')
+            let cCode = [`extern LevelObjectGroup ${cName};`]
             
             if (objects.Trigger.length > 0) {
                 let triggersCName = `${cName}_triggers`
@@ -66,7 +66,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                             triggerActions[action] = `void ${action}(Trigger *trigger);`
                         else
                             action = `0 /* to be assigned */`
-                        return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}}`
+                        return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${cName}}`
                     }).join(',\n'),
                     `};`)
             }
@@ -127,14 +127,14 @@ tiled.registerMapFormat("Honey Guardian C level", {
                             flags += 0x01000
                         if (object.tileFlippedHorizontally)
                             flags += 0x00800
-                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${object.tile?.id || 0}, .flags = ${flags}}`
+                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${object.tile?.id || 0}, .flags = ${flags}, .group = &${cName}}`
                     }).join(',\n'),
                     '};'
                 )
             }
 
             cCode.push(
-`static LevelObjectGroup ${cName} = {
+`LevelObjectGroup ${cName} = {
     .numTriggers = ${objects.Trigger.length}, .triggers = ${objects.Trigger.length > 0 ? `${cName}_triggers` : '0'},
     .numPaths = ${objects.Path.length}, .paths = ${objects.Path.length > 0 ? `${cName}_paths` : '0'},
     .numObjects = ${objects.LevelObject.length}, .objects = ${objects.LevelObject.length > 0 ? `${cName}_objects` : '0'}
