@@ -71,7 +71,7 @@ void GOBJ_release(GameObject *self) {
     SPR_releaseSprite(self->sprite);
 }
 
-void GOBJ_updatePathFollow(GameObject *self) {
+void GOBJ_updatePathWalker(GameObject *self) {
     Path *path = self->path;
     if (!path) {
         path = LEVEL_findNearestPath(self->group,
@@ -79,11 +79,23 @@ void GOBJ_updatePathFollow(GameObject *self) {
             fix16ToFix32(self->centerY));
         self->path = path;
     }
-    if (!path)
-        return;
+    GOBJ_followPath(self);
+    if (GOBJ_isSpriteOnScreen(self)) {
+        GOBJ_updateSprite(self);
+    } else if (!self->path || self->pathIndex >= self->path->numPoints) {
+        GAME_releaseObject(self);
+    }
+}
 
+void GOBJ_followPath(GameObject *self) {
+    Path *path = self->path;
     u32 pathIndex = self->pathIndex;
-    pathIndex = min(pathIndex, self->path->numPoints-1);
+    if (!path || pathIndex >= path->numPoints) {
+        self->velY += fix32ToFix16(LEVEL_velY());
+        return;
+    }
+
+    pathIndex = min(pathIndex, path->numPoints-1);
 
     PathPoint *pathPoint = &path->points[pathIndex];
     fix16 destX = FIX16(path->x + pathPoint->x);
@@ -98,7 +110,7 @@ void GOBJ_updatePathFollow(GameObject *self) {
     if (dist <= speed) {
         velX = distX;
         velY = distY;
-        pathIndex = min(pathIndex + 1, self->path->numPoints-1);
+        pathIndex = pathIndex + 1;
     } else {
         velX = fix16Div(fix16Mul(distX, speed), dist);
         velY = fix16Div(fix16Mul(distY, speed), dist);
