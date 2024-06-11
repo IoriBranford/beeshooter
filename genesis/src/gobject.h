@@ -16,9 +16,12 @@ typedef struct GameObject {
     Sprite *sprite;
     fix16 centerX, centerY;
     fix16 velX, velY;
+
     Path *path;
     u16 pathIndex;
     fix16 speed;
+
+    u16 health;
 } GameObject;
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);

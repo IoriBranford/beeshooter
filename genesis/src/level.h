@@ -51,5 +51,6 @@ fix32 LEVEL_toWorldY(fix16 yScreen);
 fix32 LEVEL_velY();
 
 Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld);
+GameObject* LEVEL_createObject(LevelObject *lobj);
 
 #endif
