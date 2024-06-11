@@ -1,3 +1,4 @@
+#include "level.h"
 #include <genesis.h>
 
 #include "res_gfx.h"
