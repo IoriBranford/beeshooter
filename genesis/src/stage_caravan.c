@@ -1,8 +1,5 @@
 #include "stage_caravan.h"
 extern LevelObjectGroup room1ants1;
-static Trigger room1ants1_triggers[] = {
-{.y = 3976, .action = spawnCharacters, .group = &room1ants1}
-};
 static PathPoint path427_points[] = {
 {.x = 0, .y = -40, .numActions = 0, .actions = 0},
 {.x = -40, .y = -40, .numActions = 0, .actions = 0},
@@ -56,14 +53,10 @@ static LevelObject room1ants1_objects[] = {
 {.definition = &defAnt, .x = 288, .y = 4016, .animInd = 0, .flags = 34816, .group = &room1ants1}
 };
 LevelObjectGroup room1ants1 = {
-    .numTriggers = 1, .triggers = room1ants1_triggers,
     .numPaths = 5, .paths = room1ants1_paths,
     .numObjects = 5, .objects = room1ants1_objects
 };
 extern LevelObjectGroup room1ants2;
-static Trigger room1ants2_triggers[] = {
-{.y = 3960, .action = spawnCharacters, .group = &room1ants2}
-};
 static PathPoint path435_points[] = {
 {.x = 0, .y = -40, .numActions = 0, .actions = 0},
 {.x = 56, .y = -40, .numActions = 0, .actions = 0},
@@ -108,14 +101,10 @@ static LevelObject room1ants2_objects[] = {
 {.definition = &defAnt, .x = -32, .y = 3992, .animInd = 0, .flags = 32768, .group = &room1ants2}
 };
 LevelObjectGroup room1ants2 = {
-    .numTriggers = 1, .triggers = room1ants2_triggers,
     .numPaths = 5, .paths = room1ants2_paths,
     .numObjects = 5, .objects = room1ants2_objects
 };
 extern LevelObjectGroup room1ants3;
-static Trigger room1ants3_triggers[] = {
-{.y = 3904, .action = spawnCharacters, .group = &room1ants3}
-};
 static PathPoint path1_points[] = {
 {.x = -8, .y = 0, .numActions = 0, .actions = 0},
 {.x = 8, .y = 0, .numActions = 0, .actions = 0},
@@ -147,14 +136,10 @@ static LevelObject room1ants3_objects[] = {
 {.definition = &defAnt, .x = -152, .y = 3912, .animInd = 0, .flags = 32768, .group = &room1ants3}
 };
 LevelObjectGroup room1ants3 = {
-    .numTriggers = 1, .triggers = room1ants3_triggers,
     .numPaths = 1, .paths = room1ants3_paths,
     .numObjects = 15, .objects = room1ants3_objects
 };
 extern LevelObjectGroup room1ants4;
-static Trigger room1ants4_triggers[] = {
-{.y = 3832, .action = spawnCharacters, .group = &room1ants4}
-};
 static PathPoint path64_points[] = {
 {.x = 0, .y = 0, .numActions = 0, .actions = 0},
 {.x = -32, .y = 0, .numActions = 0, .actions = 0},
@@ -210,26 +195,18 @@ static LevelObject room1ants4_objects[] = {
 {.definition = &defAnt, .x = 408, .y = 3880, .animInd = 0, .flags = 34816, .group = &room1ants4}
 };
 LevelObjectGroup room1ants4 = {
-    .numTriggers = 1, .triggers = room1ants4_triggers,
     .numPaths = 2, .paths = room1ants4_paths,
     .numObjects = 30, .objects = room1ants4_objects
 };
 extern LevelObjectGroup room1powerup;
-static Trigger room1powerup_triggers[] = {
-{.y = 3768, .action = spawnCharacters, .group = &room1powerup}
-};
 static LevelObject room1powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 80, .y = 3752, .animInd = 0, .flags = 32768, .group = &room1powerup}
 };
 LevelObjectGroup room1powerup = {
-    .numTriggers = 1, .triggers = room1powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = room1powerup_objects
 };
 extern LevelObjectGroup room2ants1;
-static Trigger room2ants1_triggers[] = {
-{.y = 3680, .action = spawnCharacters, .group = &room2ants1}
-};
 static PathPoint path108_points[] = {
 {.x = 0, .y = 0, .numActions = 0, .actions = 0},
 {.x = 80, .y = 24, .numActions = 0, .actions = 0}
@@ -295,14 +272,10 @@ static LevelObject room2ants1_objects[] = {
 {.definition = &defAnt, .x = 264, .y = 3736, .animInd = 0, .flags = 34816, .group = &room2ants1}
 };
 LevelObjectGroup room2ants1 = {
-    .numTriggers = 1, .triggers = room2ants1_triggers,
     .numPaths = 10, .paths = room2ants1_paths,
     .numObjects = 10, .objects = room2ants1_objects
 };
 extern LevelObjectGroup room2ants2;
-static Trigger room2ants2_triggers[] = {
-{.y = 3616, .action = spawnCharacters, .group = &room2ants2}
-};
 static PathPoint path141_points[] = {
 {.x = 0, .y = 16, .numActions = 0, .actions = 0},
 {.x = 88, .y = 24, .numActions = 0, .actions = 0}
@@ -368,26 +341,18 @@ static LevelObject room2ants2_objects[] = {
 {.definition = &defAnt, .x = 264, .y = 3744, .animInd = 0, .flags = 34816, .group = &room2ants2}
 };
 LevelObjectGroup room2ants2 = {
-    .numTriggers = 1, .triggers = room2ants2_triggers,
     .numPaths = 10, .paths = room2ants2_paths,
     .numObjects = 10, .objects = room2ants2_objects
 };
 extern LevelObjectGroup room2powerup;
-static Trigger room2powerup_triggers[] = {
-{.y = 3576, .action = spawnCharacters, .group = &room2powerup}
-};
 static LevelObject room2powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 136, .y = 3568, .animInd = 0, .flags = 32768, .group = &room2powerup}
 };
 LevelObjectGroup room2powerup = {
-    .numTriggers = 1, .triggers = room2powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = room2powerup_objects
 };
 extern LevelObjectGroup r3fly1;
-static Trigger r3fly1_triggers[] = {
-{.y = 3544, .action = spawnCharacters, .group = &r3fly1}
-};
 static GObjPathPointFunction path449_0_actions[] = {
 0 /* to be assigned */
 };
@@ -443,14 +408,10 @@ static LevelObject r3fly1_objects[] = {
 {.definition = &defFly, .x = 192, .y = 3616, .animInd = 0, .flags = 2048, .group = &r3fly1}
 };
 LevelObjectGroup r3fly1 = {
-    .numTriggers = 1, .triggers = r3fly1_triggers,
     .numPaths = 2, .paths = r3fly1_paths,
     .numObjects = 2, .objects = r3fly1_objects
 };
 extern LevelObjectGroup room3fly3;
-static Trigger room3fly3_triggers[] = {
-{.y = 3448, .action = spawnCharacters, .group = &room3fly3}
-};
 static GObjPathPointFunction path102_0_actions[] = {
 0 /* to be assigned */
 };
@@ -496,14 +457,10 @@ static LevelObject room3fly3_objects[] = {
 {.definition = &defFly, .x = 152, .y = 3496, .animInd = 0, .flags = 2048, .group = &room3fly3}
 };
 LevelObjectGroup room3fly3 = {
-    .numTriggers = 1, .triggers = room3fly3_triggers,
     .numPaths = 2, .paths = room3fly3_paths,
     .numObjects = 2, .objects = room3fly3_objects
 };
 extern LevelObjectGroup room3fly4;
-static Trigger room3fly4_triggers[] = {
-{.y = 3352, .action = spawnCharacters, .group = &room3fly4}
-};
 static GObjPathPointFunction path398_0_actions[] = {
 0 /* to be assigned */
 };
@@ -553,14 +510,10 @@ static LevelObject room3fly4_objects[] = {
 {.definition = &defFly, .x = 216, .y = 3544, .animInd = 0, .flags = 2048, .group = &room3fly4}
 };
 LevelObjectGroup room3fly4 = {
-    .numTriggers = 1, .triggers = room3fly4_triggers,
     .numPaths = 2, .paths = room3fly4_paths,
     .numObjects = 2, .objects = room3fly4_objects
 };
 extern LevelObjectGroup r4fly1;
-static Trigger r4fly1_triggers[] = {
-{.y = 3168, .action = spawnCharacters, .group = &r4fly1}
-};
 static GObjPathPointFunction path229_0_actions[] = {
 0 /* to be assigned */
 };
@@ -603,26 +556,18 @@ static LevelObject r4fly1_objects[] = {
 {.definition = &defFly, .x = -16, .y = 3224, .animInd = 0, .flags = 0, .group = &r4fly1}
 };
 LevelObjectGroup r4fly1 = {
-    .numTriggers = 1, .triggers = r4fly1_triggers,
     .numPaths = 1, .paths = r4fly1_paths,
     .numObjects = 1, .objects = r4fly1_objects
 };
 extern LevelObjectGroup room4powerup;
-static Trigger room4powerup_triggers[] = {
-{.y = 3192, .action = spawnCharacters, .group = &room4powerup}
-};
 static LevelObject room4powerup_objects[] = {
 {.definition = &defHoneyCell, .x = 192, .y = 3184, .animInd = 4, .flags = 32768, .group = &room4powerup}
 };
 LevelObjectGroup room4powerup = {
-    .numTriggers = 1, .triggers = room4powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = room4powerup_objects
 };
 extern LevelObjectGroup room5fly1;
-static Trigger room5fly1_triggers[] = {
-{.y = 3064, .action = spawnCharacters, .group = &room5fly1}
-};
 static GObjPathPointFunction path386_0_actions[] = {
 0 /* to be assigned */
 };
@@ -661,26 +606,18 @@ static LevelObject room5fly1_objects[] = {
 {.definition = &defFly, .x = 272, .y = 3192, .animInd = 0, .flags = 2048, .group = &room5fly1}
 };
 LevelObjectGroup room5fly1 = {
-    .numTriggers = 1, .triggers = room5fly1_triggers,
     .numPaths = 1, .paths = room5fly1_paths,
     .numObjects = 1, .objects = room5fly1_objects
 };
 extern LevelObjectGroup r5powerup;
-static Trigger r5powerup_triggers[] = {
-{.y = 3064, .action = spawnCharacters, .group = &r5powerup}
-};
 static LevelObject r5powerup_objects[] = {
 {.definition = &defHoneyCell, .x = 64, .y = 3056, .animInd = 4, .flags = 32768, .group = &r5powerup}
 };
 LevelObjectGroup r5powerup = {
-    .numTriggers = 1, .triggers = r5powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r5powerup_objects
 };
 extern LevelObjectGroup room6fly;
-static Trigger room6fly_triggers[] = {
-{.y = 2816, .action = spawnCharacters, .group = &room6fly}
-};
 static GObjPathPointFunction path152_0_actions[] = {
 0 /* to be assigned */
 };
@@ -743,14 +680,10 @@ static LevelObject room6fly_objects[] = {
 {.definition = &defFly, .x = 272, .y = 2832, .animInd = 0, .flags = 2048, .group = &room6fly}
 };
 LevelObjectGroup room6fly = {
-    .numTriggers = 1, .triggers = room6fly_triggers,
     .numPaths = 1, .paths = room6fly_paths,
     .numObjects = 1, .objects = room6fly_objects
 };
 extern LevelObjectGroup room5bigant;
-static Trigger room5bigant_triggers[] = {
-{.y = 3472, .action = spawnCharacters, .group = &room5bigant}
-};
 static GObjPathPointFunction path177_5_actions[] = {
 0 /* to be assigned */
 };
@@ -848,14 +781,10 @@ static LevelObject room5bigant_objects[] = {
 {.definition = &defAntBig, .x = 192, .y = 2928, .animInd = 0, .flags = 34816, .group = &room5bigant}
 };
 LevelObjectGroup room5bigant = {
-    .numTriggers = 1, .triggers = room5bigant_triggers,
     .numPaths = 2, .paths = room5bigant_paths,
     .numObjects = 2, .objects = room5bigant_objects
 };
 extern LevelObjectGroup room6bigant;
-static Trigger room6bigant_triggers[] = {
-{.y = 2944, .action = spawnCharacters, .group = &room6bigant}
-};
 static GObjPathPointFunction path472_1_actions[] = {
 0 /* to be assigned */
 };
@@ -887,14 +816,10 @@ static LevelObject room6bigant_objects[] = {
 {.definition = &defAntBig, .x = 40, .y = 2704, .animInd = 0, .flags = 34816, .group = &room6bigant}
 };
 LevelObjectGroup room6bigant = {
-    .numTriggers = 1, .triggers = room6bigant_triggers,
     .numPaths = 2, .paths = room6bigant_paths,
     .numObjects = 2, .objects = room6bigant_objects
 };
 extern LevelObjectGroup room7alien1;
-static Trigger room7alien1_triggers[] = {
-{.y = 2504, .action = spawnCharacters, .group = &room7alien1}
-};
 static GObjPathPointFunction path282_2_actions[] = {
 0 /* to be assigned */
 };
@@ -911,14 +836,10 @@ static LevelObject room7alien1_objects[] = {
 {.definition = &defHoneyPot, .x = 128, .y = 2472, .animInd = 0, .flags = 32768, .group = &room7alien1}
 };
 LevelObjectGroup room7alien1 = {
-    .numTriggers = 1, .triggers = room7alien1_triggers,
     .numPaths = 1, .paths = room7alien1_paths,
     .numObjects = 2, .objects = room7alien1_objects
 };
 extern LevelObjectGroup room7alien2;
-static Trigger room7alien2_triggers[] = {
-{.y = 2448, .action = spawnCharacters, .group = &room7alien2}
-};
 static GObjPathPointFunction path292_2_actions[] = {
 0 /* to be assigned */
 };
@@ -944,14 +865,10 @@ static LevelObject room7alien2_objects[] = {
 {.definition = &defAlienGunner, .x = 208, .y = 2440, .animInd = 0, .flags = 34816, .group = &room7alien2}
 };
 LevelObjectGroup room7alien2 = {
-    .numTriggers = 1, .triggers = room7alien2_triggers,
     .numPaths = 2, .paths = room7alien2_paths,
     .numObjects = 2, .objects = room7alien2_objects
 };
 extern LevelObjectGroup room7alien3;
-static Trigger room7alien3_triggers[] = {
-{.y = 2432, .action = spawnCharacters, .group = &room7alien3}
-};
 static GObjPathPointFunction path344_3_actions[] = {
 0 /* to be assigned */
 };
@@ -1023,14 +940,10 @@ static LevelObject room7alien3_objects[] = {
 {.definition = &defAlienPillager, .x = 280, .y = 2528, .animInd = 6, .flags = 34816, .group = &room7alien3}
 };
 LevelObjectGroup room7alien3 = {
-    .numTriggers = 1, .triggers = room7alien3_triggers,
     .numPaths = 6, .paths = room7alien3_paths,
     .numObjects = 6, .objects = room7alien3_objects
 };
 extern LevelObjectGroup room8alien1;
-static Trigger room8alien1_triggers[] = {
-{.y = 2376, .action = spawnCharacters, .group = &room8alien1}
-};
 static LevelObject room8alien1_objects[] = {
 {.definition = &defAlienPillager, .x = 120, .y = 2368, .animInd = 10, .flags = 32768, .group = &room8alien1},
 {.definition = &defAlienPillager, .x = 120, .y = 2312, .animInd = 10, .flags = 32768, .group = &room8alien1},
@@ -1046,14 +959,10 @@ static LevelObject room8alien1_objects[] = {
 {.definition = &defAlienPillager, .x = 160, .y = 2320, .animInd = 10, .flags = 34816, .group = &room8alien1}
 };
 LevelObjectGroup room8alien1 = {
-    .numTriggers = 1, .triggers = room8alien1_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 12, .objects = room8alien1_objects
 };
 extern LevelObjectGroup room8alien2;
-static Trigger room8alien2_triggers[] = {
-{.y = 2360, .action = spawnCharacters, .group = &room8alien2}
-};
 static GObjPathPointFunction path512_1_actions[] = {
 0 /* to be assigned */
 };
@@ -1081,7 +990,6 @@ static LevelObject room8alien2_objects[] = {
 {.definition = &defAlienGunner, .x = 176, .y = 2352, .animInd = 0, .flags = 34816, .group = &room8alien2}
 };
 LevelObjectGroup room8alien2 = {
-    .numTriggers = 1, .triggers = room8alien2_triggers,
     .numPaths = 2, .paths = room8alien2_paths,
     .numObjects = 2, .objects = room8alien2_objects
 };
@@ -1127,14 +1035,10 @@ static LevelObject room8alien3_objects[] = {
 {.definition = &defAlienGunner, .x = 272, .y = 2392, .animInd = 0, .flags = 34816, .group = &room8alien3}
 };
 LevelObjectGroup room8alien3 = {
-    .numTriggers = 0, .triggers = 0,
     .numPaths = 2, .paths = room8alien3_paths,
     .numObjects = 2, .objects = room8alien3_objects
 };
 extern LevelObjectGroup room8alien4;
-static Trigger room8alien4_triggers[] = {
-{.y = 2264, .action = spawnCharacters, .group = &room8alien4}
-};
 static GObjPathPointFunction path502_1_actions[] = {
 0 /* to be assigned */
 };
@@ -1176,41 +1080,29 @@ static LevelObject room8alien4_objects[] = {
 {.definition = &defAlienGunner, .x = 192, .y = 2232, .animInd = 0, .flags = 34816, .group = &room8alien4}
 };
 LevelObjectGroup room8alien4 = {
-    .numTriggers = 1, .triggers = room8alien4_triggers,
     .numPaths = 4, .paths = room8alien4_paths,
     .numObjects = 4, .objects = room8alien4_objects
 };
 extern LevelObjectGroup room8powerup;
-static Trigger room8powerup_triggers[] = {
-{.y = 2272, .action = spawnCharacters, .group = &room8powerup}
-};
 static LevelObject room8powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 136, .y = 2256, .animInd = 0, .flags = 32768, .group = &room8powerup},
 {.definition = &defHoneyPot, .x = 120, .y = 2264, .animInd = 0, .flags = 32768, .group = &room8powerup}
 };
 LevelObjectGroup room8powerup = {
-    .numTriggers = 1, .triggers = room8powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = room8powerup_objects
 };
 extern LevelObjectGroup room9powerup;
-static Trigger room9powerup_triggers[] = {
-{.y = 2184, .action = spawnCharacters, .group = &room9powerup}
-};
 static LevelObject room9powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 120, .y = 2160, .animInd = 0, .flags = 32768, .group = &room9powerup},
 {.definition = &defHoneyPot, .x = 144, .y = 2168, .animInd = 0, .flags = 32768, .group = &room9powerup},
 {.definition = &defHoneyPot, .x = 128, .y = 2176, .animInd = 0, .flags = 32768, .group = &room9powerup}
 };
 LevelObjectGroup room9powerup = {
-    .numTriggers = 1, .triggers = room9powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 3, .objects = room9powerup_objects
 };
 extern LevelObjectGroup room9alienmind;
-static Trigger room9alienmind_triggers[] = {
-{.y = 2016, .action = spawnCharacters, .group = &room9alienmind}
-};
 static PathPoint path363_points[] = {
 {.x = 0, .y = -56, .numActions = 0, .actions = 0},
 {.x = 0, .y = 24, .numActions = 0, .actions = 0}
@@ -1323,23 +1215,15 @@ static LevelObject room9alienmind_objects[] = {
 {.definition = &defAlienMind, .x = 128, .y = 1984, .animInd = 0, .flags = 0, .group = &room9alienmind}
 };
 LevelObjectGroup room9alienmind = {
-    .numTriggers = 1, .triggers = room9alienmind_triggers,
     .numPaths = 7, .paths = room9alienmind_paths,
     .numObjects = 1, .objects = room9alienmind_objects
 };
 extern LevelObjectGroup part2;
-static Trigger part2_triggers[] = {
-{.y = 2008, .action = spawnCharacters, .group = &part2}
-};
 LevelObjectGroup part2 = {
-    .numTriggers = 1, .triggers = part2_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 0, .objects = 0
 };
 extern LevelObjectGroup room10acidants;
-static Trigger room10acidants_triggers[] = {
-{.y = 1856, .action = spawnCharacters, .group = &room10acidants}
-};
 static GObjPathPointFunction path1030_1_actions[] = {
 climbUpToFloor
 };
@@ -1395,14 +1279,10 @@ static LevelObject room10acidants_objects[] = {
 {.definition = &defAcidAnt, .x = 152, .y = 1920, .animInd = 2, .flags = 32768, .group = &room10acidants}
 };
 LevelObjectGroup room10acidants = {
-    .numTriggers = 1, .triggers = room10acidants_triggers,
     .numPaths = 5, .paths = room10acidants_paths,
     .numObjects = 5, .objects = room10acidants_objects
 };
 extern LevelObjectGroup room10acidants2;
-static Trigger room10acidants2_triggers[] = {
-{.y = 1840, .action = spawnCharacters, .group = &room10acidants2}
-};
 static GObjPathPointFunction path1051_1_actions[] = {
 climbUpToFloor
 };
@@ -1458,14 +1338,10 @@ static LevelObject room10acidants2_objects[] = {
 {.definition = &defAcidAnt, .x = 40, .y = 1888, .animInd = 2, .flags = 32768, .group = &room10acidants2}
 };
 LevelObjectGroup room10acidants2 = {
-    .numTriggers = 1, .triggers = room10acidants2_triggers,
     .numPaths = 5, .paths = room10acidants2_paths,
     .numObjects = 5, .objects = room10acidants2_objects
 };
 extern LevelObjectGroup r11acidants1a;
-static Trigger r11acidants1a_triggers[] = {
-{.y = 1760, .action = spawnCharacters, .group = &r11acidants1a}
-};
 static GObjPathPointFunction path1001_1_actions[] = {
 climbUpToFloor
 };
@@ -1481,14 +1357,10 @@ static LevelObject r11acidants1a_objects[] = {
 {.definition = &defAcidAnt, .x = 232, .y = 1816, .animInd = 2, .flags = 34816, .group = &r11acidants1a}
 };
 LevelObjectGroup r11acidants1a = {
-    .numTriggers = 1, .triggers = r11acidants1a_triggers,
     .numPaths = 1, .paths = r11acidants1a_paths,
     .numObjects = 1, .objects = r11acidants1a_objects
 };
 extern LevelObjectGroup r11acidants1b;
-static Trigger r11acidants1b_triggers[] = {
-{.y = 1752, .action = spawnCharacters, .group = &r11acidants1b}
-};
 static GObjPathPointFunction path1103_1_actions[] = {
 climbUpToFloor
 };
@@ -1504,14 +1376,10 @@ static LevelObject r11acidants1b_objects[] = {
 {.definition = &defAcidAnt, .x = 200, .y = 1816, .animInd = 2, .flags = 32768, .group = &r11acidants1b}
 };
 LevelObjectGroup r11acidants1b = {
-    .numTriggers = 1, .triggers = r11acidants1b_triggers,
     .numPaths = 1, .paths = r11acidants1b_paths,
     .numObjects = 1, .objects = r11acidants1b_objects
 };
 extern LevelObjectGroup r11acidants1c;
-static Trigger r11acidants1c_triggers[] = {
-{.y = 1744, .action = spawnCharacters, .group = &r11acidants1c}
-};
 static GObjPathPointFunction path1107_1_actions[] = {
 climbUpToFloor
 };
@@ -1527,14 +1395,10 @@ static LevelObject r11acidants1c_objects[] = {
 {.definition = &defAcidAnt, .x = 168, .y = 1816, .animInd = 2, .flags = 34816, .group = &r11acidants1c}
 };
 LevelObjectGroup r11acidants1c = {
-    .numTriggers = 1, .triggers = r11acidants1c_triggers,
     .numPaths = 1, .paths = r11acidants1c_paths,
     .numObjects = 1, .objects = r11acidants1c_objects
 };
 extern LevelObjectGroup r11acidants1d;
-static Trigger r11acidants1d_triggers[] = {
-{.y = 1736, .action = spawnCharacters, .group = &r11acidants1d}
-};
 static GObjPathPointFunction path1123_1_actions[] = {
 climbUpToFloor
 };
@@ -1550,14 +1414,10 @@ static LevelObject r11acidants1d_objects[] = {
 {.definition = &defAcidAnt, .x = 136, .y = 1816, .animInd = 2, .flags = 32768, .group = &r11acidants1d}
 };
 LevelObjectGroup r11acidants1d = {
-    .numTriggers = 1, .triggers = r11acidants1d_triggers,
     .numPaths = 1, .paths = r11acidants1d_paths,
     .numObjects = 1, .objects = r11acidants1d_objects
 };
 extern LevelObjectGroup r11acidants1e;
-static Trigger r11acidants1e_triggers[] = {
-{.y = 1728, .action = spawnCharacters, .group = &r11acidants1e}
-};
 static GObjPathPointFunction path1111_1_actions[] = {
 climbUpToFloor
 };
@@ -1573,14 +1433,10 @@ static LevelObject r11acidants1e_objects[] = {
 {.definition = &defAcidAnt, .x = 120, .y = 1808, .animInd = 2, .flags = 32768, .group = &r11acidants1e}
 };
 LevelObjectGroup r11acidants1e = {
-    .numTriggers = 1, .triggers = r11acidants1e_triggers,
     .numPaths = 1, .paths = r11acidants1e_paths,
     .numObjects = 1, .objects = r11acidants1e_objects
 };
 extern LevelObjectGroup r11acidants1f;
-static Trigger r11acidants1f_triggers[] = {
-{.y = 1720, .action = spawnCharacters, .group = &r11acidants1f}
-};
 static GObjPathPointFunction path1115_1_actions[] = {
 climbUpToFloor
 };
@@ -1596,14 +1452,10 @@ static LevelObject r11acidants1f_objects[] = {
 {.definition = &defAcidAnt, .x = 88, .y = 1800, .animInd = 2, .flags = 32768, .group = &r11acidants1f}
 };
 LevelObjectGroup r11acidants1f = {
-    .numTriggers = 1, .triggers = r11acidants1f_triggers,
     .numPaths = 1, .paths = r11acidants1f_paths,
     .numObjects = 1, .objects = r11acidants1f_objects
 };
 extern LevelObjectGroup r11acidants1g;
-static Trigger r11acidants1g_triggers[] = {
-{.y = 1712, .action = spawnCharacters, .group = &r11acidants1g}
-};
 static GObjPathPointFunction path1119_1_actions[] = {
 climbUpToFloor
 };
@@ -1619,14 +1471,10 @@ static LevelObject r11acidants1g_objects[] = {
 {.definition = &defAcidAnt, .x = 56, .y = 1800, .animInd = 2, .flags = 34816, .group = &r11acidants1g}
 };
 LevelObjectGroup r11acidants1g = {
-    .numTriggers = 1, .triggers = r11acidants1g_triggers,
     .numPaths = 1, .paths = r11acidants1g_paths,
     .numObjects = 1, .objects = r11acidants1g_objects
 };
 extern LevelObjectGroup r11acidants1h;
-static Trigger r11acidants1h_triggers[] = {
-{.y = 1704, .action = spawnCharacters, .group = &r11acidants1h}
-};
 static GObjPathPointFunction path1127_1_actions[] = {
 climbUpToFloor
 };
@@ -1642,14 +1490,10 @@ static LevelObject r11acidants1h_objects[] = {
 {.definition = &defAcidAnt, .x = 24, .y = 1800, .animInd = 2, .flags = 32768, .group = &r11acidants1h}
 };
 LevelObjectGroup r11acidants1h = {
-    .numTriggers = 1, .triggers = r11acidants1h_triggers,
     .numPaths = 1, .paths = r11acidants1h_paths,
     .numObjects = 1, .objects = r11acidants1h_objects
 };
 extern LevelObjectGroup room11acidants2a;
-static Trigger room11acidants2a_triggers[] = {
-{.y = 1632, .action = spawnCharacters, .group = &room11acidants2a}
-};
 static GObjPathPointFunction path982_0_actions[] = {
 climbUpToFloor
 };
@@ -1673,14 +1517,10 @@ static LevelObject room11acidants2a_objects[] = {
 {.definition = &defAcidAnt, .x = 272, .y = 1640, .animInd = 2, .flags = 2048, .group = &room11acidants2a}
 };
 LevelObjectGroup room11acidants2a = {
-    .numTriggers = 1, .triggers = room11acidants2a_triggers,
     .numPaths = 1, .paths = room11acidants2a_paths,
     .numObjects = 10, .objects = room11acidants2a_objects
 };
 extern LevelObjectGroup room11acidants2b;
-static Trigger room11acidants2b_triggers[] = {
-{.y = 1584, .action = spawnCharacters, .group = &room11acidants2b}
-};
 static GObjPathPointFunction path1070_0_actions[] = {
 climbUpToFloor
 };
@@ -1704,14 +1544,10 @@ static LevelObject room11acidants2b_objects[] = {
 {.definition = &defAcidAnt, .x = -16, .y = 1576, .animInd = 2, .flags = 0, .group = &room11acidants2b}
 };
 LevelObjectGroup room11acidants2b = {
-    .numTriggers = 1, .triggers = room11acidants2b_triggers,
     .numPaths = 1, .paths = room11acidants2b_paths,
     .numObjects = 10, .objects = room11acidants2b_objects
 };
 extern LevelObjectGroup r11acidants3a;
-static Trigger r11acidants3a_triggers[] = {
-{.y = 1632, .action = spawnCharacters, .group = &r11acidants3a}
-};
 static GObjPathPointFunction path909_1_actions[] = {
 climbUpToFloor
 };
@@ -1727,14 +1563,10 @@ static LevelObject r11acidants3a_objects[] = {
 {.definition = &defAcidAnt, .x = 248, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3a}
 };
 LevelObjectGroup r11acidants3a = {
-    .numTriggers = 1, .triggers = r11acidants3a_triggers,
     .numPaths = 1, .paths = r11acidants3a_paths,
     .numObjects = 1, .objects = r11acidants3a_objects
 };
 extern LevelObjectGroup r11acidants3b;
-static Trigger r11acidants3b_triggers[] = {
-{.y = 1624, .action = spawnCharacters, .group = &r11acidants3b}
-};
 static GObjPathPointFunction path1130_1_actions[] = {
 climbUpToFloor
 };
@@ -1750,14 +1582,10 @@ static LevelObject r11acidants3b_objects[] = {
 {.definition = &defAcidAnt, .x = 224, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3b}
 };
 LevelObjectGroup r11acidants3b = {
-    .numTriggers = 1, .triggers = r11acidants3b_triggers,
     .numPaths = 1, .paths = r11acidants3b_paths,
     .numObjects = 1, .objects = r11acidants3b_objects
 };
 extern LevelObjectGroup r11acidants3c;
-static Trigger r11acidants3c_triggers[] = {
-{.y = 1616, .action = spawnCharacters, .group = &r11acidants3c}
-};
 static GObjPathPointFunction path1134_1_actions[] = {
 climbUpToFloor
 };
@@ -1773,14 +1601,10 @@ static LevelObject r11acidants3c_objects[] = {
 {.definition = &defAcidAnt, .x = 200, .y = 1720, .animInd = 2, .flags = 0, .group = &r11acidants3c}
 };
 LevelObjectGroup r11acidants3c = {
-    .numTriggers = 1, .triggers = r11acidants3c_triggers,
     .numPaths = 1, .paths = r11acidants3c_paths,
     .numObjects = 1, .objects = r11acidants3c_objects
 };
 extern LevelObjectGroup r11acidants3d;
-static Trigger r11acidants3d_triggers[] = {
-{.y = 1608, .action = spawnCharacters, .group = &r11acidants3d}
-};
 static GObjPathPointFunction path1138_1_actions[] = {
 climbUpToFloor
 };
@@ -1796,14 +1620,10 @@ static LevelObject r11acidants3d_objects[] = {
 {.definition = &defAcidAnt, .x = 176, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3d}
 };
 LevelObjectGroup r11acidants3d = {
-    .numTriggers = 1, .triggers = r11acidants3d_triggers,
     .numPaths = 1, .paths = r11acidants3d_paths,
     .numObjects = 1, .objects = r11acidants3d_objects
 };
 extern LevelObjectGroup r11acidants3e;
-static Trigger r11acidants3e_triggers[] = {
-{.y = 1600, .action = spawnCharacters, .group = &r11acidants3e}
-};
 static GObjPathPointFunction path1142_1_actions[] = {
 climbUpToFloor
 };
@@ -1819,14 +1639,10 @@ static LevelObject r11acidants3e_objects[] = {
 {.definition = &defAcidAnt, .x = 152, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3e}
 };
 LevelObjectGroup r11acidants3e = {
-    .numTriggers = 1, .triggers = r11acidants3e_triggers,
     .numPaths = 1, .paths = r11acidants3e_paths,
     .numObjects = 1, .objects = r11acidants3e_objects
 };
 extern LevelObjectGroup r11acidants3f;
-static Trigger r11acidants3f_triggers[] = {
-{.y = 1592, .action = spawnCharacters, .group = &r11acidants3f}
-};
 static GObjPathPointFunction path1146_1_actions[] = {
 climbUpToFloor
 };
@@ -1842,14 +1658,10 @@ static LevelObject r11acidants3f_objects[] = {
 {.definition = &defAcidAnt, .x = 128, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3f}
 };
 LevelObjectGroup r11acidants3f = {
-    .numTriggers = 1, .triggers = r11acidants3f_triggers,
     .numPaths = 1, .paths = r11acidants3f_paths,
     .numObjects = 1, .objects = r11acidants3f_objects
 };
 extern LevelObjectGroup r11acidants3g;
-static Trigger r11acidants3g_triggers[] = {
-{.y = 1584, .action = spawnCharacters, .group = &r11acidants3g}
-};
 static GObjPathPointFunction path1154_1_actions[] = {
 climbUpToFloor
 };
@@ -1865,14 +1677,10 @@ static LevelObject r11acidants3g_objects[] = {
 {.definition = &defAcidAnt, .x = 104, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3g}
 };
 LevelObjectGroup r11acidants3g = {
-    .numTriggers = 1, .triggers = r11acidants3g_triggers,
     .numPaths = 1, .paths = r11acidants3g_paths,
     .numObjects = 1, .objects = r11acidants3g_objects
 };
 extern LevelObjectGroup r11acidants3h;
-static Trigger r11acidants3h_triggers[] = {
-{.y = 1576, .action = spawnCharacters, .group = &r11acidants3h}
-};
 static GObjPathPointFunction path1158_1_actions[] = {
 climbUpToFloor
 };
@@ -1888,14 +1696,10 @@ static LevelObject r11acidants3h_objects[] = {
 {.definition = &defAcidAnt, .x = 80, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3h}
 };
 LevelObjectGroup r11acidants3h = {
-    .numTriggers = 1, .triggers = r11acidants3h_triggers,
     .numPaths = 1, .paths = r11acidants3h_paths,
     .numObjects = 1, .objects = r11acidants3h_objects
 };
 extern LevelObjectGroup r11acidants3i;
-static Trigger r11acidants3i_triggers[] = {
-{.y = 1568, .action = spawnCharacters, .group = &r11acidants3i}
-};
 static GObjPathPointFunction path1162_1_actions[] = {
 climbUpToFloor
 };
@@ -1911,14 +1715,10 @@ static LevelObject r11acidants3i_objects[] = {
 {.definition = &defAcidAnt, .x = 56, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3i}
 };
 LevelObjectGroup r11acidants3i = {
-    .numTriggers = 1, .triggers = r11acidants3i_triggers,
     .numPaths = 1, .paths = r11acidants3i_paths,
     .numObjects = 1, .objects = r11acidants3i_objects
 };
 extern LevelObjectGroup r11acidants3j;
-static Trigger r11acidants3j_triggers[] = {
-{.y = 1560, .action = spawnCharacters, .group = &r11acidants3j}
-};
 static GObjPathPointFunction path1166_1_actions[] = {
 climbUpToFloor
 };
@@ -1934,14 +1734,10 @@ static LevelObject r11acidants3j_objects[] = {
 {.definition = &defAcidAnt, .x = 32, .y = 1704, .animInd = 2, .flags = 0, .group = &r11acidants3j}
 };
 LevelObjectGroup r11acidants3j = {
-    .numTriggers = 1, .triggers = r11acidants3j_triggers,
     .numPaths = 1, .paths = r11acidants3j_paths,
     .numObjects = 1, .objects = r11acidants3j_objects
 };
 extern LevelObjectGroup r11acidants3k;
-static Trigger r11acidants3k_triggers[] = {
-{.y = 1552, .action = spawnCharacters, .group = &r11acidants3k}
-};
 static GObjPathPointFunction path1170_1_actions[] = {
 climbUpToFloor
 };
@@ -1957,26 +1753,18 @@ static LevelObject r11acidants3k_objects[] = {
 {.definition = &defAcidAnt, .x = 8, .y = 1704, .animInd = 2, .flags = 0, .group = &r11acidants3k}
 };
 LevelObjectGroup r11acidants3k = {
-    .numTriggers = 1, .triggers = r11acidants3k_triggers,
     .numPaths = 1, .paths = r11acidants3k_paths,
     .numObjects = 1, .objects = r11acidants3k_objects
 };
 extern LevelObjectGroup r11powerup;
-static Trigger r11powerup_triggers[] = {
-{.y = 1664, .action = spawnCharacters, .group = &r11powerup}
-};
 static LevelObject r11powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 120, .y = 1656, .animInd = 0, .flags = 32768, .group = &r11powerup}
 };
 LevelObjectGroup r11powerup = {
-    .numTriggers = 1, .triggers = r11powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r11powerup_objects
 };
 extern LevelObjectGroup r12wasp1a;
-static Trigger r12wasp1a_triggers[] = {
-{.y = 1456, .action = spawnCharacters, .group = &r12wasp1a}
-};
 static GObjPathPointFunction path1227_0_actions[] = {
 0 /* to be assigned */
 };
@@ -1998,14 +1786,10 @@ static LevelObject r12wasp1a_objects[] = {
 {.definition = &defWasp, .x = 96, .y = 1512, .animInd = 0, .flags = 0, .group = &r12wasp1a}
 };
 LevelObjectGroup r12wasp1a = {
-    .numTriggers = 1, .triggers = r12wasp1a_triggers,
     .numPaths = 1, .paths = r12wasp1a_paths,
     .numObjects = 1, .objects = r12wasp1a_objects
 };
 extern LevelObjectGroup r12wasp1b;
-static Trigger r12wasp1b_triggers[] = {
-{.y = 1472, .action = spawnCharacters, .group = &r12wasp1b}
-};
 static GObjPathPointFunction path1221_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2027,14 +1811,10 @@ static LevelObject r12wasp1b_objects[] = {
 {.definition = &defWasp, .x = 128, .y = 1528, .animInd = 0, .flags = 0, .group = &r12wasp1b}
 };
 LevelObjectGroup r12wasp1b = {
-    .numTriggers = 1, .triggers = r12wasp1b_triggers,
     .numPaths = 1, .paths = r12wasp1b_paths,
     .numObjects = 1, .objects = r12wasp1b_objects
 };
 extern LevelObjectGroup r12wasp1c;
-static Trigger r12wasp1c_triggers[] = {
-{.y = 1488, .action = spawnCharacters, .group = &r12wasp1c}
-};
 static GObjPathPointFunction path1215_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2056,14 +1836,10 @@ static LevelObject r12wasp1c_objects[] = {
 {.definition = &defWasp, .x = 160, .y = 1544, .animInd = 0, .flags = 0, .group = &r12wasp1c}
 };
 LevelObjectGroup r12wasp1c = {
-    .numTriggers = 1, .triggers = r12wasp1c_triggers,
     .numPaths = 1, .paths = r12wasp1c_paths,
     .numObjects = 1, .objects = r12wasp1c_objects
 };
 extern LevelObjectGroup r12wasp2a;
-static Trigger r12wasp2a_triggers[] = {
-{.y = 1392, .action = spawnCharacters, .group = &r12wasp2a}
-};
 static GObjPathPointFunction path1209_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2085,14 +1861,10 @@ static LevelObject r12wasp2a_objects[] = {
 {.definition = &defWasp, .x = 80, .y = 1448, .animInd = 0, .flags = 0, .group = &r12wasp2a}
 };
 LevelObjectGroup r12wasp2a = {
-    .numTriggers = 1, .triggers = r12wasp2a_triggers,
     .numPaths = 1, .paths = r12wasp2a_paths,
     .numObjects = 1, .objects = r12wasp2a_objects
 };
 extern LevelObjectGroup r12wasp2b;
-static Trigger r12wasp2b_triggers[] = {
-{.y = 1384, .action = spawnCharacters, .group = &r12wasp2b}
-};
 static GObjPathPointFunction path1203_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2114,14 +1886,10 @@ static LevelObject r12wasp2b_objects[] = {
 {.definition = &defWasp, .x = 56, .y = 1472, .animInd = 0, .flags = 0, .group = &r12wasp2b}
 };
 LevelObjectGroup r12wasp2b = {
-    .numTriggers = 1, .triggers = r12wasp2b_triggers,
     .numPaths = 1, .paths = r12wasp2b_paths,
     .numObjects = 1, .objects = r12wasp2b_objects
 };
 extern LevelObjectGroup r12wasp2c;
-static Trigger r12wasp2c_triggers[] = {
-{.y = 1376, .action = spawnCharacters, .group = &r12wasp2c}
-};
 static GObjPathPointFunction path1197_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2143,14 +1911,10 @@ static LevelObject r12wasp2c_objects[] = {
 {.definition = &defWasp, .x = 32, .y = 1496, .animInd = 0, .flags = 0, .group = &r12wasp2c}
 };
 LevelObjectGroup r12wasp2c = {
-    .numTriggers = 1, .triggers = r12wasp2c_triggers,
     .numPaths = 1, .paths = r12wasp2c_paths,
     .numObjects = 1, .objects = r12wasp2c_objects
 };
 extern LevelObjectGroup r12wasp3a;
-static Trigger r12wasp3a_triggers[] = {
-{.y = 1416, .action = spawnCharacters, .group = &r12wasp3a}
-};
 static GObjPathPointFunction path1191_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2172,14 +1936,10 @@ static LevelObject r12wasp3a_objects[] = {
 {.definition = &defWasp, .x = 176, .y = 1472, .animInd = 0, .flags = 0, .group = &r12wasp3a}
 };
 LevelObjectGroup r12wasp3a = {
-    .numTriggers = 1, .triggers = r12wasp3a_triggers,
     .numPaths = 1, .paths = r12wasp3a_paths,
     .numObjects = 1, .objects = r12wasp3a_objects
 };
 extern LevelObjectGroup r12wasp3b;
-static Trigger r12wasp3b_triggers[] = {
-{.y = 1408, .action = spawnCharacters, .group = &r12wasp3b}
-};
 static GObjPathPointFunction path1185_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2201,14 +1961,10 @@ static LevelObject r12wasp3b_objects[] = {
 {.definition = &defWasp, .x = 200, .y = 1496, .animInd = 0, .flags = 0, .group = &r12wasp3b}
 };
 LevelObjectGroup r12wasp3b = {
-    .numTriggers = 1, .triggers = r12wasp3b_triggers,
     .numPaths = 1, .paths = r12wasp3b_paths,
     .numObjects = 1, .objects = r12wasp3b_objects
 };
 extern LevelObjectGroup r12wasp3c;
-static Trigger r12wasp3c_triggers[] = {
-{.y = 1400, .action = spawnCharacters, .group = &r12wasp3c}
-};
 static GObjPathPointFunction path1179_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2230,14 +1986,10 @@ static LevelObject r12wasp3c_objects[] = {
 {.definition = &defWasp, .x = 224, .y = 1520, .animInd = 0, .flags = 0, .group = &r12wasp3c}
 };
 LevelObjectGroup r12wasp3c = {
-    .numTriggers = 1, .triggers = r12wasp3c_triggers,
     .numPaths = 1, .paths = r12wasp3c_paths,
     .numObjects = 1, .objects = r12wasp3c_objects
 };
 extern LevelObjectGroup r12wasp4a;
-static Trigger r12wasp4a_triggers[] = {
-{.y = 1336, .action = spawnCharacters, .group = &r12wasp4a}
-};
 static GObjPathPointFunction path1251_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2259,14 +2011,10 @@ static LevelObject r12wasp4a_objects[] = {
 {.definition = &defWasp, .x = 48, .y = 1416, .animInd = 0, .flags = 0, .group = &r12wasp4a}
 };
 LevelObjectGroup r12wasp4a = {
-    .numTriggers = 1, .triggers = r12wasp4a_triggers,
     .numPaths = 1, .paths = r12wasp4a_paths,
     .numObjects = 1, .objects = r12wasp4a_objects
 };
 extern LevelObjectGroup r12wasp4b;
-static Trigger r12wasp4b_triggers[] = {
-{.y = 1336, .action = spawnCharacters, .group = &r12wasp4b}
-};
 static GObjPathPointFunction path1245_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2288,14 +2036,10 @@ static LevelObject r12wasp4b_objects[] = {
 {.definition = &defWasp, .x = 208, .y = 1416, .animInd = 0, .flags = 0, .group = &r12wasp4b}
 };
 LevelObjectGroup r12wasp4b = {
-    .numTriggers = 1, .triggers = r12wasp4b_triggers,
     .numPaths = 1, .paths = r12wasp4b_paths,
     .numObjects = 1, .objects = r12wasp4b_objects
 };
 extern LevelObjectGroup r12wasp4c;
-static Trigger r12wasp4c_triggers[] = {
-{.y = 1312, .action = spawnCharacters, .group = &r12wasp4c}
-};
 static GObjPathPointFunction path1239_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2317,14 +2061,10 @@ static LevelObject r12wasp4c_objects[] = {
 {.definition = &defWasp, .x = 32, .y = 1504, .animInd = 0, .flags = 0, .group = &r12wasp4c}
 };
 LevelObjectGroup r12wasp4c = {
-    .numTriggers = 1, .triggers = r12wasp4c_triggers,
     .numPaths = 1, .paths = r12wasp4c_paths,
     .numObjects = 1, .objects = r12wasp4c_objects
 };
 extern LevelObjectGroup r12wasp4d;
-static Trigger r12wasp4d_triggers[] = {
-{.y = 1312, .action = spawnCharacters, .group = &r12wasp4d}
-};
 static GObjPathPointFunction path1233_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2346,26 +2086,18 @@ static LevelObject r12wasp4d_objects[] = {
 {.definition = &defWasp, .x = 224, .y = 1504, .animInd = 0, .flags = 0, .group = &r12wasp4d}
 };
 LevelObjectGroup r12wasp4d = {
-    .numTriggers = 1, .triggers = r12wasp4d_triggers,
     .numPaths = 1, .paths = r12wasp4d_paths,
     .numObjects = 1, .objects = r12wasp4d_objects
 };
 extern LevelObjectGroup r12powerup;
-static Trigger r12powerup_triggers[] = {
-{.y = 1368, .action = spawnCharacters, .group = &r12powerup}
-};
 static LevelObject r12powerup_objects[] = {
 {.definition = &defReinforcedHoneyPot, .x = 128, .y = 1360, .animInd = 2, .flags = 32768, .group = &r12powerup}
 };
 LevelObjectGroup r12powerup = {
-    .numTriggers = 1, .triggers = r12powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r12powerup_objects
 };
 extern LevelObjectGroup r13acidants1;
-static Trigger r13acidants1_triggers[] = {
-{.y = 1328, .action = spawnCharacters, .group = &r13acidants1}
-};
 static GObjPathPointFunction path1263_2_actions[] = {
 markDisappear
 };
@@ -2431,14 +2163,10 @@ static LevelObject r13acidants1_objects[] = {
 {.definition = &defAntHole, .x = 8, .y = 1200, .animInd = 6, .flags = 32768, .group = &r13acidants1}
 };
 LevelObjectGroup r13acidants1 = {
-    .numTriggers = 1, .triggers = r13acidants1_triggers,
     .numPaths = 6, .paths = r13acidants1_paths,
     .numObjects = 6, .objects = r13acidants1_objects
 };
 extern LevelObjectGroup r13beetle1;
-static Trigger r13beetle1_triggers[] = {
-{.y = 1288, .action = spawnCharacters, .group = &r13beetle1}
-};
 static GObjPathPointFunction path1279_1_actions[] = {
 enterForeground
 };
@@ -2488,14 +2216,10 @@ static LevelObject r13beetle1_objects[] = {
 {.definition = &defBeetle, .x = 200, .y = 1320, .animInd = 10, .flags = 32768, .group = &r13beetle1}
 };
 LevelObjectGroup r13beetle1 = {
-    .numTriggers = 1, .triggers = r13beetle1_triggers,
     .numPaths = 2, .paths = r13beetle1_paths,
     .numObjects = 2, .objects = r13beetle1_objects
 };
 extern LevelObjectGroup r13fly1;
-static Trigger r13fly1_triggers[] = {
-{.y = 1192, .action = spawnCharacters, .group = &r13fly1}
-};
 static GObjPathPointFunction path1913_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2525,14 +2249,10 @@ static LevelObject r13fly1_objects[] = {
 {.definition = &defWaspShooter, .x = 32, .y = 1264, .animInd = 6, .flags = 0, .group = &r13fly1}
 };
 LevelObjectGroup r13fly1 = {
-    .numTriggers = 1, .triggers = r13fly1_triggers,
     .numPaths = 1, .paths = r13fly1_paths,
     .numObjects = 1, .objects = r13fly1_objects
 };
 extern LevelObjectGroup r13fly2;
-static Trigger r13fly2_triggers[] = {
-{.y = 1184, .action = spawnCharacters, .group = &r13fly2}
-};
 static GObjPathPointFunction path1682_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2564,14 +2284,10 @@ static LevelObject r13fly2_objects[] = {
 {.definition = &defWaspShooter, .x = 48, .y = 1232, .animInd = 6, .flags = 0, .group = &r13fly2}
 };
 LevelObjectGroup r13fly2 = {
-    .numTriggers = 1, .triggers = r13fly2_triggers,
     .numPaths = 1, .paths = r13fly2_paths,
     .numObjects = 1, .objects = r13fly2_objects
 };
 extern LevelObjectGroup r13fly3;
-static Trigger r13fly3_triggers[] = {
-{.y = 1152, .action = spawnCharacters, .group = &r13fly3}
-};
 static GObjPathPointFunction path1936_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2601,14 +2317,10 @@ static LevelObject r13fly3_objects[] = {
 {.definition = &defWaspShooter, .x = 224, .y = 1224, .animInd = 6, .flags = 2048, .group = &r13fly3}
 };
 LevelObjectGroup r13fly3 = {
-    .numTriggers = 1, .triggers = r13fly3_triggers,
     .numPaths = 1, .paths = r13fly3_paths,
     .numObjects = 1, .objects = r13fly3_objects
 };
 extern LevelObjectGroup r14fly4;
-static Trigger r14fly4_triggers[] = {
-{.y = 1144, .action = spawnCharacters, .group = &r14fly4}
-};
 static GObjPathPointFunction path1929_0_actions[] = {
 0 /* to be assigned */
 };
@@ -2640,14 +2352,10 @@ static LevelObject r14fly4_objects[] = {
 {.definition = &defWaspShooter, .x = 208, .y = 1192, .animInd = 6, .flags = 2048, .group = &r14fly4}
 };
 LevelObjectGroup r14fly4 = {
-    .numTriggers = 1, .triggers = r14fly4_triggers,
     .numPaths = 1, .paths = r14fly4_paths,
     .numObjects = 1, .objects = r14fly4_objects
 };
 extern LevelObjectGroup r14beetles;
-static Trigger r14beetles_triggers[] = {
-{.y = 1072, .action = spawnCharacters, .group = &r14beetles}
-};
 static GObjPathPointFunction path1948_1_actions[] = {
 enterForeground
 };
@@ -2942,14 +2650,10 @@ static LevelObject r14beetles_objects[] = {
 {.definition = 0 /* to be assigned */, .x = 256, .y = 796, .animInd = 0, .flags = 32768, .group = &r14beetles}
 };
 LevelObjectGroup r14beetles = {
-    .numTriggers = 1, .triggers = r14beetles_triggers,
     .numPaths = 2, .paths = r14beetles_paths,
     .numObjects = 7, .objects = r14beetles_objects
 };
 extern LevelObjectGroup r14acidants1;
-static Trigger r14acidants1_triggers[] = {
-{.y = 1128, .action = spawnCharacters, .group = &r14acidants1}
-};
 static GObjPathPointFunction path1310_2_actions[] = {
 markDisappear
 };
@@ -2975,14 +2679,10 @@ static LevelObject r14acidants1_objects[] = {
 {.definition = &defAntHole, .x = 184, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants1}
 };
 LevelObjectGroup r14acidants1 = {
-    .numTriggers = 1, .triggers = r14acidants1_triggers,
     .numPaths = 2, .paths = r14acidants1_paths,
     .numObjects = 2, .objects = r14acidants1_objects
 };
 extern LevelObjectGroup r14acidants2;
-static Trigger r14acidants2_triggers[] = {
-{.y = 1064, .action = spawnCharacters, .group = &r14acidants2}
-};
 static GObjPathPointFunction path1353_2_actions[] = {
 markDisappear
 };
@@ -3008,14 +2708,10 @@ static LevelObject r14acidants2_objects[] = {
 {.definition = &defAntHole, .x = 176, .y = 1008, .animInd = 6, .flags = 32768, .group = &r14acidants2}
 };
 LevelObjectGroup r14acidants2 = {
-    .numTriggers = 1, .triggers = r14acidants2_triggers,
     .numPaths = 2, .paths = r14acidants2_paths,
     .numObjects = 2, .objects = r14acidants2_objects
 };
 extern LevelObjectGroup r14acidants3;
-static Trigger r14acidants3_triggers[] = {
-{.y = 1000, .action = spawnCharacters, .group = &r14acidants3}
-};
 static GObjPathPointFunction path1364_2_actions[] = {
 markDisappear
 };
@@ -3041,14 +2737,10 @@ static LevelObject r14acidants3_objects[] = {
 {.definition = &defAntHole, .x = 136, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants3}
 };
 LevelObjectGroup r14acidants3 = {
-    .numTriggers = 1, .triggers = r14acidants3_triggers,
     .numPaths = 2, .paths = r14acidants3_paths,
     .numObjects = 2, .objects = r14acidants3_objects
 };
 extern LevelObjectGroup r14wasp1a;
-static Trigger r14wasp1a_triggers[] = {
-{.y = 1064, .action = spawnCharacters, .group = &r14wasp1a}
-};
 static GObjPathPointFunction path1342_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3074,14 +2766,10 @@ static LevelObject r14wasp1a_objects[] = {
 {.definition = &defWaspShooter, .x = 136, .y = 1128, .animInd = 6, .flags = 2048, .group = &r14wasp1a}
 };
 LevelObjectGroup r14wasp1a = {
-    .numTriggers = 1, .triggers = r14wasp1a_triggers,
     .numPaths = 1, .paths = r14wasp1a_paths,
     .numObjects = 1, .objects = r14wasp1a_objects
 };
 extern LevelObjectGroup r14wasp1b;
-static Trigger r14wasp1b_triggers[] = {
-{.y = 1056, .action = spawnCharacters, .group = &r14wasp1b}
-};
 static GObjPathPointFunction path1424_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3107,14 +2795,10 @@ static LevelObject r14wasp1b_objects[] = {
 {.definition = &defWaspShooter, .x = 120, .y = 1136, .animInd = 6, .flags = 2048, .group = &r14wasp1b}
 };
 LevelObjectGroup r14wasp1b = {
-    .numTriggers = 1, .triggers = r14wasp1b_triggers,
     .numPaths = 1, .paths = r14wasp1b_paths,
     .numObjects = 1, .objects = r14wasp1b_objects
 };
 extern LevelObjectGroup r14wasp2a;
-static Trigger r14wasp2a_triggers[] = {
-{.y = 992, .action = spawnCharacters, .group = &r14wasp2a}
-};
 static GObjPathPointFunction path1430_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3140,14 +2824,10 @@ static LevelObject r14wasp2a_objects[] = {
 {.definition = &defWaspShooter, .x = 24, .y = 1072, .animInd = 6, .flags = 0, .group = &r14wasp2a}
 };
 LevelObjectGroup r14wasp2a = {
-    .numTriggers = 1, .triggers = r14wasp2a_triggers,
     .numPaths = 1, .paths = r14wasp2a_paths,
     .numObjects = 1, .objects = r14wasp2a_objects
 };
 extern LevelObjectGroup r14wasp2b;
-static Trigger r14wasp2b_triggers[] = {
-{.y = 1032, .action = spawnCharacters, .group = &r14wasp2b}
-};
 static GObjPathPointFunction path1429_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3173,14 +2853,10 @@ static LevelObject r14wasp2b_objects[] = {
 {.definition = &defWaspShooter, .x = 120, .y = 1096, .animInd = 6, .flags = 0, .group = &r14wasp2b}
 };
 LevelObjectGroup r14wasp2b = {
-    .numTriggers = 1, .triggers = r14wasp2b_triggers,
     .numPaths = 1, .paths = r14wasp2b_paths,
     .numObjects = 1, .objects = r14wasp2b_objects
 };
 extern LevelObjectGroup r14wasp3a;
-static Trigger r14wasp3a_triggers[] = {
-{.y = 976, .action = spawnCharacters, .group = &r14wasp3a}
-};
 static GObjPathPointFunction path1426_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3206,14 +2882,10 @@ static LevelObject r14wasp3a_objects[] = {
 {.definition = &defWaspShooter, .x = 136, .y = 1056, .animInd = 6, .flags = 2048, .group = &r14wasp3a}
 };
 LevelObjectGroup r14wasp3a = {
-    .numTriggers = 1, .triggers = r14wasp3a_triggers,
     .numPaths = 1, .paths = r14wasp3a_paths,
     .numObjects = 1, .objects = r14wasp3a_objects
 };
 extern LevelObjectGroup r14wasp3b;
-static Trigger r14wasp3b_triggers[] = {
-{.y = 936, .action = spawnCharacters, .group = &r14wasp3b}
-};
 static GObjPathPointFunction path1427_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3239,14 +2911,10 @@ static LevelObject r14wasp3b_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 1032, .animInd = 6, .flags = 2048, .group = &r14wasp3b}
 };
 LevelObjectGroup r14wasp3b = {
-    .numTriggers = 1, .triggers = r14wasp3b_triggers,
     .numPaths = 1, .paths = r14wasp3b_paths,
     .numObjects = 1, .objects = r14wasp3b_objects
 };
 extern LevelObjectGroup r14wasp4a;
-static Trigger r14wasp4a_triggers[] = {
-{.y = 872, .action = spawnCharacters, .group = &r14wasp4a}
-};
 static GObjPathPointFunction path1425_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3272,14 +2940,10 @@ static LevelObject r14wasp4a_objects[] = {
 {.definition = &defWaspShooter, .x = 24, .y = 960, .animInd = 6, .flags = 0, .group = &r14wasp4a}
 };
 LevelObjectGroup r14wasp4a = {
-    .numTriggers = 1, .triggers = r14wasp4a_triggers,
     .numPaths = 1, .paths = r14wasp4a_paths,
     .numObjects = 1, .objects = r14wasp4a_objects
 };
 extern LevelObjectGroup r14wasp4b;
-static Trigger r14wasp4b_triggers[] = {
-{.y = 880, .action = spawnCharacters, .group = &r14wasp4b}
-};
 static GObjPathPointFunction path2059_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3305,14 +2969,10 @@ static LevelObject r14wasp4b_objects[] = {
 {.definition = &defWaspShooter, .x = 136, .y = 952, .animInd = 6, .flags = 2048, .group = &r14wasp4b}
 };
 LevelObjectGroup r14wasp4b = {
-    .numTriggers = 1, .triggers = r14wasp4b_triggers,
     .numPaths = 1, .paths = r14wasp4b_paths,
     .numObjects = 1, .objects = r14wasp4b_objects
 };
 extern LevelObjectGroup r14wasp4c;
-static Trigger r14wasp4c_triggers[] = {
-{.y = 864, .action = spawnCharacters, .group = &r14wasp4c}
-};
 static GObjPathPointFunction path2081_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3338,14 +2998,10 @@ static LevelObject r14wasp4c_objects[] = {
 {.definition = &defWaspShooter, .x = 24, .y = 984, .animInd = 6, .flags = 0, .group = &r14wasp4c}
 };
 LevelObjectGroup r14wasp4c = {
-    .numTriggers = 1, .triggers = r14wasp4c_triggers,
     .numPaths = 1, .paths = r14wasp4c_paths,
     .numObjects = 1, .objects = r14wasp4c_objects
 };
 extern LevelObjectGroup r14wasp5a;
-static Trigger r14wasp5a_triggers[] = {
-{.y = 808, .action = spawnCharacters, .group = &r14wasp5a}
-};
 static GObjPathPointFunction path2121_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3371,14 +3027,10 @@ static LevelObject r14wasp5a_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 896, .animInd = 6, .flags = 2048, .group = &r14wasp5a}
 };
 LevelObjectGroup r14wasp5a = {
-    .numTriggers = 1, .triggers = r14wasp5a_triggers,
     .numPaths = 1, .paths = r14wasp5a_paths,
     .numObjects = 1, .objects = r14wasp5a_objects
 };
 extern LevelObjectGroup r14wasp5b;
-static Trigger r14wasp5b_triggers[] = {
-{.y = 816, .action = spawnCharacters, .group = &r14wasp5b}
-};
 static GObjPathPointFunction path2114_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3404,14 +3056,10 @@ static LevelObject r14wasp5b_objects[] = {
 {.definition = &defWaspShooter, .x = 120, .y = 888, .animInd = 6, .flags = 0, .group = &r14wasp5b}
 };
 LevelObjectGroup r14wasp5b = {
-    .numTriggers = 1, .triggers = r14wasp5b_triggers,
     .numPaths = 1, .paths = r14wasp5b_paths,
     .numObjects = 1, .objects = r14wasp5b_objects
 };
 extern LevelObjectGroup r14wasp5c;
-static Trigger r14wasp5c_triggers[] = {
-{.y = 800, .action = spawnCharacters, .group = &r14wasp5c}
-};
 static GObjPathPointFunction path2107_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3437,14 +3085,10 @@ static LevelObject r14wasp5c_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 920, .animInd = 6, .flags = 2048, .group = &r14wasp5c}
 };
 LevelObjectGroup r14wasp5c = {
-    .numTriggers = 1, .triggers = r14wasp5c_triggers,
     .numPaths = 1, .paths = r14wasp5c_paths,
     .numObjects = 1, .objects = r14wasp5c_objects
 };
 extern LevelObjectGroup r14wasp6a;
-static Trigger r14wasp6a_triggers[] = {
-{.y = 760, .action = spawnCharacters, .group = &r14wasp6a}
-};
 static GObjPathPointFunction path2088_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3490,14 +3134,10 @@ static LevelObject r14wasp6a_objects[] = {
 {.definition = &defWaspShooter, .x = 120, .y = 832, .animInd = 6, .flags = 2048, .group = &r14wasp6a}
 };
 LevelObjectGroup r14wasp6a = {
-    .numTriggers = 1, .triggers = r14wasp6a_triggers,
     .numPaths = 2, .paths = r14wasp6a_paths,
     .numObjects = 2, .objects = r14wasp6a_objects
 };
 extern LevelObjectGroup r14wasp6b;
-static Trigger r14wasp6b_triggers[] = {
-{.y = 728, .action = spawnCharacters, .group = &r14wasp6b}
-};
 static GObjPathPointFunction path2142_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3543,14 +3183,10 @@ static LevelObject r14wasp6b_objects[] = {
 {.definition = &defWaspShooter, .x = 120, .y = 848, .animInd = 6, .flags = 2048, .group = &r14wasp6b}
 };
 LevelObjectGroup r14wasp6b = {
-    .numTriggers = 1, .triggers = r14wasp6b_triggers,
     .numPaths = 2, .paths = r14wasp6b_paths,
     .numObjects = 2, .objects = r14wasp6b_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6a;
-static Trigger Copy_of_r14wasp6a_triggers[] = {
-{.y = 728, .action = spawnCharacters, .group = &Copy_of_r14wasp6a}
-};
 static GObjPathPointFunction path2168_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3596,14 +3232,10 @@ static LevelObject Copy_of_r14wasp6a_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 800, .animInd = 6, .flags = 2048, .group = &Copy_of_r14wasp6a}
 };
 LevelObjectGroup Copy_of_r14wasp6a = {
-    .numTriggers = 1, .triggers = Copy_of_r14wasp6a_triggers,
     .numPaths = 2, .paths = Copy_of_r14wasp6a_paths,
     .numObjects = 2, .objects = Copy_of_r14wasp6a_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6b;
-static Trigger Copy_of_r14wasp6b_triggers[] = {
-{.y = 680, .action = spawnCharacters, .group = &Copy_of_r14wasp6b}
-};
 static GObjPathPointFunction path2155_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3649,14 +3281,10 @@ static LevelObject Copy_of_r14wasp6b_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 800, .animInd = 6, .flags = 2048, .group = &Copy_of_r14wasp6b}
 };
 LevelObjectGroup Copy_of_r14wasp6b = {
-    .numTriggers = 1, .triggers = Copy_of_r14wasp6b_triggers,
     .numPaths = 2, .paths = Copy_of_r14wasp6b_paths,
     .numObjects = 2, .objects = Copy_of_r14wasp6b_objects
 };
 extern LevelObjectGroup r14powerup1;
-static Trigger r14powerup1_triggers[] = {
-{.y = 1000, .action = spawnCharacters, .group = &r14powerup1}
-};
 static GObjPathPointFunction path2172_1_actions[] = {
 markDisappear
 };
@@ -3671,14 +3299,10 @@ static LevelObject r14powerup1_objects[] = {
 {.definition = &defHoneyCell, .x = 72, .y = 992, .animInd = 4, .flags = 32768, .group = &r14powerup1}
 };
 LevelObjectGroup r14powerup1 = {
-    .numTriggers = 1, .triggers = r14powerup1_triggers,
     .numPaths = 1, .paths = r14powerup1_paths,
     .numObjects = 1, .objects = r14powerup1_objects
 };
 extern LevelObjectGroup r14powerup2;
-static Trigger r14powerup2_triggers[] = {
-{.y = 968, .action = spawnCharacters, .group = &r14powerup2}
-};
 static GObjPathPointFunction path2174_1_actions[] = {
 markDisappear
 };
@@ -3693,14 +3317,10 @@ static LevelObject r14powerup2_objects[] = {
 {.definition = &defHoneyCell, .x = 184, .y = 960, .animInd = 4, .flags = 32768, .group = &r14powerup2}
 };
 LevelObjectGroup r14powerup2 = {
-    .numTriggers = 1, .triggers = r14powerup2_triggers,
     .numPaths = 1, .paths = r14powerup2_paths,
     .numObjects = 1, .objects = r14powerup2_objects
 };
 extern LevelObjectGroup r15powerup2;
-static Trigger r15powerup2_triggers[] = {
-{.y = 808, .action = spawnCharacters, .group = &r15powerup2}
-};
 static GObjPathPointFunction path2178_1_actions[] = {
 markDisappear
 };
@@ -3715,14 +3335,10 @@ static LevelObject r15powerup2_objects[] = {
 {.definition = &defHoneyCell, .x = 72, .y = 800, .animInd = 4, .flags = 32768, .group = &r15powerup2}
 };
 LevelObjectGroup r15powerup2 = {
-    .numTriggers = 1, .triggers = r15powerup2_triggers,
     .numPaths = 1, .paths = r15powerup2_paths,
     .numObjects = 1, .objects = r15powerup2_objects
 };
 extern LevelObjectGroup r15powerup1;
-static Trigger r15powerup1_triggers[] = {
-{.y = 872, .action = spawnCharacters, .group = &r15powerup1}
-};
 static GObjPathPointFunction path2176_1_actions[] = {
 markDisappear
 };
@@ -3737,14 +3353,10 @@ static LevelObject r15powerup1_objects[] = {
 {.definition = &defHoneyCell, .x = 184, .y = 864, .animInd = 4, .flags = 32768, .group = &r15powerup1}
 };
 LevelObjectGroup r15powerup1 = {
-    .numTriggers = 1, .triggers = r15powerup1_triggers,
     .numPaths = 1, .paths = r15powerup1_paths,
     .numObjects = 1, .objects = r15powerup1_objects
 };
 extern LevelObjectGroup r16acidants1;
-static Trigger r16acidants1_triggers[] = {
-{.y = 656, .action = spawnCharacters, .group = &r16acidants1}
-};
 static GObjPathPointFunction path1461_1_actions[] = {
 enterForeground
 };
@@ -3774,27 +3386,19 @@ static LevelObject r16acidants1_objects[] = {
 {.definition = &defAntHole, .x = 40, .y = 560, .animInd = 6, .flags = 32768, .group = &r16acidants1}
 };
 LevelObjectGroup r16acidants1 = {
-    .numTriggers = 1, .triggers = r16acidants1_triggers,
     .numPaths = 1, .paths = r16acidants1_paths,
     .numObjects = 1, .objects = r16acidants1_objects
 };
 extern LevelObjectGroup r16powerup;
-static Trigger r16powerup_triggers[] = {
-{.y = 608, .action = spawnCharacters, .group = &r16powerup}
-};
 static LevelObject r16powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 168, .y = 592, .animInd = 0, .flags = 32768, .group = &r16powerup},
 {.definition = &defHoneyPot, .x = 88, .y = 592, .animInd = 0, .flags = 32768, .group = &r16powerup}
 };
 LevelObjectGroup r16powerup = {
-    .numTriggers = 1, .triggers = r16powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = r16powerup_objects
 };
 extern LevelObjectGroup r16acidants2;
-static Trigger r16acidants2_triggers[] = {
-{.y = 592, .action = spawnCharacters, .group = &r16acidants2}
-};
 static GObjPathPointFunction path1468_1_actions[] = {
 enterForeground
 };
@@ -3849,40 +3453,28 @@ static LevelObject r16acidants2_objects[] = {
 {.definition = &defAntHole, .x = 72, .y = 472, .animInd = 6, .flags = 32768, .group = &r16acidants2}
 };
 LevelObjectGroup r16acidants2 = {
-    .numTriggers = 1, .triggers = r16acidants2_triggers,
     .numPaths = 2, .paths = r16acidants2_paths,
     .numObjects = 2, .objects = r16acidants2_objects
 };
 extern LevelObjectGroup r16powerup2;
-static Trigger r16powerup2_triggers[] = {
-{.y = 520, .action = spawnCharacters, .group = &r16powerup2}
-};
 static LevelObject r16powerup2_objects[] = {
 {.definition = &defReinforcedHoneyPot, .x = 128, .y = 512, .animInd = 2, .flags = 32768, .group = &r16powerup2}
 };
 LevelObjectGroup r16powerup2 = {
-    .numTriggers = 1, .triggers = r16powerup2_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r16powerup2_objects
 };
 extern LevelObjectGroup r17powerup;
-static Trigger r17powerup_triggers[] = {
-{.y = 424, .action = spawnCharacters, .group = &r17powerup}
-};
 static LevelObject r17powerup_objects[] = {
 {.definition = &defHoneyPot, .x = 152, .y = 400, .animInd = 0, .flags = 32768, .group = &r17powerup},
 {.definition = &defHoneyPot, .x = 128, .y = 408, .animInd = 0, .flags = 32768, .group = &r17powerup},
 {.definition = &defHoneyPot, .x = 112, .y = 400, .animInd = 0, .flags = 32768, .group = &r17powerup}
 };
 LevelObjectGroup r17powerup = {
-    .numTriggers = 1, .triggers = r17powerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 3, .objects = r17powerup_objects
 };
 extern LevelObjectGroup r17fly1a;
-static Trigger r17fly1a_triggers[] = {
-{.y = 408, .action = spawnCharacters, .group = &r17fly1a}
-};
 static GObjPathPointFunction path1647_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3908,14 +3500,10 @@ static LevelObject r17fly1a_objects[] = {
 {.definition = &defWaspShooter, .x = 40, .y = 472, .animInd = 6, .flags = 0, .group = &r17fly1a}
 };
 LevelObjectGroup r17fly1a = {
-    .numTriggers = 1, .triggers = r17fly1a_triggers,
     .numPaths = 1, .paths = r17fly1a_paths,
     .numObjects = 1, .objects = r17fly1a_objects
 };
 extern LevelObjectGroup r17fly1b;
-static Trigger r17fly1b_triggers[] = {
-{.y = 408, .action = spawnCharacters, .group = &r17fly1b}
-};
 static GObjPathPointFunction path1668_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3941,14 +3529,10 @@ static LevelObject r17fly1b_objects[] = {
 {.definition = &defWaspShooter, .x = 208, .y = 472, .animInd = 6, .flags = 2048, .group = &r17fly1b}
 };
 LevelObjectGroup r17fly1b = {
-    .numTriggers = 1, .triggers = r17fly1b_triggers,
     .numPaths = 1, .paths = r17fly1b_paths,
     .numObjects = 1, .objects = r17fly1b_objects
 };
 extern LevelObjectGroup r17fly2a;
-static Trigger r17fly2a_triggers[] = {
-{.y = 384, .action = spawnCharacters, .group = &r17fly2a}
-};
 static GObjPathPointFunction path1654_0_actions[] = {
 0 /* to be assigned */
 };
@@ -3974,14 +3558,10 @@ static LevelObject r17fly2a_objects[] = {
 {.definition = &defWaspShooter, .x = 24, .y = 496, .animInd = 6, .flags = 0, .group = &r17fly2a}
 };
 LevelObjectGroup r17fly2a = {
-    .numTriggers = 1, .triggers = r17fly2a_triggers,
     .numPaths = 1, .paths = r17fly2a_paths,
     .numObjects = 1, .objects = r17fly2a_objects
 };
 extern LevelObjectGroup r17fly2b;
-static Trigger r17fly2b_triggers[] = {
-{.y = 384, .action = spawnCharacters, .group = &r17fly2b}
-};
 static GObjPathPointFunction path1661_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4007,14 +3587,10 @@ static LevelObject r17fly2b_objects[] = {
 {.definition = &defWaspShooter, .x = 232, .y = 496, .animInd = 6, .flags = 2048, .group = &r17fly2b}
 };
 LevelObjectGroup r17fly2b = {
-    .numTriggers = 1, .triggers = r17fly2b_triggers,
     .numPaths = 1, .paths = r17fly2b_paths,
     .numObjects = 1, .objects = r17fly2b_objects
 };
 extern LevelObjectGroup r17wasp1;
-static Trigger r17wasp1_triggers[] = {
-{.y = 344, .action = spawnCharacters, .group = &r17wasp1}
-};
 static GObjPathPointFunction path1707_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4052,14 +3628,10 @@ static LevelObject r17wasp1_objects[] = {
 {.definition = &defWasp, .x = 240, .y = 456, .animInd = 0, .flags = 2048, .group = &r17wasp1}
 };
 LevelObjectGroup r17wasp1 = {
-    .numTriggers = 1, .triggers = r17wasp1_triggers,
     .numPaths = 2, .paths = r17wasp1_paths,
     .numObjects = 2, .objects = r17wasp1_objects
 };
 extern LevelObjectGroup r17wasp3;
-static Trigger r17wasp3_triggers[] = {
-{.y = 328, .action = spawnCharacters, .group = &r17wasp3}
-};
 static GObjPathPointFunction path1730_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4097,14 +3669,10 @@ static LevelObject r17wasp3_objects[] = {
 {.definition = &defWasp, .x = 200, .y = 408, .animInd = 0, .flags = 2048, .group = &r17wasp3}
 };
 LevelObjectGroup r17wasp3 = {
-    .numTriggers = 1, .triggers = r17wasp3_triggers,
     .numPaths = 2, .paths = r17wasp3_paths,
     .numObjects = 2, .objects = r17wasp3_objects
 };
 extern LevelObjectGroup r17wasp5;
-static Trigger r17wasp5_triggers[] = {
-{.y = 312, .action = spawnCharacters, .group = &r17wasp5}
-};
 static GObjPathPointFunction path1752_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4142,14 +3710,10 @@ static LevelObject r17wasp5_objects[] = {
 {.definition = &defWasp, .x = 144, .y = 384, .animInd = 0, .flags = 2048, .group = &r17wasp5}
 };
 LevelObjectGroup r17wasp5 = {
-    .numTriggers = 1, .triggers = r17wasp5_triggers,
     .numPaths = 2, .paths = r17wasp5_paths,
     .numObjects = 2, .objects = r17wasp5_objects
 };
 extern LevelObjectGroup r17wasp7;
-static Trigger r17wasp7_triggers[] = {
-{.y = 296, .action = spawnCharacters, .group = &r17wasp7}
-};
 static GObjPathPointFunction path1763_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4187,14 +3751,10 @@ static LevelObject r17wasp7_objects[] = {
 {.definition = &defWasp, .x = 176, .y = 360, .animInd = 0, .flags = 2048, .group = &r17wasp7}
 };
 LevelObjectGroup r17wasp7 = {
-    .numTriggers = 1, .triggers = r17wasp7_triggers,
     .numPaths = 2, .paths = r17wasp7_paths,
     .numObjects = 2, .objects = r17wasp7_objects
 };
 extern LevelObjectGroup r17wasp9;
-static Trigger r17wasp9_triggers[] = {
-{.y = 280, .action = spawnCharacters, .group = &r17wasp9}
-};
 static GObjPathPointFunction path1785_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4232,39 +3792,26 @@ static LevelObject r17wasp9_objects[] = {
 {.definition = &defWasp, .x = 216, .y = 384, .animInd = 0, .flags = 2048, .group = &r17wasp9}
 };
 LevelObjectGroup r17wasp9 = {
-    .numTriggers = 1, .triggers = r17wasp9_triggers,
     .numPaths = 2, .paths = r17wasp9_paths,
     .numObjects = 2, .objects = r17wasp9_objects
 };
 extern LevelObjectGroup r18powerup2;
-static Trigger r18powerup2_triggers[] = {
-{.y = 208, .action = spawnCharacters, .group = &r18powerup2}
-};
 static LevelObject r18powerup2_objects[] = {
 {.definition = &defReinforcedHoneyPot, .x = 120, .y = 192, .animInd = 2, .flags = 32768, .group = &r18powerup2}
 };
 LevelObjectGroup r18powerup2 = {
-    .numTriggers = 1, .triggers = r18powerup2_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r18powerup2_objects
 };
 extern LevelObjectGroup r18powerup3;
-static Trigger r18powerup3_triggers[] = {
-{.y = 144, .action = spawnCharacters, .group = &r18powerup3}
-};
 static LevelObject r18powerup3_objects[] = {
 {.definition = &defReinforcedHoneyPot, .x = 136, .y = 128, .animInd = 2, .flags = 32768, .group = &r18powerup3}
 };
 LevelObjectGroup r18powerup3 = {
-    .numTriggers = 1, .triggers = r18powerup3_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r18powerup3_objects
 };
 extern LevelObjectGroup waspboss;
-static Trigger waspboss_triggers[] = {
-{.y = 144, .action = stopStageScroll, .group = &waspboss},
-{.y = 224, .action = spawnCharacters, .group = &waspboss}
-};
 static GObjPathPointFunction path1863_4_actions[] = {
 ChooseSweepPath_DamageFlashRed
 };
@@ -4390,23 +3937,15 @@ static LevelObject waspboss_objects[] = {
 {.definition = 0 /* to be assigned */, .x = 128, .y = 96, .animInd = 0, .flags = 32768, .group = &waspboss}
 };
 LevelObjectGroup waspboss = {
-    .numTriggers = 2, .triggers = waspboss_triggers,
     .numPaths = 10, .paths = waspboss_paths,
     .numObjects = 2, .objects = waspboss_objects
 };
 extern LevelObjectGroup teststart;
-static Trigger teststart_triggers[] = {
-{.y = -224, .action = spawnCharacters, .group = &teststart}
-};
 LevelObjectGroup teststart = {
-    .numTriggers = 1, .triggers = teststart_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 0, .objects = 0
 };
 extern LevelObjectGroup testwasp1;
-static Trigger testwasp1_triggers[] = {
-{.y = -296, .action = spawnCharacters, .group = &testwasp1}
-};
 static GObjPathPointFunction path552_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4428,14 +3967,10 @@ static LevelObject testwasp1_objects[] = {
 {.definition = &defWasp, .x = 96, .y = -240, .animInd = 0, .flags = 0, .group = &testwasp1}
 };
 LevelObjectGroup testwasp1 = {
-    .numTriggers = 1, .triggers = testwasp1_triggers,
     .numPaths = 1, .paths = testwasp1_paths,
     .numObjects = 1, .objects = testwasp1_objects
 };
 extern LevelObjectGroup testwasp2;
-static Trigger testwasp2_triggers[] = {
-{.y = -312, .action = spawnCharacters, .group = &testwasp2}
-};
 static GObjPathPointFunction path558_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4457,14 +3992,10 @@ static LevelObject testwasp2_objects[] = {
 {.definition = &defWasp, .x = 128, .y = -256, .animInd = 0, .flags = 0, .group = &testwasp2}
 };
 LevelObjectGroup testwasp2 = {
-    .numTriggers = 1, .triggers = testwasp2_triggers,
     .numPaths = 1, .paths = testwasp2_paths,
     .numObjects = 1, .objects = testwasp2_objects
 };
 extern LevelObjectGroup testwasp3;
-static Trigger testwasp3_triggers[] = {
-{.y = -328, .action = spawnCharacters, .group = &testwasp3}
-};
 static GObjPathPointFunction path571_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4486,14 +4017,10 @@ static LevelObject testwasp3_objects[] = {
 {.definition = &defWasp, .x = 160, .y = -272, .animInd = 0, .flags = 0, .group = &testwasp3}
 };
 LevelObjectGroup testwasp3 = {
-    .numTriggers = 1, .triggers = testwasp3_triggers,
     .numPaths = 1, .paths = testwasp3_paths,
     .numObjects = 1, .objects = testwasp3_objects
 };
 extern LevelObjectGroup testwasp4;
-static Trigger testwasp4_triggers[] = {
-{.y = -360, .action = spawnCharacters, .group = &testwasp4}
-};
 static GObjPathPointFunction path565_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4515,14 +4042,10 @@ static LevelObject testwasp4_objects[] = {
 {.definition = &defWasp, .x = 96, .y = -304, .animInd = 0, .flags = 0, .group = &testwasp4}
 };
 LevelObjectGroup testwasp4 = {
-    .numTriggers = 1, .triggers = testwasp4_triggers,
     .numPaths = 1, .paths = testwasp4_paths,
     .numObjects = 1, .objects = testwasp4_objects
 };
 extern LevelObjectGroup testwasp5;
-static Trigger testwasp5_triggers[] = {
-{.y = -376, .action = spawnCharacters, .group = &testwasp5}
-};
 static GObjPathPointFunction path583_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4544,14 +4067,10 @@ static LevelObject testwasp5_objects[] = {
 {.definition = &defWasp, .x = 64, .y = -288, .animInd = 0, .flags = 0, .group = &testwasp5}
 };
 LevelObjectGroup testwasp5 = {
-    .numTriggers = 1, .triggers = testwasp5_triggers,
     .numPaths = 1, .paths = testwasp5_paths,
     .numObjects = 1, .objects = testwasp5_objects
 };
 extern LevelObjectGroup testwasp6;
-static Trigger testwasp6_triggers[] = {
-{.y = -392, .action = spawnCharacters, .group = &testwasp6}
-};
 static GObjPathPointFunction path577_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4573,14 +4092,10 @@ static LevelObject testwasp6_objects[] = {
 {.definition = &defWasp, .x = 32, .y = -272, .animInd = 0, .flags = 0, .group = &testwasp6}
 };
 LevelObjectGroup testwasp6 = {
-    .numTriggers = 1, .triggers = testwasp6_triggers,
     .numPaths = 1, .paths = testwasp6_paths,
     .numObjects = 1, .objects = testwasp6_objects
 };
 extern LevelObjectGroup testwasp7;
-static Trigger testwasp7_triggers[] = {
-{.y = -408, .action = spawnCharacters, .group = &testwasp7}
-};
 static GObjPathPointFunction path613_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4602,14 +4117,10 @@ static LevelObject testwasp7_objects[] = {
 {.definition = &defWasp, .x = 160, .y = -352, .animInd = 0, .flags = 0, .group = &testwasp7}
 };
 LevelObjectGroup testwasp7 = {
-    .numTriggers = 1, .triggers = testwasp7_triggers,
     .numPaths = 1, .paths = testwasp7_paths,
     .numObjects = 1, .objects = testwasp7_objects
 };
 extern LevelObjectGroup testwasp8;
-static Trigger testwasp8_triggers[] = {
-{.y = -424, .action = spawnCharacters, .group = &testwasp8}
-};
 static GObjPathPointFunction path607_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4631,14 +4142,10 @@ static LevelObject testwasp8_objects[] = {
 {.definition = &defWasp, .x = 192, .y = -336, .animInd = 0, .flags = 0, .group = &testwasp8}
 };
 LevelObjectGroup testwasp8 = {
-    .numTriggers = 1, .triggers = testwasp8_triggers,
     .numPaths = 1, .paths = testwasp8_paths,
     .numObjects = 1, .objects = testwasp8_objects
 };
 extern LevelObjectGroup testwasp9;
-static Trigger testwasp9_triggers[] = {
-{.y = -440, .action = spawnCharacters, .group = &testwasp9}
-};
 static GObjPathPointFunction path601_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4660,26 +4167,18 @@ static LevelObject testwasp9_objects[] = {
 {.definition = &defWasp, .x = 224, .y = -320, .animInd = 0, .flags = 0, .group = &testwasp9}
 };
 LevelObjectGroup testwasp9 = {
-    .numTriggers = 1, .triggers = testwasp9_triggers,
     .numPaths = 1, .paths = testwasp9_paths,
     .numObjects = 1, .objects = testwasp9_objects
 };
 extern LevelObjectGroup testwasppowerup;
-static Trigger testwasppowerup_triggers[] = {
-{.y = -424, .action = spawnCharacters, .group = &testwasppowerup}
-};
 static LevelObject testwasppowerup_objects[] = {
 {.definition = &defHoneyPot, .x = 128, .y = -440, .animInd = 0, .flags = 32768, .group = &testwasppowerup}
 };
 LevelObjectGroup testwasppowerup = {
-    .numTriggers = 1, .triggers = testwasppowerup_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = testwasppowerup_objects
 };
 extern LevelObjectGroup testwasp10;
-static Trigger testwasp10_triggers[] = {
-{.y = -520, .action = spawnCharacters, .group = &testwasp10}
-};
 static GObjPathPointFunction path619_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4701,14 +4200,10 @@ static LevelObject testwasp10_objects[] = {
 {.definition = &defWasp, .x = 32, .y = -408, .animInd = 0, .flags = 0, .group = &testwasp10}
 };
 LevelObjectGroup testwasp10 = {
-    .numTriggers = 1, .triggers = testwasp10_triggers,
     .numPaths = 1, .paths = testwasp10_paths,
     .numObjects = 1, .objects = testwasp10_objects
 };
 extern LevelObjectGroup testwasp11;
-static Trigger testwasp11_triggers[] = {
-{.y = -528, .action = spawnCharacters, .group = &testwasp11}
-};
 static GObjPathPointFunction path631_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4730,14 +4225,10 @@ static LevelObject testwasp11_objects[] = {
 {.definition = &defWasp, .x = 224, .y = -432, .animInd = 0, .flags = 0, .group = &testwasp11}
 };
 LevelObjectGroup testwasp11 = {
-    .numTriggers = 1, .triggers = testwasp11_triggers,
     .numPaths = 1, .paths = testwasp11_paths,
     .numObjects = 1, .objects = testwasp11_objects
 };
 extern LevelObjectGroup testwasp12;
-static Trigger testwasp12_triggers[] = {
-{.y = -544, .action = spawnCharacters, .group = &testwasp12}
-};
 static GObjPathPointFunction path625_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4759,14 +4250,10 @@ static LevelObject testwasp12_objects[] = {
 {.definition = &defWasp, .x = 80, .y = -328, .animInd = 0, .flags = 0, .group = &testwasp12}
 };
 LevelObjectGroup testwasp12 = {
-    .numTriggers = 1, .triggers = testwasp12_triggers,
     .numPaths = 1, .paths = testwasp12_paths,
     .numObjects = 1, .objects = testwasp12_objects
 };
 extern LevelObjectGroup testwasp13;
-static Trigger testwasp13_triggers[] = {
-{.y = -552, .action = spawnCharacters, .group = &testwasp13}
-};
 static GObjPathPointFunction path637_0_actions[] = {
 0 /* to be assigned */
 };
@@ -4788,14 +4275,10 @@ static LevelObject testwasp13_objects[] = {
 {.definition = &defWasp, .x = 176, .y = -352, .animInd = 0, .flags = 0, .group = &testwasp13}
 };
 LevelObjectGroup testwasp13 = {
-    .numTriggers = 1, .triggers = testwasp13_triggers,
     .numPaths = 1, .paths = testwasp13_paths,
     .numObjects = 1, .objects = testwasp13_objects
 };
 extern LevelObjectGroup testacidant1;
-static Trigger testacidant1_triggers[] = {
-{.y = -792, .action = spawnCharacters, .group = &testacidant1}
-};
 static PathPoint path761_points[] = {
 {.x = -32, .y = -48, .numActions = 0, .actions = 0},
 {.x = 16, .y = -48, .numActions = 0, .actions = 0},
@@ -4822,14 +4305,10 @@ static LevelObject testacidant1_objects[] = {
 {.definition = &defAcidAnt, .x = -240, .y = -792, .animInd = 2, .flags = 32768, .group = &testacidant1}
 };
 LevelObjectGroup testacidant1 = {
-    .numTriggers = 1, .triggers = testacidant1_triggers,
     .numPaths = 1, .paths = testacidant1_paths,
     .numObjects = 15, .objects = testacidant1_objects
 };
 extern LevelObjectGroup testacidant0;
-static Trigger testacidant0_triggers[] = {
-{.y = -616, .action = spawnCharacters, .group = &testacidant0}
-};
 static PathPoint path842_points[] = {
 {.x = -32, .y = -48, .numActions = 0, .actions = 0},
 {.x = 16, .y = -48, .numActions = 0, .actions = 0},
@@ -4849,14 +4328,10 @@ static LevelObject testacidant0_objects[] = {
 {.definition = &defAcidAnt, .x = -200, .y = -616, .animInd = 2, .flags = 32768, .group = &testacidant0}
 };
 LevelObjectGroup testacidant0 = {
-    .numTriggers = 1, .triggers = testacidant0_triggers,
     .numPaths = 1, .paths = testacidant0_paths,
     .numObjects = 8, .objects = testacidant0_objects
 };
 extern LevelObjectGroup Copy_of_testacidant0;
-static Trigger Copy_of_testacidant0_triggers[] = {
-{.y = -664, .action = spawnCharacters, .group = &Copy_of_testacidant0}
-};
 static PathPoint path852_points[] = {
 {.x = 0, .y = 0, .numActions = 0, .actions = 0},
 {.x = -240, .y = 0, .numActions = 0, .actions = 0},
@@ -4890,14 +4365,10 @@ static LevelObject Copy_of_testacidant0_objects[] = {
 {.definition = &defAcidAnt, .x = 456, .y = -568, .animInd = 2, .flags = 34816, .group = &Copy_of_testacidant0}
 };
 LevelObjectGroup Copy_of_testacidant0 = {
-    .numTriggers = 1, .triggers = Copy_of_testacidant0_triggers,
     .numPaths = 2, .paths = Copy_of_testacidant0_paths,
     .numObjects = 16, .objects = Copy_of_testacidant0_objects
 };
 extern LevelObjectGroup Copy_of_testacidant1;
-static Trigger Copy_of_testacidant1_triggers[] = {
-{.y = -968, .action = spawnCharacters, .group = &Copy_of_testacidant1}
-};
 static PathPoint path824_points[] = {
 {.x = -32, .y = -48, .numActions = 0, .actions = 0},
 {.x = 16, .y = -48, .numActions = 0, .actions = 0},
@@ -4945,14 +4416,10 @@ static LevelObject Copy_of_testacidant1_objects[] = {
 {.definition = &defAcidAnt, .x = -232, .y = -936, .animInd = 2, .flags = 32768, .group = &Copy_of_testacidant1}
 };
 LevelObjectGroup Copy_of_testacidant1 = {
-    .numTriggers = 1, .triggers = Copy_of_testacidant1_triggers,
     .numPaths = 2, .paths = Copy_of_testacidant1_paths,
     .numObjects = 30, .objects = Copy_of_testacidant1_objects
 };
 extern LevelObjectGroup testacidant2;
-static Trigger testacidant2_triggers[] = {
-{.y = -840, .action = spawnCharacters, .group = &testacidant2}
-};
 static PathPoint path763_points[] = {
 {.x = 0, .y = -48, .numActions = 0, .actions = 0},
 {.x = -48, .y = -48, .numActions = 0, .actions = 0},
@@ -5000,14 +4467,10 @@ static LevelObject testacidant2_objects[] = {
 {.definition = &defAcidAnt, .x = 496, .y = -744, .animInd = 2, .flags = 34816, .group = &testacidant2}
 };
 LevelObjectGroup testacidant2 = {
-    .numTriggers = 1, .triggers = testacidant2_triggers,
     .numPaths = 2, .paths = testacidant2_paths,
     .numObjects = 30, .objects = testacidant2_objects
 };
 extern LevelObjectGroup testacidant4;
-static Trigger testacidant4_triggers[] = {
-{.y = -1096, .action = spawnCharacters, .group = &testacidant4}
-};
 static PathPoint path666_points[] = {
 {.x = -32, .y = -48, .numActions = 0, .actions = 0},
 {.x = 16, .y = -48, .numActions = 0, .actions = 0},
@@ -5097,14 +4560,10 @@ static LevelObject testacidant4_objects[] = {
 {.definition = &defAcidAnt, .x = 496, .y = -1080, .animInd = 2, .flags = 34816, .group = &testacidant4}
 };
 LevelObjectGroup testacidant4 = {
-    .numTriggers = 1, .triggers = testacidant4_triggers,
     .numPaths = 4, .paths = testacidant4_paths,
     .numObjects = 60, .objects = testacidant4_objects
 };
 extern LevelObjectGroup testbeetle1;
-static Trigger testbeetle1_triggers[] = {
-{.y = -1208, .action = spawnCharacters, .group = &testbeetle1}
-};
 static GObjPathPointFunction path589_1_actions[] = {
 0 /* to be assigned */
 };
@@ -5120,94 +4579,66 @@ static LevelObject testbeetle1_objects[] = {
 {.definition = &defBeetle, .x = 128, .y = -1144, .animInd = 5, .flags = 32768, .group = &testbeetle1}
 };
 LevelObjectGroup testbeetle1 = {
-    .numTriggers = 1, .triggers = testbeetle1_triggers,
     .numPaths = 1, .paths = testbeetle1_paths,
     .numObjects = 1, .objects = testbeetle1_objects
 };
 extern LevelObjectGroup testtickpowerups;
-static Trigger testtickpowerups_triggers[] = {
-{.y = -1256, .action = spawnCharacters, .group = &testtickpowerups}
-};
 static LevelObject testtickpowerups_objects[] = {
 {.definition = &defHoneyPot, .x = 120, .y = -1272, .animInd = 0, .flags = 32768, .group = &testtickpowerups},
 {.definition = &defHoneyPot, .x = 144, .y = -1280, .animInd = 0, .flags = 32768, .group = &testtickpowerups},
 {.definition = &defHoneyPot, .x = 128, .y = -1288, .animInd = 0, .flags = 32768, .group = &testtickpowerups}
 };
 LevelObjectGroup testtickpowerups = {
-    .numTriggers = 1, .triggers = testtickpowerups_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 3, .objects = testtickpowerups_objects
 };
 extern LevelObjectGroup testtick;
-static Trigger testtick_triggers[] = {
-{.y = -1344, .action = spawnCharacters, .group = &testtick}
-};
 static LevelObject testtick_objects[] = {
 {.definition = &defTick, .x = -16, .y = -1360, .animInd = 0, .flags = 32768, .group = &testtick},
 {.definition = &defHoneyPot, .x = 120, .y = -1360, .animInd = 0, .flags = 32768, .group = &testtick}
 };
 LevelObjectGroup testtick = {
-    .numTriggers = 1, .triggers = testtick_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = testtick_objects
 };
 extern LevelObjectGroup testtick2;
-static Trigger testtick2_triggers[] = {
-{.y = -1416, .action = spawnCharacters, .group = &testtick2}
-};
 static LevelObject testtick2_objects[] = {
 {.definition = &defTick, .x = -16, .y = -1432, .animInd = 0, .flags = 32768, .group = &testtick2},
 {.definition = &defHoneyPot, .x = 120, .y = -1424, .animInd = 0, .flags = 32768, .group = &testtick2},
 {.definition = &defTick, .x = -40, .y = -1432, .animInd = 0, .flags = 32768, .group = &testtick2}
 };
 LevelObjectGroup testtick2 = {
-    .numTriggers = 1, .triggers = testtick2_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 3, .objects = testtick2_objects
 };
 extern LevelObjectGroup testtick4a;
-static Trigger testtick4a_triggers[] = {
-{.y = -1664, .action = spawnCharacters, .group = &testtick4a}
-};
 static LevelObject testtick4a_objects[] = {
 {.definition = &defTick, .x = -16, .y = -1680, .animInd = 0, .flags = 32768, .group = &testtick4a},
 {.definition = &defReinforcedHoneyPot, .x = 120, .y = -1680, .animInd = 2, .flags = 32768, .group = &testtick4a}
 };
 LevelObjectGroup testtick4a = {
-    .numTriggers = 1, .triggers = testtick4a_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = testtick4a_objects
 };
 extern LevelObjectGroup testtick4b;
-static Trigger testtick4b_triggers[] = {
-{.y = -1672, .action = spawnCharacters, .group = &testtick4b}
-};
 static LevelObject testtick4b_objects[] = {
 {.definition = &defTick, .x = -40, .y = -1688, .animInd = 0, .flags = 32768, .group = &testtick4b}
 };
 LevelObjectGroup testtick4b = {
-    .numTriggers = 1, .triggers = testtick4b_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = testtick4b_objects
 };
 extern LevelObjectGroup testtick3;
-static Trigger testtick3_triggers[] = {
-{.y = -1504, .action = spawnCharacters, .group = &testtick3}
-};
 static LevelObject testtick3_objects[] = {
 {.definition = &defTick, .x = -16, .y = -1520, .animInd = 0, .flags = 32768, .group = &testtick3},
 {.definition = &defTick, .x = -40, .y = -1520, .animInd = 0, .flags = 32768, .group = &testtick3},
 {.definition = &defTick, .x = -64, .y = -1520, .animInd = 0, .flags = 32768, .group = &testtick3}
 };
 LevelObjectGroup testtick3 = {
-    .numTriggers = 1, .triggers = testtick3_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 3, .objects = testtick3_objects
 };
 extern LevelObjectGroup testwaspeggs;
-static Trigger testwaspeggs_triggers[] = {
-{.y = -1792, .action = spawnCharacters, .group = &testwaspeggs}
-};
 static LevelObject testwaspeggs_objects[] = {
 {.definition = &defWaspEgg, .x = 40, .y = -1776, .animInd = 0, .flags = 32768, .group = &testwaspeggs},
 {.definition = &defWaspEgg, .x = 24, .y = -1720, .animInd = 0, .flags = 32768, .group = &testwaspeggs},
@@ -5218,152 +4649,151 @@ static LevelObject testwaspeggs_objects[] = {
 {.definition = &defWaspEgg, .x = 168, .y = -1776, .animInd = 0, .flags = 32768, .group = &testwaspeggs}
 };
 LevelObjectGroup testwaspeggs = {
-    .numTriggers = 1, .triggers = testwaspeggs_triggers,
     .numPaths = 0, .paths = 0,
     .numObjects = 7, .objects = testwaspeggs_objects
 };
-LevelObjectGroup *OBJECTGROUPS[] = {
-&room1ants1,
-&room1ants2,
-&room1ants3,
-&room1ants4,
-&room1powerup,
-&room2ants1,
-&room2ants2,
-&room2powerup,
-&r3fly1,
-&room3fly3,
-&room3fly4,
-&r4fly1,
-&room4powerup,
-&room5fly1,
-&r5powerup,
-&room6fly,
-&room5bigant,
-&room6bigant,
-&room7alien1,
-&room7alien2,
-&room7alien3,
-&room8alien1,
-&room8alien2,
-&room8alien3,
-&room8alien4,
-&room8powerup,
-&room9powerup,
-&room9alienmind,
-&part2,
-&room10acidants,
-&room10acidants2,
-&r11acidants1a,
-&r11acidants1b,
-&r11acidants1c,
-&r11acidants1d,
-&r11acidants1e,
-&r11acidants1f,
-&r11acidants1g,
-&r11acidants1h,
-&room11acidants2a,
-&room11acidants2b,
-&r11acidants3a,
-&r11acidants3b,
-&r11acidants3c,
-&r11acidants3d,
-&r11acidants3e,
-&r11acidants3f,
-&r11acidants3g,
-&r11acidants3h,
-&r11acidants3i,
-&r11acidants3j,
-&r11acidants3k,
-&r11powerup,
-&r12wasp1a,
-&r12wasp1b,
-&r12wasp1c,
-&r12wasp2a,
-&r12wasp2b,
-&r12wasp2c,
-&r12wasp3a,
-&r12wasp3b,
-&r12wasp3c,
-&r12wasp4a,
-&r12wasp4b,
-&r12wasp4c,
-&r12wasp4d,
-&r12powerup,
-&r13acidants1,
-&r13beetle1,
-&r13fly1,
-&r13fly2,
-&r13fly3,
-&r14fly4,
-&r14beetles,
-&r14acidants1,
-&r14acidants2,
-&r14acidants3,
-&r14wasp1a,
-&r14wasp1b,
-&r14wasp2a,
-&r14wasp2b,
-&r14wasp3a,
-&r14wasp3b,
-&r14wasp4a,
-&r14wasp4b,
-&r14wasp4c,
-&r14wasp5a,
-&r14wasp5b,
-&r14wasp5c,
-&r14wasp6a,
-&r14wasp6b,
-&Copy_of_r14wasp6a,
-&Copy_of_r14wasp6b,
-&r14powerup1,
-&r14powerup2,
-&r15powerup2,
-&r15powerup1,
-&r16acidants1,
-&r16powerup,
-&r16acidants2,
-&r16powerup2,
-&r17powerup,
-&r17fly1a,
-&r17fly1b,
-&r17fly2a,
-&r17fly2b,
-&r17wasp1,
-&r17wasp3,
-&r17wasp5,
-&r17wasp7,
-&r17wasp9,
-&r18powerup2,
-&r18powerup3,
-&waspboss,
-&teststart,
-&testwasp1,
-&testwasp2,
-&testwasp3,
-&testwasp4,
-&testwasp5,
-&testwasp6,
-&testwasp7,
-&testwasp8,
-&testwasp9,
-&testwasppowerup,
-&testwasp10,
-&testwasp11,
-&testwasp12,
-&testwasp13,
-&testacidant1,
-&testacidant0,
-&Copy_of_testacidant0,
-&Copy_of_testacidant1,
-&testacidant2,
-&testacidant4,
-&testbeetle1,
-&testtickpowerups,
-&testtick,
-&testtick2,
-&testtick4a,
-&testtick4b,
-&testtick3,
-&testwaspeggs
+Trigger stage_caravan_triggers[] = {
+{.x = -32, .y = 3976, .action = spawnCharacters, .group = &room1ants1},
+{.x = -40, .y = 3960, .action = spawnCharacters, .group = &room1ants2},
+{.x = -32, .y = 3904, .action = spawnCharacters, .group = &room1ants3},
+{.x = -32, .y = 3832, .action = spawnCharacters, .group = &room1ants4},
+{.x = -32, .y = 3768, .action = spawnCharacters, .group = &room1powerup},
+{.x = -56, .y = 3680, .action = spawnCharacters, .group = &room2ants1},
+{.x = -56, .y = 3616, .action = spawnCharacters, .group = &room2ants2},
+{.x = -80, .y = 3576, .action = spawnCharacters, .group = &room2powerup},
+{.x = -56, .y = 3544, .action = spawnCharacters, .group = &r3fly1},
+{.x = -88, .y = 3472, .action = spawnCharacters, .group = &room5bigant},
+{.x = -56, .y = 3448, .action = spawnCharacters, .group = &room3fly3},
+{.x = -56, .y = 3352, .action = spawnCharacters, .group = &room3fly4},
+{.x = -56, .y = 3192, .action = spawnCharacters, .group = &room4powerup},
+{.x = -56, .y = 3168, .action = spawnCharacters, .group = &r4fly1},
+{.x = -40, .y = 3064, .action = spawnCharacters, .group = &room5fly1},
+{.x = -72, .y = 3064, .action = spawnCharacters, .group = &r5powerup},
+{.x = -16, .y = 2944, .action = spawnCharacters, .group = &room6bigant},
+{.x = -24, .y = 2816, .action = spawnCharacters, .group = &room6fly},
+{.x = -56, .y = 2504, .action = spawnCharacters, .group = &room7alien1},
+{.x = -80, .y = 2448, .action = spawnCharacters, .group = &room7alien2},
+{.x = -56, .y = 2432, .action = spawnCharacters, .group = &room7alien3},
+{.x = -32, .y = 2376, .action = spawnCharacters, .group = &room8alien1},
+{.x = -56, .y = 2360, .action = spawnCharacters, .group = &room8alien2},
+{.x = -32, .y = 2272, .action = spawnCharacters, .group = &room8powerup},
+{.x = -72, .y = 2264, .action = spawnCharacters, .group = &room8alien4},
+{.x = -16, .y = 2184, .action = spawnCharacters, .group = &room9powerup},
+{.x = -16, .y = 2016, .action = spawnCharacters, .group = &room9alienmind},
+{.x = -24, .y = 2008, .action = spawnCharacters, .group = &part2},
+{.x = -32, .y = 1856, .action = spawnCharacters, .group = &room10acidants},
+{.x = -32, .y = 1840, .action = spawnCharacters, .group = &room10acidants2},
+{.x = -48, .y = 1760, .action = spawnCharacters, .group = &r11acidants1a},
+{.x = -56, .y = 1752, .action = spawnCharacters, .group = &r11acidants1b},
+{.x = -48, .y = 1744, .action = spawnCharacters, .group = &r11acidants1c},
+{.x = -56, .y = 1736, .action = spawnCharacters, .group = &r11acidants1d},
+{.x = -48, .y = 1728, .action = spawnCharacters, .group = &r11acidants1e},
+{.x = -56, .y = 1720, .action = spawnCharacters, .group = &r11acidants1f},
+{.x = -48, .y = 1712, .action = spawnCharacters, .group = &r11acidants1g},
+{.x = -56, .y = 1704, .action = spawnCharacters, .group = &r11acidants1h},
+{.x = -96, .y = 1664, .action = spawnCharacters, .group = &r11powerup},
+{.x = -32, .y = 1632, .action = spawnCharacters, .group = &room11acidants2a},
+{.x = -48, .y = 1632, .action = spawnCharacters, .group = &r11acidants3a},
+{.x = -56, .y = 1624, .action = spawnCharacters, .group = &r11acidants3b},
+{.x = -48, .y = 1616, .action = spawnCharacters, .group = &r11acidants3c},
+{.x = -56, .y = 1608, .action = spawnCharacters, .group = &r11acidants3d},
+{.x = -48, .y = 1600, .action = spawnCharacters, .group = &r11acidants3e},
+{.x = -56, .y = 1592, .action = spawnCharacters, .group = &r11acidants3f},
+{.x = -48, .y = 1584, .action = spawnCharacters, .group = &r11acidants3g},
+{.x = -88, .y = 1584, .action = spawnCharacters, .group = &room11acidants2b},
+{.x = -56, .y = 1576, .action = spawnCharacters, .group = &r11acidants3h},
+{.x = -48, .y = 1568, .action = spawnCharacters, .group = &r11acidants3i},
+{.x = -56, .y = 1560, .action = spawnCharacters, .group = &r11acidants3j},
+{.x = -48, .y = 1552, .action = spawnCharacters, .group = &r11acidants3k},
+{.x = -40, .y = 1488, .action = spawnCharacters, .group = &r12wasp1c},
+{.x = -48, .y = 1472, .action = spawnCharacters, .group = &r12wasp1b},
+{.x = -56, .y = 1456, .action = spawnCharacters, .group = &r12wasp1a},
+{.x = -40, .y = 1416, .action = spawnCharacters, .group = &r12wasp3a},
+{.x = -32, .y = 1408, .action = spawnCharacters, .group = &r12wasp3b},
+{.x = -24, .y = 1400, .action = spawnCharacters, .group = &r12wasp3c},
+{.x = -56, .y = 1392, .action = spawnCharacters, .group = &r12wasp2a},
+{.x = -64, .y = 1384, .action = spawnCharacters, .group = &r12wasp2b},
+{.x = -72, .y = 1376, .action = spawnCharacters, .group = &r12wasp2c},
+{.x = -40, .y = 1368, .action = spawnCharacters, .group = &r12powerup},
+{.x = -16, .y = 1336, .action = spawnCharacters, .group = &r12wasp4b},
+{.x = -80, .y = 1336, .action = spawnCharacters, .group = &r12wasp4a},
+{.x = -96, .y = 1328, .action = spawnCharacters, .group = &r13acidants1},
+{.x = -32, .y = 1312, .action = spawnCharacters, .group = &r12wasp4d},
+{.x = -64, .y = 1312, .action = spawnCharacters, .group = &r12wasp4c},
+{.x = -48, .y = 1288, .action = spawnCharacters, .group = &r13beetle1},
+{.x = -64, .y = 1192, .action = spawnCharacters, .group = &r13fly1},
+{.x = -72, .y = 1184, .action = spawnCharacters, .group = &r13fly2},
+{.x = -48, .y = 1152, .action = spawnCharacters, .group = &r13fly3},
+{.x = -56, .y = 1144, .action = spawnCharacters, .group = &r14fly4},
+{.x = -48, .y = 1128, .action = spawnCharacters, .group = &r14acidants1},
+{.x = -24, .y = 1072, .action = spawnCharacters, .group = &r14beetles},
+{.x = -48, .y = 1064, .action = spawnCharacters, .group = &r14acidants2},
+{.x = -64, .y = 1064, .action = spawnCharacters, .group = &r14wasp1a},
+{.x = -72, .y = 1056, .action = spawnCharacters, .group = &r14wasp1b},
+{.x = -56, .y = 1032, .action = spawnCharacters, .group = &r14wasp2b},
+{.x = -48, .y = 1000, .action = spawnCharacters, .group = &r14acidants3},
+{.x = -136, .y = 1000, .action = spawnCharacters, .group = &r14powerup1},
+{.x = -48, .y = 992, .action = spawnCharacters, .group = &r14wasp2a},
+{.x = -88, .y = 976, .action = spawnCharacters, .group = &r14wasp3a},
+{.x = -48, .y = 968, .action = spawnCharacters, .group = &r14powerup2},
+{.x = -96, .y = 936, .action = spawnCharacters, .group = &r14wasp3b},
+{.x = -72, .y = 880, .action = spawnCharacters, .group = &r14wasp4b},
+{.x = -48, .y = 872, .action = spawnCharacters, .group = &r15powerup1},
+{.x = -88, .y = 872, .action = spawnCharacters, .group = &r14wasp4a},
+{.x = -104, .y = 864, .action = spawnCharacters, .group = &r14wasp4c},
+{.x = -104, .y = 816, .action = spawnCharacters, .group = &r14wasp5b},
+{.x = -88, .y = 808, .action = spawnCharacters, .group = &r14wasp5a},
+{.x = -136, .y = 808, .action = spawnCharacters, .group = &r15powerup2},
+{.x = -72, .y = 800, .action = spawnCharacters, .group = &r14wasp5c},
+{.x = -120, .y = 760, .action = spawnCharacters, .group = &r14wasp6a},
+{.x = -8, .y = 728, .action = spawnCharacters, .group = &Copy_of_r14wasp6a},
+{.x = -120, .y = 728, .action = spawnCharacters, .group = &r14wasp6b},
+{.x = -8, .y = 680, .action = spawnCharacters, .group = &Copy_of_r14wasp6b},
+{.x = -72, .y = 656, .action = spawnCharacters, .group = &r16acidants1},
+{.x = -32, .y = 608, .action = spawnCharacters, .group = &r16powerup},
+{.x = -56, .y = 592, .action = spawnCharacters, .group = &r16acidants2},
+{.x = -16, .y = 520, .action = spawnCharacters, .group = &r16powerup2},
+{.x = -40, .y = 424, .action = spawnCharacters, .group = &r17powerup},
+{.x = -104, .y = 408, .action = spawnCharacters, .group = &r17fly1b},
+{.x = -184, .y = 408, .action = spawnCharacters, .group = &r17fly1a},
+{.x = -120, .y = 384, .action = spawnCharacters, .group = &r17fly2b},
+{.x = -200, .y = 384, .action = spawnCharacters, .group = &r17fly2a},
+{.x = -104, .y = 344, .action = spawnCharacters, .group = &r17wasp1},
+{.x = -104, .y = 328, .action = spawnCharacters, .group = &r17wasp3},
+{.x = -104, .y = 312, .action = spawnCharacters, .group = &r17wasp5},
+{.x = -104, .y = 296, .action = spawnCharacters, .group = &r17wasp7},
+{.x = -104, .y = 280, .action = spawnCharacters, .group = &r17wasp9},
+{.x = -16, .y = 224, .action = spawnCharacters, .group = &waspboss},
+{.x = -152, .y = 208, .action = spawnCharacters, .group = &r18powerup2},
+{.x = -32, .y = 144, .action = stopStageScroll, .group = &waspboss},
+{.x = -184, .y = 144, .action = spawnCharacters, .group = &r18powerup3},
+{.x = -16, .y = -224, .action = spawnCharacters, .group = &teststart},
+{.x = -56, .y = -296, .action = spawnCharacters, .group = &testwasp1},
+{.x = -48, .y = -312, .action = spawnCharacters, .group = &testwasp2},
+{.x = -40, .y = -328, .action = spawnCharacters, .group = &testwasp3},
+{.x = -56, .y = -360, .action = spawnCharacters, .group = &testwasp4},
+{.x = -64, .y = -376, .action = spawnCharacters, .group = &testwasp5},
+{.x = -72, .y = -392, .action = spawnCharacters, .group = &testwasp6},
+{.x = -40, .y = -408, .action = spawnCharacters, .group = &testwasp7},
+{.x = -32, .y = -424, .action = spawnCharacters, .group = &testwasp8},
+{.x = -48, .y = -424, .action = spawnCharacters, .group = &testwasppowerup},
+{.x = -24, .y = -440, .action = spawnCharacters, .group = &testwasp9},
+{.x = -80, .y = -520, .action = spawnCharacters, .group = &testwasp10},
+{.x = -16, .y = -528, .action = spawnCharacters, .group = &testwasp11},
+{.x = -64, .y = -544, .action = spawnCharacters, .group = &testwasp12},
+{.x = -32, .y = -552, .action = spawnCharacters, .group = &testwasp13},
+{.x = -16, .y = -616, .action = spawnCharacters, .group = &testacidant0},
+{.x = -16, .y = -664, .action = spawnCharacters, .group = &Copy_of_testacidant0},
+{.x = -56, .y = -792, .action = spawnCharacters, .group = &testacidant1},
+{.x = -56, .y = -840, .action = spawnCharacters, .group = &testacidant2},
+{.x = -56, .y = -968, .action = spawnCharacters, .group = &Copy_of_testacidant1},
+{.x = -16, .y = -1096, .action = spawnCharacters, .group = &testacidant4},
+{.x = -16, .y = -1208, .action = spawnCharacters, .group = &testbeetle1},
+{.x = -16, .y = -1256, .action = spawnCharacters, .group = &testtickpowerups},
+{.x = -16, .y = -1344, .action = spawnCharacters, .group = &testtick},
+{.x = -16, .y = -1416, .action = spawnCharacters, .group = &testtick2},
+{.x = -16, .y = -1504, .action = spawnCharacters, .group = &testtick3},
+{.x = -16, .y = -1664, .action = spawnCharacters, .group = &testtick4a},
+{.x = -40, .y = -1672, .action = spawnCharacters, .group = &testtick4b},
+{.x = -16, .y = -1792, .action = spawnCharacters, .group = &testwaspeggs}
 };

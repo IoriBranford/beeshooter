@@ -3,7 +3,9 @@
 
 #include "level.h"
 
-extern LevelObjectGroup *OBJECTGROUPS[];
+#define stage_caravan_numTriggers (143)
+
+extern Trigger stage_caravan_triggers[];
 
 extern const GameObjectDefinition defAnt;
 extern const GameObjectDefinition defHoneyPot;
