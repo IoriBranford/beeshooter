@@ -6,15 +6,17 @@ PALETTE palPlayer "player/ship.png"
 TILESET font "font.png" AUTO NONE
 SPRITE sprPlayer "player/ship.png" 4 4 AUTO 0 BOX SPRITE
 SPRITE sprPlayerShot "player/shot.png" 2 2 AUTO 0 BOX SPRITE
+SPRITE sprPowerup "player/powerup.png" 2 2 AUTO 0 BOX
 SPRITE sprUiWeapons "ui/weaponselect.png" 5 2
 SPRITE sprUiWeaponsCursor "ui/weaponcursor.png" 3 3
 
 PALETTE palAnt "enemy/Ant.png"
-PALETTE palFly "enemy/Fly.png"
+PALETTE palFlyAndHoney "enemy/Fly.png"
 PALETTE palAlien "enemy/Aliens.png"
 
 SPRITE sprAnt "enemy/Ant.png" 2 2 AUTO 6 BOX
 SPRITE sprAntBig "enemy/AntBig.png" 8 6 AUTO 6 BOX
+SPRITE sprHoneyPot "enemy/HoneyPot.png" 2 2 AUTO 0 BOX
 SPRITE sprFly "enemy/Fly.png" 4 4 AUTO 6 BOX
 SPRITE sprAlien "enemy/Aliens.png" 3 2 AUTO 6 BOX
 SPRITE sprAlienMind "enemy/AlienMind.png" 4 6 AUTO 6 BOX
