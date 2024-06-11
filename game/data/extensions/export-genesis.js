@@ -66,7 +66,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                             triggerActions[action] = `void ${action}(Trigger *trigger);`
                         else
                             action = `0 /* to be assigned */`
-                        return `{.y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${cName}}`
+                        return `{.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${cName}}`
                     }).join(',\n'),
                     `};`)
             }
