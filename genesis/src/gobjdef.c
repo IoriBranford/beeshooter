@@ -31,7 +31,13 @@ const GameObjectDefinition defFly = {
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defHoneyCell;
-const GameObjectDefinition defAntBig;
+const GameObjectDefinition defAntBig = {
+    .health = 16, .speed = FIX16(1),
+    .defeatPoints = 2500,
+    .spriteDef = &sprAntBig,
+    .palette = &palAnt,
+    .update = GOBJ_updateIdleOnStage
+};
 const GameObjectDefinition defAlienGunner;
 const GameObjectDefinition defAlienPillager;
 const GameObjectDefinition defAlienMind;
