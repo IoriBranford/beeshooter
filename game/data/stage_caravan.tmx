@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="376" nextobjectid="3495">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="376" nextobjectid="3501">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4369,6 +4369,8 @@ self.speed = 1</property>
      <property name="speed" type="int" value="2"/>
     </properties>
    </object>
+   <object id="3495" template="pathpoints/EnterForeground.tx" x="88" y="3576"/>
+   <object id="3496" template="pathpoints/EnterForeground.tx" x="168" y="3576"/>
   </objectgroup>
   <objectgroup id="242" name="room3fly3">
    <object id="2311" template="triggers/SpawnCharacters.tx" x="-56" y="3448"/>
@@ -4414,6 +4416,8 @@ self.speed = slowspeed or 1</property>
     </properties>
     <point/>
    </object>
+   <object id="3499" template="pathpoints/EnterForeground.tx" x="88" y="3480"/>
+   <object id="3500" template="pathpoints/EnterForeground.tx" x="168" y="3480"/>
   </objectgroup>
   <objectgroup id="243" name="room3fly4">
    <object id="2320" template="triggers/SpawnCharacters.tx" x="-56" y="3352"/>
@@ -4471,6 +4475,8 @@ self.speed = slowspeed or 1</property>
     </properties>
     <point/>
    </object>
+   <object id="3497" template="pathpoints/EnterForeground.tx" x="32" y="3504"/>
+   <object id="3498" template="pathpoints/EnterForeground.tx" x="224" y="3504"/>
   </objectgroup>
   <objectgroup id="244" name="r4fly1">
    <object id="2331" template="triggers/SpawnCharacters.tx" x="-56" y="3168"/>
@@ -4485,18 +4491,8 @@ self.speed = fastspeed or 4</property>
     </properties>
     <point/>
    </object>
-   <object id="2335" name="toFront" type="PathPoint" x="144" y="3192">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2336" name="turnX" type="PathPoint" x="152" y="3208">
-    <properties>
-     <property name="subscript" value="faceSpriteX(self, -1)"/>
-    </properties>
-    <point/>
-   </object>
+   <object id="2335" template="pathpoints/EnterForeground.tx" type="PathPoint" x="144" y="3192"/>
+   <object id="2336" template="pathpoints/FaceLeft.tx" type="PathPoint" x="152" y="3208"/>
    <object id="2337" template="enemies/PathPoint.tx" x="128" y="3232">
     <properties>
      <property name="subscript">for i=1,5 do
@@ -4528,18 +4524,8 @@ self.speed = fastspeed or 4</property>
     </properties>
     <point/>
    </object>
-   <object id="2345" name="toFront" type="PathPoint" x="112" y="3096">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2346" name="turnX" type="PathPoint" x="104" y="3120">
-    <properties>
-     <property name="subscript" value="faceSpriteX(self, 1)"/>
-    </properties>
-    <point/>
-   </object>
+   <object id="2345" template="pathpoints/EnterForeground.tx" type="PathPoint" x="112" y="3096"/>
+   <object id="2346" template="pathpoints/FaceRight.tx" type="PathPoint" x="104" y="3120"/>
    <object id="2347" template="enemies/PathPoint.tx" x="136" y="3088">
     <properties>
      <property name="subscript">for i=1,5 do
@@ -4672,76 +4658,18 @@ self.speed = fastspeed or 3</property>
    <object id="2373" type="Path" x="48" y="2936">
     <polyline points="0,0 -24,24 -24,32 0,56 32,64 56,88 56,96 32,120 0,128 -24,152 -24,160 0,184 32,192 56,216 56,224 32,248 0,256 -24,280 -24,288 0,312 32,320 56,344 56,352 32,376"/>
    </object>
-   <object id="2374" name="toBack" type="PathPoint" x="152" y="3152">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2375" name="toBack" type="PathPoint" x="152" y="3280">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2376" name="toBack" type="PathPoint" x="104" y="3152">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2377" name="toBack" type="PathPoint" x="104" y="3280">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2378" name="toBack" type="PathPoint" x="152" y="3024">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2379" name="toBack" type="PathPoint" x="104" y="3024">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2380" name="toFront" type="PathPoint" x="232" y="3088">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2381" name="toFront" type="PathPoint" x="232" y="3216">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2382" name="toFront" type="PathPoint" x="24" y="3088">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2383" name="toFront" type="PathPoint" x="24" y="3216">
-    <properties>
-     <property name="subscript" value="enterForeground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2384" template="enemies/PathPoint.tx" x="80" y="3312">
-    <properties>
-     <property name="subscript" value="markDisappear(self)"/>
-    </properties>
-   </object>
-   <object id="2385" template="enemies/PathPoint.tx" x="176" y="3312">
-    <properties>
-     <property name="subscript" value="markDisappear(self)"/>
-    </properties>
-   </object>
+   <object id="2374" template="pathpoints/EnterBackground.tx" type="PathPoint" x="152" y="3152"/>
+   <object id="2375" template="pathpoints/EnterBackground.tx" type="PathPoint" x="152" y="3280"/>
+   <object id="2376" template="pathpoints/EnterBackground.tx" type="PathPoint" x="104" y="3152"/>
+   <object id="2377" template="pathpoints/EnterBackground.tx" type="PathPoint" x="104" y="3280"/>
+   <object id="2378" template="pathpoints/EnterBackground.tx" type="PathPoint" x="152" y="3024"/>
+   <object id="2379" template="pathpoints/EnterBackground.tx" type="PathPoint" x="104" y="3024"/>
+   <object id="2380" template="pathpoints/EnterForeground.tx" type="PathPoint" x="232" y="3088"/>
+   <object id="2381" template="pathpoints/EnterForeground.tx" type="PathPoint" x="232" y="3216"/>
+   <object id="2382" template="pathpoints/EnterForeground.tx" type="PathPoint" x="24" y="3088"/>
+   <object id="2383" template="pathpoints/EnterForeground.tx" type="PathPoint" x="24" y="3216"/>
+   <object id="2384" template="pathpoints/Disappear.tx" x="80" y="3312"/>
+   <object id="2385" template="pathpoints/Disappear.tx" x="176" y="3312"/>
   </objectgroup>
   <objectgroup id="250" name="room6bigant">
    <properties>
@@ -4769,28 +4697,10 @@ self.speed = fastspeed or 3</property>
    <object id="2390" type="Path" x="212" y="2736">
     <polyline points="8,-16 8,144 32,168"/>
    </object>
-   <object id="2391" name="toBack" type="PathPoint" x="36" y="2880">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2392" name="toBack" type="PathPoint" x="220" y="2880">
-    <properties>
-     <property name="subscript" value="enterBackground(self)"/>
-    </properties>
-    <point/>
-   </object>
-   <object id="2393" template="enemies/PathPoint.tx" x="12" y="2904">
-    <properties>
-     <property name="subscript" value="markDisappear(self)"/>
-    </properties>
-   </object>
-   <object id="2394" template="enemies/PathPoint.tx" x="244" y="2904">
-    <properties>
-     <property name="subscript" value="markDisappear(self)"/>
-    </properties>
-   </object>
+   <object id="2391" template="pathpoints/EnterBackground.tx" type="PathPoint" x="36" y="2880"/>
+   <object id="2392" template="pathpoints/EnterBackground.tx" type="PathPoint" x="220" y="2880"/>
+   <object id="2393" template="pathpoints/Disappear.tx" x="12" y="2904"/>
+   <object id="2394" template="pathpoints/Disappear.tx" x="244" y="2904"/>
   </objectgroup>
   <objectgroup id="251" name="room7alien1">
    <object id="2395" template="triggers/SpawnCharacters.tx" x="-56" y="2504"/>

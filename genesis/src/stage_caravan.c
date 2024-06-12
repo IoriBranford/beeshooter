@@ -272,7 +272,8 @@ static GObjPathPointFunction path2303_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2303_3_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static GObjPathPointFunction path2303_9_actions[] = {
 PathPoint_SetSpeed
@@ -281,7 +282,7 @@ static PathPoint path2303_points[] = {
 {.x = 64, .y = 112, .numActions = 1, .actions = path2303_0_actions},
 {.x = 64, .y = 96, .numActions = 0, .actions = 0},
 {.x = 72, .y = 80, .numActions = 0, .actions = 0},
-{.x = 88, .y = 72, .numActions = 1, .actions = path2303_3_actions},
+{.x = 88, .y = 72, .numActions = 2, .actions = path2303_3_actions},
 {.x = 104, .y = 80, .numActions = 0, .actions = 0},
 {.x = 112, .y = 96, .numActions = 0, .actions = 0},
 {.x = 104, .y = 120, .numActions = 0, .actions = 0},
@@ -295,7 +296,8 @@ static GObjPathPointFunction path2304_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2304_3_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static GObjPathPointFunction path2304_9_actions[] = {
 PathPoint_SetSpeed
@@ -304,7 +306,7 @@ static PathPoint path2304_points[] = {
 {.x = -32, .y = 120, .numActions = 1, .actions = path2304_0_actions},
 {.x = -32, .y = 104, .numActions = 0, .actions = 0},
 {.x = -40, .y = 88, .numActions = 0, .actions = 0},
-{.x = -56, .y = 80, .numActions = 1, .actions = path2304_3_actions},
+{.x = -56, .y = 80, .numActions = 2, .actions = path2304_3_actions},
 {.x = -72, .y = 88, .numActions = 0, .actions = 0},
 {.x = -80, .y = 104, .numActions = 0, .actions = 0},
 {.x = -72, .y = 128, .numActions = 0, .actions = 0},
@@ -331,11 +333,12 @@ static GObjPathPointFunction path2314_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2314_1_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static PathPoint path2314_points[] = {
 {.x = 104, .y = 88, .numActions = 1, .actions = path2314_0_actions},
-{.x = 88, .y = 72, .numActions = 1, .actions = path2314_1_actions},
+{.x = 88, .y = 72, .numActions = 2, .actions = path2314_1_actions},
 {.x = 80, .y = 72, .numActions = 0, .actions = 0},
 {.x = 72, .y = 88, .numActions = 0, .actions = 0},
 {.x = 64, .y = 112, .numActions = 0, .actions = 0},
@@ -349,11 +352,12 @@ static GObjPathPointFunction path2315_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2315_1_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static PathPoint path2315_points[] = {
 {.x = -72, .y = 96, .numActions = 1, .actions = path2315_0_actions},
-{.x = -56, .y = 80, .numActions = 1, .actions = path2315_1_actions},
+{.x = -56, .y = 80, .numActions = 2, .actions = path2315_1_actions},
 {.x = -48, .y = 80, .numActions = 0, .actions = 0},
 {.x = -40, .y = 96, .numActions = 0, .actions = 0},
 {.x = -32, .y = 120, .numActions = 0, .actions = 0},
@@ -380,7 +384,8 @@ static GObjPathPointFunction path2323_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2323_2_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static GObjPathPointFunction path2323_7_actions[] = {
 0 /* to be assigned */
@@ -388,7 +393,7 @@ static GObjPathPointFunction path2323_7_actions[] = {
 static PathPoint path2323_points[] = {
 {.x = 72, .y = -16, .numActions = 1, .actions = path2323_0_actions},
 {.x = 64, .y = -32, .numActions = 0, .actions = 0},
-{.x = 64, .y = -56, .numActions = 1, .actions = path2323_2_actions},
+{.x = 64, .y = -56, .numActions = 2, .actions = path2323_2_actions},
 {.x = 72, .y = -72, .numActions = 0, .actions = 0},
 {.x = 80, .y = -88, .numActions = 0, .actions = 0},
 {.x = 88, .y = -112, .numActions = 0, .actions = 0},
@@ -400,7 +405,8 @@ static GObjPathPointFunction path2324_0_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2324_2_actions[] = {
-0 /* to be assigned */
+0 /* to be assigned */,
+enterForeground
 };
 static GObjPathPointFunction path2324_7_actions[] = {
 0 /* to be assigned */
@@ -408,7 +414,7 @@ static GObjPathPointFunction path2324_7_actions[] = {
 static PathPoint path2324_points[] = {
 {.x = -72, .y = -16, .numActions = 1, .actions = path2324_0_actions},
 {.x = -64, .y = -32, .numActions = 0, .actions = 0},
-{.x = -64, .y = -56, .numActions = 1, .actions = path2324_2_actions},
+{.x = -64, .y = -56, .numActions = 2, .actions = path2324_2_actions},
 {.x = -72, .y = -72, .numActions = 0, .actions = 0},
 {.x = -80, .y = -88, .numActions = 0, .actions = 0},
 {.x = -88, .y = -112, .numActions = 0, .actions = 0},
@@ -436,10 +442,10 @@ static GObjPathPointFunction path2332_3_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2332_5_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2332_6_actions[] = {
-0 /* to be assigned */
+faceLeft
 };
 static GObjPathPointFunction path2332_9_actions[] = {
 0 /* to be assigned */
@@ -490,10 +496,10 @@ static GObjPathPointFunction path2342_3_actions[] = {
 0 /* to be assigned */
 };
 static GObjPathPointFunction path2342_5_actions[] = {
-0 /* to be assigned */
+faceRight
 };
 static GObjPathPointFunction path2342_6_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2342_7_actions[] = {
 0 /* to be assigned */
@@ -600,22 +606,22 @@ LevelObjectGroup room6fly = {
 };
 extern LevelObjectGroup room5bigant;
 static GObjPathPointFunction path2372_5_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2372_9_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2372_13_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2372_17_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2372_21_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2372_23_actions[] = {
-0 /* to be assigned */
+markDisappear
 };
 static PathPoint path2372_points[] = {
 {.x = 0, .y = 0, .numActions = 0, .actions = 0},
@@ -644,22 +650,22 @@ static PathPoint path2372_points[] = {
 {.x = -32, .y = 376, .numActions = 1, .actions = path2372_23_actions}
 };
 static GObjPathPointFunction path2373_5_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2373_9_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2373_13_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2373_17_actions[] = {
-0 /* to be assigned */
+enterForeground
 };
 static GObjPathPointFunction path2373_21_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2373_23_actions[] = {
-0 /* to be assigned */
+markDisappear
 };
 static PathPoint path2373_points[] = {
 {.x = 0, .y = 0, .numActions = 0, .actions = 0},
@@ -701,10 +707,10 @@ LevelObjectGroup room5bigant = {
 };
 extern LevelObjectGroup room6bigant;
 static GObjPathPointFunction path2389_1_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2389_2_actions[] = {
-0 /* to be assigned */
+markDisappear
 };
 static PathPoint path2389_points[] = {
 {.x = 8, .y = -16, .numActions = 0, .actions = 0},
@@ -712,10 +718,10 @@ static PathPoint path2389_points[] = {
 {.x = -16, .y = 168, .numActions = 1, .actions = path2389_2_actions}
 };
 static GObjPathPointFunction path2390_1_actions[] = {
-0 /* to be assigned */
+enterBackground
 };
 static GObjPathPointFunction path2390_2_actions[] = {
-0 /* to be assigned */
+markDisappear
 };
 static PathPoint path2390_points[] = {
 {.x = 8, .y = -16, .numActions = 0, .actions = 0},
