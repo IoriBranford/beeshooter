@@ -23,14 +23,17 @@ const SpriteDefinition* GOBJ_spriteDef(GameObject *self) {
 }
 
 GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY) {
+    if (!def || !def->update)
+        return NULL;
     GameObject *obj = GAME_createObject();
+    if (!obj)
+        return NULL;
     obj->centerX = centerX;
     obj->centerY = centerY;
     obj->health = def->health;
     obj->speed = def->speed;
     obj->definition = def;
-    if (def->update)
-        OBJ_setUpdateMethod((Object*)obj, (ObjectCallback*)def->update);
+    OBJ_setUpdateMethod((Object*)obj, (ObjectCallback*)def->update);
     return obj;
 }
 

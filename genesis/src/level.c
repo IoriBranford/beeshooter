@@ -125,6 +125,8 @@ u16 LEVEL_getPaletteSlot(const Palette *palette) {
 GameObject* LEVEL_createObject(LevelObject *lobj) {
     GameObject *obj = GOBJ_createFromDef(lobj->definition,
         FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
+    if (!obj)
+        return NULL;
     obj->levelObject = lobj;
     GOBJ_updateSprite(obj);
     return obj;

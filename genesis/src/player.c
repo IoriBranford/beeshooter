@@ -71,6 +71,9 @@ void PLAYER_shoot(PlayerObject *self) {
                 self->centerY + shot->offsetY,
                 shot->angle, bulletSpeed);
 
+            if (!bullet)
+                break;
+
             bullet->sprite = SPR_addSprite(
                 &sprPlayerShot,
                 fix16ToInt(bullet->centerX), fix16ToInt(bullet->centerY),
