@@ -144,11 +144,12 @@ void GOBJ_followPath(GameObject *self) {
 
     if (pathIndex != self->pathIndex) {
         GObjPathPointFunction *action = pathPoint->actions;
-        for (u32 i = 0; i < pathPoint->numActions; ++i) {
-            if (action)
-                (*action)(self, pathPoint);
-            ++action;
-        }
+        if (action)
+            for (u32 i = 0; i < pathPoint->numActions; ++i) {
+                if (*action)
+                    (*action)(self, pathPoint);
+                ++action;
+            }
         self->pathIndex = pathIndex;
     }
 }
