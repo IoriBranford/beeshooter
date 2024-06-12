@@ -81,6 +81,11 @@ int gameplay() {
             LEVEL_update();
         }
         UI_drawHud(&player);
+
+        char objCounter[8];
+        sprintf(objCounter, "%2d objs", POOL_getNumAllocated(gobjPool));
+        VDP_drawText(objCounter, 12, 26);
+
         SPR_update();
         SYS_doVBlankProcess();
     }
