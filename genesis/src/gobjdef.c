@@ -23,7 +23,13 @@ const GameObjectDefinition defPowerup = {
     .palette = &palPlayer,
     .update = GOBJ_updateIdleOnStage
 };
-const GameObjectDefinition defFly;
+const GameObjectDefinition defFly = {
+    .health = 8, .speed = FIX16(2),
+    .defeatPoints = 500,
+    .spriteDef = &sprFly,
+    .palette = &palFlyAndHoney,
+    .update = GOBJ_updatePathWalker
+};
 const GameObjectDefinition defHoneyCell;
 const GameObjectDefinition defAntBig;
 const GameObjectDefinition defAlienGunner;
