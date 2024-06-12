@@ -13,6 +13,15 @@ void GOBJ_init(GameObject *self) {
     self->levelObject = 0;
 }
 
+const SpriteDefinition* GOBJ_spriteDef(GameObject *self) {
+    if (self->sprite) {
+        return self->sprite->definition;
+    } else if (self->definition) {
+        return self->definition->spriteDef;
+    }
+    return NULL;
+}
+
 GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY) {
     GameObject *obj = GAME_createObject();
     obj->centerX = centerX;
@@ -35,12 +44,7 @@ void GOBJ_initSprite(GameObject *self, u16 attr) {
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
     Vect2D_f16 v = {self->centerX, self->centerY};
-    const SpriteDefinition *spriteDef = 0;
-    if (self->sprite) {
-        spriteDef = self->sprite->definition;
-    } else if (self->definition) {
-        spriteDef = self->definition->spriteDef;
-    }
+    const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
     if (spriteDef) {
         if (ax < 0)
             v.x -= FIX16(spriteDef->w >> 1);
@@ -54,36 +58,33 @@ Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
     return v;
 }
 
-fix16 GOBJ_getAnchorY(GameObject *self, int ay) {
-    fix16 y = self->centerY;
-    const SpriteDefinition *spriteDef = 0;
-    if (self->sprite) {
-        spriteDef = self->sprite->definition;
-    } else if (self->definition) {
-        spriteDef = self->definition->spriteDef;
-    }
+bool GOBJ_isRectOverlapping(GameObject *self, fix16 rx, fix16 ry, fix16 rw, fix16 rh) {
+    fix16 x0 = self->centerX, y0 = self->centerY,
+        x1 = self->centerX, y1 = self->centerY;
+    const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
     if (spriteDef) {
-        if (ay < 0)
-            y -= FIX16(spriteDef->h >> 1);
-        else if (ay > 0)
-            y += FIX16(spriteDef->h >> 1);
+        x0 -= (spriteDef->w>>1);
+        x1 += (spriteDef->w>>1);
+        y0 -= (spriteDef->h>>1);
+        y1 += (spriteDef->h>>1);
     }
-    return y;
-}
-
-bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h) {
-    Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
-    Vect2D_f16 br = GOBJ_getAnchorPoint(self, 1, 1);
-    return (br.x > x && tl.x < x + w && br.y > y && tl.y < y + h);
+    return (x1 > rx && x0 < rx + rw && y1 > ry && y0 < ry + rh);
 }
 
 bool GOBJ_isSpriteOnScreen(GameObject *self) {
     return GOBJ_isRectOverlapping(self, 0, 0, GAME_BOUNDW, GAME_BOUNDH);
 }
 
-bool GOBJ_isSpriteOffScreenBottom(GameObject *self) {
-    fix16 topY = GOBJ_getAnchorY(self, -1);
-    return topY >= GAME_BOUNDH;
+bool GOBJ_isSpriteOffSideOrBottom(GameObject *self) {
+    fix16 x0 = self->centerX, y0 = self->centerY,
+        x1 = self->centerX;
+    const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
+    if (spriteDef) {
+        x0 -= (spriteDef->w>>1);
+        x1 += (spriteDef->w>>1);
+        y0 -= (spriteDef->h>>1);
+    }
+    return y0 >= GAME_BOUNDH || x0 >= GAME_BOUNDW || x1 <= 0;
 }
 
 void GOBJ_updateSprite(GameObject *self) {
@@ -117,7 +118,7 @@ void GOBJ_followStage(GameObject *self) {
 void GOBJ_updateIdleOnStage(GameObject *self) {
     GOBJ_followStage(self);
     GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffScreenBottom(self)) {
+    if (GOBJ_isSpriteOffSideOrBottom(self)) {
         GAME_releaseObject(self);
     }
 }
@@ -132,7 +133,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
     }
     GOBJ_followPath(self);
     GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffScreenBottom(self)) {
+    if (GOBJ_isSpriteOffSideOrBottom(self)) {
         if (!self->path || self->pathIndex >= self->path->numPoints)
             GAME_releaseObject(self);
     }
