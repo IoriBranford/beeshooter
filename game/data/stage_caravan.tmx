@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="376" nextobjectid="3501">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="384" nextobjectid="3561">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4229,14 +4229,35 @@ self.speed = 0.75</property>
     <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
    </object>
    <object id="2205" template="enemies/Ant.tx" x="-8" y="3912"/>
-   <object id="2206" template="enemies/Ant.tx" x="-168" y="3912"/>
-   <object id="2210" template="enemies/Ant.tx" x="-104" y="3912"/>
-   <object id="2211" template="enemies/Ant.tx" x="-40" y="3912"/>
-   <object id="2212" template="enemies/Ant.tx" x="-200" y="3912"/>
-   <object id="2216" template="enemies/Ant.tx" x="-136" y="3912"/>
-   <object id="2217" template="enemies/Ant.tx" x="-72" y="3912"/>
-   <object id="2218" template="enemies/Ant.tx" x="-232" y="3912"/>
    <object id="2220" template="triggers/SpawnCharacters.tx" x="-32" y="3904"/>
+  </objectgroup>
+  <objectgroup id="376" name="Copy of room1ants3">
+   <object id="3501" type="Path" x="0" y="3912">
+    <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
+   </object>
+   <object id="3502" template="enemies/Ant.tx" x="-8" y="3912"/>
+   <object id="3503" template="triggers/SpawnCharacters.tx" x="-32" y="3896"/>
+  </objectgroup>
+  <objectgroup id="377" name="Copy of Copy of room1ants3">
+   <object id="3504" type="Path" x="0" y="3912">
+    <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
+   </object>
+   <object id="3505" template="enemies/Ant.tx" x="-8" y="3912"/>
+   <object id="3506" template="triggers/SpawnCharacters.tx" x="-32" y="3888"/>
+  </objectgroup>
+  <objectgroup id="378" name="Copy of Copy of Copy of room1ants3">
+   <object id="3507" type="Path" x="0" y="3912">
+    <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
+   </object>
+   <object id="3508" template="enemies/Ant.tx" x="-8" y="3912"/>
+   <object id="3509" template="triggers/SpawnCharacters.tx" x="-32" y="3880"/>
+  </objectgroup>
+  <objectgroup id="379" name="Copy of Copy of Copy of Copy of room1ants3">
+   <object id="3510" type="Path" x="0" y="3912">
+    <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
+   </object>
+   <object id="3511" template="enemies/Ant.tx" x="-8" y="3912"/>
+   <object id="3512" template="triggers/SpawnCharacters.tx" x="-32" y="3872"/>
   </objectgroup>
   <objectgroup id="236" name="room1ants4">
    <object id="2221" type="Path" x="264" y="3840">
@@ -4244,22 +4265,52 @@ self.speed = 0.75</property>
    </object>
    <object id="2222" template="enemies/Ant.tx" gid="2147484129" x="264" y="3840" rotation="0"/>
    <object id="2223" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
-   <object id="2224" template="enemies/Ant.tx" gid="2147484129" x="424" y="3840" rotation="0"/>
-   <object id="2225" template="enemies/Ant.tx" gid="2147484129" x="424" y="3880" rotation="0"/>
-   <object id="2232" template="enemies/Ant.tx" gid="2147484129" x="360" y="3840" rotation="0"/>
-   <object id="2233" template="enemies/Ant.tx" gid="2147484129" x="360" y="3880" rotation="0"/>
-   <object id="2234" template="enemies/Ant.tx" gid="2147484129" x="296" y="3840" rotation="0"/>
-   <object id="2235" template="enemies/Ant.tx" gid="2147484129" x="296" y="3880" rotation="0"/>
-   <object id="2236" template="enemies/Ant.tx" gid="2147484129" x="456" y="3840" rotation="0"/>
-   <object id="2237" template="enemies/Ant.tx" gid="2147484129" x="456" y="3880" rotation="0"/>
-   <object id="2244" template="enemies/Ant.tx" gid="2147484129" x="392" y="3840" rotation="0"/>
-   <object id="2245" template="enemies/Ant.tx" gid="2147484129" x="392" y="3880" rotation="0"/>
-   <object id="2246" template="enemies/Ant.tx" gid="2147484129" x="328" y="3840" rotation="0"/>
-   <object id="2247" template="enemies/Ant.tx" gid="2147484129" x="328" y="3880" rotation="0"/>
-   <object id="2248" template="enemies/Ant.tx" gid="2147484129" x="488" y="3840" rotation="0"/>
-   <object id="2249" template="enemies/Ant.tx" gid="2147484129" x="488" y="3880" rotation="0"/>
    <object id="2252" template="triggers/SpawnCharacters.tx" x="-32" y="3832"/>
    <object id="2253" type="Path" x="272" y="3880">
+    <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
+   </object>
+  </objectgroup>
+  <objectgroup id="380" name="Copy of room1ants4">
+   <object id="3513" type="Path" x="264" y="3840">
+    <polyline points="0,0 -32,0 -64,-16 -168,-16 -232,-48 -280,-48"/>
+   </object>
+   <object id="3514" template="enemies/Ant.tx" gid="2147484129" x="264" y="3840" rotation="0"/>
+   <object id="3515" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
+   <object id="3523" template="triggers/SpawnCharacters.tx" x="-32" y="3824"/>
+   <object id="3524" type="Path" x="272" y="3880">
+    <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
+   </object>
+  </objectgroup>
+  <objectgroup id="381" name="Copy of Copy of room1ants4">
+   <object id="3525" type="Path" x="264" y="3840">
+    <polyline points="0,0 -32,0 -64,-16 -168,-16 -232,-48 -280,-48"/>
+   </object>
+   <object id="3526" template="enemies/Ant.tx" gid="2147484129" x="264" y="3840" rotation="0"/>
+   <object id="3527" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
+   <object id="3535" template="triggers/SpawnCharacters.tx" x="-32" y="3816"/>
+   <object id="3536" type="Path" x="272" y="3880">
+    <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
+   </object>
+  </objectgroup>
+  <objectgroup id="382" name="Copy of Copy of Copy of room1ants4">
+   <object id="3537" type="Path" x="264" y="3840">
+    <polyline points="0,0 -32,0 -64,-16 -168,-16 -232,-48 -280,-48"/>
+   </object>
+   <object id="3538" template="enemies/Ant.tx" gid="2147484129" x="264" y="3840" rotation="0"/>
+   <object id="3539" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
+   <object id="3547" template="triggers/SpawnCharacters.tx" x="-32" y="3808"/>
+   <object id="3548" type="Path" x="272" y="3880">
+    <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
+   </object>
+  </objectgroup>
+  <objectgroup id="383" name="Copy of Copy of Copy of Copy of room1ants4">
+   <object id="3549" type="Path" x="264" y="3840">
+    <polyline points="0,0 -32,0 -64,-16 -168,-16 -232,-48 -280,-48"/>
+   </object>
+   <object id="3550" template="enemies/Ant.tx" gid="2147484129" x="264" y="3840" rotation="0"/>
+   <object id="3551" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
+   <object id="3559" template="triggers/SpawnCharacters.tx" x="-32" y="3800"/>
+   <object id="3560" type="Path" x="272" y="3880">
     <polyline points="-8,0 -40,0 -72,16 -144,16 -160,24 -248,24 -264,32 -280,32"/>
    </object>
   </objectgroup>

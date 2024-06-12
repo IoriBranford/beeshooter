@@ -13,6 +13,10 @@
  */
 let toCName = (name) => name.replace(/\W+/g, '_')
 
+let toFix16 = (n) => Math.floor(n * 64)
+let toFastFix16 = (n) => Math.floor(n * 256)
+let toFastFix32 = (n) => Math.floor(n * 65536)
+
 tiled.registerMapFormat("Honey Guardian C level", {
     name: "Honey Guardian C level",
     extension: "c",
@@ -76,8 +80,23 @@ tiled.registerMapFormat("Honey Guardian C level", {
                 
                 let pathPointsCName = `path${path.id}_points`
                 cCode.push(`static PathPoint ${pathPointsCName}[] = {`,
-                    path.polygon.map((point, i) =>
-                        `{.x = ${point.x}, .y = ${point.y}, .numActions = ${pointsData[i].length}, .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}}`).join(',\n'),
+                    path.polygon.map((point, i, points) => {
+                        let prevPoint = i > 0 ? points[i-1] : null
+                        let xDirTo = 0, yDirTo = 0, distTo = 0
+                        if (prevPoint) {
+                            xDirTo = point.x - prevPoint.x
+                            yDirTo = point.y - prevPoint.y
+                            distTo = Math.hypot(xDirTo, yDirTo)
+                            xDirTo /= distTo
+                            yDirTo /= distTo
+                        }
+return `{
+    .x = ${point.x}, .y = ${point.y},
+    .xDirTo = ${toFix16(xDirTo)}, .yDirTo = ${toFix16(yDirTo)},
+    .numActions = ${pointsData[i].length},
+    .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
+}`
+                    }).join(',\n'),
                     '};')
             })
             

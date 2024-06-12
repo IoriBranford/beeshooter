@@ -21,6 +21,7 @@ struct Trigger {
 };
 struct PathPoint {
     s16 x, y;
+    fix16 xDirTo, yDirTo;
     u32 numActions;
     GObjPathPointFunction *actions;
 };
