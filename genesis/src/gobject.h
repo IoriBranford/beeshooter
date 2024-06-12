@@ -11,7 +11,7 @@ typedef struct GameObject {
     Object;
 
     const GameObjectDefinition *definition;
-    LevelObjectGroup *group;
+    LevelObject *levelObject;
 
     Sprite *sprite;
     fix16 centerX, centerY;
@@ -32,7 +32,7 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
 void GOBJ_init(GameObject *self);
 void GOBJ_initSprite(GameObject *self, u16 attr);
 void GOBJ_updateSprite(GameObject *this);
-void GOBJ_release(GameObject *self);
+void GOBJ_releaseSprite(GameObject *self);
 
 void GOBJ_updateIdleOnStage(GameObject *self);
 void GOBJ_updatePathWalker(GameObject *self);

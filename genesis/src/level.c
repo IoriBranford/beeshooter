@@ -106,13 +106,8 @@ void LEVEL_setPalette(u16 slot, const Palette *palette) {
     PAL_setPalette(slot, palette->data, DMA_QUEUE);
 }
 
-GameObject* LEVEL_createObject(LevelObject *lobj) {
-    const GameObjectDefinition *def = lobj->definition;
-    GameObject *obj = GOBJ_createFromDef(def, FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
-    obj->group = lobj->group;
-
+u16 LEVEL_getPaletteSlot(const Palette *palette) {
     u16 paletteSlot = PAL0;
-    const Palette *palette = def->palette;
     if (palette == paletteUsage[PAL0].palette) {
         paletteSlot = PAL0;
     } else if (palette == paletteUsage[PAL1].palette) {
@@ -124,6 +119,13 @@ GameObject* LEVEL_createObject(LevelObject *lobj) {
         paletteSlot = PAL1;
         LEVEL_setPalette(paletteSlot, palette);
     }
-    GOBJ_initSprite(obj, (paletteSlot << TILE_ATTR_PALETTE_SFT) | lobj->flags);
+    return paletteSlot;
+}
+
+GameObject* LEVEL_createObject(LevelObject *lobj) {
+    GameObject *obj = GOBJ_createFromDef(lobj->definition,
+        FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
+    obj->levelObject = lobj;
+    GOBJ_updateSprite(obj);
     return obj;
 }

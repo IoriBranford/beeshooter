@@ -2,6 +2,7 @@
 #define _LEVEL_H
 
 #include "types.h"
+#include "pal.h"
 
 typedef struct Trigger Trigger;
 typedef struct PathPoint PathPoint;
@@ -50,6 +51,8 @@ fix32 LEVEL_toWorldY(fix16 yScreen);
 
 fix32 LEVEL_cameraVelY();
 void LEVEL_setVelY(fix32 velY);
+
+u16 LEVEL_getPaletteSlot(const Palette *palette);
 
 Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld);
 GameObject* LEVEL_createObject(LevelObject *lobj);

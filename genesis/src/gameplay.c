@@ -37,7 +37,7 @@ GameObject* GAME_createObject() {
 }
 
 void GAME_releaseObject(GameObject *gobj) {
-    GOBJ_release(gobj);
+    GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
 }
 
