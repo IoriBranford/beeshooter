@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Genesis",
+            "includePath": [
+                "${workspaceFolder}/genesis/inc",
+                "${workspaceFolder}/genesis/res",
+                "${env:GDK}/inc",
+                "${env:GDK}/res"
+            ],
+            "defines": [
+                "SGDK_GCC"
+            ]
+        }
+    ],
+    "version": 4
+}
