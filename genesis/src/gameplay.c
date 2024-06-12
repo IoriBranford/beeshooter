@@ -54,7 +54,6 @@ int gameplay() {
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
     VDP_setTextPalette(PLAYERPAL);
-    VDP_setBackgroundColor(1);
 
     LEVEL_init();
     SYS_doVBlankProcess();
