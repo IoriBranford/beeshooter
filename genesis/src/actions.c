@@ -1,5 +1,6 @@
 #include "level.h"
 #include "gobject.h"
+#include "gameplay.h"
 
 #include <genesis.h>
 
@@ -43,6 +44,7 @@ void startWaspAttack(GameObject *self, PathPoint *pathPoint)
 
 void markDisappear(GameObject *self, PathPoint *pathPoint)
 {
+    GAME_releaseObject(self);
 }
 
 void BeetleShoot(GameObject *self, PathPoint *pathPoint)
