@@ -22,7 +22,6 @@ const fix16 STARTENTERY = GAME_BOUNDH + 16;
 const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
-const u16 GAMETIME = 60*60;
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -148,8 +147,6 @@ void PLAYER_updateSprite(PlayerObject *self) {
 }
 
 void PLAYER_updatePlay(PlayerObject *self) {
-    if (self->timeLeft)
-        self->timeLeft--;
     if (self->shootTimer)
         self->shootTimer--;
     if (self->invulTimer)
@@ -180,7 +177,6 @@ void PLAYER_spawn(PlayerObject *self) {
 
 void PLAYER_init(PlayerObject *self) {
     self->score = 0;
-    self->timeLeft = GAMETIME;
     self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;

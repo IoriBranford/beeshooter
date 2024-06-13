@@ -7,7 +7,10 @@
 #include "level.h"
 #include "ui.h"
 
-static bool paused, running;
+const u16 GAMETIME = 60*60;
+
+static u16 timeLeft;
+static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
 
@@ -28,6 +31,10 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
             PLAYER_joyEvent(&player, button, state);
         }
     }
+}
+
+void GAME_setTimerPaused(bool paused) {
+    timePaused = paused;
 }
 
 GameObject* GAME_createObject() {
@@ -69,9 +76,11 @@ int gameplay() {
     UI_initHud();
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
-
+    timeLeft = GAMETIME;
+    timePaused = true; // waiting for unpauseTimer trigger
     paused = false;
     running = true;
+
     while(running)
     {
         if (paused) {
@@ -80,8 +89,15 @@ int gameplay() {
             OBJ_updateAll(gobjPool);
 
             LEVEL_update();
+            if (!timePaused && timeLeft) {
+                if (!--timeLeft) {
+                    // TODO: game over by time
+                    // kill player
+                    // create time up objects
+                }
+            }
         }
-        UI_drawHud(&player);
+        UI_drawHud(&player, timeLeft);
 
         char objCounter[8];
         sprintf(objCounter, "%2d objs", POOL_getNumAllocated(gobjPool));

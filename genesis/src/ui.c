@@ -9,19 +9,21 @@ void UI_initHud() {
     weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false));
 }
 
-void UI_drawHud(PlayerObject *player) {
+void UI_drawHud(PlayerObject *player, u16 timeLeft) {
     char string[16];
 
     u32 score = player->score;
     sprintf(string, "%08lu", score);
     VDP_drawText(string, 7, 1);
 
-    u16 time = player->timeLeft;
-    u8 frames = time % 60;
-    u8 seconds = (time / 60) % 60;
-    u8 minutes = min(time / 60 / 60, 99);
+    u8 frames = timeLeft % 60;
+    u8 seconds = (timeLeft / 60) % 60;
+    u8 minutes = min(timeLeft / 60 / 60, 99);
     sprintf(string, "%02u:%02u:%02u", minutes, seconds, frames);
     VDP_drawText(string, 136>>3, 1);
+    if (!timeLeft) {
+        VDP_drawText("TIME UP!", 12, 13);
+    }
 
     u8 lives = player->lives;
     int numPrinted = 0;

@@ -12,11 +12,10 @@ enum PlayerWeapon {
     WEAPON_B
 };
 
-typedef struct {
+typedef struct Player {
     GameObject;
     u8 weapon, power, lives, _;
     u32 score;
-    u16 timeLeft;
     u8 shootTimer, invulTimer;
 } PlayerObject;
 
