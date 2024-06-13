@@ -39,7 +39,6 @@
                 "command": "love"
             },
             "args": ["${workspaceFolder}/game", "--startpoint", "${input:startpoint}"],
-            
         },
         {
             "name": "Debug Genesis",
@@ -64,6 +63,16 @@
                 }
             ],
             "preLaunchTask": "Build and start debug server"
+        },
+        {
+            "name": "Run Genesis",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${config:gens.path}",
+            "args": ["rom.bin"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}${pathSeparator}genesis${pathSeparator}out",
+            "environment": []
         }
     ],
     "inputs": [
