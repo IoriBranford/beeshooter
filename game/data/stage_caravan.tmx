@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="384" nextobjectid="3569">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="384" nextobjectid="3575">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4265,8 +4265,11 @@ self.speed = 0.75</property>
    <object id="2220" template="triggers/SpawnCharacters.tx" x="-32" y="3904"/>
    <object id="3561" template="triggers/SpawnCharacters.tx" x="-32" y="3896"/>
    <object id="3562" template="triggers/SpawnCharacters.tx" x="-32" y="3888"/>
+   <object id="3569" template="triggers/SpawnCharacters.tx" x="-32" y="3864"/>
    <object id="3563" template="triggers/SpawnCharacters.tx" x="-32" y="3880"/>
+   <object id="3570" template="triggers/SpawnCharacters.tx" x="-32" y="3856"/>
    <object id="3564" template="triggers/SpawnCharacters.tx" x="-32" y="3872"/>
+   <object id="3571" template="triggers/SpawnCharacters.tx" x="-32" y="3848"/>
   </objectgroup>
   <objectgroup id="236" name="room1ants4">
    <object id="2221" type="Path" x="264" y="3840">
@@ -4280,8 +4283,11 @@ self.speed = 0.75</property>
    <object id="2252" template="triggers/SpawnCharacters.tx" x="-32" y="3832"/>
    <object id="3565" template="triggers/SpawnCharacters.tx" x="-32" y="3824"/>
    <object id="3566" template="triggers/SpawnCharacters.tx" x="-32" y="3816"/>
+   <object id="3572" template="triggers/SpawnCharacters.tx" x="-32" y="3792"/>
    <object id="3567" template="triggers/SpawnCharacters.tx" x="-32" y="3808"/>
+   <object id="3573" template="triggers/SpawnCharacters.tx" x="-32" y="3784"/>
    <object id="3568" template="triggers/SpawnCharacters.tx" x="-32" y="3800"/>
+   <object id="3574" template="triggers/SpawnCharacters.tx" x="-32" y="3776"/>
    <object id="2253" type="Path" x="272" y="3880">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -4291,7 +4297,7 @@ self.speed = 0.75</property>
   </objectgroup>
   <objectgroup id="237" name="room1powerup">
    <object id="2254" template="enemies/HoneyPot.tx" x="80" y="3752"/>
-   <object id="2255" template="triggers/SpawnCharacters.tx" x="-32" y="3768"/>
+   <object id="2255" template="triggers/SpawnCharacters.tx" x="-20" y="3768"/>
   </objectgroup>
   <objectgroup id="238" name="room2ants1">
    <object id="2257" template="enemies/Ant.tx" x="-8" y="3608"/>
