@@ -3,19 +3,22 @@
 
 #include "types.h"
 #include "sprite_eng.h"
+#include "gameplay.h"
 
 typedef struct GameObject GameObject;
 typedef struct GameObjectDefinition GameObjectDefinition;
 
 struct GameObjectDefinition {
-    u16 health, damage;
-    fix16 speed;
+    u16 health;
     u16 defeatPoints;
+    fix16 speed;
+    u16 animInd;
     const unsigned char *defeatSound;
     const GameObjectDefinition *bulletDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;
-    u32 animInd;
+    fix16 bodyW, bodyH;
+    Team team;
     void (*update)(GameObject*);
     void (*onDefeat)(GameObject*);
 };
