@@ -35,6 +35,7 @@ void UI_drawHud(PlayerObject *player, u16 timeLeft) {
     VDP_clearText(numPrinted + 1, 208>>3, 9 - numPrinted);
 
     u8 weapon = player->weapon;
+    SPR_setAnim(weaponSelectSprite, player->health - 1);
     SPR_setPosition(weaponCursorSprite, weapon == WEAPON_A ? 204 : 228, 180);
 
     u8 speed = player->speed == PLAYER_FASTSPEED ? 2 : 1;

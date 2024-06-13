@@ -60,7 +60,7 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
 
 void PLAYER_shoot(PlayerObject *self) {
     u16 bulletSpeed = 16;
-    for (int w = 0; w < self->power; ++w) {
+    for (int w = 0; w < self->health; ++w) {
         PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
         for (int s = 0; s < 2; ++s) {
             const PlayerShot *shot = &shots[s];
@@ -169,7 +169,7 @@ void PLAYER_spawn(PlayerObject *self) {
     self->lives--;
     self->centerX = STARTENTERX;
     self->centerY = STARTENTERY;
-    self->power = 1;
+    self->health = 1;
     self->shootTimer = 0;
     self->invulTimer = ENTERINVUL;
     self->update = (ObjectCallback*)PLAYER_updateEnter;

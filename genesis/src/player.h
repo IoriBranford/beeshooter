@@ -14,9 +14,9 @@ enum PlayerWeapon {
 
 typedef struct Player {
     GameObject;
-    u8 weapon, power, lives, _;
-    u32 score;
+    u8 weapon, lives;
     u8 shootTimer, invulTimer;
+    u32 score;
 } PlayerObject;
 
 void PLAYER_init(PlayerObject *self);
