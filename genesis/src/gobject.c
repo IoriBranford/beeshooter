@@ -4,6 +4,8 @@
 #include "types.h"
 
 void GOBJ_init(GameObject *self) {
+    if (!self)
+        return;
     self->velX = self->velY = 0;
     self->path = 0;
     self->pathIndex = 0;
