@@ -18,6 +18,7 @@ typedef enum Team {
 void GAME_setTimerPaused(bool paused);
 
 GameObject* GAME_createObject();
+void GAME_addToTeam(GameObject *gobj, Team team);
 void GAME_releaseObject(GameObject *gobj);
 
 #endif
