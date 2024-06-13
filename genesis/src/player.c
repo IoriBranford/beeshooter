@@ -23,6 +23,8 @@ const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
 
+extern const GameObjectDefinition defPlayerShot;
+
 typedef struct {
     fix16 offsetX, offsetY;
     u16 angle;
@@ -65,10 +67,10 @@ void PLAYER_shoot(PlayerObject *self) {
         for (int s = 0; s < 2; ++s) {
             const PlayerShot *shot = &shots[s];
 
-            GameObject *bullet = BULLET_createAS(
+            GameObject *bullet = BULLET_createAngAndDef(
                 self->centerX + shot->offsetX,
                 self->centerY + shot->offsetY,
-                shot->angle, bulletSpeed);
+                shot->angle, &defPlayerShot);
 
             if (!bullet)
                 break;

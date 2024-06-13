@@ -3,7 +3,16 @@
 #include "map.h"
 #include "res_gfx.h"
 #include "gobject.h"
+#include "bullet.h"
 
+const GameObjectDefinition defPlayerShot = {
+    .team = TEAM_PLAYERSHOT,
+    .speed = FIX16(16),
+    .spriteDef = &sprPlayerShot,
+    .palette = &palPlayer,
+    .bodyW = FIX16(12), .bodyH = FIX16(12),
+    .update = BULLET_update
+};
 const GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
