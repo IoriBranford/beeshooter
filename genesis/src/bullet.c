@@ -31,10 +31,10 @@ GameObject* BULLET_createVXVY(fix16 centerX, fix16 centerY, fix16 velX, fix16 ve
     return self;
 }
 
-GameObject* BULLET_createAS(fix16 centerX, fix16 centerY, u16 angle, u16 speed) {
+GameObject* BULLET_createAS(fix16 centerX, fix16 centerY, u16 angle, fix16 speed) {
     return BULLET_createVXVY(
         centerX, centerY,
-        speed * cosFix16(angle), speed * sinFix16(angle));
+        fix16Mul(speed, cosFix16(angle)), fix16Mul(speed, sinFix16(angle)));
 }
 
 GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
