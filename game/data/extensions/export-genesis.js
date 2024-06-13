@@ -98,7 +98,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         }
 return `{
     .x = ${point.x}, .y = ${point.y},
-    .speedTo = ${toFix16(speed)},
+    .speedTo = ${toFix16(speed)}, .distTo = ${toFix16(distTo)},
     .xVelTo = ${toFix16(xDirTo)}, .yVelTo = ${toFix16(yDirTo)},
     .numActions = ${pointsData[i].length},
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
