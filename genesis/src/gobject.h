@@ -23,11 +23,13 @@ typedef struct GameObject {
     fix16 speed;
 
     u16 health;
+    s16 team;
 } GameObject;
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
+bool GOBJ_isHitting(GameObject *self, GameObject *other);
 
 GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY);
 void GOBJ_init(GameObject *self);

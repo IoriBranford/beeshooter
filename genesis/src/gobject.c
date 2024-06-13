@@ -1,6 +1,5 @@
 #include "gobject.h"
 #include "gobjdef.h"
-#include "gameplay.h"
 #include "maths.h"
 #include "types.h"
 
@@ -11,6 +10,7 @@ void GOBJ_init(GameObject *self) {
     self->definition = 0;
     self->sprite = 0;
     self->levelObject = 0;
+    self->team = TEAM_NONE;
 }
 
 const SpriteDefinition* GOBJ_spriteDef(GameObject *self) {
@@ -74,6 +74,25 @@ bool GOBJ_isRectOverlapping(GameObject *self, fix16 rx, fix16 ry, fix16 rw, fix1
         y1 += (spriteDef->h>>1);
     }
     return (x1 >= rx && x0 <= rx + rw && y1 >= ry && y0 <= ry + rh);
+}
+
+bool GOBJ_isHitting(GameObject *self, GameObject *other) {
+    fix16 x = self->centerX, y = self->centerY, hw = 0, hh = 0;
+    fix16 x2 = other->centerX, y2 = other->centerY, hw2 = 0, hh2 = 0;
+    const GameObjectDefinition *myDef = self->definition;
+    const GameObjectDefinition *theirDef = other->definition;
+    if (myDef) {
+        hw = myDef->bodyW >> 1;
+        hh = myDef->bodyH >> 1;
+    }
+    if (theirDef) {
+        hw2 = theirDef->bodyW >> 1;
+        hh2 = theirDef->bodyH >> 1;
+    }
+    return (x + hw >= x2 - hw2)
+        && (x - hw <= x2 + hw2)
+        && (y + hh >= y2 - hh2)
+        && (y - hh <= y2 + hh2);
 }
 
 bool GOBJ_isSpriteOnScreen(GameObject *self) {
