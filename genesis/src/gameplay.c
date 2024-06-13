@@ -70,6 +70,7 @@ int gameplay() {
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
 
+    paused = false;
     running = true;
     while(running)
     {
