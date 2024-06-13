@@ -28,13 +28,13 @@
         },
         {
             "label": "Start debug server",
-            "command": "${config:gens.path} out${pathSeparator}rom.bin",
+            "command": "${config:gens.path} -D out${pathSeparator}rom.bin",
             "problemMatcher": "$gcc",
             "isBackground": true
         },
         {
             "label": "Build and start debug server",
-            "command": "${env:GDK}${pathSeparator}bin${pathSeparator}make -f ${env:GDK}${pathSeparator}makefile.gen debug && ${config:gens.path} out${pathSeparator}rom.bin",
+            "command": "${env:GDK}${pathSeparator}bin${pathSeparator}make -f ${env:GDK}${pathSeparator}makefile.gen debug && ${config:gens.path} -D out${pathSeparator}rom.bin",
             "problemMatcher": "$gcc",
             "isBackground": true
         }
