@@ -31,17 +31,15 @@ GameObject* BULLET_createVXVY(fix16 centerX, fix16 centerY, fix16 velX, fix16 ve
     return self;
 }
 
-GameObject* BULLET_createAS(fix16 centerX, fix16 centerY, u16 angle, fix16 speed) {
-    return BULLET_createVXVY(
-        centerX, centerY,
-        fix16Mul(speed, cosFix16(angle)), fix16Mul(speed, sinFix16(angle)));
+void BULLET_setVelocityAS(GameObject *self, u16 angle, fix16 speed) {
+    self->velX = fix16Mul(speed, cosFix16(angle));
+    self->velY = fix16Mul(speed, sinFix16(angle));
 }
 
 GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
-    GameObject *self = BULLET_createAS(centerX, centerY, angle, def->speed);
+    GameObject *self = GOBJ_createFromDef(def, centerX, centerY);
     if (!self)
         return NULL;
-    if (def->update)
-        OBJ_setUpdateMethod((Object*)self, (ObjectCallback*)def->update);
+    BULLET_setVelocityAS(self, angle, self->speed);
     return self;
 }
