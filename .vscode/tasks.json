@@ -12,7 +12,6 @@
             "label": "Debug build",
             "group": {
                 "kind": "build",
-                "isDefault": true
             },
             "args": ["debug"]
         },
@@ -26,7 +25,8 @@
         {
             "label": "Release build",
             "group": {
-                "kind": "build"
+                "kind": "build",
+                "isDefault": true
             }
         },
         {
