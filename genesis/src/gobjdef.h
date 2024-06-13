@@ -15,6 +15,7 @@ struct GameObjectDefinition {
     const GameObjectDefinition *bulletDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;
+    u32 animInd;
     void (*update)(GameObject*);
     void (*onDefeat)(GameObject*);
 };

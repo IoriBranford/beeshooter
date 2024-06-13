@@ -43,6 +43,8 @@ void GOBJ_initSprite(GameObject *self, u16 attr) {
         return;
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     self->sprite = SPR_addSprite(spriteDef, fix16ToRoundedInt(tl.x), fix16ToRoundedInt(tl.y), attr);
+    if (self->definition->animInd)
+        SPR_setAnim(self->sprite, self->definition->animInd);
 }
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
