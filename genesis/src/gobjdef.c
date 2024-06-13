@@ -38,8 +38,21 @@ const GameObjectDefinition defAntBig = {
     .palette = &palAnt,
     .update = GOBJ_updateIdleOnStage
 };
-const GameObjectDefinition defAlienGunner;
-const GameObjectDefinition defAlienPillager;
+const GameObjectDefinition defAlienGunner = {
+    .health = 8, .speed = FIX16(2),
+    .defeatPoints = 500,
+    .spriteDef = &sprAlien,
+    .palette = &palAlien,
+    .update = GOBJ_updatePathWalker
+};
+const GameObjectDefinition defAlienPillager = {
+    .health = 4, .speed = FIX16(2),
+    .defeatPoints = 250,
+    .spriteDef = &sprAlien,
+    .palette = &palAlien,
+    .animInd = 2,
+    .update = GOBJ_updatePathWalker
+};
 const GameObjectDefinition defAlienMind;
 const GameObjectDefinition defAcidAnt;
 const GameObjectDefinition defWasp;
