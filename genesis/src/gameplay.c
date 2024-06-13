@@ -120,6 +120,40 @@ int gameplay() {
         if (paused) {
         } else {
             player.update((Object*)&player);
+
+            for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
+                GameObject *playerShot = playerShots[s];
+                bool hit = false;
+                for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
+                    GameObject *enemy = enemies[e];
+                    if (GOBJ_isHitting(playerShot, enemy)) {
+                        if (1 >= enemy->health) {
+                            if (enemy->definition->onDefeat)
+                                enemy->definition->onDefeat(enemy);
+                            GAME_releaseObject(enemy);
+                        } else {
+                            enemy->health--;
+                            ++e;
+                        }
+                        hit = true;
+                    } else {
+                        ++e;
+                    }
+                }
+                if (hit)
+                    GAME_releaseObject(playerShot);
+                else
+                    ++s;
+            }
+
+            for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT]; ++s) {
+                GameObject *enemyShot = enemyShots[s];
+                if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
+                    // TODO: power down or kill player
+                    GAME_releaseObject(enemyShot);
+                    break;
+                }
+            }
             OBJ_updateAll(gobjPool);
 
             LEVEL_update();
