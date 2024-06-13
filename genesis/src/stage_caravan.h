@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (128)
+#define stage_caravan_numTriggers (130)
 
 extern Trigger stage_caravan_triggers[];
 
@@ -23,6 +23,7 @@ extern const GameObjectDefinition defBeetle;
 extern const GameObjectDefinition defWaspShooter;
 extern const GameObjectDefinition defWaspBoss;
 void spawnCharacters(Trigger *trigger);
+void unpauseTimer(Trigger *trigger);
 void stopStageScroll(Trigger *trigger);
 void faceRight(GameObject *self, PathPoint *pathPoint);
 void enterForeground(GameObject *self, PathPoint *pathPoint);

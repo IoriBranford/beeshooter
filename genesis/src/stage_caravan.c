@@ -8882,6 +8882,7 @@ LevelObjectGroup waspboss = {
 };
 Trigger stage_caravan_triggers[] = {
 {.x = -32, .y = 3976, .action = spawnCharacters, .group = &room1ants1},
+{.x = -48, .y = 3976, .action = unpauseTimer, .group = &room1ants1},
 {.x = -40, .y = 3960, .action = spawnCharacters, .group = &room1ants2},
 {.x = -32, .y = 3904, .action = spawnCharacters, .group = &room1ants3},
 {.x = -32, .y = 3896, .action = spawnCharacters, .group = &room1ants3},
@@ -8924,6 +8925,7 @@ Trigger stage_caravan_triggers[] = {
 {.x = -16, .y = 2016, .action = spawnCharacters, .group = &room9alienmind},
 {.x = -24, .y = 2008, .action = spawnCharacters, .group = &part2},
 {.x = -32, .y = 1856, .action = spawnCharacters, .group = &room10acidants},
+{.x = -40, .y = 1856, .action = unpauseTimer, .group = &room10acidants},
 {.x = -32, .y = 1840, .action = spawnCharacters, .group = &room10acidants2},
 {.x = -48, .y = 1760, .action = spawnCharacters, .group = &r11acidants1a},
 {.x = -56, .y = 1752, .action = spawnCharacters, .group = &r11acidants1b},

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="384" nextobjectid="3575">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="384" nextobjectid="3577">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4182,6 +4182,7 @@ self.speed = 0.75</property>
  <group id="231" name="stagemd">
   <objectgroup id="233" name="room1ants1">
    <object id="2180" template="triggers/SpawnCharacters.tx" x="-32" y="3976"/>
+   <object id="3575" template="triggers/UnpauseTimer.tx" type="Trigger" x="-48" y="3976"/>
    <object id="2181" template="enemies/Ant.tx" gid="2147484129" x="264" y="4016"/>
    <object id="2183" template="enemies/Ant.tx" gid="2147484129" x="280" y="4016"/>
    <object id="2184" template="enemies/Ant.tx" gid="2147484129" x="296" y="4016" rotation="0"/>
@@ -5167,6 +5168,7 @@ self.speed = 0.75</property>
    <object id="2505" template="pathpoints/ClimbUpToFloor.tx" x="184" y="1888"/>
    <object id="2506" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1880"/>
    <object id="2507" template="pathpoints/ClimbUpToFloor.tx" x="216" y="1864"/>
+   <object id="3576" template="triggers/UnpauseTimer.tx" type="Trigger" x="-40" y="1856"/>
   </objectgroup>
   <objectgroup id="263" name="room10acidants2">
    <object id="2508" template="triggers/SpawnCharacters.tx" x="-32" y="1840"/>

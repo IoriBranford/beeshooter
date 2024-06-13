@@ -4,6 +4,10 @@
 
 #include <genesis.h>
 
+void unpauseTimer(Trigger *trigger) {
+    GAME_setTimerPaused(false);
+}
+
 void spawnCharacters(Trigger *trigger)
 {
     LevelObject *object = trigger->group->objects;
