@@ -126,6 +126,41 @@ void GOBJ_updateIdleOnStage(GameObject *self) {
     }
 }
 
+void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
+    fix16 velX = 0, velY = -fix32ToFix16(LEVEL_cameraVelY());
+    fix16 speed = 0;
+    fix16 dist = 0;
+    Path *path = self->path;
+    if (!path || pathIndex >= path->numPoints) {
+        pathIndex = 0xFFFF;
+        dist = 0x7FFF;
+    } else {
+        PathPoint *pathPoint = &path->points[pathIndex];
+        speed = pathPoint->speedTo;
+        if (pathIndex == 0) {
+            fix16 destX = FIX16(path->x + pathPoint->x);
+            fix16 destY = LEVEL_toScreenY(FIX32(path->y + pathPoint->y));
+            fix16 distX = destX - self->centerX;
+            fix16 distY = destY - self->centerY;
+            if (distX || distY) {
+                dist = getApproximatedDistance(distX, distY);
+                fix16 invTime = fix16Div(speed, dist);
+                velX += fix16Mul(distX, invTime);
+                velY += fix16Mul(distY, invTime);
+            }
+        } else {
+            velX += pathPoint->xVelTo;
+            velY += pathPoint->yVelTo;
+            dist = pathPoint->distTo;
+        }
+    }
+    self->pathPointDistLeft = dist;
+    self->speed = speed;
+    self->velX = velX;
+    self->velY = velY;
+    self->pathIndex = pathIndex;
+}
+
 void GOBJ_updatePathWalker(GameObject *self) {
     Path *path = self->path;
     if (!path) {
@@ -133,6 +168,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
             fix16ToFix32(self->centerX),
             LEVEL_toWorldY(self->centerY));
         self->path = path;
+        GOBJ_startTowardsPathPoint(self, 0);
     }
     GOBJ_followPath(self);
     GOBJ_updateSprite(self);
@@ -143,56 +179,29 @@ void GOBJ_updatePathWalker(GameObject *self) {
 }
 
 void GOBJ_followPath(GameObject *self) {
-    Path *path = self->path;
-    u32 pathIndex = self->pathIndex;
-    if (!path || pathIndex >= path->numPoints) {
-        GOBJ_followStage(self);
-        return;
-    }
-
-    pathIndex = min(pathIndex, path->numPoints-1);
-
-    PathPoint *pathPoint = &path->points[pathIndex];
-    fix16 destX = FIX16(path->x + pathPoint->x);
-    fix16 destY = LEVEL_toScreenY(FIX32(path->y + pathPoint->y));
-
-    fix16 distX = destX - self->centerX;
-    fix16 distY = destY - self->centerY;
-
-    fix16 speed = pathPoint->speedTo;
-    self->speed = speed;
-    fix16 velX = 0, velY = 0;
-    if (pathIndex == 0) {
-        if (distX || distY) {
-            fix16 dist = getApproximatedDistance(distX, distY);
-            fix16 invTime = fix16Div(speed, dist);
-            velX = fix16Mul(distX, invTime);
-            velY = fix16Mul(distY, invTime);
-        }
+    self->pathPointDistLeft -= self->speed;
+    if (self->pathPointDistLeft > 0) {
+        self->centerX += self->velX;
+        self->centerY += self->velY;
     } else {
-        velX = pathPoint->xVelTo;
-        velY = pathPoint->yVelTo;
-    }
-
-    fix16 dotProduct = fix16Mul(velX, distX-velX) + fix16Mul(velY, distY-velY);
-    if (dotProduct <= 0) {
-        velX = distX;
-        velY = distY;
-        pathIndex++;
-    }
-    self->velX = velX;
-    self->velY = velY - fix32ToFix16(LEVEL_cameraVelY());
-    self->centerX += self->velX;
-    self->centerY += self->velY;
-
-    if (pathIndex != self->pathIndex) {
-        GObjPathPointFunction *action = pathPoint->actions;
-        if (action)
-            for (u32 i = 0; i < pathPoint->numActions; ++i) {
-                if (*action)
-                    (*action)(self, pathPoint);
-                ++action;
+        Path *path = self->path;
+        u32 pathIndex = self->pathIndex;
+        PathPoint *pathPoint = NULL;
+        if (path && pathIndex < path->numPoints) {
+            pathPoint = &path->points[pathIndex];
+            fix16 destX = FIX16(path->x + pathPoint->x);
+            fix16 destY = LEVEL_toScreenY(FIX32(path->y + pathPoint->y));
+            self->centerX = destX;
+            self->centerY = destY;
+            GObjPathPointFunction *action = pathPoint->actions;
+            if (action) {
+                for (u32 i = 0; i < pathPoint->numActions; ++i) {
+                    if (*action)
+                        (*action)(self, pathPoint);
+                    ++action;
+                }
             }
-        self->pathIndex = pathIndex;
+        }
+        GOBJ_startTowardsPathPoint(self, ++pathIndex);
     }
 }

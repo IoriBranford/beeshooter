@@ -19,6 +19,7 @@ typedef struct GameObject {
 
     Path *path;
     u16 pathIndex;
+    fix16 pathPointDistLeft;
     fix16 speed;
 
     u16 health;
