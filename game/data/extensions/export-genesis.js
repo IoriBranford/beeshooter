@@ -54,6 +54,9 @@ tiled.registerMapFormat("Honey Guardian C level", {
             let cCode = [`extern LevelObjectGroup ${cName};`]
             
             levelObjectGroup.Path.forEach((path) => {
+                /**
+                 * @type {Record<number, MapObject[]>}
+                 */
                 let pointsData = {}
                 path.polygon.forEach((point, i) => {
                     let pathPoints = levelObjectGroup.PathPoint.filter(
@@ -77,22 +80,26 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         }).join(',\n'),
                         '};')
                 })
-                
+
+                let pathSpeed = path.resolvedProperty('speed') || 1
                 let pathPointsCName = `path${path.id}_points`
                 cCode.push(`static PathPoint ${pathPointsCName}[] = {`,
                     path.polygon.map((point, i, points) => {
                         let prevPoint = i > 0 ? points[i-1] : null
                         let xDirTo = 0, yDirTo = 0, distTo = 0
+                        let speed = pointsData[i]
+                            && pointsData[i].reduce((speed, pointDatum) => (pointDatum.resolvedProperty('speedto') || speed), pathSpeed)
                         if (prevPoint) {
                             xDirTo = point.x - prevPoint.x
                             yDirTo = point.y - prevPoint.y
                             distTo = Math.hypot(xDirTo, yDirTo)
-                            xDirTo /= distTo
-                            yDirTo /= distTo
+                            xDirTo *= speed / distTo
+                            yDirTo *= speed / distTo
                         }
 return `{
     .x = ${point.x}, .y = ${point.y},
-    .xDirTo = ${toFix16(xDirTo)}, .yDirTo = ${toFix16(yDirTo)},
+    .speedTo = ${toFix16(speed)},
+    .xVelTo = ${toFix16(xDirTo)}, .yVelTo = ${toFix16(yDirTo)},
     .numActions = ${pointsData[i].length},
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
 }`

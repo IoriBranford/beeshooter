@@ -159,28 +159,26 @@ void GOBJ_followPath(GameObject *self) {
     fix16 distX = destX - self->centerX;
     fix16 distY = destY - self->centerY;
 
-    fix16 xDirTo = 0, yDirTo = 0;
+    fix16 speed = pathPoint->speedTo;
+    self->speed = speed;
+    fix16 velX = 0, velY = 0;
     if (pathIndex == 0) {
         if (distX || distY) {
             fix16 dist = getApproximatedDistance(distX, distY);
-            xDirTo = fix16Div(distX, dist);
-            yDirTo = fix16Div(distY, dist);
+            fix16 invTime = fix16Div(speed, dist);
+            velX = fix16Mul(distX, invTime);
+            velY = fix16Mul(distY, invTime);
         }
     } else {
-        xDirTo = pathPoint->xDirTo;
-        yDirTo = pathPoint->yDirTo;
+        velX = pathPoint->xVelTo;
+        velY = pathPoint->yVelTo;
     }
 
-    fix16 speed = self->speed;
-    fix16 velX, velY;
-    fix16 dotProduct = fix16Mul(xDirTo, distX) + fix16Mul(yDirTo, distY);
-    if (dotProduct <= speed) {
+    fix16 dotProduct = fix16Mul(velX, distX-velX) + fix16Mul(velY, distY-velY);
+    if (dotProduct <= 0) {
         velX = distX;
         velY = distY;
         pathIndex++;
-    } else {
-        velX = fix16Mul(speed, xDirTo);
-        velY = fix16Mul(speed, yDirTo);
     }
     self->velX = velX;
     self->velY = velY - fix32ToFix16(LEVEL_cameraVelY());
