@@ -46,6 +46,16 @@ void GAME_setTimerPaused(bool paused) {
     timePaused = paused;
 }
 
+void GAME_addToTeam(GameObject *gobj, Team team) {
+    if (team > TEAM_NONE) {
+        if (teamSizes[team] < TEAM_LIMIT) {
+            teamObjects[team][teamSizes[team]] = gobj;
+            teamSizes[team]++;
+            gobj->team = team;
+        }
+    }
+}
+
 GameObject* GAME_createObject() {
     GameObject *gobj = (GameObject*)OBJ_create(gobjPool);
     GOBJ_init(gobj);
@@ -53,6 +63,19 @@ GameObject* GAME_createObject() {
 }
 
 void GAME_releaseObject(GameObject *gobj) {
+    Team team = gobj->team;
+    if (team > TEAM_NONE) {
+        GameObject **objects = teamObjects[team];
+        u8 n = teamSizes[team];
+        for (int i = 0; i < n; ++i) {
+            if (objects[i] == gobj) {
+                objects[i] = objects[--n];
+                objects[n] = NULL;
+                teamSizes[team] = n;
+                break;
+            }
+        }
+    }
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
 }
