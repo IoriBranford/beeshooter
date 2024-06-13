@@ -1,5 +1,7 @@
 #include <genesis.h>
+#include "gameplay.h"
 #include "gobject.h"
+#include "gobjdef.h"
 #include "res_gfx.h"
 #include "res_audio.h"
 
@@ -13,6 +15,13 @@ static u16 timeLeft;
 static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
+
+#define TEAM_LIMIT 32
+static u8 teamSizes[NUM_TEAMS];
+static GameObject *teamObjects[NUM_TEAMS][TEAM_LIMIT];
+static GameObject **playerShots = teamObjects[TEAM_PLAYERSHOT];
+static GameObject **enemyShots = teamObjects[TEAM_ENEMYSHOT];
+static GameObject **enemies = teamObjects[TEAM_ENEMY];
 
 static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     if (joy == JOY_1) {
@@ -80,6 +89,8 @@ int gameplay() {
     timePaused = true; // waiting for unpauseTimer trigger
     paused = false;
     running = true;
+    memset(teamSizes, 0, sizeof(teamSizes));
+    memset(teamObjects, 0, sizeof(teamObjects));
 
     while(running)
     {
