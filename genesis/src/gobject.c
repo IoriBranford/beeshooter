@@ -73,7 +73,7 @@ bool GOBJ_isRectOverlapping(GameObject *self, fix16 rx, fix16 ry, fix16 rw, fix1
         y0 -= (spriteDef->h>>1);
         y1 += (spriteDef->h>>1);
     }
-    return (x1 > rx && x0 < rx + rw && y1 > ry && y0 < ry + rh);
+    return (x1 >= rx && x0 <= rx + rw && y1 >= ry && y0 <= ry + rh);
 }
 
 bool GOBJ_isSpriteOnScreen(GameObject *self) {
