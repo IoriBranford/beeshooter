@@ -28,15 +28,17 @@ void LEVEL_init() {
     cameraY = FIX32(4256);
     cameraVelY = -FIX32(3) / 4;
 
+    numTriggers = stage_caravan_numTriggers;
+    nextTriggerIndex = 0;
+    nextTrigger = &stage_caravan_triggers[nextTriggerIndex];
+    if (nextTriggerIndex > 0 && nextTriggerIndex < numTriggers)
+        cameraY = FIX32(nextTrigger->y) - cameraVelY;
+
     PAL_setPalette(BG_PALETTE, bgPalette.data, DMA);
     VDP_setBackgroundColor((BG_PALETTE << 4) + 1);
     VDP_loadTileSet(&bgTileset, BG_TILESET_START_INDEX, DMA);
     bg = MAP_create(&bgMap, BG_B, BG_BASE_TILE);
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
-
-    numTriggers = stage_caravan_numTriggers;
-    nextTriggerIndex = 0;
-    nextTrigger = stage_caravan_triggers;
 
     paletteUsage[0].palette = NULL;
     paletteUsage[0].cameraY = cameraY;
