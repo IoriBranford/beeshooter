@@ -4,6 +4,7 @@
 #include "types.h"
 #include "sprite_eng.h"
 #include "gameplay.h"
+#include "sounddef.h"
 
 typedef struct GameObject GameObject;
 typedef struct GameObjectDefinition GameObjectDefinition;
@@ -13,7 +14,7 @@ struct GameObjectDefinition {
     u16 defeatPoints;
     fix16 speed;
     u16 animInd;
-    const unsigned char *defeatSound;
+    const SoundDefinition *defeatSoundDef;
     const GameObjectDefinition *bulletDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;

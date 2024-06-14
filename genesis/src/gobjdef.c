@@ -2,6 +2,7 @@
 #include "maths.h"
 #include "map.h"
 #include "res_gfx.h"
+#include "res_audio.h"
 #include "gobject.h"
 #include "bullet.h"
 
@@ -11,6 +12,7 @@ const GameObjectDefinition defPlayerShot = {
     .spriteDef = &sprPlayerShot,
     .palette = &palPlayer,
     .bodyW = FIX16(12), .bodyH = FIX16(12),
+    // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
 };
 const GameObjectDefinition defAnt = {
@@ -20,6 +22,7 @@ const GameObjectDefinition defAnt = {
     .spriteDef = &sprAnt,
     .palette = &palAnt,
     .bodyW = FIX16(16), .bodyH = FIX16(12),
+    .defeatSoundDef = &sndBugKill1,
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defHoneyPot = {
@@ -28,6 +31,7 @@ const GameObjectDefinition defHoneyPot = {
     .spriteDef = &sprHoneyPot,
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage
 };
 const GameObjectDefinition defPowerup = {
@@ -36,6 +40,7 @@ const GameObjectDefinition defPowerup = {
     .spriteDef = &sprPowerup,
     .palette = &palPlayer,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updateIdleOnStage
 };
 const GameObjectDefinition defFly = {
@@ -45,9 +50,18 @@ const GameObjectDefinition defFly = {
     .spriteDef = &sprFly,
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(28), .bodyH = FIX16(28),
+    .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker
 };
-const GameObjectDefinition defHoneyCell;
+const GameObjectDefinition defHoneyCell = {
+    .team = TEAM_ENEMY,
+    .health = 1,
+    .spriteDef = &sprPowerup,
+    .palette = &palPlayer,
+    .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .defeatSoundDef = &sndBreakPot,
+    .update = GOBJ_updateIdleOnStage
+};
 const GameObjectDefinition defAntBig = {
     .team = TEAM_ENEMY,
     .health = 16, .speed = FIX16(1),
@@ -55,6 +69,7 @@ const GameObjectDefinition defAntBig = {
     .spriteDef = &sprAntBig,
     .palette = &palAnt,
     .bodyW = FIX16(40), .bodyH = FIX16(20),
+    .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updateIdleOnStage
 };
 const GameObjectDefinition defAlienGunner = {
@@ -64,6 +79,7 @@ const GameObjectDefinition defAlienGunner = {
     .spriteDef = &sprAlien,
     .palette = &palAlien,
     .bodyW = FIX16(20), .bodyH = FIX16(16),
+    .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defAlienPillager = {
@@ -74,6 +90,7 @@ const GameObjectDefinition defAlienPillager = {
     .palette = &palAlien,
     .bodyW = FIX16(20), .bodyH = FIX16(16),
     .animInd = 2,
+    .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defAlienMind;
