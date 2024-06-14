@@ -127,21 +127,19 @@ int gameplay() {
                 for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
                     GameObject *enemy = enemies[e];
                     if (GOBJ_isHitting(playerShot, enemy)) {
-                        if (1 >= enemy->health) {
-                            if (enemy->definition->onDefeat)
-                                enemy->definition->onDefeat(enemy);
-                            GAME_releaseObject(enemy);
+                        hit = true;
+                        GOBJ_dealDamage(enemy, 1);
+                        if (!enemy->health) {
+                            GOBJ_defeat(enemy);
                         } else {
-                            enemy->health--;
                             ++e;
                         }
-                        hit = true;
                     } else {
                         ++e;
                     }
                 }
                 if (hit)
-                    GAME_releaseObject(playerShot);
+                    GOBJ_defeat(playerShot);
                 else
                     ++s;
             }
@@ -150,7 +148,7 @@ int gameplay() {
                 GameObject *enemyShot = enemyShots[s];
                 if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
                     // TODO: power down or kill player
-                    GAME_releaseObject(enemyShot);
+                    GOBJ_defeat(enemyShot);
                     break;
                 }
             }
