@@ -6,13 +6,19 @@
 
 typedef struct SoundDefinition {
     const u8 *data;
-    u32 length;
+    u16 length, id;
     u8 channel, priority;
 } SoundDefinition;
 
-void SND_playDef(const SoundDefinition *soundDef);
+void SND_initSoundDefs();
+void SND_playDef(SoundDefinition *soundDef);
 
-extern const SoundDefinition
+extern SoundDefinition
+    sndPause,
+    sndPlayerShot,
+    sndChangeSpeedFast,
+    sndChangeSpeedSlow,
+    sndChangeWeapon,
     sndExtend,
     sndPlayerShotHit,
     sndBugKill1,

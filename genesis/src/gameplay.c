@@ -50,11 +50,11 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
                 running = false;
             } else if (!paused) {
                 paused = true;
-                XGM2_pause();
-                XGM2_playPCMEx(wavPause, sizeof(wavPause), SOUND_PCM_CH1, 15, false, false);
+                XGM_pausePlay();
+                SND_playDef(&sndPause);
             } else {
                 paused = false;
-                XGM2_resume();
+                XGM_resumePlay();
             }
         } else {
             PLAYER_joyEvent(&player, button, state);
@@ -128,9 +128,7 @@ int gameplay() {
     LEVEL_init();
     SYS_doVBlankProcess();
 
-    XGM2_setFMVolume(50);
-    XGM2_setPSGVolume(50);
-    XGM2_play(bgm);
+    XGM_startPlay(bgm);
 
     SPR_reset();
 
@@ -207,7 +205,7 @@ int gameplay() {
     }
 
     LEVEL_destroy();
-    XGM2_stop();
+    XGM_stopPlay();
     POOL_destroy(gobjPool);
     gobjPool = NULL;
 

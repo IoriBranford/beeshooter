@@ -4,9 +4,7 @@
  * Use "Genesis Code: Compile" command to compile this program.
  **/
 #include <genesis.h>
-
-#include "res_gfx.h"
-#include "res_audio.h"
+#include "sounddef.h"
 
 int gameplay();
 
@@ -14,6 +12,7 @@ int main()
 {
     VDP_setScreenWidth256();
     SPR_init();
+    SND_initSoundDefs();
 
     while (1)
         gameplay();

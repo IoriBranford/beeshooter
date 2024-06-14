@@ -14,7 +14,7 @@ struct GameObjectDefinition {
     u16 defeatPoints;
     fix16 speed;
     u16 animInd;
-    const SoundDefinition *defeatSoundDef;
+    SoundDefinition *defeatSoundDef;
     const GameObjectDefinition *bulletDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;

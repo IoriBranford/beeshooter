@@ -4,7 +4,7 @@
 
 #include <genesis.h>
 
-#include "res_audio.h"
+#include "sounddef.h"
 #include "res_gfx.h"
 
 enum PlayerAnimation {
@@ -100,7 +100,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
         if (self->shootTimer == 0) {
             self->shootTimer = SHOOTINTERVAL;
             PLAYER_shoot(self);
-            XGM2_playPCMEx(wavPlayerShot, sizeof(wavPlayerShot), WAVCHANNEL, 8, false, false);
+            SND_playDef(&sndPlayerShot);
         }
     }
 }
@@ -130,15 +130,15 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
             fix16 speed = self->speed;
             if (speed > PLAYER_NORMALSPEED) {
                 speed = PLAYER_NORMALSPEED;
-                XGM2_playPCMEx(wavChangeSpeedSlow, sizeof(wavChangeSpeedSlow), WAVCHANNEL, 15, false, false);
+                SND_playDef(&sndChangeSpeedSlow);
             } else {
                 speed = PLAYER_FASTSPEED;
-                XGM2_playPCMEx(wavChangeSpeedFast, sizeof(wavChangeSpeedFast), WAVCHANNEL, 15, false, false);
+                SND_playDef(&sndChangeSpeedFast);
             }
             PLAYER_setSpeed(self, speed);
         } else if (button == BUTTON_C) {
             PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
-            XGM2_playPCMEx(wavChangeWeapon, sizeof(wavChangeWeapon), WAVCHANNEL, 15, false, false);
+            SND_playDef(&sndChangeWeapon);
         }
     }
 }
