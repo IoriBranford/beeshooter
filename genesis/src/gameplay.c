@@ -2,6 +2,7 @@
 #include "gameplay.h"
 #include "gobject.h"
 #include "gobjdef.h"
+#include "sounddef.h"
 #include "res_gfx.h"
 #include "res_audio.h"
 
@@ -10,10 +11,27 @@
 #include "ui.h"
 
 const u16 GAMETIME = 60*60;
-const u32 MAXSCORE = 99999999;
+static const u32 MAXSCORE = 99999999;
+
+static const u32 EXTEND_SCORES[] = {
+    10000,
+    50000,
+    100000,
+    150000,
+    250000,
+    350000,
+    500000,
+    650000,
+    800000,
+    1000000,
+    1200000,
+    1500000,
+    99999999
+};
 
 static u16 timeLeft;
 static u32 score;
+static u8 extendScoreIndex;
 static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
@@ -45,7 +63,14 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
 }
 
 void GAME_scorePoints(u32 points) {
-    score = min(MAXSCORE, score + points);
+    u32 newScore = score + points;
+    u32 extendScore = EXTEND_SCORES[extendScoreIndex];
+    if (score < extendScore && newScore >= extendScore) {
+        SND_playDef(&sndExtend);
+        ++player.lives;
+        ++extendScoreIndex;
+    }
+    score = min(MAXSCORE, newScore);
 }
 
 void GAME_setTimerPaused(bool paused) {
@@ -115,6 +140,7 @@ int gameplay() {
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
     score = 0;
+    extendScoreIndex = 0;
     timeLeft = GAMETIME;
     timePaused = true; // waiting for unpauseTimer trigger
     paused = false;

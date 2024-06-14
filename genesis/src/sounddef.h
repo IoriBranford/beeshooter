@@ -13,6 +13,7 @@ typedef struct SoundDefinition {
 void SND_playDef(const SoundDefinition *soundDef);
 
 extern const SoundDefinition
+    sndExtend,
     sndPlayerShotHit,
     sndBugKill1,
     sndBugKill2,

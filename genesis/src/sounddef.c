@@ -10,6 +10,11 @@ void SND_playDef(const SoundDefinition *soundDef) {
 
 #define DATA_AND_LENGTH(wav) .data = wav, .length = sizeof(wav)
 
+const SoundDefinition sndExtend = {
+    DATA_AND_LENGTH(wavExtend),
+    .channel = SOUND_PCM_CH2,
+    .priority = 16
+};
 const SoundDefinition sndPlayerShotHit = {
     DATA_AND_LENGTH(wavPlayerShotHit),
     .channel = SOUND_PCM_CH3,
