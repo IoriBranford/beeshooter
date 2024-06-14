@@ -11,7 +11,7 @@
 #include "ui.h"
 
 const u16 GAMETIME = 60*60;
-static const u32 MAXSCORE = 99999999;
+static const u32 MAXSCORE = 9999999;
 
 static const u32 EXTEND_SCORES[] = {
     10000,
@@ -26,7 +26,7 @@ static const u32 EXTEND_SCORES[] = {
     1000000,
     1200000,
     1500000,
-    99999999
+    9999999
 };
 
 static u16 timeLeft;

@@ -12,13 +12,13 @@ void UI_initHud() {
 void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft) {
     char string[16];
 
-    sprintf(string, "%08lu", score);
-    VDP_drawText(string, 7, 1);
+    sprintf(string, "%07lu", score);
+    VDP_drawText(string, 8, 1);
 
     u8 frames = timeLeft % 60;
     u8 seconds = (timeLeft / 60) % 60;
     u8 minutes = min(timeLeft / 60 / 60, 99);
-    sprintf(string, "%02u:%02u:%02u", minutes, seconds, frames);
+    sprintf(string, "%01u:%02u:%02u", minutes, seconds, frames);
     VDP_drawText(string, 136>>3, 1);
     if (timeLeft) {
         VDP_clearText(12, 13, 8);
