@@ -180,19 +180,27 @@ void GOBJ_updateIdleOnStage(GameObject *self) {
 }
 
 void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
-    fix16 velX = 0, velY = -fix32ToFix16(LEVEL_cameraVelY());
+    Trigger *pathParentTrigger =
+        self->definition->pathParent == PATHPARENT_TRIGGER
+        ? self->parentTrigger : NULL;
+    fix16 velX = 0, velY = pathParentTrigger ? 0 : -fix32ToFix16(LEVEL_cameraVelY());
     fix16 speed = 0;
     fix16 dist = 0;
     Path *path = self->path;
     if (!path || pathIndex >= path->numPoints) {
         pathIndex = 0xFFFF;
         dist = 0x7FFF;
+        velY = -fix32ToFix16(LEVEL_cameraVelY());
     } else {
         PathPoint *pathPoint = &path->points[pathIndex];
         speed = pathPoint->speedTo;
         if (pathIndex == 0) {
             fix16 destX = FIX16(path->x + pathPoint->x);
-            fix16 destY = LEVEL_toScreenY(FIX32(path->y + pathPoint->y));
+            fix16 destY = path->y + pathPoint->y;
+            if (pathParentTrigger)
+                destY = FIX16(destY - pathParentTrigger->y);
+            else
+                destY = LEVEL_toScreenY(FIX32(destY));
             fix16 distX = destX - self->centerX;
             fix16 distY = destY - self->centerY;
             if (distX || distY) {
@@ -214,6 +222,41 @@ void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
     self->pathIndex = pathIndex;
 }
 
+void GOBJ_followPath(GameObject *self) {
+    self->pathPointDistLeft -= self->speed;
+    if (self->pathPointDistLeft > 0) {
+        self->centerX += self->velX;
+        self->centerY += self->velY;
+    } else {
+        Path *path = self->path;
+        u32 pathIndex = self->pathIndex;
+        PathPoint *pathPoint = NULL;
+        if (path && pathIndex < path->numPoints) {
+            pathPoint = &path->points[pathIndex];
+            fix16 destX = FIX16(path->x + pathPoint->x);
+            fix16 destY = path->y + pathPoint->y;
+            Trigger *pathParentTrigger =
+                self->definition->pathParent == PATHPARENT_TRIGGER
+                ? self->parentTrigger : NULL;
+            if (pathParentTrigger)
+                destY = FIX16(destY - pathParentTrigger->y);
+            else
+                destY = LEVEL_toScreenY(FIX32(destY));
+            self->centerX = destX;
+            self->centerY = destY;
+            GObjPathPointFunction *action = pathPoint->actions;
+            if (action) {
+                for (u32 i = 0; i < pathPoint->numActions; ++i) {
+                    if (*action)
+                        (*action)(self, pathPoint);
+                    ++action;
+                }
+            }
+        }
+        GOBJ_startTowardsPathPoint(self, ++pathIndex);
+    }
+}
+
 void GOBJ_updatePathWalker(GameObject *self) {
     Path *path = self->path;
     if (!path) {
@@ -228,33 +271,5 @@ void GOBJ_updatePathWalker(GameObject *self) {
     if (GOBJ_isSpriteOffSideOrBottom(self)) {
         if (!self->path || self->pathIndex >= self->path->numPoints)
             GAME_releaseObject(self);
-    }
-}
-
-void GOBJ_followPath(GameObject *self) {
-    self->pathPointDistLeft -= self->speed;
-    if (self->pathPointDistLeft > 0) {
-        self->centerX += self->velX;
-        self->centerY += self->velY;
-    } else {
-        Path *path = self->path;
-        u32 pathIndex = self->pathIndex;
-        PathPoint *pathPoint = NULL;
-        if (path && pathIndex < path->numPoints) {
-            pathPoint = &path->points[pathIndex];
-            fix16 destX = FIX16(path->x + pathPoint->x);
-            fix16 destY = LEVEL_toScreenY(FIX32(path->y + pathPoint->y));
-            self->centerX = destX;
-            self->centerY = destY;
-            GObjPathPointFunction *action = pathPoint->actions;
-            if (action) {
-                for (u32 i = 0; i < pathPoint->numActions; ++i) {
-                    if (*action)
-                        (*action)(self, pathPoint);
-                    ++action;
-                }
-            }
-        }
-        GOBJ_startTowardsPathPoint(self, ++pathIndex);
     }
 }

@@ -7,6 +7,17 @@
 #include "sprite_eng.h"
 #include "level.h"
 
+typedef enum ParentType {
+    PARENTTYPE_NONE,
+    PARENTTYPE_TRIGGER,
+    PARENTTYPE_GAMEOBJECT
+} ParentType;
+
+typedef enum PathParent {
+    PATHPARENT_LEVEL,
+    PATHPARENT_TRIGGER
+} PathParent;
+
 typedef struct GameObject {
     Object;
 
