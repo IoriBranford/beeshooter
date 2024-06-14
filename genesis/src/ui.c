@@ -20,7 +20,9 @@ void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft) {
     u8 minutes = min(timeLeft / 60 / 60, 99);
     sprintf(string, "%02u:%02u:%02u", minutes, seconds, frames);
     VDP_drawText(string, 136>>3, 1);
-    if (!timeLeft) {
+    if (timeLeft) {
+        VDP_clearText(12, 13, 8);
+    } else {
         VDP_drawText("TIME UP!", 12, 13);
     }
 
