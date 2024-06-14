@@ -2,6 +2,7 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "gameplay.h"
+#include "player.h"
 #include "stage_caravan.h"
 
 #include <genesis.h>
@@ -114,6 +115,8 @@ u16 LEVEL_getPaletteSlot(const Palette *palette) {
         paletteSlot = PAL0;
     } else if (palette == paletteUsage[PAL1].palette) {
         paletteSlot = PAL1;
+    } else if (palette == &palPlayer) {
+        paletteSlot = PLAYERPAL;
     } else if (!paletteUsage[PAL0].palette || paletteUsage[PAL0].cameraY > paletteUsage[PAL1].cameraY) {
         paletteSlot = PAL0;
         LEVEL_setPalette(paletteSlot, palette);
