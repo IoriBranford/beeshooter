@@ -20,6 +20,7 @@ struct GameObjectDefinition {
     const Palette *palette;
     fix16 bodyW, bodyH;
     Team team;
+    PathParent pathParent;
     void (*update)(GameObject*);
     void (*onDefeat)(GameObject*);
 };

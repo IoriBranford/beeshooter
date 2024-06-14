@@ -51,6 +51,7 @@ const GameObjectDefinition defFly = {
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(28), .bodyH = FIX16(28),
     .defeatSoundDef = &sndBugKill2,
+    .pathParent = PATHPARENT_TRIGGER,
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defHoneyCell = {
