@@ -10,6 +10,12 @@
 typedef struct GameObject {
     Object;
 
+    union {
+        Trigger *parentTrigger;
+        GameObject *parentObject;
+    };
+    ParentType parentType;
+
     const GameObjectDefinition *definition;
     LevelObject *levelObject;
 

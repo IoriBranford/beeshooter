@@ -14,7 +14,9 @@ void spawnCharacters(Trigger *trigger)
     if (!object)
         return;
     for (int i = 0; i < trigger->group->numObjects; ++i) {
-        LEVEL_createObject(object);
+        GameObject *gobj = LEVEL_createObject(object);
+        gobj->parentType = PARENTTYPE_TRIGGER;
+        gobj->parentTrigger = trigger;
         object++;
     }
 }
