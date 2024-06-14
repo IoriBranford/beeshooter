@@ -37,6 +37,10 @@ void GOBJ_initSprite(GameObject *self, u16 attr);
 void GOBJ_updateSprite(GameObject *this);
 void GOBJ_releaseSprite(GameObject *self);
 
+void GOBJ_dealDamage(GameObject *self, u16 damage);
+void GOBJ_defeat(GameObject *self);
+void GOBJ_defaultDefeatAction(GameObject *self);
+
 void GOBJ_updateIdleOnStage(GameObject *self);
 void GOBJ_updatePathWalker(GameObject *self);
 void GOBJ_followPath(GameObject *self);

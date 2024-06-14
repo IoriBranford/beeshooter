@@ -136,6 +136,32 @@ void GOBJ_releaseSprite(GameObject *self) {
     }
 }
 
+void GOBJ_dealDamage(GameObject *self, u16 damage) {
+    if (!self->health)
+        return;
+    
+    if (damage >= self->health) {
+        self->health = 0;
+    } else {
+        self->health -= damage;
+    }
+}
+
+void GOBJ_defaultDefeatAction(GameObject *self) {
+    const GameObjectDefinition *def = self->definition;
+    if (def && def->defeatSoundDef)
+        SND_playDef(def->defeatSoundDef);
+    GAME_releaseObject(self);
+}
+
+void GOBJ_defeat(GameObject *self) {
+    const GameObjectDefinition *def = self->definition;
+    if (def && def->onDefeat)
+        self->definition->onDefeat(self);
+    else
+        GOBJ_defaultDefeatAction(self);
+}
+
 void GOBJ_followStage(GameObject *self) {
     self->velX = 0;
     self->velY = -fix32ToFix16(LEVEL_cameraVelY());
