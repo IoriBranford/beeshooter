@@ -6,6 +6,7 @@ extern const u8 wavPlayerShot[5120];
 extern const u8 wavChangeWeapon[3840];
 extern const u8 wavChangeSpeedFast[5632];
 extern const u8 wavChangeSpeedSlow[5632];
+extern const u8 wavExtend[17920];
 extern const u8 wavPlayerShotHit[12288];
 extern const u8 wavBugKill1[4096];
 extern const u8 wavBugKill2[14336];
