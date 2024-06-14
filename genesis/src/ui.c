@@ -9,10 +9,9 @@ void UI_initHud() {
     weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false));
 }
 
-void UI_drawHud(PlayerObject *player, u16 timeLeft) {
+void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft) {
     char string[16];
 
-    u32 score = player->score;
     sprintf(string, "%08lu", score);
     VDP_drawText(string, 7, 1);
 

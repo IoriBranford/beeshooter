@@ -149,8 +149,11 @@ void GOBJ_dealDamage(GameObject *self, u16 damage) {
 
 void GOBJ_defaultDefeatAction(GameObject *self) {
     const GameObjectDefinition *def = self->definition;
-    if (def && def->defeatSoundDef)
-        SND_playDef(def->defeatSoundDef);
+    if (def) {
+        if (def->defeatSoundDef)
+            SND_playDef(def->defeatSoundDef);
+        GAME_scorePoints(def->defeatPoints);
+    }
     GAME_releaseObject(self);
 }
 

@@ -178,7 +178,6 @@ void PLAYER_spawn(PlayerObject *self) {
 }
 
 void PLAYER_init(PlayerObject *self) {
-    self->score = 0;
     self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;

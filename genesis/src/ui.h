@@ -4,6 +4,6 @@
 #include "player.h"
 
 void UI_initHud();
-void UI_drawHud(PlayerObject *player, u16 timeLeft);
+void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft);
 
 #endif

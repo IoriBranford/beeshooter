@@ -10,8 +10,10 @@
 #include "ui.h"
 
 const u16 GAMETIME = 60*60;
+const u32 MAXSCORE = 99999999;
 
 static u16 timeLeft;
+static u32 score;
 static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
@@ -40,6 +42,10 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
             PLAYER_joyEvent(&player, button, state);
         }
     }
+}
+
+void GAME_scorePoints(u32 points) {
+    score = min(MAXSCORE, score + points);
 }
 
 void GAME_setTimerPaused(bool paused) {
@@ -108,6 +114,7 @@ int gameplay() {
     UI_initHud();
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
+    score = 0;
     timeLeft = GAMETIME;
     timePaused = true; // waiting for unpauseTimer trigger
     paused = false;
@@ -163,7 +170,7 @@ int gameplay() {
                 }
             }
         }
-        UI_drawHud(&player, timeLeft);
+        UI_drawHud(&player, score, timeLeft);
 
         char objCounter[8];
         sprintf(objCounter, "%2d objs", POOL_getNumAllocated(gobjPool));

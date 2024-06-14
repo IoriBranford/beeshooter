@@ -15,6 +15,7 @@ typedef enum Team {
     NUM_TEAMS
 } Team;
 
+void GAME_scorePoints(u32 points);
 void GAME_setTimerPaused(bool paused);
 
 GameObject* GAME_createObject();
