@@ -6,7 +6,7 @@ PALETTE palPlayer "player/ship.png"
 TILESET font "font.png" AUTO NONE
 SPRITE sprPlayer "player/ship.png" 4 4 AUTO 0 BOX SPRITE
 SPRITE sprPlayerShot "player/shot.png" 2 2 AUTO 0 BOX SPRITE
-SPRITE sprPowerup "player/powerup.png" 2 2 AUTO 0 BOX
+SPRITE sprPowerup "player/powerup.png" 2 2 AUTO 3 BOX
 SPRITE sprUiWeapons "ui/weaponselect.png" 5 2
 SPRITE sprUiWeaponsCursor "ui/weaponcursor.png" 3 3
 
