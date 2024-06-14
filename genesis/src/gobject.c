@@ -36,7 +36,7 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
     obj->speed = def->speed;
     obj->definition = def;
     OBJ_setUpdateMethod((Object*)obj, (ObjectCallback*)def->update);
-    GAME_addToTeam(obj, def->team);
+    GAME_putObjectInTeam(obj, def->team);
     return obj;
 }
 

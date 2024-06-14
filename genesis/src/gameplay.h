@@ -19,7 +19,7 @@ void GAME_scorePoints(u32 points);
 void GAME_setTimerPaused(bool paused);
 
 GameObject* GAME_createObject();
-void GAME_addToTeam(GameObject *gobj, Team team);
+void GAME_putObjectInTeam(GameObject *gobj, Team team);
 void GAME_releaseObject(GameObject *gobj);
 
 #endif

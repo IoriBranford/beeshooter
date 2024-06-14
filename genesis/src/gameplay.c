@@ -77,7 +77,23 @@ void GAME_setTimerPaused(bool paused) {
     timePaused = paused;
 }
 
-void GAME_addToTeam(GameObject *gobj, Team team) {
+void GAME_putObjectInTeam(GameObject *gobj, Team team) {
+    Team oldTeam = gobj->team;
+    if (team == oldTeam)
+        return;
+    if (oldTeam > TEAM_NONE) {
+        GameObject **objects = teamObjects[oldTeam];
+        u8 n = teamSizes[oldTeam];
+        for (int i = 0; i < n; ++i) {
+            if (objects[i] == gobj) {
+                objects[i] = objects[--n];
+                objects[n] = NULL;
+                teamSizes[oldTeam] = n;
+                gobj->team = TEAM_NONE;
+                break;
+            }
+        }
+    }
     if (team > TEAM_NONE) {
         if (teamSizes[team] < TEAM_LIMIT) {
             teamObjects[team][teamSizes[team]] = gobj;
@@ -94,19 +110,7 @@ GameObject* GAME_createObject() {
 }
 
 void GAME_releaseObject(GameObject *gobj) {
-    Team team = gobj->team;
-    if (team > TEAM_NONE) {
-        GameObject **objects = teamObjects[team];
-        u8 n = teamSizes[team];
-        for (int i = 0; i < n; ++i) {
-            if (objects[i] == gobj) {
-                objects[i] = objects[--n];
-                objects[n] = NULL;
-                teamSizes[team] = n;
-                break;
-            }
-        }
-    }
+    GAME_putObjectInTeam(gobj, TEAM_NONE);
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
 }
@@ -161,6 +165,7 @@ int gameplay() {
                         hit = true;
                         GOBJ_dealDamage(enemy, 1);
                         if (!enemy->health) {
+                            GAME_putObjectInTeam(enemy, TEAM_NONE);
                             GOBJ_defeat(enemy);
                         } else {
                             ++e;
