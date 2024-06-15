@@ -158,7 +158,7 @@ int gameplay() {
 
             for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
                 GameObject *playerShot = playerShots[s];
-                bool hit = false;
+                bool hit = false, defeated = false;
                 for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
                     GameObject *enemy = enemies[e];
                     if (GOBJ_isHitting(playerShot, enemy)) {
@@ -167,6 +167,7 @@ int gameplay() {
                         if (!enemy->health) {
                             GAME_putObjectInTeam(enemy, TEAM_NONE);
                             GOBJ_defeat(enemy);
+                            defeated = true;
                         } else {
                             ++e;
                         }
@@ -174,10 +175,13 @@ int gameplay() {
                         ++e;
                     }
                 }
-                if (hit)
+                if (hit) {
                     GOBJ_defeat(playerShot);
-                else
+                    if (!defeated)
+                        SND_playDef(&sndPlayerShotHit);
+                } else {
                     ++s;
+                }
             }
 
             for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT]; ++s) {
