@@ -125,6 +125,7 @@ void GOBJ_updateSprite(GameObject *self) {
         if (spriteDef && GOBJ_isSpriteOnScreen(self)) {
             u16 paletteSlot = LEVEL_getPaletteSlot(self->definition->palette);
             GOBJ_initSprite(self, (paletteSlot << TILE_ATTR_PALETTE_SFT) | self->levelObject->flags);
+            SPR_setDepth(self->sprite, self->definition->spriteDepth);
         }
     }
 }

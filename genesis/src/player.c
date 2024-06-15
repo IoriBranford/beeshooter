@@ -186,6 +186,7 @@ void PLAYER_init(PlayerObject *self) {
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
         TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
+    SPR_setDepth(self->sprite, -100);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
 }

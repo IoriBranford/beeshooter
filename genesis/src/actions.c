@@ -42,6 +42,7 @@ void climbUpToFloor(GameObject *self, PathPoint *pathPoint)
 void enterForeground(GameObject *self, PathPoint *pathPoint)
 {
     SPR_setPriority(self->sprite, true);
+    SPR_setDepth(self->sprite, -abs(self->sprite->depth));
 }
 
 void startWaspAttack(GameObject *self, PathPoint *pathPoint)
@@ -66,6 +67,7 @@ void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, PathPoint *path
 void enterBackground(GameObject *self, PathPoint *pathPoint)
 {
     SPR_setPriority(self->sprite, false);
+    SPR_setDepth(self->sprite, abs(self->sprite->depth));
 }
 
 void faceLeft(GameObject *self, PathPoint *pathPoint)
