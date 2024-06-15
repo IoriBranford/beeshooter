@@ -36,7 +36,7 @@ static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
 
-#define TEAM_LIMIT 32
+#define TEAM_LIMIT 64
 static u8 teamSizes[NUM_TEAMS];
 static GameObject *teamObjects[NUM_TEAMS][TEAM_LIMIT];
 static GameObject **playerShots = teamObjects[TEAM_PLAYERSHOT];
