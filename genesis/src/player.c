@@ -4,6 +4,7 @@
 
 #include <genesis.h>
 
+#include "gobjdef.h"
 #include "sounddef.h"
 #include "res_gfx.h"
 
@@ -23,7 +24,9 @@ const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
 
-extern const GameObjectDefinition defPlayerShot;
+extern const GameObjectDefinition
+    defPlayer,
+    defPlayerShot;
 
 typedef struct {
     fix16 offsetX, offsetY;
@@ -61,7 +64,6 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
 };
 
 void PLAYER_shoot(PlayerObject *self) {
-    u16 bulletSpeed = 16;
     for (int w = 0; w < self->health; ++w) {
         PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
         for (int s = 0; s < 2; ++s) {
@@ -178,6 +180,7 @@ void PLAYER_spawn(PlayerObject *self) {
 }
 
 void PLAYER_init(PlayerObject *self) {
+    self->definition = &defPlayer;
     self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;
@@ -186,7 +189,7 @@ void PLAYER_init(PlayerObject *self) {
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
         TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE));
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
-    SPR_setDepth(self->sprite, -100);
+    SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
 }

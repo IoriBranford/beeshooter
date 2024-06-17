@@ -5,7 +5,14 @@
 #include "res_audio.h"
 #include "gobject.h"
 #include "bullet.h"
-
+const GameObjectDefinition defPlayer = {
+    .health = 1,
+    .spriteDepth = -100,
+    .spriteDef = &sprPlayer,
+    .palette = &palPlayer,
+    .bodyW = FIX16(8),
+    .bodyH = FIX16(8),
+};
 const GameObjectDefinition defPlayerShot = {
     .team = TEAM_PLAYERSHOT,
     .speed = FIX16(16),
