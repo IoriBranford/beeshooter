@@ -124,7 +124,12 @@ void GOBJ_updateSprite(GameObject *self) {
         const SpriteDefinition *spriteDef = self->definition ? self->definition->spriteDef : NULL;
         if (spriteDef && GOBJ_isSpriteOnScreen(self)) {
             u16 paletteSlot = LEVEL_getPaletteSlot(self->definition->palette);
-            GOBJ_initSprite(self, (paletteSlot << TILE_ATTR_PALETTE_SFT) | self->levelObject->flags);
+            u16 flags = TILE_ATTR(paletteSlot, false, false, false);
+            if (self->levelObject)
+                flags |= self->levelObject->flags;
+            else
+                flags |= TILE_ATTR_PRIORITY_MASK;
+            GOBJ_initSprite(self, flags);
             SPR_setDepth(self->sprite, self->definition->spriteDepth);
         }
     }
@@ -161,7 +166,7 @@ void GOBJ_defaultDefeatAction(GameObject *self) {
 void GOBJ_defeat(GameObject *self) {
     const GameObjectDefinition *def = self->definition;
     if (def && def->onDefeat)
-        self->definition->onDefeat(self);
+        def->onDefeat(self);
     else
         GOBJ_defaultDefeatAction(self);
 }
