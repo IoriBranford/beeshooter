@@ -11,6 +11,7 @@ typedef struct GameObjectDefinition GameObjectDefinition;
 
 struct GameObjectDefinition {
     u16 health;
+    u16 damage;
     u16 defeatPoints;
     fix16 speed;
     u16 animInd;
