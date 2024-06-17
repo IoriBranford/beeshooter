@@ -32,8 +32,8 @@ typedef struct {
 
 static const PlayerShot PLAYER_WEAPONSA[][2] = {
     {
-        {.offsetX = -FIX16(8), .angle = 768},
-        {.offsetX = FIX16(8), .angle = 768},
+        {.offsetX = -FIX16(6), .angle = 768},
+        {.offsetX = FIX16(6), .angle = 768},
     },
     {
         {.angle = 768 - 128},
