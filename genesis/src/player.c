@@ -23,6 +23,8 @@ const fix16 STARTENTERY = GAME_BOUNDH + 16;
 const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
+const u8 POWERUP_INVUL = 60;
+const u8 MERCY_INVUL = 60;
 
 extern const GameObjectDefinition
     defPlayer,
@@ -143,6 +145,15 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
             SND_playDef(&sndChangeWeapon);
         }
     }
+}
+
+void PLAYER_giveInvul(PlayerObject *self, u8 invul) {
+    self->invulTimer = max(self->invulTimer, invul);
+}
+
+void PLAYER_powerUp(PlayerObject *self) {
+    self->health = min(POWERLEVELS, self->health+1);
+    PLAYER_giveInvul(self, POWERUP_INVUL);
 }
 
 void PLAYER_updateSprite(PlayerObject *self) {
