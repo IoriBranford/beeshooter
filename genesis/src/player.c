@@ -78,14 +78,6 @@ void PLAYER_shoot(PlayerObject *self) {
 
             if (!bullet)
                 break;
-
-            bullet->sprite = SPR_addSprite(
-                &sprPlayerShot,
-                fix16ToInt(bullet->centerX), fix16ToInt(bullet->centerY),
-                TILE_ATTR(PLAYERPAL, TRUE, bullet->velY < 0, bullet->velX < 0));
-
-            s16 anim = fix16ToInt(abs(sinFix16(shot->angle)) * 2);
-            SPR_setAnim(bullet->sprite, anim);
         }
     }
 }

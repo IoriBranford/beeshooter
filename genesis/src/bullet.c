@@ -2,6 +2,7 @@
 #include "gobjdef.h"
 #include "gameplay.h"
 #include "maths.h"
+#include "moremath.h"
 
 void BULLET_update(GameObject *self) {
     self->centerX += self->velX;
@@ -31,9 +32,28 @@ GameObject* BULLET_createVXVY(fix16 centerX, fix16 centerY, fix16 velX, fix16 ve
     return self;
 }
 
+void BULLET_updateSpriteDirectionAngle(GameObject *self, s16 angle) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    if (self->sprite && angle < 1024) {
+        const SpriteDefinition *spriteDef = self->sprite->definition;
+        u16 numAnim = spriteDef->numAnimation;
+        u16 anim = fix16ToInt(abs(sinFix16((angle))) * (numAnim - 1));
+        SPR_setAnim(self->sprite, anim);
+        SPR_setHFlip(self->sprite, self->velX < 0);
+        SPR_setVFlip(self->sprite, self->velY < 0);
+    }
+}
+
+void BULLET_updateSpriteDirection(GameObject *self) {
+    u16 angle = approximateAtan2(self->velY, self->velX);
+    BULLET_updateSpriteDirectionAngle(self, angle);
+}
+
 void BULLET_setVelocityAS(GameObject *self, u16 angle, fix16 speed) {
     self->velX = fix16Mul(speed, cosFix16(angle));
     self->velY = fix16Mul(speed, sinFix16(angle));
+    BULLET_updateSpriteDirectionAngle(self, angle);
 }
 
 GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
@@ -50,6 +70,7 @@ void BULLET_setVelocityXY(GameObject *self, fix16 dx, fix16 dy, fix16 speed) {
         fix16 speed = self->speed;
         self->velX = fix16Mul(fix16Div(dx, dist), speed);
         self->velY = fix16Mul(fix16Div(dy, dist), speed);
+        BULLET_updateSpriteDirection(self);
     } else {
         self->velX = 0;
         self->velY = 0;
