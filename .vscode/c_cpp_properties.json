@@ -6,7 +6,10 @@
                 "${workspaceFolder}/genesis/inc",
                 "${workspaceFolder}/genesis/res",
                 "${env:GDK}/inc",
-                "${env:GDK}/res"
+                "${env:GDK}/res",
+                "${env:MARSDEV}/m68k-elf/lib/gcc/m68k-elf/*/include",
+                "${env:MARSDEV}/m68k-elf/include",
+                "${env:MARSDEV}/m68k-elf/m68k-elf/include"
             ],
             "defines": [
                 "SGDK_GCC"
