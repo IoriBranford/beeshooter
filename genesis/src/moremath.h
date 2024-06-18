@@ -4,6 +4,14 @@
 #include "types.h"
 #include "maths.h"
 
-fix16 tanFix16(u16 x);
+/**
+ *  \brief
+ *      Return atan2 approximation.
+ *
+ *  \param y
+ *  
+ *  \param x
+ */
+u16 approximateAtan2(fix16 y, fix16 x);
 
 #endif
