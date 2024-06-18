@@ -17,6 +17,7 @@ extern const Palette palAlien;
 extern const SpriteDefinition sprAnt;
 extern const SpriteDefinition sprAntBig;
 extern const SpriteDefinition sprHoneyPot;
+extern const SpriteDefinition sprFlyBullet;
 extern const SpriteDefinition sprFly;
 extern const SpriteDefinition sprAlien;
 extern const SpriteDefinition sprAlienMind;
