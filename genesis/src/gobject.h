@@ -33,6 +33,7 @@ typedef struct GameObject {
     Sprite *sprite;
     fix16 centerX, centerY;
     fix16 velX, velY;
+    fix16 destX, destY;
 
     Path *path;
     u16 pathIndex;
@@ -59,6 +60,9 @@ void GOBJ_releaseSprite(GameObject *self);
 void GOBJ_dealDamage(GameObject *self, u16 damage);
 void GOBJ_defeat(GameObject *self);
 void GOBJ_defaultDefeatAction(GameObject *self);
+
+void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed);
+bool GOBJ_updateMovement(GameObject *self);
 
 void GOBJ_updateIdleOnStage(GameObject *self);
 void GOBJ_updatePathWalker(GameObject *self);

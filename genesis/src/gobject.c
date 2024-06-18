@@ -185,6 +185,44 @@ void GOBJ_updateIdleOnStage(GameObject *self) {
     }
 }
 
+void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed) {
+    fix16 velX = 0, velY = 0;
+    fix16 distX = destX - self->centerX;
+    fix16 distY = destY - self->centerY;
+    fix16 dist = (distX || distY) ? FIX16(getApproximatedDistance(fix16ToInt(distX), fix16ToInt(distY))) : 0;
+    if (dist > speed) {
+        velX = fix16Mul(fix16Div(distX, dist), speed);
+        velY = fix16Mul(fix16Div(distY, dist), speed);
+    } else {
+        velX = 0;
+        velY = 0;
+        self->centerX = destX;
+        self->centerY = destY;
+    }
+    self->pathPointDistLeft = dist;
+    self->speed = speed;
+    self->velX = velX;
+    self->velY = velY;
+    self->destX = destX;
+    self->destY = destY;
+}
+
+bool GOBJ_updateMovement(GameObject *self) {
+    if (self->pathPointDistLeft > self->speed) {
+        self->pathPointDistLeft -= self->speed;
+        self->centerX += self->velX;
+        self->centerY += self->velY;
+        return false;
+    } else {
+        self->pathPointDistLeft = 0;
+        self->velX = 0;
+        self->velY = 0;
+        self->centerX = self->destX;
+        self->centerY = self->destY;
+        return true;
+    }
+}
+
 void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
     Trigger *pathParentTrigger =
         self->definition->pathParent == PATHPARENT_TRIGGER
