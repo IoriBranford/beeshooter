@@ -44,6 +44,8 @@ typedef struct GameObject {
 } GameObject;
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);
+bool GOBJ_isSpriteOffSideOrBottom(GameObject *self);
+
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
 bool GOBJ_isHitting(GameObject *self, GameObject *other);
