@@ -43,3 +43,22 @@ GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, cons
     BULLET_setVelocityAS(self, angle, self->speed);
     return self;
 }
+
+void BULLET_setVelocityXY(GameObject *self, fix16 dx, fix16 dy, fix16 speed) {
+    fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(dx), fix16ToInt(dy)));
+    if (dist) {
+        fix16 speed = self->speed;
+        self->velX = fix16Mul(fix16Div(dx, dist), speed);
+        self->velY = fix16Mul(fix16Div(dy, dist), speed);
+    } else {
+        self->velX = 0;
+        self->velY = 0;
+    }
+}
+
+GameObject* BULLET_shootAtTarget(fix16 centerX, fix16 centerY, GameObject *target, const GameObjectDefinition *def) {
+    GameObject *self = GOBJ_createFromDef(def, centerX, centerY);
+    if (self && target)
+        BULLET_setVelocityXY(self, target->centerX - centerX, target->centerY - centerY, self->speed);
+    return self;
+}
