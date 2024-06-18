@@ -55,7 +55,7 @@ const GameObjectDefinition defPowerup = {
     .palette = &palPlayer,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
     .defeatSoundDef = &sndPowerup,
-    .update = GOBJ_updateIdleOnStage
+    .update = GOBJ_updatePowerupRise
 };
 const GameObjectDefinition defFly = {
     .team = TEAM_ENEMY,
