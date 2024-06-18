@@ -57,6 +57,16 @@ const GameObjectDefinition defPowerup = {
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise
 };
+const GameObjectDefinition defFlyBullet = {
+    .team = TEAM_ENEMYSHOT,
+    .health = 1, .damage = 1,
+    .speed = FIX16(3),
+    .spriteDef = &sprFlyBullet,
+    .spriteDepth = -20,
+    .palette = &palFlyAndHoney,
+    .bodyW = FIX16(4), .bodyH = FIX16(4),
+    .update = BULLET_update
+};
 const GameObjectDefinition defFly = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
@@ -67,6 +77,7 @@ const GameObjectDefinition defFly = {
     .bodyW = FIX16(28), .bodyH = FIX16(28),
     .defeatSoundDef = &sndBugKill2,
     .pathParent = PATHPARENT_TRIGGER,
+    .bulletDef = &defFlyBullet,
     .update = GOBJ_updatePathWalker
 };
 const GameObjectDefinition defHoneyCell = {
