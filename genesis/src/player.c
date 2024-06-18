@@ -152,7 +152,10 @@ void PLAYER_giveInvul(PlayerObject *self, u8 invul) {
 }
 
 void PLAYER_powerUp(PlayerObject *self) {
-    self->health = min(POWERLEVELS, self->health+1);
+    if (self->health < POWERLEVELS)
+        ++self->health;
+    else
+        GAME_scorePoints(1000);
     PLAYER_giveInvul(self, POWERUP_INVUL);
 }
 
