@@ -1,5 +1,6 @@
 #include "gobject.h"
 #include "gobjdef.h"
+#include "bullet.h"
 #include "maths.h"
 #include "types.h"
 
@@ -171,6 +172,24 @@ void GOBJ_defeat(GameObject *self) {
         GOBJ_defaultDefeatAction(self);
 }
 
+void GOBJ_startShooting(GameObject *self, u8 count, u8 interval) {
+    self->shootInterval = interval;
+    self->shootTimer = interval;
+    self->shotsLeft = count;
+}
+
+void GOBJ_updateShooting(GameObject *self) {
+    if (self->shootTimer && !--self->shootTimer) {
+        const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
+        if (bulletDef) {
+            BULLET_shootAtTarget(self->centerX, self->centerY, (GameObject*)GAME_player(), bulletDef);
+        }
+        if (--self->shotsLeft) {
+            self->shootTimer = self->shootInterval;
+        }
+    }
+}
+
 void GOBJ_followStage(GameObject *self) {
     self->velX = 0;
     self->velY = -fix32ToFix16(LEVEL_cameraVelY());
@@ -311,6 +330,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
         GOBJ_startTowardsPathPoint(self, 0);
     }
     GOBJ_followPath(self);
+    GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
     if (GOBJ_isSpriteOffSideOrBottom(self)) {
         if (!self->path || self->pathIndex >= self->path->numPoints)

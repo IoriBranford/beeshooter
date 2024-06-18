@@ -42,6 +42,10 @@ typedef struct GameObject {
 
     u16 health;
     s16 team;
+    u8 invulTimer;
+    u8 shootTimer;
+    u8 shootInterval;
+    u8 shotsLeft;
 } GameObject;
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);
@@ -60,6 +64,9 @@ void GOBJ_releaseSprite(GameObject *self);
 void GOBJ_dealDamage(GameObject *self, u16 damage);
 void GOBJ_defeat(GameObject *self);
 void GOBJ_defaultDefeatAction(GameObject *self);
+
+void GOBJ_startShooting(GameObject *self, u8 count, u8 interval);
+void GOBJ_updateShooting(GameObject *self);
 
 void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed);
 bool GOBJ_updateMovement(GameObject *self);
