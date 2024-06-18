@@ -184,12 +184,21 @@ int gameplay() {
                 }
             }
 
-            for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT]; ++s) {
+            for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT];) {
                 GameObject *enemyShot = enemyShots[s];
                 if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
-                    // TODO: power down or kill player
+                    u16 damage = enemyShot->definition->damage;
+                    GAME_putObjectInTeam(enemyShot, TEAM_NONE);
                     GOBJ_defeat(enemyShot);
-                    break;
+                    if (damage) {
+                        if (!player.invulTimer) {
+                            // TODO: power down or kill player
+                        }
+                    } else {
+                        PLAYER_powerUp(&player);
+                    }
+                } else {
+                    ++s;
                 }
             }
             OBJ_updateAll(gobjPool);
