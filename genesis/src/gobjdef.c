@@ -5,6 +5,8 @@
 #include "res_audio.h"
 #include "gobject.h"
 #include "bullet.h"
+#include "item.h"
+
 const GameObjectDefinition defPlayer = {
     .health = 1,
     .spriteDepth = -100,
@@ -42,13 +44,14 @@ const GameObjectDefinition defHoneyPot = {
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
     .defeatSoundDef = &sndBreakPot,
-    .update = GOBJ_updateIdleOnStage
+    .update = GOBJ_updateIdleOnStage,
+    .onDefeat = GOBJ_openHoneypot
 };
 const GameObjectDefinition defPowerup = {
-    .team = TEAM_ENEMY,
+    .team = TEAM_ENEMYSHOT,
     .health = 1,
     .spriteDef = &sprPowerup,
-    .spriteDepth = -95,
+    .spriteDepth = -20,
     .palette = &palPlayer,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
     .defeatSoundDef = &sndPowerup,
@@ -74,7 +77,8 @@ const GameObjectDefinition defHoneyCell = {
     .palette = &palPlayer,
     .bodyW = FIX16(16), .bodyH = FIX16(16),
     .defeatSoundDef = &sndBreakPot,
-    .update = GOBJ_updateIdleOnStage
+    .update = GOBJ_updateIdleOnStage,
+    .onDefeat = GOBJ_openHoneypot
 };
 const GameObjectDefinition defAntBig = {
     .team = TEAM_ENEMY,
