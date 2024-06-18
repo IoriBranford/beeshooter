@@ -62,6 +62,10 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     }
 }
 
+PlayerObject* GAME_player() {
+    return &player;
+}
+
 void GAME_scorePoints(u32 points) {
     u32 newScore = score + points;
     u32 extendScore = EXTEND_SCORES[extendScoreIndex];

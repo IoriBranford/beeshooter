@@ -15,8 +15,12 @@ typedef enum Team {
     NUM_TEAMS
 } Team;
 
+typedef struct PlayerObject PlayerObject;
+
 void GAME_scorePoints(u32 points);
 void GAME_setTimerPaused(bool paused);
+
+PlayerObject* GAME_player();
 
 GameObject* GAME_createObject();
 void GAME_putObjectInTeam(GameObject *gobj, Team team);
