@@ -57,8 +57,8 @@ bool GOBJ_isHitting(GameObject *self, GameObject *other);
 
 GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY);
 void GOBJ_init(GameObject *self);
-void GOBJ_initSprite(GameObject *self, u16 attr);
-void GOBJ_updateSprite(GameObject *this);
+void GOBJ_initSprite(GameObject *self);
+void GOBJ_updateSprite(GameObject *self);
 void GOBJ_releaseSprite(GameObject *self);
 
 void GOBJ_dealDamage(GameObject *self, u16 damage);

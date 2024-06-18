@@ -41,14 +41,21 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
     return obj;
 }
 
-void GOBJ_initSprite(GameObject *self, u16 attr) {
+void GOBJ_initSprite(GameObject *self) {
     const SpriteDefinition *spriteDef = self->definition ? self->definition->spriteDef : NULL;
     if (!spriteDef)
         return;
+    u16 paletteSlot = LEVEL_getPaletteSlot(self->definition->palette);
+    u16 attr = TILE_ATTR(paletteSlot, false, false, false);
+    if (self->levelObject)
+        attr |= self->levelObject->flags;
+    else
+        attr |= TILE_ATTR_PRIORITY_MASK;
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     self->sprite = SPR_addSprite(spriteDef, fix16ToRoundedInt(tl.x), fix16ToRoundedInt(tl.y), attr);
     if (self->definition->animInd)
         SPR_setAnim(self->sprite, self->definition->animInd);
+    SPR_setDepth(self->sprite, self->definition->spriteDepth);
 }
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
@@ -122,16 +129,9 @@ void GOBJ_updateSprite(GameObject *self) {
             fix16ToRoundedInt(self->centerX) - (sprite->definition->w >> 1),
             fix16ToRoundedInt(self->centerY) - (sprite->definition->h >> 1));
     } else {
-        const SpriteDefinition *spriteDef = self->definition ? self->definition->spriteDef : NULL;
+        const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
         if (spriteDef && GOBJ_isSpriteOnScreen(self)) {
-            u16 paletteSlot = LEVEL_getPaletteSlot(self->definition->palette);
-            u16 flags = TILE_ATTR(paletteSlot, false, false, false);
-            if (self->levelObject)
-                flags |= self->levelObject->flags;
-            else
-                flags |= TILE_ATTR_PRIORITY_MASK;
-            GOBJ_initSprite(self, flags);
-            SPR_setDepth(self->sprite, self->definition->spriteDepth);
+            GOBJ_initSprite(self);
         }
     }
 }
