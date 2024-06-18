@@ -81,14 +81,23 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         '};')
                 })
 
-                let pathSpeed = path.resolvedProperty('speed') || 1
+                let speed = path.resolvedProperty('speed') || 1
                 let pathPointsCName = `path${path.id}_points`
                 cCode.push(`static PathPoint ${pathPointsCName}[] = {`,
                     path.polygon.map((point, i, points) => {
+                        let pointData = pointsData[i]
                         let prevPoint = i > 0 ? points[i-1] : null
+                        let prevPointData = i > 0 ? pointsData[i-1] : null
                         let xDirTo = 0, yDirTo = 0, distTo = 0
-                        let speed = pointsData[i]
-                            && pointsData[i].reduce((speed, pointDatum) => (pointDatum.resolvedProperty('speedto') || speed), pathSpeed)
+                        let shootInterval = 0, shootCount = 0
+                        prevPointData?.forEach(pointDatum => {
+                            speed = pointDatum.resolvedProperty('speed') || speed
+                        })
+                        pointData?.forEach(pointDatum => {
+                            speed = pointDatum.resolvedProperty('speedto') || speed
+                            shootInterval = pointDatum.resolvedProperty('shootinterval') || shootInterval
+                            shootCount = pointDatum.resolvedProperty('shoottimes') || shootCount
+                        })
                         if (prevPoint) {
                             xDirTo = point.x - prevPoint.x
                             yDirTo = point.y - prevPoint.y
@@ -100,6 +109,7 @@ return `{
     .x = ${point.x}, .y = ${point.y},
     .speedTo = ${toFix16(speed)}, .distTo = ${toFix16(distTo)},
     .xVelTo = ${toFix16(xDirTo)}, .yVelTo = ${toFix16(yDirTo)},
+    .shootCount = ${shootCount}, .shootInterval = ${shootInterval},
     .numActions = ${pointsData[i].length},
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
 }`

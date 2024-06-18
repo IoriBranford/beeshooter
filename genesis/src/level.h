@@ -23,6 +23,7 @@ struct PathPoint {
     s16 x, y;
     fix16 xVelTo, yVelTo;
     fix16 speedTo, distTo;
+    u8 shootInterval, shootCount;
     u32 numActions;
     GObjPathPointFunction *actions;
 };

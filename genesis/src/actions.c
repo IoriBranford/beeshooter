@@ -31,6 +31,10 @@ void faceRight(GameObject *self, PathPoint *pathPoint)
     SPR_setHFlip(self->sprite, false);
 }
 
+void startShooting(GameObject *self, PathPoint *pathPoint) {
+    GOBJ_startShooting(self, pathPoint->shootCount, pathPoint->shootInterval);
+}
+
 void PathPoint_SetSpeed(GameObject *self, PathPoint *pathPoint)
 {
 }
