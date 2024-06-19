@@ -143,6 +143,32 @@ void GOBJ_releaseSprite(GameObject *self) {
     }
 }
 
+void GOBJ_updateInvul(GameObject *self) {
+    if (self->invulTimer) {
+        --self->invulTimer;
+        if (self->sprite) {
+            SPR_setVisibility(self->sprite, self->invulTimer % 2 ? HIDDEN : VISIBLE);
+        }
+    }
+}
+
+void GOBJ_setInForeground(GameObject *self, bool inForeground) {
+    if (inForeground) {
+        self->invulTimer = 0;
+        if (self->sprite) {
+            SPR_setVisibility(self->sprite, VISIBLE);
+            SPR_setPriority(self->sprite, true);
+            SPR_setDepth(self->sprite, -abs(self->sprite->depth));
+        }
+    } else {
+        self->invulTimer = 255;
+        if (self->sprite) {
+            SPR_setPriority(self->sprite, false);
+            SPR_setDepth(self->sprite, abs(self->sprite->depth));
+        }
+    }
+}
+
 void GOBJ_dealDamage(GameObject *self, u16 damage) {
     if (!self->health)
         return;
@@ -330,6 +356,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
         GOBJ_startTowardsPathPoint(self, 0);
     }
     GOBJ_followPath(self);
+    GOBJ_updateInvul(self);
     GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
     if (GOBJ_isSpriteOffSideOrBottom(self)) {

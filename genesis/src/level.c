@@ -134,5 +134,12 @@ GameObject* LEVEL_createObject(LevelObject *lobj) {
         return NULL;
     obj->levelObject = lobj;
     GOBJ_updateSprite(obj);
+
+    if (lobj->flags & TILE_ATTR_PRIORITY_MASK) {
+    } else {
+        if (!obj->sprite)
+            GOBJ_initSprite(obj);
+        GOBJ_setInForeground(obj, false);
+    }
     return obj;
 }

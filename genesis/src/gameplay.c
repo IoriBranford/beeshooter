@@ -165,7 +165,7 @@ int gameplay() {
                 bool hit = false, defeated = false;
                 for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
                     GameObject *enemy = enemies[e];
-                    if (GOBJ_isHitting(playerShot, enemy)) {
+                    if (!enemy->invulTimer && GOBJ_isHitting(playerShot, enemy)) {
                         hit = true;
                         GOBJ_dealDamage(enemy, 1);
                         if (!enemy->health) {

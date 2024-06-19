@@ -68,6 +68,8 @@ void GOBJ_defaultDefeatAction(GameObject *self);
 void GOBJ_startShooting(GameObject *self, u8 count, u8 interval);
 void GOBJ_updateShooting(GameObject *self);
 
+void GOBJ_setInForeground(GameObject *self, bool inForeground);
+
 void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed);
 bool GOBJ_updateMovement(GameObject *self);
 
