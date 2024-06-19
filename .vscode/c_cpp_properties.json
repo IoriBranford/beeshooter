@@ -13,6 +13,9 @@
             ],
             "defines": [
                 "SGDK_GCC"
+            ],
+            "compilerArgs": [
+                "-fms-extensions" // required for Intellisense to see anon struct/union members on Linux
             ]
         }
     ],
