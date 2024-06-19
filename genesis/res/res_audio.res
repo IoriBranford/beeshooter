@@ -7,6 +7,8 @@ WAV wavChangeSpeedFast "wav/fast.wav" XGM
 WAV wavChangeSpeedSlow "wav/slow.wav" XGM
 WAV wavExtend "wav/life.wav" XGM
 WAV wavPlayerShotHit "wav/arrowhit.wav" XGM
+WAV wavPlayerHurt "wav/playerhurt.wav" XGM
+WAV wavPlayerDie "wav/playerkill.wav" XGM
 
 WAV wavBugKill1 "wav/bugkill1.wav" XGM
 WAV wavBugKill2 "wav/bugkill2.wav" XGM

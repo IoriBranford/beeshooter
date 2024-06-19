@@ -21,6 +21,8 @@ extern SoundDefinition
     sndChangeWeapon,
     sndExtend,
     sndPlayerShotHit,
+    sndPlayerHurt,
+    sndPlayerDie,
     sndBugKill1,
     sndBugKill2,
     sndBreakPot,
