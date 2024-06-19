@@ -79,10 +79,10 @@ bool GOBJ_isRectOverlapping(GameObject *self, fix16 rx, fix16 ry, fix16 rw, fix1
         x1 = self->centerX, y1 = self->centerY;
     const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
     if (spriteDef) {
-        x0 -= (spriteDef->w>>1);
-        x1 += (spriteDef->w>>1);
-        y0 -= (spriteDef->h>>1);
-        y1 += (spriteDef->h>>1);
+        x0 -= FIX16(spriteDef->w>>1);
+        x1 += FIX16(spriteDef->w>>1);
+        y0 -= FIX16(spriteDef->h>>1);
+        y1 += FIX16(spriteDef->h>>1);
     }
     return (x1 >= rx && x0 <= rx + rw && y1 >= ry && y0 <= ry + rh);
 }
