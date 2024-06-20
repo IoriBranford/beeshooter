@@ -74,7 +74,7 @@ void UI_updateSpeed(fix16 speed) {
 }
 
 void UI_updateObjectCount(int n) {
-    sprintf(string, "%2d objs", n);
+    sprintf(string, "%3d obj", n);
     VDP_drawText(string, 12, 26);
 }
 
