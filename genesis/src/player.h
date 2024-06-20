@@ -23,4 +23,6 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state);
 
 void PLAYER_powerUp(PlayerObject *self);
 
+void PLAYER_takeDamage(PlayerObject *self, u16 damage);
+
 #endif

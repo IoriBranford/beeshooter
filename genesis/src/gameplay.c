@@ -165,7 +165,8 @@ int gameplay() {
     {
         if (paused) {
         } else {
-            player.update((Object*)&player);
+            if (player.update)
+                player.update((Object*)&player);
 
             for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
                 GameObject *playerShot = playerShots[s];
@@ -203,7 +204,7 @@ int gameplay() {
                     GOBJ_defeat(enemyShot);
                     if (damage) {
                         if (!player.invulTimer) {
-                            // TODO: power down or kill player
+                            PLAYER_takeDamage(&player, damage);
                         }
                     } else {
                         PLAYER_powerUp(&player);

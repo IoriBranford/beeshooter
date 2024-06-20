@@ -183,11 +183,37 @@ void PLAYER_spawn(PlayerObject *self) {
     self->shootTimer = 0;
     self->invulTimer = ENTERINVUL;
     self->update = (ObjectCallback*)PLAYER_updateEnter;
+    SPR_setVisibility(self->sprite, VISIBLE);
+}
+
+void PLAYER_updateDie(PlayerObject *self) {
+    if (--self->invulTimer <= 1) {
+        if (self->lives)
+            PLAYER_spawn(self);
+        else {
+            GAME_end(RESULT_LOSE_KILLED);
+            self->update = NULL;
+        }
+    }
+}
+
+void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
+    PLAYER_giveInvul(self, MERCY_INVUL);
+    if (self->health > damage) {
+        self->health -= damage;
+        SND_playDef(&sndPlayerHurt);
+    } else {
+        SND_playDef(&sndPlayerDie);
+        SPR_setVisibility(self->sprite, HIDDEN);
+        self->health = 0;
+        self->shootTimer = 255;
+        self->update = (ObjectCallback*)PLAYER_updateDie;
+    }
 }
 
 void PLAYER_init(PlayerObject *self) {
     self->definition = &defPlayer;
-    self->lives = 3;
+    self->lives =1;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;
     self->sprite = SPR_addSprite(
