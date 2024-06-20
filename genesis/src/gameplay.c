@@ -215,9 +215,10 @@ int gameplay() {
             LEVEL_update();
             if (!timePaused && timeLeft) {
                 if (!--timeLeft) {
-                    // TODO: game over by time
-                    // kill player
-                    // create time up objects
+                    player.lives = 0;
+                    PLAYER_takeDamage(&player, 0xFFFF);
+                    GAME_end(RESULT_LOSE_TIME);
+                    XGM_stopPlay();
                 }
             }
         }
