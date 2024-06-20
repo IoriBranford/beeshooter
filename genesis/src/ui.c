@@ -12,18 +12,18 @@ void UI_initHud() {
 }
 
 static const char *RESULT_MESSAGES[RESULTS] = {
-    "",
-    "COMPLETE !"
+    NULL,
+    "COMPLETE !",
     "GAME OVER!",
-    "TIME UP!"
+    " TIME UP! "
 };
 
 void UI_updateResult(GameResult result) {
-    VDP_clearText(10, 13, 12);
     if (result) {
         const char *message = RESULT_MESSAGES[result];
-        int len = strlen(message);
-        VDP_drawText(message, 16 - len>>1, 13);
+        VDP_drawText(message, 11, 13);
+    } else {
+        VDP_clearText(11, 13, 10);
     }
 }
 
