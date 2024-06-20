@@ -14,8 +14,10 @@ int main()
     SPR_init();
     SND_initSoundDefs();
 
-    while (1)
+    while (1) {
         gameplay();
+        SYS_reset();
+    }
 
     return (0);
 }
