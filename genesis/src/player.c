@@ -27,43 +27,52 @@ const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
 const u8 ENTERINVUL = 240;
 const u8 POWERUP_INVUL = 60;
 const u8 MERCY_INVUL = 60;
+const fix16 BULLETSPEED = FIX16(16);
+const fix16 BULLETDIAGONALSPEED = 0.707106781 * BULLETSPEED;
 
 extern const GameObjectDefinition
     defPlayer,
     defPlayerShot;
 
+enum {
+    BULLET_ANI_0,
+    BULLET_ANI_45,
+    BULLET_ANI_90
+};
+
 typedef struct {
     fix16 offsetX, offsetY;
-    u16 angle;
+    fix16 velX, velY;
+    u16 animAndFlags;
 } PlayerShot;
 
 static const PlayerShot PLAYER_WEAPONSA[][2] = {
     {
-        {.offsetX = -FIX16(6), .angle = 768},
-        {.offsetX = FIX16(6), .angle = 768},
+        {.offsetX = -FIX16(6), .velY = -BULLETSPEED, .animAndFlags = BULLET_ANI_90|TILE_ATTR_VFLIP_MASK},
+        {.offsetX = FIX16(6), .velY = -BULLETSPEED, .animAndFlags = BULLET_ANI_90|TILE_ATTR_VFLIP_MASK},
     },
     {
-        {.angle = 768 - 128},
-        {.angle = 768 + 128},
+        {.velX = -BULLETDIAGONALSPEED, .velY = -BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|TILE_ATTR_HFLIP_MASK|TILE_ATTR_VFLIP_MASK},
+        {.velX = BULLETDIAGONALSPEED, .velY = -BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|TILE_ATTR_VFLIP_MASK},
     },
     {
-        {.angle = 256 - 128},
-        {.angle = 256 + 128},
+        {.velX = BULLETDIAGONALSPEED, .velY = BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|0},
+        {.velX = -BULLETDIAGONALSPEED, .velY = BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|TILE_ATTR_HFLIP_MASK},
     },
 };
 
 static const PlayerShot PLAYER_WEAPONSB[][2] = {
     {
-        {.angle = 768},
-        {.angle = 256},
+        {.velY = BULLETSPEED, .animAndFlags = BULLET_ANI_90},
+        {.velY = -BULLETSPEED, .animAndFlags = BULLET_ANI_90|TILE_ATTR_VFLIP_MASK},
     },
     {
-        {.angle = 512},
-        {.angle = 0},
+        {.velX = BULLETSPEED, .animAndFlags = BULLET_ANI_0},
+        {.velX = -BULLETSPEED, .animAndFlags = BULLET_ANI_0|TILE_ATTR_HFLIP_MASK},
     },
     {
-        {.angle = 768 - 128},
-        {.angle = 768 + 128},
+        {.velX = -BULLETDIAGONALSPEED, .velY = -BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|TILE_ATTR_HFLIP_MASK|TILE_ATTR_VFLIP_MASK},
+        {.velX = BULLETDIAGONALSPEED, .velY = -BULLETDIAGONALSPEED, .animAndFlags = BULLET_ANI_45|TILE_ATTR_VFLIP_MASK},
     },
 };
 
@@ -73,13 +82,19 @@ void PLAYER_shoot(PlayerObject *self) {
         for (int s = 0; s < 2; ++s) {
             const PlayerShot *shot = &shots[s];
 
-            GameObject *bullet = BULLET_createAngAndDef(
+            GameObject *bullet = GOBJ_createFromDef(&defPlayerShot,
                 self->centerX + shot->offsetX,
-                self->centerY + shot->offsetY,
-                shot->angle, &defPlayerShot);
+                self->centerY + shot->offsetY);
 
             if (!bullet)
                 break;
+
+            bullet->velX = shot->velX;
+            bullet->velY = shot->velY;
+            GOBJ_initSprite(bullet);
+            SPR_setAnim(bullet->sprite, shot->animAndFlags & 0xFF);
+            SPR_setHFlip(bullet->sprite, (shot->animAndFlags & TILE_ATTR_HFLIP_MASK) != 0);
+            SPR_setVFlip(bullet->sprite, (shot->animAndFlags & TILE_ATTR_VFLIP_MASK) != 0);
         }
     }
 }
