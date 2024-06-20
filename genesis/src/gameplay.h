@@ -15,6 +15,14 @@ typedef enum Team {
     NUM_TEAMS
 } Team;
 
+typedef enum GameResult {
+    RESULT_NONE,
+    RESULT_WIN,
+    RESULT_LOSE_KILLED,
+    RESULT_LOSE_TIME,
+    RESULTS
+} GameResult;
+
 typedef struct PlayerObject PlayerObject;
 
 void GAME_scorePoints(u32 points);
