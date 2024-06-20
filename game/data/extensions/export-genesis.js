@@ -229,13 +229,13 @@ return `{
         cCode.push(`#include "${baseName}.h"`,
             ...objectGroups.map(({cCode}) => cCode.join('\n')),
             `Trigger ${baseName}_triggers[] = {`,
-            triggers.map(trigger => {
+            triggers.map((trigger, i) => {
                 let action = trigger.resolvedProperty('action')
                 if (action)
                     triggerActions[action] = `void ${action}(Trigger *trigger);`
                 else
                     action = `0 /* to be assigned */`
-                return `{.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${toCName(trigger.layer.name)}}`
+                return `/* ${i.toString().padStart(3, ' ')} */ {.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${toCName(trigger.layer.name)}}`
             }).join(',\n'),
             '};')
 
