@@ -4,7 +4,14 @@
 #include "player.h"
 #include "gameplay.h"
 
-void UI_initHud();
-void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft, GameResult result);
+void UI_initHud(PlayerObject *player, u16 timeLeft);
+void UI_updateResult(GameResult result);
+void UI_updateScore(u32 score);
+void UI_updateTimeLeft(u16 timeLeft);
+void UI_updateLives(u8 lives);
+void UI_updateWeaponLevel(u8 playerHealth);
+void UI_updateWeaponSelect(u8 weapon);
+void UI_updateSpeed(fix16 speed);
+void UI_updateObjectCount(int n);
 
 #endif

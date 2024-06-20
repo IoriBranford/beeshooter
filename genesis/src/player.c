@@ -1,6 +1,7 @@
 #include "player.h"
 #include "bullet.h"
 #include "gameplay.h"
+#include "ui.h"
 
 #include <genesis.h>
 
@@ -133,9 +134,11 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
                 SND_playDef(&sndChangeSpeedFast);
             }
             PLAYER_setSpeed(self, speed);
+            UI_updateSpeed(speed);
         } else if (button == BUTTON_C) {
             PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
             SND_playDef(&sndChangeWeapon);
+            UI_updateWeaponSelect(self->weapon);
         }
     }
 }
@@ -145,10 +148,12 @@ void PLAYER_giveInvul(PlayerObject *self, u8 invul) {
 }
 
 void PLAYER_powerUp(PlayerObject *self) {
-    if (self->health < POWERLEVELS)
+    if (self->health < POWERLEVELS) {
         ++self->health;
-    else
+        UI_updateWeaponLevel(self->health);
+    } else {
         GAME_scorePoints(1000);
+    }
     PLAYER_giveInvul(self, POWERUP_INVUL);
 }
 
@@ -185,6 +190,7 @@ void PLAYER_spawn(PlayerObject *self) {
     self->invulTimer = ENTERINVUL;
     self->update = (ObjectCallback*)PLAYER_updateEnter;
     SPR_setVisibility(self->sprite, VISIBLE);
+    UI_updateLives(self->lives);
 }
 
 void PLAYER_updateDie(PlayerObject *self) {
@@ -214,6 +220,7 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         if (!self->lives)
             XGM_stopPlay();
     }
+    UI_updateWeaponLevel(self->health);
 }
 
 void PLAYER_init(PlayerObject *self) {

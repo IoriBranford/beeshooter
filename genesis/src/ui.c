@@ -6,9 +6,17 @@ Sprite *weaponSelectSprite, *weaponCursorSprite;
 
 static char string[32];
 
-void UI_initHud() {
+void UI_initHud(PlayerObject *player, u16 timeLeft) {
     weaponSelectSprite = SPR_addSprite(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false));
     weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false));
+    UI_updateScore(0);
+    UI_updateTimeLeft(timeLeft);
+    UI_updateResult(RESULT_NONE);
+    UI_updateLives(player->lives);
+    UI_updateWeaponLevel(player->health);
+    UI_updateWeaponSelect(player->weapon);
+    UI_updateSpeed(player->speed);
+    UI_updateObjectCount(0);
 }
 
 static const char *RESULT_MESSAGES[RESULTS] = {
@@ -65,12 +73,7 @@ void UI_updateSpeed(fix16 speed) {
     VDP_clearText(numPrinted + (184>>3), 208>>3, 8 - numPrinted);
 }
 
-void UI_drawHud(PlayerObject *player, u32 score, u16 timeLeft, GameResult result) {
-    UI_updateScore(score);
-    UI_updateTimeLeft(timeLeft);
-    UI_updateResult(result);
-    UI_updateLives(player->lives);
-    UI_updateWeaponLevel(player->health);
-    UI_updateWeaponSelect(player->weapon);
-    UI_updateSpeed(player->speed);
+void UI_updateObjectCount(int n) {
+    sprintf(string, "%2d objs", n);
+    VDP_drawText(string, 12, 26);
 }

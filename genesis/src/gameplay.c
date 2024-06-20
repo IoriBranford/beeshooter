@@ -74,8 +74,10 @@ void GAME_scorePoints(u32 points) {
         SND_playDef(&sndExtend);
         ++player.lives;
         ++extendScoreIndex;
+        UI_updateLives(player.lives);
     }
     score = min(MAXSCORE, newScore);
+    UI_updateScore(score);
 }
 
 void GAME_setTimerPaused(bool paused) {
@@ -111,6 +113,7 @@ void GAME_putObjectInTeam(GameObject *gobj, Team team) {
 GameObject* GAME_createObject() {
     GameObject *gobj = (GameObject*)OBJ_create(gobjPool);
     GOBJ_init(gobj);
+    UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
     return gobj;
 }
 
@@ -118,10 +121,12 @@ void GAME_releaseObject(GameObject *gobj) {
     GAME_putObjectInTeam(gobj, TEAM_NONE);
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
+    UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
 }
 
 void GAME_end(GameResult r) {
     result = r;
+    UI_updateResult(r);
 }
 
 int gameplay() {
@@ -145,7 +150,6 @@ int gameplay() {
 
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
-    UI_initHud();
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
     score = 0;
@@ -157,6 +161,7 @@ int gameplay() {
     running = true;
     memset(teamSizes, 0, sizeof(teamSizes));
     memset(teamObjects, 0, sizeof(teamObjects));
+    UI_initHud(&player, timeLeft);
 
     while(running)
     {
@@ -220,13 +225,9 @@ int gameplay() {
                     GAME_end(RESULT_LOSE_TIME);
                     XGM_stopPlay();
                 }
+                UI_updateTimeLeft(timeLeft);
             }
         }
-        UI_drawHud(&player, score, timeLeft, result);
-
-        char objCounter[8];
-        sprintf(objCounter, "%2d objs", POOL_getNumAllocated(gobjPool));
-        VDP_drawText(objCounter, 12, 26);
 
         SPR_update();
         SYS_doVBlankProcess();
