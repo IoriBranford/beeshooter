@@ -207,8 +207,9 @@ void GOBJ_startShooting(GameObject *self, u8 count, u8 interval) {
 void GOBJ_updateShooting(GameObject *self) {
     if (self->shootTimer && !--self->shootTimer) {
         const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
-        if (bulletDef) {
-            BULLET_shootAtTarget(self->centerX, self->centerY, (GameObject*)GAME_player(), bulletDef);
+        GameObject *player = (GameObject*)GAME_livePlayer();
+        if (player && bulletDef) {
+            BULLET_shootAtTarget(self->centerX, self->centerY, player, bulletDef);
         }
         if (--self->shotsLeft) {
             self->shootTimer = self->shootInterval;

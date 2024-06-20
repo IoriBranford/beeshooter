@@ -29,7 +29,7 @@ void GAME_scorePoints(u32 points);
 void GAME_setTimerPaused(bool paused);
 void GAME_end(GameResult r);
 
-PlayerObject* GAME_player();
+PlayerObject* GAME_livePlayer();
 
 GameObject* GAME_createObject();
 void GAME_putObjectInTeam(GameObject *gobj, Team team);
