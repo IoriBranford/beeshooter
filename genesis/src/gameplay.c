@@ -230,6 +230,8 @@ int gameplay() {
         }
 
         SPR_update();
+        UI_updateFPS(SYS_getFPS());
+        UI_updateCPU(SYS_getCPULoad());
         SYS_doVBlankProcess();
     }
 

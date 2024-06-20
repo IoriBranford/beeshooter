@@ -77,3 +77,13 @@ void UI_updateObjectCount(int n) {
     sprintf(string, "%2d objs", n);
     VDP_drawText(string, 12, 26);
 }
+
+void UI_updateFPS(u32 fps) {
+    sprintf(string, "%3d fps", fps);
+    VDP_drawText(string, 12, 25);
+}
+
+void UI_updateCPU(u16 cpu) {
+    sprintf(string, "%3d cpu", cpu);
+    VDP_drawText(string, 12, 27);
+}
