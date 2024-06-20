@@ -125,8 +125,6 @@ void GAME_end(GameResult r) {
 }
 
 int gameplay() {
-    int result = 0;
-
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
 
@@ -162,7 +160,7 @@ int gameplay() {
 
     while(running)
     {
-        if (paused) {
+        if (result || paused) {
         } else {
             if (player.update)
                 player.update((Object*)&player);
