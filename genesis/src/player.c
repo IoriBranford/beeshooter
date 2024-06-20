@@ -172,18 +172,15 @@ void PLAYER_powerUp(PlayerObject *self) {
     PLAYER_giveInvul(self, POWERUP_INVUL);
 }
 
-void PLAYER_updateSprite(PlayerObject *self) {
-    SPR_setVisibility(self->sprite, (self->invulTimer % 2) ? HIDDEN : VISIBLE);
-    GOBJ_updateSprite((GameObject*)self);
-}
-
 void PLAYER_updatePlay(PlayerObject *self) {
     if (self->shootTimer)
         self->shootTimer--;
-    if (self->invulTimer)
+    if (self->invulTimer) {
         self->invulTimer--;
+        SPR_setVisibility(self->sprite, (self->invulTimer % 2) ? HIDDEN : VISIBLE);
+    }
     PLAYER_joyUpdate(self, JOY_readJoypad(JOY_1));
-    PLAYER_updateSprite(self);
+    GOBJ_updateSprite((GameObject*)self);
 }
 
 void PLAYER_updateEnter(PlayerObject *self) {
@@ -193,7 +190,7 @@ void PLAYER_updateEnter(PlayerObject *self) {
         self->centerY = STARTFIGHTY;
         self->update = (ObjectCallback*)PLAYER_updatePlay;
     }
-    PLAYER_updateSprite(self);
+    GOBJ_updateSprite((GameObject*)self);
 }
 
 void PLAYER_spawn(PlayerObject *self) {
