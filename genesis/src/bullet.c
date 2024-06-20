@@ -32,13 +32,15 @@ GameObject* BULLET_createVXVY(fix16 centerX, fix16 centerY, fix16 velX, fix16 ve
     return self;
 }
 
-void BULLET_updateSpriteDirectionAngle(GameObject *self, s16 angle) {
+void BULLET_updateSpriteDirectionAngle(GameObject *self, u16 angle) {
     if (!self->sprite)
         GOBJ_initSprite(self);
     if (self->sprite && angle < 1024) {
         const SpriteDefinition *spriteDef = self->sprite->definition;
-        u16 numAnim = spriteDef->numAnimation;
-        u16 anim = fix16ToInt(abs(sinFix16((angle))) * (numAnim - 1));
+        u16 lastAnim = spriteDef->numAnimation - 1;
+        fix16 abssin = abs(sinFix16(angle));
+        fix16 fanim = abssin * lastAnim + (FIX16(1) / 2);
+        u16 anim = fix16ToInt(fanim);
         SPR_setAnim(self->sprite, anim);
         SPR_setHFlip(self->sprite, self->velX < 0);
         SPR_setVFlip(self->sprite, self->velY < 0);
