@@ -17,7 +17,7 @@ PALETTE palAlien "enemy/Aliens.png"
 SPRITE sprAnt "enemy/Ant.png" 2 2 AUTO 6 BOX
 SPRITE sprAntBig "enemy/AntBig.png" 8 6 AUTO 6 BOX
 SPRITE sprHoneyPot "enemy/HoneyPot.png" 2 2 AUTO 0 BOX
-SPRITE sprFlyBullet "enemy/FlyBullet.png" 2 2 AUTO 3 BOX SPRITE
+SPRITE sprFlyBullet "enemy/FlyBullet.png" 2 2 AUTO 0 BOX SPRITE
 SPRITE sprFly "enemy/Fly.png" 4 4 AUTO 3 BOX
 SPRITE sprAlien "enemy/Aliens.png" 3 2 AUTO 6 BOX
 SPRITE sprAlienMind "enemy/AlienMind.png" 4 6 AUTO 6 BOX

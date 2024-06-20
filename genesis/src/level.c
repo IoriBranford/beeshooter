@@ -3,6 +3,7 @@
 #include "gobjdef.h"
 #include "gameplay.h"
 #include "player.h"
+#include "palette.h"
 #include "stage_caravan.h"
 
 #include <genesis.h>
@@ -59,6 +60,10 @@ void LEVEL_update() {
         }
     }
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
+
+    for (int i = PAL0; i <= PAL1; ++i) {
+        PAL_update(i, paletteUsage[i].palette);
+    }
 }
 
 void LEVEL_destroy() {
