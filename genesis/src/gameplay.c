@@ -121,7 +121,6 @@ void GAME_releaseObject(GameObject *gobj) {
 }
 
 void GAME_end(GameResult r) {
-    XGM2_fadeOut(120);
     result = r;
 }
 

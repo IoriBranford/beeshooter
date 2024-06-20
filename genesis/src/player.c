@@ -7,6 +7,7 @@
 #include "gobjdef.h"
 #include "sounddef.h"
 #include "res_gfx.h"
+#include "res_audio.h"
 
 enum PlayerAnimation {
     ANI_FLYA,
@@ -188,9 +189,11 @@ void PLAYER_spawn(PlayerObject *self) {
 
 void PLAYER_updateDie(PlayerObject *self) {
     if (--self->invulTimer <= 1) {
-        if (self->lives)
+        if (self->lives) {
+            if (!XGM_isPlaying())
+                XGM_startPlay(bgm);
             PLAYER_spawn(self);
-        else {
+        } else {
             GAME_end(RESULT_LOSE_KILLED);
             self->update = NULL;
         }
@@ -208,12 +211,14 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         self->health = 0;
         self->shootTimer = 255;
         self->update = (ObjectCallback*)PLAYER_updateDie;
+        if (!self->lives)
+            XGM_stopPlay();
     }
 }
 
 void PLAYER_init(PlayerObject *self) {
     self->definition = &defPlayer;
-    self->lives =1;
+    self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;
     self->sprite = SPR_addSprite(
