@@ -27,6 +27,7 @@ typedef struct PlayerObject PlayerObject;
 
 void GAME_scorePoints(u32 points);
 void GAME_setTimerPaused(bool paused);
+void GAME_end(GameResult r);
 
 PlayerObject* GAME_player();
 

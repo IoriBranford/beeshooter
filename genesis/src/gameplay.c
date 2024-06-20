@@ -32,6 +32,7 @@ static const u32 EXTEND_SCORES[] = {
 static u16 timeLeft;
 static u32 score;
 static u8 extendScoreIndex;
+static u8 result;
 static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
@@ -46,7 +47,7 @@ static GameObject **enemies = teamObjects[TEAM_ENEMY];
 static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     if (joy == JOY_1) {
         if (button == BUTTON_START && (state & button)) {
-            if ((state & (BUTTON_A|BUTTON_B|BUTTON_C)) == (BUTTON_A|BUTTON_B|BUTTON_C)) {
+            if (result || (state & (BUTTON_A|BUTTON_B|BUTTON_C)) == (BUTTON_A|BUTTON_B|BUTTON_C)) {
                 running = false;
             } else if (!paused) {
                 paused = true;
@@ -119,6 +120,11 @@ void GAME_releaseObject(GameObject *gobj) {
     OBJ_release(gobjPool, (Object*)gobj, true);
 }
 
+void GAME_end(GameResult r) {
+    XGM2_fadeOut(120);
+    result = r;
+}
+
 int gameplay() {
     int result = 0;
 
@@ -147,6 +153,7 @@ int gameplay() {
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
     score = 0;
     extendScoreIndex = 0;
+    result = RESULT_NONE;
     timeLeft = GAMETIME;
     timePaused = true; // waiting for unpauseTimer trigger
     paused = false;
@@ -216,7 +223,7 @@ int gameplay() {
                 }
             }
         }
-        UI_drawHud(&player, score, timeLeft);
+        UI_drawHud(&player, score, timeLeft, result);
 
         char objCounter[8];
         sprintf(objCounter, "%2d objs", POOL_getNumAllocated(gobjPool));
