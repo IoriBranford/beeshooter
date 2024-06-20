@@ -129,6 +129,54 @@ void GAME_end(GameResult r) {
     UI_updateResult(r);
 }
 
+void GAME_doCollision() {
+    for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
+        GameObject *playerShot = playerShots[s];
+        bool hit = false, defeated = false;
+        for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
+            GameObject *enemy = enemies[e];
+            if (!enemy->invulTimer && GOBJ_isHitting(playerShot, enemy)) {
+                hit = true;
+                GOBJ_dealDamage(enemy, 1);
+                if (!enemy->health) {
+                    GAME_putObjectInTeam(enemy, TEAM_NONE);
+                    GOBJ_defeat(enemy);
+                    defeated = true;
+                } else {
+                    ++e;
+                }
+            } else {
+                ++e;
+            }
+        }
+        if (hit) {
+            GOBJ_defeat(playerShot);
+            if (!defeated)
+                SND_playDef(&sndPlayerShotHit);
+        } else {
+            ++s;
+        }
+    }
+
+    for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT];) {
+        GameObject *enemyShot = enemyShots[s];
+        if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
+            u16 damage = enemyShot->definition->damage;
+            GAME_putObjectInTeam(enemyShot, TEAM_NONE);
+            GOBJ_defeat(enemyShot);
+            if (damage) {
+                if (!player.invulTimer) {
+                    PLAYER_takeDamage(&player, damage);
+                }
+            } else {
+                PLAYER_powerUp(&player);
+            }
+        } else {
+            ++s;
+        }
+    }
+}
+
 int gameplay() {
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
@@ -170,51 +218,7 @@ int gameplay() {
             if (player.update)
                 player.update((Object*)&player);
 
-            for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
-                GameObject *playerShot = playerShots[s];
-                bool hit = false, defeated = false;
-                for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
-                    GameObject *enemy = enemies[e];
-                    if (!enemy->invulTimer && GOBJ_isHitting(playerShot, enemy)) {
-                        hit = true;
-                        GOBJ_dealDamage(enemy, 1);
-                        if (!enemy->health) {
-                            GAME_putObjectInTeam(enemy, TEAM_NONE);
-                            GOBJ_defeat(enemy);
-                            defeated = true;
-                        } else {
-                            ++e;
-                        }
-                    } else {
-                        ++e;
-                    }
-                }
-                if (hit) {
-                    GOBJ_defeat(playerShot);
-                    if (!defeated)
-                        SND_playDef(&sndPlayerShotHit);
-                } else {
-                    ++s;
-                }
-            }
-
-            for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT];) {
-                GameObject *enemyShot = enemyShots[s];
-                if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
-                    u16 damage = enemyShot->definition->damage;
-                    GAME_putObjectInTeam(enemyShot, TEAM_NONE);
-                    GOBJ_defeat(enemyShot);
-                    if (damage) {
-                        if (!player.invulTimer) {
-                            PLAYER_takeDamage(&player, damage);
-                        }
-                    } else {
-                        PLAYER_powerUp(&player);
-                    }
-                } else {
-                    ++s;
-                }
-            }
+            GAME_doCollision();
             OBJ_updateAll(gobjPool);
 
             LEVEL_update();
