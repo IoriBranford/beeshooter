@@ -226,6 +226,8 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
     } else {
         SND_playDef(&sndPlayerDie);
         SPR_setVisibility(self->sprite, HIDDEN);
+        self->centerX = STARTENTERX;
+        self->centerY = STARTENTERY;
         self->health = 0;
         self->shootTimer = 255;
         self->update = (ObjectCallback*)PLAYER_updateDie;
