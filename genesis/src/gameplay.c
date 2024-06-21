@@ -192,8 +192,6 @@ int gameplay() {
     LEVEL_init();
     SYS_doVBlankProcess();
 
-    XGM_startPlay(bgm);
-
     SPR_reset();
 
     PLAYER_init(&player);
@@ -210,6 +208,11 @@ int gameplay() {
     memset(teamSizes, 0, sizeof(teamSizes));
     memset(teamObjects, 0, sizeof(teamObjects));
     UI_initHud(&player, timeLeft);
+
+    DMA_waitCompletion();
+    DMA_setBufferSizeToDefault();
+    DMA_setMaxTransferSizeToDefault();
+    XGM_startPlay(bgm);
 
     while(running)
     {
