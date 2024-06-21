@@ -101,12 +101,12 @@ bool GOBJ_isHitting(GameObject *self, GameObject *other) {
     const GameObjectDefinition *myDef = self->definition;
     const GameObjectDefinition *theirDef = other->definition;
     if (myDef) {
-        hw = myDef->bodyW >> 1;
-        hh = myDef->bodyH >> 1;
+        hw = myDef->bodyW;
+        hh = myDef->bodyH;
     }
     if (theirDef) {
-        hw2 = theirDef->bodyW >> 1;
-        hh2 = theirDef->bodyH >> 1;
+        hw2 = theirDef->bodyW;
+        hh2 = theirDef->bodyH;
     }
     return (x + hw >= x2 - hw2)
         && (x - hw <= x2 + hw2)

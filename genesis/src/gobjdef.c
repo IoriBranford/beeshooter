@@ -12,8 +12,8 @@ const GameObjectDefinition defPlayer = {
     .spriteDepth = -100,
     .spriteDef = &sprPlayer,
     .palette = &palPlayer,
-    .bodyW = FIX16(8),
-    .bodyH = FIX16(8),
+    .bodyW = FIX16(4),
+    .bodyH = FIX16(4),
 };
 const GameObjectDefinition defPlayerShot = {
     .team = TEAM_PLAYERSHOT,
@@ -21,7 +21,7 @@ const GameObjectDefinition defPlayerShot = {
     .spriteDef = &sprPlayerShot,
     .spriteDepth = -90,
     .palette = &palPlayer,
-    .bodyW = FIX16(12), .bodyH = FIX16(12),
+    .bodyW = FIX16(6), .bodyH = FIX16(6),
     // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
 };
@@ -32,7 +32,7 @@ const GameObjectDefinition defAnt = {
     .spriteDef = &sprAnt,
     .spriteDepth = -1,
     .palette = &palAnt,
-    .bodyW = FIX16(16), .bodyH = FIX16(12),
+    .bodyW = FIX16(8), .bodyH = FIX16(6),
     .defeatSoundDef = &sndBugKill1,
     .update = GOBJ_updatePathWalker
 };
@@ -42,7 +42,7 @@ const GameObjectDefinition defHoneyPot = {
     .spriteDef = &sprHoneyPot,
     .spriteDepth = -1,
     .palette = &palFlyAndHoney,
-    .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
     .onDefeat = GOBJ_openHoneypot
@@ -53,7 +53,7 @@ const GameObjectDefinition defPowerup = {
     .spriteDef = &sprPowerup,
     .spriteDepth = -20,
     .palette = &palPlayer,
-    .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise
 };
@@ -64,7 +64,7 @@ const GameObjectDefinition defFlyBullet = {
     .spriteDef = &sprFlyBullet,
     .spriteDepth = -20,
     .palette = &palFlyAndHoney,
-    .bodyW = FIX16(4), .bodyH = FIX16(4),
+    .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update
 };
 const GameObjectDefinition defFly = {
@@ -74,7 +74,7 @@ const GameObjectDefinition defFly = {
     .spriteDef = &sprFly,
     .spriteDepth = -10,
     .palette = &palFlyAndHoney,
-    .bodyW = FIX16(28), .bodyH = FIX16(28),
+    .bodyW = FIX16(14), .bodyH = FIX16(14),
     .defeatSoundDef = &sndBugKill2,
     .pathParent = PATHPARENT_TRIGGER,
     .bulletDef = &defFlyBullet,
@@ -86,7 +86,7 @@ const GameObjectDefinition defHoneyCell = {
     .spriteDef = &sprPowerup,
     .spriteDepth = -1,
     .palette = &palPlayer,
-    .bodyW = FIX16(16), .bodyH = FIX16(16),
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
     .onDefeat = GOBJ_openHoneypot
@@ -98,7 +98,7 @@ const GameObjectDefinition defAntBig = {
     .spriteDef = &sprAntBig,
     .spriteDepth = -1,
     .palette = &palAnt,
-    .bodyW = FIX16(40), .bodyH = FIX16(20),
+    .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updateIdleOnStage
 };
@@ -109,7 +109,7 @@ const GameObjectDefinition defAlienGunner = {
     .spriteDef = &sprAlien,
     .spriteDepth = -1,
     .palette = &palAlien,
-    .bodyW = FIX16(20), .bodyH = FIX16(16),
+    .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker
 };
@@ -120,7 +120,7 @@ const GameObjectDefinition defAlienPillager = {
     .spriteDef = &sprAlien,
     .spriteDepth = -1,
     .palette = &palAlien,
-    .bodyW = FIX16(20), .bodyH = FIX16(16),
+    .bodyW = FIX16(10), .bodyH = FIX16(8),
     .animInd = 2,
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker
