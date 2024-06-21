@@ -79,7 +79,7 @@ void UI_updateObjectCount(int n) {
 }
 
 void UI_updateFPS(u32 fps) {
-    sprintf(string, "%3d fps", fps);
+    sprintf(string, "%3ld fps", fps);
     VDP_drawText(string, 12, 25);
 }
 
