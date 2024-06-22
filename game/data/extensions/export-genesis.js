@@ -135,7 +135,7 @@ return `{
                             path.polygon.forEach((point, pointi) => {
                                 if (path.x + point.x == object.x && path.y + point.y == object.y) {
                                     objPathIndex = pathi
-                                    objPathPointIndex = pointi
+                                    objPathPointIndex = Math.min(pointi + 1, path.polygon.length - 1)
                                     return
                                 }
                             })
