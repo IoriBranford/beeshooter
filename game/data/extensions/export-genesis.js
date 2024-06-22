@@ -260,7 +260,8 @@ return `{
                     triggerActions[action] = `void ${action}(Trigger *trigger);`
                 else
                     action = `0 /* to be assigned */`
-                return `/* ${i.toString().padStart(3, ' ')} */ {.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${toCName(trigger.layer.name)}}`
+                let count = trigger.resolvedProperty('count') || 0
+                return `/* ${i.toString().padStart(3, ' ')} */ {.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .count = ${count}, .group = &${toCName(trigger.layer.name)}}`
             }).join(',\n'),
             '};',
             `LevelObjectGroup *${baseName}_groups[] = {`,
