@@ -135,7 +135,11 @@ bool GOBJ_isSpriteOffSideOrBottom(GameObject *self) {
         x1 += FIX16(spriteDef->w>>1);
         y0 -= FIX16(spriteDef->h>>1);
     }
-    return y0 >= GAME_BOUNDH || x0 >= GAME_BOUNDW || x1 <= 0;
+    bool result = 0;
+    result |= (x0 >= GAME_BOUNDW) << DIR_RIGHT;
+    result |= (y0 >= GAME_BOUNDH) << DIR_DOWN;
+    result |= (x1 <= 0) << DIR_LEFT;
+    return result;
 }
 
 void GOBJ_updateSprite(GameObject *self) {

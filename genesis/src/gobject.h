@@ -48,6 +48,13 @@ typedef struct GameObject {
     u8 shotsLeft;
 } GameObject;
 
+enum {
+    DIR_RIGHT,
+    DIR_DOWN,
+    DIR_LEFT,
+    DIR_UP
+};
+
 bool GOBJ_isSpriteOnScreen(GameObject *self);
 bool GOBJ_isSpriteOffSideOrBottom(GameObject *self);
 
