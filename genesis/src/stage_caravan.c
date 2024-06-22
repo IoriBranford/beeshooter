@@ -3633,203 +3633,208 @@ LevelObjectGroup r6ants = {
     .numObjects = 36, .objects = r6ants_objects
 };
 extern LevelObjectGroup room6fly;
-static GObjPathPointFunction path2351_0_actions[] = {
-0 /* to be assigned */
-};
 static GObjPathPointFunction path2351_1_actions[] = {
-0 /* to be assigned */
+startShooting,
+faceRight,
+enterForeground
 };
 static GObjPathPointFunction path2351_3_actions[] = {
-0 /* to be assigned */
+startShooting
 };
 static GObjPathPointFunction path2351_5_actions[] = {
-0 /* to be assigned */
+startShooting
 };
-static GObjPathPointFunction path2351_6_actions[] = {
-0 /* to be assigned */
+static GObjPathPointFunction path2351_7_actions[] = {
+startShooting
 };
-static GObjPathPointFunction path2351_8_actions[] = {
-0 /* to be assigned */
-};
-static GObjPathPointFunction path2351_11_actions[] = {
-0 /* to be assigned */
+static GObjPathPointFunction path2351_10_actions[] = {
+startShooting,
+faceLeft
 };
 static GObjPathPointFunction path2351_13_actions[] = {
-0 /* to be assigned */
+startShooting
 };
-static GObjPathPointFunction path2351_14_actions[] = {
-0 /* to be assigned */
+static GObjPathPointFunction path2351_15_actions[] = {
+startShooting
 };
-static GObjPathPointFunction path2351_16_actions[] = {
-0 /* to be assigned */
+static GObjPathPointFunction path2351_17_actions[] = {
+startShooting
 };
-static GObjPathPointFunction path2351_18_actions[] = {
-0 /* to be assigned */
+static GObjPathPointFunction path2351_19_actions[] = {
+startShooting
 };
 static PathPoint path2351_points[] = {
 {
     .x = 0, .y = 0,
-    .speedTo = 64, .distTo = 0,
+    .speedTo = 192, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
     .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2351_0_actions
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = -152, .y = 0,
-    .speedTo = 64, .distTo = 9728,
-    .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
+    .speedTo = 192, .distTo = 9728,
+    .xVelTo = -192, .yVelTo = 0,
+    .shootCount = 3, .shootInterval = 1,
+    .numActions = 3,
     .actions = path2351_1_actions
 },
 {
     .x = -176, .y = 8,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = -61, .yVelTo = 20,
+    .speedTo = 192, .distTo = 1619,
+    .xVelTo = -183, .yVelTo = 60,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -200, .y = 24,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -54, .yVelTo = 35,
-    .shootCount = 0, .shootInterval = 0,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = -160, .yVelTo = 106,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
     .actions = path2351_3_actions
 },
 {
     .x = -216, .y = 48,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -36, .yVelTo = 53,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = -107, .yVelTo = 159,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -224, .y = 80,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = -16, .yVelTo = 62,
-    .shootCount = 0, .shootInterval = 0,
+    .speedTo = 192, .distTo = 2111,
+    .xVelTo = -47, .yVelTo = 186,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
     .actions = path2351_5_actions
 },
 {
     .x = -216, .y = 112,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = 15, .yVelTo = 62,
+    .speedTo = 192, .distTo = 2111,
+    .xVelTo = 46, .yVelTo = 186,
     .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2351_6_actions
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = -200, .y = 136,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 35, .yVelTo = 53,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = 106, .yVelTo = 159,
+    .shootCount = 3, .shootInterval = 1,
+    .numActions = 1,
+    .actions = path2351_7_actions
 },
 {
     .x = -176, .y = 152,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 53, .yVelTo = 35,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2351_8_actions
-},
-{
-    .x = -152, .y = 160,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = 60, .yVelTo = 20,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = 159, .yVelTo = 106,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
+    .x = -152, .y = 160,
+    .speedTo = 192, .distTo = 1619,
+    .xVelTo = 182, .yVelTo = 60,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -144, .y = 160,
+    .speedTo = 192, .distTo = 512,
+    .xVelTo = 192, .yVelTo = 0,
+    .shootCount = 3, .shootInterval = 1,
+    .numActions = 2,
+    .actions = path2351_10_actions
+},
+{
     .x = -136, .y = 160,
-    .speedTo = 64, .distTo = 1024,
-    .xVelTo = 64, .yVelTo = 0,
+    .speedTo = 192, .distTo = 512,
+    .xVelTo = 192, .yVelTo = 0,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -112, .y = 152,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = 60, .yVelTo = -21,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2351_11_actions
-},
-{
-    .x = -88, .y = 136,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 53, .yVelTo = -36,
+    .speedTo = 192, .distTo = 1619,
+    .xVelTo = 182, .yVelTo = -61,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
-    .x = -72, .y = 112,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 35, .yVelTo = -54,
-    .shootCount = 0, .shootInterval = 0,
+    .x = -88, .y = 136,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = 159, .yVelTo = -107,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
     .actions = path2351_13_actions
 },
 {
-    .x = -64, .y = 80,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = 15, .yVelTo = -63,
+    .x = -72, .y = 112,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = 106, .yVelTo = -160,
     .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -64, .y = 80,
+    .speedTo = 192, .distTo = 2111,
+    .xVelTo = 46, .yVelTo = -187,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
-    .actions = path2351_14_actions
+    .actions = path2351_15_actions
 },
 {
     .x = -72, .y = 48,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = -16, .yVelTo = -63,
+    .speedTo = 192, .distTo = 2111,
+    .xVelTo = -47, .yVelTo = -187,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -88, .y = 24,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -36, .yVelTo = -54,
-    .shootCount = 0, .shootInterval = 0,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = -107, .yVelTo = -160,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
-    .actions = path2351_16_actions
+    .actions = path2351_17_actions
 },
 {
     .x = -112, .y = 8,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -54, .yVelTo = -36,
+    .speedTo = 192, .distTo = 1846,
+    .xVelTo = -160, .yVelTo = -107,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -136, .y = 0,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = -61, .yVelTo = -21,
-    .shootCount = 0, .shootInterval = 0,
+    .speedTo = 192, .distTo = 1619,
+    .xVelTo = -183, .yVelTo = -61,
+    .shootCount = 3, .shootInterval = 1,
     .numActions = 1,
-    .actions = path2351_18_actions
+    .actions = path2351_19_actions
 },
 {
     .x = -288, .y = 0,
-    .speedTo = 64, .distTo = 9728,
-    .xVelTo = -64, .yVelTo = 0,
+    .speedTo = 192, .distTo = 9728,
+    .xVelTo = -192, .yVelTo = 0,
     .shootCount = 0, .shootInterval = 0,
     .numActions = 0,
     .actions = 0
 }
 };
 static Path room6fly_paths[] = {
-{.x = 272, .y = 2832, .numPoints = 20, .points = path2351_points}
+{.x = 272, .y = 2832, .numPoints = 21, .points = path2351_points}
 };
 static LevelObject room6fly_objects[] = {
 {
