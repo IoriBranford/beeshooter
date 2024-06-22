@@ -136,14 +136,17 @@ return `{
                         } else {
                             definition = '0 /* to be assigned */'
                         }
+                        let anim = Math.sin(object.rotation)
+                        anim = (anim < 0) && -1 || 1
                         let flags = 0
                         if ((object.resolvedProperty('z') || 0) >= 0)
                             flags += 0x08000
-                        if (object.tileFlippedVertically)
+                        if (object.tileFlippedVertically || anim < 0)
                             flags += 0x01000
                         if (object.tileFlippedHorizontally)
                             flags += 0x00800
-                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${object.tile?.id || 0}, .flags = ${flags}, .group = &${cName}}`
+                        anim = Math.abs(anim)
+                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${anim}, .flags = ${flags}, .group = &${cName}}`
                     }).join(',\n'),
                     '};'
                 )
