@@ -118,8 +118,8 @@ return `{
                     '};')
             })
             
+            let pathsCName = `${cName}_paths`
             if (levelObjectGroup.Path.length > 0) {
-                let pathsCName = `${cName}_paths`
                 cCode.push(`static Path ${pathsCName}[] = {`,
                     levelObjectGroup.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
                     '};')
@@ -129,6 +129,19 @@ return `{
                 let objectsCName = `${cName}_objects`
                 cCode.push(`static LevelObject ${objectsCName}[] = {`,
                     levelObjectGroup.LevelObject.map(object => {
+                        let objPathIndex = null
+                        let objPathPointIndex = 0
+                        levelObjectGroup.Path.forEach((path, pathi) => {
+                            path.polygon.forEach((point, pointi) => {
+                                if (path.x + point.x == object.x && path.y + point.y == object.y) {
+                                    objPathIndex = pathi
+                                    objPathPointIndex = pointi
+                                    return
+                                }
+                            })
+                            if (objPathIndex)
+                                return
+                        })
                         let definition
                         if (object.className.length > 0) {
                             definition = `&def${object.className}`
@@ -146,7 +159,13 @@ return `{
                         if (object.tileFlippedHorizontally)
                             flags += 0x00800
                         anim = Math.abs(anim)
-                        return `{.definition = ${definition}, .x = ${object.x}, .y = ${object.y}, .animInd = ${anim}, .flags = ${flags}, .group = &${cName}}`
+                        return `{
+    .definition = ${definition},
+    .x = ${object.x}, .y = ${object.y},
+    .animInd = ${anim}, .flags = ${flags},
+    .group = &${cName}, .path = ${objPathIndex == null && '0' || `&${pathsCName}[${objPathIndex}]`},
+    .pathIndex = ${objPathPointIndex}
+}`
                     }).join(',\n'),
                     '};'
                 )
