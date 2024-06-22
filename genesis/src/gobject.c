@@ -357,12 +357,21 @@ void GOBJ_followPath(GameObject *self) {
 
 void GOBJ_updatePathWalker(GameObject *self) {
     Path *path = self->path;
+    u16 pathIndex = 0;
     if (!path) {
-        path = LEVEL_findNearestPath(self->levelObject->group,
-            fix16ToFix32(self->centerX),
-            LEVEL_toWorldY(self->centerY));
+        LevelObject *lobj = self->levelObject;
+        if (lobj) {
+            path = lobj->path;
+            pathIndex = lobj->pathIndex;
+        }
+    
+        if (!path) {
+            path = LEVEL_findNearestPath(self->levelObject->group,
+                fix16ToFix32(self->centerX),
+                LEVEL_toWorldY(self->centerY));
+        }
         self->path = path;
-        GOBJ_startTowardsPathPoint(self, 0);
+        GOBJ_startTowardsPathPoint(self, pathIndex);
     }
     GOBJ_followPath(self);
     GOBJ_updateInvul(self);
