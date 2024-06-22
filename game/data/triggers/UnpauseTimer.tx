@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object type="Trigger">
+ <object name="unpauseTimer" type="Trigger">
   <properties>
    <property name="action" value="unpauseTimer"/>
   </properties>
