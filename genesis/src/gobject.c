@@ -55,14 +55,18 @@ void GOBJ_initSprite(GameObject *self) {
         return;
     u16 paletteSlot = LEVEL_getPaletteSlot(self->definition->palette);
     u16 attr = TILE_ATTR(paletteSlot, false, false, false);
-    if (self->levelObject)
+    u16 animInd = 0;
+    if (self->levelObject) {
         attr |= self->levelObject->flags;
-    else
+        animInd = self->levelObject->animInd;
+    } else {
         attr |= TILE_ATTR_PRIORITY_MASK;
+        animInd = self->definition->animInd;
+    }
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     self->sprite = SPR_addSprite(spriteDef, fix16ToRoundedInt(tl.x), fix16ToRoundedInt(tl.y), attr);
-    if (self->definition->animInd)
-        SPR_setAnim(self->sprite, self->definition->animInd);
+    if (animInd)
+        SPR_setAnim(self->sprite, animInd);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
 }
 
