@@ -200,9 +200,27 @@ static Path room1ants1_paths[] = {
 {.x = 296, .y = 4088, .numPoints = 5, .points = path2190_points}
 };
 static LevelObject room1ants1_objects[] = {
-{.definition = &defAnt, .x = 264, .y = 4016, .animInd = 0, .flags = 34816, .group = &room1ants1},
-{.definition = &defAnt, .x = 280, .y = 4016, .animInd = 0, .flags = 34816, .group = &room1ants1},
-{.definition = &defAnt, .x = 296, .y = 4016, .animInd = 0, .flags = 34816, .group = &room1ants1}
+{
+    .definition = &defAnt,
+    .x = 264, .y = 4016,
+    .animInd = 0, .flags = 34816,
+    .group = &room1ants1, .path = &room1ants1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 280, .y = 4016,
+    .animInd = 0, .flags = 34816,
+    .group = &room1ants1, .path = &room1ants1_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 296, .y = 4016,
+    .animInd = 0, .flags = 34816,
+    .group = &room1ants1, .path = &room1ants1_paths[4],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room1ants1 = {
     .numPaths = 5, .paths = room1ants1_paths,
@@ -379,9 +397,27 @@ static Path room1ants2_paths[] = {
 {.x = -40, .y = 4032, .numPoints = 4, .points = path2203_points}
 };
 static LevelObject room1ants2_objects[] = {
-{.definition = &defAnt, .x = -24, .y = 3992, .animInd = 0, .flags = 32768, .group = &room1ants2},
-{.definition = &defAnt, .x = -40, .y = 3992, .animInd = 0, .flags = 32768, .group = &room1ants2},
-{.definition = &defAnt, .x = -8, .y = 3992, .animInd = 0, .flags = 32768, .group = &room1ants2}
+{
+    .definition = &defAnt,
+    .x = -24, .y = 3992,
+    .animInd = 0, .flags = 32768,
+    .group = &room1ants2, .path = &room1ants2_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -40, .y = 3992,
+    .animInd = 0, .flags = 32768,
+    .group = &room1ants2, .path = &room1ants2_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3992,
+    .animInd = 0, .flags = 32768,
+    .group = &room1ants2, .path = &room1ants2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room1ants2 = {
     .numPaths = 5, .paths = room1ants2_paths,
@@ -458,7 +494,13 @@ static Path room1ants3_paths[] = {
 {.x = 0, .y = 3912, .numPoints = 8, .points = path2204_points}
 };
 static LevelObject room1ants3_objects[] = {
-{.definition = &defAnt, .x = -8, .y = 3912, .animInd = 0, .flags = 32768, .group = &room1ants3}
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3912,
+    .animInd = 0, .flags = 32768,
+    .group = &room1ants3, .path = &room1ants3_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room1ants3 = {
     .numPaths = 1, .paths = room1ants3_paths,
@@ -586,8 +628,20 @@ static Path room1ants4_paths[] = {
 {.x = 272, .y = 3880, .numPoints = 8, .points = path2253_points}
 };
 static LevelObject room1ants4_objects[] = {
-{.definition = &defAnt, .x = 264, .y = 3840, .animInd = 0, .flags = 34816, .group = &room1ants4},
-{.definition = &defAnt, .x = 264, .y = 3880, .animInd = 0, .flags = 34816, .group = &room1ants4}
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3880,
+    .animInd = 0, .flags = 34816,
+    .group = &room1ants4, .path = &room1ants4_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3840,
+    .animInd = 0, .flags = 34816,
+    .group = &room1ants4, .path = &room1ants4_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room1ants4 = {
     .numPaths = 2, .paths = room1ants4_paths,
@@ -595,7 +649,13 @@ LevelObjectGroup room1ants4 = {
 };
 extern LevelObjectGroup room1powerup;
 static LevelObject room1powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 80, .y = 3752, .animInd = 0, .flags = 32768, .group = &room1powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 80, .y = 3752,
+    .animInd = 0, .flags = 32768,
+    .group = &room1powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room1powerup = {
     .numPaths = 0, .paths = 0,
@@ -700,11 +760,41 @@ static Path room2ants1_paths[] = {
 {.x = -8, .y = 3680, .numPoints = 2, .points = path2275_points}
 };
 static LevelObject room2ants1_objects[] = {
-{.definition = &defAnt, .x = -8, .y = 3608, .animInd = 0, .flags = 32768, .group = &room2ants1},
-{.definition = &defAnt, .x = 264, .y = 3664, .animInd = 0, .flags = 34816, .group = &room2ants1},
-{.definition = &defAnt, .x = -8, .y = 3656, .animInd = 0, .flags = 32768, .group = &room2ants1},
-{.definition = &defAnt, .x = 264, .y = 3712, .animInd = 0, .flags = 34816, .group = &room2ants1},
-{.definition = &defAnt, .x = -8, .y = 3704, .animInd = 0, .flags = 32768, .group = &room2ants1}
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3712,
+    .animInd = 0, .flags = 34816,
+    .group = &room2ants1, .path = &room2ants1_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3704,
+    .animInd = 0, .flags = 32768,
+    .group = &room2ants1, .path = &room2ants1_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3664,
+    .animInd = 0, .flags = 34816,
+    .group = &room2ants1, .path = &room2ants1_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3656,
+    .animInd = 0, .flags = 32768,
+    .group = &room2ants1, .path = &room2ants1_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3608,
+    .animInd = 0, .flags = 32768,
+    .group = &room2ants1, .path = &room2ants1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room2ants1 = {
     .numPaths = 5, .paths = room2ants1_paths,
@@ -809,11 +899,41 @@ static Path room2ants2_paths[] = {
 {.x = 264, .y = 3712, .numPoints = 2, .points = path2297_points}
 };
 static LevelObject room2ants2_objects[] = {
-{.definition = &defAnt, .x = -8, .y = 3640, .animInd = 0, .flags = 32768, .group = &room2ants2},
-{.definition = &defAnt, .x = 264, .y = 3648, .animInd = 0, .flags = 34816, .group = &room2ants2},
-{.definition = &defAnt, .x = 264, .y = 3696, .animInd = 0, .flags = 34816, .group = &room2ants2},
-{.definition = &defAnt, .x = -8, .y = 3688, .animInd = 0, .flags = 32768, .group = &room2ants2},
-{.definition = &defAnt, .x = 264, .y = 3744, .animInd = 0, .flags = 34816, .group = &room2ants2}
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3744,
+    .animInd = 0, .flags = 34816,
+    .group = &room2ants2, .path = &room2ants2_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3696,
+    .animInd = 0, .flags = 34816,
+    .group = &room2ants2, .path = &room2ants2_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3688,
+    .animInd = 0, .flags = 32768,
+    .group = &room2ants2, .path = &room2ants2_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = 264, .y = 3648,
+    .animInd = 0, .flags = 34816,
+    .group = &room2ants2, .path = &room2ants2_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAnt,
+    .x = -8, .y = 3640,
+    .animInd = 0, .flags = 32768,
+    .group = &room2ants2, .path = &room2ants2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room2ants2 = {
     .numPaths = 5, .paths = room2ants2_paths,
@@ -821,7 +941,13 @@ LevelObjectGroup room2ants2 = {
 };
 extern LevelObjectGroup room2powerup;
 static LevelObject room2powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 136, .y = 3568, .animInd = 0, .flags = 32768, .group = &room2powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 136, .y = 3568,
+    .animInd = 0, .flags = 32768,
+    .group = &room2powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room2powerup = {
     .numPaths = 0, .paths = 0,
@@ -1061,8 +1187,20 @@ static Path r3fly1_paths[] = {
 {.x = 224, .y = 3496, .numPoints = 12, .points = path2304_points}
 };
 static LevelObject r3fly1_objects[] = {
-{.definition = &defFly, .x = 64, .y = 3616, .animInd = 0, .flags = 0, .group = &r3fly1},
-{.definition = &defFly, .x = 192, .y = 3616, .animInd = 0, .flags = 2048, .group = &r3fly1}
+{
+    .definition = &defFly,
+    .x = 64, .y = 3616,
+    .animInd = 0, .flags = 0,
+    .group = &r3fly1, .path = &r3fly1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defFly,
+    .x = 192, .y = 3616,
+    .animInd = 0, .flags = 2048,
+    .group = &r3fly1, .path = &r3fly1_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r3fly1 = {
     .numPaths = 2, .paths = r3fly1_paths,
@@ -1252,8 +1390,20 @@ static Path room3fly3_paths[] = {
 {.x = 224, .y = 3400, .numPoints = 10, .points = path2315_points}
 };
 static LevelObject room3fly3_objects[] = {
-{.definition = &defFly, .x = 104, .y = 3496, .animInd = 0, .flags = 0, .group = &room3fly3},
-{.definition = &defFly, .x = 152, .y = 3496, .animInd = 0, .flags = 2048, .group = &room3fly3}
+{
+    .definition = &defFly,
+    .x = 104, .y = 3496,
+    .animInd = 0, .flags = 0,
+    .group = &room3fly3, .path = &room3fly3_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defFly,
+    .x = 152, .y = 3496,
+    .animInd = 0, .flags = 2048,
+    .group = &room3fly3, .path = &room3fly3_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room3fly3 = {
     .numPaths = 2, .paths = room3fly3_paths,
@@ -1433,12 +1583,685 @@ static Path room3fly4_paths[] = {
 {.x = 288, .y = 3560, .numPoints = 9, .points = path2324_points}
 };
 static LevelObject room3fly4_objects[] = {
-{.definition = &defFly, .x = 40, .y = 3544, .animInd = 0, .flags = 0, .group = &room3fly4},
-{.definition = &defFly, .x = 216, .y = 3544, .animInd = 0, .flags = 2048, .group = &room3fly4}
+{
+    .definition = &defFly,
+    .x = 40, .y = 3544,
+    .animInd = 0, .flags = 0,
+    .group = &room3fly4, .path = &room3fly4_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defFly,
+    .x = 216, .y = 3544,
+    .animInd = 0, .flags = 2048,
+    .group = &room3fly4, .path = &room3fly4_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room3fly4 = {
     .numPaths = 2, .paths = room3fly4_paths,
     .numObjects = 2, .objects = room3fly4_objects
+};
+extern LevelObjectGroup r4r5ants;
+static GObjPathPointFunction path2372_4_actions[] = {
+faceLeft
+};
+static GObjPathPointFunction path2372_5_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2372_8_actions[] = {
+faceRight
+};
+static GObjPathPointFunction path2372_9_actions[] = {
+enterForeground
+};
+static GObjPathPointFunction path2372_12_actions[] = {
+faceLeft
+};
+static GObjPathPointFunction path2372_13_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2372_16_actions[] = {
+faceRight
+};
+static GObjPathPointFunction path2372_17_actions[] = {
+enterForeground
+};
+static GObjPathPointFunction path2372_20_actions[] = {
+faceLeft
+};
+static GObjPathPointFunction path2372_21_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2372_23_actions[] = {
+markDisappear
+};
+static PathPoint path2372_points[] = {
+{
+    .x = 0, .y = 0,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 20, .y = 24,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 20, .y = 32,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 56,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 64,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -125, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_4_actions
+},
+{
+    .x = -52, .y = 88,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_5_actions
+},
+{
+    .x = -52, .y = 96,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 120,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 128,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 124, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_8_actions
+},
+{
+    .x = 20, .y = 152,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_9_actions
+},
+{
+    .x = 20, .y = 160,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 184,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 192,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -125, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_12_actions
+},
+{
+    .x = -52, .y = 216,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_13_actions
+},
+{
+    .x = -52, .y = 224,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 248,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 256,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 124, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_16_actions
+},
+{
+    .x = 20, .y = 280,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_17_actions
+},
+{
+    .x = 20, .y = 288,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 312,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 320,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -125, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_20_actions
+},
+{
+    .x = -52, .y = 344,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_21_actions
+},
+{
+    .x = -52, .y = 352,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -32, .y = 376,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2372_23_actions
+}
+};
+static GObjPathPointFunction path2373_4_actions[] = {
+faceRight
+};
+static GObjPathPointFunction path2373_5_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2373_8_actions[] = {
+faceLeft
+};
+static GObjPathPointFunction path2373_9_actions[] = {
+enterForeground
+};
+static GObjPathPointFunction path2373_12_actions[] = {
+faceRight
+};
+static GObjPathPointFunction path2373_13_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2373_16_actions[] = {
+faceLeft
+};
+static GObjPathPointFunction path2373_17_actions[] = {
+enterForeground
+};
+static GObjPathPointFunction path2373_20_actions[] = {
+faceRight
+};
+static GObjPathPointFunction path2373_21_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2373_23_actions[] = {
+markDisappear
+};
+static PathPoint path2373_points[] = {
+{
+    .x = 0, .y = 0,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -20, .y = 24,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -20, .y = 32,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 56,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 64,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 124, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_4_actions
+},
+{
+    .x = 52, .y = 88,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_5_actions
+},
+{
+    .x = 52, .y = 96,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 120,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 128,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -125, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_8_actions
+},
+{
+    .x = -20, .y = 152,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_9_actions
+},
+{
+    .x = -20, .y = 160,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 184,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 192,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 124, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_12_actions
+},
+{
+    .x = 52, .y = 216,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_13_actions
+},
+{
+    .x = 52, .y = 224,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 248,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 256,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -125, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_16_actions
+},
+{
+    .x = -20, .y = 280,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_17_actions
+},
+{
+    .x = -20, .y = 288,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 312,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 320,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 124, .yVelTo = 31,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_20_actions
+},
+{
+    .x = 52, .y = 344,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = 81, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_21_actions
+},
+{
+    .x = 52, .y = 352,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = 376,
+    .speedTo = 128, .distTo = 1999,
+    .xVelTo = -82, .yVelTo = 98,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2373_23_actions
+}
+};
+static Path r4r5ants_paths[] = {
+{.x = 208, .y = 2936, .numPoints = 24, .points = path2372_points},
+{.x = 48, .y = 2936, .numPoints = 24, .points = path2373_points}
+};
+static LevelObject r4r5ants_objects[] = {
+{
+    .definition = &defAnt,
+    .x = 48, .y = 3248,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 20
+},
+{
+    .definition = &defAnt,
+    .x = 208, .y = 3248,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 20
+},
+{
+    .definition = &defAnt,
+    .x = 28, .y = 3216,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 18
+},
+{
+    .definition = &defAnt,
+    .x = 228, .y = 3216,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 18
+},
+{
+    .definition = &defAnt,
+    .x = 48, .y = 3192,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 17
+},
+{
+    .definition = &defAnt,
+    .x = 208, .y = 3192,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 17
+},
+{
+    .definition = &defAnt,
+    .x = 80, .y = 3184,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 16
+},
+{
+    .definition = &defAnt,
+    .x = 176, .y = 3184,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 16
+},
+{
+    .definition = &defAnt,
+    .x = 100, .y = 3152,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 14
+},
+{
+    .definition = &defAnt,
+    .x = 156, .y = 3152,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 14
+},
+{
+    .definition = &defAnt,
+    .x = 176, .y = 3128,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 13
+},
+{
+    .definition = &defAnt,
+    .x = 80, .y = 3128,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 13
+},
+{
+    .definition = &defAnt,
+    .x = 48, .y = 3120,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 12
+},
+{
+    .definition = &defAnt,
+    .x = 208, .y = 3120,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 12
+},
+{
+    .definition = &defAnt,
+    .x = 28, .y = 3088,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 10
+},
+{
+    .definition = &defAnt,
+    .x = 228, .y = 3088,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 10
+},
+{
+    .definition = &defAnt,
+    .x = 208, .y = 3064,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 9
+},
+{
+    .definition = &defAnt,
+    .x = 48, .y = 3064,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 9
+},
+{
+    .definition = &defAnt,
+    .x = 80, .y = 3056,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 8
+},
+{
+    .definition = &defAnt,
+    .x = 176, .y = 3056,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 8
+},
+{
+    .definition = &defAnt,
+    .x = 156, .y = 3024,
+    .animInd = 1, .flags = 2048,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 6
+},
+{
+    .definition = &defAnt,
+    .x = 100, .y = 3024,
+    .animInd = 1, .flags = 0,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 6
+},
+{
+    .definition = &defAnt,
+    .x = 80, .y = 3000,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 5
+},
+{
+    .definition = &defAnt,
+    .x = 176, .y = 3000,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 5
+},
+{
+    .definition = &defAnt,
+    .x = 48, .y = 2992,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 4
+},
+{
+    .definition = &defAnt,
+    .x = 208, .y = 2992,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 4
+},
+{
+    .definition = &defAnt,
+    .x = 228, .y = 2960,
+    .animInd = 1, .flags = 32768,
+    .group = &r4r5ants, .path = &r4r5ants_paths[0],
+    .pathIndex = 2
+},
+{
+    .definition = &defAnt,
+    .x = 28, .y = 2960,
+    .animInd = 1, .flags = 34816,
+    .group = &r4r5ants, .path = &r4r5ants_paths[1],
+    .pathIndex = 2
+}
+};
+LevelObjectGroup r4r5ants = {
+    .numPaths = 2, .paths = r4r5ants_paths,
+    .numObjects = 28, .objects = r4r5ants_objects
 };
 extern LevelObjectGroup r4fly1;
 static GObjPathPointFunction path2332_3_actions[] = {
@@ -1615,7 +2438,13 @@ static Path r4fly1_paths[] = {
 {.x = -16, .y = 3144, .numPoints = 18, .points = path2332_points}
 };
 static LevelObject r4fly1_objects[] = {
-{.definition = &defFly, .x = -16, .y = 3224, .animInd = 0, .flags = 0, .group = &r4fly1}
+{
+    .definition = &defFly,
+    .x = -16, .y = 3224,
+    .animInd = 0, .flags = 0,
+    .group = &r4fly1, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r4fly1 = {
     .numPaths = 1, .paths = r4fly1_paths,
@@ -1623,7 +2452,13 @@ LevelObjectGroup r4fly1 = {
 };
 extern LevelObjectGroup room4powerup;
 static LevelObject room4powerup_objects[] = {
-{.definition = &defHoneyCell, .x = 192, .y = 3184, .animInd = 4, .flags = 32768, .group = &room4powerup}
+{
+    .definition = &defHoneyCell,
+    .x = 192, .y = 3184,
+    .animInd = 0, .flags = 32768,
+    .group = &room4powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room4powerup = {
     .numPaths = 0, .paths = 0,
@@ -1772,7 +2607,13 @@ static Path room5fly1_paths[] = {
 {.x = 272, .y = 3104, .numPoints = 14, .points = path2342_points}
 };
 static LevelObject room5fly1_objects[] = {
-{.definition = &defFly, .x = 272, .y = 3192, .animInd = 0, .flags = 2048, .group = &room5fly1}
+{
+    .definition = &defFly,
+    .x = 272, .y = 3192,
+    .animInd = 0, .flags = 2048,
+    .group = &room5fly1, .path = &room5fly1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room5fly1 = {
     .numPaths = 1, .paths = room5fly1_paths,
@@ -1780,11 +2621,212 @@ LevelObjectGroup room5fly1 = {
 };
 extern LevelObjectGroup r5powerup;
 static LevelObject r5powerup_objects[] = {
-{.definition = &defHoneyCell, .x = 64, .y = 3056, .animInd = 4, .flags = 32768, .group = &r5powerup}
+{
+    .definition = &defHoneyCell,
+    .x = 64, .y = 3056,
+    .animInd = 0, .flags = 32768,
+    .group = &r5powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r5powerup = {
     .numPaths = 0, .paths = 0,
     .numObjects = 1, .objects = r5powerup_objects
+};
+extern LevelObjectGroup r6ants;
+static GObjPathPointFunction path2389_5_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2389_6_actions[] = {
+markDisappear
+};
+static PathPoint path2389_points[] = {
+{
+    .x = 8, .y = -16,
+    .speedTo = 64, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 16,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 48,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 80,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 112,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 144,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2389_5_actions
+},
+{
+    .x = -16, .y = 168,
+    .speedTo = 64, .distTo = 2172,
+    .xVelTo = -46, .yVelTo = 45,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2389_6_actions
+}
+};
+static GObjPathPointFunction path2390_5_actions[] = {
+enterBackground
+};
+static GObjPathPointFunction path2390_6_actions[] = {
+markDisappear
+};
+static PathPoint path2390_points[] = {
+{
+    .x = 8, .y = -16,
+    .speedTo = 64, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 16,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 48,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 80,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 112,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = 144,
+    .speedTo = 64, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 64,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2390_5_actions
+},
+{
+    .x = 32, .y = 168,
+    .speedTo = 64, .distTo = 2172,
+    .xVelTo = 45, .yVelTo = 45,
+    .shootCount = 0, .shootInterval = 0,
+    .numActions = 1,
+    .actions = path2390_6_actions
+}
+};
+static Path r6ants_paths[] = {
+{.x = 28, .y = 2736, .numPoints = 7, .points = path2389_points},
+{.x = 212, .y = 2736, .numPoints = 7, .points = path2390_points}
+};
+static LevelObject r6ants_objects[] = {
+{
+    .definition = &defAnt,
+    .x = 220, .y = 2848,
+    .animInd = 1, .flags = 34816,
+    .group = &r6ants, .path = &r6ants_paths[1],
+    .pathIndex = 5
+},
+{
+    .definition = &defAnt,
+    .x = 36, .y = 2848,
+    .animInd = 1, .flags = 32768,
+    .group = &r6ants, .path = &r6ants_paths[0],
+    .pathIndex = 5
+},
+{
+    .definition = &defAnt,
+    .x = 36, .y = 2816,
+    .animInd = 1, .flags = 32768,
+    .group = &r6ants, .path = &r6ants_paths[0],
+    .pathIndex = 4
+},
+{
+    .definition = &defAnt,
+    .x = 220, .y = 2816,
+    .animInd = 1, .flags = 34816,
+    .group = &r6ants, .path = &r6ants_paths[1],
+    .pathIndex = 4
+},
+{
+    .definition = &defAnt,
+    .x = 220, .y = 2784,
+    .animInd = 1, .flags = 34816,
+    .group = &r6ants, .path = &r6ants_paths[1],
+    .pathIndex = 3
+},
+{
+    .definition = &defAnt,
+    .x = 36, .y = 2784,
+    .animInd = 1, .flags = 32768,
+    .group = &r6ants, .path = &r6ants_paths[0],
+    .pathIndex = 3
+},
+{
+    .definition = &defAnt,
+    .x = 36, .y = 2752,
+    .animInd = 1, .flags = 32768,
+    .group = &r6ants, .path = &r6ants_paths[0],
+    .pathIndex = 2
+},
+{
+    .definition = &defAnt,
+    .x = 220, .y = 2752,
+    .animInd = 1, .flags = 34816,
+    .group = &r6ants, .path = &r6ants_paths[1],
+    .pathIndex = 2
+}
+};
+LevelObjectGroup r6ants = {
+    .numPaths = 2, .paths = r6ants_paths,
+    .numObjects = 8, .objects = r6ants_objects
 };
 extern LevelObjectGroup room6fly;
 static GObjPathPointFunction path2351_0_actions[] = {
@@ -1986,524 +3028,58 @@ static Path room6fly_paths[] = {
 {.x = 272, .y = 2832, .numPoints = 20, .points = path2351_points}
 };
 static LevelObject room6fly_objects[] = {
-{.definition = &defFly, .x = 272, .y = 2832, .animInd = 0, .flags = 2048, .group = &room6fly}
+{
+    .definition = &defFly,
+    .x = 272, .y = 2832,
+    .animInd = 0, .flags = 2048,
+    .group = &room6fly, .path = &room6fly_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room6fly = {
     .numPaths = 1, .paths = room6fly_paths,
     .numObjects = 1, .objects = room6fly_objects
 };
 extern LevelObjectGroup room5bigant;
-static GObjPathPointFunction path2372_5_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2372_9_actions[] = {
-enterForeground
-};
-static GObjPathPointFunction path2372_13_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2372_17_actions[] = {
-enterForeground
-};
-static GObjPathPointFunction path2372_21_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2372_23_actions[] = {
-markDisappear
-};
-static PathPoint path2372_points[] = {
-{
-    .x = 0, .y = 0,
-    .speedTo = 128, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 24, .y = 24,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 24, .y = 32,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 56,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 64,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -56, .y = 88,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_5_actions
-},
-{
-    .x = -56, .y = 96,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 120,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 128,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 24, .y = 152,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_9_actions
-},
-{
-    .x = 24, .y = 160,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 184,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 192,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -56, .y = 216,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_13_actions
-},
-{
-    .x = -56, .y = 224,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 248,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 256,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 24, .y = 280,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_17_actions
-},
-{
-    .x = 24, .y = 288,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 312,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 320,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -56, .y = 344,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_21_actions
-},
-{
-    .x = -56, .y = 352,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = 376,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2372_23_actions
-}
-};
-static GObjPathPointFunction path2373_5_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2373_9_actions[] = {
-enterForeground
-};
-static GObjPathPointFunction path2373_13_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2373_17_actions[] = {
-enterForeground
-};
-static GObjPathPointFunction path2373_21_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2373_23_actions[] = {
-markDisappear
-};
-static PathPoint path2373_points[] = {
-{
-    .x = 0, .y = 0,
-    .speedTo = 128, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -24, .y = 24,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -24, .y = 32,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 56,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 64,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 56, .y = 88,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_5_actions
-},
-{
-    .x = 56, .y = 96,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 120,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 128,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -24, .y = 152,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_9_actions
-},
-{
-    .x = -24, .y = 160,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 184,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 192,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 56, .y = 216,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_13_actions
-},
-{
-    .x = 56, .y = 224,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 248,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 256,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -24, .y = 280,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_17_actions
-},
-{
-    .x = -24, .y = 288,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 312,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 320,
-    .speedTo = 128, .distTo = 2111,
-    .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 56, .y = 344,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_21_actions
-},
-{
-    .x = 56, .y = 352,
-    .speedTo = 128, .distTo = 512,
-    .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = 376,
-    .speedTo = 128, .distTo = 2172,
-    .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2373_23_actions
-}
-};
-static Path room5bigant_paths[] = {
-{.x = 208, .y = 2936, .numPoints = 24, .points = path2372_points},
-{.x = 48, .y = 2936, .numPoints = 24, .points = path2373_points}
-};
 static LevelObject room5bigant_objects[] = {
-{.definition = &defAntBig, .x = 64, .y = 2928, .animInd = 0, .flags = 32768, .group = &room5bigant},
-{.definition = &defAntBig, .x = 192, .y = 2928, .animInd = 0, .flags = 34816, .group = &room5bigant}
+{
+    .definition = &defAntBig,
+    .x = 64, .y = 2928,
+    .animInd = 0, .flags = 32768,
+    .group = &room5bigant, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAntBig,
+    .x = 192, .y = 2928,
+    .animInd = 0, .flags = 34816,
+    .group = &room5bigant, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room5bigant = {
-    .numPaths = 2, .paths = room5bigant_paths,
+    .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = room5bigant_objects
 };
 extern LevelObjectGroup room6bigant;
-static GObjPathPointFunction path2389_1_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2389_2_actions[] = {
-markDisappear
-};
-static PathPoint path2389_points[] = {
-{
-    .x = 8, .y = -16,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 8, .y = 144,
-    .speedTo = 64, .distTo = 10240,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2389_1_actions
-},
-{
-    .x = -16, .y = 168,
-    .speedTo = 64, .distTo = 2172,
-    .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2389_2_actions
-}
-};
-static GObjPathPointFunction path2390_1_actions[] = {
-enterBackground
-};
-static GObjPathPointFunction path2390_2_actions[] = {
-markDisappear
-};
-static PathPoint path2390_points[] = {
-{
-    .x = 8, .y = -16,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 8, .y = 144,
-    .speedTo = 64, .distTo = 10240,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2390_1_actions
-},
-{
-    .x = 32, .y = 168,
-    .speedTo = 64, .distTo = 2172,
-    .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0,
-    .numActions = 1,
-    .actions = path2390_2_actions
-}
-};
-static Path room6bigant_paths[] = {
-{.x = 28, .y = 2736, .numPoints = 3, .points = path2389_points},
-{.x = 212, .y = 2736, .numPoints = 3, .points = path2390_points}
-};
 static LevelObject room6bigant_objects[] = {
-{.definition = &defAntBig, .x = 216, .y = 2704, .animInd = 0, .flags = 32768, .group = &room6bigant},
-{.definition = &defAntBig, .x = 40, .y = 2704, .animInd = 0, .flags = 34816, .group = &room6bigant}
+{
+    .definition = &defAntBig,
+    .x = 216, .y = 2704,
+    .animInd = 1, .flags = 38912,
+    .group = &room6bigant, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAntBig,
+    .x = 40, .y = 2704,
+    .animInd = 1, .flags = 36864,
+    .group = &room6bigant, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room6bigant = {
-    .numPaths = 2, .paths = room6bigant_paths,
+    .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = room6bigant_objects
 };
 extern LevelObjectGroup room7alien1;
@@ -2540,8 +3116,20 @@ static Path room7alien1_paths[] = {
 {.x = 112, .y = 2496, .numPoints = 3, .points = path2397_points}
 };
 static LevelObject room7alien1_objects[] = {
-{.definition = &defAlienGunner, .x = 112, .y = 2496, .animInd = 0, .flags = 32768, .group = &room7alien1},
-{.definition = &defHoneyPot, .x = 128, .y = 2472, .animInd = 0, .flags = 32768, .group = &room7alien1}
+{
+    .definition = &defAlienGunner,
+    .x = 112, .y = 2496,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien1, .path = &room7alien1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defHoneyPot,
+    .x = 128, .y = 2472,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien1, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room7alien1 = {
     .numPaths = 1, .paths = room7alien1_paths,
@@ -2611,8 +3199,20 @@ static Path room7alien2_paths[] = {
 {.x = 176, .y = 2440, .numPoints = 3, .points = path2404_points}
 };
 static LevelObject room7alien2_objects[] = {
-{.definition = &defAlienGunner, .x = 48, .y = 2440, .animInd = 0, .flags = 32768, .group = &room7alien2},
-{.definition = &defAlienGunner, .x = 208, .y = 2440, .animInd = 0, .flags = 34816, .group = &room7alien2}
+{
+    .definition = &defAlienGunner,
+    .x = 48, .y = 2440,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien2, .path = &room7alien2_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 208, .y = 2440,
+    .animInd = 0, .flags = 34816,
+    .group = &room7alien2, .path = &room7alien2_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room7alien2 = {
     .numPaths = 2, .paths = room7alien2_paths,
@@ -2850,12 +3450,48 @@ static Path room7alien3_paths[] = {
 {.x = 40, .y = 2528, .numPoints = 4, .points = path2419_points}
 };
 static LevelObject room7alien3_objects[] = {
-{.definition = &defAlienPillager, .x = -8, .y = 2496, .animInd = 6, .flags = 32768, .group = &room7alien3},
-{.definition = &defAlienPillager, .x = 264, .y = 2496, .animInd = 6, .flags = 34816, .group = &room7alien3},
-{.definition = &defAlienPillager, .x = -16, .y = 2512, .animInd = 6, .flags = 32768, .group = &room7alien3},
-{.definition = &defAlienPillager, .x = 272, .y = 2512, .animInd = 6, .flags = 34816, .group = &room7alien3},
-{.definition = &defAlienPillager, .x = -24, .y = 2528, .animInd = 6, .flags = 32768, .group = &room7alien3},
-{.definition = &defAlienPillager, .x = 280, .y = 2528, .animInd = 6, .flags = 34816, .group = &room7alien3}
+{
+    .definition = &defAlienPillager,
+    .x = 280, .y = 2528,
+    .animInd = 0, .flags = 34816,
+    .group = &room7alien3, .path = &room7alien3_paths[5],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienPillager,
+    .x = -24, .y = 2528,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien3, .path = &room7alien3_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienPillager,
+    .x = 272, .y = 2512,
+    .animInd = 0, .flags = 34816,
+    .group = &room7alien3, .path = &room7alien3_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienPillager,
+    .x = -16, .y = 2512,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien3, .path = &room7alien3_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienPillager,
+    .x = 264, .y = 2496,
+    .animInd = 0, .flags = 34816,
+    .group = &room7alien3, .path = &room7alien3_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienPillager,
+    .x = -8, .y = 2496,
+    .animInd = 0, .flags = 32768,
+    .group = &room7alien3, .path = &room7alien3_paths[2],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room7alien3 = {
     .numPaths = 6, .paths = room7alien3_paths,
@@ -2863,18 +3499,90 @@ LevelObjectGroup room7alien3 = {
 };
 extern LevelObjectGroup room8alien1;
 static LevelObject room8alien1_objects[] = {
-{.definition = &defAlienPillager, .x = 120, .y = 2368, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 120, .y = 2312, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 112, .y = 2336, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 144, .y = 2360, .animInd = 10, .flags = 34816, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 136, .y = 2320, .animInd = 10, .flags = 34816, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 144, .y = 2336, .animInd = 10, .flags = 34816, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 104, .y = 2352, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 88, .y = 2304, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 96, .y = 2320, .animInd = 10, .flags = 32768, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 152, .y = 2344, .animInd = 10, .flags = 34816, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 168, .y = 2304, .animInd = 10, .flags = 34816, .group = &room8alien1},
-{.definition = &defAlienPillager, .x = 160, .y = 2320, .animInd = 10, .flags = 34816, .group = &room8alien1}
+{
+    .definition = &defAlienPillager,
+    .x = 120, .y = 2368,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 144, .y = 2360,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 104, .y = 2352,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 152, .y = 2344,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 112, .y = 2336,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 144, .y = 2336,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 160, .y = 2320,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 136, .y = 2320,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 96, .y = 2320,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 120, .y = 2312,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 168, .y = 2304,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAlienPillager,
+    .x = 88, .y = 2304,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien1, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room8alien1 = {
     .numPaths = 0, .paths = 0,
@@ -2960,8 +3668,20 @@ static Path room8alien2_paths[] = {
 {.x = 152, .y = 2352, .numPoints = 4, .points = path2443_points}
 };
 static LevelObject room8alien2_objects[] = {
-{.definition = &defAlienGunner, .x = 80, .y = 2352, .animInd = 0, .flags = 32768, .group = &room8alien2},
-{.definition = &defAlienGunner, .x = 176, .y = 2352, .animInd = 0, .flags = 34816, .group = &room8alien2}
+{
+    .definition = &defAlienGunner,
+    .x = 80, .y = 2352,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien2, .path = &room8alien2_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 176, .y = 2352,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien2, .path = &room8alien2_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room8alien2 = {
     .numPaths = 2, .paths = room8alien2_paths,
@@ -3159,8 +3879,20 @@ static Path room8alien3_paths[] = {
 {.x = 272, .y = 2392, .numPoints = 11, .points = path2449_points}
 };
 static LevelObject room8alien3_objects[] = {
-{.definition = &defAlienGunner, .x = -16, .y = 2392, .animInd = 0, .flags = 32768, .group = &room8alien3},
-{.definition = &defAlienGunner, .x = 272, .y = 2392, .animInd = 0, .flags = 34816, .group = &room8alien3}
+{
+    .definition = &defAlienGunner,
+    .x = -16, .y = 2392,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien3, .path = &room8alien3_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 272, .y = 2392,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien3, .path = &room8alien3_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room8alien3 = {
     .numPaths = 2, .paths = room8alien3_paths,
@@ -3258,10 +3990,34 @@ static Path room8alien4_paths[] = {
 {.x = 168, .y = 2232, .numPoints = 2, .points = path2460_points}
 };
 static LevelObject room8alien4_objects[] = {
-{.definition = &defAlienGunner, .x = 80, .y = 2256, .animInd = 0, .flags = 32768, .group = &room8alien4},
-{.definition = &defAlienGunner, .x = 72, .y = 2240, .animInd = 0, .flags = 32768, .group = &room8alien4},
-{.definition = &defAlienGunner, .x = 184, .y = 2248, .animInd = 0, .flags = 34816, .group = &room8alien4},
-{.definition = &defAlienGunner, .x = 192, .y = 2232, .animInd = 0, .flags = 34816, .group = &room8alien4}
+{
+    .definition = &defAlienGunner,
+    .x = 80, .y = 2256,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien4, .path = &room8alien4_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 184, .y = 2248,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien4, .path = &room8alien4_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 72, .y = 2240,
+    .animInd = 0, .flags = 32768,
+    .group = &room8alien4, .path = &room8alien4_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAlienGunner,
+    .x = 192, .y = 2232,
+    .animInd = 0, .flags = 34816,
+    .group = &room8alien4, .path = &room8alien4_paths[3],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room8alien4 = {
     .numPaths = 4, .paths = room8alien4_paths,
@@ -3269,8 +4025,20 @@ LevelObjectGroup room8alien4 = {
 };
 extern LevelObjectGroup room8powerup;
 static LevelObject room8powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 136, .y = 2256, .animInd = 0, .flags = 32768, .group = &room8powerup},
-{.definition = &defHoneyPot, .x = 120, .y = 2264, .animInd = 0, .flags = 32768, .group = &room8powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 120, .y = 2264,
+    .animInd = 0, .flags = 32768,
+    .group = &room8powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 136, .y = 2256,
+    .animInd = 0, .flags = 32768,
+    .group = &room8powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room8powerup = {
     .numPaths = 0, .paths = 0,
@@ -3278,9 +4046,27 @@ LevelObjectGroup room8powerup = {
 };
 extern LevelObjectGroup room9powerup;
 static LevelObject room9powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 120, .y = 2160, .animInd = 0, .flags = 32768, .group = &room9powerup},
-{.definition = &defHoneyPot, .x = 144, .y = 2168, .animInd = 0, .flags = 32768, .group = &room9powerup},
-{.definition = &defHoneyPot, .x = 128, .y = 2176, .animInd = 0, .flags = 32768, .group = &room9powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 128, .y = 2176,
+    .animInd = 0, .flags = 32768,
+    .group = &room9powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 144, .y = 2168,
+    .animInd = 0, .flags = 32768,
+    .group = &room9powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 120, .y = 2160,
+    .animInd = 0, .flags = 32768,
+    .group = &room9powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup room9powerup = {
     .numPaths = 0, .paths = 0,
@@ -3781,7 +4567,13 @@ static Path room9alienmind_paths[] = {
 {.x = 208, .y = 2256, .numPoints = 12, .points = path2480_points}
 };
 static LevelObject room9alienmind_objects[] = {
-{.definition = &defAlienMind, .x = 128, .y = 1984, .animInd = 0, .flags = 0, .group = &room9alienmind}
+{
+    .definition = &defAlienMind,
+    .x = 128, .y = 1984,
+    .animInd = 0, .flags = 0,
+    .group = &room9alienmind, .path = &room9alienmind_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room9alienmind = {
     .numPaths = 7, .paths = room9alienmind_paths,
@@ -3946,11 +4738,41 @@ static Path room10acidants_paths[] = {
 {.x = 216, .y = 1904, .numPoints = 3, .points = path2502_points}
 };
 static LevelObject room10acidants_objects[] = {
-{.definition = &defAcidAnt, .x = 216, .y = 1904, .animInd = 2, .flags = 34816, .group = &room10acidants},
-{.definition = &defAcidAnt, .x = 184, .y = 1928, .animInd = 2, .flags = 32768, .group = &room10acidants},
-{.definition = &defAcidAnt, .x = 200, .y = 1920, .animInd = 2, .flags = 34816, .group = &room10acidants},
-{.definition = &defAcidAnt, .x = 168, .y = 1928, .animInd = 2, .flags = 32768, .group = &room10acidants},
-{.definition = &defAcidAnt, .x = 152, .y = 1920, .animInd = 2, .flags = 32768, .group = &room10acidants}
+{
+    .definition = &defAcidAnt,
+    .x = 168, .y = 1928,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants, .path = &room10acidants_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 184, .y = 1928,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants, .path = &room10acidants_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 200, .y = 1920,
+    .animInd = 1, .flags = 36864,
+    .group = &room10acidants, .path = &room10acidants_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 152, .y = 1920,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants, .path = &room10acidants_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 216, .y = 1904,
+    .animInd = 1, .flags = 36864,
+    .group = &room10acidants, .path = &room10acidants_paths[4],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room10acidants = {
     .numPaths = 5, .paths = room10acidants_paths,
@@ -4110,11 +4932,41 @@ static Path room10acidants2_paths[] = {
 {.x = 104, .y = 1904, .numPoints = 3, .points = path2518_points}
 };
 static LevelObject room10acidants2_objects[] = {
-{.definition = &defAcidAnt, .x = 104, .y = 1904, .animInd = 2, .flags = 34816, .group = &room10acidants2},
-{.definition = &defAcidAnt, .x = 72, .y = 1904, .animInd = 2, .flags = 32768, .group = &room10acidants2},
-{.definition = &defAcidAnt, .x = 88, .y = 1912, .animInd = 2, .flags = 34816, .group = &room10acidants2},
-{.definition = &defAcidAnt, .x = 56, .y = 1896, .animInd = 2, .flags = 32768, .group = &room10acidants2},
-{.definition = &defAcidAnt, .x = 40, .y = 1888, .animInd = 2, .flags = 32768, .group = &room10acidants2}
+{
+    .definition = &defAcidAnt,
+    .x = 88, .y = 1912,
+    .animInd = 1, .flags = 36864,
+    .group = &room10acidants2, .path = &room10acidants2_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 104, .y = 1904,
+    .animInd = 1, .flags = 36864,
+    .group = &room10acidants2, .path = &room10acidants2_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 72, .y = 1904,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants2, .path = &room10acidants2_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 56, .y = 1896,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants2, .path = &room10acidants2_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAcidAnt,
+    .x = 40, .y = 1888,
+    .animInd = 1, .flags = 38912,
+    .group = &room10acidants2, .path = &room10acidants2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room10acidants2 = {
     .numPaths = 5, .paths = room10acidants2_paths,
@@ -4154,7 +5006,13 @@ static Path r11acidants1a_paths[] = {
 {.x = 264, .y = 1784, .numPoints = 3, .points = path2526_points}
 };
 static LevelObject r11acidants1a_objects[] = {
-{.definition = &defAcidAnt, .x = 232, .y = 1816, .animInd = 2, .flags = 34816, .group = &r11acidants1a}
+{
+    .definition = &defAcidAnt,
+    .x = 232, .y = 1816,
+    .animInd = 1, .flags = 36864,
+    .group = &r11acidants1a, .path = &r11acidants1a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1a = {
     .numPaths = 1, .paths = r11acidants1a_paths,
@@ -4194,7 +5052,13 @@ static Path r11acidants1b_paths[] = {
 {.x = 232, .y = 1784, .numPoints = 3, .points = path2530_points}
 };
 static LevelObject r11acidants1b_objects[] = {
-{.definition = &defAcidAnt, .x = 200, .y = 1816, .animInd = 2, .flags = 32768, .group = &r11acidants1b}
+{
+    .definition = &defAcidAnt,
+    .x = 200, .y = 1816,
+    .animInd = 1, .flags = 38912,
+    .group = &r11acidants1b, .path = &r11acidants1b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1b = {
     .numPaths = 1, .paths = r11acidants1b_paths,
@@ -4234,7 +5098,13 @@ static Path r11acidants1c_paths[] = {
 {.x = 200, .y = 1784, .numPoints = 3, .points = path2534_points}
 };
 static LevelObject r11acidants1c_objects[] = {
-{.definition = &defAcidAnt, .x = 168, .y = 1816, .animInd = 2, .flags = 34816, .group = &r11acidants1c}
+{
+    .definition = &defAcidAnt,
+    .x = 168, .y = 1816,
+    .animInd = 1, .flags = 36864,
+    .group = &r11acidants1c, .path = &r11acidants1c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1c = {
     .numPaths = 1, .paths = r11acidants1c_paths,
@@ -4274,7 +5144,13 @@ static Path r11acidants1d_paths[] = {
 {.x = 168, .y = 1784, .numPoints = 3, .points = path2538_points}
 };
 static LevelObject r11acidants1d_objects[] = {
-{.definition = &defAcidAnt, .x = 136, .y = 1816, .animInd = 2, .flags = 32768, .group = &r11acidants1d}
+{
+    .definition = &defAcidAnt,
+    .x = 136, .y = 1816,
+    .animInd = 1, .flags = 38912,
+    .group = &r11acidants1d, .path = &r11acidants1d_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1d = {
     .numPaths = 1, .paths = r11acidants1d_paths,
@@ -4314,7 +5190,13 @@ static Path r11acidants1e_paths[] = {
 {.x = 152, .y = 1776, .numPoints = 3, .points = path2542_points}
 };
 static LevelObject r11acidants1e_objects[] = {
-{.definition = &defAcidAnt, .x = 120, .y = 1808, .animInd = 2, .flags = 32768, .group = &r11acidants1e}
+{
+    .definition = &defAcidAnt,
+    .x = 120, .y = 1808,
+    .animInd = 1, .flags = 38912,
+    .group = &r11acidants1e, .path = &r11acidants1e_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1e = {
     .numPaths = 1, .paths = r11acidants1e_paths,
@@ -4354,7 +5236,13 @@ static Path r11acidants1f_paths[] = {
 {.x = 120, .y = 1768, .numPoints = 3, .points = path2546_points}
 };
 static LevelObject r11acidants1f_objects[] = {
-{.definition = &defAcidAnt, .x = 88, .y = 1800, .animInd = 2, .flags = 32768, .group = &r11acidants1f}
+{
+    .definition = &defAcidAnt,
+    .x = 88, .y = 1800,
+    .animInd = 1, .flags = 38912,
+    .group = &r11acidants1f, .path = &r11acidants1f_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1f = {
     .numPaths = 1, .paths = r11acidants1f_paths,
@@ -4394,7 +5282,13 @@ static Path r11acidants1g_paths[] = {
 {.x = 88, .y = 1768, .numPoints = 3, .points = path2550_points}
 };
 static LevelObject r11acidants1g_objects[] = {
-{.definition = &defAcidAnt, .x = 56, .y = 1800, .animInd = 2, .flags = 34816, .group = &r11acidants1g}
+{
+    .definition = &defAcidAnt,
+    .x = 56, .y = 1800,
+    .animInd = 1, .flags = 36864,
+    .group = &r11acidants1g, .path = &r11acidants1g_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1g = {
     .numPaths = 1, .paths = r11acidants1g_paths,
@@ -4434,7 +5328,13 @@ static Path r11acidants1h_paths[] = {
 {.x = 56, .y = 1768, .numPoints = 3, .points = path2554_points}
 };
 static LevelObject r11acidants1h_objects[] = {
-{.definition = &defAcidAnt, .x = 24, .y = 1800, .animInd = 2, .flags = 32768, .group = &r11acidants1h}
+{
+    .definition = &defAcidAnt,
+    .x = 24, .y = 1800,
+    .animInd = 1, .flags = 38912,
+    .group = &r11acidants1h, .path = &r11acidants1h_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants1h = {
     .numPaths = 1, .paths = r11acidants1h_paths,
@@ -4466,16 +5366,76 @@ static Path room11acidants2a_paths[] = {
 {.x = 272, .y = 1616, .numPoints = 2, .points = path2567_points}
 };
 static LevelObject room11acidants2a_objects[] = {
-{.definition = &defAcidAnt, .x = 272, .y = 1808, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1736, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1712, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1784, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1760, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1688, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1856, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1664, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1832, .animInd = 2, .flags = 2048, .group = &room11acidants2a},
-{.definition = &defAcidAnt, .x = 272, .y = 1640, .animInd = 2, .flags = 2048, .group = &room11acidants2a}
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1856,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1832,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1808,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1784,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1760,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1736,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1712,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1688,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1664,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = 272, .y = 1640,
+    .animInd = 0, .flags = 2048,
+    .group = &room11acidants2a, .path = &room11acidants2a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room11acidants2a = {
     .numPaths = 1, .paths = room11acidants2a_paths,
@@ -4507,16 +5467,76 @@ static Path room11acidants2b_paths[] = {
 {.x = -16, .y = 1576, .numPoints = 2, .points = path2580_points}
 };
 static LevelObject room11acidants2b_objects[] = {
-{.definition = &defAcidAnt, .x = -16, .y = 1792, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1720, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1672, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1696, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1768, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1648, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1744, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1624, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1600, .animInd = 2, .flags = 0, .group = &room11acidants2b},
-{.definition = &defAcidAnt, .x = -16, .y = 1576, .animInd = 2, .flags = 0, .group = &room11acidants2b}
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1792,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1768,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1744,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1720,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1696,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1672,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1648,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1624,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1600,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defAcidAnt,
+    .x = -16, .y = 1576,
+    .animInd = 0, .flags = 0,
+    .group = &room11acidants2b, .path = &room11acidants2b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup room11acidants2b = {
     .numPaths = 1, .paths = room11acidants2b_paths,
@@ -4556,7 +5576,13 @@ static Path r11acidants3a_paths[] = {
 {.x = 248, .y = 1736, .numPoints = 3, .points = path2583_points}
 };
 static LevelObject r11acidants3a_objects[] = {
-{.definition = &defAcidAnt, .x = 248, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3a}
+{
+    .definition = &defAcidAnt,
+    .x = 248, .y = 1720,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3a, .path = &r11acidants3a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3a = {
     .numPaths = 1, .paths = r11acidants3a_paths,
@@ -4596,7 +5622,13 @@ static Path r11acidants3b_paths[] = {
 {.x = 224, .y = 1736, .numPoints = 3, .points = path2587_points}
 };
 static LevelObject r11acidants3b_objects[] = {
-{.definition = &defAcidAnt, .x = 224, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3b}
+{
+    .definition = &defAcidAnt,
+    .x = 224, .y = 1720,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3b, .path = &r11acidants3b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3b = {
     .numPaths = 1, .paths = r11acidants3b_paths,
@@ -4636,7 +5668,13 @@ static Path r11acidants3c_paths[] = {
 {.x = 200, .y = 1736, .numPoints = 3, .points = path2591_points}
 };
 static LevelObject r11acidants3c_objects[] = {
-{.definition = &defAcidAnt, .x = 200, .y = 1720, .animInd = 2, .flags = 0, .group = &r11acidants3c}
+{
+    .definition = &defAcidAnt,
+    .x = 200, .y = 1720,
+    .animInd = 1, .flags = 6144,
+    .group = &r11acidants3c, .path = &r11acidants3c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3c = {
     .numPaths = 1, .paths = r11acidants3c_paths,
@@ -4676,7 +5714,13 @@ static Path r11acidants3d_paths[] = {
 {.x = 176, .y = 1736, .numPoints = 3, .points = path2595_points}
 };
 static LevelObject r11acidants3d_objects[] = {
-{.definition = &defAcidAnt, .x = 176, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3d}
+{
+    .definition = &defAcidAnt,
+    .x = 176, .y = 1720,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3d, .path = &r11acidants3d_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3d = {
     .numPaths = 1, .paths = r11acidants3d_paths,
@@ -4716,7 +5760,13 @@ static Path r11acidants3e_paths[] = {
 {.x = 152, .y = 1736, .numPoints = 3, .points = path2599_points}
 };
 static LevelObject r11acidants3e_objects[] = {
-{.definition = &defAcidAnt, .x = 152, .y = 1720, .animInd = 2, .flags = 2048, .group = &r11acidants3e}
+{
+    .definition = &defAcidAnt,
+    .x = 152, .y = 1720,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3e, .path = &r11acidants3e_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3e = {
     .numPaths = 1, .paths = r11acidants3e_paths,
@@ -4756,7 +5806,13 @@ static Path r11acidants3f_paths[] = {
 {.x = 128, .y = 1720, .numPoints = 3, .points = path2603_points}
 };
 static LevelObject r11acidants3f_objects[] = {
-{.definition = &defAcidAnt, .x = 128, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3f}
+{
+    .definition = &defAcidAnt,
+    .x = 128, .y = 1704,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3f, .path = &r11acidants3f_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3f = {
     .numPaths = 1, .paths = r11acidants3f_paths,
@@ -4796,7 +5852,13 @@ static Path r11acidants3g_paths[] = {
 {.x = 104, .y = 1720, .numPoints = 3, .points = path2607_points}
 };
 static LevelObject r11acidants3g_objects[] = {
-{.definition = &defAcidAnt, .x = 104, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3g}
+{
+    .definition = &defAcidAnt,
+    .x = 104, .y = 1704,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3g, .path = &r11acidants3g_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3g = {
     .numPaths = 1, .paths = r11acidants3g_paths,
@@ -4836,7 +5898,13 @@ static Path r11acidants3h_paths[] = {
 {.x = 80, .y = 1720, .numPoints = 3, .points = path2611_points}
 };
 static LevelObject r11acidants3h_objects[] = {
-{.definition = &defAcidAnt, .x = 80, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3h}
+{
+    .definition = &defAcidAnt,
+    .x = 80, .y = 1704,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3h, .path = &r11acidants3h_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3h = {
     .numPaths = 1, .paths = r11acidants3h_paths,
@@ -4876,7 +5944,13 @@ static Path r11acidants3i_paths[] = {
 {.x = 56, .y = 1720, .numPoints = 3, .points = path2615_points}
 };
 static LevelObject r11acidants3i_objects[] = {
-{.definition = &defAcidAnt, .x = 56, .y = 1704, .animInd = 2, .flags = 2048, .group = &r11acidants3i}
+{
+    .definition = &defAcidAnt,
+    .x = 56, .y = 1704,
+    .animInd = 1, .flags = 4096,
+    .group = &r11acidants3i, .path = &r11acidants3i_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3i = {
     .numPaths = 1, .paths = r11acidants3i_paths,
@@ -4916,7 +5990,13 @@ static Path r11acidants3j_paths[] = {
 {.x = 32, .y = 1720, .numPoints = 3, .points = path2619_points}
 };
 static LevelObject r11acidants3j_objects[] = {
-{.definition = &defAcidAnt, .x = 32, .y = 1704, .animInd = 2, .flags = 0, .group = &r11acidants3j}
+{
+    .definition = &defAcidAnt,
+    .x = 32, .y = 1704,
+    .animInd = 1, .flags = 6144,
+    .group = &r11acidants3j, .path = &r11acidants3j_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3j = {
     .numPaths = 1, .paths = r11acidants3j_paths,
@@ -4956,7 +6036,13 @@ static Path r11acidants3k_paths[] = {
 {.x = 8, .y = 1720, .numPoints = 3, .points = path2623_points}
 };
 static LevelObject r11acidants3k_objects[] = {
-{.definition = &defAcidAnt, .x = 8, .y = 1704, .animInd = 2, .flags = 0, .group = &r11acidants3k}
+{
+    .definition = &defAcidAnt,
+    .x = 8, .y = 1704,
+    .animInd = 1, .flags = 6144,
+    .group = &r11acidants3k, .path = &r11acidants3k_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r11acidants3k = {
     .numPaths = 1, .paths = r11acidants3k_paths,
@@ -4964,7 +6050,13 @@ LevelObjectGroup r11acidants3k = {
 };
 extern LevelObjectGroup r11powerup;
 static LevelObject r11powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 120, .y = 1656, .animInd = 0, .flags = 32768, .group = &r11powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 120, .y = 1656,
+    .animInd = 0, .flags = 32768,
+    .group = &r11powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r11powerup = {
     .numPaths = 0, .paths = 0,
@@ -5010,7 +6102,13 @@ static Path r12wasp1a_paths[] = {
 {.x = 96, .y = 1512, .numPoints = 3, .points = path2630_points}
 };
 static LevelObject r12wasp1a_objects[] = {
-{.definition = &defWasp, .x = 96, .y = 1512, .animInd = 0, .flags = 0, .group = &r12wasp1a}
+{
+    .definition = &defWasp,
+    .x = 96, .y = 1512,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp1a, .path = &r12wasp1a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp1a = {
     .numPaths = 1, .paths = r12wasp1a_paths,
@@ -5056,7 +6154,13 @@ static Path r12wasp1b_paths[] = {
 {.x = 128, .y = 1528, .numPoints = 3, .points = path2636_points}
 };
 static LevelObject r12wasp1b_objects[] = {
-{.definition = &defWasp, .x = 128, .y = 1528, .animInd = 0, .flags = 0, .group = &r12wasp1b}
+{
+    .definition = &defWasp,
+    .x = 128, .y = 1528,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp1b, .path = &r12wasp1b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp1b = {
     .numPaths = 1, .paths = r12wasp1b_paths,
@@ -5102,7 +6206,13 @@ static Path r12wasp1c_paths[] = {
 {.x = 160, .y = 1544, .numPoints = 3, .points = path2642_points}
 };
 static LevelObject r12wasp1c_objects[] = {
-{.definition = &defWasp, .x = 160, .y = 1544, .animInd = 0, .flags = 0, .group = &r12wasp1c}
+{
+    .definition = &defWasp,
+    .x = 160, .y = 1544,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp1c, .path = &r12wasp1c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp1c = {
     .numPaths = 1, .paths = r12wasp1c_paths,
@@ -5148,7 +6258,13 @@ static Path r12wasp2a_paths[] = {
 {.x = 80, .y = 1448, .numPoints = 3, .points = path2648_points}
 };
 static LevelObject r12wasp2a_objects[] = {
-{.definition = &defWasp, .x = 80, .y = 1448, .animInd = 0, .flags = 0, .group = &r12wasp2a}
+{
+    .definition = &defWasp,
+    .x = 80, .y = 1448,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp2a, .path = &r12wasp2a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp2a = {
     .numPaths = 1, .paths = r12wasp2a_paths,
@@ -5194,7 +6310,13 @@ static Path r12wasp2b_paths[] = {
 {.x = 56, .y = 1472, .numPoints = 3, .points = path2654_points}
 };
 static LevelObject r12wasp2b_objects[] = {
-{.definition = &defWasp, .x = 56, .y = 1472, .animInd = 0, .flags = 0, .group = &r12wasp2b}
+{
+    .definition = &defWasp,
+    .x = 56, .y = 1472,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp2b, .path = &r12wasp2b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp2b = {
     .numPaths = 1, .paths = r12wasp2b_paths,
@@ -5240,7 +6362,13 @@ static Path r12wasp2c_paths[] = {
 {.x = 32, .y = 1496, .numPoints = 3, .points = path2660_points}
 };
 static LevelObject r12wasp2c_objects[] = {
-{.definition = &defWasp, .x = 32, .y = 1496, .animInd = 0, .flags = 0, .group = &r12wasp2c}
+{
+    .definition = &defWasp,
+    .x = 32, .y = 1496,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp2c, .path = &r12wasp2c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp2c = {
     .numPaths = 1, .paths = r12wasp2c_paths,
@@ -5286,7 +6414,13 @@ static Path r12wasp3a_paths[] = {
 {.x = 176, .y = 1472, .numPoints = 3, .points = path2666_points}
 };
 static LevelObject r12wasp3a_objects[] = {
-{.definition = &defWasp, .x = 176, .y = 1472, .animInd = 0, .flags = 0, .group = &r12wasp3a}
+{
+    .definition = &defWasp,
+    .x = 176, .y = 1472,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp3a, .path = &r12wasp3a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp3a = {
     .numPaths = 1, .paths = r12wasp3a_paths,
@@ -5332,7 +6466,13 @@ static Path r12wasp3b_paths[] = {
 {.x = 200, .y = 1496, .numPoints = 3, .points = path2672_points}
 };
 static LevelObject r12wasp3b_objects[] = {
-{.definition = &defWasp, .x = 200, .y = 1496, .animInd = 0, .flags = 0, .group = &r12wasp3b}
+{
+    .definition = &defWasp,
+    .x = 200, .y = 1496,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp3b, .path = &r12wasp3b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp3b = {
     .numPaths = 1, .paths = r12wasp3b_paths,
@@ -5378,7 +6518,13 @@ static Path r12wasp3c_paths[] = {
 {.x = 224, .y = 1520, .numPoints = 3, .points = path2678_points}
 };
 static LevelObject r12wasp3c_objects[] = {
-{.definition = &defWasp, .x = 224, .y = 1520, .animInd = 0, .flags = 0, .group = &r12wasp3c}
+{
+    .definition = &defWasp,
+    .x = 224, .y = 1520,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp3c, .path = &r12wasp3c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp3c = {
     .numPaths = 1, .paths = r12wasp3c_paths,
@@ -5424,7 +6570,13 @@ static Path r12wasp4a_paths[] = {
 {.x = 48, .y = 1416, .numPoints = 3, .points = path2684_points}
 };
 static LevelObject r12wasp4a_objects[] = {
-{.definition = &defWasp, .x = 48, .y = 1416, .animInd = 0, .flags = 0, .group = &r12wasp4a}
+{
+    .definition = &defWasp,
+    .x = 48, .y = 1416,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp4a, .path = &r12wasp4a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp4a = {
     .numPaths = 1, .paths = r12wasp4a_paths,
@@ -5470,7 +6622,13 @@ static Path r12wasp4b_paths[] = {
 {.x = 208, .y = 1416, .numPoints = 3, .points = path2690_points}
 };
 static LevelObject r12wasp4b_objects[] = {
-{.definition = &defWasp, .x = 208, .y = 1416, .animInd = 0, .flags = 0, .group = &r12wasp4b}
+{
+    .definition = &defWasp,
+    .x = 208, .y = 1416,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp4b, .path = &r12wasp4b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp4b = {
     .numPaths = 1, .paths = r12wasp4b_paths,
@@ -5516,7 +6674,13 @@ static Path r12wasp4c_paths[] = {
 {.x = 32, .y = 1504, .numPoints = 3, .points = path2696_points}
 };
 static LevelObject r12wasp4c_objects[] = {
-{.definition = &defWasp, .x = 32, .y = 1504, .animInd = 0, .flags = 0, .group = &r12wasp4c}
+{
+    .definition = &defWasp,
+    .x = 32, .y = 1504,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp4c, .path = &r12wasp4c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp4c = {
     .numPaths = 1, .paths = r12wasp4c_paths,
@@ -5562,7 +6726,13 @@ static Path r12wasp4d_paths[] = {
 {.x = 224, .y = 1504, .numPoints = 3, .points = path2702_points}
 };
 static LevelObject r12wasp4d_objects[] = {
-{.definition = &defWasp, .x = 224, .y = 1504, .animInd = 0, .flags = 0, .group = &r12wasp4d}
+{
+    .definition = &defWasp,
+    .x = 224, .y = 1504,
+    .animInd = 0, .flags = 0,
+    .group = &r12wasp4d, .path = &r12wasp4d_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r12wasp4d = {
     .numPaths = 1, .paths = r12wasp4d_paths,
@@ -5570,7 +6740,13 @@ LevelObjectGroup r12wasp4d = {
 };
 extern LevelObjectGroup r12powerup;
 static LevelObject r12powerup_objects[] = {
-{.definition = &defReinforcedHoneyPot, .x = 128, .y = 1360, .animInd = 2, .flags = 32768, .group = &r12powerup}
+{
+    .definition = &defReinforcedHoneyPot,
+    .x = 128, .y = 1360,
+    .animInd = 0, .flags = 32768,
+    .group = &r12powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r12powerup = {
     .numPaths = 0, .paths = 0,
@@ -5760,12 +6936,48 @@ static Path r13acidants1_paths[] = {
 {.x = 8, .y = 1152, .numPoints = 3, .points = path2720_points}
 };
 static LevelObject r13acidants1_objects[] = {
-{.definition = &defAntHole, .x = 232, .y = 1200, .animInd = 6, .flags = 32768, .group = &r13acidants1},
-{.definition = &defAntHole, .x = 240, .y = 1216, .animInd = 6, .flags = 32768, .group = &r13acidants1},
-{.definition = &defAntHole, .x = 16, .y = 1216, .animInd = 6, .flags = 32768, .group = &r13acidants1},
-{.definition = &defAntHole, .x = 24, .y = 1200, .animInd = 6, .flags = 32768, .group = &r13acidants1},
-{.definition = &defAntHole, .x = 248, .y = 1200, .animInd = 6, .flags = 32768, .group = &r13acidants1},
-{.definition = &defAntHole, .x = 8, .y = 1200, .animInd = 6, .flags = 32768, .group = &r13acidants1}
+{
+    .definition = &defAntHole,
+    .x = 16, .y = 1216,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[2],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 240, .y = 1216,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 248, .y = 1200,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[4],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 24, .y = 1200,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[3],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 232, .y = 1200,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 8, .y = 1200,
+    .animInd = 0, .flags = 32768,
+    .group = &r13acidants1, .path = &r13acidants1_paths[5],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r13acidants1 = {
     .numPaths = 6, .paths = r13acidants1_paths,
@@ -5901,8 +7113,20 @@ static Path r13beetle1_paths[] = {
 {.x = 200, .y = 1320, .numPoints = 6, .points = path2731_points}
 };
 static LevelObject r13beetle1_objects[] = {
-{.definition = &defBeetle, .x = 56, .y = 1320, .animInd = 10, .flags = 34816, .group = &r13beetle1},
-{.definition = &defBeetle, .x = 200, .y = 1320, .animInd = 10, .flags = 32768, .group = &r13beetle1}
+{
+    .definition = &defBeetle,
+    .x = 56, .y = 1320,
+    .animInd = 1, .flags = 36864,
+    .group = &r13beetle1, .path = &r13beetle1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defBeetle,
+    .x = 200, .y = 1320,
+    .animInd = 1, .flags = 38912,
+    .group = &r13beetle1, .path = &r13beetle1_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r13beetle1 = {
     .numPaths = 2, .paths = r13beetle1_paths,
@@ -5977,7 +7201,13 @@ static Path r13fly1_paths[] = {
 {.x = 32, .y = 1264, .numPoints = 6, .points = path2742_points}
 };
 static LevelObject r13fly1_objects[] = {
-{.definition = &defWaspShooter, .x = 32, .y = 1264, .animInd = 6, .flags = 0, .group = &r13fly1}
+{
+    .definition = &defWaspShooter,
+    .x = 32, .y = 1264,
+    .animInd = 0, .flags = 0,
+    .group = &r13fly1, .path = &r13fly1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r13fly1 = {
     .numPaths = 1, .paths = r13fly1_paths,
@@ -6054,7 +7284,13 @@ static Path r13fly2_paths[] = {
 {.x = 24, .y = 1232, .numPoints = 6, .points = path2751_points}
 };
 static LevelObject r13fly2_objects[] = {
-{.definition = &defWaspShooter, .x = 48, .y = 1232, .animInd = 6, .flags = 0, .group = &r13fly2}
+{
+    .definition = &defWaspShooter,
+    .x = 48, .y = 1232,
+    .animInd = 0, .flags = 0,
+    .group = &r13fly2, .path = &r13fly2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r13fly2 = {
     .numPaths = 1, .paths = r13fly2_paths,
@@ -6129,7 +7365,13 @@ static Path r13fly3_paths[] = {
 {.x = 224, .y = 1224, .numPoints = 6, .points = path2760_points}
 };
 static LevelObject r13fly3_objects[] = {
-{.definition = &defWaspShooter, .x = 224, .y = 1224, .animInd = 6, .flags = 2048, .group = &r13fly3}
+{
+    .definition = &defWaspShooter,
+    .x = 224, .y = 1224,
+    .animInd = 0, .flags = 2048,
+    .group = &r13fly3, .path = &r13fly3_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r13fly3 = {
     .numPaths = 1, .paths = r13fly3_paths,
@@ -6206,7 +7448,13 @@ static Path r14fly4_paths[] = {
 {.x = 232, .y = 1192, .numPoints = 6, .points = path2769_points}
 };
 static LevelObject r14fly4_objects[] = {
-{.definition = &defWaspShooter, .x = 208, .y = 1192, .animInd = 6, .flags = 2048, .group = &r14fly4}
+{
+    .definition = &defWaspShooter,
+    .x = 208, .y = 1192,
+    .animInd = 0, .flags = 2048,
+    .group = &r14fly4, .path = &r14fly4_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14fly4 = {
     .numPaths = 1, .paths = r14fly4_paths,
@@ -6974,13 +8222,55 @@ static Path r14beetles_paths[] = {
 {.x = 152, .y = 856, .numPoints = 34, .points = path2780_points}
 };
 static LevelObject r14beetles_objects[] = {
-{.definition = &defBeetle, .x = 104, .y = 1096, .animInd = 10, .flags = 34816, .group = &r14beetles},
-{.definition = &defBeetle, .x = 216, .y = 1096, .animInd = 10, .flags = 2048, .group = &r14beetles},
-{.definition = 0 /* to be assigned */, .x = -40, .y = 996, .animInd = 0, .flags = 32768, .group = &r14beetles},
-{.definition = 0 /* to be assigned */, .x = -40, .y = 860, .animInd = 0, .flags = 32768, .group = &r14beetles},
-{.definition = 0 /* to be assigned */, .x = -40, .y = 728, .animInd = 0, .flags = 32768, .group = &r14beetles},
-{.definition = 0 /* to be assigned */, .x = 256, .y = 932, .animInd = 0, .flags = 32768, .group = &r14beetles},
-{.definition = 0 /* to be assigned */, .x = 256, .y = 796, .animInd = 0, .flags = 32768, .group = &r14beetles}
+{
+    .definition = &defBeetle,
+    .x = 104, .y = 1096,
+    .animInd = 1, .flags = 36864,
+    .group = &r14beetles, .path = &r14beetles_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defBeetle,
+    .x = 216, .y = 1096,
+    .animInd = 1, .flags = 4096,
+    .group = &r14beetles, .path = &r14beetles_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = -40, .y = 996,
+    .animInd = 0, .flags = 32768,
+    .group = &r14beetles, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = 256, .y = 932,
+    .animInd = 0, .flags = 32768,
+    .group = &r14beetles, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = -40, .y = 860,
+    .animInd = 0, .flags = 32768,
+    .group = &r14beetles, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = 256, .y = 796,
+    .animInd = 0, .flags = 32768,
+    .group = &r14beetles, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = -40, .y = 728,
+    .animInd = 0, .flags = 32768,
+    .group = &r14beetles, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r14beetles = {
     .numPaths = 2, .paths = r14beetles_paths,
@@ -7050,8 +8340,20 @@ static Path r14acidants1_paths[] = {
 {.x = 184, .y = 976, .numPoints = 3, .points = path2892_points}
 };
 static LevelObject r14acidants1_objects[] = {
-{.definition = &defAntHole, .x = 120, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants1},
-{.definition = &defAntHole, .x = 184, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants1}
+{
+    .definition = &defAntHole,
+    .x = 120, .y = 992,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants1, .path = &r14acidants1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 184, .y = 992,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants1, .path = &r14acidants1_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14acidants1 = {
     .numPaths = 2, .paths = r14acidants1_paths,
@@ -7121,8 +8423,20 @@ static Path r14acidants2_paths[] = {
 {.x = 176, .y = 992, .numPoints = 3, .points = path2899_points}
 };
 static LevelObject r14acidants2_objects[] = {
-{.definition = &defAntHole, .x = 128, .y = 1008, .animInd = 6, .flags = 32768, .group = &r14acidants2},
-{.definition = &defAntHole, .x = 176, .y = 1008, .animInd = 6, .flags = 32768, .group = &r14acidants2}
+{
+    .definition = &defAntHole,
+    .x = 128, .y = 1008,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants2, .path = &r14acidants2_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 176, .y = 1008,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants2, .path = &r14acidants2_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14acidants2 = {
     .numPaths = 2, .paths = r14acidants2_paths,
@@ -7192,8 +8506,20 @@ static Path r14acidants3_paths[] = {
 {.x = 168, .y = 976, .numPoints = 3, .points = path2906_points}
 };
 static LevelObject r14acidants3_objects[] = {
-{.definition = &defAntHole, .x = 168, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants3},
-{.definition = &defAntHole, .x = 136, .y = 992, .animInd = 6, .flags = 32768, .group = &r14acidants3}
+{
+    .definition = &defAntHole,
+    .x = 168, .y = 992,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants3, .path = &r14acidants3_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 136, .y = 992,
+    .animInd = 0, .flags = 32768,
+    .group = &r14acidants3, .path = &r14acidants3_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14acidants3 = {
     .numPaths = 2, .paths = r14acidants3_paths,
@@ -7250,7 +8576,13 @@ static Path r14wasp1a_paths[] = {
 {.x = 136, .y = 1128, .numPoints = 4, .points = path2911_points}
 };
 static LevelObject r14wasp1a_objects[] = {
-{.definition = &defWaspShooter, .x = 136, .y = 1128, .animInd = 6, .flags = 2048, .group = &r14wasp1a}
+{
+    .definition = &defWaspShooter,
+    .x = 136, .y = 1128,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp1a, .path = &r14wasp1a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp1a = {
     .numPaths = 1, .paths = r14wasp1a_paths,
@@ -7307,7 +8639,13 @@ static Path r14wasp1b_paths[] = {
 {.x = 120, .y = 1136, .numPoints = 4, .points = path2921_points}
 };
 static LevelObject r14wasp1b_objects[] = {
-{.definition = &defWaspShooter, .x = 120, .y = 1136, .animInd = 6, .flags = 2048, .group = &r14wasp1b}
+{
+    .definition = &defWaspShooter,
+    .x = 120, .y = 1136,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp1b, .path = &r14wasp1b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp1b = {
     .numPaths = 1, .paths = r14wasp1b_paths,
@@ -7364,7 +8702,13 @@ static Path r14wasp2a_paths[] = {
 {.x = 24, .y = 1072, .numPoints = 4, .points = path2928_points}
 };
 static LevelObject r14wasp2a_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 1072, .animInd = 6, .flags = 0, .group = &r14wasp2a}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 1072,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp2a, .path = &r14wasp2a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp2a = {
     .numPaths = 1, .paths = r14wasp2a_paths,
@@ -7421,7 +8765,13 @@ static Path r14wasp2b_paths[] = {
 {.x = 120, .y = 1096, .numPoints = 4, .points = path2935_points}
 };
 static LevelObject r14wasp2b_objects[] = {
-{.definition = &defWaspShooter, .x = 120, .y = 1096, .animInd = 6, .flags = 0, .group = &r14wasp2b}
+{
+    .definition = &defWaspShooter,
+    .x = 120, .y = 1096,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp2b, .path = &r14wasp2b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp2b = {
     .numPaths = 1, .paths = r14wasp2b_paths,
@@ -7478,7 +8828,13 @@ static Path r14wasp3a_paths[] = {
 {.x = 136, .y = 1056, .numPoints = 4, .points = path2942_points}
 };
 static LevelObject r14wasp3a_objects[] = {
-{.definition = &defWaspShooter, .x = 136, .y = 1056, .animInd = 6, .flags = 2048, .group = &r14wasp3a}
+{
+    .definition = &defWaspShooter,
+    .x = 136, .y = 1056,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp3a, .path = &r14wasp3a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp3a = {
     .numPaths = 1, .paths = r14wasp3a_paths,
@@ -7535,7 +8891,13 @@ static Path r14wasp3b_paths[] = {
 {.x = 232, .y = 1032, .numPoints = 4, .points = path2949_points}
 };
 static LevelObject r14wasp3b_objects[] = {
-{.definition = &defWaspShooter, .x = 232, .y = 1032, .animInd = 6, .flags = 2048, .group = &r14wasp3b}
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 1032,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp3b, .path = &r14wasp3b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp3b = {
     .numPaths = 1, .paths = r14wasp3b_paths,
@@ -7592,7 +8954,13 @@ static Path r14wasp4a_paths[] = {
 {.x = 24, .y = 960, .numPoints = 4, .points = path2956_points}
 };
 static LevelObject r14wasp4a_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 960, .animInd = 6, .flags = 0, .group = &r14wasp4a}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 960,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp4a, .path = &r14wasp4a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp4a = {
     .numPaths = 1, .paths = r14wasp4a_paths,
@@ -7649,7 +9017,13 @@ static Path r14wasp4b_paths[] = {
 {.x = 136, .y = 952, .numPoints = 4, .points = path2963_points}
 };
 static LevelObject r14wasp4b_objects[] = {
-{.definition = &defWaspShooter, .x = 136, .y = 952, .animInd = 6, .flags = 2048, .group = &r14wasp4b}
+{
+    .definition = &defWaspShooter,
+    .x = 136, .y = 952,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp4b, .path = &r14wasp4b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp4b = {
     .numPaths = 1, .paths = r14wasp4b_paths,
@@ -7706,7 +9080,13 @@ static Path r14wasp4c_paths[] = {
 {.x = 24, .y = 984, .numPoints = 4, .points = path2970_points}
 };
 static LevelObject r14wasp4c_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 984, .animInd = 6, .flags = 0, .group = &r14wasp4c}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 984,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp4c, .path = &r14wasp4c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp4c = {
     .numPaths = 1, .paths = r14wasp4c_paths,
@@ -7763,7 +9143,13 @@ static Path r14wasp5a_paths[] = {
 {.x = 232, .y = 896, .numPoints = 4, .points = path2977_points}
 };
 static LevelObject r14wasp5a_objects[] = {
-{.definition = &defWaspShooter, .x = 232, .y = 896, .animInd = 6, .flags = 2048, .group = &r14wasp5a}
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 896,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp5a, .path = &r14wasp5a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp5a = {
     .numPaths = 1, .paths = r14wasp5a_paths,
@@ -7820,7 +9206,13 @@ static Path r14wasp5b_paths[] = {
 {.x = 120, .y = 888, .numPoints = 4, .points = path2984_points}
 };
 static LevelObject r14wasp5b_objects[] = {
-{.definition = &defWaspShooter, .x = 120, .y = 888, .animInd = 6, .flags = 0, .group = &r14wasp5b}
+{
+    .definition = &defWaspShooter,
+    .x = 120, .y = 888,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp5b, .path = &r14wasp5b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp5b = {
     .numPaths = 1, .paths = r14wasp5b_paths,
@@ -7877,7 +9269,13 @@ static Path r14wasp5c_paths[] = {
 {.x = 232, .y = 920, .numPoints = 4, .points = path2991_points}
 };
 static LevelObject r14wasp5c_objects[] = {
-{.definition = &defWaspShooter, .x = 232, .y = 920, .animInd = 6, .flags = 2048, .group = &r14wasp5c}
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 920,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp5c, .path = &r14wasp5c_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp5c = {
     .numPaths = 1, .paths = r14wasp5c_paths,
@@ -7981,8 +9379,20 @@ static Path r14wasp6a_paths[] = {
 {.x = 120, .y = 832, .numPoints = 4, .points = path3003_points}
 };
 static LevelObject r14wasp6a_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 832, .animInd = 6, .flags = 0, .group = &r14wasp6a},
-{.definition = &defWaspShooter, .x = 120, .y = 832, .animInd = 6, .flags = 2048, .group = &r14wasp6a}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 832,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp6a, .path = &r14wasp6a_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWaspShooter,
+    .x = 120, .y = 832,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp6a, .path = &r14wasp6a_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp6a = {
     .numPaths = 2, .paths = r14wasp6a_paths,
@@ -8086,8 +9496,20 @@ static Path r14wasp6b_paths[] = {
 {.x = 120, .y = 848, .numPoints = 4, .points = path3016_points}
 };
 static LevelObject r14wasp6b_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 848, .animInd = 6, .flags = 0, .group = &r14wasp6b},
-{.definition = &defWaspShooter, .x = 120, .y = 848, .animInd = 6, .flags = 2048, .group = &r14wasp6b}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 848,
+    .animInd = 0, .flags = 0,
+    .group = &r14wasp6b, .path = &r14wasp6b_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWaspShooter,
+    .x = 120, .y = 848,
+    .animInd = 0, .flags = 2048,
+    .group = &r14wasp6b, .path = &r14wasp6b_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14wasp6b = {
     .numPaths = 2, .paths = r14wasp6b_paths,
@@ -8191,8 +9613,20 @@ static Path Copy_of_r14wasp6a_paths[] = {
 {.x = 232, .y = 800, .numPoints = 4, .points = path3029_points}
 };
 static LevelObject Copy_of_r14wasp6a_objects[] = {
-{.definition = &defWaspShooter, .x = 136, .y = 800, .animInd = 6, .flags = 0, .group = &Copy_of_r14wasp6a},
-{.definition = &defWaspShooter, .x = 232, .y = 800, .animInd = 6, .flags = 2048, .group = &Copy_of_r14wasp6a}
+{
+    .definition = &defWaspShooter,
+    .x = 136, .y = 800,
+    .animInd = 0, .flags = 0,
+    .group = &Copy_of_r14wasp6a, .path = &Copy_of_r14wasp6a_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 800,
+    .animInd = 0, .flags = 2048,
+    .group = &Copy_of_r14wasp6a, .path = &Copy_of_r14wasp6a_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup Copy_of_r14wasp6a = {
     .numPaths = 2, .paths = Copy_of_r14wasp6a_paths,
@@ -8296,8 +9730,20 @@ static Path Copy_of_r14wasp6b_paths[] = {
 {.x = 232, .y = 800, .numPoints = 4, .points = path3042_points}
 };
 static LevelObject Copy_of_r14wasp6b_objects[] = {
-{.definition = &defWaspShooter, .x = 136, .y = 800, .animInd = 6, .flags = 0, .group = &Copy_of_r14wasp6b},
-{.definition = &defWaspShooter, .x = 232, .y = 800, .animInd = 6, .flags = 2048, .group = &Copy_of_r14wasp6b}
+{
+    .definition = &defWaspShooter,
+    .x = 136, .y = 800,
+    .animInd = 0, .flags = 0,
+    .group = &Copy_of_r14wasp6b, .path = &Copy_of_r14wasp6b_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 800,
+    .animInd = 0, .flags = 2048,
+    .group = &Copy_of_r14wasp6b, .path = &Copy_of_r14wasp6b_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup Copy_of_r14wasp6b = {
     .numPaths = 2, .paths = Copy_of_r14wasp6b_paths,
@@ -8329,7 +9775,13 @@ static Path r14powerup1_paths[] = {
 {.x = 72, .y = 992, .numPoints = 2, .points = path3047_points}
 };
 static LevelObject r14powerup1_objects[] = {
-{.definition = &defHoneyCell, .x = 72, .y = 992, .animInd = 4, .flags = 32768, .group = &r14powerup1}
+{
+    .definition = &defHoneyCell,
+    .x = 72, .y = 992,
+    .animInd = 0, .flags = 32768,
+    .group = &r14powerup1, .path = &r14powerup1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14powerup1 = {
     .numPaths = 1, .paths = r14powerup1_paths,
@@ -8361,7 +9813,13 @@ static Path r14powerup2_paths[] = {
 {.x = 184, .y = 960, .numPoints = 2, .points = path3051_points}
 };
 static LevelObject r14powerup2_objects[] = {
-{.definition = &defHoneyCell, .x = 184, .y = 960, .animInd = 4, .flags = 32768, .group = &r14powerup2}
+{
+    .definition = &defHoneyCell,
+    .x = 184, .y = 960,
+    .animInd = 0, .flags = 32768,
+    .group = &r14powerup2, .path = &r14powerup2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r14powerup2 = {
     .numPaths = 1, .paths = r14powerup2_paths,
@@ -8393,7 +9851,13 @@ static Path r15powerup2_paths[] = {
 {.x = 72, .y = 800, .numPoints = 2, .points = path3055_points}
 };
 static LevelObject r15powerup2_objects[] = {
-{.definition = &defHoneyCell, .x = 72, .y = 800, .animInd = 4, .flags = 32768, .group = &r15powerup2}
+{
+    .definition = &defHoneyCell,
+    .x = 72, .y = 800,
+    .animInd = 0, .flags = 32768,
+    .group = &r15powerup2, .path = &r15powerup2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r15powerup2 = {
     .numPaths = 1, .paths = r15powerup2_paths,
@@ -8425,7 +9889,13 @@ static Path r15powerup1_paths[] = {
 {.x = 184, .y = 864, .numPoints = 2, .points = path3059_points}
 };
 static LevelObject r15powerup1_objects[] = {
-{.definition = &defHoneyCell, .x = 184, .y = 864, .animInd = 4, .flags = 32768, .group = &r15powerup1}
+{
+    .definition = &defHoneyCell,
+    .x = 184, .y = 864,
+    .animInd = 0, .flags = 32768,
+    .group = &r15powerup1, .path = &r15powerup1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r15powerup1 = {
     .numPaths = 1, .paths = r15powerup1_paths,
@@ -8514,7 +9984,13 @@ static Path r16acidants1_paths[] = {
 {.x = 40, .y = 544, .numPoints = 8, .points = path3063_points}
 };
 static LevelObject r16acidants1_objects[] = {
-{.definition = &defAntHole, .x = 40, .y = 560, .animInd = 6, .flags = 32768, .group = &r16acidants1}
+{
+    .definition = &defAntHole,
+    .x = 40, .y = 560,
+    .animInd = 0, .flags = 32768,
+    .group = &r16acidants1, .path = &r16acidants1_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r16acidants1 = {
     .numPaths = 1, .paths = r16acidants1_paths,
@@ -8522,8 +9998,20 @@ LevelObjectGroup r16acidants1 = {
 };
 extern LevelObjectGroup r16powerup;
 static LevelObject r16powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 168, .y = 592, .animInd = 0, .flags = 32768, .group = &r16powerup},
-{.definition = &defHoneyPot, .x = 88, .y = 592, .animInd = 0, .flags = 32768, .group = &r16powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 168, .y = 592,
+    .animInd = 0, .flags = 32768,
+    .group = &r16powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 88, .y = 592,
+    .animInd = 0, .flags = 32768,
+    .group = &r16powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r16powerup = {
     .numPaths = 0, .paths = 0,
@@ -8699,8 +10187,20 @@ static Path r16acidants2_paths[] = {
 {.x = 88, .y = 456, .numPoints = 8, .points = path3075_points}
 };
 static LevelObject r16acidants2_objects[] = {
-{.definition = &defAntHole, .x = 184, .y = 456, .animInd = 6, .flags = 32768, .group = &r16acidants2},
-{.definition = &defAntHole, .x = 72, .y = 472, .animInd = 6, .flags = 32768, .group = &r16acidants2}
+{
+    .definition = &defAntHole,
+    .x = 72, .y = 472,
+    .animInd = 0, .flags = 32768,
+    .group = &r16acidants2, .path = &r16acidants2_paths[1],
+    .pathIndex = 1
+},
+{
+    .definition = &defAntHole,
+    .x = 184, .y = 456,
+    .animInd = 0, .flags = 32768,
+    .group = &r16acidants2, .path = &r16acidants2_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r16acidants2 = {
     .numPaths = 2, .paths = r16acidants2_paths,
@@ -8708,7 +10208,13 @@ LevelObjectGroup r16acidants2 = {
 };
 extern LevelObjectGroup r16powerup2;
 static LevelObject r16powerup2_objects[] = {
-{.definition = &defReinforcedHoneyPot, .x = 128, .y = 512, .animInd = 2, .flags = 32768, .group = &r16powerup2}
+{
+    .definition = &defReinforcedHoneyPot,
+    .x = 128, .y = 512,
+    .animInd = 0, .flags = 32768,
+    .group = &r16powerup2, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r16powerup2 = {
     .numPaths = 0, .paths = 0,
@@ -8716,9 +10222,27 @@ LevelObjectGroup r16powerup2 = {
 };
 extern LevelObjectGroup r17powerup;
 static LevelObject r17powerup_objects[] = {
-{.definition = &defHoneyPot, .x = 152, .y = 400, .animInd = 0, .flags = 32768, .group = &r17powerup},
-{.definition = &defHoneyPot, .x = 128, .y = 408, .animInd = 0, .flags = 32768, .group = &r17powerup},
-{.definition = &defHoneyPot, .x = 112, .y = 400, .animInd = 0, .flags = 32768, .group = &r17powerup}
+{
+    .definition = &defHoneyPot,
+    .x = 128, .y = 408,
+    .animInd = 0, .flags = 32768,
+    .group = &r17powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 152, .y = 400,
+    .animInd = 0, .flags = 32768,
+    .group = &r17powerup, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = &defHoneyPot,
+    .x = 112, .y = 400,
+    .animInd = 0, .flags = 32768,
+    .group = &r17powerup, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r17powerup = {
     .numPaths = 0, .paths = 0,
@@ -8775,7 +10299,13 @@ static Path r17fly1a_paths[] = {
 {.x = 40, .y = 472, .numPoints = 4, .points = path3092_points}
 };
 static LevelObject r17fly1a_objects[] = {
-{.definition = &defWaspShooter, .x = 40, .y = 472, .animInd = 6, .flags = 0, .group = &r17fly1a}
+{
+    .definition = &defWaspShooter,
+    .x = 40, .y = 472,
+    .animInd = 0, .flags = 0,
+    .group = &r17fly1a, .path = &r17fly1a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17fly1a = {
     .numPaths = 1, .paths = r17fly1a_paths,
@@ -8832,7 +10362,13 @@ static Path r17fly1b_paths[] = {
 {.x = 208, .y = 472, .numPoints = 4, .points = path3099_points}
 };
 static LevelObject r17fly1b_objects[] = {
-{.definition = &defWaspShooter, .x = 208, .y = 472, .animInd = 6, .flags = 2048, .group = &r17fly1b}
+{
+    .definition = &defWaspShooter,
+    .x = 208, .y = 472,
+    .animInd = 0, .flags = 2048,
+    .group = &r17fly1b, .path = &r17fly1b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17fly1b = {
     .numPaths = 1, .paths = r17fly1b_paths,
@@ -8889,7 +10425,13 @@ static Path r17fly2a_paths[] = {
 {.x = 24, .y = 496, .numPoints = 4, .points = path3106_points}
 };
 static LevelObject r17fly2a_objects[] = {
-{.definition = &defWaspShooter, .x = 24, .y = 496, .animInd = 6, .flags = 0, .group = &r17fly2a}
+{
+    .definition = &defWaspShooter,
+    .x = 24, .y = 496,
+    .animInd = 0, .flags = 0,
+    .group = &r17fly2a, .path = &r17fly2a_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17fly2a = {
     .numPaths = 1, .paths = r17fly2a_paths,
@@ -8946,7 +10488,13 @@ static Path r17fly2b_paths[] = {
 {.x = 232, .y = 496, .numPoints = 4, .points = path3113_points}
 };
 static LevelObject r17fly2b_objects[] = {
-{.definition = &defWaspShooter, .x = 232, .y = 496, .animInd = 6, .flags = 2048, .group = &r17fly2b}
+{
+    .definition = &defWaspShooter,
+    .x = 232, .y = 496,
+    .animInd = 0, .flags = 2048,
+    .group = &r17fly2b, .path = &r17fly2b_paths[0],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17fly2b = {
     .numPaths = 1, .paths = r17fly2b_paths,
@@ -9028,8 +10576,20 @@ static Path r17wasp1_paths[] = {
 {.x = 240, .y = 456, .numPoints = 3, .points = path3122_points}
 };
 static LevelObject r17wasp1_objects[] = {
-{.definition = &defWasp, .x = 16, .y = 456, .animInd = 0, .flags = 0, .group = &r17wasp1},
-{.definition = &defWasp, .x = 240, .y = 456, .animInd = 0, .flags = 2048, .group = &r17wasp1}
+{
+    .definition = &defWasp,
+    .x = 16, .y = 456,
+    .animInd = 0, .flags = 0,
+    .group = &r17wasp1, .path = &r17wasp1_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWasp,
+    .x = 240, .y = 456,
+    .animInd = 0, .flags = 2048,
+    .group = &r17wasp1, .path = &r17wasp1_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17wasp1 = {
     .numPaths = 2, .paths = r17wasp1_paths,
@@ -9111,8 +10671,20 @@ static Path r17wasp3_paths[] = {
 {.x = 200, .y = 408, .numPoints = 3, .points = path3133_points}
 };
 static LevelObject r17wasp3_objects[] = {
-{.definition = &defWasp, .x = 56, .y = 408, .animInd = 0, .flags = 0, .group = &r17wasp3},
-{.definition = &defWasp, .x = 200, .y = 408, .animInd = 0, .flags = 2048, .group = &r17wasp3}
+{
+    .definition = &defWasp,
+    .x = 56, .y = 408,
+    .animInd = 0, .flags = 0,
+    .group = &r17wasp3, .path = &r17wasp3_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWasp,
+    .x = 200, .y = 408,
+    .animInd = 0, .flags = 2048,
+    .group = &r17wasp3, .path = &r17wasp3_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17wasp3 = {
     .numPaths = 2, .paths = r17wasp3_paths,
@@ -9194,8 +10766,20 @@ static Path r17wasp5_paths[] = {
 {.x = 144, .y = 384, .numPoints = 3, .points = path3144_points}
 };
 static LevelObject r17wasp5_objects[] = {
-{.definition = &defWasp, .x = 112, .y = 384, .animInd = 0, .flags = 0, .group = &r17wasp5},
-{.definition = &defWasp, .x = 144, .y = 384, .animInd = 0, .flags = 2048, .group = &r17wasp5}
+{
+    .definition = &defWasp,
+    .x = 112, .y = 384,
+    .animInd = 0, .flags = 0,
+    .group = &r17wasp5, .path = &r17wasp5_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWasp,
+    .x = 144, .y = 384,
+    .animInd = 0, .flags = 2048,
+    .group = &r17wasp5, .path = &r17wasp5_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17wasp5 = {
     .numPaths = 2, .paths = r17wasp5_paths,
@@ -9277,8 +10861,20 @@ static Path r17wasp7_paths[] = {
 {.x = 176, .y = 360, .numPoints = 3, .points = path3155_points}
 };
 static LevelObject r17wasp7_objects[] = {
-{.definition = &defWasp, .x = 80, .y = 360, .animInd = 0, .flags = 0, .group = &r17wasp7},
-{.definition = &defWasp, .x = 176, .y = 360, .animInd = 0, .flags = 2048, .group = &r17wasp7}
+{
+    .definition = &defWasp,
+    .x = 80, .y = 360,
+    .animInd = 0, .flags = 0,
+    .group = &r17wasp7, .path = &r17wasp7_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWasp,
+    .x = 176, .y = 360,
+    .animInd = 0, .flags = 2048,
+    .group = &r17wasp7, .path = &r17wasp7_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17wasp7 = {
     .numPaths = 2, .paths = r17wasp7_paths,
@@ -9360,8 +10956,20 @@ static Path r17wasp9_paths[] = {
 {.x = 216, .y = 384, .numPoints = 3, .points = path3166_points}
 };
 static LevelObject r17wasp9_objects[] = {
-{.definition = &defWasp, .x = 40, .y = 384, .animInd = 0, .flags = 0, .group = &r17wasp9},
-{.definition = &defWasp, .x = 216, .y = 384, .animInd = 0, .flags = 2048, .group = &r17wasp9}
+{
+    .definition = &defWasp,
+    .x = 40, .y = 384,
+    .animInd = 0, .flags = 0,
+    .group = &r17wasp9, .path = &r17wasp9_paths[0],
+    .pathIndex = 1
+},
+{
+    .definition = &defWasp,
+    .x = 216, .y = 384,
+    .animInd = 0, .flags = 2048,
+    .group = &r17wasp9, .path = &r17wasp9_paths[1],
+    .pathIndex = 1
+}
 };
 LevelObjectGroup r17wasp9 = {
     .numPaths = 2, .paths = r17wasp9_paths,
@@ -9369,7 +10977,13 @@ LevelObjectGroup r17wasp9 = {
 };
 extern LevelObjectGroup r18powerup2;
 static LevelObject r18powerup2_objects[] = {
-{.definition = &defReinforcedHoneyPot, .x = 120, .y = 192, .animInd = 2, .flags = 32768, .group = &r18powerup2}
+{
+    .definition = &defReinforcedHoneyPot,
+    .x = 120, .y = 192,
+    .animInd = 0, .flags = 32768,
+    .group = &r18powerup2, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r18powerup2 = {
     .numPaths = 0, .paths = 0,
@@ -9377,7 +10991,13 @@ LevelObjectGroup r18powerup2 = {
 };
 extern LevelObjectGroup r18powerup3;
 static LevelObject r18powerup3_objects[] = {
-{.definition = &defReinforcedHoneyPot, .x = 136, .y = 128, .animInd = 2, .flags = 32768, .group = &r18powerup3}
+{
+    .definition = &defReinforcedHoneyPot,
+    .x = 136, .y = 128,
+    .animInd = 0, .flags = 32768,
+    .group = &r18powerup3, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup r18powerup3 = {
     .numPaths = 0, .paths = 0,
@@ -9743,142 +11363,290 @@ static Path waspboss_paths[] = {
 {.x = 224, .y = 160, .numPoints = 3, .points = path3204_points}
 };
 static LevelObject waspboss_objects[] = {
-{.definition = &defWaspBoss, .x = 128, .y = 440, .animInd = 0, .flags = 0, .group = &waspboss},
-{.definition = 0 /* to be assigned */, .x = 128, .y = 96, .animInd = 0, .flags = 32768, .group = &waspboss}
+{
+    .definition = &defWaspBoss,
+    .x = 128, .y = 440,
+    .animInd = 0, .flags = 0,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0
+},
+{
+    .definition = 0 /* to be assigned */,
+    .x = 128, .y = 96,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0
+}
 };
 LevelObjectGroup waspboss = {
     .numPaths = 10, .paths = waspboss_paths,
     .numObjects = 2, .objects = waspboss_objects
 };
 Trigger stage_caravan_triggers[] = {
-/*   0 */ {.x = -32, .y = 3976, .action = spawnCharacters, .group = &room1ants1},
-/*   1 */ {.x = -48, .y = 3976, .action = unpauseTimer, .group = &room1ants1},
-/*   2 */ {.x = -40, .y = 3960, .action = spawnCharacters, .group = &room1ants2},
-/*   3 */ {.x = -32, .y = 3904, .action = spawnCharacters, .group = &room1ants3},
-/*   4 */ {.x = -32, .y = 3896, .action = spawnCharacters, .group = &room1ants3},
-/*   5 */ {.x = -32, .y = 3888, .action = spawnCharacters, .group = &room1ants3},
-/*   6 */ {.x = -32, .y = 3880, .action = spawnCharacters, .group = &room1ants3},
-/*   7 */ {.x = -32, .y = 3872, .action = spawnCharacters, .group = &room1ants3},
-/*   8 */ {.x = -32, .y = 3864, .action = spawnCharacters, .group = &room1ants3},
-/*   9 */ {.x = -32, .y = 3856, .action = spawnCharacters, .group = &room1ants3},
-/*  10 */ {.x = -32, .y = 3848, .action = spawnCharacters, .group = &room1ants3},
-/*  11 */ {.x = -32, .y = 3832, .action = spawnCharacters, .group = &room1ants4},
-/*  12 */ {.x = -32, .y = 3824, .action = spawnCharacters, .group = &room1ants4},
-/*  13 */ {.x = -32, .y = 3816, .action = spawnCharacters, .group = &room1ants4},
-/*  14 */ {.x = -32, .y = 3808, .action = spawnCharacters, .group = &room1ants4},
-/*  15 */ {.x = -32, .y = 3800, .action = spawnCharacters, .group = &room1ants4},
-/*  16 */ {.x = -32, .y = 3792, .action = spawnCharacters, .group = &room1ants4},
-/*  17 */ {.x = -32, .y = 3784, .action = spawnCharacters, .group = &room1ants4},
-/*  18 */ {.x = -32, .y = 3776, .action = spawnCharacters, .group = &room1ants4},
-/*  19 */ {.x = -20, .y = 3768, .action = spawnCharacters, .group = &room1powerup},
-/*  20 */ {.x = -56, .y = 3680, .action = spawnCharacters, .group = &room2ants1},
-/*  21 */ {.x = -56, .y = 3616, .action = spawnCharacters, .group = &room2ants2},
-/*  22 */ {.x = -80, .y = 3576, .action = spawnCharacters, .group = &room2powerup},
-/*  23 */ {.x = -56, .y = 3544, .action = spawnCharacters, .group = &r3fly1},
-/*  24 */ {.x = -88, .y = 3472, .action = spawnCharacters, .group = &room5bigant},
-/*  25 */ {.x = -56, .y = 3448, .action = spawnCharacters, .group = &room3fly3},
-/*  26 */ {.x = -56, .y = 3352, .action = spawnCharacters, .group = &room3fly4},
-/*  27 */ {.x = -56, .y = 3192, .action = spawnCharacters, .group = &room4powerup},
-/*  28 */ {.x = -56, .y = 3168, .action = spawnCharacters, .group = &r4fly1},
-/*  29 */ {.x = -40, .y = 3064, .action = spawnCharacters, .group = &room5fly1},
-/*  30 */ {.x = -72, .y = 3064, .action = spawnCharacters, .group = &r5powerup},
-/*  31 */ {.x = -16, .y = 2944, .action = spawnCharacters, .group = &room6bigant},
-/*  32 */ {.x = -24, .y = 2816, .action = spawnCharacters, .group = &room6fly},
-/*  33 */ {.x = -56, .y = 2504, .action = spawnCharacters, .group = &room7alien1},
-/*  34 */ {.x = -80, .y = 2448, .action = spawnCharacters, .group = &room7alien2},
-/*  35 */ {.x = -56, .y = 2432, .action = spawnCharacters, .group = &room7alien3},
-/*  36 */ {.x = -32, .y = 2376, .action = spawnCharacters, .group = &room8alien1},
-/*  37 */ {.x = -56, .y = 2360, .action = spawnCharacters, .group = &room8alien2},
-/*  38 */ {.x = -32, .y = 2272, .action = spawnCharacters, .group = &room8powerup},
-/*  39 */ {.x = -72, .y = 2264, .action = spawnCharacters, .group = &room8alien4},
-/*  40 */ {.x = -16, .y = 2184, .action = spawnCharacters, .group = &room9powerup},
-/*  41 */ {.x = -16, .y = 2016, .action = spawnCharacters, .group = &room9alienmind},
-/*  42 */ {.x = -24, .y = 2008, .action = spawnCharacters, .group = &part2},
-/*  43 */ {.x = -32, .y = 1856, .action = spawnCharacters, .group = &room10acidants},
-/*  44 */ {.x = -40, .y = 1856, .action = unpauseTimer, .group = &room10acidants},
-/*  45 */ {.x = -32, .y = 1840, .action = spawnCharacters, .group = &room10acidants2},
-/*  46 */ {.x = -48, .y = 1760, .action = spawnCharacters, .group = &r11acidants1a},
-/*  47 */ {.x = -56, .y = 1752, .action = spawnCharacters, .group = &r11acidants1b},
-/*  48 */ {.x = -48, .y = 1744, .action = spawnCharacters, .group = &r11acidants1c},
-/*  49 */ {.x = -56, .y = 1736, .action = spawnCharacters, .group = &r11acidants1d},
-/*  50 */ {.x = -48, .y = 1728, .action = spawnCharacters, .group = &r11acidants1e},
-/*  51 */ {.x = -56, .y = 1720, .action = spawnCharacters, .group = &r11acidants1f},
-/*  52 */ {.x = -48, .y = 1712, .action = spawnCharacters, .group = &r11acidants1g},
-/*  53 */ {.x = -56, .y = 1704, .action = spawnCharacters, .group = &r11acidants1h},
-/*  54 */ {.x = -96, .y = 1664, .action = spawnCharacters, .group = &r11powerup},
-/*  55 */ {.x = -32, .y = 1632, .action = spawnCharacters, .group = &room11acidants2a},
-/*  56 */ {.x = -48, .y = 1632, .action = spawnCharacters, .group = &r11acidants3a},
-/*  57 */ {.x = -56, .y = 1624, .action = spawnCharacters, .group = &r11acidants3b},
-/*  58 */ {.x = -48, .y = 1616, .action = spawnCharacters, .group = &r11acidants3c},
-/*  59 */ {.x = -56, .y = 1608, .action = spawnCharacters, .group = &r11acidants3d},
-/*  60 */ {.x = -48, .y = 1600, .action = spawnCharacters, .group = &r11acidants3e},
-/*  61 */ {.x = -56, .y = 1592, .action = spawnCharacters, .group = &r11acidants3f},
-/*  62 */ {.x = -48, .y = 1584, .action = spawnCharacters, .group = &r11acidants3g},
-/*  63 */ {.x = -88, .y = 1584, .action = spawnCharacters, .group = &room11acidants2b},
-/*  64 */ {.x = -56, .y = 1576, .action = spawnCharacters, .group = &r11acidants3h},
-/*  65 */ {.x = -48, .y = 1568, .action = spawnCharacters, .group = &r11acidants3i},
-/*  66 */ {.x = -56, .y = 1560, .action = spawnCharacters, .group = &r11acidants3j},
-/*  67 */ {.x = -48, .y = 1552, .action = spawnCharacters, .group = &r11acidants3k},
-/*  68 */ {.x = -40, .y = 1488, .action = spawnCharacters, .group = &r12wasp1c},
-/*  69 */ {.x = -48, .y = 1472, .action = spawnCharacters, .group = &r12wasp1b},
-/*  70 */ {.x = -56, .y = 1456, .action = spawnCharacters, .group = &r12wasp1a},
-/*  71 */ {.x = -40, .y = 1416, .action = spawnCharacters, .group = &r12wasp3a},
-/*  72 */ {.x = -32, .y = 1408, .action = spawnCharacters, .group = &r12wasp3b},
-/*  73 */ {.x = -24, .y = 1400, .action = spawnCharacters, .group = &r12wasp3c},
-/*  74 */ {.x = -56, .y = 1392, .action = spawnCharacters, .group = &r12wasp2a},
-/*  75 */ {.x = -64, .y = 1384, .action = spawnCharacters, .group = &r12wasp2b},
-/*  76 */ {.x = -72, .y = 1376, .action = spawnCharacters, .group = &r12wasp2c},
-/*  77 */ {.x = -40, .y = 1368, .action = spawnCharacters, .group = &r12powerup},
-/*  78 */ {.x = -16, .y = 1336, .action = spawnCharacters, .group = &r12wasp4b},
-/*  79 */ {.x = -80, .y = 1336, .action = spawnCharacters, .group = &r12wasp4a},
-/*  80 */ {.x = -96, .y = 1328, .action = spawnCharacters, .group = &r13acidants1},
-/*  81 */ {.x = -32, .y = 1312, .action = spawnCharacters, .group = &r12wasp4d},
-/*  82 */ {.x = -64, .y = 1312, .action = spawnCharacters, .group = &r12wasp4c},
-/*  83 */ {.x = -48, .y = 1288, .action = spawnCharacters, .group = &r13beetle1},
-/*  84 */ {.x = -64, .y = 1192, .action = spawnCharacters, .group = &r13fly1},
-/*  85 */ {.x = -72, .y = 1184, .action = spawnCharacters, .group = &r13fly2},
-/*  86 */ {.x = -48, .y = 1152, .action = spawnCharacters, .group = &r13fly3},
-/*  87 */ {.x = -56, .y = 1144, .action = spawnCharacters, .group = &r14fly4},
-/*  88 */ {.x = -48, .y = 1128, .action = spawnCharacters, .group = &r14acidants1},
-/*  89 */ {.x = -24, .y = 1072, .action = spawnCharacters, .group = &r14beetles},
-/*  90 */ {.x = -48, .y = 1064, .action = spawnCharacters, .group = &r14acidants2},
-/*  91 */ {.x = -64, .y = 1064, .action = spawnCharacters, .group = &r14wasp1a},
-/*  92 */ {.x = -72, .y = 1056, .action = spawnCharacters, .group = &r14wasp1b},
-/*  93 */ {.x = -56, .y = 1032, .action = spawnCharacters, .group = &r14wasp2b},
-/*  94 */ {.x = -48, .y = 1000, .action = spawnCharacters, .group = &r14acidants3},
-/*  95 */ {.x = -136, .y = 1000, .action = spawnCharacters, .group = &r14powerup1},
-/*  96 */ {.x = -48, .y = 992, .action = spawnCharacters, .group = &r14wasp2a},
-/*  97 */ {.x = -88, .y = 976, .action = spawnCharacters, .group = &r14wasp3a},
-/*  98 */ {.x = -48, .y = 968, .action = spawnCharacters, .group = &r14powerup2},
-/*  99 */ {.x = -96, .y = 936, .action = spawnCharacters, .group = &r14wasp3b},
-/* 100 */ {.x = -72, .y = 880, .action = spawnCharacters, .group = &r14wasp4b},
-/* 101 */ {.x = -48, .y = 872, .action = spawnCharacters, .group = &r15powerup1},
-/* 102 */ {.x = -88, .y = 872, .action = spawnCharacters, .group = &r14wasp4a},
-/* 103 */ {.x = -104, .y = 864, .action = spawnCharacters, .group = &r14wasp4c},
-/* 104 */ {.x = -104, .y = 816, .action = spawnCharacters, .group = &r14wasp5b},
-/* 105 */ {.x = -88, .y = 808, .action = spawnCharacters, .group = &r14wasp5a},
-/* 106 */ {.x = -136, .y = 808, .action = spawnCharacters, .group = &r15powerup2},
-/* 107 */ {.x = -72, .y = 800, .action = spawnCharacters, .group = &r14wasp5c},
-/* 108 */ {.x = -120, .y = 760, .action = spawnCharacters, .group = &r14wasp6a},
-/* 109 */ {.x = -8, .y = 728, .action = spawnCharacters, .group = &Copy_of_r14wasp6a},
-/* 110 */ {.x = -120, .y = 728, .action = spawnCharacters, .group = &r14wasp6b},
-/* 111 */ {.x = -8, .y = 680, .action = spawnCharacters, .group = &Copy_of_r14wasp6b},
-/* 112 */ {.x = -72, .y = 656, .action = spawnCharacters, .group = &r16acidants1},
-/* 113 */ {.x = -32, .y = 608, .action = spawnCharacters, .group = &r16powerup},
-/* 114 */ {.x = -56, .y = 592, .action = spawnCharacters, .group = &r16acidants2},
-/* 115 */ {.x = -16, .y = 520, .action = spawnCharacters, .group = &r16powerup2},
-/* 116 */ {.x = -40, .y = 424, .action = spawnCharacters, .group = &r17powerup},
-/* 117 */ {.x = -104, .y = 408, .action = spawnCharacters, .group = &r17fly1b},
-/* 118 */ {.x = -184, .y = 408, .action = spawnCharacters, .group = &r17fly1a},
-/* 119 */ {.x = -120, .y = 384, .action = spawnCharacters, .group = &r17fly2b},
-/* 120 */ {.x = -200, .y = 384, .action = spawnCharacters, .group = &r17fly2a},
-/* 121 */ {.x = -104, .y = 344, .action = spawnCharacters, .group = &r17wasp1},
-/* 122 */ {.x = -104, .y = 328, .action = spawnCharacters, .group = &r17wasp3},
-/* 123 */ {.x = -104, .y = 312, .action = spawnCharacters, .group = &r17wasp5},
-/* 124 */ {.x = -104, .y = 296, .action = spawnCharacters, .group = &r17wasp7},
-/* 125 */ {.x = -104, .y = 280, .action = spawnCharacters, .group = &r17wasp9},
-/* 126 */ {.x = -16, .y = 224, .action = spawnCharacters, .group = &waspboss},
-/* 127 */ {.x = -152, .y = 208, .action = spawnCharacters, .group = &r18powerup2},
-/* 128 */ {.x = -32, .y = 144, .action = stopStageScroll, .group = &waspboss},
-/* 129 */ {.x = -184, .y = 144, .action = spawnCharacters, .group = &r18powerup3}
+/*   0 */ {.x = -32, .y = 3976, .action = spawnCharacters, .count = 0, .group = &room1ants1},
+/*   1 */ {.x = -48, .y = 3976, .action = unpauseTimer, .count = 0, .group = &room1ants1},
+/*   2 */ {.x = -40, .y = 3960, .action = spawnCharacters, .count = 0, .group = &room1ants2},
+/*   3 */ {.x = -32, .y = 3904, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   4 */ {.x = -32, .y = 3896, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   5 */ {.x = -32, .y = 3888, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   6 */ {.x = -32, .y = 3880, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   7 */ {.x = -32, .y = 3872, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   8 */ {.x = -32, .y = 3864, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*   9 */ {.x = -32, .y = 3856, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*  10 */ {.x = -32, .y = 3848, .action = spawnCharacters, .count = 0, .group = &room1ants3},
+/*  11 */ {.x = -32, .y = 3832, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  12 */ {.x = -32, .y = 3824, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  13 */ {.x = -32, .y = 3816, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  14 */ {.x = -32, .y = 3808, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  15 */ {.x = -32, .y = 3800, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  16 */ {.x = -32, .y = 3792, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  17 */ {.x = -32, .y = 3784, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  18 */ {.x = -32, .y = 3776, .action = spawnCharacters, .count = 0, .group = &room1ants4},
+/*  19 */ {.x = -20, .y = 3768, .action = spawnCharacters, .count = 0, .group = &room1powerup},
+/*  20 */ {.x = -56, .y = 3680, .action = spawnCharacters, .count = 0, .group = &room2ants1},
+/*  21 */ {.x = -56, .y = 3616, .action = spawnCharacters, .count = 0, .group = &room2ants2},
+/*  22 */ {.x = -80, .y = 3576, .action = spawnCharacters, .count = 0, .group = &room2powerup},
+/*  23 */ {.x = -56, .y = 3544, .action = spawnCharacters, .count = 0, .group = &r3fly1},
+/*  24 */ {.x = -56, .y = 3448, .action = spawnCharacters, .count = 0, .group = &room3fly3},
+/*  25 */ {.x = -56, .y = 3352, .action = spawnCharacters, .count = 0, .group = &room3fly4},
+/*  26 */ {.x = -36, .y = 3256, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  27 */ {.x = -36, .y = 3224, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  28 */ {.x = -36, .y = 3200, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  29 */ {.x = -36, .y = 3192, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  30 */ {.x = -56, .y = 3192, .action = spawnCharacters, .count = 0, .group = &room4powerup},
+/*  31 */ {.x = -56, .y = 3168, .action = spawnCharacters, .count = 0, .group = &r4fly1},
+/*  32 */ {.x = -36, .y = 3160, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  33 */ {.x = -36, .y = 3136, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  34 */ {.x = -36, .y = 3128, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  35 */ {.x = -36, .y = 3096, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  36 */ {.x = -36, .y = 3072, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  37 */ {.x = -36, .y = 3064, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  38 */ {.x = -56, .y = 3064, .action = spawnCharacters, .count = 0, .group = &room5fly1},
+/*  39 */ {.x = -72, .y = 3064, .action = spawnCharacters, .count = 0, .group = &r5powerup},
+/*  40 */ {.x = -36, .y = 3032, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  41 */ {.x = -36, .y = 3008, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  42 */ {.x = -36, .y = 3000, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  43 */ {.x = -36, .y = 2968, .action = spawnNextCharacters, .count = 2, .group = &r4r5ants},
+/*  44 */ {.x = -56, .y = 2944, .action = spawnCharacters, .count = 0, .group = &room5bigant},
+/*  45 */ {.x = -8, .y = 2856, .action = spawnNextCharacters, .count = 2, .group = &r6ants},
+/*  46 */ {.x = -8, .y = 2824, .action = spawnNextCharacters, .count = 2, .group = &r6ants},
+/*  47 */ {.x = -24, .y = 2816, .action = spawnCharacters, .count = 0, .group = &room6fly},
+/*  48 */ {.x = -8, .y = 2792, .action = spawnNextCharacters, .count = 2, .group = &r6ants},
+/*  49 */ {.x = -8, .y = 2760, .action = spawnNextCharacters, .count = 2, .group = &r6ants},
+/*  50 */ {.x = -16, .y = 2736, .action = spawnCharacters, .count = 0, .group = &room6bigant},
+/*  51 */ {.x = -56, .y = 2504, .action = spawnCharacters, .count = 0, .group = &room7alien1},
+/*  52 */ {.x = -80, .y = 2448, .action = spawnCharacters, .count = 0, .group = &room7alien2},
+/*  53 */ {.x = -56, .y = 2432, .action = spawnCharacters, .count = 0, .group = &room7alien3},
+/*  54 */ {.x = -32, .y = 2376, .action = spawnCharacters, .count = 0, .group = &room8alien1},
+/*  55 */ {.x = -56, .y = 2360, .action = spawnCharacters, .count = 0, .group = &room8alien2},
+/*  56 */ {.x = -32, .y = 2272, .action = spawnCharacters, .count = 0, .group = &room8powerup},
+/*  57 */ {.x = -72, .y = 2264, .action = spawnCharacters, .count = 0, .group = &room8alien4},
+/*  58 */ {.x = -16, .y = 2184, .action = spawnCharacters, .count = 0, .group = &room9powerup},
+/*  59 */ {.x = -16, .y = 2016, .action = spawnCharacters, .count = 0, .group = &room9alienmind},
+/*  60 */ {.x = -24, .y = 2008, .action = spawnCharacters, .count = 0, .group = &part2},
+/*  61 */ {.x = -32, .y = 1856, .action = spawnCharacters, .count = 0, .group = &room10acidants},
+/*  62 */ {.x = -40, .y = 1856, .action = unpauseTimer, .count = 0, .group = &room10acidants},
+/*  63 */ {.x = -32, .y = 1840, .action = spawnCharacters, .count = 0, .group = &room10acidants2},
+/*  64 */ {.x = -48, .y = 1760, .action = spawnCharacters, .count = 0, .group = &r11acidants1a},
+/*  65 */ {.x = -56, .y = 1752, .action = spawnCharacters, .count = 0, .group = &r11acidants1b},
+/*  66 */ {.x = -48, .y = 1744, .action = spawnCharacters, .count = 0, .group = &r11acidants1c},
+/*  67 */ {.x = -56, .y = 1736, .action = spawnCharacters, .count = 0, .group = &r11acidants1d},
+/*  68 */ {.x = -48, .y = 1728, .action = spawnCharacters, .count = 0, .group = &r11acidants1e},
+/*  69 */ {.x = -56, .y = 1720, .action = spawnCharacters, .count = 0, .group = &r11acidants1f},
+/*  70 */ {.x = -48, .y = 1712, .action = spawnCharacters, .count = 0, .group = &r11acidants1g},
+/*  71 */ {.x = -56, .y = 1704, .action = spawnCharacters, .count = 0, .group = &r11acidants1h},
+/*  72 */ {.x = -96, .y = 1664, .action = spawnCharacters, .count = 0, .group = &r11powerup},
+/*  73 */ {.x = -32, .y = 1632, .action = spawnCharacters, .count = 0, .group = &room11acidants2a},
+/*  74 */ {.x = -48, .y = 1632, .action = spawnCharacters, .count = 0, .group = &r11acidants3a},
+/*  75 */ {.x = -56, .y = 1624, .action = spawnCharacters, .count = 0, .group = &r11acidants3b},
+/*  76 */ {.x = -48, .y = 1616, .action = spawnCharacters, .count = 0, .group = &r11acidants3c},
+/*  77 */ {.x = -56, .y = 1608, .action = spawnCharacters, .count = 0, .group = &r11acidants3d},
+/*  78 */ {.x = -48, .y = 1600, .action = spawnCharacters, .count = 0, .group = &r11acidants3e},
+/*  79 */ {.x = -56, .y = 1592, .action = spawnCharacters, .count = 0, .group = &r11acidants3f},
+/*  80 */ {.x = -48, .y = 1584, .action = spawnCharacters, .count = 0, .group = &r11acidants3g},
+/*  81 */ {.x = -88, .y = 1584, .action = spawnCharacters, .count = 0, .group = &room11acidants2b},
+/*  82 */ {.x = -56, .y = 1576, .action = spawnCharacters, .count = 0, .group = &r11acidants3h},
+/*  83 */ {.x = -48, .y = 1568, .action = spawnCharacters, .count = 0, .group = &r11acidants3i},
+/*  84 */ {.x = -56, .y = 1560, .action = spawnCharacters, .count = 0, .group = &r11acidants3j},
+/*  85 */ {.x = -48, .y = 1552, .action = spawnCharacters, .count = 0, .group = &r11acidants3k},
+/*  86 */ {.x = -40, .y = 1488, .action = spawnCharacters, .count = 0, .group = &r12wasp1c},
+/*  87 */ {.x = -48, .y = 1472, .action = spawnCharacters, .count = 0, .group = &r12wasp1b},
+/*  88 */ {.x = -56, .y = 1456, .action = spawnCharacters, .count = 0, .group = &r12wasp1a},
+/*  89 */ {.x = -40, .y = 1416, .action = spawnCharacters, .count = 0, .group = &r12wasp3a},
+/*  90 */ {.x = -32, .y = 1408, .action = spawnCharacters, .count = 0, .group = &r12wasp3b},
+/*  91 */ {.x = -24, .y = 1400, .action = spawnCharacters, .count = 0, .group = &r12wasp3c},
+/*  92 */ {.x = -56, .y = 1392, .action = spawnCharacters, .count = 0, .group = &r12wasp2a},
+/*  93 */ {.x = -64, .y = 1384, .action = spawnCharacters, .count = 0, .group = &r12wasp2b},
+/*  94 */ {.x = -72, .y = 1376, .action = spawnCharacters, .count = 0, .group = &r12wasp2c},
+/*  95 */ {.x = -40, .y = 1368, .action = spawnCharacters, .count = 0, .group = &r12powerup},
+/*  96 */ {.x = -16, .y = 1336, .action = spawnCharacters, .count = 0, .group = &r12wasp4b},
+/*  97 */ {.x = -80, .y = 1336, .action = spawnCharacters, .count = 0, .group = &r12wasp4a},
+/*  98 */ {.x = -96, .y = 1328, .action = spawnCharacters, .count = 0, .group = &r13acidants1},
+/*  99 */ {.x = -32, .y = 1312, .action = spawnCharacters, .count = 0, .group = &r12wasp4d},
+/* 100 */ {.x = -64, .y = 1312, .action = spawnCharacters, .count = 0, .group = &r12wasp4c},
+/* 101 */ {.x = -48, .y = 1288, .action = spawnCharacters, .count = 0, .group = &r13beetle1},
+/* 102 */ {.x = -64, .y = 1192, .action = spawnCharacters, .count = 0, .group = &r13fly1},
+/* 103 */ {.x = -72, .y = 1184, .action = spawnCharacters, .count = 0, .group = &r13fly2},
+/* 104 */ {.x = -48, .y = 1152, .action = spawnCharacters, .count = 0, .group = &r13fly3},
+/* 105 */ {.x = -56, .y = 1144, .action = spawnCharacters, .count = 0, .group = &r14fly4},
+/* 106 */ {.x = -48, .y = 1128, .action = spawnCharacters, .count = 0, .group = &r14acidants1},
+/* 107 */ {.x = -24, .y = 1072, .action = spawnCharacters, .count = 0, .group = &r14beetles},
+/* 108 */ {.x = -48, .y = 1064, .action = spawnCharacters, .count = 0, .group = &r14acidants2},
+/* 109 */ {.x = -64, .y = 1064, .action = spawnCharacters, .count = 0, .group = &r14wasp1a},
+/* 110 */ {.x = -72, .y = 1056, .action = spawnCharacters, .count = 0, .group = &r14wasp1b},
+/* 111 */ {.x = -56, .y = 1032, .action = spawnCharacters, .count = 0, .group = &r14wasp2b},
+/* 112 */ {.x = -48, .y = 1000, .action = spawnCharacters, .count = 0, .group = &r14acidants3},
+/* 113 */ {.x = -136, .y = 1000, .action = spawnCharacters, .count = 0, .group = &r14powerup1},
+/* 114 */ {.x = -48, .y = 992, .action = spawnCharacters, .count = 0, .group = &r14wasp2a},
+/* 115 */ {.x = -88, .y = 976, .action = spawnCharacters, .count = 0, .group = &r14wasp3a},
+/* 116 */ {.x = -48, .y = 968, .action = spawnCharacters, .count = 0, .group = &r14powerup2},
+/* 117 */ {.x = -96, .y = 936, .action = spawnCharacters, .count = 0, .group = &r14wasp3b},
+/* 118 */ {.x = -72, .y = 880, .action = spawnCharacters, .count = 0, .group = &r14wasp4b},
+/* 119 */ {.x = -48, .y = 872, .action = spawnCharacters, .count = 0, .group = &r15powerup1},
+/* 120 */ {.x = -88, .y = 872, .action = spawnCharacters, .count = 0, .group = &r14wasp4a},
+/* 121 */ {.x = -104, .y = 864, .action = spawnCharacters, .count = 0, .group = &r14wasp4c},
+/* 122 */ {.x = -104, .y = 816, .action = spawnCharacters, .count = 0, .group = &r14wasp5b},
+/* 123 */ {.x = -88, .y = 808, .action = spawnCharacters, .count = 0, .group = &r14wasp5a},
+/* 124 */ {.x = -136, .y = 808, .action = spawnCharacters, .count = 0, .group = &r15powerup2},
+/* 125 */ {.x = -72, .y = 800, .action = spawnCharacters, .count = 0, .group = &r14wasp5c},
+/* 126 */ {.x = -120, .y = 760, .action = spawnCharacters, .count = 0, .group = &r14wasp6a},
+/* 127 */ {.x = -8, .y = 728, .action = spawnCharacters, .count = 0, .group = &Copy_of_r14wasp6a},
+/* 128 */ {.x = -120, .y = 728, .action = spawnCharacters, .count = 0, .group = &r14wasp6b},
+/* 129 */ {.x = -8, .y = 680, .action = spawnCharacters, .count = 0, .group = &Copy_of_r14wasp6b},
+/* 130 */ {.x = -72, .y = 656, .action = spawnCharacters, .count = 0, .group = &r16acidants1},
+/* 131 */ {.x = -32, .y = 608, .action = spawnCharacters, .count = 0, .group = &r16powerup},
+/* 132 */ {.x = -56, .y = 592, .action = spawnCharacters, .count = 0, .group = &r16acidants2},
+/* 133 */ {.x = -16, .y = 520, .action = spawnCharacters, .count = 0, .group = &r16powerup2},
+/* 134 */ {.x = -40, .y = 424, .action = spawnCharacters, .count = 0, .group = &r17powerup},
+/* 135 */ {.x = -104, .y = 408, .action = spawnCharacters, .count = 0, .group = &r17fly1b},
+/* 136 */ {.x = -184, .y = 408, .action = spawnCharacters, .count = 0, .group = &r17fly1a},
+/* 137 */ {.x = -120, .y = 384, .action = spawnCharacters, .count = 0, .group = &r17fly2b},
+/* 138 */ {.x = -200, .y = 384, .action = spawnCharacters, .count = 0, .group = &r17fly2a},
+/* 139 */ {.x = -104, .y = 344, .action = spawnCharacters, .count = 0, .group = &r17wasp1},
+/* 140 */ {.x = -104, .y = 328, .action = spawnCharacters, .count = 0, .group = &r17wasp3},
+/* 141 */ {.x = -104, .y = 312, .action = spawnCharacters, .count = 0, .group = &r17wasp5},
+/* 142 */ {.x = -104, .y = 296, .action = spawnCharacters, .count = 0, .group = &r17wasp7},
+/* 143 */ {.x = -104, .y = 280, .action = spawnCharacters, .count = 0, .group = &r17wasp9},
+/* 144 */ {.x = -16, .y = 224, .action = spawnCharacters, .count = 0, .group = &waspboss},
+/* 145 */ {.x = -152, .y = 208, .action = spawnCharacters, .count = 0, .group = &r18powerup2},
+/* 146 */ {.x = -32, .y = 144, .action = stopStageScroll, .count = 0, .group = &waspboss},
+/* 147 */ {.x = -184, .y = 144, .action = spawnCharacters, .count = 0, .group = &r18powerup3}
+};
+LevelObjectGroup *stage_caravan_groups[] = {
+    &room1ants1,
+    &room1ants2,
+    &room1ants3,
+    &room1ants4,
+    &room1powerup,
+    &room2ants1,
+    &room2ants2,
+    &room2powerup,
+    &r3fly1,
+    &room3fly3,
+    &room3fly4,
+    &r4r5ants,
+    &r4fly1,
+    &room4powerup,
+    &room5fly1,
+    &r5powerup,
+    &r6ants,
+    &room6fly,
+    &room5bigant,
+    &room6bigant,
+    &room7alien1,
+    &room7alien2,
+    &room7alien3,
+    &room8alien1,
+    &room8alien2,
+    &room8alien3,
+    &room8alien4,
+    &room8powerup,
+    &room9powerup,
+    &room9alienmind,
+    &part2,
+    &room10acidants,
+    &room10acidants2,
+    &r11acidants1a,
+    &r11acidants1b,
+    &r11acidants1c,
+    &r11acidants1d,
+    &r11acidants1e,
+    &r11acidants1f,
+    &r11acidants1g,
+    &r11acidants1h,
+    &room11acidants2a,
+    &room11acidants2b,
+    &r11acidants3a,
+    &r11acidants3b,
+    &r11acidants3c,
+    &r11acidants3d,
+    &r11acidants3e,
+    &r11acidants3f,
+    &r11acidants3g,
+    &r11acidants3h,
+    &r11acidants3i,
+    &r11acidants3j,
+    &r11acidants3k,
+    &r11powerup,
+    &r12wasp1a,
+    &r12wasp1b,
+    &r12wasp1c,
+    &r12wasp2a,
+    &r12wasp2b,
+    &r12wasp2c,
+    &r12wasp3a,
+    &r12wasp3b,
+    &r12wasp3c,
+    &r12wasp4a,
+    &r12wasp4b,
+    &r12wasp4c,
+    &r12wasp4d,
+    &r12powerup,
+    &r13acidants1,
+    &r13beetle1,
+    &r13fly1,
+    &r13fly2,
+    &r13fly3,
+    &r14fly4,
+    &r14beetles,
+    &r14acidants1,
+    &r14acidants2,
+    &r14acidants3,
+    &r14wasp1a,
+    &r14wasp1b,
+    &r14wasp2a,
+    &r14wasp2b,
+    &r14wasp3a,
+    &r14wasp3b,
+    &r14wasp4a,
+    &r14wasp4b,
+    &r14wasp4c,
+    &r14wasp5a,
+    &r14wasp5b,
+    &r14wasp5c,
+    &r14wasp6a,
+    &r14wasp6b,
+    &Copy_of_r14wasp6a,
+    &Copy_of_r14wasp6b,
+    &r14powerup1,
+    &r14powerup2,
+    &r15powerup2,
+    &r15powerup1,
+    &r16acidants1,
+    &r16powerup,
+    &r16acidants2,
+    &r16powerup2,
+    &r17powerup,
+    &r17fly1a,
+    &r17fly1b,
+    &r17fly2a,
+    &r17fly2b,
+    &r17wasp1,
+    &r17wasp3,
+    &r17wasp5,
+    &r17wasp7,
+    &r17wasp9,
+    &r18powerup2,
+    &r18powerup3,
+    &waspboss
 };

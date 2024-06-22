@@ -3,9 +3,11 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (130)
-
+#define stage_caravan_numTriggers (148)
 extern Trigger stage_caravan_triggers[];
+
+#define stage_caravan_numGroups (116)
+extern LevelObjectGroup *stage_caravan_groups[];
 
 extern const GameObjectDefinition defAnt;
 extern const GameObjectDefinition defHoneyPot;
@@ -24,6 +26,7 @@ extern const GameObjectDefinition defWaspShooter;
 extern const GameObjectDefinition defWaspBoss;
 void spawnCharacters(Trigger *trigger);
 void unpauseTimer(Trigger *trigger);
+void spawnNextCharacters(Trigger *trigger);
 void stopStageScroll(Trigger *trigger);
 void faceRight(GameObject *self, PathPoint *pathPoint);
 void enterBackground(GameObject *self, PathPoint *pathPoint);
