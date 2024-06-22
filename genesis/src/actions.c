@@ -35,6 +35,7 @@ void spawnNextCharacters(Trigger *trigger)
         gobj->parentTrigger = trigger;
         object++;
     }
+    group->numObjectsSpawned += n - group->numObjectsSpawned;
 }
 
 void stopStageScroll(Trigger *trigger)
@@ -71,9 +72,7 @@ void startWaspAttack(GameObject *self, PathPoint *pathPoint)
 
 void markDisappear(GameObject *self, PathPoint *pathPoint)
 {
-    // GAME_releaseObject(self);
-    if (self->sprite)
-        SPR_setVisibility(self->sprite, HIDDEN);
+    GAME_releaseObject(self);
 }
 
 void BeetleShoot(GameObject *self, PathPoint *pathPoint)
