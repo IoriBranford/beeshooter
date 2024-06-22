@@ -1,3 +1,4 @@
+/// <reference types="@mapeditor/tiled-api" />
 /**
 * @typedef {Object} LevelObjectGroup
 * @property {string} cName
@@ -184,7 +185,7 @@ return `{
                         break;
                 }
             })
-            levelObjectGroup.cCode = genLevelObjectGroupCode(levelObjectGroup)
+            levelObjectGroup.LevelObject.sort((a, b) => b.y - a.y)
             return levelObjectGroup
         }
 
@@ -227,7 +228,9 @@ return `{
         /** @type {string[]} */
         let cCode = []
         cCode.push(`#include "${baseName}.h"`,
-            ...objectGroups.map(({cCode}) => cCode.join('\n')),
+            ...objectGroups.map((levelObjectGroup) =>
+                genLevelObjectGroupCode(levelObjectGroup).join('\n')
+            ),
             `Trigger ${baseName}_triggers[] = {`,
             triggers.map((trigger, i) => {
                 let action = trigger.resolvedProperty('action')
