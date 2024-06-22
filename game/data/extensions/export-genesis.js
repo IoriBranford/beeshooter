@@ -243,6 +243,9 @@ return `{
                     action = `0 /* to be assigned */`
                 return `/* ${i.toString().padStart(3, ' ')} */ {.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .group = &${toCName(trigger.layer.name)}}`
             }).join(',\n'),
+            '};',
+            `LevelObjectGroup *${baseName}_groups[] = {`,
+            objectGroups.map(levelObjectGroup => `    &${levelObjectGroup.cName}`).join(',\n'),
             '};')
 
         /**
@@ -256,8 +259,10 @@ return `{
 #include "level.h"
 
 #define ${baseName}_numTriggers (${triggers.length})
-
 extern Trigger ${baseName}_triggers[];
+
+#define ${baseName}_numGroups (${objectGroups.length})
+extern LevelObjectGroup *${baseName}_groups[];
 `,
             ...Object.values(objectDefs),
             ...Object.values(triggerActions),
