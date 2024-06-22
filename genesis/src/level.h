@@ -16,6 +16,7 @@ typedef void (*GObjPathPointFunction)(GameObject *self, PathPoint *pathPoint);
 
 struct Trigger {
     s16 x, y;
+    u16 count;
     TriggerFunction action;
     LevelObjectGroup *group;
 };
@@ -36,10 +37,12 @@ struct LevelObject {
     const GameObjectDefinition *definition;
     s16 x, y;
     u16 animInd, flags;
+    u16 pathIndex;
+    Path *path;
     LevelObjectGroup *group;
 };
 struct LevelObjectGroup {
-    u8 numTriggers, numPaths, numObjects, _;
+    u8 numTriggers, numPaths, numObjects, numObjectsSpawned;
     Trigger *triggers;
     Path *paths;
     LevelObject *objects;
