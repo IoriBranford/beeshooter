@@ -70,6 +70,10 @@ void GOBJ_initSprite(GameObject *self) {
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
 }
 
+bool GOBJ_isAllocated(GameObject *self) {
+    return (self->internalState & OBJ_ALLOCATED) != 0;
+}
+
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay) {
     Vect2D_f16 v = {self->centerX, self->centerY};
     const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
@@ -349,8 +353,11 @@ void GOBJ_followPath(GameObject *self) {
             GObjPathPointFunction *action = pathPoint->actions;
             if (action) {
                 for (u32 i = 0; i < pathPoint->numActions; ++i) {
-                    if (*action)
+                    if (*action) {
                         (*action)(self, pathPoint);
+                        if (!GOBJ_isAllocated(self))
+                            return;
+                    }
                     ++action;
                 }
             }
@@ -378,6 +385,8 @@ void GOBJ_updatePathWalker(GameObject *self) {
         GOBJ_startTowardsPathPoint(self, pathIndex);
     }
     GOBJ_followPath(self);
+    if (!GOBJ_isAllocated(self))
+        return;
     GOBJ_updateInvul(self);
     GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
