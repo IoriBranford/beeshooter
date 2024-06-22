@@ -21,6 +21,22 @@ void spawnCharacters(Trigger *trigger)
     }
 }
 
+void spawnNextCharacters(Trigger *trigger)
+{
+    LevelObjectGroup *group = trigger->group;
+    LevelObject *object = group->objects;
+    if (!object)
+        return;
+    int n = min(group->numObjectsSpawned + trigger->count, group->numObjects);
+    object += trigger->count;
+    for (int i = group->numObjectsSpawned; i < n; ++i) {
+        GameObject *gobj = LEVEL_createObject(object);
+        gobj->parentType = PARENTTYPE_TRIGGER;
+        gobj->parentTrigger = trigger;
+        object++;
+    }
+}
+
 void stopStageScroll(Trigger *trigger)
 {
     LEVEL_setVelY(0);
