@@ -150,7 +150,7 @@ return `{
                             definition = '0 /* to be assigned */'
                         }
                         let anim = Math.sin(object.rotation)
-                        anim = (anim < 0) && -1 || 1
+                        anim = (anim < 0) && Math.floor(anim) || Math.ceil(anim)
                         let flags = 0
                         if ((object.resolvedProperty('z') || 0) >= 0)
                             flags += 0x08000
