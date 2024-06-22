@@ -28,7 +28,7 @@ void spawnNextCharacters(Trigger *trigger)
     if (!object)
         return;
     int n = min(group->numObjectsSpawned + trigger->count, group->numObjects);
-    object += trigger->count;
+    object += group->numObjectsSpawned;
     for (int i = group->numObjectsSpawned; i < n; ++i) {
         GameObject *gobj = LEVEL_createObject(object);
         gobj->parentType = PARENTTYPE_TRIGGER;
@@ -44,7 +44,8 @@ void stopStageScroll(Trigger *trigger)
 
 void faceRight(GameObject *self, PathPoint *pathPoint)
 {
-    SPR_setHFlip(self->sprite, false);
+    if (self->sprite)
+        SPR_setHFlip(self->sprite, false);
 }
 
 void startShooting(GameObject *self, PathPoint *pathPoint) {
@@ -70,7 +71,9 @@ void startWaspAttack(GameObject *self, PathPoint *pathPoint)
 
 void markDisappear(GameObject *self, PathPoint *pathPoint)
 {
-    GAME_releaseObject(self);
+    // GAME_releaseObject(self);
+    if (self->sprite)
+        SPR_setVisibility(self->sprite, HIDDEN);
 }
 
 void BeetleShoot(GameObject *self, PathPoint *pathPoint)
