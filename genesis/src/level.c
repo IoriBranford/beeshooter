@@ -36,6 +36,9 @@ void LEVEL_init() {
     if (nextTriggerIndex > 0 && nextTriggerIndex < numTriggers)
         cameraY = FIX32(nextTrigger->y) - cameraVelY;
 
+    for (int i = 0; i < stage_caravan_numGroups; ++i)
+        stage_caravan_groups[i]->numObjectsSpawned = 0;
+
     PAL_setPalette(BG_PALETTE, bgPalette.data, DMA);
     VDP_setBackgroundColor((BG_PALETTE << 4) + 1);
     VDP_loadTileSet(&bgTileset, BG_TILESET_START_INDEX, DMA);
