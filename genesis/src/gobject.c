@@ -394,8 +394,9 @@ void GOBJ_updatePathWalker(GameObject *self) {
     GOBJ_updateInvul(self);
     GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffSideOrBottom(self)) {
-        if (!self->path || self->pathIndex >= self->path->numPoints)
+    bool offscreen = GOBJ_isSpriteOffSideOrBottom(self);
+    if (offscreen) {
+        if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints)
             GAME_releaseObject(self);
     }
 }
