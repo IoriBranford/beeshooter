@@ -22,20 +22,20 @@ typedef struct GameObject {
     Object;
 
     union {
-        Trigger *parentTrigger;
+        const Trigger *parentTrigger;
         GameObject *parentObject;
     };
     ParentType parentType;
 
     const GameObjectDefinition *definition;
-    LevelObject *levelObject;
+    const LevelObject *levelObject;
 
     Sprite *sprite;
     fix16 centerX, centerY;
     fix16 velX, velY;
     fix16 destX, destY;
 
-    Path *path;
+    const Path *path;
     u16 pathIndex;
     fix16 pathPointDistLeft;
     fix16 speed;

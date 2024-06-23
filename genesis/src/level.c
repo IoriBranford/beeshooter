@@ -16,7 +16,7 @@
 
 static Map *bg;
 static fix32 cameraY, cameraVelY;
-static Trigger *nextTrigger;
+static const Trigger *nextTrigger;
 static u32 nextTriggerIndex;
 static u32 numTriggers;
 
@@ -90,15 +90,15 @@ void LEVEL_setVelY(fix32 velY) {
     cameraVelY = velY;
 }
 
-Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {
-    Path **path = group->paths;
+const Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {
+    const Path **path = group->paths;
     if (!path)
         return NULL;
 
-    Path *closest = 0;
+    const Path *closest = 0;
     fix32 closestDist = 0x7FFFFFFF;
     for (int i = 0; i < group->numPaths; ++i) {
-        PathPoint *point0 = (*path)->points;
+        const PathPoint *point0 = (*path)->points;
         fix32 pathX = FIX32((*path)->x + point0->x);
         fix32 pathY = FIX32((*path)->y + point0->y);
         fix32 dist = getApproximatedDistance(pathX - xWorld, pathY - yWorld);
@@ -135,7 +135,7 @@ u16 LEVEL_getPaletteSlot(const Palette *palette) {
     return paletteSlot;
 }
 
-GameObject* LEVEL_createObject(LevelObject *lobj) {
+GameObject* LEVEL_createObject(const LevelObject *lobj) {
     GameObject *obj = GOBJ_createFromDef(lobj->definition,
         FIX16(lobj->x), LEVEL_toScreenY(FIX32(lobj->y)));
     if (!obj)

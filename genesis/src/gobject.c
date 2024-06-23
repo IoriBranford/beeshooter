@@ -290,19 +290,19 @@ bool GOBJ_updateMovement(GameObject *self) {
 }
 
 void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
-    Trigger *pathParentTrigger =
+    const Trigger *pathParentTrigger =
         self->definition->pathParent == PATHPARENT_TRIGGER
         ? self->parentTrigger : NULL;
     fix16 velX = 0, velY = pathParentTrigger ? 0 : -fix32ToFix16(LEVEL_cameraVelY());
     fix16 speed = 0;
     fix16 dist = 0;
-    Path *path = self->path;
+    const Path *path = self->path;
     if (!path || pathIndex >= path->numPoints) {
         pathIndex = 0xFFFF;
         dist = 0x7FFF;
         velY = -fix32ToFix16(LEVEL_cameraVelY());
     } else {
-        PathPoint *pathPoint = &path->points[pathIndex];
+        const PathPoint *pathPoint = &path->points[pathIndex];
         speed = pathPoint->speedTo;
         if (pathIndex == 0) {
             fix16 destX = FIX16(path->x + pathPoint->x);
@@ -338,14 +338,14 @@ void GOBJ_followPath(GameObject *self) {
         self->centerX += self->velX;
         self->centerY += self->velY;
     } else {
-        Path *path = self->path;
+        const Path *path = self->path;
         u32 pathIndex = self->pathIndex;
-        PathPoint *pathPoint = NULL;
+        const PathPoint *pathPoint = NULL;
         if (path && pathIndex < path->numPoints) {
             pathPoint = &path->points[pathIndex];
             fix16 destX = FIX16(path->x + pathPoint->x);
             fix16 destY = path->y + pathPoint->y;
-            Trigger *pathParentTrigger =
+            const Trigger *pathParentTrigger =
                 self->definition->pathParent == PATHPARENT_TRIGGER
                 ? self->parentTrigger : NULL;
             if (pathParentTrigger)
@@ -354,7 +354,7 @@ void GOBJ_followPath(GameObject *self) {
                 destY = LEVEL_toScreenY(FIX32(destY));
             self->centerX = destX;
             self->centerY = destY;
-            GObjPathPointFunction *action = pathPoint->actions;
+            const GObjPathPointFunction *action = pathPoint->actions;
             if (action) {
                 for (u32 i = 0; i < pathPoint->numActions; ++i) {
                     if (*action) {
@@ -371,10 +371,10 @@ void GOBJ_followPath(GameObject *self) {
 }
 
 void GOBJ_updatePathWalker(GameObject *self) {
-    Path *path = self->path;
+    const Path *path = self->path;
     u16 pathIndex = 0;
     if (!path) {
-        LevelObject *lobj = self->levelObject;
+        const LevelObject *lobj = self->levelObject;
         if (lobj) {
             path = lobj->path;
             pathIndex = lobj->pathIndex;

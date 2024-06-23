@@ -68,12 +68,12 @@ tiled.registerMapFormat("Honey Guardian C level", {
 
                     let pathPointActionsCName = `path${path.id}_${i}_actions`
 
-                    cCode.push(`static GObjPathPointFunction ${pathPointActionsCName}[] = {`,
+                    cCode.push(`static const GObjPathPointFunction ${pathPointActionsCName}[] = {`,
                         pathPoints.map((pathPoint) => {
                             let action = pathPoint.resolvedProperty('action')
                             if (action) {
                                 action = action.replace(/\W/, '_')
-                                pathPointActions[action] = `void ${action}(GameObject *self, PathPoint *pathPoint);`
+                                pathPointActions[action] = `void ${action}(GameObject *self, const PathPoint *pathPoint);`
                             } else {
                                 action = `0 /* to be assigned */`
                             }
@@ -83,7 +83,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                 })
 
                 let speed = path.resolvedProperty('speed') || 1
-                cCode.push(`static Path path${path.id} = {`,
+                cCode.push(`static const Path path${path.id} = {`,
                     `.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = {`,
                     path.polygon.map((point, i, points) => {
                         let pointData = pointsData[i]
@@ -121,14 +121,14 @@ return `{
 
             let pathsCName = `${cName}_paths`
             if (levelObjectGroup.Path.length > 0) {
-                cCode.push(`static Path *${pathsCName}[] = {`,
+                cCode.push(`static const Path *${pathsCName}[] = {`,
                     levelObjectGroup.Path.map(path => `    &path${path.id}`).join(',\n'),
                     '};')
             }
 
             if (levelObjectGroup.LevelObject.length > 0) {
                 let objectsCName = `${cName}_objects`
-                cCode.push(`static LevelObject ${objectsCName}[] = {`,
+                cCode.push(`static const LevelObject ${objectsCName}[] = {`,
                     levelObjectGroup.LevelObject.map(object => {
                         let objPathPointIndex = 0
                         let objPath = object.resolvedProperty('path')
@@ -264,11 +264,11 @@ return `{
             ...objectGroups.map((levelObjectGroup) =>
                 genLevelObjectGroupCode(levelObjectGroup).join('\n')
             ),
-            `Trigger ${baseName}_triggers[] = {`,
+            `const Trigger ${baseName}_triggers[] = {`,
             triggers.map((trigger, i) => {
                 let action = trigger.resolvedProperty('action')
                 if (action)
-                    triggerActions[action] = `void ${action}(Trigger *trigger);`
+                    triggerActions[action] = `void ${action}(const Trigger *trigger);`
                 else
                     action = `0 /* to be assigned */`
                 let count = trigger.resolvedProperty('count') || 0
@@ -290,7 +290,7 @@ return `{
 #include "level.h"
 
 #define ${baseName}_numTriggers (${triggers.length})
-extern Trigger ${baseName}_triggers[];
+extern const Trigger ${baseName}_triggers[];
 
 #define ${baseName}_numGroups (${objectGroups.length})
 extern LevelObjectGroup *${baseName}_groups[];

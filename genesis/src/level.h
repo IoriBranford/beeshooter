@@ -11,8 +11,8 @@ typedef struct GameObjectDefinition GameObjectDefinition;
 typedef struct GameObject GameObject;
 typedef struct LevelObject LevelObject;
 typedef struct LevelObjectGroup LevelObjectGroup;
-typedef void (*TriggerFunction)(Trigger *self);
-typedef void (*GObjPathPointFunction)(GameObject *self, PathPoint *pathPoint);
+typedef void (*TriggerFunction)(const Trigger *self);
+typedef void (*GObjPathPointFunction)(GameObject *self, const PathPoint *pathPoint);
 
 struct Trigger {
     s16 x, y;
@@ -26,26 +26,26 @@ struct PathPoint {
     fix16 speedTo, distTo;
     u8 shootInterval, shootCount;
     u32 numActions;
-    GObjPathPointFunction *actions;
+    const GObjPathPointFunction *actions;
 };
 struct Path {
     s16 x, y;
     u32 numPoints;
-    PathPoint points[];
+    const PathPoint points[];
 };
 struct LevelObject {
     const GameObjectDefinition *definition;
     s16 x, y;
     u16 animInd, flags;
     u16 pathIndex;
-    Path *path;
+    const Path *path;
     LevelObjectGroup *group;
 };
 struct LevelObjectGroup {
     u8 numTriggers, numPaths, numObjects, numObjectsSpawned;
-    Trigger *triggers;
-    Path **paths;
-    LevelObject *objects;
+    const Trigger *triggers;
+    const Path **paths;
+    const LevelObject *objects;
 };
 
 void LEVEL_init();
@@ -60,7 +60,7 @@ void LEVEL_setVelY(fix32 velY);
 
 u16 LEVEL_getPaletteSlot(const Palette *palette);
 
-Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld);
-GameObject* LEVEL_createObject(LevelObject *lobj);
+const Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld);
+GameObject* LEVEL_createObject(const LevelObject *lobj);
 
 #endif

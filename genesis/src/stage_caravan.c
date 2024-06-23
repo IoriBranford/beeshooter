@@ -1,6 +1,6 @@
 #include "stage_caravan.h"
 extern LevelObjectGroup room1ants1;
-static Path path2186 = {
+static const Path path2186 = {
 .x = 264, .y = 4056, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
@@ -36,7 +36,7 @@ static Path path2186 = {
 }
 }
 };
-static Path path2187 = {
+static const Path path2187 = {
 .x = 272, .y = 4064, .numPoints = 4, .points = {
 {
     .x = 0, .y = -48,
@@ -72,7 +72,7 @@ static Path path2187 = {
 }
 }
 };
-static Path path2188 = {
+static const Path path2188 = {
 .x = 280, .y = 4072, .numPoints = 4, .points = {
 {
     .x = 0, .y = -56,
@@ -108,10 +108,10 @@ static Path path2188 = {
 }
 }
 };
-static GObjPathPointFunction path2189_3_actions[] = {
+static const GObjPathPointFunction path2189_3_actions[] = {
 faceRight
 };
-static Path path2189 = {
+static const Path path2189 = {
 .x = 288, .y = 4080, .numPoints = 5, .points = {
 {
     .x = 0, .y = -64,
@@ -155,10 +155,10 @@ static Path path2189 = {
 }
 }
 };
-static GObjPathPointFunction path2190_3_actions[] = {
+static const GObjPathPointFunction path2190_3_actions[] = {
 faceRight
 };
-static Path path2190 = {
+static const Path path2190 = {
 .x = 296, .y = 4088, .numPoints = 5, .points = {
 {
     .x = 0, .y = -72,
@@ -202,14 +202,14 @@ static Path path2190 = {
 }
 }
 };
-static Path *room1ants1_paths[] = {
+static const Path *room1ants1_paths[] = {
     &path2186,
     &path2187,
     &path2188,
     &path2189,
     &path2190
 };
-static LevelObject room1ants1_objects[] = {
+static const LevelObject room1ants1_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 4016,
@@ -237,7 +237,7 @@ LevelObjectGroup room1ants1 = {
     .numObjects = 3, .objects = room1ants1_objects
 };
 extern LevelObjectGroup room1ants2;
-static Path path2199 = {
+static const Path path2199 = {
 .x = -8, .y = 4032, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
@@ -273,7 +273,7 @@ static Path path2199 = {
 }
 }
 };
-static Path path2200 = {
+static const Path path2200 = {
 .x = -16, .y = 4024, .numPoints = 4, .points = {
 {
     .x = 0, .y = -32,
@@ -309,7 +309,7 @@ static Path path2200 = {
 }
 }
 };
-static Path path2201 = {
+static const Path path2201 = {
 .x = -24, .y = 4016, .numPoints = 4, .points = {
 {
     .x = 0, .y = -24,
@@ -345,7 +345,7 @@ static Path path2201 = {
 }
 }
 };
-static Path path2202 = {
+static const Path path2202 = {
 .x = -32, .y = 4024, .numPoints = 3, .points = {
 {
     .x = 0, .y = -32,
@@ -373,7 +373,7 @@ static Path path2202 = {
 }
 }
 };
-static Path path2203 = {
+static const Path path2203 = {
 .x = -40, .y = 4032, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
@@ -409,14 +409,14 @@ static Path path2203 = {
 }
 }
 };
-static Path *room1ants2_paths[] = {
+static const Path *room1ants2_paths[] = {
     &path2199,
     &path2200,
     &path2201,
     &path2202,
     &path2203
 };
-static LevelObject room1ants2_objects[] = {
+static const LevelObject room1ants2_objects[] = {
 {
     .definition = &defAnt,
     .x = -24, .y = 3992,
@@ -444,7 +444,7 @@ LevelObjectGroup room1ants2 = {
     .numObjects = 3, .objects = room1ants2_objects
 };
 extern LevelObjectGroup room1ants3;
-static Path path2204 = {
+static const Path path2204 = {
 .x = 0, .y = 3912, .numPoints = 8, .points = {
 {
     .x = -8, .y = 0,
@@ -512,10 +512,10 @@ static Path path2204 = {
 }
 }
 };
-static Path *room1ants3_paths[] = {
+static const Path *room1ants3_paths[] = {
     &path2204
 };
-static LevelObject room1ants3_objects[] = {
+static const LevelObject room1ants3_objects[] = {
 {
     .definition = &defAnt,
     .x = -8, .y = 3912,
@@ -529,7 +529,7 @@ LevelObjectGroup room1ants3 = {
     .numObjects = 1, .objects = room1ants3_objects
 };
 extern LevelObjectGroup room1ants4;
-static Path path2221 = {
+static const Path path2221 = {
 .x = 264, .y = 3840, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
@@ -581,7 +581,7 @@ static Path path2221 = {
 }
 }
 };
-static Path path2253 = {
+static const Path path2253 = {
 .x = 272, .y = 3880, .numPoints = 8, .points = {
 {
     .x = -8, .y = 0,
@@ -649,11 +649,11 @@ static Path path2253 = {
 }
 }
 };
-static Path *room1ants4_paths[] = {
+static const Path *room1ants4_paths[] = {
     &path2221,
     &path2253
 };
-static LevelObject room1ants4_objects[] = {
+static const LevelObject room1ants4_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3880,
@@ -674,7 +674,7 @@ LevelObjectGroup room1ants4 = {
     .numObjects = 2, .objects = room1ants4_objects
 };
 extern LevelObjectGroup room1powerup;
-static LevelObject room1powerup_objects[] = {
+static const LevelObject room1powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 80, .y = 3752,
@@ -688,7 +688,7 @@ LevelObjectGroup room1powerup = {
     .numObjects = 1, .objects = room1powerup_objects
 };
 extern LevelObjectGroup room2ants1;
-static Path path2268 = {
+static const Path path2268 = {
 .x = -8, .y = 3616, .numPoints = 2, .points = {
 {
     .x = 0, .y = -8,
@@ -708,7 +708,7 @@ static Path path2268 = {
 }
 }
 };
-static Path path2269 = {
+static const Path path2269 = {
 .x = 264, .y = 3672, .numPoints = 2, .points = {
 {
     .x = 0, .y = -8,
@@ -728,7 +728,7 @@ static Path path2269 = {
 }
 }
 };
-static Path path2271 = {
+static const Path path2271 = {
 .x = -8, .y = 3648, .numPoints = 2, .points = {
 {
     .x = 0, .y = 8,
@@ -748,7 +748,7 @@ static Path path2271 = {
 }
 }
 };
-static Path path2274 = {
+static const Path path2274 = {
 .x = 264, .y = 3704, .numPoints = 2, .points = {
 {
     .x = 0, .y = 8,
@@ -768,7 +768,7 @@ static Path path2274 = {
 }
 }
 };
-static Path path2275 = {
+static const Path path2275 = {
 .x = -8, .y = 3680, .numPoints = 2, .points = {
 {
     .x = 0, .y = 24,
@@ -788,14 +788,14 @@ static Path path2275 = {
 }
 }
 };
-static Path *room2ants1_paths[] = {
+static const Path *room2ants1_paths[] = {
     &path2268,
     &path2269,
     &path2271,
     &path2274,
     &path2275
 };
-static LevelObject room2ants1_objects[] = {
+static const LevelObject room2ants1_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3712,
@@ -837,7 +837,7 @@ LevelObjectGroup room2ants1 = {
     .numObjects = 5, .objects = room2ants1_objects
 };
 extern LevelObjectGroup room2ants2;
-static Path path2288 = {
+static const Path path2288 = {
 .x = -8, .y = 3624, .numPoints = 2, .points = {
 {
     .x = 0, .y = 16,
@@ -857,7 +857,7 @@ static Path path2288 = {
 }
 }
 };
-static Path path2291 = {
+static const Path path2291 = {
 .x = 264, .y = 3648, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -877,7 +877,7 @@ static Path path2291 = {
 }
 }
 };
-static Path path2293 = {
+static const Path path2293 = {
 .x = 264, .y = 3680, .numPoints = 2, .points = {
 {
     .x = 0, .y = 16,
@@ -897,7 +897,7 @@ static Path path2293 = {
 }
 }
 };
-static Path path2294 = {
+static const Path path2294 = {
 .x = -8, .y = 3656, .numPoints = 2, .points = {
 {
     .x = 0, .y = 32,
@@ -917,7 +917,7 @@ static Path path2294 = {
 }
 }
 };
-static Path path2297 = {
+static const Path path2297 = {
 .x = 264, .y = 3712, .numPoints = 2, .points = {
 {
     .x = 0, .y = 32,
@@ -937,14 +937,14 @@ static Path path2297 = {
 }
 }
 };
-static Path *room2ants2_paths[] = {
+static const Path *room2ants2_paths[] = {
     &path2288,
     &path2291,
     &path2293,
     &path2294,
     &path2297
 };
-static LevelObject room2ants2_objects[] = {
+static const LevelObject room2ants2_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3744,
@@ -986,7 +986,7 @@ LevelObjectGroup room2ants2 = {
     .numObjects = 5, .objects = room2ants2_objects
 };
 extern LevelObjectGroup room2powerup;
-static LevelObject room2powerup_objects[] = {
+static const LevelObject room2powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 136, .y = 3568,
@@ -1000,23 +1000,23 @@ LevelObjectGroup room2powerup = {
     .numObjects = 1, .objects = room2powerup_objects
 };
 extern LevelObjectGroup r3fly1;
-static GObjPathPointFunction path2303_0_actions[] = {
+static const GObjPathPointFunction path2303_0_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2303_3_actions[] = {
+static const GObjPathPointFunction path2303_3_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2303_6_actions[] = {
+static const GObjPathPointFunction path2303_6_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2303_8_actions[] = {
+static const GObjPathPointFunction path2303_8_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2303_9_actions[] = {
+static const GObjPathPointFunction path2303_9_actions[] = {
 PathPoint_SetSpeed
 };
-static Path path2303 = {
+static const Path path2303 = {
 .x = 0, .y = 3504, .numPoints = 12, .points = {
 {
     .x = 64, .y = 112,
@@ -1116,23 +1116,23 @@ static Path path2303 = {
 }
 }
 };
-static GObjPathPointFunction path2304_0_actions[] = {
+static const GObjPathPointFunction path2304_0_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2304_3_actions[] = {
+static const GObjPathPointFunction path2304_3_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2304_6_actions[] = {
+static const GObjPathPointFunction path2304_6_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2304_8_actions[] = {
+static const GObjPathPointFunction path2304_8_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2304_9_actions[] = {
+static const GObjPathPointFunction path2304_9_actions[] = {
 PathPoint_SetSpeed
 };
-static Path path2304 = {
+static const Path path2304 = {
 .x = 224, .y = 3496, .numPoints = 12, .points = {
 {
     .x = -32, .y = 120,
@@ -1232,11 +1232,11 @@ static Path path2304 = {
 }
 }
 };
-static Path *r3fly1_paths[] = {
+static const Path *r3fly1_paths[] = {
     &path2303,
     &path2304
 };
-static LevelObject r3fly1_objects[] = {
+static const LevelObject r3fly1_objects[] = {
 {
     .definition = &defFly,
     .x = 64, .y = 3616,
@@ -1257,14 +1257,14 @@ LevelObjectGroup r3fly1 = {
     .numObjects = 2, .objects = r3fly1_objects
 };
 extern LevelObjectGroup room3fly3;
-static GObjPathPointFunction path2314_1_actions[] = {
+static const GObjPathPointFunction path2314_1_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2314_4_actions[] = {
+static const GObjPathPointFunction path2314_4_actions[] = {
 startShooting
 };
-static Path path2314 = {
+static const Path path2314 = {
 .x = 0, .y = 3408, .numPoints = 10, .points = {
 {
     .x = 104, .y = 88,
@@ -1348,14 +1348,14 @@ static Path path2314 = {
 }
 }
 };
-static GObjPathPointFunction path2315_1_actions[] = {
+static const GObjPathPointFunction path2315_1_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2315_4_actions[] = {
+static const GObjPathPointFunction path2315_4_actions[] = {
 startShooting
 };
-static Path path2315 = {
+static const Path path2315 = {
 .x = 224, .y = 3400, .numPoints = 10, .points = {
 {
     .x = -72, .y = 96,
@@ -1439,11 +1439,11 @@ static Path path2315 = {
 }
 }
 };
-static Path *room3fly3_paths[] = {
+static const Path *room3fly3_paths[] = {
     &path2314,
     &path2315
 };
-static LevelObject room3fly3_objects[] = {
+static const LevelObject room3fly3_objects[] = {
 {
     .definition = &defFly,
     .x = 104, .y = 3496,
@@ -1464,17 +1464,17 @@ LevelObjectGroup room3fly3 = {
     .numObjects = 2, .objects = room3fly3_objects
 };
 extern LevelObjectGroup room3fly4;
-static GObjPathPointFunction path2323_2_actions[] = {
+static const GObjPathPointFunction path2323_2_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2323_5_actions[] = {
+static const GObjPathPointFunction path2323_5_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2323_7_actions[] = {
+static const GObjPathPointFunction path2323_7_actions[] = {
 PathPoint_SetSpeed
 };
-static Path path2323 = {
+static const Path path2323 = {
 .x = -32, .y = 3560, .numPoints = 9, .points = {
 {
     .x = 72, .y = -16,
@@ -1550,17 +1550,17 @@ static Path path2323 = {
 }
 }
 };
-static GObjPathPointFunction path2324_2_actions[] = {
+static const GObjPathPointFunction path2324_2_actions[] = {
 enterForeground,
 startShooting
 };
-static GObjPathPointFunction path2324_5_actions[] = {
+static const GObjPathPointFunction path2324_5_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2324_7_actions[] = {
+static const GObjPathPointFunction path2324_7_actions[] = {
 PathPoint_SetSpeed
 };
-static Path path2324 = {
+static const Path path2324 = {
 .x = 288, .y = 3560, .numPoints = 9, .points = {
 {
     .x = -72, .y = -16,
@@ -1636,11 +1636,11 @@ static Path path2324 = {
 }
 }
 };
-static Path *room3fly4_paths[] = {
+static const Path *room3fly4_paths[] = {
     &path2323,
     &path2324
 };
-static LevelObject room3fly4_objects[] = {
+static const LevelObject room3fly4_objects[] = {
 {
     .definition = &defFly,
     .x = 40, .y = 3544,
@@ -1661,40 +1661,40 @@ LevelObjectGroup room3fly4 = {
     .numObjects = 2, .objects = room3fly4_objects
 };
 extern LevelObjectGroup r4r5ants;
-static GObjPathPointFunction path2373_5_actions[] = {
+static const GObjPathPointFunction path2373_5_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path2373_8_actions[] = {
+static const GObjPathPointFunction path2373_8_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2373_11_actions[] = {
+static const GObjPathPointFunction path2373_11_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path2373_14_actions[] = {
+static const GObjPathPointFunction path2373_14_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2373_16_actions[] = {
+static const GObjPathPointFunction path2373_16_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path2373_19_actions[] = {
+static const GObjPathPointFunction path2373_19_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2373_22_actions[] = {
+static const GObjPathPointFunction path2373_22_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path2373_25_actions[] = {
+static const GObjPathPointFunction path2373_25_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2373_28_actions[] = {
+static const GObjPathPointFunction path2373_28_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path2373_31_actions[] = {
+static const GObjPathPointFunction path2373_31_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2373_33_actions[] = {
+static const GObjPathPointFunction path2373_33_actions[] = {
 markDisappear
 };
-static Path path2373 = {
+static const Path path2373 = {
 .x = 48, .y = 2936, .numPoints = 34, .points = {
 {
     .x = 0, .y = 0,
@@ -1970,40 +1970,40 @@ static Path path2373 = {
 }
 }
 };
-static GObjPathPointFunction path3723_5_actions[] = {
+static const GObjPathPointFunction path3723_5_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path3723_8_actions[] = {
+static const GObjPathPointFunction path3723_8_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path3723_11_actions[] = {
+static const GObjPathPointFunction path3723_11_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path3723_14_actions[] = {
+static const GObjPathPointFunction path3723_14_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3723_16_actions[] = {
+static const GObjPathPointFunction path3723_16_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path3723_19_actions[] = {
+static const GObjPathPointFunction path3723_19_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path3723_22_actions[] = {
+static const GObjPathPointFunction path3723_22_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path3723_25_actions[] = {
+static const GObjPathPointFunction path3723_25_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3723_28_actions[] = {
+static const GObjPathPointFunction path3723_28_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path3723_31_actions[] = {
+static const GObjPathPointFunction path3723_31_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path3723_33_actions[] = {
+static const GObjPathPointFunction path3723_33_actions[] = {
 markDisappear
 };
-static Path path3723 = {
+static const Path path3723 = {
 .x = 208, .y = 2936, .numPoints = 34, .points = {
 {
     .x = 0, .y = 0,
@@ -2279,11 +2279,11 @@ static Path path3723 = {
 }
 }
 };
-static Path *r4r5ants_paths[] = {
+static const Path *r4r5ants_paths[] = {
     &path2373,
     &path3723
 };
-static LevelObject r4r5ants_objects[] = {
+static const LevelObject r4r5ants_objects[] = {
 {
     .definition = &defAnt,
     .x = 176, .y = 3256,
@@ -2710,31 +2710,31 @@ LevelObjectGroup r4r5ants = {
     .numObjects = 60, .objects = r4r5ants_objects
 };
 extern LevelObjectGroup r4fly1;
-static GObjPathPointFunction path2332_3_actions[] = {
+static const GObjPathPointFunction path2332_3_actions[] = {
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2332_5_actions[] = {
+static const GObjPathPointFunction path2332_5_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2332_6_actions[] = {
+static const GObjPathPointFunction path2332_6_actions[] = {
 faceLeft
 };
-static GObjPathPointFunction path2332_9_actions[] = {
+static const GObjPathPointFunction path2332_9_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2332_10_actions[] = {
+static const GObjPathPointFunction path2332_10_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2332_11_actions[] = {
+static const GObjPathPointFunction path2332_11_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2332_12_actions[] = {
+static const GObjPathPointFunction path2332_12_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2332_13_actions[] = {
+static const GObjPathPointFunction path2332_13_actions[] = {
 startShooting
 };
-static Path path2332 = {
+static const Path path2332 = {
 .x = -16, .y = 3144, .numPoints = 18, .points = {
 {
     .x = 0, .y = 88,
@@ -2882,10 +2882,10 @@ static Path path2332 = {
 }
 }
 };
-static Path *r4fly1_paths[] = {
+static const Path *r4fly1_paths[] = {
     &path2332
 };
-static LevelObject r4fly1_objects[] = {
+static const LevelObject r4fly1_objects[] = {
 {
     .definition = &defFly,
     .x = -16, .y = 3232,
@@ -2899,7 +2899,7 @@ LevelObjectGroup r4fly1 = {
     .numObjects = 1, .objects = r4fly1_objects
 };
 extern LevelObjectGroup room4powerup;
-static LevelObject room4powerup_objects[] = {
+static const LevelObject room4powerup_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 192, .y = 3184,
@@ -2913,31 +2913,31 @@ LevelObjectGroup room4powerup = {
     .numObjects = 1, .objects = room4powerup_objects
 };
 extern LevelObjectGroup room5fly1;
-static GObjPathPointFunction path2342_3_actions[] = {
+static const GObjPathPointFunction path2342_3_actions[] = {
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2342_5_actions[] = {
+static const GObjPathPointFunction path2342_5_actions[] = {
 faceRight
 };
-static GObjPathPointFunction path2342_6_actions[] = {
+static const GObjPathPointFunction path2342_6_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2342_7_actions[] = {
+static const GObjPathPointFunction path2342_7_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2342_8_actions[] = {
+static const GObjPathPointFunction path2342_8_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2342_9_actions[] = {
+static const GObjPathPointFunction path2342_9_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2342_10_actions[] = {
+static const GObjPathPointFunction path2342_10_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2342_11_actions[] = {
+static const GObjPathPointFunction path2342_11_actions[] = {
 startShooting
 };
-static Path path2342 = {
+static const Path path2342 = {
 .x = 272, .y = 3104, .numPoints = 14, .points = {
 {
     .x = 0, .y = 88,
@@ -3053,10 +3053,10 @@ static Path path2342 = {
 }
 }
 };
-static Path *room5fly1_paths[] = {
+static const Path *room5fly1_paths[] = {
     &path2342
 };
-static LevelObject room5fly1_objects[] = {
+static const LevelObject room5fly1_objects[] = {
 {
     .definition = &defFly,
     .x = 272, .y = 3192,
@@ -3070,7 +3070,7 @@ LevelObjectGroup room5fly1 = {
     .numObjects = 1, .objects = room5fly1_objects
 };
 extern LevelObjectGroup r5powerup;
-static LevelObject r5powerup_objects[] = {
+static const LevelObject r5powerup_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 64, .y = 3056,
@@ -3084,13 +3084,13 @@ LevelObjectGroup r5powerup = {
     .numObjects = 1, .objects = r5powerup_objects
 };
 extern LevelObjectGroup r6ants;
-static GObjPathPointFunction path2389_19_actions[] = {
+static const GObjPathPointFunction path2389_19_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2389_20_actions[] = {
+static const GObjPathPointFunction path2389_20_actions[] = {
 markDisappear
 };
-static Path path2389 = {
+static const Path path2389 = {
 .x = 28, .y = 2736, .numPoints = 21, .points = {
 {
     .x = 8, .y = -16,
@@ -3262,13 +3262,13 @@ static Path path2389 = {
 }
 }
 };
-static GObjPathPointFunction path3786_19_actions[] = {
+static const GObjPathPointFunction path3786_19_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path3786_20_actions[] = {
+static const GObjPathPointFunction path3786_20_actions[] = {
 markDisappear
 };
-static Path path3786 = {
+static const Path path3786 = {
 .x = 228, .y = 2736, .numPoints = 21, .points = {
 {
     .x = -8, .y = -16,
@@ -3440,11 +3440,11 @@ static Path path3786 = {
 }
 }
 };
-static Path *r6ants_paths[] = {
+static const Path *r6ants_paths[] = {
     &path2389,
     &path3786
 };
-static LevelObject r6ants_objects[] = {
+static const LevelObject r6ants_objects[] = {
 {
     .definition = &defAnt,
     .x = 36, .y = 2864,
@@ -3703,37 +3703,37 @@ LevelObjectGroup r6ants = {
     .numObjects = 36, .objects = r6ants_objects
 };
 extern LevelObjectGroup room6fly;
-static GObjPathPointFunction path2351_1_actions[] = {
+static const GObjPathPointFunction path2351_1_actions[] = {
 startShooting,
 faceRight,
 enterForeground
 };
-static GObjPathPointFunction path2351_3_actions[] = {
+static const GObjPathPointFunction path2351_3_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_5_actions[] = {
+static const GObjPathPointFunction path2351_5_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_7_actions[] = {
+static const GObjPathPointFunction path2351_7_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_10_actions[] = {
+static const GObjPathPointFunction path2351_10_actions[] = {
 startShooting,
 faceLeft
 };
-static GObjPathPointFunction path2351_13_actions[] = {
+static const GObjPathPointFunction path2351_13_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_15_actions[] = {
+static const GObjPathPointFunction path2351_15_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_17_actions[] = {
+static const GObjPathPointFunction path2351_17_actions[] = {
 startShooting
 };
-static GObjPathPointFunction path2351_19_actions[] = {
+static const GObjPathPointFunction path2351_19_actions[] = {
 startShooting
 };
-static Path path2351 = {
+static const Path path2351 = {
 .x = 272, .y = 2832, .numPoints = 21, .points = {
 {
     .x = 0, .y = 0,
@@ -3905,10 +3905,10 @@ static Path path2351 = {
 }
 }
 };
-static Path *room6fly_paths[] = {
+static const Path *room6fly_paths[] = {
     &path2351
 };
-static LevelObject room6fly_objects[] = {
+static const LevelObject room6fly_objects[] = {
 {
     .definition = &defFly,
     .x = 272, .y = 2832,
@@ -3922,7 +3922,7 @@ LevelObjectGroup room6fly = {
     .numObjects = 1, .objects = room6fly_objects
 };
 extern LevelObjectGroup room5bigant;
-static LevelObject room5bigant_objects[] = {
+static const LevelObject room5bigant_objects[] = {
 {
     .definition = &defAntBig,
     .x = 64, .y = 2928,
@@ -3943,7 +3943,7 @@ LevelObjectGroup room5bigant = {
     .numObjects = 2, .objects = room5bigant_objects
 };
 extern LevelObjectGroup room6bigant;
-static LevelObject room6bigant_objects[] = {
+static const LevelObject room6bigant_objects[] = {
 {
     .definition = &defAntBig,
     .x = 216, .y = 2704,
@@ -3964,10 +3964,10 @@ LevelObjectGroup room6bigant = {
     .numObjects = 2, .objects = room6bigant_objects
 };
 extern LevelObjectGroup room7alien1;
-static GObjPathPointFunction path2397_2_actions[] = {
+static const GObjPathPointFunction path2397_2_actions[] = {
 0 /* to be assigned */
 };
-static Path path2397 = {
+static const Path path2397 = {
 .x = 112, .y = 2496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -3995,10 +3995,10 @@ static Path path2397 = {
 }
 }
 };
-static Path *room7alien1_paths[] = {
+static const Path *room7alien1_paths[] = {
     &path2397
 };
-static LevelObject room7alien1_objects[] = {
+static const LevelObject room7alien1_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 112, .y = 2496,
@@ -4019,10 +4019,10 @@ LevelObjectGroup room7alien1 = {
     .numObjects = 2, .objects = room7alien1_objects
 };
 extern LevelObjectGroup room7alien2;
-static GObjPathPointFunction path2403_2_actions[] = {
+static const GObjPathPointFunction path2403_2_actions[] = {
 0 /* to be assigned */
 };
-static Path path2403 = {
+static const Path path2403 = {
 .x = 48, .y = 2440, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -4050,10 +4050,10 @@ static Path path2403 = {
 }
 }
 };
-static GObjPathPointFunction path2404_2_actions[] = {
+static const GObjPathPointFunction path2404_2_actions[] = {
 0 /* to be assigned */
 };
-static Path path2404 = {
+static const Path path2404 = {
 .x = 176, .y = 2440, .numPoints = 3, .points = {
 {
     .x = 32, .y = 0,
@@ -4081,11 +4081,11 @@ static Path path2404 = {
 }
 }
 };
-static Path *room7alien2_paths[] = {
+static const Path *room7alien2_paths[] = {
     &path2403,
     &path2404
 };
-static LevelObject room7alien2_objects[] = {
+static const LevelObject room7alien2_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 48, .y = 2440,
@@ -4106,10 +4106,10 @@ LevelObjectGroup room7alien2 = {
     .numObjects = 2, .objects = room7alien2_objects
 };
 extern LevelObjectGroup room7alien3;
-static GObjPathPointFunction path2414_3_actions[] = {
+static const GObjPathPointFunction path2414_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2414 = {
+static const Path path2414 = {
 .x = -24, .y = 2528, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -4145,10 +4145,10 @@ static Path path2414 = {
 }
 }
 };
-static GObjPathPointFunction path2415_3_actions[] = {
+static const GObjPathPointFunction path2415_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2415 = {
+static const Path path2415 = {
 .x = -16, .y = 2512, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -4184,10 +4184,10 @@ static Path path2415 = {
 }
 }
 };
-static GObjPathPointFunction path2416_3_actions[] = {
+static const GObjPathPointFunction path2416_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2416 = {
+static const Path path2416 = {
 .x = -8, .y = 2496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -4223,10 +4223,10 @@ static Path path2416 = {
 }
 }
 };
-static GObjPathPointFunction path2417_3_actions[] = {
+static const GObjPathPointFunction path2417_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2417 = {
+static const Path path2417 = {
 .x = 24, .y = 2496, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
@@ -4262,10 +4262,10 @@ static Path path2417 = {
 }
 }
 };
-static GObjPathPointFunction path2418_3_actions[] = {
+static const GObjPathPointFunction path2418_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2418 = {
+static const Path path2418 = {
 .x = 32, .y = 2512, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
@@ -4301,10 +4301,10 @@ static Path path2418 = {
 }
 }
 };
-static GObjPathPointFunction path2419_3_actions[] = {
+static const GObjPathPointFunction path2419_3_actions[] = {
 0 /* to be assigned */
 };
-static Path path2419 = {
+static const Path path2419 = {
 .x = 40, .y = 2528, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
@@ -4340,7 +4340,7 @@ static Path path2419 = {
 }
 }
 };
-static Path *room7alien3_paths[] = {
+static const Path *room7alien3_paths[] = {
     &path2414,
     &path2415,
     &path2416,
@@ -4348,7 +4348,7 @@ static Path *room7alien3_paths[] = {
     &path2418,
     &path2419
 };
-static LevelObject room7alien3_objects[] = {
+static const LevelObject room7alien3_objects[] = {
 {
     .definition = &defAlienPillager,
     .x = 280, .y = 2528,
@@ -4397,7 +4397,7 @@ LevelObjectGroup room7alien3 = {
     .numObjects = 6, .objects = room7alien3_objects
 };
 extern LevelObjectGroup room8alien1;
-static LevelObject room8alien1_objects[] = {
+static const LevelObject room8alien1_objects[] = {
 {
     .definition = &defAlienPillager,
     .x = 120, .y = 2368,
@@ -4488,10 +4488,10 @@ LevelObjectGroup room8alien1 = {
     .numObjects = 12, .objects = room8alien1_objects
 };
 extern LevelObjectGroup room8alien2;
-static GObjPathPointFunction path2442_1_actions[] = {
+static const GObjPathPointFunction path2442_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2442 = {
+static const Path path2442 = {
 .x = 88, .y = 2352, .numPoints = 4, .points = {
 {
     .x = -8, .y = 0,
@@ -4527,10 +4527,10 @@ static Path path2442 = {
 }
 }
 };
-static GObjPathPointFunction path2443_1_actions[] = {
+static const GObjPathPointFunction path2443_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2443 = {
+static const Path path2443 = {
 .x = 152, .y = 2352, .numPoints = 4, .points = {
 {
     .x = 24, .y = 0,
@@ -4566,11 +4566,11 @@ static Path path2443 = {
 }
 }
 };
-static Path *room8alien2_paths[] = {
+static const Path *room8alien2_paths[] = {
     &path2442,
     &path2443
 };
-static LevelObject room8alien2_objects[] = {
+static const LevelObject room8alien2_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 80, .y = 2352,
@@ -4591,10 +4591,10 @@ LevelObjectGroup room8alien2 = {
     .numObjects = 2, .objects = room8alien2_objects
 };
 extern LevelObjectGroup room8alien3;
-static GObjPathPointFunction path2448_1_actions[] = {
+static const GObjPathPointFunction path2448_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2448 = {
+static const Path path2448 = {
 .x = -16, .y = 2392, .numPoints = 11, .points = {
 {
     .x = 0, .y = 0,
@@ -4686,10 +4686,10 @@ static Path path2448 = {
 }
 }
 };
-static GObjPathPointFunction path2449_1_actions[] = {
+static const GObjPathPointFunction path2449_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2449 = {
+static const Path path2449 = {
 .x = 272, .y = 2392, .numPoints = 11, .points = {
 {
     .x = 0, .y = 0,
@@ -4781,11 +4781,11 @@ static Path path2449 = {
 }
 }
 };
-static Path *room8alien3_paths[] = {
+static const Path *room8alien3_paths[] = {
     &path2448,
     &path2449
 };
-static LevelObject room8alien3_objects[] = {
+static const LevelObject room8alien3_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = -16, .y = 2392,
@@ -4806,10 +4806,10 @@ LevelObjectGroup room8alien3 = {
     .numObjects = 2, .objects = room8alien3_objects
 };
 extern LevelObjectGroup room8alien4;
-static GObjPathPointFunction path2457_1_actions[] = {
+static const GObjPathPointFunction path2457_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2457 = {
+static const Path path2457 = {
 .x = 96, .y = 2248, .numPoints = 2, .points = {
 {
     .x = -16, .y = 8,
@@ -4829,10 +4829,10 @@ static Path path2457 = {
 }
 }
 };
-static GObjPathPointFunction path2458_1_actions[] = {
+static const GObjPathPointFunction path2458_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2458 = {
+static const Path path2458 = {
 .x = 88, .y = 2232, .numPoints = 2, .points = {
 {
     .x = -16, .y = 8,
@@ -4852,10 +4852,10 @@ static Path path2458 = {
 }
 }
 };
-static GObjPathPointFunction path2459_1_actions[] = {
+static const GObjPathPointFunction path2459_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2459 = {
+static const Path path2459 = {
 .x = 160, .y = 2248, .numPoints = 2, .points = {
 {
     .x = 24, .y = 0,
@@ -4875,10 +4875,10 @@ static Path path2459 = {
 }
 }
 };
-static GObjPathPointFunction path2460_1_actions[] = {
+static const GObjPathPointFunction path2460_1_actions[] = {
 0 /* to be assigned */
 };
-static Path path2460 = {
+static const Path path2460 = {
 .x = 168, .y = 2232, .numPoints = 2, .points = {
 {
     .x = 24, .y = 0,
@@ -4898,13 +4898,13 @@ static Path path2460 = {
 }
 }
 };
-static Path *room8alien4_paths[] = {
+static const Path *room8alien4_paths[] = {
     &path2457,
     &path2458,
     &path2459,
     &path2460
 };
-static LevelObject room8alien4_objects[] = {
+static const LevelObject room8alien4_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 80, .y = 2256,
@@ -4939,7 +4939,7 @@ LevelObjectGroup room8alien4 = {
     .numObjects = 4, .objects = room8alien4_objects
 };
 extern LevelObjectGroup room8powerup;
-static LevelObject room8powerup_objects[] = {
+static const LevelObject room8powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 120, .y = 2264,
@@ -4960,7 +4960,7 @@ LevelObjectGroup room8powerup = {
     .numObjects = 2, .objects = room8powerup_objects
 };
 extern LevelObjectGroup room9powerup;
-static LevelObject room9powerup_objects[] = {
+static const LevelObject room9powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 128, .y = 2176,
@@ -4988,7 +4988,7 @@ LevelObjectGroup room9powerup = {
     .numObjects = 3, .objects = room9powerup_objects
 };
 extern LevelObjectGroup room9alienmind;
-static Path path2474 = {
+static const Path path2474 = {
 .x = 128, .y = 2040, .numPoints = 2, .points = {
 {
     .x = 0, .y = -56,
@@ -5008,7 +5008,7 @@ static Path path2474 = {
 }
 }
 };
-static Path path2475 = {
+static const Path path2475 = {
 .x = 96, .y = 2096, .numPoints = 10, .points = {
 {
     .x = 24, .y = -56,
@@ -5092,7 +5092,7 @@ static Path path2475 = {
 }
 }
 };
-static Path path2476 = {
+static const Path path2476 = {
 .x = 160, .y = 2096, .numPoints = 9, .points = {
 {
     .x = -24, .y = -56,
@@ -5168,13 +5168,13 @@ static Path path2476 = {
 }
 }
 };
-static GObjPathPointFunction path2477_0_actions[] = {
+static const GObjPathPointFunction path2477_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2477_4_actions[] = {
+static const GObjPathPointFunction path2477_4_actions[] = {
 0 /* to be assigned */
 };
-static Path path2477 = {
+static const Path path2477 = {
 .x = -8, .y = 2072, .numPoints = 5, .points = {
 {
     .x = 112, .y = -32,
@@ -5218,13 +5218,13 @@ static Path path2477 = {
 }
 }
 };
-static GObjPathPointFunction path2478_0_actions[] = {
+static const GObjPathPointFunction path2478_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2478_4_actions[] = {
+static const GObjPathPointFunction path2478_4_actions[] = {
 0 /* to be assigned */
 };
-static Path path2478 = {
+static const Path path2478 = {
 .x = 256, .y = 2048, .numPoints = 5, .points = {
 {
     .x = -104, .y = -8,
@@ -5268,16 +5268,16 @@ static Path path2478 = {
 }
 }
 };
-static GObjPathPointFunction path2479_5_actions[] = {
+static const GObjPathPointFunction path2479_5_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2479_7_actions[] = {
+static const GObjPathPointFunction path2479_7_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2479_8_actions[] = {
+static const GObjPathPointFunction path2479_8_actions[] = {
 0 /* to be assigned */
 };
-static Path path2479 = {
+static const Path path2479 = {
 .x = -16, .y = 2256, .numPoints = 12, .points = {
 {
     .x = 120, .y = -232,
@@ -5377,16 +5377,16 @@ static Path path2479 = {
 }
 }
 };
-static GObjPathPointFunction path2480_5_actions[] = {
+static const GObjPathPointFunction path2480_5_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2480_7_actions[] = {
+static const GObjPathPointFunction path2480_7_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2480_8_actions[] = {
+static const GObjPathPointFunction path2480_8_actions[] = {
 0 /* to be assigned */
 };
-static Path path2480 = {
+static const Path path2480 = {
 .x = 208, .y = 2256, .numPoints = 12, .points = {
 {
     .x = -56, .y = -232,
@@ -5486,7 +5486,7 @@ static Path path2480 = {
 }
 }
 };
-static Path *room9alienmind_paths[] = {
+static const Path *room9alienmind_paths[] = {
     &path2474,
     &path2475,
     &path2476,
@@ -5495,7 +5495,7 @@ static Path *room9alienmind_paths[] = {
     &path2479,
     &path2480
 };
-static LevelObject room9alienmind_objects[] = {
+static const LevelObject room9alienmind_objects[] = {
 {
     .definition = &defAlienMind,
     .x = 128, .y = 1984,
@@ -5514,10 +5514,10 @@ LevelObjectGroup part2 = {
     .numObjects = 0, .objects = 0
 };
 extern LevelObjectGroup room10acidants;
-static GObjPathPointFunction path2498_1_actions[] = {
+static const GObjPathPointFunction path2498_1_actions[] = {
 climbUpToFloor
 };
-static Path path2498 = {
+static const Path path2498 = {
 .x = 152, .y = 1920, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5545,10 +5545,10 @@ static Path path2498 = {
 }
 }
 };
-static GObjPathPointFunction path2499_1_actions[] = {
+static const GObjPathPointFunction path2499_1_actions[] = {
 climbUpToFloor
 };
-static Path path2499 = {
+static const Path path2499 = {
 .x = 168, .y = 1928, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5576,10 +5576,10 @@ static Path path2499 = {
 }
 }
 };
-static GObjPathPointFunction path2500_1_actions[] = {
+static const GObjPathPointFunction path2500_1_actions[] = {
 climbUpToFloor
 };
-static Path path2500 = {
+static const Path path2500 = {
 .x = 184, .y = 1928, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5607,10 +5607,10 @@ static Path path2500 = {
 }
 }
 };
-static GObjPathPointFunction path2501_1_actions[] = {
+static const GObjPathPointFunction path2501_1_actions[] = {
 climbUpToFloor
 };
-static Path path2501 = {
+static const Path path2501 = {
 .x = 200, .y = 1920, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5638,10 +5638,10 @@ static Path path2501 = {
 }
 }
 };
-static GObjPathPointFunction path2502_1_actions[] = {
+static const GObjPathPointFunction path2502_1_actions[] = {
 climbUpToFloor
 };
-static Path path2502 = {
+static const Path path2502 = {
 .x = 216, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5669,14 +5669,14 @@ static Path path2502 = {
 }
 }
 };
-static Path *room10acidants_paths[] = {
+static const Path *room10acidants_paths[] = {
     &path2498,
     &path2499,
     &path2500,
     &path2501,
     &path2502
 };
-static LevelObject room10acidants_objects[] = {
+static const LevelObject room10acidants_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 168, .y = 1928,
@@ -5718,10 +5718,10 @@ LevelObjectGroup room10acidants = {
     .numObjects = 5, .objects = room10acidants_objects
 };
 extern LevelObjectGroup room10acidants2;
-static GObjPathPointFunction path2514_1_actions[] = {
+static const GObjPathPointFunction path2514_1_actions[] = {
 climbUpToFloor
 };
-static Path path2514 = {
+static const Path path2514 = {
 .x = 40, .y = 1888, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5749,10 +5749,10 @@ static Path path2514 = {
 }
 }
 };
-static GObjPathPointFunction path2515_1_actions[] = {
+static const GObjPathPointFunction path2515_1_actions[] = {
 climbUpToFloor
 };
-static Path path2515 = {
+static const Path path2515 = {
 .x = 56, .y = 1896, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5780,10 +5780,10 @@ static Path path2515 = {
 }
 }
 };
-static GObjPathPointFunction path2516_1_actions[] = {
+static const GObjPathPointFunction path2516_1_actions[] = {
 climbUpToFloor
 };
-static Path path2516 = {
+static const Path path2516 = {
 .x = 72, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5811,10 +5811,10 @@ static Path path2516 = {
 }
 }
 };
-static GObjPathPointFunction path2517_1_actions[] = {
+static const GObjPathPointFunction path2517_1_actions[] = {
 climbUpToFloor
 };
-static Path path2517 = {
+static const Path path2517 = {
 .x = 88, .y = 1912, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5842,10 +5842,10 @@ static Path path2517 = {
 }
 }
 };
-static GObjPathPointFunction path2518_1_actions[] = {
+static const GObjPathPointFunction path2518_1_actions[] = {
 climbUpToFloor
 };
-static Path path2518 = {
+static const Path path2518 = {
 .x = 104, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -5873,14 +5873,14 @@ static Path path2518 = {
 }
 }
 };
-static Path *room10acidants2_paths[] = {
+static const Path *room10acidants2_paths[] = {
     &path2514,
     &path2515,
     &path2516,
     &path2517,
     &path2518
 };
-static LevelObject room10acidants2_objects[] = {
+static const LevelObject room10acidants2_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 88, .y = 1912,
@@ -5922,10 +5922,10 @@ LevelObjectGroup room10acidants2 = {
     .numObjects = 5, .objects = room10acidants2_objects
 };
 extern LevelObjectGroup r11acidants1a;
-static GObjPathPointFunction path2526_1_actions[] = {
+static const GObjPathPointFunction path2526_1_actions[] = {
 climbUpToFloor
 };
-static Path path2526 = {
+static const Path path2526 = {
 .x = 264, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -5953,10 +5953,10 @@ static Path path2526 = {
 }
 }
 };
-static Path *r11acidants1a_paths[] = {
+static const Path *r11acidants1a_paths[] = {
     &path2526
 };
-static LevelObject r11acidants1a_objects[] = {
+static const LevelObject r11acidants1a_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 232, .y = 1816,
@@ -5970,10 +5970,10 @@ LevelObjectGroup r11acidants1a = {
     .numObjects = 1, .objects = r11acidants1a_objects
 };
 extern LevelObjectGroup r11acidants1b;
-static GObjPathPointFunction path2530_1_actions[] = {
+static const GObjPathPointFunction path2530_1_actions[] = {
 climbUpToFloor
 };
-static Path path2530 = {
+static const Path path2530 = {
 .x = 232, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6001,10 +6001,10 @@ static Path path2530 = {
 }
 }
 };
-static Path *r11acidants1b_paths[] = {
+static const Path *r11acidants1b_paths[] = {
     &path2530
 };
-static LevelObject r11acidants1b_objects[] = {
+static const LevelObject r11acidants1b_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 200, .y = 1816,
@@ -6018,10 +6018,10 @@ LevelObjectGroup r11acidants1b = {
     .numObjects = 1, .objects = r11acidants1b_objects
 };
 extern LevelObjectGroup r11acidants1c;
-static GObjPathPointFunction path2534_1_actions[] = {
+static const GObjPathPointFunction path2534_1_actions[] = {
 climbUpToFloor
 };
-static Path path2534 = {
+static const Path path2534 = {
 .x = 200, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6049,10 +6049,10 @@ static Path path2534 = {
 }
 }
 };
-static Path *r11acidants1c_paths[] = {
+static const Path *r11acidants1c_paths[] = {
     &path2534
 };
-static LevelObject r11acidants1c_objects[] = {
+static const LevelObject r11acidants1c_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 168, .y = 1816,
@@ -6066,10 +6066,10 @@ LevelObjectGroup r11acidants1c = {
     .numObjects = 1, .objects = r11acidants1c_objects
 };
 extern LevelObjectGroup r11acidants1d;
-static GObjPathPointFunction path2538_1_actions[] = {
+static const GObjPathPointFunction path2538_1_actions[] = {
 climbUpToFloor
 };
-static Path path2538 = {
+static const Path path2538 = {
 .x = 168, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6097,10 +6097,10 @@ static Path path2538 = {
 }
 }
 };
-static Path *r11acidants1d_paths[] = {
+static const Path *r11acidants1d_paths[] = {
     &path2538
 };
-static LevelObject r11acidants1d_objects[] = {
+static const LevelObject r11acidants1d_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 136, .y = 1816,
@@ -6114,10 +6114,10 @@ LevelObjectGroup r11acidants1d = {
     .numObjects = 1, .objects = r11acidants1d_objects
 };
 extern LevelObjectGroup r11acidants1e;
-static GObjPathPointFunction path2542_1_actions[] = {
+static const GObjPathPointFunction path2542_1_actions[] = {
 climbUpToFloor
 };
-static Path path2542 = {
+static const Path path2542 = {
 .x = 152, .y = 1776, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6145,10 +6145,10 @@ static Path path2542 = {
 }
 }
 };
-static Path *r11acidants1e_paths[] = {
+static const Path *r11acidants1e_paths[] = {
     &path2542
 };
-static LevelObject r11acidants1e_objects[] = {
+static const LevelObject r11acidants1e_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 120, .y = 1808,
@@ -6162,10 +6162,10 @@ LevelObjectGroup r11acidants1e = {
     .numObjects = 1, .objects = r11acidants1e_objects
 };
 extern LevelObjectGroup r11acidants1f;
-static GObjPathPointFunction path2546_1_actions[] = {
+static const GObjPathPointFunction path2546_1_actions[] = {
 climbUpToFloor
 };
-static Path path2546 = {
+static const Path path2546 = {
 .x = 120, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6193,10 +6193,10 @@ static Path path2546 = {
 }
 }
 };
-static Path *r11acidants1f_paths[] = {
+static const Path *r11acidants1f_paths[] = {
     &path2546
 };
-static LevelObject r11acidants1f_objects[] = {
+static const LevelObject r11acidants1f_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 88, .y = 1800,
@@ -6210,10 +6210,10 @@ LevelObjectGroup r11acidants1f = {
     .numObjects = 1, .objects = r11acidants1f_objects
 };
 extern LevelObjectGroup r11acidants1g;
-static GObjPathPointFunction path2550_1_actions[] = {
+static const GObjPathPointFunction path2550_1_actions[] = {
 climbUpToFloor
 };
-static Path path2550 = {
+static const Path path2550 = {
 .x = 88, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6241,10 +6241,10 @@ static Path path2550 = {
 }
 }
 };
-static Path *r11acidants1g_paths[] = {
+static const Path *r11acidants1g_paths[] = {
     &path2550
 };
-static LevelObject r11acidants1g_objects[] = {
+static const LevelObject r11acidants1g_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 56, .y = 1800,
@@ -6258,10 +6258,10 @@ LevelObjectGroup r11acidants1g = {
     .numObjects = 1, .objects = r11acidants1g_objects
 };
 extern LevelObjectGroup r11acidants1h;
-static GObjPathPointFunction path2554_1_actions[] = {
+static const GObjPathPointFunction path2554_1_actions[] = {
 climbUpToFloor
 };
-static Path path2554 = {
+static const Path path2554 = {
 .x = 56, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
@@ -6289,10 +6289,10 @@ static Path path2554 = {
 }
 }
 };
-static Path *r11acidants1h_paths[] = {
+static const Path *r11acidants1h_paths[] = {
     &path2554
 };
-static LevelObject r11acidants1h_objects[] = {
+static const LevelObject r11acidants1h_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 24, .y = 1800,
@@ -6306,10 +6306,10 @@ LevelObjectGroup r11acidants1h = {
     .numObjects = 1, .objects = r11acidants1h_objects
 };
 extern LevelObjectGroup room11acidants2a;
-static GObjPathPointFunction path2567_0_actions[] = {
+static const GObjPathPointFunction path2567_0_actions[] = {
 climbUpToFloor
 };
-static Path path2567 = {
+static const Path path2567 = {
 .x = 272, .y = 1616, .numPoints = 2, .points = {
 {
     .x = 0, .y = 24,
@@ -6329,10 +6329,10 @@ static Path path2567 = {
 }
 }
 };
-static Path *room11acidants2a_paths[] = {
+static const Path *room11acidants2a_paths[] = {
     &path2567
 };
-static LevelObject room11acidants2a_objects[] = {
+static const LevelObject room11acidants2a_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 272, .y = 1856,
@@ -6409,10 +6409,10 @@ LevelObjectGroup room11acidants2a = {
     .numObjects = 10, .objects = room11acidants2a_objects
 };
 extern LevelObjectGroup room11acidants2b;
-static GObjPathPointFunction path2580_0_actions[] = {
+static const GObjPathPointFunction path2580_0_actions[] = {
 climbUpToFloor
 };
-static Path path2580 = {
+static const Path path2580 = {
 .x = -16, .y = 1576, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -6432,10 +6432,10 @@ static Path path2580 = {
 }
 }
 };
-static Path *room11acidants2b_paths[] = {
+static const Path *room11acidants2b_paths[] = {
     &path2580
 };
-static LevelObject room11acidants2b_objects[] = {
+static const LevelObject room11acidants2b_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = -16, .y = 1792,
@@ -6512,10 +6512,10 @@ LevelObjectGroup room11acidants2b = {
     .numObjects = 10, .objects = room11acidants2b_objects
 };
 extern LevelObjectGroup r11acidants3a;
-static GObjPathPointFunction path2583_1_actions[] = {
+static const GObjPathPointFunction path2583_1_actions[] = {
 climbUpToFloor
 };
-static Path path2583 = {
+static const Path path2583 = {
 .x = 248, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6543,10 +6543,10 @@ static Path path2583 = {
 }
 }
 };
-static Path *r11acidants3a_paths[] = {
+static const Path *r11acidants3a_paths[] = {
     &path2583
 };
-static LevelObject r11acidants3a_objects[] = {
+static const LevelObject r11acidants3a_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 248, .y = 1720,
@@ -6560,10 +6560,10 @@ LevelObjectGroup r11acidants3a = {
     .numObjects = 1, .objects = r11acidants3a_objects
 };
 extern LevelObjectGroup r11acidants3b;
-static GObjPathPointFunction path2587_1_actions[] = {
+static const GObjPathPointFunction path2587_1_actions[] = {
 climbUpToFloor
 };
-static Path path2587 = {
+static const Path path2587 = {
 .x = 224, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6591,10 +6591,10 @@ static Path path2587 = {
 }
 }
 };
-static Path *r11acidants3b_paths[] = {
+static const Path *r11acidants3b_paths[] = {
     &path2587
 };
-static LevelObject r11acidants3b_objects[] = {
+static const LevelObject r11acidants3b_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 224, .y = 1720,
@@ -6608,10 +6608,10 @@ LevelObjectGroup r11acidants3b = {
     .numObjects = 1, .objects = r11acidants3b_objects
 };
 extern LevelObjectGroup r11acidants3c;
-static GObjPathPointFunction path2591_1_actions[] = {
+static const GObjPathPointFunction path2591_1_actions[] = {
 climbUpToFloor
 };
-static Path path2591 = {
+static const Path path2591 = {
 .x = 200, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6639,10 +6639,10 @@ static Path path2591 = {
 }
 }
 };
-static Path *r11acidants3c_paths[] = {
+static const Path *r11acidants3c_paths[] = {
     &path2591
 };
-static LevelObject r11acidants3c_objects[] = {
+static const LevelObject r11acidants3c_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 200, .y = 1720,
@@ -6656,10 +6656,10 @@ LevelObjectGroup r11acidants3c = {
     .numObjects = 1, .objects = r11acidants3c_objects
 };
 extern LevelObjectGroup r11acidants3d;
-static GObjPathPointFunction path2595_1_actions[] = {
+static const GObjPathPointFunction path2595_1_actions[] = {
 climbUpToFloor
 };
-static Path path2595 = {
+static const Path path2595 = {
 .x = 176, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6687,10 +6687,10 @@ static Path path2595 = {
 }
 }
 };
-static Path *r11acidants3d_paths[] = {
+static const Path *r11acidants3d_paths[] = {
     &path2595
 };
-static LevelObject r11acidants3d_objects[] = {
+static const LevelObject r11acidants3d_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 176, .y = 1720,
@@ -6704,10 +6704,10 @@ LevelObjectGroup r11acidants3d = {
     .numObjects = 1, .objects = r11acidants3d_objects
 };
 extern LevelObjectGroup r11acidants3e;
-static GObjPathPointFunction path2599_1_actions[] = {
+static const GObjPathPointFunction path2599_1_actions[] = {
 climbUpToFloor
 };
-static Path path2599 = {
+static const Path path2599 = {
 .x = 152, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6735,10 +6735,10 @@ static Path path2599 = {
 }
 }
 };
-static Path *r11acidants3e_paths[] = {
+static const Path *r11acidants3e_paths[] = {
     &path2599
 };
-static LevelObject r11acidants3e_objects[] = {
+static const LevelObject r11acidants3e_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 152, .y = 1720,
@@ -6752,10 +6752,10 @@ LevelObjectGroup r11acidants3e = {
     .numObjects = 1, .objects = r11acidants3e_objects
 };
 extern LevelObjectGroup r11acidants3f;
-static GObjPathPointFunction path2603_1_actions[] = {
+static const GObjPathPointFunction path2603_1_actions[] = {
 climbUpToFloor
 };
-static Path path2603 = {
+static const Path path2603 = {
 .x = 128, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6783,10 +6783,10 @@ static Path path2603 = {
 }
 }
 };
-static Path *r11acidants3f_paths[] = {
+static const Path *r11acidants3f_paths[] = {
     &path2603
 };
-static LevelObject r11acidants3f_objects[] = {
+static const LevelObject r11acidants3f_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 128, .y = 1704,
@@ -6800,10 +6800,10 @@ LevelObjectGroup r11acidants3f = {
     .numObjects = 1, .objects = r11acidants3f_objects
 };
 extern LevelObjectGroup r11acidants3g;
-static GObjPathPointFunction path2607_1_actions[] = {
+static const GObjPathPointFunction path2607_1_actions[] = {
 climbUpToFloor
 };
-static Path path2607 = {
+static const Path path2607 = {
 .x = 104, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6831,10 +6831,10 @@ static Path path2607 = {
 }
 }
 };
-static Path *r11acidants3g_paths[] = {
+static const Path *r11acidants3g_paths[] = {
     &path2607
 };
-static LevelObject r11acidants3g_objects[] = {
+static const LevelObject r11acidants3g_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 104, .y = 1704,
@@ -6848,10 +6848,10 @@ LevelObjectGroup r11acidants3g = {
     .numObjects = 1, .objects = r11acidants3g_objects
 };
 extern LevelObjectGroup r11acidants3h;
-static GObjPathPointFunction path2611_1_actions[] = {
+static const GObjPathPointFunction path2611_1_actions[] = {
 climbUpToFloor
 };
-static Path path2611 = {
+static const Path path2611 = {
 .x = 80, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6879,10 +6879,10 @@ static Path path2611 = {
 }
 }
 };
-static Path *r11acidants3h_paths[] = {
+static const Path *r11acidants3h_paths[] = {
     &path2611
 };
-static LevelObject r11acidants3h_objects[] = {
+static const LevelObject r11acidants3h_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 80, .y = 1704,
@@ -6896,10 +6896,10 @@ LevelObjectGroup r11acidants3h = {
     .numObjects = 1, .objects = r11acidants3h_objects
 };
 extern LevelObjectGroup r11acidants3i;
-static GObjPathPointFunction path2615_1_actions[] = {
+static const GObjPathPointFunction path2615_1_actions[] = {
 climbUpToFloor
 };
-static Path path2615 = {
+static const Path path2615 = {
 .x = 56, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6927,10 +6927,10 @@ static Path path2615 = {
 }
 }
 };
-static Path *r11acidants3i_paths[] = {
+static const Path *r11acidants3i_paths[] = {
     &path2615
 };
-static LevelObject r11acidants3i_objects[] = {
+static const LevelObject r11acidants3i_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 56, .y = 1704,
@@ -6944,10 +6944,10 @@ LevelObjectGroup r11acidants3i = {
     .numObjects = 1, .objects = r11acidants3i_objects
 };
 extern LevelObjectGroup r11acidants3j;
-static GObjPathPointFunction path2619_1_actions[] = {
+static const GObjPathPointFunction path2619_1_actions[] = {
 climbUpToFloor
 };
-static Path path2619 = {
+static const Path path2619 = {
 .x = 32, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -6975,10 +6975,10 @@ static Path path2619 = {
 }
 }
 };
-static Path *r11acidants3j_paths[] = {
+static const Path *r11acidants3j_paths[] = {
     &path2619
 };
-static LevelObject r11acidants3j_objects[] = {
+static const LevelObject r11acidants3j_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 32, .y = 1704,
@@ -6992,10 +6992,10 @@ LevelObjectGroup r11acidants3j = {
     .numObjects = 1, .objects = r11acidants3j_objects
 };
 extern LevelObjectGroup r11acidants3k;
-static GObjPathPointFunction path2623_1_actions[] = {
+static const GObjPathPointFunction path2623_1_actions[] = {
 climbUpToFloor
 };
-static Path path2623 = {
+static const Path path2623 = {
 .x = 8, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
@@ -7023,10 +7023,10 @@ static Path path2623 = {
 }
 }
 };
-static Path *r11acidants3k_paths[] = {
+static const Path *r11acidants3k_paths[] = {
     &path2623
 };
-static LevelObject r11acidants3k_objects[] = {
+static const LevelObject r11acidants3k_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 8, .y = 1704,
@@ -7040,7 +7040,7 @@ LevelObjectGroup r11acidants3k = {
     .numObjects = 1, .objects = r11acidants3k_objects
 };
 extern LevelObjectGroup r11powerup;
-static LevelObject r11powerup_objects[] = {
+static const LevelObject r11powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 120, .y = 1656,
@@ -7054,16 +7054,16 @@ LevelObjectGroup r11powerup = {
     .numObjects = 1, .objects = r11powerup_objects
 };
 extern LevelObjectGroup r12wasp1a;
-static GObjPathPointFunction path2630_0_actions[] = {
+static const GObjPathPointFunction path2630_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2630_1_actions[] = {
+static const GObjPathPointFunction path2630_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2630_2_actions[] = {
+static const GObjPathPointFunction path2630_2_actions[] = {
 startWaspAttack
 };
-static Path path2630 = {
+static const Path path2630 = {
 .x = 96, .y = 1512, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7091,10 +7091,10 @@ static Path path2630 = {
 }
 }
 };
-static Path *r12wasp1a_paths[] = {
+static const Path *r12wasp1a_paths[] = {
     &path2630
 };
-static LevelObject r12wasp1a_objects[] = {
+static const LevelObject r12wasp1a_objects[] = {
 {
     .definition = &defWasp,
     .x = 96, .y = 1512,
@@ -7108,16 +7108,16 @@ LevelObjectGroup r12wasp1a = {
     .numObjects = 1, .objects = r12wasp1a_objects
 };
 extern LevelObjectGroup r12wasp1b;
-static GObjPathPointFunction path2636_0_actions[] = {
+static const GObjPathPointFunction path2636_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2636_1_actions[] = {
+static const GObjPathPointFunction path2636_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2636_2_actions[] = {
+static const GObjPathPointFunction path2636_2_actions[] = {
 startWaspAttack
 };
-static Path path2636 = {
+static const Path path2636 = {
 .x = 128, .y = 1528, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7145,10 +7145,10 @@ static Path path2636 = {
 }
 }
 };
-static Path *r12wasp1b_paths[] = {
+static const Path *r12wasp1b_paths[] = {
     &path2636
 };
-static LevelObject r12wasp1b_objects[] = {
+static const LevelObject r12wasp1b_objects[] = {
 {
     .definition = &defWasp,
     .x = 128, .y = 1528,
@@ -7162,16 +7162,16 @@ LevelObjectGroup r12wasp1b = {
     .numObjects = 1, .objects = r12wasp1b_objects
 };
 extern LevelObjectGroup r12wasp1c;
-static GObjPathPointFunction path2642_0_actions[] = {
+static const GObjPathPointFunction path2642_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2642_1_actions[] = {
+static const GObjPathPointFunction path2642_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2642_2_actions[] = {
+static const GObjPathPointFunction path2642_2_actions[] = {
 startWaspAttack
 };
-static Path path2642 = {
+static const Path path2642 = {
 .x = 160, .y = 1544, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7199,10 +7199,10 @@ static Path path2642 = {
 }
 }
 };
-static Path *r12wasp1c_paths[] = {
+static const Path *r12wasp1c_paths[] = {
     &path2642
 };
-static LevelObject r12wasp1c_objects[] = {
+static const LevelObject r12wasp1c_objects[] = {
 {
     .definition = &defWasp,
     .x = 160, .y = 1544,
@@ -7216,16 +7216,16 @@ LevelObjectGroup r12wasp1c = {
     .numObjects = 1, .objects = r12wasp1c_objects
 };
 extern LevelObjectGroup r12wasp2a;
-static GObjPathPointFunction path2648_0_actions[] = {
+static const GObjPathPointFunction path2648_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2648_1_actions[] = {
+static const GObjPathPointFunction path2648_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2648_2_actions[] = {
+static const GObjPathPointFunction path2648_2_actions[] = {
 startWaspAttack
 };
-static Path path2648 = {
+static const Path path2648 = {
 .x = 80, .y = 1448, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7253,10 +7253,10 @@ static Path path2648 = {
 }
 }
 };
-static Path *r12wasp2a_paths[] = {
+static const Path *r12wasp2a_paths[] = {
     &path2648
 };
-static LevelObject r12wasp2a_objects[] = {
+static const LevelObject r12wasp2a_objects[] = {
 {
     .definition = &defWasp,
     .x = 80, .y = 1448,
@@ -7270,16 +7270,16 @@ LevelObjectGroup r12wasp2a = {
     .numObjects = 1, .objects = r12wasp2a_objects
 };
 extern LevelObjectGroup r12wasp2b;
-static GObjPathPointFunction path2654_0_actions[] = {
+static const GObjPathPointFunction path2654_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2654_1_actions[] = {
+static const GObjPathPointFunction path2654_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2654_2_actions[] = {
+static const GObjPathPointFunction path2654_2_actions[] = {
 startWaspAttack
 };
-static Path path2654 = {
+static const Path path2654 = {
 .x = 56, .y = 1472, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7307,10 +7307,10 @@ static Path path2654 = {
 }
 }
 };
-static Path *r12wasp2b_paths[] = {
+static const Path *r12wasp2b_paths[] = {
     &path2654
 };
-static LevelObject r12wasp2b_objects[] = {
+static const LevelObject r12wasp2b_objects[] = {
 {
     .definition = &defWasp,
     .x = 56, .y = 1472,
@@ -7324,16 +7324,16 @@ LevelObjectGroup r12wasp2b = {
     .numObjects = 1, .objects = r12wasp2b_objects
 };
 extern LevelObjectGroup r12wasp2c;
-static GObjPathPointFunction path2660_0_actions[] = {
+static const GObjPathPointFunction path2660_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2660_1_actions[] = {
+static const GObjPathPointFunction path2660_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2660_2_actions[] = {
+static const GObjPathPointFunction path2660_2_actions[] = {
 startWaspAttack
 };
-static Path path2660 = {
+static const Path path2660 = {
 .x = 32, .y = 1496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7361,10 +7361,10 @@ static Path path2660 = {
 }
 }
 };
-static Path *r12wasp2c_paths[] = {
+static const Path *r12wasp2c_paths[] = {
     &path2660
 };
-static LevelObject r12wasp2c_objects[] = {
+static const LevelObject r12wasp2c_objects[] = {
 {
     .definition = &defWasp,
     .x = 32, .y = 1496,
@@ -7378,16 +7378,16 @@ LevelObjectGroup r12wasp2c = {
     .numObjects = 1, .objects = r12wasp2c_objects
 };
 extern LevelObjectGroup r12wasp3a;
-static GObjPathPointFunction path2666_0_actions[] = {
+static const GObjPathPointFunction path2666_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2666_1_actions[] = {
+static const GObjPathPointFunction path2666_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2666_2_actions[] = {
+static const GObjPathPointFunction path2666_2_actions[] = {
 startWaspAttack
 };
-static Path path2666 = {
+static const Path path2666 = {
 .x = 176, .y = 1472, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7415,10 +7415,10 @@ static Path path2666 = {
 }
 }
 };
-static Path *r12wasp3a_paths[] = {
+static const Path *r12wasp3a_paths[] = {
     &path2666
 };
-static LevelObject r12wasp3a_objects[] = {
+static const LevelObject r12wasp3a_objects[] = {
 {
     .definition = &defWasp,
     .x = 176, .y = 1472,
@@ -7432,16 +7432,16 @@ LevelObjectGroup r12wasp3a = {
     .numObjects = 1, .objects = r12wasp3a_objects
 };
 extern LevelObjectGroup r12wasp3b;
-static GObjPathPointFunction path2672_0_actions[] = {
+static const GObjPathPointFunction path2672_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2672_1_actions[] = {
+static const GObjPathPointFunction path2672_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2672_2_actions[] = {
+static const GObjPathPointFunction path2672_2_actions[] = {
 startWaspAttack
 };
-static Path path2672 = {
+static const Path path2672 = {
 .x = 200, .y = 1496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7469,10 +7469,10 @@ static Path path2672 = {
 }
 }
 };
-static Path *r12wasp3b_paths[] = {
+static const Path *r12wasp3b_paths[] = {
     &path2672
 };
-static LevelObject r12wasp3b_objects[] = {
+static const LevelObject r12wasp3b_objects[] = {
 {
     .definition = &defWasp,
     .x = 200, .y = 1496,
@@ -7486,16 +7486,16 @@ LevelObjectGroup r12wasp3b = {
     .numObjects = 1, .objects = r12wasp3b_objects
 };
 extern LevelObjectGroup r12wasp3c;
-static GObjPathPointFunction path2678_0_actions[] = {
+static const GObjPathPointFunction path2678_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2678_1_actions[] = {
+static const GObjPathPointFunction path2678_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2678_2_actions[] = {
+static const GObjPathPointFunction path2678_2_actions[] = {
 startWaspAttack
 };
-static Path path2678 = {
+static const Path path2678 = {
 .x = 224, .y = 1520, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7523,10 +7523,10 @@ static Path path2678 = {
 }
 }
 };
-static Path *r12wasp3c_paths[] = {
+static const Path *r12wasp3c_paths[] = {
     &path2678
 };
-static LevelObject r12wasp3c_objects[] = {
+static const LevelObject r12wasp3c_objects[] = {
 {
     .definition = &defWasp,
     .x = 224, .y = 1520,
@@ -7540,16 +7540,16 @@ LevelObjectGroup r12wasp3c = {
     .numObjects = 1, .objects = r12wasp3c_objects
 };
 extern LevelObjectGroup r12wasp4a;
-static GObjPathPointFunction path2684_0_actions[] = {
+static const GObjPathPointFunction path2684_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2684_1_actions[] = {
+static const GObjPathPointFunction path2684_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2684_2_actions[] = {
+static const GObjPathPointFunction path2684_2_actions[] = {
 startWaspAttack
 };
-static Path path2684 = {
+static const Path path2684 = {
 .x = 48, .y = 1416, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7577,10 +7577,10 @@ static Path path2684 = {
 }
 }
 };
-static Path *r12wasp4a_paths[] = {
+static const Path *r12wasp4a_paths[] = {
     &path2684
 };
-static LevelObject r12wasp4a_objects[] = {
+static const LevelObject r12wasp4a_objects[] = {
 {
     .definition = &defWasp,
     .x = 48, .y = 1416,
@@ -7594,16 +7594,16 @@ LevelObjectGroup r12wasp4a = {
     .numObjects = 1, .objects = r12wasp4a_objects
 };
 extern LevelObjectGroup r12wasp4b;
-static GObjPathPointFunction path2690_0_actions[] = {
+static const GObjPathPointFunction path2690_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2690_1_actions[] = {
+static const GObjPathPointFunction path2690_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2690_2_actions[] = {
+static const GObjPathPointFunction path2690_2_actions[] = {
 startWaspAttack
 };
-static Path path2690 = {
+static const Path path2690 = {
 .x = 208, .y = 1416, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7631,10 +7631,10 @@ static Path path2690 = {
 }
 }
 };
-static Path *r12wasp4b_paths[] = {
+static const Path *r12wasp4b_paths[] = {
     &path2690
 };
-static LevelObject r12wasp4b_objects[] = {
+static const LevelObject r12wasp4b_objects[] = {
 {
     .definition = &defWasp,
     .x = 208, .y = 1416,
@@ -7648,16 +7648,16 @@ LevelObjectGroup r12wasp4b = {
     .numObjects = 1, .objects = r12wasp4b_objects
 };
 extern LevelObjectGroup r12wasp4c;
-static GObjPathPointFunction path2696_0_actions[] = {
+static const GObjPathPointFunction path2696_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2696_1_actions[] = {
+static const GObjPathPointFunction path2696_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2696_2_actions[] = {
+static const GObjPathPointFunction path2696_2_actions[] = {
 startWaspAttack
 };
-static Path path2696 = {
+static const Path path2696 = {
 .x = 32, .y = 1504, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7685,10 +7685,10 @@ static Path path2696 = {
 }
 }
 };
-static Path *r12wasp4c_paths[] = {
+static const Path *r12wasp4c_paths[] = {
     &path2696
 };
-static LevelObject r12wasp4c_objects[] = {
+static const LevelObject r12wasp4c_objects[] = {
 {
     .definition = &defWasp,
     .x = 32, .y = 1504,
@@ -7702,16 +7702,16 @@ LevelObjectGroup r12wasp4c = {
     .numObjects = 1, .objects = r12wasp4c_objects
 };
 extern LevelObjectGroup r12wasp4d;
-static GObjPathPointFunction path2702_0_actions[] = {
+static const GObjPathPointFunction path2702_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2702_1_actions[] = {
+static const GObjPathPointFunction path2702_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2702_2_actions[] = {
+static const GObjPathPointFunction path2702_2_actions[] = {
 startWaspAttack
 };
-static Path path2702 = {
+static const Path path2702 = {
 .x = 224, .y = 1504, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -7739,10 +7739,10 @@ static Path path2702 = {
 }
 }
 };
-static Path *r12wasp4d_paths[] = {
+static const Path *r12wasp4d_paths[] = {
     &path2702
 };
-static LevelObject r12wasp4d_objects[] = {
+static const LevelObject r12wasp4d_objects[] = {
 {
     .definition = &defWasp,
     .x = 224, .y = 1504,
@@ -7756,7 +7756,7 @@ LevelObjectGroup r12wasp4d = {
     .numObjects = 1, .objects = r12wasp4d_objects
 };
 extern LevelObjectGroup r12powerup;
-static LevelObject r12powerup_objects[] = {
+static const LevelObject r12powerup_objects[] = {
 {
     .definition = &defReinforcedHoneyPot,
     .x = 128, .y = 1360,
@@ -7770,10 +7770,10 @@ LevelObjectGroup r12powerup = {
     .numObjects = 1, .objects = r12powerup_objects
 };
 extern LevelObjectGroup r13acidants1;
-static GObjPathPointFunction path2715_2_actions[] = {
+static const GObjPathPointFunction path2715_2_actions[] = {
 markDisappear
 };
-static Path path2715 = {
+static const Path path2715 = {
 .x = 232, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7801,10 +7801,10 @@ static Path path2715 = {
 }
 }
 };
-static GObjPathPointFunction path2716_2_actions[] = {
+static const GObjPathPointFunction path2716_2_actions[] = {
 markDisappear
 };
-static Path path2716 = {
+static const Path path2716 = {
 .x = 240, .y = 1168, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7832,10 +7832,10 @@ static Path path2716 = {
 }
 }
 };
-static GObjPathPointFunction path2717_2_actions[] = {
+static const GObjPathPointFunction path2717_2_actions[] = {
 markDisappear
 };
-static Path path2717 = {
+static const Path path2717 = {
 .x = 16, .y = 1168, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7863,10 +7863,10 @@ static Path path2717 = {
 }
 }
 };
-static GObjPathPointFunction path2718_2_actions[] = {
+static const GObjPathPointFunction path2718_2_actions[] = {
 markDisappear
 };
-static Path path2718 = {
+static const Path path2718 = {
 .x = 24, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7894,10 +7894,10 @@ static Path path2718 = {
 }
 }
 };
-static GObjPathPointFunction path2719_2_actions[] = {
+static const GObjPathPointFunction path2719_2_actions[] = {
 markDisappear
 };
-static Path path2719 = {
+static const Path path2719 = {
 .x = 248, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7925,10 +7925,10 @@ static Path path2719 = {
 }
 }
 };
-static GObjPathPointFunction path2720_2_actions[] = {
+static const GObjPathPointFunction path2720_2_actions[] = {
 markDisappear
 };
-static Path path2720 = {
+static const Path path2720 = {
 .x = 8, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
@@ -7956,7 +7956,7 @@ static Path path2720 = {
 }
 }
 };
-static Path *r13acidants1_paths[] = {
+static const Path *r13acidants1_paths[] = {
     &path2715,
     &path2716,
     &path2717,
@@ -7964,7 +7964,7 @@ static Path *r13acidants1_paths[] = {
     &path2719,
     &path2720
 };
-static LevelObject r13acidants1_objects[] = {
+static const LevelObject r13acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 16, .y = 1216,
@@ -8013,19 +8013,19 @@ LevelObjectGroup r13acidants1 = {
     .numObjects = 6, .objects = r13acidants1_objects
 };
 extern LevelObjectGroup r13beetle1;
-static GObjPathPointFunction path2730_1_actions[] = {
+static const GObjPathPointFunction path2730_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2730_2_actions[] = {
+static const GObjPathPointFunction path2730_2_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2730_3_actions[] = {
+static const GObjPathPointFunction path2730_3_actions[] = {
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2730_4_actions[] = {
+static const GObjPathPointFunction path2730_4_actions[] = {
 PathPoint_Rotate
 };
-static Path path2730 = {
+static const Path path2730 = {
 .x = 56, .y = 1320, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
@@ -8077,19 +8077,19 @@ static Path path2730 = {
 }
 }
 };
-static GObjPathPointFunction path2731_1_actions[] = {
+static const GObjPathPointFunction path2731_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2731_2_actions[] = {
+static const GObjPathPointFunction path2731_2_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2731_3_actions[] = {
+static const GObjPathPointFunction path2731_3_actions[] = {
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2731_4_actions[] = {
+static const GObjPathPointFunction path2731_4_actions[] = {
 PathPoint_Rotate
 };
-static Path path2731 = {
+static const Path path2731 = {
 .x = 200, .y = 1320, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
@@ -8141,11 +8141,11 @@ static Path path2731 = {
 }
 }
 };
-static Path *r13beetle1_paths[] = {
+static const Path *r13beetle1_paths[] = {
     &path2730,
     &path2731
 };
-static LevelObject r13beetle1_objects[] = {
+static const LevelObject r13beetle1_objects[] = {
 {
     .definition = &defBeetle,
     .x = 56, .y = 1320,
@@ -8166,21 +8166,21 @@ LevelObjectGroup r13beetle1 = {
     .numObjects = 2, .objects = r13beetle1_objects
 };
 extern LevelObjectGroup r13fly1;
-static GObjPathPointFunction path2742_0_actions[] = {
+static const GObjPathPointFunction path2742_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2742_3_actions[] = {
+static const GObjPathPointFunction path2742_3_actions[] = {
 enterForeground,
 0 /* to be assigned */,
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2742_4_actions[] = {
+static const GObjPathPointFunction path2742_4_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2742_5_actions[] = {
+static const GObjPathPointFunction path2742_5_actions[] = {
 startWaspAttack
 };
-static Path path2742 = {
+static const Path path2742 = {
 .x = 32, .y = 1264, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
@@ -8232,10 +8232,10 @@ static Path path2742 = {
 }
 }
 };
-static Path *r13fly1_paths[] = {
+static const Path *r13fly1_paths[] = {
     &path2742
 };
-static LevelObject r13fly1_objects[] = {
+static const LevelObject r13fly1_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 32, .y = 1264,
@@ -8249,23 +8249,23 @@ LevelObjectGroup r13fly1 = {
     .numObjects = 1, .objects = r13fly1_objects
 };
 extern LevelObjectGroup r13fly2;
-static GObjPathPointFunction path2751_0_actions[] = {
+static const GObjPathPointFunction path2751_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2751_2_actions[] = {
+static const GObjPathPointFunction path2751_2_actions[] = {
 0 /* to be assigned */,
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2751_3_actions[] = {
+static const GObjPathPointFunction path2751_3_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2751_4_actions[] = {
+static const GObjPathPointFunction path2751_4_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2751_5_actions[] = {
+static const GObjPathPointFunction path2751_5_actions[] = {
 startWaspAttack
 };
-static Path path2751 = {
+static const Path path2751 = {
 .x = 24, .y = 1232, .numPoints = 6, .points = {
 {
     .x = 24, .y = 0,
@@ -8317,10 +8317,10 @@ static Path path2751 = {
 }
 }
 };
-static Path *r13fly2_paths[] = {
+static const Path *r13fly2_paths[] = {
     &path2751
 };
-static LevelObject r13fly2_objects[] = {
+static const LevelObject r13fly2_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 48, .y = 1232,
@@ -8334,21 +8334,21 @@ LevelObjectGroup r13fly2 = {
     .numObjects = 1, .objects = r13fly2_objects
 };
 extern LevelObjectGroup r13fly3;
-static GObjPathPointFunction path2760_0_actions[] = {
+static const GObjPathPointFunction path2760_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2760_3_actions[] = {
+static const GObjPathPointFunction path2760_3_actions[] = {
 enterForeground,
 0 /* to be assigned */,
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2760_4_actions[] = {
+static const GObjPathPointFunction path2760_4_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2760_5_actions[] = {
+static const GObjPathPointFunction path2760_5_actions[] = {
 startWaspAttack
 };
-static Path path2760 = {
+static const Path path2760 = {
 .x = 224, .y = 1224, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
@@ -8400,10 +8400,10 @@ static Path path2760 = {
 }
 }
 };
-static Path *r13fly3_paths[] = {
+static const Path *r13fly3_paths[] = {
     &path2760
 };
-static LevelObject r13fly3_objects[] = {
+static const LevelObject r13fly3_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 224, .y = 1224,
@@ -8417,23 +8417,23 @@ LevelObjectGroup r13fly3 = {
     .numObjects = 1, .objects = r13fly3_objects
 };
 extern LevelObjectGroup r14fly4;
-static GObjPathPointFunction path2769_0_actions[] = {
+static const GObjPathPointFunction path2769_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2769_2_actions[] = {
+static const GObjPathPointFunction path2769_2_actions[] = {
 0 /* to be assigned */,
 PathPoint_SetSpeed
 };
-static GObjPathPointFunction path2769_3_actions[] = {
+static const GObjPathPointFunction path2769_3_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2769_4_actions[] = {
+static const GObjPathPointFunction path2769_4_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2769_5_actions[] = {
+static const GObjPathPointFunction path2769_5_actions[] = {
 startWaspAttack
 };
-static Path path2769 = {
+static const Path path2769 = {
 .x = 232, .y = 1192, .numPoints = 6, .points = {
 {
     .x = -24, .y = 0,
@@ -8485,10 +8485,10 @@ static Path path2769 = {
 }
 }
 };
-static Path *r14fly4_paths[] = {
+static const Path *r14fly4_paths[] = {
     &path2769
 };
-static LevelObject r14fly4_objects[] = {
+static const LevelObject r14fly4_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 208, .y = 1192,
@@ -8502,112 +8502,112 @@ LevelObjectGroup r14fly4 = {
     .numObjects = 1, .objects = r14fly4_objects
 };
 extern LevelObjectGroup r14beetles;
-static GObjPathPointFunction path2779_1_actions[] = {
+static const GObjPathPointFunction path2779_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2779_2_actions[] = {
+static const GObjPathPointFunction path2779_2_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2779_4_actions[] = {
+static const GObjPathPointFunction path2779_4_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_5_actions[] = {
+static const GObjPathPointFunction path2779_5_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2779_6_actions[] = {
+static const GObjPathPointFunction path2779_6_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2779_7_actions[] = {
+static const GObjPathPointFunction path2779_7_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_9_actions[] = {
+static const GObjPathPointFunction path2779_9_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_10_actions[] = {
+static const GObjPathPointFunction path2779_10_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2779_12_actions[] = {
+static const GObjPathPointFunction path2779_12_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2779_13_actions[] = {
+static const GObjPathPointFunction path2779_13_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_14_actions[] = {
+static const GObjPathPointFunction path2779_14_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2779_15_actions[] = {
+static const GObjPathPointFunction path2779_15_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2779_16_actions[] = {
+static const GObjPathPointFunction path2779_16_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_17_actions[] = {
+static const GObjPathPointFunction path2779_17_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_18_actions[] = {
+static const GObjPathPointFunction path2779_18_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2779_20_actions[] = {
+static const GObjPathPointFunction path2779_20_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2779_21_actions[] = {
+static const GObjPathPointFunction path2779_21_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_22_actions[] = {
+static const GObjPathPointFunction path2779_22_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2779_23_actions[] = {
+static const GObjPathPointFunction path2779_23_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2779_24_actions[] = {
+static const GObjPathPointFunction path2779_24_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_25_actions[] = {
+static const GObjPathPointFunction path2779_25_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_26_actions[] = {
+static const GObjPathPointFunction path2779_26_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2779_28_actions[] = {
+static const GObjPathPointFunction path2779_28_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2779_29_actions[] = {
+static const GObjPathPointFunction path2779_29_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2779_30_actions[] = {
+static const GObjPathPointFunction path2779_30_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2779_31_actions[] = {
+static const GObjPathPointFunction path2779_31_actions[] = {
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2779_32_actions[] = {
+static const GObjPathPointFunction path2779_32_actions[] = {
 PathPoint_Rotate
 };
-static Path path2779 = {
+static const Path path2779 = {
 .x = 40, .y = 856, .numPoints = 34, .points = {
 {
     .x = 64, .y = 240,
@@ -8883,110 +8883,110 @@ static Path path2779 = {
 }
 }
 };
-static GObjPathPointFunction path2780_2_actions[] = {
+static const GObjPathPointFunction path2780_2_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2780_4_actions[] = {
+static const GObjPathPointFunction path2780_4_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_5_actions[] = {
+static const GObjPathPointFunction path2780_5_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2780_7_actions[] = {
+static const GObjPathPointFunction path2780_7_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_9_actions[] = {
+static const GObjPathPointFunction path2780_9_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_10_actions[] = {
+static const GObjPathPointFunction path2780_10_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2780_11_actions[] = {
+static const GObjPathPointFunction path2780_11_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2780_12_actions[] = {
+static const GObjPathPointFunction path2780_12_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2780_13_actions[] = {
+static const GObjPathPointFunction path2780_13_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_14_actions[] = {
+static const GObjPathPointFunction path2780_14_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2780_16_actions[] = {
+static const GObjPathPointFunction path2780_16_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_17_actions[] = {
+static const GObjPathPointFunction path2780_17_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_18_actions[] = {
+static const GObjPathPointFunction path2780_18_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2780_19_actions[] = {
+static const GObjPathPointFunction path2780_19_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2780_20_actions[] = {
+static const GObjPathPointFunction path2780_20_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2780_21_actions[] = {
+static const GObjPathPointFunction path2780_21_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_22_actions[] = {
+static const GObjPathPointFunction path2780_22_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2780_24_actions[] = {
+static const GObjPathPointFunction path2780_24_actions[] = {
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_25_actions[] = {
+static const GObjPathPointFunction path2780_25_actions[] = {
 faceLeft,
 PathPoint_Rotate,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_26_actions[] = {
+static const GObjPathPointFunction path2780_26_actions[] = {
 BeetleShoot
 };
-static GObjPathPointFunction path2780_27_actions[] = {
+static const GObjPathPointFunction path2780_27_actions[] = {
 enterBackground
 };
-static GObjPathPointFunction path2780_28_actions[] = {
+static const GObjPathPointFunction path2780_28_actions[] = {
 0 /* to be assigned */,
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2780_29_actions[] = {
+static const GObjPathPointFunction path2780_29_actions[] = {
 PathPoint_Rotate,
 faceRight,
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2780_30_actions[] = {
+static const GObjPathPointFunction path2780_30_actions[] = {
 enterForeground,
 BeetleShoot
 };
-static GObjPathPointFunction path2780_31_actions[] = {
+static const GObjPathPointFunction path2780_31_actions[] = {
 PathPoint_Rotate
 };
-static GObjPathPointFunction path2780_32_actions[] = {
+static const GObjPathPointFunction path2780_32_actions[] = {
 PathPoint_Rotate
 };
-static Path path2780 = {
+static const Path path2780 = {
 .x = 152, .y = 856, .numPoints = 34, .points = {
 {
     .x = 64, .y = 240,
@@ -9262,11 +9262,11 @@ static Path path2780 = {
 }
 }
 };
-static Path *r14beetles_paths[] = {
+static const Path *r14beetles_paths[] = {
     &path2779,
     &path2780
 };
-static LevelObject r14beetles_objects[] = {
+static const LevelObject r14beetles_objects[] = {
 {
     .definition = &defBeetle,
     .x = 104, .y = 1096,
@@ -9322,10 +9322,10 @@ LevelObjectGroup r14beetles = {
     .numObjects = 7, .objects = r14beetles_objects
 };
 extern LevelObjectGroup r14acidants1;
-static GObjPathPointFunction path2891_2_actions[] = {
+static const GObjPathPointFunction path2891_2_actions[] = {
 markDisappear
 };
-static Path path2891 = {
+static const Path path2891 = {
 .x = 120, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9353,10 +9353,10 @@ static Path path2891 = {
 }
 }
 };
-static GObjPathPointFunction path2892_2_actions[] = {
+static const GObjPathPointFunction path2892_2_actions[] = {
 markDisappear
 };
-static Path path2892 = {
+static const Path path2892 = {
 .x = 184, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9384,11 +9384,11 @@ static Path path2892 = {
 }
 }
 };
-static Path *r14acidants1_paths[] = {
+static const Path *r14acidants1_paths[] = {
     &path2891,
     &path2892
 };
-static LevelObject r14acidants1_objects[] = {
+static const LevelObject r14acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 120, .y = 992,
@@ -9409,10 +9409,10 @@ LevelObjectGroup r14acidants1 = {
     .numObjects = 2, .objects = r14acidants1_objects
 };
 extern LevelObjectGroup r14acidants2;
-static GObjPathPointFunction path2898_2_actions[] = {
+static const GObjPathPointFunction path2898_2_actions[] = {
 markDisappear
 };
-static Path path2898 = {
+static const Path path2898 = {
 .x = 128, .y = 992, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9440,10 +9440,10 @@ static Path path2898 = {
 }
 }
 };
-static GObjPathPointFunction path2899_2_actions[] = {
+static const GObjPathPointFunction path2899_2_actions[] = {
 markDisappear
 };
-static Path path2899 = {
+static const Path path2899 = {
 .x = 176, .y = 992, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9471,11 +9471,11 @@ static Path path2899 = {
 }
 }
 };
-static Path *r14acidants2_paths[] = {
+static const Path *r14acidants2_paths[] = {
     &path2898,
     &path2899
 };
-static LevelObject r14acidants2_objects[] = {
+static const LevelObject r14acidants2_objects[] = {
 {
     .definition = &defAntHole,
     .x = 128, .y = 1008,
@@ -9496,10 +9496,10 @@ LevelObjectGroup r14acidants2 = {
     .numObjects = 2, .objects = r14acidants2_objects
 };
 extern LevelObjectGroup r14acidants3;
-static GObjPathPointFunction path2905_2_actions[] = {
+static const GObjPathPointFunction path2905_2_actions[] = {
 markDisappear
 };
-static Path path2905 = {
+static const Path path2905 = {
 .x = 136, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9527,10 +9527,10 @@ static Path path2905 = {
 }
 }
 };
-static GObjPathPointFunction path2906_2_actions[] = {
+static const GObjPathPointFunction path2906_2_actions[] = {
 markDisappear
 };
-static Path path2906 = {
+static const Path path2906 = {
 .x = 168, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
@@ -9558,11 +9558,11 @@ static Path path2906 = {
 }
 }
 };
-static Path *r14acidants3_paths[] = {
+static const Path *r14acidants3_paths[] = {
     &path2905,
     &path2906
 };
-static LevelObject r14acidants3_objects[] = {
+static const LevelObject r14acidants3_objects[] = {
 {
     .definition = &defAntHole,
     .x = 168, .y = 992,
@@ -9583,19 +9583,19 @@ LevelObjectGroup r14acidants3 = {
     .numObjects = 2, .objects = r14acidants3_objects
 };
 extern LevelObjectGroup r14wasp1a;
-static GObjPathPointFunction path2911_0_actions[] = {
+static const GObjPathPointFunction path2911_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2911_1_actions[] = {
+static const GObjPathPointFunction path2911_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2911_2_actions[] = {
+static const GObjPathPointFunction path2911_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2911_3_actions[] = {
+static const GObjPathPointFunction path2911_3_actions[] = {
 startWaspAttack
 };
-static Path path2911 = {
+static const Path path2911 = {
 .x = 136, .y = 1128, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9631,10 +9631,10 @@ static Path path2911 = {
 }
 }
 };
-static Path *r14wasp1a_paths[] = {
+static const Path *r14wasp1a_paths[] = {
     &path2911
 };
-static LevelObject r14wasp1a_objects[] = {
+static const LevelObject r14wasp1a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 1128,
@@ -9648,19 +9648,19 @@ LevelObjectGroup r14wasp1a = {
     .numObjects = 1, .objects = r14wasp1a_objects
 };
 extern LevelObjectGroup r14wasp1b;
-static GObjPathPointFunction path2921_0_actions[] = {
+static const GObjPathPointFunction path2921_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2921_1_actions[] = {
+static const GObjPathPointFunction path2921_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2921_2_actions[] = {
+static const GObjPathPointFunction path2921_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2921_3_actions[] = {
+static const GObjPathPointFunction path2921_3_actions[] = {
 startWaspAttack
 };
-static Path path2921 = {
+static const Path path2921 = {
 .x = 120, .y = 1136, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9696,10 +9696,10 @@ static Path path2921 = {
 }
 }
 };
-static Path *r14wasp1b_paths[] = {
+static const Path *r14wasp1b_paths[] = {
     &path2921
 };
-static LevelObject r14wasp1b_objects[] = {
+static const LevelObject r14wasp1b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 1136,
@@ -9713,19 +9713,19 @@ LevelObjectGroup r14wasp1b = {
     .numObjects = 1, .objects = r14wasp1b_objects
 };
 extern LevelObjectGroup r14wasp2a;
-static GObjPathPointFunction path2928_0_actions[] = {
+static const GObjPathPointFunction path2928_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2928_1_actions[] = {
+static const GObjPathPointFunction path2928_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2928_2_actions[] = {
+static const GObjPathPointFunction path2928_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2928_3_actions[] = {
+static const GObjPathPointFunction path2928_3_actions[] = {
 startWaspAttack
 };
-static Path path2928 = {
+static const Path path2928 = {
 .x = 24, .y = 1072, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9761,10 +9761,10 @@ static Path path2928 = {
 }
 }
 };
-static Path *r14wasp2a_paths[] = {
+static const Path *r14wasp2a_paths[] = {
     &path2928
 };
-static LevelObject r14wasp2a_objects[] = {
+static const LevelObject r14wasp2a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 1072,
@@ -9778,19 +9778,19 @@ LevelObjectGroup r14wasp2a = {
     .numObjects = 1, .objects = r14wasp2a_objects
 };
 extern LevelObjectGroup r14wasp2b;
-static GObjPathPointFunction path2935_0_actions[] = {
+static const GObjPathPointFunction path2935_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2935_1_actions[] = {
+static const GObjPathPointFunction path2935_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2935_2_actions[] = {
+static const GObjPathPointFunction path2935_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2935_3_actions[] = {
+static const GObjPathPointFunction path2935_3_actions[] = {
 startWaspAttack
 };
-static Path path2935 = {
+static const Path path2935 = {
 .x = 120, .y = 1096, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9826,10 +9826,10 @@ static Path path2935 = {
 }
 }
 };
-static Path *r14wasp2b_paths[] = {
+static const Path *r14wasp2b_paths[] = {
     &path2935
 };
-static LevelObject r14wasp2b_objects[] = {
+static const LevelObject r14wasp2b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 1096,
@@ -9843,19 +9843,19 @@ LevelObjectGroup r14wasp2b = {
     .numObjects = 1, .objects = r14wasp2b_objects
 };
 extern LevelObjectGroup r14wasp3a;
-static GObjPathPointFunction path2942_0_actions[] = {
+static const GObjPathPointFunction path2942_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2942_1_actions[] = {
+static const GObjPathPointFunction path2942_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2942_2_actions[] = {
+static const GObjPathPointFunction path2942_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2942_3_actions[] = {
+static const GObjPathPointFunction path2942_3_actions[] = {
 startWaspAttack
 };
-static Path path2942 = {
+static const Path path2942 = {
 .x = 136, .y = 1056, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9891,10 +9891,10 @@ static Path path2942 = {
 }
 }
 };
-static Path *r14wasp3a_paths[] = {
+static const Path *r14wasp3a_paths[] = {
     &path2942
 };
-static LevelObject r14wasp3a_objects[] = {
+static const LevelObject r14wasp3a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 1056,
@@ -9908,19 +9908,19 @@ LevelObjectGroup r14wasp3a = {
     .numObjects = 1, .objects = r14wasp3a_objects
 };
 extern LevelObjectGroup r14wasp3b;
-static GObjPathPointFunction path2949_0_actions[] = {
+static const GObjPathPointFunction path2949_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2949_1_actions[] = {
+static const GObjPathPointFunction path2949_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2949_2_actions[] = {
+static const GObjPathPointFunction path2949_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2949_3_actions[] = {
+static const GObjPathPointFunction path2949_3_actions[] = {
 startWaspAttack
 };
-static Path path2949 = {
+static const Path path2949 = {
 .x = 232, .y = 1032, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -9956,10 +9956,10 @@ static Path path2949 = {
 }
 }
 };
-static Path *r14wasp3b_paths[] = {
+static const Path *r14wasp3b_paths[] = {
     &path2949
 };
-static LevelObject r14wasp3b_objects[] = {
+static const LevelObject r14wasp3b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 1032,
@@ -9973,19 +9973,19 @@ LevelObjectGroup r14wasp3b = {
     .numObjects = 1, .objects = r14wasp3b_objects
 };
 extern LevelObjectGroup r14wasp4a;
-static GObjPathPointFunction path2956_0_actions[] = {
+static const GObjPathPointFunction path2956_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2956_1_actions[] = {
+static const GObjPathPointFunction path2956_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2956_2_actions[] = {
+static const GObjPathPointFunction path2956_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2956_3_actions[] = {
+static const GObjPathPointFunction path2956_3_actions[] = {
 startWaspAttack
 };
-static Path path2956 = {
+static const Path path2956 = {
 .x = 24, .y = 960, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10021,10 +10021,10 @@ static Path path2956 = {
 }
 }
 };
-static Path *r14wasp4a_paths[] = {
+static const Path *r14wasp4a_paths[] = {
     &path2956
 };
-static LevelObject r14wasp4a_objects[] = {
+static const LevelObject r14wasp4a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 960,
@@ -10038,19 +10038,19 @@ LevelObjectGroup r14wasp4a = {
     .numObjects = 1, .objects = r14wasp4a_objects
 };
 extern LevelObjectGroup r14wasp4b;
-static GObjPathPointFunction path2963_0_actions[] = {
+static const GObjPathPointFunction path2963_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2963_1_actions[] = {
+static const GObjPathPointFunction path2963_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2963_2_actions[] = {
+static const GObjPathPointFunction path2963_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2963_3_actions[] = {
+static const GObjPathPointFunction path2963_3_actions[] = {
 startWaspAttack
 };
-static Path path2963 = {
+static const Path path2963 = {
 .x = 136, .y = 952, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10086,10 +10086,10 @@ static Path path2963 = {
 }
 }
 };
-static Path *r14wasp4b_paths[] = {
+static const Path *r14wasp4b_paths[] = {
     &path2963
 };
-static LevelObject r14wasp4b_objects[] = {
+static const LevelObject r14wasp4b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 952,
@@ -10103,19 +10103,19 @@ LevelObjectGroup r14wasp4b = {
     .numObjects = 1, .objects = r14wasp4b_objects
 };
 extern LevelObjectGroup r14wasp4c;
-static GObjPathPointFunction path2970_0_actions[] = {
+static const GObjPathPointFunction path2970_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2970_1_actions[] = {
+static const GObjPathPointFunction path2970_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2970_2_actions[] = {
+static const GObjPathPointFunction path2970_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2970_3_actions[] = {
+static const GObjPathPointFunction path2970_3_actions[] = {
 startWaspAttack
 };
-static Path path2970 = {
+static const Path path2970 = {
 .x = 24, .y = 984, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10151,10 +10151,10 @@ static Path path2970 = {
 }
 }
 };
-static Path *r14wasp4c_paths[] = {
+static const Path *r14wasp4c_paths[] = {
     &path2970
 };
-static LevelObject r14wasp4c_objects[] = {
+static const LevelObject r14wasp4c_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 984,
@@ -10168,19 +10168,19 @@ LevelObjectGroup r14wasp4c = {
     .numObjects = 1, .objects = r14wasp4c_objects
 };
 extern LevelObjectGroup r14wasp5a;
-static GObjPathPointFunction path2977_0_actions[] = {
+static const GObjPathPointFunction path2977_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2977_1_actions[] = {
+static const GObjPathPointFunction path2977_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2977_2_actions[] = {
+static const GObjPathPointFunction path2977_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2977_3_actions[] = {
+static const GObjPathPointFunction path2977_3_actions[] = {
 startWaspAttack
 };
-static Path path2977 = {
+static const Path path2977 = {
 .x = 232, .y = 896, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10216,10 +10216,10 @@ static Path path2977 = {
 }
 }
 };
-static Path *r14wasp5a_paths[] = {
+static const Path *r14wasp5a_paths[] = {
     &path2977
 };
-static LevelObject r14wasp5a_objects[] = {
+static const LevelObject r14wasp5a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 896,
@@ -10233,19 +10233,19 @@ LevelObjectGroup r14wasp5a = {
     .numObjects = 1, .objects = r14wasp5a_objects
 };
 extern LevelObjectGroup r14wasp5b;
-static GObjPathPointFunction path2984_0_actions[] = {
+static const GObjPathPointFunction path2984_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2984_1_actions[] = {
+static const GObjPathPointFunction path2984_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2984_2_actions[] = {
+static const GObjPathPointFunction path2984_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2984_3_actions[] = {
+static const GObjPathPointFunction path2984_3_actions[] = {
 startWaspAttack
 };
-static Path path2984 = {
+static const Path path2984 = {
 .x = 120, .y = 888, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10281,10 +10281,10 @@ static Path path2984 = {
 }
 }
 };
-static Path *r14wasp5b_paths[] = {
+static const Path *r14wasp5b_paths[] = {
     &path2984
 };
-static LevelObject r14wasp5b_objects[] = {
+static const LevelObject r14wasp5b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 888,
@@ -10298,19 +10298,19 @@ LevelObjectGroup r14wasp5b = {
     .numObjects = 1, .objects = r14wasp5b_objects
 };
 extern LevelObjectGroup r14wasp5c;
-static GObjPathPointFunction path2991_0_actions[] = {
+static const GObjPathPointFunction path2991_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path2991_1_actions[] = {
+static const GObjPathPointFunction path2991_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path2991_2_actions[] = {
+static const GObjPathPointFunction path2991_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path2991_3_actions[] = {
+static const GObjPathPointFunction path2991_3_actions[] = {
 startWaspAttack
 };
-static Path path2991 = {
+static const Path path2991 = {
 .x = 232, .y = 920, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10346,10 +10346,10 @@ static Path path2991 = {
 }
 }
 };
-static Path *r14wasp5c_paths[] = {
+static const Path *r14wasp5c_paths[] = {
     &path2991
 };
-static LevelObject r14wasp5c_objects[] = {
+static const LevelObject r14wasp5c_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 920,
@@ -10363,19 +10363,19 @@ LevelObjectGroup r14wasp5c = {
     .numObjects = 1, .objects = r14wasp5c_objects
 };
 extern LevelObjectGroup r14wasp6a;
-static GObjPathPointFunction path3002_0_actions[] = {
+static const GObjPathPointFunction path3002_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3002_1_actions[] = {
+static const GObjPathPointFunction path3002_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3002_2_actions[] = {
+static const GObjPathPointFunction path3002_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3002_3_actions[] = {
+static const GObjPathPointFunction path3002_3_actions[] = {
 startWaspAttack
 };
-static Path path3002 = {
+static const Path path3002 = {
 .x = 24, .y = 832, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10411,19 +10411,19 @@ static Path path3002 = {
 }
 }
 };
-static GObjPathPointFunction path3003_0_actions[] = {
+static const GObjPathPointFunction path3003_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3003_1_actions[] = {
+static const GObjPathPointFunction path3003_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3003_2_actions[] = {
+static const GObjPathPointFunction path3003_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3003_3_actions[] = {
+static const GObjPathPointFunction path3003_3_actions[] = {
 startWaspAttack
 };
-static Path path3003 = {
+static const Path path3003 = {
 .x = 120, .y = 832, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10459,11 +10459,11 @@ static Path path3003 = {
 }
 }
 };
-static Path *r14wasp6a_paths[] = {
+static const Path *r14wasp6a_paths[] = {
     &path3002,
     &path3003
 };
-static LevelObject r14wasp6a_objects[] = {
+static const LevelObject r14wasp6a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 832,
@@ -10484,19 +10484,19 @@ LevelObjectGroup r14wasp6a = {
     .numObjects = 2, .objects = r14wasp6a_objects
 };
 extern LevelObjectGroup r14wasp6b;
-static GObjPathPointFunction path3015_0_actions[] = {
+static const GObjPathPointFunction path3015_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3015_1_actions[] = {
+static const GObjPathPointFunction path3015_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3015_2_actions[] = {
+static const GObjPathPointFunction path3015_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3015_3_actions[] = {
+static const GObjPathPointFunction path3015_3_actions[] = {
 startWaspAttack
 };
-static Path path3015 = {
+static const Path path3015 = {
 .x = 24, .y = 848, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10532,19 +10532,19 @@ static Path path3015 = {
 }
 }
 };
-static GObjPathPointFunction path3016_0_actions[] = {
+static const GObjPathPointFunction path3016_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3016_1_actions[] = {
+static const GObjPathPointFunction path3016_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3016_2_actions[] = {
+static const GObjPathPointFunction path3016_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3016_3_actions[] = {
+static const GObjPathPointFunction path3016_3_actions[] = {
 startWaspAttack
 };
-static Path path3016 = {
+static const Path path3016 = {
 .x = 120, .y = 848, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10580,11 +10580,11 @@ static Path path3016 = {
 }
 }
 };
-static Path *r14wasp6b_paths[] = {
+static const Path *r14wasp6b_paths[] = {
     &path3015,
     &path3016
 };
-static LevelObject r14wasp6b_objects[] = {
+static const LevelObject r14wasp6b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 848,
@@ -10605,19 +10605,19 @@ LevelObjectGroup r14wasp6b = {
     .numObjects = 2, .objects = r14wasp6b_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6a;
-static GObjPathPointFunction path3028_0_actions[] = {
+static const GObjPathPointFunction path3028_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3028_1_actions[] = {
+static const GObjPathPointFunction path3028_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3028_2_actions[] = {
+static const GObjPathPointFunction path3028_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3028_3_actions[] = {
+static const GObjPathPointFunction path3028_3_actions[] = {
 startWaspAttack
 };
-static Path path3028 = {
+static const Path path3028 = {
 .x = 136, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10653,19 +10653,19 @@ static Path path3028 = {
 }
 }
 };
-static GObjPathPointFunction path3029_0_actions[] = {
+static const GObjPathPointFunction path3029_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3029_1_actions[] = {
+static const GObjPathPointFunction path3029_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3029_2_actions[] = {
+static const GObjPathPointFunction path3029_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3029_3_actions[] = {
+static const GObjPathPointFunction path3029_3_actions[] = {
 startWaspAttack
 };
-static Path path3029 = {
+static const Path path3029 = {
 .x = 232, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10701,11 +10701,11 @@ static Path path3029 = {
 }
 }
 };
-static Path *Copy_of_r14wasp6a_paths[] = {
+static const Path *Copy_of_r14wasp6a_paths[] = {
     &path3028,
     &path3029
 };
-static LevelObject Copy_of_r14wasp6a_objects[] = {
+static const LevelObject Copy_of_r14wasp6a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
@@ -10726,19 +10726,19 @@ LevelObjectGroup Copy_of_r14wasp6a = {
     .numObjects = 2, .objects = Copy_of_r14wasp6a_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6b;
-static GObjPathPointFunction path3041_0_actions[] = {
+static const GObjPathPointFunction path3041_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3041_1_actions[] = {
+static const GObjPathPointFunction path3041_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3041_2_actions[] = {
+static const GObjPathPointFunction path3041_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3041_3_actions[] = {
+static const GObjPathPointFunction path3041_3_actions[] = {
 startWaspAttack
 };
-static Path path3041 = {
+static const Path path3041 = {
 .x = 136, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10774,19 +10774,19 @@ static Path path3041 = {
 }
 }
 };
-static GObjPathPointFunction path3042_0_actions[] = {
+static const GObjPathPointFunction path3042_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3042_1_actions[] = {
+static const GObjPathPointFunction path3042_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3042_2_actions[] = {
+static const GObjPathPointFunction path3042_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3042_3_actions[] = {
+static const GObjPathPointFunction path3042_3_actions[] = {
 startWaspAttack
 };
-static Path path3042 = {
+static const Path path3042 = {
 .x = 232, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -10822,11 +10822,11 @@ static Path path3042 = {
 }
 }
 };
-static Path *Copy_of_r14wasp6b_paths[] = {
+static const Path *Copy_of_r14wasp6b_paths[] = {
     &path3041,
     &path3042
 };
-static LevelObject Copy_of_r14wasp6b_objects[] = {
+static const LevelObject Copy_of_r14wasp6b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
@@ -10847,10 +10847,10 @@ LevelObjectGroup Copy_of_r14wasp6b = {
     .numObjects = 2, .objects = Copy_of_r14wasp6b_objects
 };
 extern LevelObjectGroup r14powerup1;
-static GObjPathPointFunction path3047_1_actions[] = {
+static const GObjPathPointFunction path3047_1_actions[] = {
 markDisappear
 };
-static Path path3047 = {
+static const Path path3047 = {
 .x = 72, .y = 992, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -10870,10 +10870,10 @@ static Path path3047 = {
 }
 }
 };
-static Path *r14powerup1_paths[] = {
+static const Path *r14powerup1_paths[] = {
     &path3047
 };
-static LevelObject r14powerup1_objects[] = {
+static const LevelObject r14powerup1_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 72, .y = 992,
@@ -10887,10 +10887,10 @@ LevelObjectGroup r14powerup1 = {
     .numObjects = 1, .objects = r14powerup1_objects
 };
 extern LevelObjectGroup r14powerup2;
-static GObjPathPointFunction path3051_1_actions[] = {
+static const GObjPathPointFunction path3051_1_actions[] = {
 markDisappear
 };
-static Path path3051 = {
+static const Path path3051 = {
 .x = 184, .y = 960, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -10910,10 +10910,10 @@ static Path path3051 = {
 }
 }
 };
-static Path *r14powerup2_paths[] = {
+static const Path *r14powerup2_paths[] = {
     &path3051
 };
-static LevelObject r14powerup2_objects[] = {
+static const LevelObject r14powerup2_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 184, .y = 960,
@@ -10927,10 +10927,10 @@ LevelObjectGroup r14powerup2 = {
     .numObjects = 1, .objects = r14powerup2_objects
 };
 extern LevelObjectGroup r15powerup2;
-static GObjPathPointFunction path3055_1_actions[] = {
+static const GObjPathPointFunction path3055_1_actions[] = {
 markDisappear
 };
-static Path path3055 = {
+static const Path path3055 = {
 .x = 72, .y = 800, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -10950,10 +10950,10 @@ static Path path3055 = {
 }
 }
 };
-static Path *r15powerup2_paths[] = {
+static const Path *r15powerup2_paths[] = {
     &path3055
 };
-static LevelObject r15powerup2_objects[] = {
+static const LevelObject r15powerup2_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 72, .y = 800,
@@ -10967,10 +10967,10 @@ LevelObjectGroup r15powerup2 = {
     .numObjects = 1, .objects = r15powerup2_objects
 };
 extern LevelObjectGroup r15powerup1;
-static GObjPathPointFunction path3059_1_actions[] = {
+static const GObjPathPointFunction path3059_1_actions[] = {
 markDisappear
 };
-static Path path3059 = {
+static const Path path3059 = {
 .x = 184, .y = 864, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
@@ -10990,10 +10990,10 @@ static Path path3059 = {
 }
 }
 };
-static Path *r15powerup1_paths[] = {
+static const Path *r15powerup1_paths[] = {
     &path3059
 };
-static LevelObject r15powerup1_objects[] = {
+static const LevelObject r15powerup1_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 184, .y = 864,
@@ -11007,19 +11007,19 @@ LevelObjectGroup r15powerup1 = {
     .numObjects = 1, .objects = r15powerup1_objects
 };
 extern LevelObjectGroup r16acidants1;
-static GObjPathPointFunction path3063_1_actions[] = {
+static const GObjPathPointFunction path3063_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3063_2_actions[] = {
+static const GObjPathPointFunction path3063_2_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3063_6_actions[] = {
+static const GObjPathPointFunction path3063_6_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3063_7_actions[] = {
+static const GObjPathPointFunction path3063_7_actions[] = {
 markDisappear
 };
-static Path path3063 = {
+static const Path path3063 = {
 .x = 40, .y = 544, .numPoints = 8, .points = {
 {
     .x = 0, .y = 16,
@@ -11087,10 +11087,10 @@ static Path path3063 = {
 }
 }
 };
-static Path *r16acidants1_paths[] = {
+static const Path *r16acidants1_paths[] = {
     &path3063
 };
-static LevelObject r16acidants1_objects[] = {
+static const LevelObject r16acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 40, .y = 560,
@@ -11104,7 +11104,7 @@ LevelObjectGroup r16acidants1 = {
     .numObjects = 1, .objects = r16acidants1_objects
 };
 extern LevelObjectGroup r16powerup;
-static LevelObject r16powerup_objects[] = {
+static const LevelObject r16powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 168, .y = 592,
@@ -11125,19 +11125,19 @@ LevelObjectGroup r16powerup = {
     .numObjects = 2, .objects = r16powerup_objects
 };
 extern LevelObjectGroup r16acidants2;
-static GObjPathPointFunction path3074_1_actions[] = {
+static const GObjPathPointFunction path3074_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3074_3_actions[] = {
+static const GObjPathPointFunction path3074_3_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3074_7_actions[] = {
+static const GObjPathPointFunction path3074_7_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3074_8_actions[] = {
+static const GObjPathPointFunction path3074_8_actions[] = {
 markDisappear
 };
-static Path path3074 = {
+static const Path path3074 = {
 .x = 184, .y = 464, .numPoints = 9, .points = {
 {
     .x = 0, .y = -8,
@@ -11213,19 +11213,19 @@ static Path path3074 = {
 }
 }
 };
-static GObjPathPointFunction path3075_1_actions[] = {
+static const GObjPathPointFunction path3075_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3075_2_actions[] = {
+static const GObjPathPointFunction path3075_2_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3075_6_actions[] = {
+static const GObjPathPointFunction path3075_6_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3075_7_actions[] = {
+static const GObjPathPointFunction path3075_7_actions[] = {
 markDisappear
 };
-static Path path3075 = {
+static const Path path3075 = {
 .x = 88, .y = 456, .numPoints = 8, .points = {
 {
     .x = -16, .y = 16,
@@ -11293,11 +11293,11 @@ static Path path3075 = {
 }
 }
 };
-static Path *r16acidants2_paths[] = {
+static const Path *r16acidants2_paths[] = {
     &path3074,
     &path3075
 };
-static LevelObject r16acidants2_objects[] = {
+static const LevelObject r16acidants2_objects[] = {
 {
     .definition = &defAntHole,
     .x = 72, .y = 472,
@@ -11318,7 +11318,7 @@ LevelObjectGroup r16acidants2 = {
     .numObjects = 2, .objects = r16acidants2_objects
 };
 extern LevelObjectGroup r16powerup2;
-static LevelObject r16powerup2_objects[] = {
+static const LevelObject r16powerup2_objects[] = {
 {
     .definition = &defReinforcedHoneyPot,
     .x = 128, .y = 512,
@@ -11332,7 +11332,7 @@ LevelObjectGroup r16powerup2 = {
     .numObjects = 1, .objects = r16powerup2_objects
 };
 extern LevelObjectGroup r17powerup;
-static LevelObject r17powerup_objects[] = {
+static const LevelObject r17powerup_objects[] = {
 {
     .definition = &defHoneyPot,
     .x = 128, .y = 408,
@@ -11360,19 +11360,19 @@ LevelObjectGroup r17powerup = {
     .numObjects = 3, .objects = r17powerup_objects
 };
 extern LevelObjectGroup r17fly1a;
-static GObjPathPointFunction path3092_0_actions[] = {
+static const GObjPathPointFunction path3092_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3092_1_actions[] = {
+static const GObjPathPointFunction path3092_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3092_2_actions[] = {
+static const GObjPathPointFunction path3092_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3092_3_actions[] = {
+static const GObjPathPointFunction path3092_3_actions[] = {
 startWaspAttack
 };
-static Path path3092 = {
+static const Path path3092 = {
 .x = 40, .y = 472, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -11408,10 +11408,10 @@ static Path path3092 = {
 }
 }
 };
-static Path *r17fly1a_paths[] = {
+static const Path *r17fly1a_paths[] = {
     &path3092
 };
-static LevelObject r17fly1a_objects[] = {
+static const LevelObject r17fly1a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 40, .y = 472,
@@ -11425,19 +11425,19 @@ LevelObjectGroup r17fly1a = {
     .numObjects = 1, .objects = r17fly1a_objects
 };
 extern LevelObjectGroup r17fly1b;
-static GObjPathPointFunction path3099_0_actions[] = {
+static const GObjPathPointFunction path3099_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3099_1_actions[] = {
+static const GObjPathPointFunction path3099_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3099_2_actions[] = {
+static const GObjPathPointFunction path3099_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3099_3_actions[] = {
+static const GObjPathPointFunction path3099_3_actions[] = {
 startWaspAttack
 };
-static Path path3099 = {
+static const Path path3099 = {
 .x = 208, .y = 472, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -11473,10 +11473,10 @@ static Path path3099 = {
 }
 }
 };
-static Path *r17fly1b_paths[] = {
+static const Path *r17fly1b_paths[] = {
     &path3099
 };
-static LevelObject r17fly1b_objects[] = {
+static const LevelObject r17fly1b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 208, .y = 472,
@@ -11490,19 +11490,19 @@ LevelObjectGroup r17fly1b = {
     .numObjects = 1, .objects = r17fly1b_objects
 };
 extern LevelObjectGroup r17fly2a;
-static GObjPathPointFunction path3106_0_actions[] = {
+static const GObjPathPointFunction path3106_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3106_1_actions[] = {
+static const GObjPathPointFunction path3106_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3106_2_actions[] = {
+static const GObjPathPointFunction path3106_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3106_3_actions[] = {
+static const GObjPathPointFunction path3106_3_actions[] = {
 startWaspAttack
 };
-static Path path3106 = {
+static const Path path3106 = {
 .x = 24, .y = 496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -11538,10 +11538,10 @@ static Path path3106 = {
 }
 }
 };
-static Path *r17fly2a_paths[] = {
+static const Path *r17fly2a_paths[] = {
     &path3106
 };
-static LevelObject r17fly2a_objects[] = {
+static const LevelObject r17fly2a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 496,
@@ -11555,19 +11555,19 @@ LevelObjectGroup r17fly2a = {
     .numObjects = 1, .objects = r17fly2a_objects
 };
 extern LevelObjectGroup r17fly2b;
-static GObjPathPointFunction path3113_0_actions[] = {
+static const GObjPathPointFunction path3113_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3113_1_actions[] = {
+static const GObjPathPointFunction path3113_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3113_2_actions[] = {
+static const GObjPathPointFunction path3113_2_actions[] = {
 PathPoint_SlowSpeedAndShootBurstsAtTarget
 };
-static GObjPathPointFunction path3113_3_actions[] = {
+static const GObjPathPointFunction path3113_3_actions[] = {
 startWaspAttack
 };
-static Path path3113 = {
+static const Path path3113 = {
 .x = 232, .y = 496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
@@ -11603,10 +11603,10 @@ static Path path3113 = {
 }
 }
 };
-static Path *r17fly2b_paths[] = {
+static const Path *r17fly2b_paths[] = {
     &path3113
 };
-static LevelObject r17fly2b_objects[] = {
+static const LevelObject r17fly2b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 496,
@@ -11620,16 +11620,16 @@ LevelObjectGroup r17fly2b = {
     .numObjects = 1, .objects = r17fly2b_objects
 };
 extern LevelObjectGroup r17wasp1;
-static GObjPathPointFunction path3121_0_actions[] = {
+static const GObjPathPointFunction path3121_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3121_1_actions[] = {
+static const GObjPathPointFunction path3121_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3121_2_actions[] = {
+static const GObjPathPointFunction path3121_2_actions[] = {
 startWaspAttack
 };
-static Path path3121 = {
+static const Path path3121 = {
 .x = 16, .y = 456, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11657,16 +11657,16 @@ static Path path3121 = {
 }
 }
 };
-static GObjPathPointFunction path3122_0_actions[] = {
+static const GObjPathPointFunction path3122_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3122_1_actions[] = {
+static const GObjPathPointFunction path3122_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3122_2_actions[] = {
+static const GObjPathPointFunction path3122_2_actions[] = {
 startWaspAttack
 };
-static Path path3122 = {
+static const Path path3122 = {
 .x = 240, .y = 456, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11694,11 +11694,11 @@ static Path path3122 = {
 }
 }
 };
-static Path *r17wasp1_paths[] = {
+static const Path *r17wasp1_paths[] = {
     &path3121,
     &path3122
 };
-static LevelObject r17wasp1_objects[] = {
+static const LevelObject r17wasp1_objects[] = {
 {
     .definition = &defWasp,
     .x = 16, .y = 456,
@@ -11719,16 +11719,16 @@ LevelObjectGroup r17wasp1 = {
     .numObjects = 2, .objects = r17wasp1_objects
 };
 extern LevelObjectGroup r17wasp3;
-static GObjPathPointFunction path3132_0_actions[] = {
+static const GObjPathPointFunction path3132_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3132_1_actions[] = {
+static const GObjPathPointFunction path3132_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3132_2_actions[] = {
+static const GObjPathPointFunction path3132_2_actions[] = {
 startWaspAttack
 };
-static Path path3132 = {
+static const Path path3132 = {
 .x = 56, .y = 408, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11756,16 +11756,16 @@ static Path path3132 = {
 }
 }
 };
-static GObjPathPointFunction path3133_0_actions[] = {
+static const GObjPathPointFunction path3133_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3133_1_actions[] = {
+static const GObjPathPointFunction path3133_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3133_2_actions[] = {
+static const GObjPathPointFunction path3133_2_actions[] = {
 startWaspAttack
 };
-static Path path3133 = {
+static const Path path3133 = {
 .x = 200, .y = 408, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11793,11 +11793,11 @@ static Path path3133 = {
 }
 }
 };
-static Path *r17wasp3_paths[] = {
+static const Path *r17wasp3_paths[] = {
     &path3132,
     &path3133
 };
-static LevelObject r17wasp3_objects[] = {
+static const LevelObject r17wasp3_objects[] = {
 {
     .definition = &defWasp,
     .x = 56, .y = 408,
@@ -11818,16 +11818,16 @@ LevelObjectGroup r17wasp3 = {
     .numObjects = 2, .objects = r17wasp3_objects
 };
 extern LevelObjectGroup r17wasp5;
-static GObjPathPointFunction path3143_0_actions[] = {
+static const GObjPathPointFunction path3143_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3143_1_actions[] = {
+static const GObjPathPointFunction path3143_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3143_2_actions[] = {
+static const GObjPathPointFunction path3143_2_actions[] = {
 startWaspAttack
 };
-static Path path3143 = {
+static const Path path3143 = {
 .x = 112, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11855,16 +11855,16 @@ static Path path3143 = {
 }
 }
 };
-static GObjPathPointFunction path3144_0_actions[] = {
+static const GObjPathPointFunction path3144_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3144_1_actions[] = {
+static const GObjPathPointFunction path3144_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3144_2_actions[] = {
+static const GObjPathPointFunction path3144_2_actions[] = {
 startWaspAttack
 };
-static Path path3144 = {
+static const Path path3144 = {
 .x = 144, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11892,11 +11892,11 @@ static Path path3144 = {
 }
 }
 };
-static Path *r17wasp5_paths[] = {
+static const Path *r17wasp5_paths[] = {
     &path3143,
     &path3144
 };
-static LevelObject r17wasp5_objects[] = {
+static const LevelObject r17wasp5_objects[] = {
 {
     .definition = &defWasp,
     .x = 112, .y = 384,
@@ -11917,16 +11917,16 @@ LevelObjectGroup r17wasp5 = {
     .numObjects = 2, .objects = r17wasp5_objects
 };
 extern LevelObjectGroup r17wasp7;
-static GObjPathPointFunction path3154_0_actions[] = {
+static const GObjPathPointFunction path3154_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3154_1_actions[] = {
+static const GObjPathPointFunction path3154_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3154_2_actions[] = {
+static const GObjPathPointFunction path3154_2_actions[] = {
 startWaspAttack
 };
-static Path path3154 = {
+static const Path path3154 = {
 .x = 80, .y = 360, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11954,16 +11954,16 @@ static Path path3154 = {
 }
 }
 };
-static GObjPathPointFunction path3155_0_actions[] = {
+static const GObjPathPointFunction path3155_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3155_1_actions[] = {
+static const GObjPathPointFunction path3155_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3155_2_actions[] = {
+static const GObjPathPointFunction path3155_2_actions[] = {
 startWaspAttack
 };
-static Path path3155 = {
+static const Path path3155 = {
 .x = 176, .y = 360, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -11991,11 +11991,11 @@ static Path path3155 = {
 }
 }
 };
-static Path *r17wasp7_paths[] = {
+static const Path *r17wasp7_paths[] = {
     &path3154,
     &path3155
 };
-static LevelObject r17wasp7_objects[] = {
+static const LevelObject r17wasp7_objects[] = {
 {
     .definition = &defWasp,
     .x = 80, .y = 360,
@@ -12016,16 +12016,16 @@ LevelObjectGroup r17wasp7 = {
     .numObjects = 2, .objects = r17wasp7_objects
 };
 extern LevelObjectGroup r17wasp9;
-static GObjPathPointFunction path3165_0_actions[] = {
+static const GObjPathPointFunction path3165_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3165_1_actions[] = {
+static const GObjPathPointFunction path3165_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3165_2_actions[] = {
+static const GObjPathPointFunction path3165_2_actions[] = {
 startWaspAttack
 };
-static Path path3165 = {
+static const Path path3165 = {
 .x = 40, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -12053,16 +12053,16 @@ static Path path3165 = {
 }
 }
 };
-static GObjPathPointFunction path3166_0_actions[] = {
+static const GObjPathPointFunction path3166_0_actions[] = {
 0 /* to be assigned */
 };
-static GObjPathPointFunction path3166_1_actions[] = {
+static const GObjPathPointFunction path3166_1_actions[] = {
 enterForeground
 };
-static GObjPathPointFunction path3166_2_actions[] = {
+static const GObjPathPointFunction path3166_2_actions[] = {
 startWaspAttack
 };
-static Path path3166 = {
+static const Path path3166 = {
 .x = 216, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
@@ -12090,11 +12090,11 @@ static Path path3166 = {
 }
 }
 };
-static Path *r17wasp9_paths[] = {
+static const Path *r17wasp9_paths[] = {
     &path3165,
     &path3166
 };
-static LevelObject r17wasp9_objects[] = {
+static const LevelObject r17wasp9_objects[] = {
 {
     .definition = &defWasp,
     .x = 40, .y = 384,
@@ -12115,7 +12115,7 @@ LevelObjectGroup r17wasp9 = {
     .numObjects = 2, .objects = r17wasp9_objects
 };
 extern LevelObjectGroup r18powerup2;
-static LevelObject r18powerup2_objects[] = {
+static const LevelObject r18powerup2_objects[] = {
 {
     .definition = &defReinforcedHoneyPot,
     .x = 120, .y = 192,
@@ -12129,7 +12129,7 @@ LevelObjectGroup r18powerup2 = {
     .numObjects = 1, .objects = r18powerup2_objects
 };
 extern LevelObjectGroup r18powerup3;
-static LevelObject r18powerup3_objects[] = {
+static const LevelObject r18powerup3_objects[] = {
 {
     .definition = &defReinforcedHoneyPot,
     .x = 136, .y = 128,
@@ -12143,10 +12143,10 @@ LevelObjectGroup r18powerup3 = {
     .numObjects = 1, .objects = r18powerup3_objects
 };
 extern LevelObjectGroup waspboss;
-static GObjPathPointFunction path3179_4_actions[] = {
+static const GObjPathPointFunction path3179_4_actions[] = {
 ChooseSweepPath_DamageFlashRed
 };
-static Path path3179 = {
+static const Path path3179 = {
 .x = -80, .y = 48, .numPoints = 5, .points = {
 {
     .x = 208, .y = 120,
@@ -12190,10 +12190,10 @@ static Path path3179 = {
 }
 }
 };
-static GObjPathPointFunction path3180_4_actions[] = {
+static const GObjPathPointFunction path3180_4_actions[] = {
 ChooseSweepPath_DamageFlashRed
 };
-static Path path3180 = {
+static const Path path3180 = {
 .x = -32, .y = 192, .numPoints = 5, .points = {
 {
     .x = 160, .y = -24,
@@ -12237,13 +12237,13 @@ static Path path3180 = {
 }
 }
 };
-static GObjPathPointFunction path3181_0_actions[] = {
+static const GObjPathPointFunction path3181_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3181_2_actions[] = {
+static const GObjPathPointFunction path3181_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3181 = {
+static const Path path3181 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
@@ -12271,13 +12271,13 @@ static Path path3181 = {
 }
 }
 };
-static GObjPathPointFunction path3182_0_actions[] = {
+static const GObjPathPointFunction path3182_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3182_2_actions[] = {
+static const GObjPathPointFunction path3182_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3182 = {
+static const Path path3182 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
@@ -12305,13 +12305,13 @@ static Path path3182 = {
 }
 }
 };
-static GObjPathPointFunction path3183_0_actions[] = {
+static const GObjPathPointFunction path3183_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3183_2_actions[] = {
+static const GObjPathPointFunction path3183_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3183 = {
+static const Path path3183 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 8, .y = 0,
@@ -12339,13 +12339,13 @@ static Path path3183 = {
 }
 }
 };
-static GObjPathPointFunction path3184_0_actions[] = {
+static const GObjPathPointFunction path3184_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3184_2_actions[] = {
+static const GObjPathPointFunction path3184_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3184 = {
+static const Path path3184 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = -8, .y = 0,
@@ -12373,13 +12373,13 @@ static Path path3184 = {
 }
 }
 };
-static GObjPathPointFunction path3201_0_actions[] = {
+static const GObjPathPointFunction path3201_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3201_2_actions[] = {
+static const GObjPathPointFunction path3201_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3201 = {
+static const Path path3201 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
@@ -12407,13 +12407,13 @@ static Path path3201 = {
 }
 }
 };
-static GObjPathPointFunction path3202_0_actions[] = {
+static const GObjPathPointFunction path3202_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3202_2_actions[] = {
+static const GObjPathPointFunction path3202_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3202 = {
+static const Path path3202 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 8, .y = 0,
@@ -12441,13 +12441,13 @@ static Path path3202 = {
 }
 }
 };
-static GObjPathPointFunction path3203_0_actions[] = {
+static const GObjPathPointFunction path3203_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3203_2_actions[] = {
+static const GObjPathPointFunction path3203_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3203 = {
+static const Path path3203 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = -8, .y = 0,
@@ -12475,13 +12475,13 @@ static Path path3203 = {
 }
 }
 };
-static GObjPathPointFunction path3204_0_actions[] = {
+static const GObjPathPointFunction path3204_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
 };
-static GObjPathPointFunction path3204_2_actions[] = {
+static const GObjPathPointFunction path3204_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static Path path3204 = {
+static const Path path3204 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
@@ -12509,7 +12509,7 @@ static Path path3204 = {
 }
 }
 };
-static Path *waspboss_paths[] = {
+static const Path *waspboss_paths[] = {
     &path3179,
     &path3180,
     &path3181,
@@ -12521,7 +12521,7 @@ static Path *waspboss_paths[] = {
     &path3203,
     &path3204
 };
-static LevelObject waspboss_objects[] = {
+static const LevelObject waspboss_objects[] = {
 {
     .definition = &defWaspBoss,
     .x = 128, .y = 440,
@@ -12541,7 +12541,7 @@ LevelObjectGroup waspboss = {
     .numPaths = 10, .paths = waspboss_paths,
     .numObjects = 2, .objects = waspboss_objects
 };
-Trigger stage_caravan_triggers[] = {
+const Trigger stage_caravan_triggers[] = {
 /*   0 */ {.x = -32, .y = 3976, .action = spawnCharacters, .count = 0, .group = &room1ants1},
 /*   1 */ {.x = -48, .y = 3976, .action = unpauseTimer, .count = 0, .group = &room1ants1},
 /*   2 */ {.x = -40, .y = 3960, .action = spawnCharacters, .count = 0, .group = &room1ants2},

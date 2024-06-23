@@ -4,13 +4,13 @@
 
 #include <genesis.h>
 
-void unpauseTimer(Trigger *trigger) {
+void unpauseTimer(const Trigger *trigger) {
     GAME_setTimerPaused(false);
 }
 
-void spawnCharacters(Trigger *trigger)
+void spawnCharacters(const Trigger *trigger)
 {
-    LevelObject *object = trigger->group->objects;
+    const LevelObject *object = trigger->group->objects;
     if (!object)
         return;
     for (int i = 0; i < trigger->group->numObjects; ++i) {
@@ -21,10 +21,10 @@ void spawnCharacters(Trigger *trigger)
     }
 }
 
-void spawnNextCharacters(Trigger *trigger)
+void spawnNextCharacters(const Trigger *trigger)
 {
     LevelObjectGroup *group = trigger->group;
-    LevelObject *object = group->objects;
+    const LevelObject *object = group->objects;
     if (!object)
         return;
     int n = min(group->numObjectsSpawned + trigger->count, group->numObjects);
@@ -38,71 +38,71 @@ void spawnNextCharacters(Trigger *trigger)
     group->numObjectsSpawned += n - group->numObjectsSpawned;
 }
 
-void stopStageScroll(Trigger *trigger)
+void stopStageScroll(const Trigger *trigger)
 {
     LEVEL_setVelY(0);
 }
 
-void faceRight(GameObject *self, PathPoint *pathPoint)
+void faceRight(GameObject *self, const PathPoint *pathPoint)
 {
     if (self->sprite)
         SPR_setHFlip(self->sprite, false);
 }
 
-void startShooting(GameObject *self, PathPoint *pathPoint) {
+void startShooting(GameObject *self, const PathPoint *pathPoint) {
     GOBJ_startShooting(self, pathPoint->shootCount, pathPoint->shootInterval);
 }
 
-void PathPoint_SetSpeed(GameObject *self, PathPoint *pathPoint)
+void PathPoint_SetSpeed(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void climbUpToFloor(GameObject *self, PathPoint *pathPoint)
+void climbUpToFloor(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void enterForeground(GameObject *self, PathPoint *pathPoint)
+void enterForeground(GameObject *self, const PathPoint *pathPoint)
 {
     GOBJ_setInForeground(self, true);
 }
 
-void startWaspAttack(GameObject *self, PathPoint *pathPoint)
+void startWaspAttack(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void markDisappear(GameObject *self, PathPoint *pathPoint)
+void markDisappear(GameObject *self, const PathPoint *pathPoint)
 {
     GAME_releaseObject(self);
 }
 
-void BeetleShoot(GameObject *self, PathPoint *pathPoint)
+void BeetleShoot(GameObject *self, const PathPoint *pathPoint)
 {
 }
-void PathPoint_Rotate(GameObject *self, PathPoint *pathPoint)
+void PathPoint_Rotate(GameObject *self, const PathPoint *pathPoint)
 {
 }
-void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, PathPoint *pathPoint)
+void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void enterBackground(GameObject *self, PathPoint *pathPoint)
+void enterBackground(GameObject *self, const PathPoint *pathPoint)
 {
     GOBJ_setInForeground(self, false);
 }
 
-void faceLeft(GameObject *self, PathPoint *pathPoint)
+void faceLeft(GameObject *self, const PathPoint *pathPoint)
 {
     SPR_setHFlip(self->sprite, true);
 }
 
-void ChooseSweepPath_DamageFlashRed(GameObject *self, PathPoint *pathPoint)
+void ChooseSweepPath_DamageFlashRed(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void PathPoint_ShootBurstsAtAngle(GameObject *self, PathPoint *pathPoint)
+void PathPoint_ShootBurstsAtAngle(GameObject *self, const PathPoint *pathPoint)
 {
 }
 
-void ChargeAndLayEggs_DamageFlashRed(GameObject *self, PathPoint *pathPoint)
+void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const PathPoint *pathPoint)
 {
 }
