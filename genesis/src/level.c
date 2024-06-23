@@ -10,6 +10,7 @@
 
 #include "res_gfx.h"
 
+#define STARTTRIGGER 0
 #define BG_PALETTE (PAL2)
 #define BG_TILESET_START_INDEX (TILE_USER_INDEX)
 #define BG_BASE_TILE (TILE_ATTR_FULL(BG_PALETTE, FALSE, FALSE, FALSE, BG_TILESET_START_INDEX))
@@ -31,7 +32,7 @@ void LEVEL_init() {
     cameraVelY = -FIX32(3) / 4;
 
     numTriggers = stage_caravan_numTriggers;
-    nextTriggerIndex = 0;
+    nextTriggerIndex = STARTTRIGGER;
     nextTrigger = &stage_caravan_triggers[nextTriggerIndex];
     if (nextTriggerIndex > 0 && nextTriggerIndex < numTriggers)
         cameraY = FIX32(nextTrigger->y) - cameraVelY;
