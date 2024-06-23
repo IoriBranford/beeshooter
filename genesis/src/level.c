@@ -145,8 +145,6 @@ GameObject* LEVEL_createObject(const LevelObject *lobj) {
 
     if (lobj->flags & TILE_ATTR_PRIORITY_MASK) {
     } else {
-        if (!obj->sprite)
-            GOBJ_initSprite(obj);
         GOBJ_setInForeground(obj, false);
     }
     return obj;

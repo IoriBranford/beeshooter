@@ -173,19 +173,18 @@ void GOBJ_updateInvul(GameObject *self) {
 }
 
 void GOBJ_setInForeground(GameObject *self, bool inForeground) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+
     if (inForeground) {
         self->invulTimer = 0;
-        if (self->sprite) {
-            SPR_setVisibility(self->sprite, VISIBLE);
-            SPR_setPriority(self->sprite, true);
-            SPR_setDepth(self->sprite, -abs(self->sprite->depth));
-        }
+        SPR_setVisibility(self->sprite, VISIBLE);
+        SPR_setPriority(self->sprite, true);
+        SPR_setDepth(self->sprite, -abs(self->sprite->depth));
     } else {
         self->invulTimer = 255;
-        if (self->sprite) {
-            SPR_setPriority(self->sprite, false);
-            SPR_setDepth(self->sprite, abs(self->sprite->depth));
-        }
+        SPR_setPriority(self->sprite, false);
+        SPR_setDepth(self->sprite, abs(self->sprite->depth));
     }
 }
 
