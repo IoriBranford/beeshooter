@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="386" nextobjectid="3800">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="387" nextobjectid="3834">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4547,7 +4547,7 @@ self.speed = 0.75</property>
    <object id="3604" template="enemies/Ant.tx" gid="2147484129" x="28" y="2964" rotation="-90"/>
    <object id="3721" template="enemies/Ant.tx" gid="481" x="228" y="2964" rotation="90"/>
    <object id="3683" template="enemies/Ant.tx" gid="2147484129" x="36" y="2948" rotation="-90"/>
-   <object id="3722" template="enemies/Ant.tx" gid="481" x="220" y="2948" rotation="90"/>
+   <object id="3802" template="enemies/Ant.tx" gid="481" x="220" y="2948" rotation="90"/>
    <object id="3670" template="enemies/Ant.tx" gid="2147484129" x="36" y="2980" rotation="-90"/>
    <object id="3720" template="enemies/Ant.tx" gid="481" x="220" y="2980" rotation="90"/>
    <object id="3676" template="enemies/Ant.tx" gid="2147484129" x="36" y="3108" rotation="-90"/>
@@ -4704,209 +4704,229 @@ self.speed = 0.75</property>
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
-    <polyline points="0,0 -12,12 -20,28 -12,44 0,56 16,60 32,64 44,76 52,92 44,108 32,120 16,124 0,128 -12,140 -20,156 0,184 16,188 32,192 44,204 52,220 44,236 32,248 16,252 0,256 -12,268 -20,284 -12,300 0,312 16,316 32,320 44,332 52,348 44,364 32,376"/>
+    <polyline points="0,0 -12,12 -20,28 -12,44 0,56 16,60 32,64 44,76 52,92 44,108 32,120 16,124 0,128 -12,140 -20,156 -12,172 0,184 16,188 32,192 44,204 52,220 44,236 32,248 16,252 0,256 -12,268 -20,284 -12,300 0,312 16,316 32,320 44,332 52,348 44,364 32,376"/>
    </object>
    <object id="3723" type="Path" x="208" y="2936">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
-    <polyline points="0,0 12,12 20,28 12,44 0,56 -16,60 -32,64 -44,76 -52,92 -44,108 -32,120 -16,124 0,128 12,140 20,156 0,184 -16,188 -32,192 -44,204 -52,220 -44,236 -32,248 -16,252 0,256 12,268 20,284 12,300 0,312 -16,316 -32,320 -44,332 -52,348 -44,364 -32,376"/>
+    <polyline points="0,0 12,12 20,28 12,44 0,56 -16,60 -32,64 -44,76 -52,92 -44,108 -32,120 -16,124 0,128 12,140 20,156 12,172 0,184 -16,188 -32,192 -44,204 -52,220 -44,236 -32,248 -16,252 0,256 12,268 20,284 12,300 0,312 -16,316 -32,320 -44,332 -52,348 -44,364 -32,376"/>
    </object>
    <object id="2376" template="pathpoints/EnterBackground.tx" type="PathPoint" x="100" y="3156"/>
-   <object id="3697" template="pathpoints/EnterBackground.tx" type="PathPoint" gid="0" x="156" y="3156" rotation="0">
+   <object id="3697" template="pathpoints/EnterBackground.tx" type="PathPoint" x="156" y="3156" rotation="0">
     <point/>
    </object>
    <object id="2377" template="pathpoints/EnterBackground.tx" type="PathPoint" x="100" y="3284"/>
-   <object id="3685" template="pathpoints/EnterBackground.tx" type="PathPoint" gid="0" x="156" y="3284" rotation="0">
+   <object id="3685" template="pathpoints/EnterBackground.tx" type="PathPoint" x="156" y="3284" rotation="0">
     <point/>
    </object>
    <object id="2379" template="pathpoints/EnterBackground.tx" type="PathPoint" x="100" y="3028"/>
-   <object id="3713" template="pathpoints/EnterBackground.tx" type="PathPoint" gid="0" x="156" y="3028" rotation="0">
+   <object id="3824" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="92" y="3044"/>
+   <object id="3827" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="92" y="3172"/>
+   <object id="3828" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="92" y="3300"/>
+   <object id="3825" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" x="36" y="3076"/>
+   <object id="3826" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" x="36" y="3204"/>
+   <object id="3713" template="pathpoints/EnterBackground.tx" type="PathPoint" x="156" y="3028" rotation="0">
     <point/>
    </object>
    <object id="2382" template="pathpoints/EnterForeground.tx" type="PathPoint" x="28" y="3092"/>
-   <object id="3705" template="pathpoints/EnterForeground.tx" type="PathPoint" gid="0" x="228" y="3092" rotation="0">
+   <object id="3705" template="pathpoints/EnterForeground.tx" type="PathPoint" x="228" y="3092" rotation="0">
     <point/>
    </object>
    <object id="2383" template="pathpoints/EnterForeground.tx" type="PathPoint" x="28" y="3220"/>
-   <object id="3689" template="pathpoints/EnterForeground.tx" type="PathPoint" gid="0" x="228" y="3220" rotation="0">
+   <object id="3689" template="pathpoints/EnterForeground.tx" type="PathPoint" x="228" y="3220" rotation="0">
     <point/>
    </object>
    <object id="2384" template="pathpoints/Disappear.tx" x="80" y="3312"/>
-   <object id="3684" template="pathpoints/Disappear.tx" gid="0" x="176" y="3312" rotation="0">
+   <object id="3684" template="pathpoints/Disappear.tx" x="176" y="3312" rotation="0">
     <point/>
    </object>
    <object id="3634" template="pathpoints/FaceLeft.tx" x="64" y="3060"/>
-   <object id="3710" template="pathpoints/FaceLeft.tx" gid="0" x="192" y="2996" rotation="0">
+   <object id="3710" template="pathpoints/FaceLeft.tx" x="192" y="2996" rotation="0">
     <point/>
    </object>
    <object id="3637" template="pathpoints/FaceLeft.tx" x="64" y="3188"/>
-   <object id="3694" template="pathpoints/FaceLeft.tx" gid="0" x="192" y="3124" rotation="0">
+   <object id="3694" template="pathpoints/FaceLeft.tx" x="192" y="3124" rotation="0">
     <point/>
    </object>
    <object id="3635" template="pathpoints/FaceRight.tx" x="64" y="2996"/>
-   <object id="3718" template="pathpoints/FaceRight.tx" gid="0" x="192" y="3060" rotation="0">
+   <object id="3718" template="pathpoints/FaceRight.tx" x="192" y="3060" rotation="0">
     <point/>
    </object>
    <object id="3636" template="pathpoints/FaceRight.tx" x="64" y="3124"/>
-   <object id="3702" template="pathpoints/FaceRight.tx" gid="0" x="192" y="3188" rotation="0">
+   <object id="3702" template="pathpoints/FaceRight.tx" x="192" y="3188" rotation="0">
     <point/>
    </object>
    <object id="3638" template="pathpoints/FaceRight.tx" x="64" y="3252"/>
    <object id="3686" template="pathpoints/FaceLeft.tx" x="192" y="3252"/>
-   <object id="3652" template="triggers/SpawnNextCharacters.tx" x="-36" y="3256">
+   <object id="3652" template="triggers/SpawnNextCharacters.tx" x="-36" y="3260">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3753" template="triggers/SpawnNextCharacters.tx" x="-32" y="3260">
+   <object id="3753" template="triggers/SpawnNextCharacters.tx" x="-32" y="3268">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3756" template="triggers/SpawnNextCharacters.tx" x="-28" y="3264">
+   <object id="3756" template="triggers/SpawnNextCharacters.tx" x="-28" y="3276">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3724" template="triggers/SpawnNextCharacters.tx" x="-40" y="3244">
+   <object id="3724" template="triggers/SpawnNextCharacters.tx" x="-40" y="3252">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3653" template="triggers/SpawnNextCharacters.tx" x="-44" y="3228">
+   <object id="3653" template="triggers/SpawnNextCharacters.tx" x="-44" y="3244">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3656" template="triggers/SpawnNextCharacters.tx" x="-24" y="3148">
+   <object id="3656" template="triggers/SpawnNextCharacters.tx" x="-24" y="3188">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3659" template="triggers/SpawnNextCharacters.tx" x="-44" y="3100">
+   <object id="3659" template="triggers/SpawnNextCharacters.tx" x="-44" y="3148">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3662" template="triggers/SpawnNextCharacters.tx" x="-24" y="3052">
+   <object id="3662" template="triggers/SpawnNextCharacters.tx" x="-24" y="3108">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3734" template="triggers/SpawnNextCharacters.tx" gid="0" x="-40" y="2988" rotation="0">
+   <object id="3734" template="triggers/SpawnNextCharacters.tx" x="-40" y="3060" rotation="0">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
     <point/>
    </object>
-   <object id="3654" template="triggers/SpawnNextCharacters.tx" x="-40" y="3212">
+   <object id="3654" template="triggers/SpawnNextCharacters.tx" x="-40" y="3236">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3657" template="triggers/SpawnNextCharacters.tx" x="-28" y="3136">
+   <object id="3657" template="triggers/SpawnNextCharacters.tx" x="-28" y="3180">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3660" template="triggers/SpawnNextCharacters.tx" x="-40" y="3084">
+   <object id="3660" template="triggers/SpawnNextCharacters.tx" x="-40" y="3140">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3663" template="triggers/SpawnNextCharacters.tx" x="-20" y="3036">
+   <object id="3663" template="triggers/SpawnNextCharacters.tx" x="-20" y="3100">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3735" template="triggers/SpawnNextCharacters.tx" gid="0" x="-44" y="2972" rotation="0">
+   <object id="3735" template="triggers/SpawnNextCharacters.tx" x="-44" y="3052" rotation="0">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
     <point/>
    </object>
-   <object id="3655" template="triggers/SpawnNextCharacters.tx" x="-36" y="3200">
+   <object id="3655" template="triggers/SpawnNextCharacters.tx" x="-36" y="3228">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3725" template="triggers/SpawnNextCharacters.tx" x="-32" y="3196">
+   <object id="3725" template="triggers/SpawnNextCharacters.tx" x="-32" y="3220">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3726" template="triggers/SpawnNextCharacters.tx" x="-28" y="3192">
+   <object id="3726" template="triggers/SpawnNextCharacters.tx" x="-28" y="3212">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3727" template="triggers/SpawnNextCharacters.tx" x="-24" y="3180">
+   <object id="3727" template="triggers/SpawnNextCharacters.tx" x="-24" y="3204">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3728" template="triggers/SpawnNextCharacters.tx" x="-20" y="3164">
+   <object id="3728" template="triggers/SpawnNextCharacters.tx" x="-20" y="3196">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3658" template="triggers/SpawnNextCharacters.tx" x="-32" y="3132">
+   <object id="3658" template="triggers/SpawnNextCharacters.tx" x="-32" y="3172">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3729" template="triggers/SpawnNextCharacters.tx" x="-36" y="3128">
+   <object id="3729" template="triggers/SpawnNextCharacters.tx" x="-36" y="3164">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3730" template="triggers/SpawnNextCharacters.tx" x="-40" y="3116">
+   <object id="3730" template="triggers/SpawnNextCharacters.tx" x="-40" y="3156">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3661" template="triggers/SpawnNextCharacters.tx" x="-36" y="3072">
+   <object id="3661" template="triggers/SpawnNextCharacters.tx" x="-36" y="3132">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3731" template="triggers/SpawnNextCharacters.tx" x="-32" y="3068">
+   <object id="3731" template="triggers/SpawnNextCharacters.tx" x="-32" y="3124">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3732" template="triggers/SpawnNextCharacters.tx" x="-28" y="3064">
+   <object id="3732" template="triggers/SpawnNextCharacters.tx" x="-28" y="3116">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3733" template="triggers/SpawnNextCharacters.tx" gid="0" x="-36" y="3000" rotation="0">
+   <object id="3733" template="triggers/SpawnNextCharacters.tx" x="-36" y="3068" rotation="0">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
     <point/>
    </object>
-   <object id="3664" template="triggers/SpawnNextCharacters.tx" x="-24" y="3020">
+   <object id="3664" template="triggers/SpawnNextCharacters.tx" x="-24" y="3092">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3736" template="triggers/SpawnNextCharacters.tx" gid="0" x="-40" y="2956" rotation="0">
+   <object id="3736" template="triggers/SpawnNextCharacters.tx" x="-40" y="3044" rotation="0">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
     <point/>
    </object>
-   <object id="3665" template="triggers/SpawnNextCharacters.tx" x="-28" y="3008">
+   <object id="3665" template="triggers/SpawnNextCharacters.tx" x="-28" y="3084">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3737" template="triggers/SpawnNextCharacters.tx" x="-32" y="3004">
+   <object id="3737" template="triggers/SpawnNextCharacters.tx" x="-32" y="3076">
     <properties>
      <property name="count" type="int" value="2"/>
     </properties>
+   </object>
+   <object id="3829" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3044" rotation="0">
+    <point/>
+   </object>
+   <object id="3831" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3172" rotation="0">
+    <point/>
+   </object>
+   <object id="3833" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3300" rotation="0">
+    <point/>
+   </object>
+   <object id="3830" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" gid="0" x="220" y="3076" rotation="0">
+    <point/>
+   </object>
+   <object id="3832" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" gid="0" x="220" y="3204" rotation="0">
+    <point/>
    </object>
   </objectgroup>
   <objectgroup id="244" name="r4fly1">
@@ -4959,6 +4979,24 @@ self.speed = 0.75</property>
   <objectgroup id="245" name="room4powerup">
    <object id="2339" template="enemies/HoneyCell.tx" x="192" y="3184"/>
    <object id="2340" template="triggers/SpawnCharacters.tx" x="-56" y="3192"/>
+  </objectgroup>
+  <objectgroup id="386" name="r5antsfrombigant">
+   <object id="3801" template="enemies/Ant.tx" gid="2147484129" x="48" y="2936" rotation="-90">
+    <properties>
+     <property name="path" type="object" value="2373"/>
+    </properties>
+   </object>
+   <object id="3722" template="enemies/Ant.tx" gid="481" x="208" y="2936" rotation="90">
+    <properties>
+     <property name="path" type="object" value="3723"/>
+    </properties>
+   </object>
+   <object id="3809" template="triggers/SpawnCharacters.tx" x="-36" y="3036"/>
+   <object id="3813" template="triggers/SpawnCharacters.tx" x="-36" y="3004"/>
+   <object id="3817" template="triggers/SpawnCharacters.tx" x="-36" y="2972"/>
+   <object id="3811" template="triggers/SpawnCharacters.tx" x="-36" y="3020"/>
+   <object id="3815" template="triggers/SpawnCharacters.tx" x="-36" y="2988"/>
+   <object id="3819" template="triggers/SpawnCharacters.tx" x="-36" y="2956"/>
   </objectgroup>
   <objectgroup id="246" name="room5fly1">
    <object id="2341" template="triggers/SpawnCharacters.tx" x="-56" y="3064"/>
@@ -5199,13 +5237,13 @@ self.speed = 0.75</property>
      <property name="shoottimes" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3792" template="pathpoints/ShootAtPlayer.tx" gid="0" x="184" y="2856" rotation="0">
+   <object id="3792" template="pathpoints/ShootAtPlayer.tx" x="184" y="2856" rotation="0">
     <properties>
      <property name="shoottimes" type="int" value="3"/>
     </properties>
     <point/>
    </object>
-   <object id="3795" template="pathpoints/ShootAtPlayer.tx" gid="0" x="136" y="2832" rotation="0">
+   <object id="3795" template="pathpoints/ShootAtPlayer.tx" x="136" y="2832" rotation="0">
     <properties>
      <property name="shoottimes" type="int" value="3"/>
     </properties>
@@ -5231,7 +5269,7 @@ self.speed = 0.75</property>
      <property name="shoottimes" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3790" template="pathpoints/ShootAtPlayer.tx" gid="0" x="208" y="2912" rotation="0">
+   <object id="3790" template="pathpoints/ShootAtPlayer.tx" x="208" y="2912" rotation="0">
     <properties>
      <property name="shoottimes" type="int" value="3"/>
     </properties>
@@ -5260,7 +5298,7 @@ self.speed = 0.75</property>
      <property name="z" type="float" value="2"/>
     </properties>
    </object>
-   <object id="2371" template="triggers/SpawnCharacters.tx" x="-56" y="2944"/>
+   <object id="2371" template="triggers/SpawnCharacters.tx" x="-56" y="2948"/>
   </objectgroup>
   <objectgroup id="250" name="room6bigant">
    <properties>

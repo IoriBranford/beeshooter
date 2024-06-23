@@ -3,10 +3,10 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (178)
+#define stage_caravan_numTriggers (184)
 extern const Trigger stage_caravan_triggers[];
 
-#define stage_caravan_numGroups (116)
+#define stage_caravan_numGroups (117)
 extern LevelObjectGroup *stage_caravan_groups[];
 
 extern const GameObjectDefinition defAnt;
@@ -33,7 +33,9 @@ void enterBackground(GameObject *self, const PathPoint *pathPoint);
 void enterForeground(GameObject *self, const PathPoint *pathPoint);
 void startShooting(GameObject *self, const PathPoint *pathPoint);
 void PathPoint_SetSpeed(GameObject *self, const PathPoint *pathPoint);
+void setSpriteHidden(GameObject *self, const PathPoint *pathPoint);
 void faceLeft(GameObject *self, const PathPoint *pathPoint);
+void setSpriteVisible(GameObject *self, const PathPoint *pathPoint);
 void markDisappear(GameObject *self, const PathPoint *pathPoint);
 void climbUpToFloor(GameObject *self, const PathPoint *pathPoint);
 void startWaspAttack(GameObject *self, const PathPoint *pathPoint);
