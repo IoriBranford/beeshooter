@@ -130,31 +130,36 @@ void GAME_end(GameResult r) {
 }
 
 void GAME_doCollision() {
-    for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
-        GameObject *playerShot = playerShots[s];
-        bool hit = false, defeated = false;
-        for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
-            GameObject *enemy = enemies[e];
-            if (!enemy->invulTimer && GOBJ_isHitting(playerShot, enemy)) {
+    for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
+        GameObject *enemy = enemies[e];
+        if (enemy->invulTimer || !GOBJ_isSpriteOnScreen(enemy)) {
+            ++e;
+            continue;
+        }
+
+        bool hit = false;
+        for (u8 s = 0; s < teamSizes[TEAM_PLAYERSHOT];) {
+            GameObject *playerShot = playerShots[s];
+            if (GOBJ_isHitting(playerShot, enemy)) {
                 hit = true;
-                GOBJ_dealDamage(enemy, 1);
-                if (!enemy->health) {
-                    GAME_putObjectInTeam(enemy, TEAM_NONE);
-                    GOBJ_defeat(enemy);
-                    defeated = true;
-                } else {
-                    ++e;
+                GOBJ_defeat(playerShot);
+                if (enemy->health) {
+                    GOBJ_dealDamage(enemy, 1);
+                    if (!enemy->health) {
+                        GAME_putObjectInTeam(enemy, TEAM_NONE);
+                        GOBJ_defeat(enemy);
+                    }
                 }
             } else {
-                ++e;
+                ++s;
             }
         }
-        if (hit) {
-            GOBJ_defeat(playerShot);
-            if (!defeated)
+
+        if (enemy->health) {
+            if (hit) {
                 SND_playDef(&sndPlayerShotHit);
-        } else {
-            ++s;
+            }
+            ++e;
         }
     }
 
