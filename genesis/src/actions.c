@@ -43,6 +43,20 @@ void stopStageScroll(const Trigger *trigger)
     LEVEL_setVelY(0);
 }
 
+void setSpriteVisible(GameObject *self, const PathPoint *pathPoint)
+{
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setVisibility(self->sprite, VISIBLE);
+}
+
+void setSpriteHidden(GameObject *self, const PathPoint *pathPoint)
+{
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setVisibility(self->sprite, HIDDEN);
+}
+
 void faceRight(GameObject *self, const PathPoint *pathPoint)
 {
     if (self->sprite)
