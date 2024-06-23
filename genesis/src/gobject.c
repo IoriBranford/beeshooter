@@ -331,6 +331,20 @@ void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
     self->pathIndex = pathIndex;
 }
 
+void GOBJ_doPathPointActions(GameObject *self, const PathPoint *pathPoint) {
+    const GObjPathPointFunction *action = pathPoint->actions;
+    if (action) {
+        for (u32 i = 0; i < pathPoint->numActions; ++i) {
+            if (*action) {
+                (*action)(self, pathPoint);
+                if (!GOBJ_isAllocated(self))
+                    return;
+            }
+            ++action;
+        }
+    }
+}
+
 void GOBJ_followPath(GameObject *self) {
     self->pathPointDistLeft -= self->speed;
     if (self->pathPointDistLeft > 0) {
@@ -353,17 +367,9 @@ void GOBJ_followPath(GameObject *self) {
                 destY = LEVEL_toScreenY(FIX32(destY));
             self->centerX = destX;
             self->centerY = destY;
-            const GObjPathPointFunction *action = pathPoint->actions;
-            if (action) {
-                for (u32 i = 0; i < pathPoint->numActions; ++i) {
-                    if (*action) {
-                        (*action)(self, pathPoint);
-                        if (!GOBJ_isAllocated(self))
-                            return;
-                    }
-                    ++action;
-                }
-            }
+            GOBJ_doPathPointActions(self, pathPoint);
+            if (!GOBJ_isAllocated(self))
+                return;
         }
         GOBJ_startTowardsPathPoint(self, ++pathIndex);
     }
@@ -371,12 +377,19 @@ void GOBJ_followPath(GameObject *self) {
 
 void GOBJ_updatePathWalker(GameObject *self) {
     const Path *path = self->path;
-    u16 pathIndex = 0;
     if (!path) {
+        u16 pathIndex = 0;
+
         const LevelObject *lobj = self->levelObject;
         if (lobj) {
             path = lobj->path;
             pathIndex = lobj->pathIndex;
+            if (pathIndex) {
+                const PathPoint *prevPoint = &path->points[pathIndex - 1];
+                GOBJ_doPathPointActions(self, prevPoint);
+                if (!GOBJ_isAllocated(self))
+                    return;
+            }
         }
     
         if (!path) {
