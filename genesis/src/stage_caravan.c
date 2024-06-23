@@ -1,6 +1,7 @@
 #include "stage_caravan.h"
 extern LevelObjectGroup room1ants1;
-static PathPoint path2186_points[] = {
+static Path path2186 = {
+.x = 264, .y = 4056, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
@@ -33,8 +34,10 @@ static PathPoint path2186_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2187_points[] = {
+static Path path2187 = {
+.x = 272, .y = 4064, .numPoints = 4, .points = {
 {
     .x = 0, .y = -48,
     .speedTo = 128, .distTo = 0,
@@ -67,8 +70,10 @@ static PathPoint path2187_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2188_points[] = {
+static Path path2188 = {
+.x = 280, .y = 4072, .numPoints = 4, .points = {
 {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 0,
@@ -101,11 +106,13 @@ static PathPoint path2188_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2189_3_actions[] = {
 faceRight
 };
-static PathPoint path2189_points[] = {
+static Path path2189 = {
+.x = 288, .y = 4080, .numPoints = 5, .points = {
 {
     .x = 0, .y = -64,
     .speedTo = 128, .distTo = 0,
@@ -146,11 +153,13 @@ static PathPoint path2189_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2190_3_actions[] = {
 faceRight
 };
-static PathPoint path2190_points[] = {
+static Path path2190 = {
+.x = 296, .y = 4088, .numPoints = 5, .points = {
 {
     .x = 0, .y = -72,
     .speedTo = 128, .distTo = 0,
@@ -191,35 +200,36 @@ static PathPoint path2190_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room1ants1_paths[] = {
-{.x = 264, .y = 4056, .numPoints = 4, .points = path2186_points},
-{.x = 272, .y = 4064, .numPoints = 4, .points = path2187_points},
-{.x = 280, .y = 4072, .numPoints = 4, .points = path2188_points},
-{.x = 288, .y = 4080, .numPoints = 5, .points = path2189_points},
-{.x = 296, .y = 4088, .numPoints = 5, .points = path2190_points}
+static Path *room1ants1_paths[] = {
+    &path2186,
+    &path2187,
+    &path2188,
+    &path2189,
+    &path2190
 };
 static LevelObject room1ants1_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 4016,
     .animInd = 0, .flags = 34816,
-    .group = &room1ants1, .path = &room1ants1_paths[0],
-    .pathIndex = 1
+    .group = &room1ants1, .path = &path2186,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 280, .y = 4016,
     .animInd = 0, .flags = 34816,
-    .group = &room1ants1, .path = &room1ants1_paths[2],
-    .pathIndex = 1
+    .group = &room1ants1, .path = &path2188,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 296, .y = 4016,
     .animInd = 0, .flags = 34816,
-    .group = &room1ants1, .path = &room1ants1_paths[4],
-    .pathIndex = 1
+    .group = &room1ants1, .path = &path2190,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room1ants1 = {
@@ -227,7 +237,8 @@ LevelObjectGroup room1ants1 = {
     .numObjects = 3, .objects = room1ants1_objects
 };
 extern LevelObjectGroup room1ants2;
-static PathPoint path2199_points[] = {
+static Path path2199 = {
+.x = -8, .y = 4032, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
@@ -260,8 +271,10 @@ static PathPoint path2199_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2200_points[] = {
+static Path path2200 = {
+.x = -16, .y = 4024, .numPoints = 4, .points = {
 {
     .x = 0, .y = -32,
     .speedTo = 128, .distTo = 0,
@@ -294,8 +307,10 @@ static PathPoint path2200_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2201_points[] = {
+static Path path2201 = {
+.x = -24, .y = 4016, .numPoints = 4, .points = {
 {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 0,
@@ -328,8 +343,10 @@ static PathPoint path2201_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2202_points[] = {
+static Path path2202 = {
+.x = -32, .y = 4024, .numPoints = 3, .points = {
 {
     .x = 0, .y = -32,
     .speedTo = 128, .distTo = 0,
@@ -354,8 +371,10 @@ static PathPoint path2202_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2203_points[] = {
+static Path path2203 = {
+.x = -40, .y = 4032, .numPoints = 4, .points = {
 {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
@@ -388,35 +407,36 @@ static PathPoint path2203_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room1ants2_paths[] = {
-{.x = -8, .y = 4032, .numPoints = 4, .points = path2199_points},
-{.x = -16, .y = 4024, .numPoints = 4, .points = path2200_points},
-{.x = -24, .y = 4016, .numPoints = 4, .points = path2201_points},
-{.x = -32, .y = 4024, .numPoints = 3, .points = path2202_points},
-{.x = -40, .y = 4032, .numPoints = 4, .points = path2203_points}
+static Path *room1ants2_paths[] = {
+    &path2199,
+    &path2200,
+    &path2201,
+    &path2202,
+    &path2203
 };
 static LevelObject room1ants2_objects[] = {
 {
     .definition = &defAnt,
     .x = -24, .y = 3992,
     .animInd = 0, .flags = 32768,
-    .group = &room1ants2, .path = &room1ants2_paths[2],
-    .pathIndex = 1
+    .group = &room1ants2, .path = &path2201,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -40, .y = 3992,
     .animInd = 0, .flags = 32768,
-    .group = &room1ants2, .path = &room1ants2_paths[4],
-    .pathIndex = 1
+    .group = &room1ants2, .path = &path2203,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3992,
     .animInd = 0, .flags = 32768,
-    .group = &room1ants2, .path = &room1ants2_paths[0],
-    .pathIndex = 1
+    .group = &room1ants2, .path = &path2199,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room1ants2 = {
@@ -424,7 +444,8 @@ LevelObjectGroup room1ants2 = {
     .numObjects = 3, .objects = room1ants2_objects
 };
 extern LevelObjectGroup room1ants3;
-static PathPoint path2204_points[] = {
+static Path path2204 = {
+.x = 0, .y = 3912, .numPoints = 8, .points = {
 {
     .x = -8, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -489,17 +510,18 @@ static PathPoint path2204_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room1ants3_paths[] = {
-{.x = 0, .y = 3912, .numPoints = 8, .points = path2204_points}
+static Path *room1ants3_paths[] = {
+    &path2204
 };
 static LevelObject room1ants3_objects[] = {
 {
     .definition = &defAnt,
     .x = -8, .y = 3912,
     .animInd = 0, .flags = 32768,
-    .group = &room1ants3, .path = &room1ants3_paths[0],
-    .pathIndex = 1
+    .group = &room1ants3, .path = &path2204,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room1ants3 = {
@@ -507,7 +529,8 @@ LevelObjectGroup room1ants3 = {
     .numObjects = 1, .objects = room1ants3_objects
 };
 extern LevelObjectGroup room1ants4;
-static PathPoint path2221_points[] = {
+static Path path2221 = {
+.x = 264, .y = 3840, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -556,8 +579,10 @@ static PathPoint path2221_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2253_points[] = {
+static Path path2253 = {
+.x = 272, .y = 3880, .numPoints = 8, .points = {
 {
     .x = -8, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -622,25 +647,26 @@ static PathPoint path2253_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room1ants4_paths[] = {
-{.x = 264, .y = 3840, .numPoints = 6, .points = path2221_points},
-{.x = 272, .y = 3880, .numPoints = 8, .points = path2253_points}
+static Path *room1ants4_paths[] = {
+    &path2221,
+    &path2253
 };
 static LevelObject room1ants4_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3880,
     .animInd = 0, .flags = 34816,
-    .group = &room1ants4, .path = &room1ants4_paths[1],
-    .pathIndex = 1
+    .group = &room1ants4, .path = &path2253,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 264, .y = 3840,
     .animInd = 0, .flags = 34816,
-    .group = &room1ants4, .path = &room1ants4_paths[0],
-    .pathIndex = 1
+    .group = &room1ants4, .path = &path2221,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room1ants4 = {
@@ -662,7 +688,8 @@ LevelObjectGroup room1powerup = {
     .numObjects = 1, .objects = room1powerup_objects
 };
 extern LevelObjectGroup room2ants1;
-static PathPoint path2268_points[] = {
+static Path path2268 = {
+.x = -8, .y = 3616, .numPoints = 2, .points = {
 {
     .x = 0, .y = -8,
     .speedTo = 128, .distTo = 0,
@@ -679,8 +706,10 @@ static PathPoint path2268_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2269_points[] = {
+static Path path2269 = {
+.x = 264, .y = 3672, .numPoints = 2, .points = {
 {
     .x = 0, .y = -8,
     .speedTo = 128, .distTo = 0,
@@ -697,8 +726,10 @@ static PathPoint path2269_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2271_points[] = {
+static Path path2271 = {
+.x = -8, .y = 3648, .numPoints = 2, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
@@ -715,8 +746,10 @@ static PathPoint path2271_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2274_points[] = {
+static Path path2274 = {
+.x = 264, .y = 3704, .numPoints = 2, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
@@ -733,8 +766,10 @@ static PathPoint path2274_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2275_points[] = {
+static Path path2275 = {
+.x = -8, .y = 3680, .numPoints = 2, .points = {
 {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
@@ -751,49 +786,50 @@ static PathPoint path2275_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room2ants1_paths[] = {
-{.x = -8, .y = 3616, .numPoints = 2, .points = path2268_points},
-{.x = 264, .y = 3672, .numPoints = 2, .points = path2269_points},
-{.x = -8, .y = 3648, .numPoints = 2, .points = path2271_points},
-{.x = 264, .y = 3704, .numPoints = 2, .points = path2274_points},
-{.x = -8, .y = 3680, .numPoints = 2, .points = path2275_points}
+static Path *room2ants1_paths[] = {
+    &path2268,
+    &path2269,
+    &path2271,
+    &path2274,
+    &path2275
 };
 static LevelObject room2ants1_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3712,
     .animInd = 0, .flags = 34816,
-    .group = &room2ants1, .path = &room2ants1_paths[3],
-    .pathIndex = 1
+    .group = &room2ants1, .path = &path2274,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3704,
     .animInd = 0, .flags = 32768,
-    .group = &room2ants1, .path = &room2ants1_paths[4],
-    .pathIndex = 1
+    .group = &room2ants1, .path = &path2275,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 264, .y = 3664,
     .animInd = 0, .flags = 34816,
-    .group = &room2ants1, .path = &room2ants1_paths[1],
-    .pathIndex = 1
+    .group = &room2ants1, .path = &path2269,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3656,
     .animInd = 0, .flags = 32768,
-    .group = &room2ants1, .path = &room2ants1_paths[2],
-    .pathIndex = 1
+    .group = &room2ants1, .path = &path2271,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3608,
     .animInd = 0, .flags = 32768,
-    .group = &room2ants1, .path = &room2ants1_paths[0],
-    .pathIndex = 1
+    .group = &room2ants1, .path = &path2268,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room2ants1 = {
@@ -801,7 +837,8 @@ LevelObjectGroup room2ants1 = {
     .numObjects = 5, .objects = room2ants1_objects
 };
 extern LevelObjectGroup room2ants2;
-static PathPoint path2288_points[] = {
+static Path path2288 = {
+.x = -8, .y = 3624, .numPoints = 2, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
@@ -818,8 +855,10 @@ static PathPoint path2288_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2291_points[] = {
+static Path path2291 = {
+.x = 264, .y = 3648, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -836,8 +875,10 @@ static PathPoint path2291_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2293_points[] = {
+static Path path2293 = {
+.x = 264, .y = 3680, .numPoints = 2, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
@@ -854,8 +895,10 @@ static PathPoint path2293_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2294_points[] = {
+static Path path2294 = {
+.x = -8, .y = 3656, .numPoints = 2, .points = {
 {
     .x = 0, .y = 32,
     .speedTo = 128, .distTo = 0,
@@ -872,8 +915,10 @@ static PathPoint path2294_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2297_points[] = {
+static Path path2297 = {
+.x = 264, .y = 3712, .numPoints = 2, .points = {
 {
     .x = 0, .y = 32,
     .speedTo = 128, .distTo = 0,
@@ -890,49 +935,50 @@ static PathPoint path2297_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room2ants2_paths[] = {
-{.x = -8, .y = 3624, .numPoints = 2, .points = path2288_points},
-{.x = 264, .y = 3648, .numPoints = 2, .points = path2291_points},
-{.x = 264, .y = 3680, .numPoints = 2, .points = path2293_points},
-{.x = -8, .y = 3656, .numPoints = 2, .points = path2294_points},
-{.x = 264, .y = 3712, .numPoints = 2, .points = path2297_points}
+static Path *room2ants2_paths[] = {
+    &path2288,
+    &path2291,
+    &path2293,
+    &path2294,
+    &path2297
 };
 static LevelObject room2ants2_objects[] = {
 {
     .definition = &defAnt,
     .x = 264, .y = 3744,
     .animInd = 0, .flags = 34816,
-    .group = &room2ants2, .path = &room2ants2_paths[4],
-    .pathIndex = 1
+    .group = &room2ants2, .path = &path2297,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 264, .y = 3696,
     .animInd = 0, .flags = 34816,
-    .group = &room2ants2, .path = &room2ants2_paths[2],
-    .pathIndex = 1
+    .group = &room2ants2, .path = &path2293,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3688,
     .animInd = 0, .flags = 32768,
-    .group = &room2ants2, .path = &room2ants2_paths[3],
-    .pathIndex = 1
+    .group = &room2ants2, .path = &path2294,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = 264, .y = 3648,
     .animInd = 0, .flags = 34816,
-    .group = &room2ants2, .path = &room2ants2_paths[1],
-    .pathIndex = 1
+    .group = &room2ants2, .path = &path2291,
+    .pathIndex = 0
 },
 {
     .definition = &defAnt,
     .x = -8, .y = 3640,
     .animInd = 0, .flags = 32768,
-    .group = &room2ants2, .path = &room2ants2_paths[0],
-    .pathIndex = 1
+    .group = &room2ants2, .path = &path2288,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room2ants2 = {
@@ -970,7 +1016,8 @@ startShooting
 static GObjPathPointFunction path2303_9_actions[] = {
 PathPoint_SetSpeed
 };
-static PathPoint path2303_points[] = {
+static Path path2303 = {
+.x = 0, .y = 3504, .numPoints = 12, .points = {
 {
     .x = 64, .y = 112,
     .speedTo = 64, .distTo = 0,
@@ -1067,6 +1114,7 @@ static PathPoint path2303_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2304_0_actions[] = {
 enterBackground
@@ -1084,7 +1132,8 @@ startShooting
 static GObjPathPointFunction path2304_9_actions[] = {
 PathPoint_SetSpeed
 };
-static PathPoint path2304_points[] = {
+static Path path2304 = {
+.x = 224, .y = 3496, .numPoints = 12, .points = {
 {
     .x = -32, .y = 120,
     .speedTo = 64, .distTo = 0,
@@ -1181,25 +1230,26 @@ static PathPoint path2304_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r3fly1_paths[] = {
-{.x = 0, .y = 3504, .numPoints = 12, .points = path2303_points},
-{.x = 224, .y = 3496, .numPoints = 12, .points = path2304_points}
+static Path *r3fly1_paths[] = {
+    &path2303,
+    &path2304
 };
 static LevelObject r3fly1_objects[] = {
 {
     .definition = &defFly,
     .x = 64, .y = 3616,
     .animInd = 0, .flags = 0,
-    .group = &r3fly1, .path = &r3fly1_paths[0],
-    .pathIndex = 1
+    .group = &r3fly1, .path = &path2303,
+    .pathIndex = 0
 },
 {
     .definition = &defFly,
     .x = 192, .y = 3616,
     .animInd = 0, .flags = 2048,
-    .group = &r3fly1, .path = &r3fly1_paths[1],
-    .pathIndex = 1
+    .group = &r3fly1, .path = &path2304,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r3fly1 = {
@@ -1214,7 +1264,8 @@ startShooting
 static GObjPathPointFunction path2314_4_actions[] = {
 startShooting
 };
-static PathPoint path2314_points[] = {
+static Path path2314 = {
+.x = 0, .y = 3408, .numPoints = 10, .points = {
 {
     .x = 104, .y = 88,
     .speedTo = 64, .distTo = 0,
@@ -1295,6 +1346,7 @@ static PathPoint path2314_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2315_1_actions[] = {
 enterForeground,
@@ -1303,7 +1355,8 @@ startShooting
 static GObjPathPointFunction path2315_4_actions[] = {
 startShooting
 };
-static PathPoint path2315_points[] = {
+static Path path2315 = {
+.x = 224, .y = 3400, .numPoints = 10, .points = {
 {
     .x = -72, .y = 96,
     .speedTo = 64, .distTo = 0,
@@ -1384,25 +1437,26 @@ static PathPoint path2315_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room3fly3_paths[] = {
-{.x = 0, .y = 3408, .numPoints = 10, .points = path2314_points},
-{.x = 224, .y = 3400, .numPoints = 10, .points = path2315_points}
+static Path *room3fly3_paths[] = {
+    &path2314,
+    &path2315
 };
 static LevelObject room3fly3_objects[] = {
 {
     .definition = &defFly,
     .x = 104, .y = 3496,
     .animInd = 0, .flags = 0,
-    .group = &room3fly3, .path = &room3fly3_paths[0],
-    .pathIndex = 1
+    .group = &room3fly3, .path = &path2314,
+    .pathIndex = 0
 },
 {
     .definition = &defFly,
     .x = 152, .y = 3496,
     .animInd = 0, .flags = 2048,
-    .group = &room3fly3, .path = &room3fly3_paths[1],
-    .pathIndex = 1
+    .group = &room3fly3, .path = &path2315,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room3fly3 = {
@@ -1420,7 +1474,8 @@ startShooting
 static GObjPathPointFunction path2323_7_actions[] = {
 PathPoint_SetSpeed
 };
-static PathPoint path2323_points[] = {
+static Path path2323 = {
+.x = -32, .y = 3560, .numPoints = 9, .points = {
 {
     .x = 72, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -1493,6 +1548,7 @@ static PathPoint path2323_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2324_2_actions[] = {
 enterForeground,
@@ -1504,7 +1560,8 @@ startShooting
 static GObjPathPointFunction path2324_7_actions[] = {
 PathPoint_SetSpeed
 };
-static PathPoint path2324_points[] = {
+static Path path2324 = {
+.x = 288, .y = 3560, .numPoints = 9, .points = {
 {
     .x = -72, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -1577,25 +1634,26 @@ static PathPoint path2324_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room3fly4_paths[] = {
-{.x = -32, .y = 3560, .numPoints = 9, .points = path2323_points},
-{.x = 288, .y = 3560, .numPoints = 9, .points = path2324_points}
+static Path *room3fly4_paths[] = {
+    &path2323,
+    &path2324
 };
 static LevelObject room3fly4_objects[] = {
 {
     .definition = &defFly,
     .x = 40, .y = 3544,
     .animInd = 0, .flags = 0,
-    .group = &room3fly4, .path = &room3fly4_paths[0],
-    .pathIndex = 1
+    .group = &room3fly4, .path = &path2323,
+    .pathIndex = 0
 },
 {
     .definition = &defFly,
     .x = 216, .y = 3544,
     .animInd = 0, .flags = 2048,
-    .group = &room3fly4, .path = &room3fly4_paths[1],
-    .pathIndex = 1
+    .group = &room3fly4, .path = &path2324,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room3fly4 = {
@@ -1636,7 +1694,8 @@ enterBackground
 static GObjPathPointFunction path2373_33_actions[] = {
 markDisappear
 };
-static PathPoint path2373_points[] = {
+static Path path2373 = {
+.x = 48, .y = 2936, .numPoints = 34, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -1909,6 +1968,7 @@ static PathPoint path2373_points[] = {
     .numActions = 1,
     .actions = path2373_33_actions
 }
+}
 };
 static GObjPathPointFunction path3723_5_actions[] = {
 faceLeft
@@ -1943,7 +2003,8 @@ enterBackground
 static GObjPathPointFunction path3723_33_actions[] = {
 markDisappear
 };
-static PathPoint path3723_points[] = {
+static Path path3723 = {
+.x = 208, .y = 2936, .numPoints = 34, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
@@ -2216,221 +2277,222 @@ static PathPoint path3723_points[] = {
     .numActions = 1,
     .actions = path3723_33_actions
 }
+}
 };
-static Path r4r5ants_paths[] = {
-{.x = 48, .y = 2936, .numPoints = 34, .points = path2373_points},
-{.x = 208, .y = 2936, .numPoints = 34, .points = path3723_points}
+static Path *r4r5ants_paths[] = {
+    &path2373,
+    &path3723
 };
 static LevelObject r4r5ants_objects[] = {
 {
     .definition = &defAnt,
     .x = 176, .y = 3256,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 30
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 29
 },
 {
     .definition = &defAnt,
     .x = 80, .y = 3256,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 30
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 29
 },
 {
     .definition = &defAnt,
     .x = 64, .y = 3252,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 29
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 28
 },
 {
     .definition = &defAnt,
     .x = 192, .y = 3252,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 29
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 28
 },
 {
     .definition = &defAnt,
     .x = 208, .y = 3248,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 28
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 27
 },
 {
     .definition = &defAnt,
     .x = 48, .y = 3248,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 28
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 27
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 3236,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 27
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 26
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 3236,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 27
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 26
 },
 {
     .definition = &defAnt,
     .x = 228, .y = 3220,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 26
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 25
 },
 {
     .definition = &defAnt,
     .x = 28, .y = 3220,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 26
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 25
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 3204,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 25
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 24
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 3204,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 25
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 24
 },
 {
     .definition = &defAnt,
     .x = 208, .y = 3192,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 24
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 23
 },
 {
     .definition = &defAnt,
     .x = 48, .y = 3192,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 24
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 23
 },
 {
     .definition = &defAnt,
     .x = 192, .y = 3188,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 23
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 22
 },
 {
     .definition = &defAnt,
     .x = 64, .y = 3188,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 23
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 22
 },
 {
     .definition = &defAnt,
     .x = 80, .y = 3184,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 22
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 21
 },
 {
     .definition = &defAnt,
     .x = 176, .y = 3184,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 22
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 21
 },
 {
     .definition = &defAnt,
     .x = 164, .y = 3172,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 21
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 20
 },
 {
     .definition = &defAnt,
     .x = 92, .y = 3172,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 21
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 20
 },
 {
     .definition = &defAnt,
     .x = 100, .y = 3156,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 20
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 19
 },
 {
     .definition = &defAnt,
     .x = 156, .y = 3156,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 20
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 19
 },
 {
     .definition = &defAnt,
     .x = 92, .y = 3140,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 19
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 18
 },
 {
     .definition = &defAnt,
     .x = 164, .y = 3140,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 19
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 18
 },
 {
     .definition = &defAnt,
     .x = 80, .y = 3128,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 18
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 17
 },
 {
     .definition = &defAnt,
     .x = 176, .y = 3128,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 18
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 17
 },
 {
     .definition = &defAnt,
     .x = 192, .y = 3124,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 17
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 16
 },
 {
     .definition = &defAnt,
     .x = 64, .y = 3124,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 17
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 16
 },
 {
     .definition = &defAnt,
     .x = 48, .y = 3120,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 16
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 15
 },
 {
     .definition = &defAnt,
     .x = 208, .y = 3120,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 16
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 15
 },
 {
     .definition = &defAnt,
@@ -2450,197 +2512,197 @@ static LevelObject r4r5ants_objects[] = {
     .definition = &defAnt,
     .x = 228, .y = 3092,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 15
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 14
 },
 {
     .definition = &defAnt,
     .x = 28, .y = 3092,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 15
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 14
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 3076,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 14
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 13
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 3076,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 14
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 13
 },
 {
     .definition = &defAnt,
     .x = 48, .y = 3064,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 13
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 12
 },
 {
     .definition = &defAnt,
     .x = 208, .y = 3064,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 13
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 12
 },
 {
     .definition = &defAnt,
     .x = 192, .y = 3060,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 12
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 11
 },
 {
     .definition = &defAnt,
     .x = 64, .y = 3060,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 12
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 11
 },
 {
     .definition = &defAnt,
     .x = 80, .y = 3056,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 11
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 10
 },
 {
     .definition = &defAnt,
     .x = 176, .y = 3056,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 11
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 10
 },
 {
     .definition = &defAnt,
     .x = 164, .y = 3044,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 10
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 9
 },
 {
     .definition = &defAnt,
     .x = 92, .y = 3044,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 10
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 9
 },
 {
     .definition = &defAnt,
     .x = 156, .y = 3028,
     .animInd = 1, .flags = 2048,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 9
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 8
 },
 {
     .definition = &defAnt,
     .x = 100, .y = 3028,
     .animInd = 1, .flags = 0,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 9
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 8
 },
 {
     .definition = &defAnt,
     .x = 92, .y = 3012,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 8
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 7
 },
 {
     .definition = &defAnt,
     .x = 164, .y = 3012,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 8
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 7
 },
 {
     .definition = &defAnt,
     .x = 80, .y = 3000,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 7
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 6
 },
 {
     .definition = &defAnt,
     .x = 176, .y = 3000,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 7
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 6
 },
 {
     .definition = &defAnt,
     .x = 64, .y = 2996,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 6
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 5
 },
 {
     .definition = &defAnt,
     .x = 192, .y = 2996,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 6
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 5
 },
 {
     .definition = &defAnt,
     .x = 48, .y = 2992,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 5
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 4
 },
 {
     .definition = &defAnt,
     .x = 208, .y = 2992,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 5
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 4
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2980,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 4
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 3
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2980,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 4
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 3
 },
 {
     .definition = &defAnt,
     .x = 228, .y = 2964,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 3
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 2
 },
 {
     .definition = &defAnt,
     .x = 28, .y = 2964,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 3
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 2
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2948,
     .animInd = 1, .flags = 32768,
-    .group = &r4r5ants, .path = &r4r5ants_paths[1],
-    .pathIndex = 2
+    .group = &r4r5ants, .path = &path3723,
+    .pathIndex = 1
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2948,
     .animInd = 1, .flags = 34816,
-    .group = &r4r5ants, .path = &r4r5ants_paths[0],
-    .pathIndex = 2
+    .group = &r4r5ants, .path = &path2373,
+    .pathIndex = 1
 }
 };
 LevelObjectGroup r4r5ants = {
@@ -2672,7 +2734,8 @@ startShooting
 static GObjPathPointFunction path2332_13_actions[] = {
 startShooting
 };
-static PathPoint path2332_points[] = {
+static Path path2332 = {
+.x = -16, .y = 3144, .numPoints = 18, .points = {
 {
     .x = 0, .y = 88,
     .speedTo = 256, .distTo = 0,
@@ -2817,17 +2880,18 @@ static PathPoint path2332_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r4fly1_paths[] = {
-{.x = -16, .y = 3144, .numPoints = 18, .points = path2332_points}
+static Path *r4fly1_paths[] = {
+    &path2332
 };
 static LevelObject r4fly1_objects[] = {
 {
     .definition = &defFly,
     .x = -16, .y = 3232,
     .animInd = 0, .flags = 0,
-    .group = &r4fly1, .path = &r4fly1_paths[0],
-    .pathIndex = 1
+    .group = &r4fly1, .path = &path2332,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r4fly1 = {
@@ -2873,7 +2937,8 @@ startShooting
 static GObjPathPointFunction path2342_11_actions[] = {
 startShooting
 };
-static PathPoint path2342_points[] = {
+static Path path2342 = {
+.x = 272, .y = 3104, .numPoints = 14, .points = {
 {
     .x = 0, .y = 88,
     .speedTo = 256, .distTo = 0,
@@ -2986,17 +3051,18 @@ static PathPoint path2342_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room5fly1_paths[] = {
-{.x = 272, .y = 3104, .numPoints = 14, .points = path2342_points}
+static Path *room5fly1_paths[] = {
+    &path2342
 };
 static LevelObject room5fly1_objects[] = {
 {
     .definition = &defFly,
     .x = 272, .y = 3192,
     .animInd = 0, .flags = 2048,
-    .group = &room5fly1, .path = &room5fly1_paths[0],
-    .pathIndex = 1
+    .group = &room5fly1, .path = &path2342,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room5fly1 = {
@@ -3024,7 +3090,8 @@ enterBackground
 static GObjPathPointFunction path2389_20_actions[] = {
 markDisappear
 };
-static PathPoint path2389_points[] = {
+static Path path2389 = {
+.x = 28, .y = 2736, .numPoints = 21, .points = {
 {
     .x = 8, .y = -16,
     .speedTo = 128, .distTo = 0,
@@ -3193,6 +3260,7 @@ static PathPoint path2389_points[] = {
     .numActions = 1,
     .actions = path2389_20_actions
 }
+}
 };
 static GObjPathPointFunction path3786_19_actions[] = {
 enterBackground
@@ -3200,7 +3268,8 @@ enterBackground
 static GObjPathPointFunction path3786_20_actions[] = {
 markDisappear
 };
-static PathPoint path3786_points[] = {
+static Path path3786 = {
+.x = 228, .y = 2736, .numPoints = 21, .points = {
 {
     .x = -8, .y = -16,
     .speedTo = 128, .distTo = 0,
@@ -3369,263 +3438,264 @@ static PathPoint path3786_points[] = {
     .numActions = 1,
     .actions = path3786_20_actions
 }
+}
 };
-static Path r6ants_paths[] = {
-{.x = 28, .y = 2736, .numPoints = 21, .points = path2389_points},
-{.x = 228, .y = 2736, .numPoints = 21, .points = path3786_points}
+static Path *r6ants_paths[] = {
+    &path2389,
+    &path3786
 };
 static LevelObject r6ants_objects[] = {
 {
     .definition = &defAnt,
     .x = 36, .y = 2864,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 19
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 18
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2864,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 19
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 18
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2856,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 18
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 17
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2856,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 18
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 17
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2848,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 17
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 16
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2848,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 17
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 16
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2840,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 16
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 15
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2840,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 16
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 15
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2832,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 15
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 14
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2832,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 15
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 14
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2824,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 14
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 13
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2824,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 14
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 13
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2816,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 13
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 12
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2816,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 13
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 12
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2808,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 12
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 11
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2808,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 12
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 11
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2800,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 11
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 10
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2800,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 11
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 10
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2792,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 10
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 9
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2792,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 10
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 9
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2784,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 9
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 8
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2784,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 9
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 8
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2776,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 8
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 7
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2776,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 8
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 7
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2768,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 7
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 6
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2768,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 7
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 6
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2760,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 6
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 5
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2760,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 6
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 5
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2752,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 5
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 4
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2752,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 5
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 4
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2744,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 4
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 3
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2744,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 4
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 3
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2736,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 3
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 2
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2736,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 3
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 2
 },
 {
     .definition = &defAnt,
     .x = 220, .y = 2728,
     .animInd = 1, .flags = 34816,
-    .group = &r6ants, .path = &r6ants_paths[1],
-    .pathIndex = 2
+    .group = &r6ants, .path = &path3786,
+    .pathIndex = 1
 },
 {
     .definition = &defAnt,
     .x = 36, .y = 2728,
     .animInd = 1, .flags = 32768,
-    .group = &r6ants, .path = &r6ants_paths[0],
-    .pathIndex = 2
+    .group = &r6ants, .path = &path2389,
+    .pathIndex = 1
 }
 };
 LevelObjectGroup r6ants = {
@@ -3663,7 +3733,8 @@ startShooting
 static GObjPathPointFunction path2351_19_actions[] = {
 startShooting
 };
-static PathPoint path2351_points[] = {
+static Path path2351 = {
+.x = 272, .y = 2832, .numPoints = 21, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 192, .distTo = 0,
@@ -3832,17 +3903,18 @@ static PathPoint path2351_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room6fly_paths[] = {
-{.x = 272, .y = 2832, .numPoints = 21, .points = path2351_points}
+static Path *room6fly_paths[] = {
+    &path2351
 };
 static LevelObject room6fly_objects[] = {
 {
     .definition = &defFly,
     .x = 272, .y = 2832,
     .animInd = 0, .flags = 2048,
-    .group = &room6fly, .path = &room6fly_paths[0],
-    .pathIndex = 1
+    .group = &room6fly, .path = &path2351,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room6fly = {
@@ -3895,7 +3967,8 @@ extern LevelObjectGroup room7alien1;
 static GObjPathPointFunction path2397_2_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2397_points[] = {
+static Path path2397 = {
+.x = 112, .y = 2496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -3920,17 +3993,18 @@ static PathPoint path2397_points[] = {
     .numActions = 1,
     .actions = path2397_2_actions
 }
+}
 };
-static Path room7alien1_paths[] = {
-{.x = 112, .y = 2496, .numPoints = 3, .points = path2397_points}
+static Path *room7alien1_paths[] = {
+    &path2397
 };
 static LevelObject room7alien1_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 112, .y = 2496,
     .animInd = 0, .flags = 32768,
-    .group = &room7alien1, .path = &room7alien1_paths[0],
-    .pathIndex = 1
+    .group = &room7alien1, .path = &path2397,
+    .pathIndex = 0
 },
 {
     .definition = &defHoneyPot,
@@ -3948,7 +4022,8 @@ extern LevelObjectGroup room7alien2;
 static GObjPathPointFunction path2403_2_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2403_points[] = {
+static Path path2403 = {
+.x = 48, .y = 2440, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -3973,11 +4048,13 @@ static PathPoint path2403_points[] = {
     .numActions = 1,
     .actions = path2403_2_actions
 }
+}
 };
 static GObjPathPointFunction path2404_2_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2404_points[] = {
+static Path path2404 = {
+.x = 176, .y = 2440, .numPoints = 3, .points = {
 {
     .x = 32, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4002,25 +4079,26 @@ static PathPoint path2404_points[] = {
     .numActions = 1,
     .actions = path2404_2_actions
 }
+}
 };
-static Path room7alien2_paths[] = {
-{.x = 48, .y = 2440, .numPoints = 3, .points = path2403_points},
-{.x = 176, .y = 2440, .numPoints = 3, .points = path2404_points}
+static Path *room7alien2_paths[] = {
+    &path2403,
+    &path2404
 };
 static LevelObject room7alien2_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 48, .y = 2440,
     .animInd = 0, .flags = 32768,
-    .group = &room7alien2, .path = &room7alien2_paths[0],
-    .pathIndex = 1
+    .group = &room7alien2, .path = &path2403,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 208, .y = 2440,
     .animInd = 0, .flags = 34816,
-    .group = &room7alien2, .path = &room7alien2_paths[1],
-    .pathIndex = 1
+    .group = &room7alien2, .path = &path2404,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room7alien2 = {
@@ -4031,7 +4109,8 @@ extern LevelObjectGroup room7alien3;
 static GObjPathPointFunction path2414_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2414_points[] = {
+static Path path2414 = {
+.x = -24, .y = 2528, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4064,11 +4143,13 @@ static PathPoint path2414_points[] = {
     .numActions = 1,
     .actions = path2414_3_actions
 }
+}
 };
 static GObjPathPointFunction path2415_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2415_points[] = {
+static Path path2415 = {
+.x = -16, .y = 2512, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4101,11 +4182,13 @@ static PathPoint path2415_points[] = {
     .numActions = 1,
     .actions = path2415_3_actions
 }
+}
 };
 static GObjPathPointFunction path2416_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2416_points[] = {
+static Path path2416 = {
+.x = -8, .y = 2496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4138,11 +4221,13 @@ static PathPoint path2416_points[] = {
     .numActions = 1,
     .actions = path2416_3_actions
 }
+}
 };
 static GObjPathPointFunction path2417_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2417_points[] = {
+static Path path2417 = {
+.x = 24, .y = 2496, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4175,11 +4260,13 @@ static PathPoint path2417_points[] = {
     .numActions = 1,
     .actions = path2417_3_actions
 }
+}
 };
 static GObjPathPointFunction path2418_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2418_points[] = {
+static Path path2418 = {
+.x = 32, .y = 2512, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4212,11 +4299,13 @@ static PathPoint path2418_points[] = {
     .numActions = 1,
     .actions = path2418_3_actions
 }
+}
 };
 static GObjPathPointFunction path2419_3_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2419_points[] = {
+static Path path2419 = {
+.x = 40, .y = 2528, .numPoints = 4, .points = {
 {
     .x = 240, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4249,57 +4338,58 @@ static PathPoint path2419_points[] = {
     .numActions = 1,
     .actions = path2419_3_actions
 }
+}
 };
-static Path room7alien3_paths[] = {
-{.x = -24, .y = 2528, .numPoints = 4, .points = path2414_points},
-{.x = -16, .y = 2512, .numPoints = 4, .points = path2415_points},
-{.x = -8, .y = 2496, .numPoints = 4, .points = path2416_points},
-{.x = 24, .y = 2496, .numPoints = 4, .points = path2417_points},
-{.x = 32, .y = 2512, .numPoints = 4, .points = path2418_points},
-{.x = 40, .y = 2528, .numPoints = 4, .points = path2419_points}
+static Path *room7alien3_paths[] = {
+    &path2414,
+    &path2415,
+    &path2416,
+    &path2417,
+    &path2418,
+    &path2419
 };
 static LevelObject room7alien3_objects[] = {
 {
     .definition = &defAlienPillager,
     .x = 280, .y = 2528,
     .animInd = 0, .flags = 34816,
-    .group = &room7alien3, .path = &room7alien3_paths[5],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2419,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienPillager,
     .x = -24, .y = 2528,
     .animInd = 0, .flags = 32768,
-    .group = &room7alien3, .path = &room7alien3_paths[0],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2414,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienPillager,
     .x = 272, .y = 2512,
     .animInd = 0, .flags = 34816,
-    .group = &room7alien3, .path = &room7alien3_paths[4],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2418,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienPillager,
     .x = -16, .y = 2512,
     .animInd = 0, .flags = 32768,
-    .group = &room7alien3, .path = &room7alien3_paths[1],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2415,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienPillager,
     .x = 264, .y = 2496,
     .animInd = 0, .flags = 34816,
-    .group = &room7alien3, .path = &room7alien3_paths[3],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2417,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienPillager,
     .x = -8, .y = 2496,
     .animInd = 0, .flags = 32768,
-    .group = &room7alien3, .path = &room7alien3_paths[2],
-    .pathIndex = 1
+    .group = &room7alien3, .path = &path2416,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room7alien3 = {
@@ -4401,7 +4491,8 @@ extern LevelObjectGroup room8alien2;
 static GObjPathPointFunction path2442_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2442_points[] = {
+static Path path2442 = {
+.x = 88, .y = 2352, .numPoints = 4, .points = {
 {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4434,11 +4525,13 @@ static PathPoint path2442_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2443_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2443_points[] = {
+static Path path2443 = {
+.x = 152, .y = 2352, .numPoints = 4, .points = {
 {
     .x = 24, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4471,25 +4564,26 @@ static PathPoint path2443_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room8alien2_paths[] = {
-{.x = 88, .y = 2352, .numPoints = 4, .points = path2442_points},
-{.x = 152, .y = 2352, .numPoints = 4, .points = path2443_points}
+static Path *room8alien2_paths[] = {
+    &path2442,
+    &path2443
 };
 static LevelObject room8alien2_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 80, .y = 2352,
     .animInd = 0, .flags = 32768,
-    .group = &room8alien2, .path = &room8alien2_paths[0],
-    .pathIndex = 1
+    .group = &room8alien2, .path = &path2442,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 176, .y = 2352,
     .animInd = 0, .flags = 34816,
-    .group = &room8alien2, .path = &room8alien2_paths[1],
-    .pathIndex = 1
+    .group = &room8alien2, .path = &path2443,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room8alien2 = {
@@ -4500,7 +4594,8 @@ extern LevelObjectGroup room8alien3;
 static GObjPathPointFunction path2448_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2448_points[] = {
+static Path path2448 = {
+.x = -16, .y = 2392, .numPoints = 11, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4589,11 +4684,13 @@ static PathPoint path2448_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2449_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2449_points[] = {
+static Path path2449 = {
+.x = 272, .y = 2392, .numPoints = 11, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4682,25 +4779,26 @@ static PathPoint path2449_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room8alien3_paths[] = {
-{.x = -16, .y = 2392, .numPoints = 11, .points = path2448_points},
-{.x = 272, .y = 2392, .numPoints = 11, .points = path2449_points}
+static Path *room8alien3_paths[] = {
+    &path2448,
+    &path2449
 };
 static LevelObject room8alien3_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = -16, .y = 2392,
     .animInd = 0, .flags = 32768,
-    .group = &room8alien3, .path = &room8alien3_paths[0],
-    .pathIndex = 1
+    .group = &room8alien3, .path = &path2448,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 272, .y = 2392,
     .animInd = 0, .flags = 34816,
-    .group = &room8alien3, .path = &room8alien3_paths[1],
-    .pathIndex = 1
+    .group = &room8alien3, .path = &path2449,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room8alien3 = {
@@ -4711,7 +4809,8 @@ extern LevelObjectGroup room8alien4;
 static GObjPathPointFunction path2457_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2457_points[] = {
+static Path path2457 = {
+.x = 96, .y = 2248, .numPoints = 2, .points = {
 {
     .x = -16, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -4728,11 +4827,13 @@ static PathPoint path2457_points[] = {
     .numActions = 1,
     .actions = path2457_1_actions
 }
+}
 };
 static GObjPathPointFunction path2458_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2458_points[] = {
+static Path path2458 = {
+.x = 88, .y = 2232, .numPoints = 2, .points = {
 {
     .x = -16, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -4749,11 +4850,13 @@ static PathPoint path2458_points[] = {
     .numActions = 1,
     .actions = path2458_1_actions
 }
+}
 };
 static GObjPathPointFunction path2459_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2459_points[] = {
+static Path path2459 = {
+.x = 160, .y = 2248, .numPoints = 2, .points = {
 {
     .x = 24, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4770,11 +4873,13 @@ static PathPoint path2459_points[] = {
     .numActions = 1,
     .actions = path2459_1_actions
 }
+}
 };
 static GObjPathPointFunction path2460_1_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2460_points[] = {
+static Path path2460 = {
+.x = 168, .y = 2232, .numPoints = 2, .points = {
 {
     .x = 24, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -4791,41 +4896,42 @@ static PathPoint path2460_points[] = {
     .numActions = 1,
     .actions = path2460_1_actions
 }
+}
 };
-static Path room8alien4_paths[] = {
-{.x = 96, .y = 2248, .numPoints = 2, .points = path2457_points},
-{.x = 88, .y = 2232, .numPoints = 2, .points = path2458_points},
-{.x = 160, .y = 2248, .numPoints = 2, .points = path2459_points},
-{.x = 168, .y = 2232, .numPoints = 2, .points = path2460_points}
+static Path *room8alien4_paths[] = {
+    &path2457,
+    &path2458,
+    &path2459,
+    &path2460
 };
 static LevelObject room8alien4_objects[] = {
 {
     .definition = &defAlienGunner,
     .x = 80, .y = 2256,
     .animInd = 0, .flags = 32768,
-    .group = &room8alien4, .path = &room8alien4_paths[0],
-    .pathIndex = 1
+    .group = &room8alien4, .path = &path2457,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 184, .y = 2248,
     .animInd = 0, .flags = 34816,
-    .group = &room8alien4, .path = &room8alien4_paths[2],
-    .pathIndex = 1
+    .group = &room8alien4, .path = &path2459,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 72, .y = 2240,
     .animInd = 0, .flags = 32768,
-    .group = &room8alien4, .path = &room8alien4_paths[1],
-    .pathIndex = 1
+    .group = &room8alien4, .path = &path2458,
+    .pathIndex = 0
 },
 {
     .definition = &defAlienGunner,
     .x = 192, .y = 2232,
     .animInd = 0, .flags = 34816,
-    .group = &room8alien4, .path = &room8alien4_paths[3],
-    .pathIndex = 1
+    .group = &room8alien4, .path = &path2460,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room8alien4 = {
@@ -4882,7 +4988,8 @@ LevelObjectGroup room9powerup = {
     .numObjects = 3, .objects = room9powerup_objects
 };
 extern LevelObjectGroup room9alienmind;
-static PathPoint path2474_points[] = {
+static Path path2474 = {
+.x = 128, .y = 2040, .numPoints = 2, .points = {
 {
     .x = 0, .y = -56,
     .speedTo = 64, .distTo = 0,
@@ -4899,8 +5006,10 @@ static PathPoint path2474_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2475_points[] = {
+static Path path2475 = {
+.x = 96, .y = 2096, .numPoints = 10, .points = {
 {
     .x = 24, .y = -56,
     .speedTo = 64, .distTo = 0,
@@ -4981,8 +5090,10 @@ static PathPoint path2475_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static PathPoint path2476_points[] = {
+static Path path2476 = {
+.x = 160, .y = 2096, .numPoints = 9, .points = {
 {
     .x = -24, .y = -56,
     .speedTo = 64, .distTo = 0,
@@ -5055,6 +5166,7 @@ static PathPoint path2476_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2477_0_actions[] = {
 0 /* to be assigned */
@@ -5062,7 +5174,8 @@ static GObjPathPointFunction path2477_0_actions[] = {
 static GObjPathPointFunction path2477_4_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2477_points[] = {
+static Path path2477 = {
+.x = -8, .y = 2072, .numPoints = 5, .points = {
 {
     .x = 112, .y = -32,
     .speedTo = 64, .distTo = 0,
@@ -5103,6 +5216,7 @@ static PathPoint path2477_points[] = {
     .numActions = 1,
     .actions = path2477_4_actions
 }
+}
 };
 static GObjPathPointFunction path2478_0_actions[] = {
 0 /* to be assigned */
@@ -5110,7 +5224,8 @@ static GObjPathPointFunction path2478_0_actions[] = {
 static GObjPathPointFunction path2478_4_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2478_points[] = {
+static Path path2478 = {
+.x = 256, .y = 2048, .numPoints = 5, .points = {
 {
     .x = -104, .y = -8,
     .speedTo = 64, .distTo = 0,
@@ -5151,6 +5266,7 @@ static PathPoint path2478_points[] = {
     .numActions = 1,
     .actions = path2478_4_actions
 }
+}
 };
 static GObjPathPointFunction path2479_5_actions[] = {
 0 /* to be assigned */
@@ -5161,7 +5277,8 @@ static GObjPathPointFunction path2479_7_actions[] = {
 static GObjPathPointFunction path2479_8_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2479_points[] = {
+static Path path2479 = {
+.x = -16, .y = 2256, .numPoints = 12, .points = {
 {
     .x = 120, .y = -232,
     .speedTo = 64, .distTo = 0,
@@ -5258,6 +5375,7 @@ static PathPoint path2479_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2480_5_actions[] = {
 0 /* to be assigned */
@@ -5268,7 +5386,8 @@ static GObjPathPointFunction path2480_7_actions[] = {
 static GObjPathPointFunction path2480_8_actions[] = {
 0 /* to be assigned */
 };
-static PathPoint path2480_points[] = {
+static Path path2480 = {
+.x = 208, .y = 2256, .numPoints = 12, .points = {
 {
     .x = -56, .y = -232,
     .speedTo = 64, .distTo = 0,
@@ -5365,23 +5484,24 @@ static PathPoint path2480_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room9alienmind_paths[] = {
-{.x = 128, .y = 2040, .numPoints = 2, .points = path2474_points},
-{.x = 96, .y = 2096, .numPoints = 10, .points = path2475_points},
-{.x = 160, .y = 2096, .numPoints = 9, .points = path2476_points},
-{.x = -8, .y = 2072, .numPoints = 5, .points = path2477_points},
-{.x = 256, .y = 2048, .numPoints = 5, .points = path2478_points},
-{.x = -16, .y = 2256, .numPoints = 12, .points = path2479_points},
-{.x = 208, .y = 2256, .numPoints = 12, .points = path2480_points}
+static Path *room9alienmind_paths[] = {
+    &path2474,
+    &path2475,
+    &path2476,
+    &path2477,
+    &path2478,
+    &path2479,
+    &path2480
 };
 static LevelObject room9alienmind_objects[] = {
 {
     .definition = &defAlienMind,
     .x = 128, .y = 1984,
     .animInd = 0, .flags = 0,
-    .group = &room9alienmind, .path = &room9alienmind_paths[0],
-    .pathIndex = 1
+    .group = &room9alienmind, .path = &path2474,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room9alienmind = {
@@ -5397,7 +5517,8 @@ extern LevelObjectGroup room10acidants;
 static GObjPathPointFunction path2498_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2498_points[] = {
+static Path path2498 = {
+.x = 152, .y = 1920, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5422,11 +5543,13 @@ static PathPoint path2498_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2499_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2499_points[] = {
+static Path path2499 = {
+.x = 168, .y = 1928, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5451,11 +5574,13 @@ static PathPoint path2499_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2500_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2500_points[] = {
+static Path path2500 = {
+.x = 184, .y = 1928, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5480,11 +5605,13 @@ static PathPoint path2500_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2501_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2501_points[] = {
+static Path path2501 = {
+.x = 200, .y = 1920, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5509,11 +5636,13 @@ static PathPoint path2501_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2502_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2502_points[] = {
+static Path path2502 = {
+.x = 216, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5538,49 +5667,50 @@ static PathPoint path2502_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room10acidants_paths[] = {
-{.x = 152, .y = 1920, .numPoints = 3, .points = path2498_points},
-{.x = 168, .y = 1928, .numPoints = 3, .points = path2499_points},
-{.x = 184, .y = 1928, .numPoints = 3, .points = path2500_points},
-{.x = 200, .y = 1920, .numPoints = 3, .points = path2501_points},
-{.x = 216, .y = 1904, .numPoints = 3, .points = path2502_points}
+static Path *room10acidants_paths[] = {
+    &path2498,
+    &path2499,
+    &path2500,
+    &path2501,
+    &path2502
 };
 static LevelObject room10acidants_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 168, .y = 1928,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants, .path = &room10acidants_paths[1],
-    .pathIndex = 1
+    .group = &room10acidants, .path = &path2499,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 184, .y = 1928,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants, .path = &room10acidants_paths[2],
-    .pathIndex = 1
+    .group = &room10acidants, .path = &path2500,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 200, .y = 1920,
     .animInd = 1, .flags = 36864,
-    .group = &room10acidants, .path = &room10acidants_paths[3],
-    .pathIndex = 1
+    .group = &room10acidants, .path = &path2501,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 152, .y = 1920,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants, .path = &room10acidants_paths[0],
-    .pathIndex = 1
+    .group = &room10acidants, .path = &path2498,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 216, .y = 1904,
     .animInd = 1, .flags = 36864,
-    .group = &room10acidants, .path = &room10acidants_paths[4],
-    .pathIndex = 1
+    .group = &room10acidants, .path = &path2502,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room10acidants = {
@@ -5591,7 +5721,8 @@ extern LevelObjectGroup room10acidants2;
 static GObjPathPointFunction path2514_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2514_points[] = {
+static Path path2514 = {
+.x = 40, .y = 1888, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5616,11 +5747,13 @@ static PathPoint path2514_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2515_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2515_points[] = {
+static Path path2515 = {
+.x = 56, .y = 1896, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5645,11 +5778,13 @@ static PathPoint path2515_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2516_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2516_points[] = {
+static Path path2516 = {
+.x = 72, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5674,11 +5809,13 @@ static PathPoint path2516_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2517_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2517_points[] = {
+static Path path2517 = {
+.x = 88, .y = 1912, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5703,11 +5840,13 @@ static PathPoint path2517_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2518_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2518_points[] = {
+static Path path2518 = {
+.x = 104, .y = 1904, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -5732,49 +5871,50 @@ static PathPoint path2518_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room10acidants2_paths[] = {
-{.x = 40, .y = 1888, .numPoints = 3, .points = path2514_points},
-{.x = 56, .y = 1896, .numPoints = 3, .points = path2515_points},
-{.x = 72, .y = 1904, .numPoints = 3, .points = path2516_points},
-{.x = 88, .y = 1912, .numPoints = 3, .points = path2517_points},
-{.x = 104, .y = 1904, .numPoints = 3, .points = path2518_points}
+static Path *room10acidants2_paths[] = {
+    &path2514,
+    &path2515,
+    &path2516,
+    &path2517,
+    &path2518
 };
 static LevelObject room10acidants2_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 88, .y = 1912,
     .animInd = 1, .flags = 36864,
-    .group = &room10acidants2, .path = &room10acidants2_paths[3],
-    .pathIndex = 1
+    .group = &room10acidants2, .path = &path2517,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 104, .y = 1904,
     .animInd = 1, .flags = 36864,
-    .group = &room10acidants2, .path = &room10acidants2_paths[4],
-    .pathIndex = 1
+    .group = &room10acidants2, .path = &path2518,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 72, .y = 1904,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants2, .path = &room10acidants2_paths[2],
-    .pathIndex = 1
+    .group = &room10acidants2, .path = &path2516,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 56, .y = 1896,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants2, .path = &room10acidants2_paths[1],
-    .pathIndex = 1
+    .group = &room10acidants2, .path = &path2515,
+    .pathIndex = 0
 },
 {
     .definition = &defAcidAnt,
     .x = 40, .y = 1888,
     .animInd = 1, .flags = 38912,
-    .group = &room10acidants2, .path = &room10acidants2_paths[0],
-    .pathIndex = 1
+    .group = &room10acidants2, .path = &path2514,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room10acidants2 = {
@@ -5785,7 +5925,8 @@ extern LevelObjectGroup r11acidants1a;
 static GObjPathPointFunction path2526_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2526_points[] = {
+static Path path2526 = {
+.x = 264, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -5810,17 +5951,18 @@ static PathPoint path2526_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1a_paths[] = {
-{.x = 264, .y = 1784, .numPoints = 3, .points = path2526_points}
+static Path *r11acidants1a_paths[] = {
+    &path2526
 };
 static LevelObject r11acidants1a_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 232, .y = 1816,
     .animInd = 1, .flags = 36864,
-    .group = &r11acidants1a, .path = &r11acidants1a_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1a, .path = &path2526,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1a = {
@@ -5831,7 +5973,8 @@ extern LevelObjectGroup r11acidants1b;
 static GObjPathPointFunction path2530_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2530_points[] = {
+static Path path2530 = {
+.x = 232, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -5856,17 +5999,18 @@ static PathPoint path2530_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1b_paths[] = {
-{.x = 232, .y = 1784, .numPoints = 3, .points = path2530_points}
+static Path *r11acidants1b_paths[] = {
+    &path2530
 };
 static LevelObject r11acidants1b_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 200, .y = 1816,
     .animInd = 1, .flags = 38912,
-    .group = &r11acidants1b, .path = &r11acidants1b_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1b, .path = &path2530,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1b = {
@@ -5877,7 +6021,8 @@ extern LevelObjectGroup r11acidants1c;
 static GObjPathPointFunction path2534_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2534_points[] = {
+static Path path2534 = {
+.x = 200, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -5902,17 +6047,18 @@ static PathPoint path2534_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1c_paths[] = {
-{.x = 200, .y = 1784, .numPoints = 3, .points = path2534_points}
+static Path *r11acidants1c_paths[] = {
+    &path2534
 };
 static LevelObject r11acidants1c_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 168, .y = 1816,
     .animInd = 1, .flags = 36864,
-    .group = &r11acidants1c, .path = &r11acidants1c_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1c, .path = &path2534,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1c = {
@@ -5923,7 +6069,8 @@ extern LevelObjectGroup r11acidants1d;
 static GObjPathPointFunction path2538_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2538_points[] = {
+static Path path2538 = {
+.x = 168, .y = 1784, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -5948,17 +6095,18 @@ static PathPoint path2538_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1d_paths[] = {
-{.x = 168, .y = 1784, .numPoints = 3, .points = path2538_points}
+static Path *r11acidants1d_paths[] = {
+    &path2538
 };
 static LevelObject r11acidants1d_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 136, .y = 1816,
     .animInd = 1, .flags = 38912,
-    .group = &r11acidants1d, .path = &r11acidants1d_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1d, .path = &path2538,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1d = {
@@ -5969,7 +6117,8 @@ extern LevelObjectGroup r11acidants1e;
 static GObjPathPointFunction path2542_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2542_points[] = {
+static Path path2542 = {
+.x = 152, .y = 1776, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -5994,17 +6143,18 @@ static PathPoint path2542_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1e_paths[] = {
-{.x = 152, .y = 1776, .numPoints = 3, .points = path2542_points}
+static Path *r11acidants1e_paths[] = {
+    &path2542
 };
 static LevelObject r11acidants1e_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 120, .y = 1808,
     .animInd = 1, .flags = 38912,
-    .group = &r11acidants1e, .path = &r11acidants1e_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1e, .path = &path2542,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1e = {
@@ -6015,7 +6165,8 @@ extern LevelObjectGroup r11acidants1f;
 static GObjPathPointFunction path2546_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2546_points[] = {
+static Path path2546 = {
+.x = 120, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -6040,17 +6191,18 @@ static PathPoint path2546_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1f_paths[] = {
-{.x = 120, .y = 1768, .numPoints = 3, .points = path2546_points}
+static Path *r11acidants1f_paths[] = {
+    &path2546
 };
 static LevelObject r11acidants1f_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 88, .y = 1800,
     .animInd = 1, .flags = 38912,
-    .group = &r11acidants1f, .path = &r11acidants1f_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1f, .path = &path2546,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1f = {
@@ -6061,7 +6213,8 @@ extern LevelObjectGroup r11acidants1g;
 static GObjPathPointFunction path2550_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2550_points[] = {
+static Path path2550 = {
+.x = 88, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -6086,17 +6239,18 @@ static PathPoint path2550_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1g_paths[] = {
-{.x = 88, .y = 1768, .numPoints = 3, .points = path2550_points}
+static Path *r11acidants1g_paths[] = {
+    &path2550
 };
 static LevelObject r11acidants1g_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 56, .y = 1800,
     .animInd = 1, .flags = 36864,
-    .group = &r11acidants1g, .path = &r11acidants1g_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1g, .path = &path2550,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1g = {
@@ -6107,7 +6261,8 @@ extern LevelObjectGroup r11acidants1h;
 static GObjPathPointFunction path2554_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2554_points[] = {
+static Path path2554 = {
+.x = 56, .y = 1768, .numPoints = 3, .points = {
 {
     .x = -32, .y = 32,
     .speedTo = 64, .distTo = 0,
@@ -6132,17 +6287,18 @@ static PathPoint path2554_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants1h_paths[] = {
-{.x = 56, .y = 1768, .numPoints = 3, .points = path2554_points}
+static Path *r11acidants1h_paths[] = {
+    &path2554
 };
 static LevelObject r11acidants1h_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 24, .y = 1800,
     .animInd = 1, .flags = 38912,
-    .group = &r11acidants1h, .path = &r11acidants1h_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants1h, .path = &path2554,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants1h = {
@@ -6153,7 +6309,8 @@ extern LevelObjectGroup room11acidants2a;
 static GObjPathPointFunction path2567_0_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2567_points[] = {
+static Path path2567 = {
+.x = 272, .y = 1616, .numPoints = 2, .points = {
 {
     .x = 0, .y = 24,
     .speedTo = 64, .distTo = 0,
@@ -6170,9 +6327,10 @@ static PathPoint path2567_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room11acidants2a_paths[] = {
-{.x = 272, .y = 1616, .numPoints = 2, .points = path2567_points}
+static Path *room11acidants2a_paths[] = {
+    &path2567
 };
 static LevelObject room11acidants2a_objects[] = {
 {
@@ -6242,8 +6400,8 @@ static LevelObject room11acidants2a_objects[] = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1640,
     .animInd = 0, .flags = 2048,
-    .group = &room11acidants2a, .path = &room11acidants2a_paths[0],
-    .pathIndex = 1
+    .group = &room11acidants2a, .path = &path2567,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room11acidants2a = {
@@ -6254,7 +6412,8 @@ extern LevelObjectGroup room11acidants2b;
 static GObjPathPointFunction path2580_0_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2580_points[] = {
+static Path path2580 = {
+.x = -16, .y = 1576, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -6271,9 +6430,10 @@ static PathPoint path2580_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path room11acidants2b_paths[] = {
-{.x = -16, .y = 1576, .numPoints = 2, .points = path2580_points}
+static Path *room11acidants2b_paths[] = {
+    &path2580
 };
 static LevelObject room11acidants2b_objects[] = {
 {
@@ -6343,8 +6503,8 @@ static LevelObject room11acidants2b_objects[] = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1576,
     .animInd = 0, .flags = 0,
-    .group = &room11acidants2b, .path = &room11acidants2b_paths[0],
-    .pathIndex = 1
+    .group = &room11acidants2b, .path = &path2580,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup room11acidants2b = {
@@ -6355,7 +6515,8 @@ extern LevelObjectGroup r11acidants3a;
 static GObjPathPointFunction path2583_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2583_points[] = {
+static Path path2583 = {
+.x = 248, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6380,17 +6541,18 @@ static PathPoint path2583_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3a_paths[] = {
-{.x = 248, .y = 1736, .numPoints = 3, .points = path2583_points}
+static Path *r11acidants3a_paths[] = {
+    &path2583
 };
 static LevelObject r11acidants3a_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 248, .y = 1720,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3a, .path = &r11acidants3a_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3a, .path = &path2583,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3a = {
@@ -6401,7 +6563,8 @@ extern LevelObjectGroup r11acidants3b;
 static GObjPathPointFunction path2587_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2587_points[] = {
+static Path path2587 = {
+.x = 224, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6426,17 +6589,18 @@ static PathPoint path2587_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3b_paths[] = {
-{.x = 224, .y = 1736, .numPoints = 3, .points = path2587_points}
+static Path *r11acidants3b_paths[] = {
+    &path2587
 };
 static LevelObject r11acidants3b_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 224, .y = 1720,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3b, .path = &r11acidants3b_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3b, .path = &path2587,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3b = {
@@ -6447,7 +6611,8 @@ extern LevelObjectGroup r11acidants3c;
 static GObjPathPointFunction path2591_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2591_points[] = {
+static Path path2591 = {
+.x = 200, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6472,17 +6637,18 @@ static PathPoint path2591_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3c_paths[] = {
-{.x = 200, .y = 1736, .numPoints = 3, .points = path2591_points}
+static Path *r11acidants3c_paths[] = {
+    &path2591
 };
 static LevelObject r11acidants3c_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 200, .y = 1720,
     .animInd = 1, .flags = 6144,
-    .group = &r11acidants3c, .path = &r11acidants3c_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3c, .path = &path2591,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3c = {
@@ -6493,7 +6659,8 @@ extern LevelObjectGroup r11acidants3d;
 static GObjPathPointFunction path2595_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2595_points[] = {
+static Path path2595 = {
+.x = 176, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6518,17 +6685,18 @@ static PathPoint path2595_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3d_paths[] = {
-{.x = 176, .y = 1736, .numPoints = 3, .points = path2595_points}
+static Path *r11acidants3d_paths[] = {
+    &path2595
 };
 static LevelObject r11acidants3d_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 176, .y = 1720,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3d, .path = &r11acidants3d_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3d, .path = &path2595,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3d = {
@@ -6539,7 +6707,8 @@ extern LevelObjectGroup r11acidants3e;
 static GObjPathPointFunction path2599_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2599_points[] = {
+static Path path2599 = {
+.x = 152, .y = 1736, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6564,17 +6733,18 @@ static PathPoint path2599_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3e_paths[] = {
-{.x = 152, .y = 1736, .numPoints = 3, .points = path2599_points}
+static Path *r11acidants3e_paths[] = {
+    &path2599
 };
 static LevelObject r11acidants3e_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 152, .y = 1720,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3e, .path = &r11acidants3e_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3e, .path = &path2599,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3e = {
@@ -6585,7 +6755,8 @@ extern LevelObjectGroup r11acidants3f;
 static GObjPathPointFunction path2603_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2603_points[] = {
+static Path path2603 = {
+.x = 128, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6610,17 +6781,18 @@ static PathPoint path2603_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3f_paths[] = {
-{.x = 128, .y = 1720, .numPoints = 3, .points = path2603_points}
+static Path *r11acidants3f_paths[] = {
+    &path2603
 };
 static LevelObject r11acidants3f_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 128, .y = 1704,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3f, .path = &r11acidants3f_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3f, .path = &path2603,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3f = {
@@ -6631,7 +6803,8 @@ extern LevelObjectGroup r11acidants3g;
 static GObjPathPointFunction path2607_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2607_points[] = {
+static Path path2607 = {
+.x = 104, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6656,17 +6829,18 @@ static PathPoint path2607_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3g_paths[] = {
-{.x = 104, .y = 1720, .numPoints = 3, .points = path2607_points}
+static Path *r11acidants3g_paths[] = {
+    &path2607
 };
 static LevelObject r11acidants3g_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 104, .y = 1704,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3g, .path = &r11acidants3g_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3g, .path = &path2607,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3g = {
@@ -6677,7 +6851,8 @@ extern LevelObjectGroup r11acidants3h;
 static GObjPathPointFunction path2611_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2611_points[] = {
+static Path path2611 = {
+.x = 80, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6702,17 +6877,18 @@ static PathPoint path2611_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3h_paths[] = {
-{.x = 80, .y = 1720, .numPoints = 3, .points = path2611_points}
+static Path *r11acidants3h_paths[] = {
+    &path2611
 };
 static LevelObject r11acidants3h_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 80, .y = 1704,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3h, .path = &r11acidants3h_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3h, .path = &path2611,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3h = {
@@ -6723,7 +6899,8 @@ extern LevelObjectGroup r11acidants3i;
 static GObjPathPointFunction path2615_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2615_points[] = {
+static Path path2615 = {
+.x = 56, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6748,17 +6925,18 @@ static PathPoint path2615_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3i_paths[] = {
-{.x = 56, .y = 1720, .numPoints = 3, .points = path2615_points}
+static Path *r11acidants3i_paths[] = {
+    &path2615
 };
 static LevelObject r11acidants3i_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 56, .y = 1704,
     .animInd = 1, .flags = 4096,
-    .group = &r11acidants3i, .path = &r11acidants3i_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3i, .path = &path2615,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3i = {
@@ -6769,7 +6947,8 @@ extern LevelObjectGroup r11acidants3j;
 static GObjPathPointFunction path2619_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2619_points[] = {
+static Path path2619 = {
+.x = 32, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6794,17 +6973,18 @@ static PathPoint path2619_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3j_paths[] = {
-{.x = 32, .y = 1720, .numPoints = 3, .points = path2619_points}
+static Path *r11acidants3j_paths[] = {
+    &path2619
 };
 static LevelObject r11acidants3j_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 32, .y = 1704,
     .animInd = 1, .flags = 6144,
-    .group = &r11acidants3j, .path = &r11acidants3j_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3j, .path = &path2619,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3j = {
@@ -6815,7 +6995,8 @@ extern LevelObjectGroup r11acidants3k;
 static GObjPathPointFunction path2623_1_actions[] = {
 climbUpToFloor
 };
-static PathPoint path2623_points[] = {
+static Path path2623 = {
+.x = 8, .y = 1720, .numPoints = 3, .points = {
 {
     .x = 0, .y = -16,
     .speedTo = 64, .distTo = 0,
@@ -6840,17 +7021,18 @@ static PathPoint path2623_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r11acidants3k_paths[] = {
-{.x = 8, .y = 1720, .numPoints = 3, .points = path2623_points}
+static Path *r11acidants3k_paths[] = {
+    &path2623
 };
 static LevelObject r11acidants3k_objects[] = {
 {
     .definition = &defAcidAnt,
     .x = 8, .y = 1704,
     .animInd = 1, .flags = 6144,
-    .group = &r11acidants3k, .path = &r11acidants3k_paths[0],
-    .pathIndex = 1
+    .group = &r11acidants3k, .path = &path2623,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r11acidants3k = {
@@ -6881,7 +7063,8 @@ enterForeground
 static GObjPathPointFunction path2630_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2630_points[] = {
+static Path path2630 = {
+.x = 96, .y = 1512, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -6906,17 +7089,18 @@ static PathPoint path2630_points[] = {
     .numActions = 1,
     .actions = path2630_2_actions
 }
+}
 };
-static Path r12wasp1a_paths[] = {
-{.x = 96, .y = 1512, .numPoints = 3, .points = path2630_points}
+static Path *r12wasp1a_paths[] = {
+    &path2630
 };
 static LevelObject r12wasp1a_objects[] = {
 {
     .definition = &defWasp,
     .x = 96, .y = 1512,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp1a, .path = &r12wasp1a_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp1a, .path = &path2630,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp1a = {
@@ -6933,7 +7117,8 @@ enterForeground
 static GObjPathPointFunction path2636_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2636_points[] = {
+static Path path2636 = {
+.x = 128, .y = 1528, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -6958,17 +7143,18 @@ static PathPoint path2636_points[] = {
     .numActions = 1,
     .actions = path2636_2_actions
 }
+}
 };
-static Path r12wasp1b_paths[] = {
-{.x = 128, .y = 1528, .numPoints = 3, .points = path2636_points}
+static Path *r12wasp1b_paths[] = {
+    &path2636
 };
 static LevelObject r12wasp1b_objects[] = {
 {
     .definition = &defWasp,
     .x = 128, .y = 1528,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp1b, .path = &r12wasp1b_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp1b, .path = &path2636,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp1b = {
@@ -6985,7 +7171,8 @@ enterForeground
 static GObjPathPointFunction path2642_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2642_points[] = {
+static Path path2642 = {
+.x = 160, .y = 1544, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7010,17 +7197,18 @@ static PathPoint path2642_points[] = {
     .numActions = 1,
     .actions = path2642_2_actions
 }
+}
 };
-static Path r12wasp1c_paths[] = {
-{.x = 160, .y = 1544, .numPoints = 3, .points = path2642_points}
+static Path *r12wasp1c_paths[] = {
+    &path2642
 };
 static LevelObject r12wasp1c_objects[] = {
 {
     .definition = &defWasp,
     .x = 160, .y = 1544,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp1c, .path = &r12wasp1c_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp1c, .path = &path2642,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp1c = {
@@ -7037,7 +7225,8 @@ enterForeground
 static GObjPathPointFunction path2648_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2648_points[] = {
+static Path path2648 = {
+.x = 80, .y = 1448, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7062,17 +7251,18 @@ static PathPoint path2648_points[] = {
     .numActions = 1,
     .actions = path2648_2_actions
 }
+}
 };
-static Path r12wasp2a_paths[] = {
-{.x = 80, .y = 1448, .numPoints = 3, .points = path2648_points}
+static Path *r12wasp2a_paths[] = {
+    &path2648
 };
 static LevelObject r12wasp2a_objects[] = {
 {
     .definition = &defWasp,
     .x = 80, .y = 1448,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp2a, .path = &r12wasp2a_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp2a, .path = &path2648,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp2a = {
@@ -7089,7 +7279,8 @@ enterForeground
 static GObjPathPointFunction path2654_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2654_points[] = {
+static Path path2654 = {
+.x = 56, .y = 1472, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7114,17 +7305,18 @@ static PathPoint path2654_points[] = {
     .numActions = 1,
     .actions = path2654_2_actions
 }
+}
 };
-static Path r12wasp2b_paths[] = {
-{.x = 56, .y = 1472, .numPoints = 3, .points = path2654_points}
+static Path *r12wasp2b_paths[] = {
+    &path2654
 };
 static LevelObject r12wasp2b_objects[] = {
 {
     .definition = &defWasp,
     .x = 56, .y = 1472,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp2b, .path = &r12wasp2b_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp2b, .path = &path2654,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp2b = {
@@ -7141,7 +7333,8 @@ enterForeground
 static GObjPathPointFunction path2660_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2660_points[] = {
+static Path path2660 = {
+.x = 32, .y = 1496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7166,17 +7359,18 @@ static PathPoint path2660_points[] = {
     .numActions = 1,
     .actions = path2660_2_actions
 }
+}
 };
-static Path r12wasp2c_paths[] = {
-{.x = 32, .y = 1496, .numPoints = 3, .points = path2660_points}
+static Path *r12wasp2c_paths[] = {
+    &path2660
 };
 static LevelObject r12wasp2c_objects[] = {
 {
     .definition = &defWasp,
     .x = 32, .y = 1496,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp2c, .path = &r12wasp2c_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp2c, .path = &path2660,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp2c = {
@@ -7193,7 +7387,8 @@ enterForeground
 static GObjPathPointFunction path2666_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2666_points[] = {
+static Path path2666 = {
+.x = 176, .y = 1472, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7218,17 +7413,18 @@ static PathPoint path2666_points[] = {
     .numActions = 1,
     .actions = path2666_2_actions
 }
+}
 };
-static Path r12wasp3a_paths[] = {
-{.x = 176, .y = 1472, .numPoints = 3, .points = path2666_points}
+static Path *r12wasp3a_paths[] = {
+    &path2666
 };
 static LevelObject r12wasp3a_objects[] = {
 {
     .definition = &defWasp,
     .x = 176, .y = 1472,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp3a, .path = &r12wasp3a_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp3a, .path = &path2666,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp3a = {
@@ -7245,7 +7441,8 @@ enterForeground
 static GObjPathPointFunction path2672_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2672_points[] = {
+static Path path2672 = {
+.x = 200, .y = 1496, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7270,17 +7467,18 @@ static PathPoint path2672_points[] = {
     .numActions = 1,
     .actions = path2672_2_actions
 }
+}
 };
-static Path r12wasp3b_paths[] = {
-{.x = 200, .y = 1496, .numPoints = 3, .points = path2672_points}
+static Path *r12wasp3b_paths[] = {
+    &path2672
 };
 static LevelObject r12wasp3b_objects[] = {
 {
     .definition = &defWasp,
     .x = 200, .y = 1496,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp3b, .path = &r12wasp3b_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp3b, .path = &path2672,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp3b = {
@@ -7297,7 +7495,8 @@ enterForeground
 static GObjPathPointFunction path2678_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2678_points[] = {
+static Path path2678 = {
+.x = 224, .y = 1520, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7322,17 +7521,18 @@ static PathPoint path2678_points[] = {
     .numActions = 1,
     .actions = path2678_2_actions
 }
+}
 };
-static Path r12wasp3c_paths[] = {
-{.x = 224, .y = 1520, .numPoints = 3, .points = path2678_points}
+static Path *r12wasp3c_paths[] = {
+    &path2678
 };
 static LevelObject r12wasp3c_objects[] = {
 {
     .definition = &defWasp,
     .x = 224, .y = 1520,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp3c, .path = &r12wasp3c_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp3c, .path = &path2678,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp3c = {
@@ -7349,7 +7549,8 @@ enterForeground
 static GObjPathPointFunction path2684_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2684_points[] = {
+static Path path2684 = {
+.x = 48, .y = 1416, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7374,17 +7575,18 @@ static PathPoint path2684_points[] = {
     .numActions = 1,
     .actions = path2684_2_actions
 }
+}
 };
-static Path r12wasp4a_paths[] = {
-{.x = 48, .y = 1416, .numPoints = 3, .points = path2684_points}
+static Path *r12wasp4a_paths[] = {
+    &path2684
 };
 static LevelObject r12wasp4a_objects[] = {
 {
     .definition = &defWasp,
     .x = 48, .y = 1416,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp4a, .path = &r12wasp4a_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp4a, .path = &path2684,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp4a = {
@@ -7401,7 +7603,8 @@ enterForeground
 static GObjPathPointFunction path2690_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2690_points[] = {
+static Path path2690 = {
+.x = 208, .y = 1416, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7426,17 +7629,18 @@ static PathPoint path2690_points[] = {
     .numActions = 1,
     .actions = path2690_2_actions
 }
+}
 };
-static Path r12wasp4b_paths[] = {
-{.x = 208, .y = 1416, .numPoints = 3, .points = path2690_points}
+static Path *r12wasp4b_paths[] = {
+    &path2690
 };
 static LevelObject r12wasp4b_objects[] = {
 {
     .definition = &defWasp,
     .x = 208, .y = 1416,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp4b, .path = &r12wasp4b_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp4b, .path = &path2690,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp4b = {
@@ -7453,7 +7657,8 @@ enterForeground
 static GObjPathPointFunction path2696_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2696_points[] = {
+static Path path2696 = {
+.x = 32, .y = 1504, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7478,17 +7683,18 @@ static PathPoint path2696_points[] = {
     .numActions = 1,
     .actions = path2696_2_actions
 }
+}
 };
-static Path r12wasp4c_paths[] = {
-{.x = 32, .y = 1504, .numPoints = 3, .points = path2696_points}
+static Path *r12wasp4c_paths[] = {
+    &path2696
 };
 static LevelObject r12wasp4c_objects[] = {
 {
     .definition = &defWasp,
     .x = 32, .y = 1504,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp4c, .path = &r12wasp4c_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp4c, .path = &path2696,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp4c = {
@@ -7505,7 +7711,8 @@ enterForeground
 static GObjPathPointFunction path2702_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path2702_points[] = {
+static Path path2702 = {
+.x = 224, .y = 1504, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7530,17 +7737,18 @@ static PathPoint path2702_points[] = {
     .numActions = 1,
     .actions = path2702_2_actions
 }
+}
 };
-static Path r12wasp4d_paths[] = {
-{.x = 224, .y = 1504, .numPoints = 3, .points = path2702_points}
+static Path *r12wasp4d_paths[] = {
+    &path2702
 };
 static LevelObject r12wasp4d_objects[] = {
 {
     .definition = &defWasp,
     .x = 224, .y = 1504,
     .animInd = 0, .flags = 0,
-    .group = &r12wasp4d, .path = &r12wasp4d_paths[0],
-    .pathIndex = 1
+    .group = &r12wasp4d, .path = &path2702,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r12wasp4d = {
@@ -7565,7 +7773,8 @@ extern LevelObjectGroup r13acidants1;
 static GObjPathPointFunction path2715_2_actions[] = {
 markDisappear
 };
-static PathPoint path2715_points[] = {
+static Path path2715 = {
+.x = 232, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7590,11 +7799,13 @@ static PathPoint path2715_points[] = {
     .numActions = 1,
     .actions = path2715_2_actions
 }
+}
 };
 static GObjPathPointFunction path2716_2_actions[] = {
 markDisappear
 };
-static PathPoint path2716_points[] = {
+static Path path2716 = {
+.x = 240, .y = 1168, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7619,11 +7830,13 @@ static PathPoint path2716_points[] = {
     .numActions = 1,
     .actions = path2716_2_actions
 }
+}
 };
 static GObjPathPointFunction path2717_2_actions[] = {
 markDisappear
 };
-static PathPoint path2717_points[] = {
+static Path path2717 = {
+.x = 16, .y = 1168, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7648,11 +7861,13 @@ static PathPoint path2717_points[] = {
     .numActions = 1,
     .actions = path2717_2_actions
 }
+}
 };
 static GObjPathPointFunction path2718_2_actions[] = {
 markDisappear
 };
-static PathPoint path2718_points[] = {
+static Path path2718 = {
+.x = 24, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7677,11 +7892,13 @@ static PathPoint path2718_points[] = {
     .numActions = 1,
     .actions = path2718_2_actions
 }
+}
 };
 static GObjPathPointFunction path2719_2_actions[] = {
 markDisappear
 };
-static PathPoint path2719_points[] = {
+static Path path2719 = {
+.x = 248, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7706,11 +7923,13 @@ static PathPoint path2719_points[] = {
     .numActions = 1,
     .actions = path2719_2_actions
 }
+}
 };
 static GObjPathPointFunction path2720_2_actions[] = {
 markDisappear
 };
-static PathPoint path2720_points[] = {
+static Path path2720 = {
+.x = 8, .y = 1152, .numPoints = 3, .points = {
 {
     .x = 0, .y = 48,
     .speedTo = 64, .distTo = 0,
@@ -7735,57 +7954,58 @@ static PathPoint path2720_points[] = {
     .numActions = 1,
     .actions = path2720_2_actions
 }
+}
 };
-static Path r13acidants1_paths[] = {
-{.x = 232, .y = 1152, .numPoints = 3, .points = path2715_points},
-{.x = 240, .y = 1168, .numPoints = 3, .points = path2716_points},
-{.x = 16, .y = 1168, .numPoints = 3, .points = path2717_points},
-{.x = 24, .y = 1152, .numPoints = 3, .points = path2718_points},
-{.x = 248, .y = 1152, .numPoints = 3, .points = path2719_points},
-{.x = 8, .y = 1152, .numPoints = 3, .points = path2720_points}
+static Path *r13acidants1_paths[] = {
+    &path2715,
+    &path2716,
+    &path2717,
+    &path2718,
+    &path2719,
+    &path2720
 };
 static LevelObject r13acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 16, .y = 1216,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[2],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2717,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 240, .y = 1216,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[1],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2716,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 248, .y = 1200,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[4],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2719,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 24, .y = 1200,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[3],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2718,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 232, .y = 1200,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[0],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2715,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 8, .y = 1200,
     .animInd = 0, .flags = 32768,
-    .group = &r13acidants1, .path = &r13acidants1_paths[5],
-    .pathIndex = 1
+    .group = &r13acidants1, .path = &path2720,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r13acidants1 = {
@@ -7805,7 +8025,8 @@ PathPoint_Rotate
 static GObjPathPointFunction path2730_4_actions[] = {
 PathPoint_Rotate
 };
-static PathPoint path2730_points[] = {
+static Path path2730 = {
+.x = 56, .y = 1320, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7854,6 +8075,7 @@ static PathPoint path2730_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2731_1_actions[] = {
 enterForeground
@@ -7867,7 +8089,8 @@ PathPoint_Rotate
 static GObjPathPointFunction path2731_4_actions[] = {
 PathPoint_Rotate
 };
-static PathPoint path2731_points[] = {
+static Path path2731 = {
+.x = 200, .y = 1320, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -7916,25 +8139,26 @@ static PathPoint path2731_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r13beetle1_paths[] = {
-{.x = 56, .y = 1320, .numPoints = 6, .points = path2730_points},
-{.x = 200, .y = 1320, .numPoints = 6, .points = path2731_points}
+static Path *r13beetle1_paths[] = {
+    &path2730,
+    &path2731
 };
 static LevelObject r13beetle1_objects[] = {
 {
     .definition = &defBeetle,
     .x = 56, .y = 1320,
     .animInd = 1, .flags = 36864,
-    .group = &r13beetle1, .path = &r13beetle1_paths[0],
-    .pathIndex = 1
+    .group = &r13beetle1, .path = &path2730,
+    .pathIndex = 0
 },
 {
     .definition = &defBeetle,
     .x = 200, .y = 1320,
     .animInd = 1, .flags = 38912,
-    .group = &r13beetle1, .path = &r13beetle1_paths[1],
-    .pathIndex = 1
+    .group = &r13beetle1, .path = &path2731,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r13beetle1 = {
@@ -7956,7 +8180,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2742_5_actions[] = {
 startWaspAttack
 };
-static PathPoint path2742_points[] = {
+static Path path2742 = {
+.x = 32, .y = 1264, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -8005,17 +8230,18 @@ static PathPoint path2742_points[] = {
     .numActions = 1,
     .actions = path2742_5_actions
 }
+}
 };
-static Path r13fly1_paths[] = {
-{.x = 32, .y = 1264, .numPoints = 6, .points = path2742_points}
+static Path *r13fly1_paths[] = {
+    &path2742
 };
 static LevelObject r13fly1_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 32, .y = 1264,
     .animInd = 0, .flags = 0,
-    .group = &r13fly1, .path = &r13fly1_paths[0],
-    .pathIndex = 1
+    .group = &r13fly1, .path = &path2742,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r13fly1 = {
@@ -8039,7 +8265,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2751_5_actions[] = {
 startWaspAttack
 };
-static PathPoint path2751_points[] = {
+static Path path2751 = {
+.x = 24, .y = 1232, .numPoints = 6, .points = {
 {
     .x = 24, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -8088,17 +8315,18 @@ static PathPoint path2751_points[] = {
     .numActions = 1,
     .actions = path2751_5_actions
 }
+}
 };
-static Path r13fly2_paths[] = {
-{.x = 24, .y = 1232, .numPoints = 6, .points = path2751_points}
+static Path *r13fly2_paths[] = {
+    &path2751
 };
 static LevelObject r13fly2_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 48, .y = 1232,
     .animInd = 0, .flags = 0,
-    .group = &r13fly2, .path = &r13fly2_paths[0],
-    .pathIndex = 1
+    .group = &r13fly2, .path = &path2751,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r13fly2 = {
@@ -8120,7 +8348,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2760_5_actions[] = {
 startWaspAttack
 };
-static PathPoint path2760_points[] = {
+static Path path2760 = {
+.x = 224, .y = 1224, .numPoints = 6, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -8169,17 +8398,18 @@ static PathPoint path2760_points[] = {
     .numActions = 1,
     .actions = path2760_5_actions
 }
+}
 };
-static Path r13fly3_paths[] = {
-{.x = 224, .y = 1224, .numPoints = 6, .points = path2760_points}
+static Path *r13fly3_paths[] = {
+    &path2760
 };
 static LevelObject r13fly3_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 224, .y = 1224,
     .animInd = 0, .flags = 2048,
-    .group = &r13fly3, .path = &r13fly3_paths[0],
-    .pathIndex = 1
+    .group = &r13fly3, .path = &path2760,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r13fly3 = {
@@ -8203,7 +8433,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2769_5_actions[] = {
 startWaspAttack
 };
-static PathPoint path2769_points[] = {
+static Path path2769 = {
+.x = 232, .y = 1192, .numPoints = 6, .points = {
 {
     .x = -24, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -8252,17 +8483,18 @@ static PathPoint path2769_points[] = {
     .numActions = 1,
     .actions = path2769_5_actions
 }
+}
 };
-static Path r14fly4_paths[] = {
-{.x = 232, .y = 1192, .numPoints = 6, .points = path2769_points}
+static Path *r14fly4_paths[] = {
+    &path2769
 };
 static LevelObject r14fly4_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 208, .y = 1192,
     .animInd = 0, .flags = 2048,
-    .group = &r14fly4, .path = &r14fly4_paths[0],
-    .pathIndex = 1
+    .group = &r14fly4, .path = &path2769,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14fly4 = {
@@ -8375,7 +8607,8 @@ PathPoint_Rotate
 static GObjPathPointFunction path2779_32_actions[] = {
 PathPoint_Rotate
 };
-static PathPoint path2779_points[] = {
+static Path path2779 = {
+.x = 40, .y = 856, .numPoints = 34, .points = {
 {
     .x = 64, .y = 240,
     .speedTo = 64, .distTo = 0,
@@ -8648,6 +8881,7 @@ static PathPoint path2779_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
 static GObjPathPointFunction path2780_2_actions[] = {
 0 /* to be assigned */,
@@ -8752,7 +8986,8 @@ PathPoint_Rotate
 static GObjPathPointFunction path2780_32_actions[] = {
 PathPoint_Rotate
 };
-static PathPoint path2780_points[] = {
+static Path path2780 = {
+.x = 152, .y = 856, .numPoints = 34, .points = {
 {
     .x = 64, .y = 240,
     .speedTo = 64, .distTo = 0,
@@ -9025,25 +9260,26 @@ static PathPoint path2780_points[] = {
     .numActions = 0,
     .actions = 0
 }
+}
 };
-static Path r14beetles_paths[] = {
-{.x = 40, .y = 856, .numPoints = 34, .points = path2779_points},
-{.x = 152, .y = 856, .numPoints = 34, .points = path2780_points}
+static Path *r14beetles_paths[] = {
+    &path2779,
+    &path2780
 };
 static LevelObject r14beetles_objects[] = {
 {
     .definition = &defBeetle,
     .x = 104, .y = 1096,
     .animInd = 1, .flags = 36864,
-    .group = &r14beetles, .path = &r14beetles_paths[0],
-    .pathIndex = 1
+    .group = &r14beetles, .path = &path2779,
+    .pathIndex = 0
 },
 {
     .definition = &defBeetle,
     .x = 216, .y = 1096,
     .animInd = 1, .flags = 4096,
-    .group = &r14beetles, .path = &r14beetles_paths[1],
-    .pathIndex = 1
+    .group = &r14beetles, .path = &path2780,
+    .pathIndex = 0
 },
 {
     .definition = 0 /* to be assigned */,
@@ -9089,7 +9325,8 @@ extern LevelObjectGroup r14acidants1;
 static GObjPathPointFunction path2891_2_actions[] = {
 markDisappear
 };
-static PathPoint path2891_points[] = {
+static Path path2891 = {
+.x = 120, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9114,11 +9351,13 @@ static PathPoint path2891_points[] = {
     .numActions = 1,
     .actions = path2891_2_actions
 }
+}
 };
 static GObjPathPointFunction path2892_2_actions[] = {
 markDisappear
 };
-static PathPoint path2892_points[] = {
+static Path path2892 = {
+.x = 184, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9143,25 +9382,26 @@ static PathPoint path2892_points[] = {
     .numActions = 1,
     .actions = path2892_2_actions
 }
+}
 };
-static Path r14acidants1_paths[] = {
-{.x = 120, .y = 976, .numPoints = 3, .points = path2891_points},
-{.x = 184, .y = 976, .numPoints = 3, .points = path2892_points}
+static Path *r14acidants1_paths[] = {
+    &path2891,
+    &path2892
 };
 static LevelObject r14acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 120, .y = 992,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants1, .path = &r14acidants1_paths[0],
-    .pathIndex = 1
+    .group = &r14acidants1, .path = &path2891,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 184, .y = 992,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants1, .path = &r14acidants1_paths[1],
-    .pathIndex = 1
+    .group = &r14acidants1, .path = &path2892,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14acidants1 = {
@@ -9172,7 +9412,8 @@ extern LevelObjectGroup r14acidants2;
 static GObjPathPointFunction path2898_2_actions[] = {
 markDisappear
 };
-static PathPoint path2898_points[] = {
+static Path path2898 = {
+.x = 128, .y = 992, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9197,11 +9438,13 @@ static PathPoint path2898_points[] = {
     .numActions = 1,
     .actions = path2898_2_actions
 }
+}
 };
 static GObjPathPointFunction path2899_2_actions[] = {
 markDisappear
 };
-static PathPoint path2899_points[] = {
+static Path path2899 = {
+.x = 176, .y = 992, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9226,25 +9469,26 @@ static PathPoint path2899_points[] = {
     .numActions = 1,
     .actions = path2899_2_actions
 }
+}
 };
-static Path r14acidants2_paths[] = {
-{.x = 128, .y = 992, .numPoints = 3, .points = path2898_points},
-{.x = 176, .y = 992, .numPoints = 3, .points = path2899_points}
+static Path *r14acidants2_paths[] = {
+    &path2898,
+    &path2899
 };
 static LevelObject r14acidants2_objects[] = {
 {
     .definition = &defAntHole,
     .x = 128, .y = 1008,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants2, .path = &r14acidants2_paths[0],
-    .pathIndex = 1
+    .group = &r14acidants2, .path = &path2898,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 176, .y = 1008,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants2, .path = &r14acidants2_paths[1],
-    .pathIndex = 1
+    .group = &r14acidants2, .path = &path2899,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14acidants2 = {
@@ -9255,7 +9499,8 @@ extern LevelObjectGroup r14acidants3;
 static GObjPathPointFunction path2905_2_actions[] = {
 markDisappear
 };
-static PathPoint path2905_points[] = {
+static Path path2905 = {
+.x = 136, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9280,11 +9525,13 @@ static PathPoint path2905_points[] = {
     .numActions = 1,
     .actions = path2905_2_actions
 }
+}
 };
 static GObjPathPointFunction path2906_2_actions[] = {
 markDisappear
 };
-static PathPoint path2906_points[] = {
+static Path path2906 = {
+.x = 168, .y = 976, .numPoints = 3, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -9309,25 +9556,26 @@ static PathPoint path2906_points[] = {
     .numActions = 1,
     .actions = path2906_2_actions
 }
+}
 };
-static Path r14acidants3_paths[] = {
-{.x = 136, .y = 976, .numPoints = 3, .points = path2905_points},
-{.x = 168, .y = 976, .numPoints = 3, .points = path2906_points}
+static Path *r14acidants3_paths[] = {
+    &path2905,
+    &path2906
 };
 static LevelObject r14acidants3_objects[] = {
 {
     .definition = &defAntHole,
     .x = 168, .y = 992,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants3, .path = &r14acidants3_paths[1],
-    .pathIndex = 1
+    .group = &r14acidants3, .path = &path2906,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 136, .y = 992,
     .animInd = 0, .flags = 32768,
-    .group = &r14acidants3, .path = &r14acidants3_paths[0],
-    .pathIndex = 1
+    .group = &r14acidants3, .path = &path2905,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14acidants3 = {
@@ -9347,7 +9595,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2911_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2911_points[] = {
+static Path path2911 = {
+.x = 136, .y = 1128, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9380,17 +9629,18 @@ static PathPoint path2911_points[] = {
     .numActions = 1,
     .actions = path2911_3_actions
 }
+}
 };
-static Path r14wasp1a_paths[] = {
-{.x = 136, .y = 1128, .numPoints = 4, .points = path2911_points}
+static Path *r14wasp1a_paths[] = {
+    &path2911
 };
 static LevelObject r14wasp1a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 1128,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp1a, .path = &r14wasp1a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp1a, .path = &path2911,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp1a = {
@@ -9410,7 +9660,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2921_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2921_points[] = {
+static Path path2921 = {
+.x = 120, .y = 1136, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9443,17 +9694,18 @@ static PathPoint path2921_points[] = {
     .numActions = 1,
     .actions = path2921_3_actions
 }
+}
 };
-static Path r14wasp1b_paths[] = {
-{.x = 120, .y = 1136, .numPoints = 4, .points = path2921_points}
+static Path *r14wasp1b_paths[] = {
+    &path2921
 };
 static LevelObject r14wasp1b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 1136,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp1b, .path = &r14wasp1b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp1b, .path = &path2921,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp1b = {
@@ -9473,7 +9725,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2928_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2928_points[] = {
+static Path path2928 = {
+.x = 24, .y = 1072, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9506,17 +9759,18 @@ static PathPoint path2928_points[] = {
     .numActions = 1,
     .actions = path2928_3_actions
 }
+}
 };
-static Path r14wasp2a_paths[] = {
-{.x = 24, .y = 1072, .numPoints = 4, .points = path2928_points}
+static Path *r14wasp2a_paths[] = {
+    &path2928
 };
 static LevelObject r14wasp2a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 1072,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp2a, .path = &r14wasp2a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp2a, .path = &path2928,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp2a = {
@@ -9536,7 +9790,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2935_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2935_points[] = {
+static Path path2935 = {
+.x = 120, .y = 1096, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9569,17 +9824,18 @@ static PathPoint path2935_points[] = {
     .numActions = 1,
     .actions = path2935_3_actions
 }
+}
 };
-static Path r14wasp2b_paths[] = {
-{.x = 120, .y = 1096, .numPoints = 4, .points = path2935_points}
+static Path *r14wasp2b_paths[] = {
+    &path2935
 };
 static LevelObject r14wasp2b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 1096,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp2b, .path = &r14wasp2b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp2b, .path = &path2935,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp2b = {
@@ -9599,7 +9855,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2942_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2942_points[] = {
+static Path path2942 = {
+.x = 136, .y = 1056, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9632,17 +9889,18 @@ static PathPoint path2942_points[] = {
     .numActions = 1,
     .actions = path2942_3_actions
 }
+}
 };
-static Path r14wasp3a_paths[] = {
-{.x = 136, .y = 1056, .numPoints = 4, .points = path2942_points}
+static Path *r14wasp3a_paths[] = {
+    &path2942
 };
 static LevelObject r14wasp3a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 1056,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp3a, .path = &r14wasp3a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp3a, .path = &path2942,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp3a = {
@@ -9662,7 +9920,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2949_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2949_points[] = {
+static Path path2949 = {
+.x = 232, .y = 1032, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9695,17 +9954,18 @@ static PathPoint path2949_points[] = {
     .numActions = 1,
     .actions = path2949_3_actions
 }
+}
 };
-static Path r14wasp3b_paths[] = {
-{.x = 232, .y = 1032, .numPoints = 4, .points = path2949_points}
+static Path *r14wasp3b_paths[] = {
+    &path2949
 };
 static LevelObject r14wasp3b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 1032,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp3b, .path = &r14wasp3b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp3b, .path = &path2949,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp3b = {
@@ -9725,7 +9985,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2956_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2956_points[] = {
+static Path path2956 = {
+.x = 24, .y = 960, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9758,17 +10019,18 @@ static PathPoint path2956_points[] = {
     .numActions = 1,
     .actions = path2956_3_actions
 }
+}
 };
-static Path r14wasp4a_paths[] = {
-{.x = 24, .y = 960, .numPoints = 4, .points = path2956_points}
+static Path *r14wasp4a_paths[] = {
+    &path2956
 };
 static LevelObject r14wasp4a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 960,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp4a, .path = &r14wasp4a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp4a, .path = &path2956,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp4a = {
@@ -9788,7 +10050,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2963_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2963_points[] = {
+static Path path2963 = {
+.x = 136, .y = 952, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9821,17 +10084,18 @@ static PathPoint path2963_points[] = {
     .numActions = 1,
     .actions = path2963_3_actions
 }
+}
 };
-static Path r14wasp4b_paths[] = {
-{.x = 136, .y = 952, .numPoints = 4, .points = path2963_points}
+static Path *r14wasp4b_paths[] = {
+    &path2963
 };
 static LevelObject r14wasp4b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 952,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp4b, .path = &r14wasp4b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp4b, .path = &path2963,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp4b = {
@@ -9851,7 +10115,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2970_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2970_points[] = {
+static Path path2970 = {
+.x = 24, .y = 984, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9884,17 +10149,18 @@ static PathPoint path2970_points[] = {
     .numActions = 1,
     .actions = path2970_3_actions
 }
+}
 };
-static Path r14wasp4c_paths[] = {
-{.x = 24, .y = 984, .numPoints = 4, .points = path2970_points}
+static Path *r14wasp4c_paths[] = {
+    &path2970
 };
 static LevelObject r14wasp4c_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 984,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp4c, .path = &r14wasp4c_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp4c, .path = &path2970,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp4c = {
@@ -9914,7 +10180,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2977_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2977_points[] = {
+static Path path2977 = {
+.x = 232, .y = 896, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -9947,17 +10214,18 @@ static PathPoint path2977_points[] = {
     .numActions = 1,
     .actions = path2977_3_actions
 }
+}
 };
-static Path r14wasp5a_paths[] = {
-{.x = 232, .y = 896, .numPoints = 4, .points = path2977_points}
+static Path *r14wasp5a_paths[] = {
+    &path2977
 };
 static LevelObject r14wasp5a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 896,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp5a, .path = &r14wasp5a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp5a, .path = &path2977,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp5a = {
@@ -9977,7 +10245,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2984_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2984_points[] = {
+static Path path2984 = {
+.x = 120, .y = 888, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10010,17 +10279,18 @@ static PathPoint path2984_points[] = {
     .numActions = 1,
     .actions = path2984_3_actions
 }
+}
 };
-static Path r14wasp5b_paths[] = {
-{.x = 120, .y = 888, .numPoints = 4, .points = path2984_points}
+static Path *r14wasp5b_paths[] = {
+    &path2984
 };
 static LevelObject r14wasp5b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 888,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp5b, .path = &r14wasp5b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp5b, .path = &path2984,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp5b = {
@@ -10040,7 +10310,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path2991_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path2991_points[] = {
+static Path path2991 = {
+.x = 232, .y = 920, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10073,17 +10344,18 @@ static PathPoint path2991_points[] = {
     .numActions = 1,
     .actions = path2991_3_actions
 }
+}
 };
-static Path r14wasp5c_paths[] = {
-{.x = 232, .y = 920, .numPoints = 4, .points = path2991_points}
+static Path *r14wasp5c_paths[] = {
+    &path2991
 };
 static LevelObject r14wasp5c_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 920,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp5c, .path = &r14wasp5c_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp5c, .path = &path2991,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp5c = {
@@ -10103,7 +10375,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3002_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3002_points[] = {
+static Path path3002 = {
+.x = 24, .y = 832, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10136,6 +10409,7 @@ static PathPoint path3002_points[] = {
     .numActions = 1,
     .actions = path3002_3_actions
 }
+}
 };
 static GObjPathPointFunction path3003_0_actions[] = {
 0 /* to be assigned */
@@ -10149,7 +10423,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3003_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3003_points[] = {
+static Path path3003 = {
+.x = 120, .y = 832, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10182,25 +10457,26 @@ static PathPoint path3003_points[] = {
     .numActions = 1,
     .actions = path3003_3_actions
 }
+}
 };
-static Path r14wasp6a_paths[] = {
-{.x = 24, .y = 832, .numPoints = 4, .points = path3002_points},
-{.x = 120, .y = 832, .numPoints = 4, .points = path3003_points}
+static Path *r14wasp6a_paths[] = {
+    &path3002,
+    &path3003
 };
 static LevelObject r14wasp6a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 832,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp6a, .path = &r14wasp6a_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp6a, .path = &path3002,
+    .pathIndex = 0
 },
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 832,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp6a, .path = &r14wasp6a_paths[1],
-    .pathIndex = 1
+    .group = &r14wasp6a, .path = &path3003,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp6a = {
@@ -10220,7 +10496,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3015_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3015_points[] = {
+static Path path3015 = {
+.x = 24, .y = 848, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10253,6 +10530,7 @@ static PathPoint path3015_points[] = {
     .numActions = 1,
     .actions = path3015_3_actions
 }
+}
 };
 static GObjPathPointFunction path3016_0_actions[] = {
 0 /* to be assigned */
@@ -10266,7 +10544,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3016_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3016_points[] = {
+static Path path3016 = {
+.x = 120, .y = 848, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10299,25 +10578,26 @@ static PathPoint path3016_points[] = {
     .numActions = 1,
     .actions = path3016_3_actions
 }
+}
 };
-static Path r14wasp6b_paths[] = {
-{.x = 24, .y = 848, .numPoints = 4, .points = path3015_points},
-{.x = 120, .y = 848, .numPoints = 4, .points = path3016_points}
+static Path *r14wasp6b_paths[] = {
+    &path3015,
+    &path3016
 };
 static LevelObject r14wasp6b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 848,
     .animInd = 0, .flags = 0,
-    .group = &r14wasp6b, .path = &r14wasp6b_paths[0],
-    .pathIndex = 1
+    .group = &r14wasp6b, .path = &path3015,
+    .pathIndex = 0
 },
 {
     .definition = &defWaspShooter,
     .x = 120, .y = 848,
     .animInd = 0, .flags = 2048,
-    .group = &r14wasp6b, .path = &r14wasp6b_paths[1],
-    .pathIndex = 1
+    .group = &r14wasp6b, .path = &path3016,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14wasp6b = {
@@ -10337,7 +10617,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3028_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3028_points[] = {
+static Path path3028 = {
+.x = 136, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10370,6 +10651,7 @@ static PathPoint path3028_points[] = {
     .numActions = 1,
     .actions = path3028_3_actions
 }
+}
 };
 static GObjPathPointFunction path3029_0_actions[] = {
 0 /* to be assigned */
@@ -10383,7 +10665,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3029_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3029_points[] = {
+static Path path3029 = {
+.x = 232, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10416,25 +10699,26 @@ static PathPoint path3029_points[] = {
     .numActions = 1,
     .actions = path3029_3_actions
 }
+}
 };
-static Path Copy_of_r14wasp6a_paths[] = {
-{.x = 136, .y = 800, .numPoints = 4, .points = path3028_points},
-{.x = 232, .y = 800, .numPoints = 4, .points = path3029_points}
+static Path *Copy_of_r14wasp6a_paths[] = {
+    &path3028,
+    &path3029
 };
 static LevelObject Copy_of_r14wasp6a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
     .animInd = 0, .flags = 0,
-    .group = &Copy_of_r14wasp6a, .path = &Copy_of_r14wasp6a_paths[0],
-    .pathIndex = 1
+    .group = &Copy_of_r14wasp6a, .path = &path3028,
+    .pathIndex = 0
 },
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
     .animInd = 0, .flags = 2048,
-    .group = &Copy_of_r14wasp6a, .path = &Copy_of_r14wasp6a_paths[1],
-    .pathIndex = 1
+    .group = &Copy_of_r14wasp6a, .path = &path3029,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup Copy_of_r14wasp6a = {
@@ -10454,7 +10738,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3041_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3041_points[] = {
+static Path path3041 = {
+.x = 136, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10487,6 +10772,7 @@ static PathPoint path3041_points[] = {
     .numActions = 1,
     .actions = path3041_3_actions
 }
+}
 };
 static GObjPathPointFunction path3042_0_actions[] = {
 0 /* to be assigned */
@@ -10500,7 +10786,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3042_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3042_points[] = {
+static Path path3042 = {
+.x = 232, .y = 800, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10533,25 +10820,26 @@ static PathPoint path3042_points[] = {
     .numActions = 1,
     .actions = path3042_3_actions
 }
+}
 };
-static Path Copy_of_r14wasp6b_paths[] = {
-{.x = 136, .y = 800, .numPoints = 4, .points = path3041_points},
-{.x = 232, .y = 800, .numPoints = 4, .points = path3042_points}
+static Path *Copy_of_r14wasp6b_paths[] = {
+    &path3041,
+    &path3042
 };
 static LevelObject Copy_of_r14wasp6b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
     .animInd = 0, .flags = 0,
-    .group = &Copy_of_r14wasp6b, .path = &Copy_of_r14wasp6b_paths[0],
-    .pathIndex = 1
+    .group = &Copy_of_r14wasp6b, .path = &path3041,
+    .pathIndex = 0
 },
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
     .animInd = 0, .flags = 2048,
-    .group = &Copy_of_r14wasp6b, .path = &Copy_of_r14wasp6b_paths[1],
-    .pathIndex = 1
+    .group = &Copy_of_r14wasp6b, .path = &path3042,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup Copy_of_r14wasp6b = {
@@ -10562,7 +10850,8 @@ extern LevelObjectGroup r14powerup1;
 static GObjPathPointFunction path3047_1_actions[] = {
 markDisappear
 };
-static PathPoint path3047_points[] = {
+static Path path3047 = {
+.x = 72, .y = 992, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10579,17 +10868,18 @@ static PathPoint path3047_points[] = {
     .numActions = 1,
     .actions = path3047_1_actions
 }
+}
 };
-static Path r14powerup1_paths[] = {
-{.x = 72, .y = 992, .numPoints = 2, .points = path3047_points}
+static Path *r14powerup1_paths[] = {
+    &path3047
 };
 static LevelObject r14powerup1_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 72, .y = 992,
     .animInd = 0, .flags = 32768,
-    .group = &r14powerup1, .path = &r14powerup1_paths[0],
-    .pathIndex = 1
+    .group = &r14powerup1, .path = &path3047,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14powerup1 = {
@@ -10600,7 +10890,8 @@ extern LevelObjectGroup r14powerup2;
 static GObjPathPointFunction path3051_1_actions[] = {
 markDisappear
 };
-static PathPoint path3051_points[] = {
+static Path path3051 = {
+.x = 184, .y = 960, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10617,17 +10908,18 @@ static PathPoint path3051_points[] = {
     .numActions = 1,
     .actions = path3051_1_actions
 }
+}
 };
-static Path r14powerup2_paths[] = {
-{.x = 184, .y = 960, .numPoints = 2, .points = path3051_points}
+static Path *r14powerup2_paths[] = {
+    &path3051
 };
 static LevelObject r14powerup2_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 184, .y = 960,
     .animInd = 0, .flags = 32768,
-    .group = &r14powerup2, .path = &r14powerup2_paths[0],
-    .pathIndex = 1
+    .group = &r14powerup2, .path = &path3051,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r14powerup2 = {
@@ -10638,7 +10930,8 @@ extern LevelObjectGroup r15powerup2;
 static GObjPathPointFunction path3055_1_actions[] = {
 markDisappear
 };
-static PathPoint path3055_points[] = {
+static Path path3055 = {
+.x = 72, .y = 800, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10655,17 +10948,18 @@ static PathPoint path3055_points[] = {
     .numActions = 1,
     .actions = path3055_1_actions
 }
+}
 };
-static Path r15powerup2_paths[] = {
-{.x = 72, .y = 800, .numPoints = 2, .points = path3055_points}
+static Path *r15powerup2_paths[] = {
+    &path3055
 };
 static LevelObject r15powerup2_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 72, .y = 800,
     .animInd = 0, .flags = 32768,
-    .group = &r15powerup2, .path = &r15powerup2_paths[0],
-    .pathIndex = 1
+    .group = &r15powerup2, .path = &path3055,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r15powerup2 = {
@@ -10676,7 +10970,8 @@ extern LevelObjectGroup r15powerup1;
 static GObjPathPointFunction path3059_1_actions[] = {
 markDisappear
 };
-static PathPoint path3059_points[] = {
+static Path path3059 = {
+.x = 184, .y = 864, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -10693,17 +10988,18 @@ static PathPoint path3059_points[] = {
     .numActions = 1,
     .actions = path3059_1_actions
 }
+}
 };
-static Path r15powerup1_paths[] = {
-{.x = 184, .y = 864, .numPoints = 2, .points = path3059_points}
+static Path *r15powerup1_paths[] = {
+    &path3059
 };
 static LevelObject r15powerup1_objects[] = {
 {
     .definition = &defHoneyCell,
     .x = 184, .y = 864,
     .animInd = 0, .flags = 32768,
-    .group = &r15powerup1, .path = &r15powerup1_paths[0],
-    .pathIndex = 1
+    .group = &r15powerup1, .path = &path3059,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r15powerup1 = {
@@ -10723,7 +11019,8 @@ static GObjPathPointFunction path3063_6_actions[] = {
 static GObjPathPointFunction path3063_7_actions[] = {
 markDisappear
 };
-static PathPoint path3063_points[] = {
+static Path path3063 = {
+.x = 40, .y = 544, .numPoints = 8, .points = {
 {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -10788,17 +11085,18 @@ static PathPoint path3063_points[] = {
     .numActions = 1,
     .actions = path3063_7_actions
 }
+}
 };
-static Path r16acidants1_paths[] = {
-{.x = 40, .y = 544, .numPoints = 8, .points = path3063_points}
+static Path *r16acidants1_paths[] = {
+    &path3063
 };
 static LevelObject r16acidants1_objects[] = {
 {
     .definition = &defAntHole,
     .x = 40, .y = 560,
     .animInd = 0, .flags = 32768,
-    .group = &r16acidants1, .path = &r16acidants1_paths[0],
-    .pathIndex = 1
+    .group = &r16acidants1, .path = &path3063,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r16acidants1 = {
@@ -10839,7 +11137,8 @@ static GObjPathPointFunction path3074_7_actions[] = {
 static GObjPathPointFunction path3074_8_actions[] = {
 markDisappear
 };
-static PathPoint path3074_points[] = {
+static Path path3074 = {
+.x = 184, .y = 464, .numPoints = 9, .points = {
 {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 0,
@@ -10912,6 +11211,7 @@ static PathPoint path3074_points[] = {
     .numActions = 1,
     .actions = path3074_8_actions
 }
+}
 };
 static GObjPathPointFunction path3075_1_actions[] = {
 enterForeground
@@ -10925,7 +11225,8 @@ static GObjPathPointFunction path3075_6_actions[] = {
 static GObjPathPointFunction path3075_7_actions[] = {
 markDisappear
 };
-static PathPoint path3075_points[] = {
+static Path path3075 = {
+.x = 88, .y = 456, .numPoints = 8, .points = {
 {
     .x = -16, .y = 16,
     .speedTo = 64, .distTo = 0,
@@ -10990,25 +11291,26 @@ static PathPoint path3075_points[] = {
     .numActions = 1,
     .actions = path3075_7_actions
 }
+}
 };
-static Path r16acidants2_paths[] = {
-{.x = 184, .y = 464, .numPoints = 9, .points = path3074_points},
-{.x = 88, .y = 456, .numPoints = 8, .points = path3075_points}
+static Path *r16acidants2_paths[] = {
+    &path3074,
+    &path3075
 };
 static LevelObject r16acidants2_objects[] = {
 {
     .definition = &defAntHole,
     .x = 72, .y = 472,
     .animInd = 0, .flags = 32768,
-    .group = &r16acidants2, .path = &r16acidants2_paths[1],
-    .pathIndex = 1
+    .group = &r16acidants2, .path = &path3075,
+    .pathIndex = 0
 },
 {
     .definition = &defAntHole,
     .x = 184, .y = 456,
     .animInd = 0, .flags = 32768,
-    .group = &r16acidants2, .path = &r16acidants2_paths[0],
-    .pathIndex = 1
+    .group = &r16acidants2, .path = &path3074,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r16acidants2 = {
@@ -11070,7 +11372,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3092_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3092_points[] = {
+static Path path3092 = {
+.x = 40, .y = 472, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11103,17 +11406,18 @@ static PathPoint path3092_points[] = {
     .numActions = 1,
     .actions = path3092_3_actions
 }
+}
 };
-static Path r17fly1a_paths[] = {
-{.x = 40, .y = 472, .numPoints = 4, .points = path3092_points}
+static Path *r17fly1a_paths[] = {
+    &path3092
 };
 static LevelObject r17fly1a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 40, .y = 472,
     .animInd = 0, .flags = 0,
-    .group = &r17fly1a, .path = &r17fly1a_paths[0],
-    .pathIndex = 1
+    .group = &r17fly1a, .path = &path3092,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17fly1a = {
@@ -11133,7 +11437,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3099_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3099_points[] = {
+static Path path3099 = {
+.x = 208, .y = 472, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11166,17 +11471,18 @@ static PathPoint path3099_points[] = {
     .numActions = 1,
     .actions = path3099_3_actions
 }
+}
 };
-static Path r17fly1b_paths[] = {
-{.x = 208, .y = 472, .numPoints = 4, .points = path3099_points}
+static Path *r17fly1b_paths[] = {
+    &path3099
 };
 static LevelObject r17fly1b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 208, .y = 472,
     .animInd = 0, .flags = 2048,
-    .group = &r17fly1b, .path = &r17fly1b_paths[0],
-    .pathIndex = 1
+    .group = &r17fly1b, .path = &path3099,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17fly1b = {
@@ -11196,7 +11502,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3106_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3106_points[] = {
+static Path path3106 = {
+.x = 24, .y = 496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11229,17 +11536,18 @@ static PathPoint path3106_points[] = {
     .numActions = 1,
     .actions = path3106_3_actions
 }
+}
 };
-static Path r17fly2a_paths[] = {
-{.x = 24, .y = 496, .numPoints = 4, .points = path3106_points}
+static Path *r17fly2a_paths[] = {
+    &path3106
 };
 static LevelObject r17fly2a_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 24, .y = 496,
     .animInd = 0, .flags = 0,
-    .group = &r17fly2a, .path = &r17fly2a_paths[0],
-    .pathIndex = 1
+    .group = &r17fly2a, .path = &path3106,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17fly2a = {
@@ -11259,7 +11567,8 @@ PathPoint_SlowSpeedAndShootBurstsAtTarget
 static GObjPathPointFunction path3113_3_actions[] = {
 startWaspAttack
 };
-static PathPoint path3113_points[] = {
+static Path path3113 = {
+.x = 232, .y = 496, .numPoints = 4, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11292,17 +11601,18 @@ static PathPoint path3113_points[] = {
     .numActions = 1,
     .actions = path3113_3_actions
 }
+}
 };
-static Path r17fly2b_paths[] = {
-{.x = 232, .y = 496, .numPoints = 4, .points = path3113_points}
+static Path *r17fly2b_paths[] = {
+    &path3113
 };
 static LevelObject r17fly2b_objects[] = {
 {
     .definition = &defWaspShooter,
     .x = 232, .y = 496,
     .animInd = 0, .flags = 2048,
-    .group = &r17fly2b, .path = &r17fly2b_paths[0],
-    .pathIndex = 1
+    .group = &r17fly2b, .path = &path3113,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17fly2b = {
@@ -11319,7 +11629,8 @@ enterForeground
 static GObjPathPointFunction path3121_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3121_points[] = {
+static Path path3121 = {
+.x = 16, .y = 456, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11344,6 +11655,7 @@ static PathPoint path3121_points[] = {
     .numActions = 1,
     .actions = path3121_2_actions
 }
+}
 };
 static GObjPathPointFunction path3122_0_actions[] = {
 0 /* to be assigned */
@@ -11354,7 +11666,8 @@ enterForeground
 static GObjPathPointFunction path3122_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3122_points[] = {
+static Path path3122 = {
+.x = 240, .y = 456, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11379,25 +11692,26 @@ static PathPoint path3122_points[] = {
     .numActions = 1,
     .actions = path3122_2_actions
 }
+}
 };
-static Path r17wasp1_paths[] = {
-{.x = 16, .y = 456, .numPoints = 3, .points = path3121_points},
-{.x = 240, .y = 456, .numPoints = 3, .points = path3122_points}
+static Path *r17wasp1_paths[] = {
+    &path3121,
+    &path3122
 };
 static LevelObject r17wasp1_objects[] = {
 {
     .definition = &defWasp,
     .x = 16, .y = 456,
     .animInd = 0, .flags = 0,
-    .group = &r17wasp1, .path = &r17wasp1_paths[0],
-    .pathIndex = 1
+    .group = &r17wasp1, .path = &path3121,
+    .pathIndex = 0
 },
 {
     .definition = &defWasp,
     .x = 240, .y = 456,
     .animInd = 0, .flags = 2048,
-    .group = &r17wasp1, .path = &r17wasp1_paths[1],
-    .pathIndex = 1
+    .group = &r17wasp1, .path = &path3122,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17wasp1 = {
@@ -11414,7 +11728,8 @@ enterForeground
 static GObjPathPointFunction path3132_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3132_points[] = {
+static Path path3132 = {
+.x = 56, .y = 408, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11439,6 +11754,7 @@ static PathPoint path3132_points[] = {
     .numActions = 1,
     .actions = path3132_2_actions
 }
+}
 };
 static GObjPathPointFunction path3133_0_actions[] = {
 0 /* to be assigned */
@@ -11449,7 +11765,8 @@ enterForeground
 static GObjPathPointFunction path3133_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3133_points[] = {
+static Path path3133 = {
+.x = 200, .y = 408, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11474,25 +11791,26 @@ static PathPoint path3133_points[] = {
     .numActions = 1,
     .actions = path3133_2_actions
 }
+}
 };
-static Path r17wasp3_paths[] = {
-{.x = 56, .y = 408, .numPoints = 3, .points = path3132_points},
-{.x = 200, .y = 408, .numPoints = 3, .points = path3133_points}
+static Path *r17wasp3_paths[] = {
+    &path3132,
+    &path3133
 };
 static LevelObject r17wasp3_objects[] = {
 {
     .definition = &defWasp,
     .x = 56, .y = 408,
     .animInd = 0, .flags = 0,
-    .group = &r17wasp3, .path = &r17wasp3_paths[0],
-    .pathIndex = 1
+    .group = &r17wasp3, .path = &path3132,
+    .pathIndex = 0
 },
 {
     .definition = &defWasp,
     .x = 200, .y = 408,
     .animInd = 0, .flags = 2048,
-    .group = &r17wasp3, .path = &r17wasp3_paths[1],
-    .pathIndex = 1
+    .group = &r17wasp3, .path = &path3133,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17wasp3 = {
@@ -11509,7 +11827,8 @@ enterForeground
 static GObjPathPointFunction path3143_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3143_points[] = {
+static Path path3143 = {
+.x = 112, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11534,6 +11853,7 @@ static PathPoint path3143_points[] = {
     .numActions = 1,
     .actions = path3143_2_actions
 }
+}
 };
 static GObjPathPointFunction path3144_0_actions[] = {
 0 /* to be assigned */
@@ -11544,7 +11864,8 @@ enterForeground
 static GObjPathPointFunction path3144_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3144_points[] = {
+static Path path3144 = {
+.x = 144, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11569,25 +11890,26 @@ static PathPoint path3144_points[] = {
     .numActions = 1,
     .actions = path3144_2_actions
 }
+}
 };
-static Path r17wasp5_paths[] = {
-{.x = 112, .y = 384, .numPoints = 3, .points = path3143_points},
-{.x = 144, .y = 384, .numPoints = 3, .points = path3144_points}
+static Path *r17wasp5_paths[] = {
+    &path3143,
+    &path3144
 };
 static LevelObject r17wasp5_objects[] = {
 {
     .definition = &defWasp,
     .x = 112, .y = 384,
     .animInd = 0, .flags = 0,
-    .group = &r17wasp5, .path = &r17wasp5_paths[0],
-    .pathIndex = 1
+    .group = &r17wasp5, .path = &path3143,
+    .pathIndex = 0
 },
 {
     .definition = &defWasp,
     .x = 144, .y = 384,
     .animInd = 0, .flags = 2048,
-    .group = &r17wasp5, .path = &r17wasp5_paths[1],
-    .pathIndex = 1
+    .group = &r17wasp5, .path = &path3144,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17wasp5 = {
@@ -11604,7 +11926,8 @@ enterForeground
 static GObjPathPointFunction path3154_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3154_points[] = {
+static Path path3154 = {
+.x = 80, .y = 360, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11629,6 +11952,7 @@ static PathPoint path3154_points[] = {
     .numActions = 1,
     .actions = path3154_2_actions
 }
+}
 };
 static GObjPathPointFunction path3155_0_actions[] = {
 0 /* to be assigned */
@@ -11639,7 +11963,8 @@ enterForeground
 static GObjPathPointFunction path3155_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3155_points[] = {
+static Path path3155 = {
+.x = 176, .y = 360, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11664,25 +11989,26 @@ static PathPoint path3155_points[] = {
     .numActions = 1,
     .actions = path3155_2_actions
 }
+}
 };
-static Path r17wasp7_paths[] = {
-{.x = 80, .y = 360, .numPoints = 3, .points = path3154_points},
-{.x = 176, .y = 360, .numPoints = 3, .points = path3155_points}
+static Path *r17wasp7_paths[] = {
+    &path3154,
+    &path3155
 };
 static LevelObject r17wasp7_objects[] = {
 {
     .definition = &defWasp,
     .x = 80, .y = 360,
     .animInd = 0, .flags = 0,
-    .group = &r17wasp7, .path = &r17wasp7_paths[0],
-    .pathIndex = 1
+    .group = &r17wasp7, .path = &path3154,
+    .pathIndex = 0
 },
 {
     .definition = &defWasp,
     .x = 176, .y = 360,
     .animInd = 0, .flags = 2048,
-    .group = &r17wasp7, .path = &r17wasp7_paths[1],
-    .pathIndex = 1
+    .group = &r17wasp7, .path = &path3155,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17wasp7 = {
@@ -11699,7 +12025,8 @@ enterForeground
 static GObjPathPointFunction path3165_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3165_points[] = {
+static Path path3165 = {
+.x = 40, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11724,6 +12051,7 @@ static PathPoint path3165_points[] = {
     .numActions = 1,
     .actions = path3165_2_actions
 }
+}
 };
 static GObjPathPointFunction path3166_0_actions[] = {
 0 /* to be assigned */
@@ -11734,7 +12062,8 @@ enterForeground
 static GObjPathPointFunction path3166_2_actions[] = {
 startWaspAttack
 };
-static PathPoint path3166_points[] = {
+static Path path3166 = {
+.x = 216, .y = 384, .numPoints = 3, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11759,25 +12088,26 @@ static PathPoint path3166_points[] = {
     .numActions = 1,
     .actions = path3166_2_actions
 }
+}
 };
-static Path r17wasp9_paths[] = {
-{.x = 40, .y = 384, .numPoints = 3, .points = path3165_points},
-{.x = 216, .y = 384, .numPoints = 3, .points = path3166_points}
+static Path *r17wasp9_paths[] = {
+    &path3165,
+    &path3166
 };
 static LevelObject r17wasp9_objects[] = {
 {
     .definition = &defWasp,
     .x = 40, .y = 384,
     .animInd = 0, .flags = 0,
-    .group = &r17wasp9, .path = &r17wasp9_paths[0],
-    .pathIndex = 1
+    .group = &r17wasp9, .path = &path3165,
+    .pathIndex = 0
 },
 {
     .definition = &defWasp,
     .x = 216, .y = 384,
     .animInd = 0, .flags = 2048,
-    .group = &r17wasp9, .path = &r17wasp9_paths[1],
-    .pathIndex = 1
+    .group = &r17wasp9, .path = &path3166,
+    .pathIndex = 0
 }
 };
 LevelObjectGroup r17wasp9 = {
@@ -11816,7 +12146,8 @@ extern LevelObjectGroup waspboss;
 static GObjPathPointFunction path3179_4_actions[] = {
 ChooseSweepPath_DamageFlashRed
 };
-static PathPoint path3179_points[] = {
+static Path path3179 = {
+.x = -80, .y = 48, .numPoints = 5, .points = {
 {
     .x = 208, .y = 120,
     .speedTo = 64, .distTo = 0,
@@ -11857,11 +12188,13 @@ static PathPoint path3179_points[] = {
     .numActions = 1,
     .actions = path3179_4_actions
 }
+}
 };
 static GObjPathPointFunction path3180_4_actions[] = {
 ChooseSweepPath_DamageFlashRed
 };
-static PathPoint path3180_points[] = {
+static Path path3180 = {
+.x = -32, .y = 192, .numPoints = 5, .points = {
 {
     .x = 160, .y = -24,
     .speedTo = 64, .distTo = 0,
@@ -11902,6 +12235,7 @@ static PathPoint path3180_points[] = {
     .numActions = 1,
     .actions = path3180_4_actions
 }
+}
 };
 static GObjPathPointFunction path3181_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -11909,7 +12243,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3181_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3181_points[] = {
+static Path path3181 = {
+.x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -11934,6 +12269,7 @@ static PathPoint path3181_points[] = {
     .numActions = 1,
     .actions = path3181_2_actions
 }
+}
 };
 static GObjPathPointFunction path3182_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -11941,7 +12277,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3182_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3182_points[] = {
+static Path path3182 = {
+.x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -11966,6 +12303,7 @@ static PathPoint path3182_points[] = {
     .numActions = 1,
     .actions = path3182_2_actions
 }
+}
 };
 static GObjPathPointFunction path3183_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -11973,7 +12311,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3183_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3183_points[] = {
+static Path path3183 = {
+.x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -11998,6 +12337,7 @@ static PathPoint path3183_points[] = {
     .numActions = 1,
     .actions = path3183_2_actions
 }
+}
 };
 static GObjPathPointFunction path3184_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -12005,7 +12345,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3184_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3184_points[] = {
+static Path path3184 = {
+.x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -12030,6 +12371,7 @@ static PathPoint path3184_points[] = {
     .numActions = 1,
     .actions = path3184_2_actions
 }
+}
 };
 static GObjPathPointFunction path3201_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -12037,7 +12379,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3201_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3201_points[] = {
+static Path path3201 = {
+.x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -12062,6 +12405,7 @@ static PathPoint path3201_points[] = {
     .numActions = 1,
     .actions = path3201_2_actions
 }
+}
 };
 static GObjPathPointFunction path3202_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -12069,7 +12413,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3202_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3202_points[] = {
+static Path path3202 = {
+.x = 32, .y = 160, .numPoints = 3, .points = {
 {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -12094,6 +12439,7 @@ static PathPoint path3202_points[] = {
     .numActions = 1,
     .actions = path3202_2_actions
 }
+}
 };
 static GObjPathPointFunction path3203_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -12101,7 +12447,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3203_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3203_points[] = {
+static Path path3203 = {
+.x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 0,
@@ -12126,6 +12473,7 @@ static PathPoint path3203_points[] = {
     .numActions = 1,
     .actions = path3203_2_actions
 }
+}
 };
 static GObjPathPointFunction path3204_0_actions[] = {
 PathPoint_ShootBurstsAtAngle
@@ -12133,7 +12481,8 @@ PathPoint_ShootBurstsAtAngle
 static GObjPathPointFunction path3204_2_actions[] = {
 ChargeAndLayEggs_DamageFlashRed
 };
-static PathPoint path3204_points[] = {
+static Path path3204 = {
+.x = 224, .y = 160, .numPoints = 3, .points = {
 {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
@@ -12158,18 +12507,19 @@ static PathPoint path3204_points[] = {
     .numActions = 1,
     .actions = path3204_2_actions
 }
+}
 };
-static Path waspboss_paths[] = {
-{.x = -80, .y = 48, .numPoints = 5, .points = path3179_points},
-{.x = -32, .y = 192, .numPoints = 5, .points = path3180_points},
-{.x = 32, .y = 160, .numPoints = 3, .points = path3181_points},
-{.x = 224, .y = 160, .numPoints = 3, .points = path3182_points},
-{.x = 32, .y = 160, .numPoints = 3, .points = path3183_points},
-{.x = 224, .y = 160, .numPoints = 3, .points = path3184_points},
-{.x = 32, .y = 160, .numPoints = 3, .points = path3201_points},
-{.x = 32, .y = 160, .numPoints = 3, .points = path3202_points},
-{.x = 224, .y = 160, .numPoints = 3, .points = path3203_points},
-{.x = 224, .y = 160, .numPoints = 3, .points = path3204_points}
+static Path *waspboss_paths[] = {
+    &path3179,
+    &path3180,
+    &path3181,
+    &path3182,
+    &path3183,
+    &path3184,
+    &path3201,
+    &path3202,
+    &path3203,
+    &path3204
 };
 static LevelObject waspboss_objects[] = {
 {

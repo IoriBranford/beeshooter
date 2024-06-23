@@ -83,8 +83,8 @@ tiled.registerMapFormat("Honey Guardian C level", {
                 })
 
                 let speed = path.resolvedProperty('speed') || 1
-                let pathPointsCName = `path${path.id}_points`
-                cCode.push(`static PathPoint ${pathPointsCName}[] = {`,
+                cCode.push(`static Path path${path.id} = {`,
+                    `.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = {`,
                     path.polygon.map((point, i, points) => {
                         let pointData = pointsData[i]
                         let prevPoint = i > 0 ? points[i-1] : null
@@ -115,13 +115,14 @@ return `{
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
 }`
                     }).join(',\n'),
+                    '}',
                     '};')
             })
-            
+
             let pathsCName = `${cName}_paths`
             if (levelObjectGroup.Path.length > 0) {
-                cCode.push(`static Path ${pathsCName}[] = {`,
-                    levelObjectGroup.Path.map(path => `{.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = path${path.id}_points}`).join(',\n'),
+                cCode.push(`static Path *${pathsCName}[] = {`,
+                    levelObjectGroup.Path.map(path => `    &path${path.id}`).join(',\n'),
                     '};')
             }
 
@@ -129,19 +130,17 @@ return `{
                 let objectsCName = `${cName}_objects`
                 cCode.push(`static LevelObject ${objectsCName}[] = {`,
                     levelObjectGroup.LevelObject.map(object => {
-                        let objPathIndex = null
                         let objPathPointIndex = 0
-                        levelObjectGroup.Path.forEach((path, pathi) => {
-                            path.polygon.forEach((point, pointi) => {
-                                if (path.x + point.x == object.x && path.y + point.y == object.y) {
-                                    objPathIndex = pathi
-                                    objPathPointIndex = Math.min(pointi + 1, path.polygon.length - 1)
-                                    return
-                                }
+                        let objPath = object.resolvedProperty('path')
+                        if (objPath) {
+                            objPathPointIndex = objPath.polygon.findIndex(point => objPath.x + point.x == object.x && objPath.y + point.y == object.y)
+                        } else {
+                            objPath = levelObjectGroup.Path.find((path) => {
+                                objPathPointIndex = path.polygon.findIndex(point => path.x + point.x == object.x && path.y + point.y == object.y)
+                                return objPathPointIndex > -1
                             })
-                            if (objPathIndex)
-                                return
-                        })
+                        }
+                        objPathPointIndex = Math.max(0, objPathPointIndex)
                         let definition
                         if (object.className.length > 0) {
                             definition = `&def${object.className}`
@@ -175,7 +174,7 @@ return `{
     .definition = ${definition},
     .x = ${object.x}, .y = ${object.y},
     .animInd = ${anim}, .flags = ${flags},
-    .group = &${cName}, .path = ${objPathIndex == null && '0' || `&${pathsCName}[${objPathIndex}]`},
+    .group = &${cName}, .path = ${objPath == null && '0' || `&path${objPath.id}`},
     .pathIndex = ${objPathPointIndex}
 }`
                     }).join(',\n'),

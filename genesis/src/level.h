@@ -31,7 +31,7 @@ struct PathPoint {
 struct Path {
     s16 x, y;
     u32 numPoints;
-    PathPoint *points;
+    PathPoint points[];
 };
 struct LevelObject {
     const GameObjectDefinition *definition;
@@ -44,7 +44,7 @@ struct LevelObject {
 struct LevelObjectGroup {
     u8 numTriggers, numPaths, numObjects, numObjectsSpawned;
     Trigger *triggers;
-    Path *paths;
+    Path **paths;
     LevelObject *objects;
 };
 

@@ -91,19 +91,19 @@ void LEVEL_setVelY(fix32 velY) {
 }
 
 Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld) {
-    Path *path = group->paths;
+    Path **path = group->paths;
     if (!path)
         return NULL;
 
     Path *closest = 0;
     fix32 closestDist = 0x7FFFFFFF;
     for (int i = 0; i < group->numPaths; ++i) {
-        PathPoint *point0 = path->points;
-        fix32 pathX = FIX32(path->x + point0->x);
-        fix32 pathY = FIX32(path->y + point0->y);
+        PathPoint *point0 = (*path)->points;
+        fix32 pathX = FIX32((*path)->x + point0->x);
+        fix32 pathY = FIX32((*path)->y + point0->y);
         fix32 dist = getApproximatedDistance(pathX - xWorld, pathY - yWorld);
         if (dist < closestDist) {
-            closest = path;
+            closest = (*path);
             closestDist = dist;
         }
         path++;
