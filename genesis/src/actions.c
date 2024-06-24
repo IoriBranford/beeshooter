@@ -31,11 +31,13 @@ void spawnNextCharacters(const Trigger *trigger)
     object += group->numObjectsSpawned;
     for (int i = group->numObjectsSpawned; i < n; ++i) {
         GameObject *gobj = LEVEL_createObject(object);
+        if (!gobj)
+            continue;
         gobj->parentType = PARENTTYPE_TRIGGER;
         gobj->parentTrigger = trigger;
         object++;
+        group->numObjectsSpawned++;
     }
-    group->numObjectsSpawned += n - group->numObjectsSpawned;
 }
 
 void stopStageScroll(const Trigger *trigger)
