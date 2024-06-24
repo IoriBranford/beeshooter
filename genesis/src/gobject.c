@@ -245,6 +245,20 @@ void GOBJ_updateShooting(GameObject *self) {
     }
 }
 
+void GOBJ_updateSpawning(GameObject *self) {
+    if (self->shootTimer)
+        --self->shootTimer;
+    if (!self->shootTimer) {
+        if (self->levelObject) {
+            if (self->levelObject->child) {
+                if (LEVEL_toScreenY(FIX32(self->levelObject->child->y)) < GAME_BOUNDH)
+                    LEVEL_createObject(self->levelObject->child);
+            }
+            self->shootTimer = self->levelObject->interval;
+        }
+    }
+}
+
 void GOBJ_followStage(GameObject *self) {
     self->velX = 0;
     self->velY = -fix32ToFix16(LEVEL_cameraVelY());
@@ -419,5 +433,14 @@ void GOBJ_updatePathWalker(GameObject *self) {
     if (offscreen) {
         if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints)
             GAME_releaseObject(self);
+    }
+}
+
+void GOBJ_updateSpawner(GameObject *self) {
+    GOBJ_followStage(self);
+    GOBJ_updateSpawning(self);
+    GOBJ_updateSprite(self);
+    if (GOBJ_isSpriteOffBottom(self)) {
+        GAME_releaseObject(self);
     }
 }

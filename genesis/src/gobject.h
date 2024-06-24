@@ -84,4 +84,6 @@ void GOBJ_updateIdleOnStage(GameObject *self);
 void GOBJ_updatePathWalker(GameObject *self);
 void GOBJ_followPath(GameObject *self);
 
+void GOBJ_updateSpawner(GameObject *self);
+
 #endif

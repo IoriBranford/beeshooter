@@ -36,10 +36,13 @@ struct Path {
 struct LevelObject {
     const GameObjectDefinition *definition;
     s16 x, y;
-    u16 animInd, flags;
-    u16 pathIndex;
+    u8 animInd;
+    u8 pathIndex;
+    u16 flags;
+    u16 interval;
     const Path *path;
     LevelObjectGroup *group;
+    const LevelObject *child;
 };
 struct LevelObjectGroup {
     u8 numTriggers, numPaths, numObjects, numObjectsSpawned;
