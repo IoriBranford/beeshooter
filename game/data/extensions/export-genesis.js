@@ -127,57 +127,59 @@ return `{
             }
 
             if (levelObjectGroup.LevelObject.length > 0) {
-                let objectsCName = `${cName}_objects`
-                cCode.push(`static const LevelObject ${objectsCName}[] = {`,
-                    levelObjectGroup.LevelObject.map(object => {
-                        let objPathPointIndex = 0
-                        let objPath = object.resolvedProperty('path')
-                        if (objPath) {
-                            objPathPointIndex = objPath.polygon.findIndex(point => objPath.x + point.x == object.x && objPath.y + point.y == object.y)
-                        } else {
-                            objPath = levelObjectGroup.Path.find((path) => {
-                                objPathPointIndex = path.polygon.findIndex(point => path.x + point.x == object.x && path.y + point.y == object.y)
-                                return objPathPointIndex > -1
-                            })
-                        }
-                        objPathPointIndex = Math.max(0, objPathPointIndex)
-                        let definition
-                        if (object.className.length > 0) {
-                            definition = `&def${object.className}`
-                            objectDefs[object.className] = `extern const GameObjectDefinition def${object.className};`
-                        } else {
-                            definition = '0 /* to be assigned */'
-                        }
-                        let anim = Math.sin(object.rotation)
-                        anim = (anim < 0) && Math.floor(anim) || Math.ceil(anim)
-                        let flags = 0
-                        if ((object.resolvedProperty('z') || 0) >= 0)
-                            flags += 0x08000
-                        if (anim > 0) {
-                            if (object.tileFlippedVertically)
-                                flags += 0x00800
-                            if (object.tileFlippedHorizontally)
-                                flags += 0x01000
-                        } else if (anim < 0) {
-                            if (!object.tileFlippedVertically)
-                                flags += 0x00800
-                            if (!object.tileFlippedHorizontally)
-                                flags += 0x01000
-                        } else {
-                            if (object.tileFlippedVertically)
-                                flags += 0x01000
-                            if (object.tileFlippedHorizontally)
-                                flags += 0x00800
-                        }
-                        anim = Math.abs(anim)
-                        return `{
+                cCode.push(...levelObjectGroup.LevelObject.map(object => {
+                    let objPathPointIndex = 0
+                    let objPath = object.resolvedProperty('path')
+                    if (objPath) {
+                        objPathPointIndex = objPath.polygon.findIndex(point => objPath.x + point.x == object.x && objPath.y + point.y == object.y)
+                    } else {
+                        objPath = levelObjectGroup.Path.find((path) => {
+                            objPathPointIndex = path.polygon.findIndex(point => path.x + point.x == object.x && path.y + point.y == object.y)
+                            return objPathPointIndex > -1
+                        })
+                    }
+                    objPathPointIndex = Math.max(0, objPathPointIndex)
+                    let definition
+                    if (object.className.length > 0) {
+                        definition = `&def${object.className}`
+                        objectDefs[object.className] = `extern const GameObjectDefinition def${object.className};`
+                    } else {
+                        definition = '0 /* to be assigned */'
+                    }
+                    let anim = Math.sin(object.rotation)
+                    anim = (anim < 0) && Math.floor(anim) || Math.ceil(anim)
+                    let flags = 0
+                    if ((object.resolvedProperty('z') || 0) >= 0)
+                        flags += 0x08000
+                    if (anim > 0) {
+                        if (object.tileFlippedVertically)
+                            flags += 0x00800
+                        if (object.tileFlippedHorizontally)
+                            flags += 0x01000
+                    } else if (anim < 0) {
+                        if (!object.tileFlippedVertically)
+                            flags += 0x00800
+                        if (!object.tileFlippedHorizontally)
+                            flags += 0x01000
+                    } else {
+                        if (object.tileFlippedVertically)
+                            flags += 0x01000
+                        if (object.tileFlippedHorizontally)
+                            flags += 0x00800
+                    }
+                    anim = Math.abs(anim)
+return `static const LevelObject lobj${object.id} = {
     .definition = ${definition},
     .x = ${object.x}, .y = ${object.y},
     .animInd = ${anim}, .flags = ${flags},
     .group = &${cName}, .path = ${objPath == null && '0' || `&path${objPath.id}`},
     .pathIndex = ${objPathPointIndex}
-}`
-                    }).join(',\n'),
+};`
+                }))
+
+                let objectsCName = `${cName}_objects`
+                cCode.push(`static const LevelObject *${objectsCName}[] = {`,
+                    levelObjectGroup.LevelObject.map(object => `    &lobj${object.id}`).join(',\n'),
                     '};'
                 )
             }
@@ -272,7 +274,12 @@ return `{
                 else
                     action = `0 /* to be assigned */`
                 let count = trigger.resolvedProperty('count') || 0
-                return `/* ${i.toString().padStart(3, ' ')} */ {.x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)}, .action = ${action}, .count = ${count}, .group = &${toCName(trigger.layer.name)}}`
+return `/* ${i.toString().padStart(3, ' ')} */
+{
+    .x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)},
+    .action = ${action}, .group = &${toCName(trigger.layer.name)},
+    .count = ${count}
+}`
             }).join(',\n'),
             '};',
             `LevelObjectGroup *${baseName}_groups[] = {`,

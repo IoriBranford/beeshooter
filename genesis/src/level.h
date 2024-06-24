@@ -45,7 +45,7 @@ struct LevelObjectGroup {
     u8 numTriggers, numPaths, numObjects, numObjectsSpawned;
     const Trigger *triggers;
     const Path **paths;
-    const LevelObject *objects;
+    const LevelObject **objects;
 };
 
 void LEVEL_init();

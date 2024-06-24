@@ -10,11 +10,13 @@ void unpauseTimer(const Trigger *trigger) {
 
 void spawnCharacters(const Trigger *trigger)
 {
-    const LevelObject *object = trigger->group->objects;
+    const LevelObject **object = trigger->group->objects;
     if (!object)
         return;
     for (int i = 0; i < trigger->group->numObjects; ++i) {
-        GameObject *gobj = LEVEL_createObject(object);
+        GameObject *gobj = LEVEL_createObject(*object);
+        if (!gobj)
+            continue;
         gobj->parentType = PARENTTYPE_TRIGGER;
         gobj->parentTrigger = trigger;
         object++;
@@ -24,13 +26,13 @@ void spawnCharacters(const Trigger *trigger)
 void spawnNextCharacters(const Trigger *trigger)
 {
     LevelObjectGroup *group = trigger->group;
-    const LevelObject *object = group->objects;
+    const LevelObject **object = group->objects;
     if (!object)
         return;
     int n = min(group->numObjectsSpawned + trigger->count, group->numObjects);
     object += group->numObjectsSpawned;
     for (int i = group->numObjectsSpawned; i < n; ++i) {
-        GameObject *gobj = LEVEL_createObject(object);
+        GameObject *gobj = LEVEL_createObject(*object);
         if (!gobj)
             continue;
         gobj->parentType = PARENTTYPE_TRIGGER;
