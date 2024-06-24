@@ -214,21 +214,21 @@ static const LevelObject lobj2181 = {
     .x = 264, .y = 4016,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2186,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2183 = {
     .definition = &defAnt,
     .x = 280, .y = 4016,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2188,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2184 = {
     .definition = &defAnt,
     .x = 296, .y = 4016,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2190,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room1ants1_objects[] = {
     &lobj2181,
@@ -424,21 +424,21 @@ static const LevelObject lobj2194 = {
     .x = -24, .y = 3992,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2201,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2195 = {
     .definition = &defAnt,
     .x = -40, .y = 3992,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2203,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2196 = {
     .definition = &defAnt,
     .x = -8, .y = 3992,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2199,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room1ants2_objects[] = {
     &lobj2194,
@@ -526,7 +526,7 @@ static const LevelObject lobj2205 = {
     .x = -8, .y = 3912,
     .animInd = 0, .flags = 32768,
     .group = &room1ants3, .path = &path2204,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room1ants3_objects[] = {
     &lobj2205
@@ -665,14 +665,14 @@ static const LevelObject lobj2223 = {
     .x = 264, .y = 3880,
     .animInd = 0, .flags = 34816,
     .group = &room1ants4, .path = &path2253,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2222 = {
     .definition = &defAnt,
     .x = 264, .y = 3840,
     .animInd = 0, .flags = 34816,
     .group = &room1ants4, .path = &path2221,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room1ants4_objects[] = {
     &lobj2223,
@@ -688,7 +688,7 @@ static const LevelObject lobj2254 = {
     .x = 80, .y = 3752,
     .animInd = 0, .flags = 32768,
     .group = &room1powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room1powerup_objects[] = {
     &lobj2254
@@ -810,35 +810,35 @@ static const LevelObject lobj2263 = {
     .x = 264, .y = 3712,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path2274,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2264 = {
     .definition = &defAnt,
     .x = -8, .y = 3704,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path2275,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2258 = {
     .definition = &defAnt,
     .x = 264, .y = 3664,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path2269,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2260 = {
     .definition = &defAnt,
     .x = -8, .y = 3656,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path2271,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2257 = {
     .definition = &defAnt,
     .x = -8, .y = 3608,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path2268,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room2ants1_objects[] = {
     &lobj2263,
@@ -964,35 +964,35 @@ static const LevelObject lobj2286 = {
     .x = 264, .y = 3744,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path2297,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2282 = {
     .definition = &defAnt,
     .x = 264, .y = 3696,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path2293,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2283 = {
     .definition = &defAnt,
     .x = -8, .y = 3688,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path2294,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2280 = {
     .definition = &defAnt,
     .x = 264, .y = 3648,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path2291,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2277 = {
     .definition = &defAnt,
     .x = -8, .y = 3640,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path2288,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room2ants2_objects[] = {
     &lobj2286,
@@ -1011,7 +1011,7 @@ static const LevelObject lobj2298 = {
     .x = 136, .y = 3568,
     .animInd = 0, .flags = 32768,
     .group = &room2powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room2powerup_objects[] = {
     &lobj2298
@@ -1262,14 +1262,14 @@ static const LevelObject lobj2301 = {
     .x = 64, .y = 3616,
     .animInd = 0, .flags = 0,
     .group = &r3fly1, .path = &path2303,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2302 = {
     .definition = &defFly,
     .x = 192, .y = 3616,
     .animInd = 0, .flags = 2048,
     .group = &r3fly1, .path = &path2304,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r3fly1_objects[] = {
     &lobj2301,
@@ -1471,14 +1471,14 @@ static const LevelObject lobj2312 = {
     .x = 104, .y = 3496,
     .animInd = 0, .flags = 0,
     .group = &room3fly3, .path = &path2314,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2313 = {
     .definition = &defFly,
     .x = 152, .y = 3496,
     .animInd = 0, .flags = 2048,
     .group = &room3fly3, .path = &path2315,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room3fly3_objects[] = {
     &lobj2312,
@@ -1670,14 +1670,14 @@ static const LevelObject lobj2321 = {
     .x = 40, .y = 3544,
     .animInd = 0, .flags = 0,
     .group = &room3fly4, .path = &path2323,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2322 = {
     .definition = &defFly,
     .x = 216, .y = 3544,
     .animInd = 0, .flags = 2048,
     .group = &room3fly4, .path = &path2324,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room3fly4_objects[] = {
     &lobj2321,
@@ -2361,420 +2361,420 @@ static const LevelObject lobj3758 = {
     .x = 176, .y = 3256,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 30
+    .pathIndex = 30, .child = 0, .interval = 0
 };
 static const LevelObject lobj3757 = {
     .definition = &defAnt,
     .x = 80, .y = 3256,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 30
+    .pathIndex = 30, .child = 0, .interval = 0
 };
 static const LevelObject lobj3754 = {
     .definition = &defAnt,
     .x = 64, .y = 3252,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 29
+    .pathIndex = 29, .child = 0, .interval = 0
 };
 static const LevelObject lobj3755 = {
     .definition = &defAnt,
     .x = 192, .y = 3252,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 29
+    .pathIndex = 29, .child = 0, .interval = 0
 };
 static const LevelObject lobj3687 = {
     .definition = &defAnt,
     .x = 208, .y = 3248,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 28
+    .pathIndex = 28, .child = 0, .interval = 0
 };
 static const LevelObject lobj3612 = {
     .definition = &defAnt,
     .x = 48, .y = 3248,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 28
+    .pathIndex = 28, .child = 0, .interval = 0
 };
 static const LevelObject lobj3682 = {
     .definition = &defAnt,
     .x = 36, .y = 3236,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 27
+    .pathIndex = 27, .child = 0, .interval = 0
 };
 static const LevelObject lobj3688 = {
     .definition = &defAnt,
     .x = 220, .y = 3236,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 27
+    .pathIndex = 27, .child = 0, .interval = 0
 };
 static const LevelObject lobj3690 = {
     .definition = &defAnt,
     .x = 228, .y = 3220,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 26
+    .pathIndex = 26, .child = 0, .interval = 0
 };
 static const LevelObject lobj3617 = {
     .definition = &defAnt,
     .x = 28, .y = 3220,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 26
+    .pathIndex = 26, .child = 0, .interval = 0
 };
 static const LevelObject lobj3691 = {
     .definition = &defAnt,
     .x = 220, .y = 3204,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 25
+    .pathIndex = 25, .child = 0, .interval = 0
 };
 static const LevelObject lobj3681 = {
     .definition = &defAnt,
     .x = 36, .y = 3204,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 25
+    .pathIndex = 25, .child = 0, .interval = 0
 };
 static const LevelObject lobj3692 = {
     .definition = &defAnt,
     .x = 208, .y = 3192,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 24
+    .pathIndex = 24, .child = 0, .interval = 0
 };
 static const LevelObject lobj3616 = {
     .definition = &defAnt,
     .x = 48, .y = 3192,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 24
+    .pathIndex = 24, .child = 0, .interval = 0
 };
 static const LevelObject lobj3693 = {
     .definition = &defAnt,
     .x = 192, .y = 3188,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 23
+    .pathIndex = 23, .child = 0, .interval = 0
 };
 static const LevelObject lobj3680 = {
     .definition = &defAnt,
     .x = 64, .y = 3188,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 23
+    .pathIndex = 23, .child = 0, .interval = 0
 };
 static const LevelObject lobj3615 = {
     .definition = &defAnt,
     .x = 80, .y = 3184,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 22
+    .pathIndex = 22, .child = 0, .interval = 0
 };
 static const LevelObject lobj3695 = {
     .definition = &defAnt,
     .x = 176, .y = 3184,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 22
+    .pathIndex = 22, .child = 0, .interval = 0
 };
 static const LevelObject lobj3696 = {
     .definition = &defAnt,
     .x = 164, .y = 3172,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 21
+    .pathIndex = 21, .child = 0, .interval = 0
 };
 static const LevelObject lobj3679 = {
     .definition = &defAnt,
     .x = 92, .y = 3172,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 21
+    .pathIndex = 21, .child = 0, .interval = 0
 };
 static const LevelObject lobj3614 = {
     .definition = &defAnt,
     .x = 100, .y = 3156,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 20
+    .pathIndex = 20, .child = 0, .interval = 0
 };
 static const LevelObject lobj3698 = {
     .definition = &defAnt,
     .x = 156, .y = 3156,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 20
+    .pathIndex = 20, .child = 0, .interval = 0
 };
 static const LevelObject lobj3678 = {
     .definition = &defAnt,
     .x = 92, .y = 3140,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 19
+    .pathIndex = 19, .child = 0, .interval = 0
 };
 static const LevelObject lobj3699 = {
     .definition = &defAnt,
     .x = 164, .y = 3140,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 19
+    .pathIndex = 19, .child = 0, .interval = 0
 };
 static const LevelObject lobj3613 = {
     .definition = &defAnt,
     .x = 80, .y = 3128,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 18
+    .pathIndex = 18, .child = 0, .interval = 0
 };
 static const LevelObject lobj3700 = {
     .definition = &defAnt,
     .x = 176, .y = 3128,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 18
+    .pathIndex = 18, .child = 0, .interval = 0
 };
 static const LevelObject lobj3701 = {
     .definition = &defAnt,
     .x = 192, .y = 3124,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 17
+    .pathIndex = 17, .child = 0, .interval = 0
 };
 static const LevelObject lobj3677 = {
     .definition = &defAnt,
     .x = 64, .y = 3124,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 17
+    .pathIndex = 17, .child = 0, .interval = 0
 };
 static const LevelObject lobj3611 = {
     .definition = &defAnt,
     .x = 48, .y = 3120,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 16
+    .pathIndex = 16, .child = 0, .interval = 0
 };
 static const LevelObject lobj3703 = {
     .definition = &defAnt,
     .x = 208, .y = 3120,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 16
+    .pathIndex = 16, .child = 0, .interval = 0
 };
 static const LevelObject lobj3676 = {
     .definition = &defAnt,
     .x = 36, .y = 3108,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 15
+    .pathIndex = 15, .child = 0, .interval = 0
 };
 static const LevelObject lobj3704 = {
     .definition = &defAnt,
     .x = 220, .y = 3108,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 15
+    .pathIndex = 15, .child = 0, .interval = 0
 };
 static const LevelObject lobj3706 = {
     .definition = &defAnt,
     .x = 228, .y = 3092,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 14
+    .pathIndex = 14, .child = 0, .interval = 0
 };
 static const LevelObject lobj3610 = {
     .definition = &defAnt,
     .x = 28, .y = 3092,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 14
+    .pathIndex = 14, .child = 0, .interval = 0
 };
 static const LevelObject lobj3707 = {
     .definition = &defAnt,
     .x = 220, .y = 3076,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 13
+    .pathIndex = 13, .child = 0, .interval = 0
 };
 static const LevelObject lobj3675 = {
     .definition = &defAnt,
     .x = 36, .y = 3076,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 13
+    .pathIndex = 13, .child = 0, .interval = 0
 };
 static const LevelObject lobj3609 = {
     .definition = &defAnt,
     .x = 48, .y = 3064,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 12
+    .pathIndex = 12, .child = 0, .interval = 0
 };
 static const LevelObject lobj3708 = {
     .definition = &defAnt,
     .x = 208, .y = 3064,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 12
+    .pathIndex = 12, .child = 0, .interval = 0
 };
 static const LevelObject lobj3709 = {
     .definition = &defAnt,
     .x = 192, .y = 3060,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 11
+    .pathIndex = 11, .child = 0, .interval = 0
 };
 static const LevelObject lobj3674 = {
     .definition = &defAnt,
     .x = 64, .y = 3060,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 11
+    .pathIndex = 11, .child = 0, .interval = 0
 };
 static const LevelObject lobj3608 = {
     .definition = &defAnt,
     .x = 80, .y = 3056,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 10
+    .pathIndex = 10, .child = 0, .interval = 0
 };
 static const LevelObject lobj3711 = {
     .definition = &defAnt,
     .x = 176, .y = 3056,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 10
+    .pathIndex = 10, .child = 0, .interval = 0
 };
 static const LevelObject lobj3712 = {
     .definition = &defAnt,
     .x = 164, .y = 3044,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 9
+    .pathIndex = 9, .child = 0, .interval = 0
 };
 static const LevelObject lobj3673 = {
     .definition = &defAnt,
     .x = 92, .y = 3044,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 9
+    .pathIndex = 9, .child = 0, .interval = 0
 };
 static const LevelObject lobj3714 = {
     .definition = &defAnt,
     .x = 156, .y = 3028,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 8
+    .pathIndex = 8, .child = 0, .interval = 0
 };
 static const LevelObject lobj3607 = {
     .definition = &defAnt,
     .x = 100, .y = 3028,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 8
+    .pathIndex = 8, .child = 0, .interval = 0
 };
 static const LevelObject lobj3672 = {
     .definition = &defAnt,
     .x = 92, .y = 3012,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 7
+    .pathIndex = 7, .child = 0, .interval = 0
 };
 static const LevelObject lobj3715 = {
     .definition = &defAnt,
     .x = 164, .y = 3012,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 7
+    .pathIndex = 7, .child = 0, .interval = 0
 };
 static const LevelObject lobj3606 = {
     .definition = &defAnt,
     .x = 80, .y = 3000,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 6
+    .pathIndex = 6, .child = 0, .interval = 0
 };
 static const LevelObject lobj3716 = {
     .definition = &defAnt,
     .x = 176, .y = 3000,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 6
+    .pathIndex = 6, .child = 0, .interval = 0
 };
 static const LevelObject lobj3671 = {
     .definition = &defAnt,
     .x = 64, .y = 2996,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 5
+    .pathIndex = 5, .child = 0, .interval = 0
 };
 static const LevelObject lobj3717 = {
     .definition = &defAnt,
     .x = 192, .y = 2996,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 5
+    .pathIndex = 5, .child = 0, .interval = 0
 };
 static const LevelObject lobj3605 = {
     .definition = &defAnt,
     .x = 48, .y = 2992,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 4
+    .pathIndex = 4, .child = 0, .interval = 0
 };
 static const LevelObject lobj3719 = {
     .definition = &defAnt,
     .x = 208, .y = 2992,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 4
+    .pathIndex = 4, .child = 0, .interval = 0
 };
 static const LevelObject lobj3670 = {
     .definition = &defAnt,
     .x = 36, .y = 2980,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 3
+    .pathIndex = 3, .child = 0, .interval = 0
 };
 static const LevelObject lobj3720 = {
     .definition = &defAnt,
     .x = 220, .y = 2980,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 3
+    .pathIndex = 3, .child = 0, .interval = 0
 };
 static const LevelObject lobj3721 = {
     .definition = &defAnt,
     .x = 228, .y = 2964,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 2
+    .pathIndex = 2, .child = 0, .interval = 0
 };
 static const LevelObject lobj3604 = {
     .definition = &defAnt,
     .x = 28, .y = 2964,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 2
+    .pathIndex = 2, .child = 0, .interval = 0
 };
 static const LevelObject lobj3802 = {
     .definition = &defAnt,
     .x = 220, .y = 2948,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
-    .pathIndex = 1
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject lobj3683 = {
     .definition = &defAnt,
     .x = 36, .y = 2948,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
-    .pathIndex = 1
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject *r4r5ants_objects[] = {
     &lobj3758,
@@ -3023,7 +3023,7 @@ static const LevelObject lobj2333 = {
     .x = -16, .y = 3232,
     .animInd = 0, .flags = 0,
     .group = &r4fly1, .path = &path2332,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r4fly1_objects[] = {
     &lobj2333
@@ -3038,7 +3038,7 @@ static const LevelObject lobj2339 = {
     .x = 192, .y = 3184,
     .animInd = 0, .flags = 32768,
     .group = &room4powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room4powerup_objects[] = {
     &lobj2339
@@ -3053,14 +3053,14 @@ static const LevelObject lobj3801 = {
     .x = 48, .y = 2936,
     .animInd = 1, .flags = 34816,
     .group = &r5antsfrombigant, .path = &path2373,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3722 = {
     .definition = &defAnt,
     .x = 208, .y = 2936,
     .animInd = 1, .flags = 32768,
     .group = &r5antsfrombigant, .path = &path3723,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r5antsfrombigant_objects[] = {
     &lobj3801,
@@ -3219,7 +3219,7 @@ static const LevelObject lobj2343 = {
     .x = 272, .y = 3192,
     .animInd = 0, .flags = 2048,
     .group = &room5fly1, .path = &path2342,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room5fly1_objects[] = {
     &lobj2343
@@ -3234,7 +3234,7 @@ static const LevelObject lobj2349 = {
     .x = 64, .y = 3056,
     .animInd = 0, .flags = 32768,
     .group = &r5powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r5powerup_objects[] = {
     &lobj2349
@@ -3609,252 +3609,252 @@ static const LevelObject lobj3750 = {
     .x = 36, .y = 2864,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 18
+    .pathIndex = 18, .child = 0, .interval = 0
 };
 static const LevelObject lobj3751 = {
     .definition = &defAnt,
     .x = 220, .y = 2864,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 18
+    .pathIndex = 18, .child = 0, .interval = 0
 };
 static const LevelObject lobj3761 = {
     .definition = &defAnt,
     .x = 220, .y = 2856,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 17
+    .pathIndex = 17, .child = 0, .interval = 0
 };
 static const LevelObject lobj3760 = {
     .definition = &defAnt,
     .x = 36, .y = 2856,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 17
+    .pathIndex = 17, .child = 0, .interval = 0
 };
 static const LevelObject lobj3648 = {
     .definition = &defAnt,
     .x = 36, .y = 2848,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 16
+    .pathIndex = 16, .child = 0, .interval = 0
 };
 static const LevelObject lobj3644 = {
     .definition = &defAnt,
     .x = 220, .y = 2848,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 16
+    .pathIndex = 16, .child = 0, .interval = 0
 };
 static const LevelObject lobj3763 = {
     .definition = &defAnt,
     .x = 36, .y = 2840,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 15
+    .pathIndex = 15, .child = 0, .interval = 0
 };
 static const LevelObject lobj3764 = {
     .definition = &defAnt,
     .x = 220, .y = 2840,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 15
+    .pathIndex = 15, .child = 0, .interval = 0
 };
 static const LevelObject lobj3739 = {
     .definition = &defAnt,
     .x = 36, .y = 2832,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 14
+    .pathIndex = 14, .child = 0, .interval = 0
 };
 static const LevelObject lobj3746 = {
     .definition = &defAnt,
     .x = 220, .y = 2832,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 14
+    .pathIndex = 14, .child = 0, .interval = 0
 };
 static const LevelObject lobj3767 = {
     .definition = &defAnt,
     .x = 220, .y = 2824,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 13
+    .pathIndex = 13, .child = 0, .interval = 0
 };
 static const LevelObject lobj3766 = {
     .definition = &defAnt,
     .x = 36, .y = 2824,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 13
+    .pathIndex = 13, .child = 0, .interval = 0
 };
 static const LevelObject lobj3645 = {
     .definition = &defAnt,
     .x = 220, .y = 2816,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 12
+    .pathIndex = 12, .child = 0, .interval = 0
 };
 static const LevelObject lobj3649 = {
     .definition = &defAnt,
     .x = 36, .y = 2816,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 12
+    .pathIndex = 12, .child = 0, .interval = 0
 };
 static const LevelObject lobj3769 = {
     .definition = &defAnt,
     .x = 36, .y = 2808,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 11
+    .pathIndex = 11, .child = 0, .interval = 0
 };
 static const LevelObject lobj3770 = {
     .definition = &defAnt,
     .x = 220, .y = 2808,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 11
+    .pathIndex = 11, .child = 0, .interval = 0
 };
 static const LevelObject lobj3741 = {
     .definition = &defAnt,
     .x = 36, .y = 2800,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 10
+    .pathIndex = 10, .child = 0, .interval = 0
 };
 static const LevelObject lobj3747 = {
     .definition = &defAnt,
     .x = 220, .y = 2800,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 10
+    .pathIndex = 10, .child = 0, .interval = 0
 };
 static const LevelObject lobj3772 = {
     .definition = &defAnt,
     .x = 36, .y = 2792,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 9
+    .pathIndex = 9, .child = 0, .interval = 0
 };
 static const LevelObject lobj3773 = {
     .definition = &defAnt,
     .x = 220, .y = 2792,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 9
+    .pathIndex = 9, .child = 0, .interval = 0
 };
 static const LevelObject lobj3650 = {
     .definition = &defAnt,
     .x = 36, .y = 2784,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 8
+    .pathIndex = 8, .child = 0, .interval = 0
 };
 static const LevelObject lobj3647 = {
     .definition = &defAnt,
     .x = 220, .y = 2784,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 8
+    .pathIndex = 8, .child = 0, .interval = 0
 };
 static const LevelObject lobj3775 = {
     .definition = &defAnt,
     .x = 36, .y = 2776,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 7
+    .pathIndex = 7, .child = 0, .interval = 0
 };
 static const LevelObject lobj3776 = {
     .definition = &defAnt,
     .x = 220, .y = 2776,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 7
+    .pathIndex = 7, .child = 0, .interval = 0
 };
 static const LevelObject lobj3748 = {
     .definition = &defAnt,
     .x = 220, .y = 2768,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 6
+    .pathIndex = 6, .child = 0, .interval = 0
 };
 static const LevelObject lobj3743 = {
     .definition = &defAnt,
     .x = 36, .y = 2768,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 6
+    .pathIndex = 6, .child = 0, .interval = 0
 };
 static const LevelObject lobj3779 = {
     .definition = &defAnt,
     .x = 220, .y = 2760,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 5
+    .pathIndex = 5, .child = 0, .interval = 0
 };
 static const LevelObject lobj3778 = {
     .definition = &defAnt,
     .x = 36, .y = 2760,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 5
+    .pathIndex = 5, .child = 0, .interval = 0
 };
 static const LevelObject lobj3646 = {
     .definition = &defAnt,
     .x = 220, .y = 2752,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 4
+    .pathIndex = 4, .child = 0, .interval = 0
 };
 static const LevelObject lobj3651 = {
     .definition = &defAnt,
     .x = 36, .y = 2752,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 4
+    .pathIndex = 4, .child = 0, .interval = 0
 };
 static const LevelObject lobj3782 = {
     .definition = &defAnt,
     .x = 220, .y = 2744,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 3
+    .pathIndex = 3, .child = 0, .interval = 0
 };
 static const LevelObject lobj3781 = {
     .definition = &defAnt,
     .x = 36, .y = 2744,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 3
+    .pathIndex = 3, .child = 0, .interval = 0
 };
 static const LevelObject lobj3749 = {
     .definition = &defAnt,
     .x = 220, .y = 2736,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 2
+    .pathIndex = 2, .child = 0, .interval = 0
 };
 static const LevelObject lobj3745 = {
     .definition = &defAnt,
     .x = 36, .y = 2736,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 2
+    .pathIndex = 2, .child = 0, .interval = 0
 };
 static const LevelObject lobj3785 = {
     .definition = &defAnt,
     .x = 220, .y = 2728,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
-    .pathIndex = 1
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject lobj3784 = {
     .definition = &defAnt,
     .x = 36, .y = 2728,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
-    .pathIndex = 1
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject *r6ants_objects[] = {
     &lobj3750,
@@ -4109,7 +4109,7 @@ static const LevelObject lobj2352 = {
     .x = 272, .y = 2832,
     .animInd = 0, .flags = 2048,
     .group = &room6fly, .path = &path2351,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room6fly_objects[] = {
     &lobj2352
@@ -4124,14 +4124,14 @@ static const LevelObject lobj2369 = {
     .x = 64, .y = 2928,
     .animInd = 0, .flags = 32768,
     .group = &room5bigant, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = &lobj3801, .interval = 16
 };
 static const LevelObject lobj2370 = {
     .definition = &defAntBig,
     .x = 192, .y = 2928,
     .animInd = 0, .flags = 34816,
     .group = &room5bigant, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = &lobj3722, .interval = 16
 };
 static const LevelObject *room5bigant_objects[] = {
     &lobj2369,
@@ -4141,20 +4141,43 @@ LevelObjectGroup room5bigant = {
     .numPaths = 0, .paths = 0,
     .numObjects = 2, .objects = room5bigant_objects
 };
+extern LevelObjectGroup room6antsfrombigants;
+static const LevelObject lobj3834 = {
+    .definition = &defAnt,
+    .x = 36, .y = 2720,
+    .animInd = 1, .flags = 32768,
+    .group = &room6antsfrombigants, .path = &path2389,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+static const LevelObject lobj3835 = {
+    .definition = &defAnt,
+    .x = 220, .y = 2720,
+    .animInd = 1, .flags = 34816,
+    .group = &room6antsfrombigants, .path = &path3786,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+static const LevelObject *room6antsfrombigants_objects[] = {
+    &lobj3834,
+    &lobj3835
+};
+LevelObjectGroup room6antsfrombigants = {
+    .numPaths = 0, .paths = 0,
+    .numObjects = 2, .objects = room6antsfrombigants_objects
+};
 extern LevelObjectGroup room6bigant;
 static const LevelObject lobj2386 = {
     .definition = &defAntBig,
     .x = 216, .y = 2704,
     .animInd = 1, .flags = 38912,
     .group = &room6bigant, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = &lobj3835, .interval = 16
 };
 static const LevelObject lobj2387 = {
     .definition = &defAntBig,
     .x = 40, .y = 2704,
     .animInd = 1, .flags = 36864,
     .group = &room6bigant, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = &lobj3834, .interval = 16
 };
 static const LevelObject *room6bigant_objects[] = {
     &lobj2386,
@@ -4204,14 +4227,14 @@ static const LevelObject lobj2396 = {
     .x = 112, .y = 2496,
     .animInd = 0, .flags = 32768,
     .group = &room7alien1, .path = &path2397,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2399 = {
     .definition = &defHoneyPot,
     .x = 128, .y = 2472,
     .animInd = 0, .flags = 32768,
     .group = &room7alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room7alien1_objects[] = {
     &lobj2396,
@@ -4293,14 +4316,14 @@ static const LevelObject lobj2401 = {
     .x = 48, .y = 2440,
     .animInd = 0, .flags = 32768,
     .group = &room7alien2, .path = &path2403,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2402 = {
     .definition = &defAlienGunner,
     .x = 208, .y = 2440,
     .animInd = 0, .flags = 34816,
     .group = &room7alien2, .path = &path2404,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room7alien2_objects[] = {
     &lobj2401,
@@ -4558,42 +4581,42 @@ static const LevelObject lobj2413 = {
     .x = 280, .y = 2528,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2419,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2412 = {
     .definition = &defAlienPillager,
     .x = -24, .y = 2528,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2414,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2411 = {
     .definition = &defAlienPillager,
     .x = 272, .y = 2512,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2418,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2410 = {
     .definition = &defAlienPillager,
     .x = -16, .y = 2512,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2415,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2409 = {
     .definition = &defAlienPillager,
     .x = 264, .y = 2496,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2417,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2408 = {
     .definition = &defAlienPillager,
     .x = -8, .y = 2496,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2416,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room7alien3_objects[] = {
     &lobj2413,
@@ -4613,84 +4636,84 @@ static const LevelObject lobj2426 = {
     .x = 120, .y = 2368,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2429 = {
     .definition = &defAlienPillager,
     .x = 144, .y = 2360,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2432 = {
     .definition = &defAlienPillager,
     .x = 104, .y = 2352,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2435 = {
     .definition = &defAlienPillager,
     .x = 152, .y = 2344,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2428 = {
     .definition = &defAlienPillager,
     .x = 112, .y = 2336,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2431 = {
     .definition = &defAlienPillager,
     .x = 144, .y = 2336,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2437 = {
     .definition = &defAlienPillager,
     .x = 160, .y = 2320,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2430 = {
     .definition = &defAlienPillager,
     .x = 136, .y = 2320,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2434 = {
     .definition = &defAlienPillager,
     .x = 96, .y = 2320,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2427 = {
     .definition = &defAlienPillager,
     .x = 120, .y = 2312,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2436 = {
     .definition = &defAlienPillager,
     .x = 168, .y = 2304,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2433 = {
     .definition = &defAlienPillager,
     .x = 88, .y = 2304,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room8alien1_objects[] = {
     &lobj2426,
@@ -4798,14 +4821,14 @@ static const LevelObject lobj2440 = {
     .x = 80, .y = 2352,
     .animInd = 0, .flags = 32768,
     .group = &room8alien2, .path = &path2442,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2441 = {
     .definition = &defAlienGunner,
     .x = 176, .y = 2352,
     .animInd = 0, .flags = 34816,
     .group = &room8alien2, .path = &path2443,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room8alien2_objects[] = {
     &lobj2440,
@@ -5015,14 +5038,14 @@ static const LevelObject lobj2446 = {
     .x = -16, .y = 2392,
     .animInd = 0, .flags = 32768,
     .group = &room8alien3, .path = &path2448,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2447 = {
     .definition = &defAlienGunner,
     .x = 272, .y = 2392,
     .animInd = 0, .flags = 34816,
     .group = &room8alien3, .path = &path2449,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room8alien3_objects[] = {
     &lobj2446,
@@ -5136,28 +5159,28 @@ static const LevelObject lobj2453 = {
     .x = 80, .y = 2256,
     .animInd = 0, .flags = 32768,
     .group = &room8alien4, .path = &path2457,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2455 = {
     .definition = &defAlienGunner,
     .x = 184, .y = 2248,
     .animInd = 0, .flags = 34816,
     .group = &room8alien4, .path = &path2459,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2454 = {
     .definition = &defAlienGunner,
     .x = 72, .y = 2240,
     .animInd = 0, .flags = 32768,
     .group = &room8alien4, .path = &path2458,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2456 = {
     .definition = &defAlienGunner,
     .x = 192, .y = 2232,
     .animInd = 0, .flags = 34816,
     .group = &room8alien4, .path = &path2460,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room8alien4_objects[] = {
     &lobj2453,
@@ -5175,14 +5198,14 @@ static const LevelObject lobj2467 = {
     .x = 120, .y = 2264,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2466 = {
     .definition = &defHoneyPot,
     .x = 136, .y = 2256,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room8powerup_objects[] = {
     &lobj2467,
@@ -5198,21 +5221,21 @@ static const LevelObject lobj2471 = {
     .x = 128, .y = 2176,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2470 = {
     .definition = &defHoneyPot,
     .x = 144, .y = 2168,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2469 = {
     .definition = &defHoneyPot,
     .x = 120, .y = 2160,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room9powerup_objects[] = {
     &lobj2471,
@@ -5736,7 +5759,7 @@ static const LevelObject lobj2472 = {
     .x = 128, .y = 1984,
     .animInd = 0, .flags = 0,
     .group = &room9alienmind, .path = &path2474,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room9alienmind_objects[] = {
     &lobj2472
@@ -5918,35 +5941,35 @@ static const LevelObject lobj2495 = {
     .x = 168, .y = 1928,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2499,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2493 = {
     .definition = &defAcidAnt,
     .x = 184, .y = 1928,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2500,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2494 = {
     .definition = &defAcidAnt,
     .x = 200, .y = 1920,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants, .path = &path2501,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2496 = {
     .definition = &defAcidAnt,
     .x = 152, .y = 1920,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2498,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2492 = {
     .definition = &defAcidAnt,
     .x = 216, .y = 1904,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants, .path = &path2502,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room10acidants_objects[] = {
     &lobj2495,
@@ -6127,35 +6150,35 @@ static const LevelObject lobj2511 = {
     .x = 88, .y = 1912,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants2, .path = &path2517,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2509 = {
     .definition = &defAcidAnt,
     .x = 104, .y = 1904,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants2, .path = &path2518,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2510 = {
     .definition = &defAcidAnt,
     .x = 72, .y = 1904,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2516,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2512 = {
     .definition = &defAcidAnt,
     .x = 56, .y = 1896,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2515,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2513 = {
     .definition = &defAcidAnt,
     .x = 40, .y = 1888,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2514,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room10acidants2_objects[] = {
     &lobj2511,
@@ -6208,7 +6231,7 @@ static const LevelObject lobj2524 = {
     .x = 232, .y = 1816,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1a, .path = &path2526,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1a_objects[] = {
     &lobj2524
@@ -6257,7 +6280,7 @@ static const LevelObject lobj2528 = {
     .x = 200, .y = 1816,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1b, .path = &path2530,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1b_objects[] = {
     &lobj2528
@@ -6306,7 +6329,7 @@ static const LevelObject lobj2532 = {
     .x = 168, .y = 1816,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1c, .path = &path2534,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1c_objects[] = {
     &lobj2532
@@ -6355,7 +6378,7 @@ static const LevelObject lobj2536 = {
     .x = 136, .y = 1816,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1d, .path = &path2538,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1d_objects[] = {
     &lobj2536
@@ -6404,7 +6427,7 @@ static const LevelObject lobj2540 = {
     .x = 120, .y = 1808,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1e, .path = &path2542,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1e_objects[] = {
     &lobj2540
@@ -6453,7 +6476,7 @@ static const LevelObject lobj2544 = {
     .x = 88, .y = 1800,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1f, .path = &path2546,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1f_objects[] = {
     &lobj2544
@@ -6502,7 +6525,7 @@ static const LevelObject lobj2548 = {
     .x = 56, .y = 1800,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1g, .path = &path2550,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1g_objects[] = {
     &lobj2548
@@ -6551,7 +6574,7 @@ static const LevelObject lobj2552 = {
     .x = 24, .y = 1800,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1h, .path = &path2554,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants1h_objects[] = {
     &lobj2552
@@ -6592,70 +6615,70 @@ static const LevelObject lobj2563 = {
     .x = 272, .y = 1856,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2565 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1832,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2557 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1808,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2560 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1784,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2561 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1760,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2558 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1736,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2559 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1712,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2562 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1688,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2564 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1664,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2566 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1640,
     .animInd = 0, .flags = 2048,
     .group = &room11acidants2a, .path = &path2567,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room11acidants2a_objects[] = {
     &lobj2563,
@@ -6705,70 +6728,70 @@ static const LevelObject lobj2570 = {
     .x = -16, .y = 1792,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2574 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1768,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2576 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1744,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2571 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1720,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2573 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1696,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2572 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1672,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2575 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1648,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2577 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1624,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2578 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1600,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2579 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1576,
     .animInd = 0, .flags = 0,
     .group = &room11acidants2b, .path = &path2580,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *room11acidants2b_objects[] = {
     &lobj2570,
@@ -6826,7 +6849,7 @@ static const LevelObject lobj2582 = {
     .x = 248, .y = 1720,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3a, .path = &path2583,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3a_objects[] = {
     &lobj2582
@@ -6875,7 +6898,7 @@ static const LevelObject lobj2586 = {
     .x = 224, .y = 1720,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3b, .path = &path2587,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3b_objects[] = {
     &lobj2586
@@ -6924,7 +6947,7 @@ static const LevelObject lobj2590 = {
     .x = 200, .y = 1720,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3c, .path = &path2591,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3c_objects[] = {
     &lobj2590
@@ -6973,7 +6996,7 @@ static const LevelObject lobj2594 = {
     .x = 176, .y = 1720,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3d, .path = &path2595,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3d_objects[] = {
     &lobj2594
@@ -7022,7 +7045,7 @@ static const LevelObject lobj2598 = {
     .x = 152, .y = 1720,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3e, .path = &path2599,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3e_objects[] = {
     &lobj2598
@@ -7071,7 +7094,7 @@ static const LevelObject lobj2602 = {
     .x = 128, .y = 1704,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3f, .path = &path2603,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3f_objects[] = {
     &lobj2602
@@ -7120,7 +7143,7 @@ static const LevelObject lobj2606 = {
     .x = 104, .y = 1704,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3g, .path = &path2607,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3g_objects[] = {
     &lobj2606
@@ -7169,7 +7192,7 @@ static const LevelObject lobj2610 = {
     .x = 80, .y = 1704,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3h, .path = &path2611,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3h_objects[] = {
     &lobj2610
@@ -7218,7 +7241,7 @@ static const LevelObject lobj2614 = {
     .x = 56, .y = 1704,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3i, .path = &path2615,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3i_objects[] = {
     &lobj2614
@@ -7267,7 +7290,7 @@ static const LevelObject lobj2618 = {
     .x = 32, .y = 1704,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3j, .path = &path2619,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3j_objects[] = {
     &lobj2618
@@ -7316,7 +7339,7 @@ static const LevelObject lobj2622 = {
     .x = 8, .y = 1704,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3k, .path = &path2623,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11acidants3k_objects[] = {
     &lobj2622
@@ -7331,7 +7354,7 @@ static const LevelObject lobj2626 = {
     .x = 120, .y = 1656,
     .animInd = 0, .flags = 32768,
     .group = &r11powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r11powerup_objects[] = {
     &lobj2626
@@ -7386,7 +7409,7 @@ static const LevelObject lobj2629 = {
     .x = 96, .y = 1512,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1a, .path = &path2630,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp1a_objects[] = {
     &lobj2629
@@ -7441,7 +7464,7 @@ static const LevelObject lobj2635 = {
     .x = 128, .y = 1528,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1b, .path = &path2636,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp1b_objects[] = {
     &lobj2635
@@ -7496,7 +7519,7 @@ static const LevelObject lobj2641 = {
     .x = 160, .y = 1544,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1c, .path = &path2642,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp1c_objects[] = {
     &lobj2641
@@ -7551,7 +7574,7 @@ static const LevelObject lobj2647 = {
     .x = 80, .y = 1448,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2a, .path = &path2648,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp2a_objects[] = {
     &lobj2647
@@ -7606,7 +7629,7 @@ static const LevelObject lobj2653 = {
     .x = 56, .y = 1472,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2b, .path = &path2654,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp2b_objects[] = {
     &lobj2653
@@ -7661,7 +7684,7 @@ static const LevelObject lobj2659 = {
     .x = 32, .y = 1496,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2c, .path = &path2660,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp2c_objects[] = {
     &lobj2659
@@ -7716,7 +7739,7 @@ static const LevelObject lobj2665 = {
     .x = 176, .y = 1472,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3a, .path = &path2666,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp3a_objects[] = {
     &lobj2665
@@ -7771,7 +7794,7 @@ static const LevelObject lobj2671 = {
     .x = 200, .y = 1496,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3b, .path = &path2672,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp3b_objects[] = {
     &lobj2671
@@ -7826,7 +7849,7 @@ static const LevelObject lobj2677 = {
     .x = 224, .y = 1520,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3c, .path = &path2678,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp3c_objects[] = {
     &lobj2677
@@ -7881,7 +7904,7 @@ static const LevelObject lobj2683 = {
     .x = 48, .y = 1416,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4a, .path = &path2684,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp4a_objects[] = {
     &lobj2683
@@ -7936,7 +7959,7 @@ static const LevelObject lobj2689 = {
     .x = 208, .y = 1416,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4b, .path = &path2690,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp4b_objects[] = {
     &lobj2689
@@ -7991,7 +8014,7 @@ static const LevelObject lobj2695 = {
     .x = 32, .y = 1504,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4c, .path = &path2696,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp4c_objects[] = {
     &lobj2695
@@ -8046,7 +8069,7 @@ static const LevelObject lobj2701 = {
     .x = 224, .y = 1504,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4d, .path = &path2702,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12wasp4d_objects[] = {
     &lobj2701
@@ -8061,7 +8084,7 @@ static const LevelObject lobj2707 = {
     .x = 128, .y = 1360,
     .animInd = 0, .flags = 32768,
     .group = &r12powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r12powerup_objects[] = {
     &lobj2707
@@ -8270,42 +8293,42 @@ static const LevelObject lobj2711 = {
     .x = 16, .y = 1216,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2717,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2710 = {
     .definition = &defAntHole,
     .x = 240, .y = 1216,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2716,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2713 = {
     .definition = &defAntHole,
     .x = 248, .y = 1200,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2719,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2712 = {
     .definition = &defAntHole,
     .x = 24, .y = 1200,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2718,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2709 = {
     .definition = &defAntHole,
     .x = 232, .y = 1200,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2715,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2714 = {
     .definition = &defAntHole,
     .x = 8, .y = 1200,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2720,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject *r13acidants1_objects[] = {
     &lobj2711,
@@ -8457,14 +8480,14 @@ static const LevelObject lobj2727 = {
     .x = 56, .y = 1320,
     .animInd = 1, .flags = 36864,
     .group = &r13beetle1, .path = &path2730,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2728 = {
     .definition = &defBeetle,
     .x = 200, .y = 1320,
     .animInd = 1, .flags = 38912,
     .group = &r13beetle1, .path = &path2731,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r13beetle1_objects[] = {
     &lobj2727,
@@ -8549,7 +8572,7 @@ static const LevelObject lobj2741 = {
     .x = 32, .y = 1264,
     .animInd = 0, .flags = 0,
     .group = &r13fly1, .path = &path2742,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r13fly1_objects[] = {
     &lobj2741
@@ -8635,7 +8658,7 @@ static const LevelObject lobj2750 = {
     .x = 48, .y = 1232,
     .animInd = 0, .flags = 0,
     .group = &r13fly2, .path = &path2751,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r13fly2_objects[] = {
     &lobj2750
@@ -8719,7 +8742,7 @@ static const LevelObject lobj2759 = {
     .x = 224, .y = 1224,
     .animInd = 0, .flags = 2048,
     .group = &r13fly3, .path = &path2760,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r13fly3_objects[] = {
     &lobj2759
@@ -8805,7 +8828,7 @@ static const LevelObject lobj2768 = {
     .x = 208, .y = 1192,
     .animInd = 0, .flags = 2048,
     .group = &r14fly4, .path = &path2769,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14fly4_objects[] = {
     &lobj2768
@@ -9584,49 +9607,49 @@ static const LevelObject lobj2777 = {
     .x = 104, .y = 1096,
     .animInd = 1, .flags = 36864,
     .group = &r14beetles, .path = &path2779,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2778 = {
     .definition = &defBeetle,
     .x = 216, .y = 1096,
     .animInd = 1, .flags = 4096,
     .group = &r14beetles, .path = &path2780,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2883 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 996,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2886 = {
     .definition = 0 /* to be assigned */,
     .x = 256, .y = 932,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2884 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 860,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2887 = {
     .definition = 0 /* to be assigned */,
     .x = 256, .y = 796,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2885 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 728,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14beetles_objects[] = {
     &lobj2777,
@@ -9713,14 +9736,14 @@ static const LevelObject lobj2889 = {
     .x = 120, .y = 992,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants1, .path = &path2891,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2890 = {
     .definition = &defAntHole,
     .x = 184, .y = 992,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants1, .path = &path2892,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject *r14acidants1_objects[] = {
     &lobj2889,
@@ -9802,14 +9825,14 @@ static const LevelObject lobj2896 = {
     .x = 128, .y = 1008,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants2, .path = &path2898,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2897 = {
     .definition = &defAntHole,
     .x = 176, .y = 1008,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants2, .path = &path2899,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject *r14acidants2_objects[] = {
     &lobj2896,
@@ -9891,14 +9914,14 @@ static const LevelObject lobj2903 = {
     .x = 168, .y = 992,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants3, .path = &path2906,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject lobj2904 = {
     .definition = &defAntHole,
     .x = 136, .y = 992,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants3, .path = &path2905,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 6
 };
 static const LevelObject *r14acidants3_objects[] = {
     &lobj2903,
@@ -9965,7 +9988,7 @@ static const LevelObject lobj2910 = {
     .x = 136, .y = 1128,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp1a, .path = &path2911,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp1a_objects[] = {
     &lobj2910
@@ -10031,7 +10054,7 @@ static const LevelObject lobj2917 = {
     .x = 120, .y = 1136,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp1b, .path = &path2921,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp1b_objects[] = {
     &lobj2917
@@ -10097,7 +10120,7 @@ static const LevelObject lobj2924 = {
     .x = 24, .y = 1072,
     .animInd = 0, .flags = 0,
     .group = &r14wasp2a, .path = &path2928,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp2a_objects[] = {
     &lobj2924
@@ -10163,7 +10186,7 @@ static const LevelObject lobj2931 = {
     .x = 120, .y = 1096,
     .animInd = 0, .flags = 0,
     .group = &r14wasp2b, .path = &path2935,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp2b_objects[] = {
     &lobj2931
@@ -10229,7 +10252,7 @@ static const LevelObject lobj2938 = {
     .x = 136, .y = 1056,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp3a, .path = &path2942,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp3a_objects[] = {
     &lobj2938
@@ -10295,7 +10318,7 @@ static const LevelObject lobj2945 = {
     .x = 232, .y = 1032,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp3b, .path = &path2949,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp3b_objects[] = {
     &lobj2945
@@ -10361,7 +10384,7 @@ static const LevelObject lobj2952 = {
     .x = 24, .y = 960,
     .animInd = 0, .flags = 0,
     .group = &r14wasp4a, .path = &path2956,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp4a_objects[] = {
     &lobj2952
@@ -10427,7 +10450,7 @@ static const LevelObject lobj2959 = {
     .x = 136, .y = 952,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp4b, .path = &path2963,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp4b_objects[] = {
     &lobj2959
@@ -10493,7 +10516,7 @@ static const LevelObject lobj2966 = {
     .x = 24, .y = 984,
     .animInd = 0, .flags = 0,
     .group = &r14wasp4c, .path = &path2970,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp4c_objects[] = {
     &lobj2966
@@ -10559,7 +10582,7 @@ static const LevelObject lobj2973 = {
     .x = 232, .y = 896,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp5a, .path = &path2977,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp5a_objects[] = {
     &lobj2973
@@ -10625,7 +10648,7 @@ static const LevelObject lobj2980 = {
     .x = 120, .y = 888,
     .animInd = 0, .flags = 0,
     .group = &r14wasp5b, .path = &path2984,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp5b_objects[] = {
     &lobj2980
@@ -10691,7 +10714,7 @@ static const LevelObject lobj2987 = {
     .x = 232, .y = 920,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp5c, .path = &path2991,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp5c_objects[] = {
     &lobj2987
@@ -10806,14 +10829,14 @@ static const LevelObject lobj2994 = {
     .x = 24, .y = 832,
     .animInd = 0, .flags = 0,
     .group = &r14wasp6a, .path = &path3002,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj2995 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 832,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp6a, .path = &path3003,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp6a_objects[] = {
     &lobj2994,
@@ -10929,14 +10952,14 @@ static const LevelObject lobj3007 = {
     .x = 24, .y = 848,
     .animInd = 0, .flags = 0,
     .group = &r14wasp6b, .path = &path3015,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3008 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 848,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp6b, .path = &path3016,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14wasp6b_objects[] = {
     &lobj3007,
@@ -11052,14 +11075,14 @@ static const LevelObject lobj3020 = {
     .x = 136, .y = 800,
     .animInd = 0, .flags = 0,
     .group = &Copy_of_r14wasp6a, .path = &path3028,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3021 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
     .animInd = 0, .flags = 2048,
     .group = &Copy_of_r14wasp6a, .path = &path3029,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *Copy_of_r14wasp6a_objects[] = {
     &lobj3020,
@@ -11175,14 +11198,14 @@ static const LevelObject lobj3033 = {
     .x = 136, .y = 800,
     .animInd = 0, .flags = 0,
     .group = &Copy_of_r14wasp6b, .path = &path3041,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3034 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
     .animInd = 0, .flags = 2048,
     .group = &Copy_of_r14wasp6b, .path = &path3042,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *Copy_of_r14wasp6b_objects[] = {
     &lobj3033,
@@ -11224,7 +11247,7 @@ static const LevelObject lobj3046 = {
     .x = 72, .y = 992,
     .animInd = 0, .flags = 32768,
     .group = &r14powerup1, .path = &path3047,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14powerup1_objects[] = {
     &lobj3046
@@ -11265,7 +11288,7 @@ static const LevelObject lobj3050 = {
     .x = 184, .y = 960,
     .animInd = 0, .flags = 32768,
     .group = &r14powerup2, .path = &path3051,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r14powerup2_objects[] = {
     &lobj3050
@@ -11306,7 +11329,7 @@ static const LevelObject lobj3054 = {
     .x = 72, .y = 800,
     .animInd = 0, .flags = 32768,
     .group = &r15powerup2, .path = &path3055,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r15powerup2_objects[] = {
     &lobj3054
@@ -11347,7 +11370,7 @@ static const LevelObject lobj3058 = {
     .x = 184, .y = 864,
     .animInd = 0, .flags = 32768,
     .group = &r15powerup1, .path = &path3059,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r15powerup1_objects[] = {
     &lobj3058
@@ -11445,7 +11468,7 @@ static const LevelObject lobj3062 = {
     .x = 40, .y = 560,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants1, .path = &path3063,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 15
 };
 static const LevelObject *r16acidants1_objects[] = {
     &lobj3062
@@ -11460,14 +11483,14 @@ static const LevelObject lobj3069 = {
     .x = 168, .y = 592,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3070 = {
     .definition = &defHoneyPot,
     .x = 88, .y = 592,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r16powerup_objects[] = {
     &lobj3069,
@@ -11655,14 +11678,14 @@ static const LevelObject lobj3073 = {
     .x = 72, .y = 472,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants2, .path = &path3075,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 15
 };
 static const LevelObject lobj3072 = {
     .definition = &defAntHole,
     .x = 184, .y = 456,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants2, .path = &path3074,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 15
 };
 static const LevelObject *r16acidants2_objects[] = {
     &lobj3073,
@@ -11678,7 +11701,7 @@ static const LevelObject lobj3085 = {
     .x = 128, .y = 512,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup2, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r16powerup2_objects[] = {
     &lobj3085
@@ -11693,21 +11716,21 @@ static const LevelObject lobj3088 = {
     .x = 128, .y = 408,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3087 = {
     .definition = &defHoneyPot,
     .x = 152, .y = 400,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3089 = {
     .definition = &defHoneyPot,
     .x = 112, .y = 400,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17powerup_objects[] = {
     &lobj3088,
@@ -11775,7 +11798,7 @@ static const LevelObject lobj3091 = {
     .x = 40, .y = 472,
     .animInd = 0, .flags = 0,
     .group = &r17fly1a, .path = &path3092,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17fly1a_objects[] = {
     &lobj3091
@@ -11841,7 +11864,7 @@ static const LevelObject lobj3098 = {
     .x = 208, .y = 472,
     .animInd = 0, .flags = 2048,
     .group = &r17fly1b, .path = &path3099,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17fly1b_objects[] = {
     &lobj3098
@@ -11907,7 +11930,7 @@ static const LevelObject lobj3105 = {
     .x = 24, .y = 496,
     .animInd = 0, .flags = 0,
     .group = &r17fly2a, .path = &path3106,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17fly2a_objects[] = {
     &lobj3105
@@ -11973,7 +11996,7 @@ static const LevelObject lobj3112 = {
     .x = 232, .y = 496,
     .animInd = 0, .flags = 2048,
     .group = &r17fly2b, .path = &path3113,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17fly2b_objects[] = {
     &lobj3112
@@ -12066,14 +12089,14 @@ static const LevelObject lobj3119 = {
     .x = 16, .y = 456,
     .animInd = 0, .flags = 0,
     .group = &r17wasp1, .path = &path3121,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3120 = {
     .definition = &defWasp,
     .x = 240, .y = 456,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp1, .path = &path3122,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17wasp1_objects[] = {
     &lobj3119,
@@ -12167,14 +12190,14 @@ static const LevelObject lobj3130 = {
     .x = 56, .y = 408,
     .animInd = 0, .flags = 0,
     .group = &r17wasp3, .path = &path3132,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3131 = {
     .definition = &defWasp,
     .x = 200, .y = 408,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp3, .path = &path3133,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17wasp3_objects[] = {
     &lobj3130,
@@ -12268,14 +12291,14 @@ static const LevelObject lobj3141 = {
     .x = 112, .y = 384,
     .animInd = 0, .flags = 0,
     .group = &r17wasp5, .path = &path3143,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3142 = {
     .definition = &defWasp,
     .x = 144, .y = 384,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp5, .path = &path3144,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17wasp5_objects[] = {
     &lobj3141,
@@ -12369,14 +12392,14 @@ static const LevelObject lobj3152 = {
     .x = 80, .y = 360,
     .animInd = 0, .flags = 0,
     .group = &r17wasp7, .path = &path3154,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3153 = {
     .definition = &defWasp,
     .x = 176, .y = 360,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp7, .path = &path3155,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17wasp7_objects[] = {
     &lobj3152,
@@ -12470,14 +12493,14 @@ static const LevelObject lobj3163 = {
     .x = 40, .y = 384,
     .animInd = 0, .flags = 0,
     .group = &r17wasp9, .path = &path3165,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3164 = {
     .definition = &defWasp,
     .x = 216, .y = 384,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp9, .path = &path3166,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r17wasp9_objects[] = {
     &lobj3163,
@@ -12493,7 +12516,7 @@ static const LevelObject lobj3174 = {
     .x = 120, .y = 192,
     .animInd = 0, .flags = 32768,
     .group = &r18powerup2, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r18powerup2_objects[] = {
     &lobj3174
@@ -12508,7 +12531,7 @@ static const LevelObject lobj3176 = {
     .x = 136, .y = 128,
     .animInd = 0, .flags = 32768,
     .group = &r18powerup3, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *r18powerup3_objects[] = {
     &lobj3176
@@ -12901,14 +12924,14 @@ static const LevelObject lobj3178 = {
     .x = 128, .y = 440,
     .animInd = 0, .flags = 0,
     .group = &waspboss, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject lobj3200 = {
     .definition = 0 /* to be assigned */,
     .x = 128, .y = 96,
     .animInd = 0, .flags = 32768,
     .group = &waspboss, .path = 0,
-    .pathIndex = 0
+    .pathIndex = 0, .child = 0, .interval = 0
 };
 static const LevelObject *waspboss_objects[] = {
     &lobj3178,
@@ -13312,712 +13335,706 @@ const Trigger stage_caravan_triggers[] = {
 /*  65 */
 {
     .x = -36, .y = 2956,
-    .action = spawnCharacters, .group = &r5antsfrombigant,
-    .count = 0
-},
-/*  66 */
-{
-    .x = -56, .y = 2948,
     .action = spawnCharacters, .group = &room5bigant,
     .count = 0
 },
-/*  67 */
+/*  66 */
 {
     .x = -8, .y = 2872,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  68 */
+/*  67 */
 {
     .x = -8, .y = 2864,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  69 */
+/*  68 */
 {
     .x = -8, .y = 2856,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  70 */
+/*  69 */
 {
     .x = -8, .y = 2848,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  71 */
+/*  70 */
 {
     .x = -8, .y = 2840,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  72 */
+/*  71 */
 {
     .x = -8, .y = 2832,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  73 */
+/*  72 */
 {
     .x = -8, .y = 2824,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  74 */
+/*  73 */
 {
     .x = -8, .y = 2816,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  75 */
+/*  74 */
 {
     .x = -24, .y = 2816,
     .action = spawnCharacters, .group = &room6fly,
     .count = 0
 },
-/*  76 */
+/*  75 */
 {
     .x = -8, .y = 2808,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  77 */
+/*  76 */
 {
     .x = -8, .y = 2800,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  78 */
+/*  77 */
 {
     .x = -8, .y = 2792,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  79 */
+/*  78 */
 {
     .x = -8, .y = 2784,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  80 */
+/*  79 */
 {
     .x = -8, .y = 2776,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  81 */
+/*  80 */
 {
     .x = -8, .y = 2768,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  82 */
+/*  81 */
 {
     .x = -8, .y = 2760,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  83 */
+/*  82 */
 {
     .x = -8, .y = 2752,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  84 */
+/*  83 */
 {
     .x = -8, .y = 2744,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  85 */
+/*  84 */
 {
     .x = -8, .y = 2736,
     .action = spawnNextCharacters, .group = &r6ants,
     .count = 2
 },
-/*  86 */
+/*  85 */
 {
-    .x = -16, .y = 2736,
+    .x = -8, .y = 2728,
     .action = spawnCharacters, .group = &room6bigant,
     .count = 0
 },
-/*  87 */
+/*  86 */
 {
     .x = -56, .y = 2504,
     .action = spawnCharacters, .group = &room7alien1,
     .count = 0
 },
-/*  88 */
+/*  87 */
 {
     .x = -80, .y = 2448,
     .action = spawnCharacters, .group = &room7alien2,
     .count = 0
 },
-/*  89 */
+/*  88 */
 {
     .x = -56, .y = 2432,
     .action = spawnCharacters, .group = &room7alien3,
     .count = 0
 },
-/*  90 */
+/*  89 */
 {
     .x = -32, .y = 2376,
     .action = spawnCharacters, .group = &room8alien1,
     .count = 0
 },
-/*  91 */
+/*  90 */
 {
     .x = -56, .y = 2360,
     .action = spawnCharacters, .group = &room8alien2,
     .count = 0
 },
-/*  92 */
+/*  91 */
 {
     .x = -32, .y = 2272,
     .action = spawnCharacters, .group = &room8powerup,
     .count = 0
 },
-/*  93 */
+/*  92 */
 {
     .x = -72, .y = 2264,
     .action = spawnCharacters, .group = &room8alien4,
     .count = 0
 },
-/*  94 */
+/*  93 */
 {
     .x = -16, .y = 2184,
     .action = spawnCharacters, .group = &room9powerup,
     .count = 0
 },
-/*  95 */
+/*  94 */
 {
     .x = -16, .y = 2016,
     .action = spawnCharacters, .group = &room9alienmind,
     .count = 0
 },
-/*  96 */
+/*  95 */
 {
     .x = -24, .y = 2008,
     .action = spawnCharacters, .group = &part2,
     .count = 0
 },
-/*  97 */
+/*  96 */
 {
     .x = -32, .y = 1856,
     .action = spawnCharacters, .group = &room10acidants,
     .count = 0
 },
-/*  98 */
+/*  97 */
 {
     .x = -40, .y = 1856,
     .action = unpauseTimer, .group = &room10acidants,
     .count = 0
 },
-/*  99 */
+/*  98 */
 {
     .x = -32, .y = 1840,
     .action = spawnCharacters, .group = &room10acidants2,
     .count = 0
 },
-/* 100 */
+/*  99 */
 {
     .x = -48, .y = 1760,
     .action = spawnCharacters, .group = &r11acidants1a,
     .count = 0
 },
-/* 101 */
+/* 100 */
 {
     .x = -56, .y = 1752,
     .action = spawnCharacters, .group = &r11acidants1b,
     .count = 0
 },
-/* 102 */
+/* 101 */
 {
     .x = -48, .y = 1744,
     .action = spawnCharacters, .group = &r11acidants1c,
     .count = 0
 },
-/* 103 */
+/* 102 */
 {
     .x = -56, .y = 1736,
     .action = spawnCharacters, .group = &r11acidants1d,
     .count = 0
 },
-/* 104 */
+/* 103 */
 {
     .x = -48, .y = 1728,
     .action = spawnCharacters, .group = &r11acidants1e,
     .count = 0
 },
-/* 105 */
+/* 104 */
 {
     .x = -56, .y = 1720,
     .action = spawnCharacters, .group = &r11acidants1f,
     .count = 0
 },
-/* 106 */
+/* 105 */
 {
     .x = -48, .y = 1712,
     .action = spawnCharacters, .group = &r11acidants1g,
     .count = 0
 },
-/* 107 */
+/* 106 */
 {
     .x = -56, .y = 1704,
     .action = spawnCharacters, .group = &r11acidants1h,
     .count = 0
 },
-/* 108 */
+/* 107 */
 {
     .x = -96, .y = 1664,
     .action = spawnCharacters, .group = &r11powerup,
     .count = 0
 },
-/* 109 */
+/* 108 */
 {
     .x = -32, .y = 1632,
     .action = spawnCharacters, .group = &room11acidants2a,
     .count = 0
 },
-/* 110 */
+/* 109 */
 {
     .x = -48, .y = 1632,
     .action = spawnCharacters, .group = &r11acidants3a,
     .count = 0
 },
-/* 111 */
+/* 110 */
 {
     .x = -56, .y = 1624,
     .action = spawnCharacters, .group = &r11acidants3b,
     .count = 0
 },
-/* 112 */
+/* 111 */
 {
     .x = -48, .y = 1616,
     .action = spawnCharacters, .group = &r11acidants3c,
     .count = 0
 },
-/* 113 */
+/* 112 */
 {
     .x = -56, .y = 1608,
     .action = spawnCharacters, .group = &r11acidants3d,
     .count = 0
 },
-/* 114 */
+/* 113 */
 {
     .x = -48, .y = 1600,
     .action = spawnCharacters, .group = &r11acidants3e,
     .count = 0
 },
-/* 115 */
+/* 114 */
 {
     .x = -56, .y = 1592,
     .action = spawnCharacters, .group = &r11acidants3f,
     .count = 0
 },
-/* 116 */
+/* 115 */
 {
     .x = -48, .y = 1584,
     .action = spawnCharacters, .group = &r11acidants3g,
     .count = 0
 },
-/* 117 */
+/* 116 */
 {
     .x = -88, .y = 1584,
     .action = spawnCharacters, .group = &room11acidants2b,
     .count = 0
 },
-/* 118 */
+/* 117 */
 {
     .x = -56, .y = 1576,
     .action = spawnCharacters, .group = &r11acidants3h,
     .count = 0
 },
-/* 119 */
+/* 118 */
 {
     .x = -48, .y = 1568,
     .action = spawnCharacters, .group = &r11acidants3i,
     .count = 0
 },
-/* 120 */
+/* 119 */
 {
     .x = -56, .y = 1560,
     .action = spawnCharacters, .group = &r11acidants3j,
     .count = 0
 },
-/* 121 */
+/* 120 */
 {
     .x = -48, .y = 1552,
     .action = spawnCharacters, .group = &r11acidants3k,
     .count = 0
 },
-/* 122 */
+/* 121 */
 {
     .x = -40, .y = 1488,
     .action = spawnCharacters, .group = &r12wasp1c,
     .count = 0
 },
-/* 123 */
+/* 122 */
 {
     .x = -48, .y = 1472,
     .action = spawnCharacters, .group = &r12wasp1b,
     .count = 0
 },
-/* 124 */
+/* 123 */
 {
     .x = -56, .y = 1456,
     .action = spawnCharacters, .group = &r12wasp1a,
     .count = 0
 },
-/* 125 */
+/* 124 */
 {
     .x = -40, .y = 1416,
     .action = spawnCharacters, .group = &r12wasp3a,
     .count = 0
 },
-/* 126 */
+/* 125 */
 {
     .x = -32, .y = 1408,
     .action = spawnCharacters, .group = &r12wasp3b,
     .count = 0
 },
-/* 127 */
+/* 126 */
 {
     .x = -24, .y = 1400,
     .action = spawnCharacters, .group = &r12wasp3c,
     .count = 0
 },
-/* 128 */
+/* 127 */
 {
     .x = -56, .y = 1392,
     .action = spawnCharacters, .group = &r12wasp2a,
     .count = 0
 },
-/* 129 */
+/* 128 */
 {
     .x = -64, .y = 1384,
     .action = spawnCharacters, .group = &r12wasp2b,
     .count = 0
 },
-/* 130 */
+/* 129 */
 {
     .x = -72, .y = 1376,
     .action = spawnCharacters, .group = &r12wasp2c,
     .count = 0
 },
-/* 131 */
+/* 130 */
 {
     .x = -40, .y = 1368,
     .action = spawnCharacters, .group = &r12powerup,
     .count = 0
 },
-/* 132 */
+/* 131 */
 {
     .x = -16, .y = 1336,
     .action = spawnCharacters, .group = &r12wasp4b,
     .count = 0
 },
-/* 133 */
+/* 132 */
 {
     .x = -80, .y = 1336,
     .action = spawnCharacters, .group = &r12wasp4a,
     .count = 0
 },
-/* 134 */
+/* 133 */
 {
     .x = -96, .y = 1328,
     .action = spawnCharacters, .group = &r13acidants1,
     .count = 0
 },
-/* 135 */
+/* 134 */
 {
     .x = -32, .y = 1312,
     .action = spawnCharacters, .group = &r12wasp4d,
     .count = 0
 },
-/* 136 */
+/* 135 */
 {
     .x = -64, .y = 1312,
     .action = spawnCharacters, .group = &r12wasp4c,
     .count = 0
 },
-/* 137 */
+/* 136 */
 {
     .x = -48, .y = 1288,
     .action = spawnCharacters, .group = &r13beetle1,
     .count = 0
 },
-/* 138 */
+/* 137 */
 {
     .x = -64, .y = 1192,
     .action = spawnCharacters, .group = &r13fly1,
     .count = 0
 },
-/* 139 */
+/* 138 */
 {
     .x = -72, .y = 1184,
     .action = spawnCharacters, .group = &r13fly2,
     .count = 0
 },
-/* 140 */
+/* 139 */
 {
     .x = -48, .y = 1152,
     .action = spawnCharacters, .group = &r13fly3,
     .count = 0
 },
-/* 141 */
+/* 140 */
 {
     .x = -56, .y = 1144,
     .action = spawnCharacters, .group = &r14fly4,
     .count = 0
 },
-/* 142 */
+/* 141 */
 {
     .x = -48, .y = 1128,
     .action = spawnCharacters, .group = &r14acidants1,
     .count = 0
 },
-/* 143 */
+/* 142 */
 {
     .x = -24, .y = 1072,
     .action = spawnCharacters, .group = &r14beetles,
     .count = 0
 },
-/* 144 */
+/* 143 */
 {
     .x = -48, .y = 1064,
     .action = spawnCharacters, .group = &r14acidants2,
     .count = 0
 },
-/* 145 */
+/* 144 */
 {
     .x = -64, .y = 1064,
     .action = spawnCharacters, .group = &r14wasp1a,
     .count = 0
 },
-/* 146 */
+/* 145 */
 {
     .x = -72, .y = 1056,
     .action = spawnCharacters, .group = &r14wasp1b,
     .count = 0
 },
-/* 147 */
+/* 146 */
 {
     .x = -56, .y = 1032,
     .action = spawnCharacters, .group = &r14wasp2b,
     .count = 0
 },
-/* 148 */
+/* 147 */
 {
     .x = -48, .y = 1000,
     .action = spawnCharacters, .group = &r14acidants3,
     .count = 0
 },
-/* 149 */
+/* 148 */
 {
     .x = -136, .y = 1000,
     .action = spawnCharacters, .group = &r14powerup1,
     .count = 0
 },
-/* 150 */
+/* 149 */
 {
     .x = -48, .y = 992,
     .action = spawnCharacters, .group = &r14wasp2a,
     .count = 0
 },
-/* 151 */
+/* 150 */
 {
     .x = -88, .y = 976,
     .action = spawnCharacters, .group = &r14wasp3a,
     .count = 0
 },
-/* 152 */
+/* 151 */
 {
     .x = -48, .y = 968,
     .action = spawnCharacters, .group = &r14powerup2,
     .count = 0
 },
-/* 153 */
+/* 152 */
 {
     .x = -96, .y = 936,
     .action = spawnCharacters, .group = &r14wasp3b,
     .count = 0
 },
-/* 154 */
+/* 153 */
 {
     .x = -72, .y = 880,
     .action = spawnCharacters, .group = &r14wasp4b,
     .count = 0
 },
-/* 155 */
+/* 154 */
 {
     .x = -48, .y = 872,
     .action = spawnCharacters, .group = &r15powerup1,
     .count = 0
 },
-/* 156 */
+/* 155 */
 {
     .x = -88, .y = 872,
     .action = spawnCharacters, .group = &r14wasp4a,
     .count = 0
 },
-/* 157 */
+/* 156 */
 {
     .x = -104, .y = 864,
     .action = spawnCharacters, .group = &r14wasp4c,
     .count = 0
 },
-/* 158 */
+/* 157 */
 {
     .x = -104, .y = 816,
     .action = spawnCharacters, .group = &r14wasp5b,
     .count = 0
 },
-/* 159 */
+/* 158 */
 {
     .x = -88, .y = 808,
     .action = spawnCharacters, .group = &r14wasp5a,
     .count = 0
 },
-/* 160 */
+/* 159 */
 {
     .x = -136, .y = 808,
     .action = spawnCharacters, .group = &r15powerup2,
     .count = 0
 },
-/* 161 */
+/* 160 */
 {
     .x = -72, .y = 800,
     .action = spawnCharacters, .group = &r14wasp5c,
     .count = 0
 },
-/* 162 */
+/* 161 */
 {
     .x = -120, .y = 760,
     .action = spawnCharacters, .group = &r14wasp6a,
     .count = 0
 },
-/* 163 */
+/* 162 */
 {
     .x = -8, .y = 728,
     .action = spawnCharacters, .group = &Copy_of_r14wasp6a,
     .count = 0
 },
-/* 164 */
+/* 163 */
 {
     .x = -120, .y = 728,
     .action = spawnCharacters, .group = &r14wasp6b,
     .count = 0
 },
-/* 165 */
+/* 164 */
 {
     .x = -8, .y = 680,
     .action = spawnCharacters, .group = &Copy_of_r14wasp6b,
     .count = 0
 },
-/* 166 */
+/* 165 */
 {
     .x = -72, .y = 656,
     .action = spawnCharacters, .group = &r16acidants1,
     .count = 0
 },
-/* 167 */
+/* 166 */
 {
     .x = -32, .y = 608,
     .action = spawnCharacters, .group = &r16powerup,
     .count = 0
 },
-/* 168 */
+/* 167 */
 {
     .x = -56, .y = 592,
     .action = spawnCharacters, .group = &r16acidants2,
     .count = 0
 },
-/* 169 */
+/* 168 */
 {
     .x = -16, .y = 520,
     .action = spawnCharacters, .group = &r16powerup2,
     .count = 0
 },
-/* 170 */
+/* 169 */
 {
     .x = -40, .y = 424,
     .action = spawnCharacters, .group = &r17powerup,
     .count = 0
 },
-/* 171 */
+/* 170 */
 {
     .x = -104, .y = 408,
     .action = spawnCharacters, .group = &r17fly1b,
     .count = 0
 },
-/* 172 */
+/* 171 */
 {
     .x = -184, .y = 408,
     .action = spawnCharacters, .group = &r17fly1a,
     .count = 0
 },
-/* 173 */
+/* 172 */
 {
     .x = -120, .y = 384,
     .action = spawnCharacters, .group = &r17fly2b,
     .count = 0
 },
-/* 174 */
+/* 173 */
 {
     .x = -200, .y = 384,
     .action = spawnCharacters, .group = &r17fly2a,
     .count = 0
 },
-/* 175 */
+/* 174 */
 {
     .x = -104, .y = 344,
     .action = spawnCharacters, .group = &r17wasp1,
     .count = 0
 },
-/* 176 */
+/* 175 */
 {
     .x = -104, .y = 328,
     .action = spawnCharacters, .group = &r17wasp3,
     .count = 0
 },
-/* 177 */
+/* 176 */
 {
     .x = -104, .y = 312,
     .action = spawnCharacters, .group = &r17wasp5,
     .count = 0
 },
-/* 178 */
+/* 177 */
 {
     .x = -104, .y = 296,
     .action = spawnCharacters, .group = &r17wasp7,
     .count = 0
 },
-/* 179 */
+/* 178 */
 {
     .x = -104, .y = 280,
     .action = spawnCharacters, .group = &r17wasp9,
     .count = 0
 },
-/* 180 */
+/* 179 */
 {
     .x = -16, .y = 224,
     .action = spawnCharacters, .group = &waspboss,
     .count = 0
 },
-/* 181 */
+/* 180 */
 {
     .x = -152, .y = 208,
     .action = spawnCharacters, .group = &r18powerup2,
     .count = 0
 },
-/* 182 */
+/* 181 */
 {
     .x = -32, .y = 144,
     .action = stopStageScroll, .group = &waspboss,
     .count = 0
 },
-/* 183 */
+/* 182 */
 {
     .x = -184, .y = 144,
     .action = spawnCharacters, .group = &r18powerup3,
@@ -14045,6 +14062,7 @@ LevelObjectGroup *stage_caravan_groups[] = {
     &r6ants,
     &room6fly,
     &room5bigant,
+    &room6antsfrombigants,
     &room6bigant,
     &room7alien1,
     &room7alien2,

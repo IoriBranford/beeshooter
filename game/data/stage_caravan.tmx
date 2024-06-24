@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="387" nextobjectid="3834">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="388" nextobjectid="3837">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4913,19 +4913,19 @@ self.speed = 0.75</property>
      <property name="count" type="int" value="2"/>
     </properties>
    </object>
-   <object id="3829" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3044" rotation="0">
+   <object id="3829" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="164" y="3044" rotation="0">
     <point/>
    </object>
-   <object id="3831" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3172" rotation="0">
+   <object id="3831" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="164" y="3172" rotation="0">
     <point/>
    </object>
-   <object id="3833" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" gid="0" x="164" y="3300" rotation="0">
+   <object id="3833" template="pathpoints/SetSpriteHidden.tx" type="PathPoint" x="164" y="3300" rotation="0">
     <point/>
    </object>
-   <object id="3830" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" gid="0" x="220" y="3076" rotation="0">
+   <object id="3830" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" x="220" y="3076" rotation="0">
     <point/>
    </object>
-   <object id="3832" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" gid="0" x="220" y="3204" rotation="0">
+   <object id="3832" template="pathpoints/SetSpriteVisible.tx" type="PathPoint" x="220" y="3204" rotation="0">
     <point/>
    </object>
   </objectgroup>
@@ -4996,7 +4996,6 @@ self.speed = 0.75</property>
    <object id="3817" template="triggers/SpawnCharacters.tx" x="-36" y="2972"/>
    <object id="3811" template="triggers/SpawnCharacters.tx" x="-36" y="3020"/>
    <object id="3815" template="triggers/SpawnCharacters.tx" x="-36" y="2988"/>
-   <object id="3819" template="triggers/SpawnCharacters.tx" x="-36" y="2956"/>
   </objectgroup>
   <objectgroup id="246" name="room5fly1">
    <object id="2341" template="triggers/SpawnCharacters.tx" x="-56" y="3064"/>
@@ -5286,19 +5285,33 @@ self.speed = 0.75</property>
    </properties>
    <object id="2369" template="enemies/AntBig.tx" x="64" y="2928">
     <properties>
-     <property name="spawncount" type="float" value="200"/>
-     <property name="spawninterval" type="float" value="6"/>
+     <property name="child" type="object" value="3801"/>
+     <property name="spawncount" type="float" value="50"/>
+     <property name="spawninterval" type="float" value="16"/>
      <property name="z" type="float" value="2"/>
     </properties>
    </object>
    <object id="2370" template="enemies/AntBig.tx" gid="2147484133" x="192" y="2928" rotation="0">
     <properties>
-     <property name="spawncount" type="float" value="200"/>
-     <property name="spawninterval" type="float" value="6"/>
+     <property name="child" type="object" value="3722"/>
+     <property name="spawncount" type="float" value="50"/>
+     <property name="spawninterval" type="float" value="16"/>
      <property name="z" type="float" value="2"/>
     </properties>
    </object>
-   <object id="2371" template="triggers/SpawnCharacters.tx" x="-56" y="2948"/>
+   <object id="2371" template="triggers/SpawnCharacters.tx" x="-36" y="2956"/>
+  </objectgroup>
+  <objectgroup id="387" name="room6antsfrombigants">
+   <object id="3834" template="enemies/Ant.tx" gid="481" x="36" y="2720" rotation="90">
+    <properties>
+     <property name="path" type="object" value="2389"/>
+    </properties>
+   </object>
+   <object id="3835" template="enemies/Ant.tx" gid="2147484129" x="220" y="2720" rotation="-90">
+    <properties>
+     <property name="path" type="object" value="3786"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="250" name="room6bigant">
    <properties>
@@ -5307,19 +5320,21 @@ self.speed = 0.75</property>
    </properties>
    <object id="2386" template="enemies/AntBig.tx" x="216" y="2704" rotation="270">
     <properties>
-     <property name="spawncount" type="float" value="100"/>
-     <property name="spawninterval" type="float" value="6"/>
+     <property name="child" type="object" value="3835"/>
+     <property name="spawncount" type="float" value="25"/>
+     <property name="spawninterval" type="float" value="16"/>
      <property name="z" type="float" value="2"/>
     </properties>
    </object>
    <object id="2387" template="enemies/AntBig.tx" gid="2147484133" x="40" y="2704" rotation="90">
     <properties>
-     <property name="spawncount" type="float" value="100"/>
-     <property name="spawninterval" type="float" value="6"/>
+     <property name="child" type="object" value="3834"/>
+     <property name="spawncount" type="float" value="25"/>
+     <property name="spawninterval" type="float" value="16"/>
      <property name="z" type="float" value="2"/>
     </properties>
    </object>
-   <object id="2388" template="triggers/SpawnCharacters.tx" x="-16" y="2736"/>
+   <object id="2388" template="triggers/SpawnCharacters.tx" x="-8" y="2728"/>
   </objectgroup>
   <objectgroup id="251" name="room7alien1">
    <object id="2395" template="triggers/SpawnCharacters.tx" x="-56" y="2504"/>
