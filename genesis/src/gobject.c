@@ -142,6 +142,15 @@ bool GOBJ_isSpriteOffSideOrBottom(GameObject *self) {
     return result;
 }
 
+bool GOBJ_isSpriteOffBottom(GameObject *self) {
+    fix16 y0 = self->centerY;
+    const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
+    if (spriteDef) {
+        y0 -= FIX16(spriteDef->h>>1);
+    }
+    return (y0 >= GAME_BOUNDH);
+}
+
 void GOBJ_updateSprite(GameObject *self) {
     Sprite *sprite = self->sprite;
     if (sprite) {
