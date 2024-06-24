@@ -168,12 +168,17 @@ return `{
                             flags += 0x00800
                     }
                     anim = Math.abs(anim)
+
+                    let child = object.resolvedProperty('child')
+                    child = child && `&lobj${child.id}` || '0'
+
+                    let interval = object.resolvedProperty('spawninterval') || 0
 return `static const LevelObject lobj${object.id} = {
     .definition = ${definition},
     .x = ${object.x}, .y = ${object.y},
     .animInd = ${anim}, .flags = ${flags},
     .group = &${cName}, .path = ${objPath == null && '0' || `&path${objPath.id}`},
-    .pathIndex = ${objPathPointIndex}
+    .pathIndex = ${objPathPointIndex}, .child = ${child}, .interval = ${interval}
 };`
                 }))
 
