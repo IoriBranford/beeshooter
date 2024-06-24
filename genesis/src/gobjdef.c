@@ -100,7 +100,7 @@ const GameObjectDefinition defAntBig = {
     .palette = &palAnt,
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
-    .update = GOBJ_updateIdleOnStage
+    .update = GOBJ_updateSpawner
 };
 const GameObjectDefinition defAlienGunner = {
     .team = TEAM_ENEMY,
