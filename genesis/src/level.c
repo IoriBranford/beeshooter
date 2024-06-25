@@ -12,8 +12,6 @@
 
 #define STARTTRIGGER 0
 #define BG_PALETTE (PAL2)
-#define BG_TILESET_START_INDEX (TILE_USER_INDEX)
-#define BG_BASE_TILE (TILE_ATTR_FULL(BG_PALETTE, FALSE, FALSE, FALSE, BG_TILESET_START_INDEX))
 
 static Map *bg;
 static fix32 cameraY, cameraVelY;
@@ -27,7 +25,7 @@ typedef struct PaletteUsage {
 } PaletteUsage;
 PaletteUsage paletteUsage[2];
 
-void LEVEL_init() {
+void LEVEL_init(u16 tileIndex) {
     cameraY = FIX32(4256);
     cameraVelY = -FIX32(3) / 4;
 
@@ -42,8 +40,8 @@ void LEVEL_init() {
 
     PAL_setPalette(BG_PALETTE, bgPalette.data, DMA);
     VDP_setBackgroundColor((BG_PALETTE << 4) + 1);
-    VDP_loadTileSet(&bgTileset, BG_TILESET_START_INDEX, DMA);
-    bg = MAP_create(&bgMap, BG_B, BG_BASE_TILE);
+    VDP_loadTileSet(&bgTileset, tileIndex, DMA);
+    bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(BG_PALETTE, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
     paletteUsage[0].palette = NULL;

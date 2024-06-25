@@ -46,6 +46,9 @@ typedef struct {
     u16 animAndFlags;
 } PlayerShot;
 
+static u16 **shipAniFrame;
+static u16 **shotAniFrame;
+
 static const PlayerShot PLAYER_WEAPONSA[][2] = {
     {
         {.offsetX = -FIX16(6), .velY = -BULLETSPEED, .animAndFlags = BULLET_ANI_90|TILE_ATTR_VFLIP_MASK},
@@ -76,13 +79,20 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
     },
 };
 
+void PLAYERshotsprite_frameChange(Sprite *sprite) {
+    SPR_setVRAMTileIndex(sprite, shotAniFrame[sprite->animInd][sprite->frameInd]);
+}
+
 void PLAYER_shoot(PlayerObject *self) {
+    const GameObjectDefinition *bulletDef = &defPlayerShot;
+    const SpriteDefinition *bulletSpriteDef = bulletDef->spriteDef;
+
     for (int w = 0; w < self->health; ++w) {
         PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
         for (int s = 0; s < 2; ++s) {
             const PlayerShot *shot = &shots[s];
 
-            GameObject *bullet = GOBJ_createFromDef(&defPlayerShot,
+            GameObject *bullet = GOBJ_createFromDef(bulletDef,
                 self->centerX + shot->offsetX,
                 self->centerY + shot->offsetY);
 
@@ -91,10 +101,19 @@ void PLAYER_shoot(PlayerObject *self) {
 
             bullet->velX = shot->velX;
             bullet->velY = shot->velY;
-            GOBJ_initSprite(bullet);
-            SPR_setAnim(bullet->sprite, shot->animAndFlags & 0xFF);
-            SPR_setHFlip(bullet->sprite, (shot->animAndFlags & TILE_ATTR_HFLIP_MASK) != 0);
-            SPR_setVFlip(bullet->sprite, (shot->animAndFlags & TILE_ATTR_VFLIP_MASK) != 0);
+
+            u16 attr = TILE_ATTR(PLAYERPAL, true,
+                (shot->animAndFlags & TILE_ATTR_VFLIP_MASK) != 0,
+                (shot->animAndFlags & TILE_ATTR_HFLIP_MASK) != 0);
+            bullet->sprite = SPR_addSpriteEx(bulletSpriteDef,
+                fix16ToRoundedInt(bullet->centerX - FIX16(bulletSpriteDef->w>>1)),
+                fix16ToRoundedInt(bullet->centerY - FIX16(bulletSpriteDef->h>>1)),
+                attr, 0);
+            SPR_setFrameChangeCallback(bullet->sprite, PLAYERshotsprite_frameChange);
+            
+            u16 anim = shot->animAndFlags & 0xFF;
+            SPR_setAnim(bullet->sprite, anim);
+            SPR_setDepth(bullet->sprite, bullet->definition->spriteDepth);
         }
     }
 }
@@ -237,17 +256,38 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
     UI_updateWeaponLevel(self->health);
 }
 
+void PLAYERsprite_frameChange(Sprite *sprite) {
+    SPR_setVRAMTileIndex(sprite, shipAniFrame[sprite->animInd][sprite->frameInd]);
+}
+
 void PLAYER_init(PlayerObject *self) {
     self->definition = &defPlayer;
     self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;
-    self->sprite = SPR_addSprite(
+    self->sprite = SPR_addSpriteEx(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
-        TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE));
+        TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE), 0);
+    SPR_setFrameChangeCallback(self->sprite, PLAYERsprite_frameChange);
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
+}
+
+u16 PLAYER_loadSpriteFrames(u16 tileIndex) {
+    u16 numTiles;
+    shipAniFrame = SPR_loadAllFrames(&sprPlayer, tileIndex, &numTiles);
+    tileIndex += numTiles;
+    shotAniFrame = SPR_loadAllFrames(&sprPlayerShot, tileIndex, &numTiles);
+    tileIndex += numTiles;
+    return tileIndex;
+}
+
+void PLAYER_freeSpriteFrames() {
+    MEM_free(shipAniFrame);
+    MEM_free(shotAniFrame);
+    shipAniFrame = NULL;
+    shotAniFrame = NULL;
 }

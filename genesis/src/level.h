@@ -51,7 +51,7 @@ struct LevelObjectGroup {
     const LevelObject **objects;
 };
 
-void LEVEL_init();
+void LEVEL_init(u16 baseTileIndex);
 void LEVEL_update();
 void LEVEL_destroy();
 

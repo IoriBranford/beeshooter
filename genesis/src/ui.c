@@ -3,12 +3,39 @@
 #include "res_gfx.h"
 
 Sprite *weaponSelectSprite, *weaponCursorSprite;
+u16 **weaponSelectFrames, **weaponCursorFrames;
 
 static char string[32];
 
+u16 UI_loadSpriteFrames(u16 tileIndex) {
+    u16 numTiles;
+    weaponSelectFrames = SPR_loadAllFrames(&sprUiWeapons, tileIndex, &numTiles);
+    tileIndex += numTiles;
+    weaponCursorFrames = SPR_loadAllFrames(&sprUiWeaponsCursor, tileIndex, &numTiles);
+    tileIndex += numTiles;
+    return tileIndex;
+}
+
+void UI_freeSpriteFrames() {
+    MEM_free(weaponCursorFrames);
+    MEM_free(weaponSelectFrames);
+    weaponCursorFrames = NULL;
+    weaponSelectFrames = NULL;
+}
+
+void UIWeaponSelect_frameChange(Sprite *sprite) {
+    SPR_setVRAMTileIndex(sprite, weaponSelectFrames[sprite->animInd][sprite->frameInd]);
+}
+
+void UIWeaponCursor_frameChange(Sprite *sprite) {
+    SPR_setVRAMTileIndex(sprite, weaponCursorFrames[sprite->animInd][sprite->frameInd]);
+}
+
 void UI_initHud(PlayerObject *player, u16 timeLeft) {
-    weaponSelectSprite = SPR_addSprite(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false));
-    weaponCursorSprite = SPR_addSprite(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false));
+    weaponSelectSprite = SPR_addSpriteEx(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false), 0);
+    weaponCursorSprite = SPR_addSpriteEx(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false), 0);
+    SPR_setFrameChangeCallback(weaponSelectSprite, UIWeaponSelect_frameChange);
+    SPR_setFrameChangeCallback(weaponCursorSprite, UIWeaponCursor_frameChange);
     UI_updateScore(0);
     UI_updateTimeLeft(timeLeft);
     UI_updateResult(RESULT_NONE);

@@ -4,7 +4,11 @@
 #include "player.h"
 #include "gameplay.h"
 
+u16 UI_loadSpriteFrames(u16 tileIndex);
+void UI_freeSpriteFrames();
+
 void UI_initHud(PlayerObject *player, u16 timeLeft);
+
 void UI_updateResult(GameResult result);
 void UI_updateScore(u32 score);
 void UI_updateTimeLeft(u16 timeLeft);

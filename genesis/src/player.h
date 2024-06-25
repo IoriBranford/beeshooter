@@ -17,6 +17,9 @@ typedef struct PlayerObject {
     u8 weapon, lives;
 } PlayerObject;
 
+u16 PLAYER_loadSpriteFrames(u16 tileIndex);
+void PLAYER_freeSpriteFrames();
+
 void PLAYER_init(PlayerObject *self);
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state);
 void PLAYER_joyUpdate(PlayerObject *self, u16 state);

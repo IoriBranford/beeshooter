@@ -194,10 +194,15 @@ int gameplay() {
     VDP_setTextPriority(1);
     VDP_setTextPalette(PLAYERPAL);
 
-    LEVEL_init();
-    SYS_doVBlankProcess();
+    u16 tileIndex = TILE_USER_INDEX;
 
     SPR_reset();
+    tileIndex = PLAYER_loadSpriteFrames(tileIndex);
+    tileIndex = UI_loadSpriteFrames(tileIndex);
+
+    LEVEL_init(tileIndex);
+    tileIndex += bgTileset.numTile;
+    SYS_doVBlankProcess();
 
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
@@ -247,6 +252,8 @@ int gameplay() {
         SYS_doVBlankProcess();
     }
 
+    PLAYER_freeSpriteFrames();
+    UI_freeSpriteFrames();
     LEVEL_destroy();
     XGM_stopPlay();
     POOL_destroy(gobjPool);
