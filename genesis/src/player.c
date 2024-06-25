@@ -30,7 +30,7 @@ const u8 MERCY_INVUL = 60;
 #define BULLETSPEED FIX16(16)
 #define BULLETDIAGONALSPEED FIX16(0.707106781 * 16)
 
-extern const GameObjectDefinition
+extern GameObjectDefinition
     defPlayer,
     defPlayerShot;
 

@@ -142,7 +142,7 @@ return `{
                     let definition
                     if (object.className.length > 0) {
                         definition = `&def${object.className}`
-                        objectDefs[object.className] = `extern const GameObjectDefinition def${object.className};`
+                        objectDefs[object.className] = `extern GameObjectDefinition def${object.className};`
                     } else {
                         definition = '0 /* to be assigned */'
                     }

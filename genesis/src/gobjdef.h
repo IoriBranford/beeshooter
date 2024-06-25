@@ -20,11 +20,27 @@ struct GameObjectDefinition {
     const GameObjectDefinition *bulletDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;
+    u16 **aniFrameTiles;
+    FrameChangeCallback *onFrameChange;
     fix16 bodyW, bodyH;
     Team team;
     PathParent pathParent;
     void (*update)(GameObject*);
     void (*onDefeat)(GameObject*);
 };
+
+u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs);
+
+extern GameObjectDefinition
+    defHoneyPot,
+    defPowerup,
+    defAnt,
+    defFlyBullet,
+    defFly,
+    defAntBig,
+    defAlienGunner,
+    defAlienPillager;
+
+extern GameObjectDefinition *part1defs[8];
 
 #endif

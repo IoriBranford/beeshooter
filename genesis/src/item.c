@@ -13,7 +13,7 @@
 const fix16 POWERUP_SWAY_SPEED = FIX16(3);
 const u32 POWERUP_SWAY_PERIOD = 32;
 
-extern const GameObjectDefinition defPowerup;
+extern GameObjectDefinition defPowerup;
 
 void GOBJ_openHoneypot(GameObject *self) {
     const GameObjectDefinition *def = self->definition;

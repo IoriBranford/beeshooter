@@ -7,7 +7,9 @@
 #include "bullet.h"
 #include "item.h"
 
-const GameObjectDefinition defPlayer = {
+#define GOBJ_FRAME_CHANGE(name) void name##_frameChange(Sprite *sprite) {SPR_setVRAMTileIndex(sprite, name.aniFrameTiles[sprite->animInd][sprite->frameInd]);}
+
+GameObjectDefinition defPlayer = {
     .health = 1,
     .spriteDepth = -100,
     .spriteDef = &sprPlayer,
@@ -15,7 +17,7 @@ const GameObjectDefinition defPlayer = {
     .bodyW = FIX16(4),
     .bodyH = FIX16(4),
 };
-const GameObjectDefinition defPlayerShot = {
+GameObjectDefinition defPlayerShot = {
     .team = TEAM_PLAYERSHOT,
     .speed = FIX16(16),
     .spriteDef = &sprPlayerShot,
@@ -25,7 +27,8 @@ const GameObjectDefinition defPlayerShot = {
     // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
 };
-const GameObjectDefinition defAnt = {
+GOBJ_FRAME_CHANGE(defAnt)
+GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
     .defeatPoints = 200,
@@ -34,9 +37,11 @@ const GameObjectDefinition defAnt = {
     .palette = &palAnt,
     .bodyW = FIX16(8), .bodyH = FIX16(6),
     .defeatSoundDef = &sndBugKill1,
-    .update = GOBJ_updatePathWalker
+    .update = GOBJ_updatePathWalker,
+    .onFrameChange = defAnt_frameChange
 };
-const GameObjectDefinition defHoneyPot = {
+GOBJ_FRAME_CHANGE(defHoneyPot)
+GameObjectDefinition defHoneyPot = {
     .team = TEAM_ENEMY,
     .health = 1,
     .spriteDef = &sprHoneyPot,
@@ -45,9 +50,11 @@ const GameObjectDefinition defHoneyPot = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
-    .onDefeat = GOBJ_openHoneypot
+    .onDefeat = GOBJ_openHoneypot,
+    .onFrameChange = defHoneyPot_frameChange
 };
-const GameObjectDefinition defPowerup = {
+GOBJ_FRAME_CHANGE(defPowerup)
+GameObjectDefinition defPowerup = {
     .team = TEAM_ENEMYSHOT,
     .health = 1,
     .spriteDef = &sprPowerup,
@@ -55,9 +62,11 @@ const GameObjectDefinition defPowerup = {
     .palette = &palPlayer,
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
-    .update = GOBJ_updatePowerupRise
+    .update = GOBJ_updatePowerupRise,
+    .onFrameChange = defPowerup_frameChange
 };
-const GameObjectDefinition defFlyBullet = {
+GOBJ_FRAME_CHANGE(defFlyBullet)
+GameObjectDefinition defFlyBullet = {
     .team = TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
     .speed = FIX16(3),
@@ -65,9 +74,11 @@ const GameObjectDefinition defFlyBullet = {
     .spriteDepth = -20,
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
-    .update = BULLET_update
+    .update = BULLET_update,
+    .onFrameChange = defFlyBullet_frameChange
 };
-const GameObjectDefinition defFly = {
+GOBJ_FRAME_CHANGE(defFly)
+GameObjectDefinition defFly = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
     .defeatPoints = 500,
@@ -78,9 +89,10 @@ const GameObjectDefinition defFly = {
     .defeatSoundDef = &sndBugKill2,
     .pathParent = PATHPARENT_TRIGGER,
     .bulletDef = &defFlyBullet,
-    .update = GOBJ_updatePathWalker
+    .update = GOBJ_updatePathWalker,
+    .onFrameChange = defFly_frameChange
 };
-const GameObjectDefinition defHoneyCell = {
+GameObjectDefinition defHoneyCell = {
     .team = TEAM_ENEMY,
     .health = 1,
     .spriteDef = &sprPowerup,
@@ -89,9 +101,11 @@ const GameObjectDefinition defHoneyCell = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
-    .onDefeat = GOBJ_openHoneypot
+    .onDefeat = GOBJ_openHoneypot,
+    .onFrameChange = defPowerup_frameChange
 };
-const GameObjectDefinition defAntBig = {
+GOBJ_FRAME_CHANGE(defAntBig)
+GameObjectDefinition defAntBig = {
     .team = TEAM_ENEMY,
     .health = 16, .speed = FIX16(1),
     .defeatPoints = 2500,
@@ -100,9 +114,11 @@ const GameObjectDefinition defAntBig = {
     .palette = &palAnt,
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
-    .update = GOBJ_updateSpawner
+    .update = GOBJ_updateSpawner,
+    .onFrameChange = defAntBig_frameChange
 };
-const GameObjectDefinition defAlienGunner = {
+GOBJ_FRAME_CHANGE(defAlienGunner)
+GameObjectDefinition defAlienGunner = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
     .defeatPoints = 500,
@@ -111,9 +127,11 @@ const GameObjectDefinition defAlienGunner = {
     .palette = &palAlien,
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
-    .update = GOBJ_updatePathWalker
+    .update = GOBJ_updatePathWalker,
+    .onFrameChange = defAlienGunner_frameChange
 };
-const GameObjectDefinition defAlienPillager = {
+GOBJ_FRAME_CHANGE(defAlienPillager)
+GameObjectDefinition defAlienPillager = {
     .team = TEAM_ENEMY,
     .health = 4, .speed = FIX16(2),
     .defeatPoints = 250,
@@ -123,15 +141,42 @@ const GameObjectDefinition defAlienPillager = {
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .animInd = 2,
     .defeatSoundDef = &sndBugKill2,
-    .update = GOBJ_updatePathWalker
+    .update = GOBJ_updatePathWalker,
+    .onFrameChange = defAlienPillager_frameChange
 };
-const GameObjectDefinition defAlienMind;
-const GameObjectDefinition defAcidAnt;
-const GameObjectDefinition defWasp;
-const GameObjectDefinition defReinforcedHoneyPot;
-const GameObjectDefinition defAntHole;
-const GameObjectDefinition defBeetle;
-const GameObjectDefinition defWaspShooter;
-const GameObjectDefinition defWaspBoss;
-const GameObjectDefinition defTick;
-const GameObjectDefinition defWaspEgg;
+GameObjectDefinition defAlienMind;
+GameObjectDefinition defAcidAnt;
+GameObjectDefinition defWasp;
+GameObjectDefinition defReinforcedHoneyPot;
+GameObjectDefinition defAntHole;
+GameObjectDefinition defBeetle;
+GameObjectDefinition defWaspShooter;
+GameObjectDefinition defWaspBoss;
+GameObjectDefinition defTick;
+GameObjectDefinition defWaspEgg;
+
+GameObjectDefinition *part1defs[8] = {
+    &defHoneyPot,
+    &defPowerup,
+    &defAnt,
+    &defFlyBullet,
+    &defFly,
+    &defAntBig,
+    &defAlienGunner,
+    &defAlienPillager
+};
+
+u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs) {
+    u16 numTiles;
+    GameObjectDefinition **def = defs;
+    for (int i = 0; i < numDefs; ++i) {
+        const SpriteDefinition *spriteDef = (*def)->spriteDef;
+        if (spriteDef) {
+            (*def)->aniFrameTiles = SPR_loadAllFrames(spriteDef, tileIndex, &numTiles);
+            tileIndex += numTiles;
+        }
+        ++def;
+    }
+    defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
+    return tileIndex;
+}

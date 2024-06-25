@@ -202,6 +202,7 @@ int gameplay() {
 
     LEVEL_init(tileIndex);
     tileIndex += bgTileset.numTile;
+    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part1defs)/sizeof(part1defs[0]), part1defs);
     SYS_doVBlankProcess();
 
     PLAYER_init(&player);
