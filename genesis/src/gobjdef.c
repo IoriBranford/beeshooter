@@ -1,6 +1,5 @@
 #include "gobjdef.h"
-#include "maths.h"
-#include "map.h"
+#include <genesis.h>
 #include "res_gfx.h"
 #include "res_audio.h"
 #include "gobject.h"
@@ -179,4 +178,15 @@ u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **
     }
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
     return tileIndex;
+}
+
+void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
+    defHoneyCell.aniFrameTiles = NULL;
+    GameObjectDefinition **def = defs;
+    for (int i = 0; i < numDefs; ++i) {
+        if ((*def)->aniFrameTiles) {
+            MEM_free((*def)->aniFrameTiles);
+            (*def)->aniFrameTiles = NULL;
+        }
+    }
 }

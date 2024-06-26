@@ -30,6 +30,7 @@ struct GameObjectDefinition {
 };
 
 u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs);
+void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs);
 
 extern GameObjectDefinition
     defHoneyPot,

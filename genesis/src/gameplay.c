@@ -253,6 +253,7 @@ int gameplay() {
         SYS_doVBlankProcess();
     }
 
+    GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(part1defs[0]), part1defs);
     PLAYER_freeSpriteFrames();
     UI_freeSpriteFrames();
     LEVEL_destroy();
