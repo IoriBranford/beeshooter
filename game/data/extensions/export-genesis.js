@@ -279,12 +279,7 @@ return `static const LevelObject lobj${object.id} = {
                 else
                     action = `0 /* to be assigned */`
                 let count = trigger.resolvedProperty('count') || 0
-return `/* ${i.toString().padStart(3, ' ')} */
-{
-    .x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)},
-    .action = ${action}, .group = &${toCName(trigger.layer.name)},
-    .count = ${count}
-}`
+                return `/* ${i.toString().padStart(3, ' ')} */ { .group = &${toCName(trigger.layer.name)}, .action = ${action}, .count = ${count}, .x = ${Math.ceil(trigger.x)}, .y = ${Math.ceil(trigger.y)} }`
             }).join(',\n'),
             '};',
             `LevelObjectGroup *${baseName}_groups[] = {`,
