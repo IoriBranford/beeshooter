@@ -128,7 +128,7 @@ return `{
 
             if (levelObjectGroup.LevelObject.length > 0) {
                 cCode.push(...levelObjectGroup.LevelObject.map(object => {
-                    let objPathPointIndex = 0
+                    let objPathPointIndex = -1
                     let objPath = object.resolvedProperty('path')
                     if (objPath) {
                         objPathPointIndex = objPath.polygon.findIndex(point => objPath.x + point.x == object.x && objPath.y + point.y == object.y)
@@ -138,7 +138,7 @@ return `{
                             return objPathPointIndex > -1
                         })
                     }
-                    objPathPointIndex = Math.max(0, objPathPointIndex)
+                    objPathPointIndex++
                     let definition
                     if (object.className.length > 0) {
                         definition = `&def${object.className}`
