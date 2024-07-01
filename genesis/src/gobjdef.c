@@ -6,8 +6,6 @@
 #include "bullet.h"
 #include "item.h"
 
-#define GOBJ_FRAME_CHANGE(name) void name##_frameChange(Sprite *sprite) {SPR_setVRAMTileIndex(sprite, name.aniFrameTiles[sprite->animInd][sprite->frameInd]);}
-
 GameObjectDefinition defPlayer = {
     .health = 1,
     .spriteDepth = -100,
@@ -26,7 +24,6 @@ GameObjectDefinition defPlayerShot = {
     // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
 };
-GOBJ_FRAME_CHANGE(defAnt)
 GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
@@ -37,9 +34,7 @@ GameObjectDefinition defAnt = {
     .bodyW = FIX16(8), .bodyH = FIX16(6),
     .defeatSoundDef = &sndBugKill1,
     .update = GOBJ_updatePathWalker,
-    .onFrameChange = defAnt_frameChange
 };
-GOBJ_FRAME_CHANGE(defHoneyPot)
 GameObjectDefinition defHoneyPot = {
     .team = TEAM_ENEMY,
     .health = 1,
@@ -50,9 +45,7 @@ GameObjectDefinition defHoneyPot = {
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
     .onDefeat = GOBJ_openHoneypot,
-    .onFrameChange = defHoneyPot_frameChange
 };
-GOBJ_FRAME_CHANGE(defPowerup)
 GameObjectDefinition defPowerup = {
     .team = TEAM_ENEMYSHOT,
     .health = 1,
@@ -62,9 +55,7 @@ GameObjectDefinition defPowerup = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise,
-    .onFrameChange = defPowerup_frameChange
 };
-GOBJ_FRAME_CHANGE(defFlyBullet)
 GameObjectDefinition defFlyBullet = {
     .team = TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
@@ -74,9 +65,7 @@ GameObjectDefinition defFlyBullet = {
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
-    .onFrameChange = defFlyBullet_frameChange
 };
-GOBJ_FRAME_CHANGE(defFly)
 GameObjectDefinition defFly = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
@@ -89,7 +78,6 @@ GameObjectDefinition defFly = {
     .pathParent = PATHPARENT_TRIGGER,
     .bulletDef = &defFlyBullet,
     .update = GOBJ_updatePathWalker,
-    .onFrameChange = defFly_frameChange
 };
 GameObjectDefinition defHoneyCell = {
     .team = TEAM_ENEMY,
@@ -101,9 +89,7 @@ GameObjectDefinition defHoneyCell = {
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
     .onDefeat = GOBJ_openHoneypot,
-    .onFrameChange = defPowerup_frameChange
 };
-GOBJ_FRAME_CHANGE(defAntBig)
 GameObjectDefinition defAntBig = {
     .team = TEAM_ENEMY,
     .health = 16, .speed = FIX16(1),
@@ -114,9 +100,7 @@ GameObjectDefinition defAntBig = {
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updateSpawner,
-    .onFrameChange = defAntBig_frameChange
 };
-GOBJ_FRAME_CHANGE(defAlienGunner)
 GameObjectDefinition defAlienGunner = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
@@ -127,9 +111,7 @@ GameObjectDefinition defAlienGunner = {
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker,
-    .onFrameChange = defAlienGunner_frameChange
 };
-GOBJ_FRAME_CHANGE(defAlienPillager)
 GameObjectDefinition defAlienPillager = {
     .team = TEAM_ENEMY,
     .health = 4, .speed = FIX16(2),
@@ -141,7 +123,6 @@ GameObjectDefinition defAlienPillager = {
     .animInd = 2,
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker,
-    .onFrameChange = defAlienPillager_frameChange
 };
 GameObjectDefinition defAlienMind;
 GameObjectDefinition defAcidAnt;

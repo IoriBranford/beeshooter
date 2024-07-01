@@ -1,6 +1,7 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "bullet.h"
+#include "sprite.h"
 #include <genesis.h>
 
 void GOBJ_init(GameObject *self) {
@@ -68,9 +69,10 @@ void GOBJ_initSprite(GameObject *self) {
     }
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     s16 sprX = fix16ToRoundedInt(tl.x), sprY = fix16ToRoundedInt(tl.y);
-    if (def->onFrameChange && def->aniFrameTiles) {
+    if (def->aniFrameTiles) {
         self->sprite = SPR_addSpriteEx(spriteDef, sprX, sprY, attr, 0);
-        SPR_setFrameChangeCallback(self->sprite, def->onFrameChange);
+        self->sprite->data = (u32)def->aniFrameTiles;
+        SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
     } else {
         self->sprite = SPR_addSprite(spriteDef, sprX, sprY, attr);
     }

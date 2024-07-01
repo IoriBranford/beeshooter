@@ -1,5 +1,6 @@
 #include <genesis.h>
 #include "ui.h"
+#include "sprite.h"
 #include "res_gfx.h"
 
 Sprite *weaponSelectSprite, *weaponCursorSprite;
@@ -23,19 +24,13 @@ void UI_freeSpriteFrames() {
     weaponSelectFrames = NULL;
 }
 
-void UIWeaponSelect_frameChange(Sprite *sprite) {
-    SPR_setVRAMTileIndex(sprite, weaponSelectFrames[sprite->animInd][sprite->frameInd]);
-}
-
-void UIWeaponCursor_frameChange(Sprite *sprite) {
-    SPR_setVRAMTileIndex(sprite, weaponCursorFrames[sprite->animInd][sprite->frameInd]);
-}
-
 void UI_initHud(PlayerObject *player, u16 timeLeft) {
     weaponSelectSprite = SPR_addSpriteEx(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false), 0);
     weaponCursorSprite = SPR_addSpriteEx(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false), 0);
-    SPR_setFrameChangeCallback(weaponSelectSprite, UIWeaponSelect_frameChange);
-    SPR_setFrameChangeCallback(weaponCursorSprite, UIWeaponCursor_frameChange);
+    weaponSelectSprite->data = (u32)weaponSelectFrames;
+    weaponCursorSprite->data = (u32)weaponCursorFrames;
+    SPR_setFrameChangeCallback(weaponSelectSprite, SPR_defaultFrameChange);
+    SPR_setFrameChangeCallback(weaponCursorSprite, SPR_defaultFrameChange);
     UI_updateScore(0);
     UI_updateTimeLeft(timeLeft);
     UI_updateResult(RESULT_NONE);

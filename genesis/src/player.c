@@ -2,6 +2,7 @@
 #include "bullet.h"
 #include "gameplay.h"
 #include "ui.h"
+#include "sprite.h"
 
 #include <genesis.h>
 
@@ -79,10 +80,6 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
     },
 };
 
-void PLAYERshotsprite_frameChange(Sprite *sprite) {
-    SPR_setVRAMTileIndex(sprite, shotAniFrame[sprite->animInd][sprite->frameInd]);
-}
-
 void PLAYER_shoot(PlayerObject *self) {
     const GameObjectDefinition *bulletDef = &defPlayerShot;
     const SpriteDefinition *bulletSpriteDef = bulletDef->spriteDef;
@@ -109,7 +106,8 @@ void PLAYER_shoot(PlayerObject *self) {
                 fix16ToRoundedInt(bullet->centerX - FIX16(bulletSpriteDef->w>>1)),
                 fix16ToRoundedInt(bullet->centerY - FIX16(bulletSpriteDef->h>>1)),
                 attr, 0);
-            SPR_setFrameChangeCallback(bullet->sprite, PLAYERshotsprite_frameChange);
+            bullet->sprite->data = (u32)shotAniFrame;
+            SPR_setFrameChangeCallback(bullet->sprite, SPR_defaultFrameChange);
             
             u16 anim = shot->animAndFlags & 0xFF;
             SPR_setAnim(bullet->sprite, anim);
@@ -256,10 +254,6 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
     UI_updateWeaponLevel(self->health);
 }
 
-void PLAYERsprite_frameChange(Sprite *sprite) {
-    SPR_setVRAMTileIndex(sprite, shipAniFrame[sprite->animInd][sprite->frameInd]);
-}
-
 void PLAYER_init(PlayerObject *self) {
     self->definition = &defPlayer;
     self->lives = 3;
@@ -269,7 +263,8 @@ void PLAYER_init(PlayerObject *self) {
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
         TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE), 0);
-    SPR_setFrameChangeCallback(self->sprite, PLAYERsprite_frameChange);
+    self->sprite->data = (u32)shipAniFrame;
+    SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
     SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);

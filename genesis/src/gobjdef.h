@@ -21,7 +21,6 @@ struct GameObjectDefinition {
     const SpriteDefinition *spriteDef;
     const Palette *palette;
     u16 **aniFrameTiles;
-    FrameChangeCallback *onFrameChange;
     fix16 bodyW, bodyH;
     Team team;
     PathParent pathParent;
