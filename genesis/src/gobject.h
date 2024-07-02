@@ -34,6 +34,7 @@ typedef struct GameObject {
     fix16 centerX, centerY;
     fix16 velX, velY;
     fix16 destX, destY;
+    fix16 bodyX0, bodyY0, bodyX1, bodyY1;
 
     const Path *path;
     u16 pathIndex;
@@ -61,6 +62,10 @@ bool GOBJ_isSpriteOffSideOrBottom(GameObject *self);
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
 bool GOBJ_isHitting(GameObject *self, GameObject *other);
+bool GOBJ_isBodyOnScreen(GameObject *self);
+bool GOBJ_isBodyOffSideOrBottom(GameObject *self);
+bool GOBJ_isBodyOffBottom(GameObject *self);
+void GOBJ_updateBody(GameObject *self);
 
 GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, fix16 centerY);
 void GOBJ_init(GameObject *self);

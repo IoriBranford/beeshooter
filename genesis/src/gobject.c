@@ -22,6 +22,7 @@ void GOBJ_init(GameObject *self) {
     self->health = 1;
     self->team = TEAM_NONE;
     self->invulTimer = 0;
+    self->bodyX0 = self->bodyX1 = self->bodyY0 = self->bodyY1 = 0;
     GOBJ_startShooting(self, 0, 0);
 }
 
@@ -133,6 +134,33 @@ bool GOBJ_isHitting(GameObject *self, GameObject *other) {
         && (y - hh <= y2 + hh2);
 }
 
+void GOBJ_updateBody(GameObject *self) {
+    fix16 x = self->centerX, y = self->centerY, hw = 0, hh = 0;
+    const GameObjectDefinition *def = self->definition;
+    if (def) {
+        hw = def->bodyW;
+        hh = def->bodyH;
+    }
+    self->bodyX0 = x - hw;
+    self->bodyX1 = x + hw;
+    self->bodyY0 = y - hh;
+    self->bodyY1 = y + hh;
+}
+
+bool GOBJ_isBodyHitting(GameObject *self, GameObject *other) {
+    return self->bodyX1 >= other->bodyX0
+        && self->bodyX0 <= other->bodyX1
+        && self->bodyY1 >= other->bodyY0
+        && self->bodyY0 <= other->bodyY1;
+}
+
+bool GOBJ_isBodyOnScreen(GameObject *self) {
+    return self->bodyX1 >= 0
+        && self->bodyX0 <= GAME_BOUNDW
+        && self->bodyY1 >= 0
+        && self->bodyY0 <= GAME_BOUNDH;
+}
+
 bool GOBJ_isSpriteOnScreen(GameObject *self) {
     return GOBJ_isRectOverlapping(self, 0, 0, GAME_BOUNDW, GAME_BOUNDH);
 }
@@ -151,6 +179,18 @@ bool GOBJ_isSpriteOffSideOrBottom(GameObject *self) {
     result |= (y0 >= GAME_BOUNDH) << DIR_DOWN;
     result |= (x1 <= 0) << DIR_LEFT;
     return result;
+}
+
+bool GOBJ_isBodyOffSideOrBottom(GameObject *self) {
+    bool result = 0;
+    result |= (self->bodyX0 >= GAME_BOUNDW) << DIR_RIGHT;
+    result |= (self->bodyY0 >= GAME_BOUNDH) << DIR_DOWN;
+    result |= (self->bodyX1 <= 0) << DIR_LEFT;
+    return result;
+}
+
+bool GOBJ_isBodyOffBottom(GameObject *self) {
+    return (self->bodyY0 >= GAME_BOUNDH);
 }
 
 bool GOBJ_isSpriteOffBottom(GameObject *self) {
