@@ -139,7 +139,7 @@ void GAME_end(GameResult r) {
 void GAME_doCollision() {
     for (u8 e = 0; e < teamSizes[TEAM_ENEMY];) {
         GameObject *enemy = enemies[e];
-        if (enemy->invulTimer || !GOBJ_isSpriteOnScreen(enemy)) {
+        if (enemy->invulTimer || !GOBJ_isBodyOnScreen(enemy)) {
             ++e;
             continue;
         }
@@ -170,9 +170,11 @@ void GAME_doCollision() {
         }
     }
 
+    GameObject *gobjPlayer = (GameObject*)&player;
+    GOBJ_updateBody(gobjPlayer);
     for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT];) {
         GameObject *enemyShot = enemyShots[s];
-        if (GOBJ_isHitting((GameObject*)&player, enemyShot)) {
+        if (GOBJ_isHitting(gobjPlayer, enemyShot)) {
             u16 damage = enemyShot->definition->damage;
             GAME_putObjectInTeam(enemyShot, TEAM_NONE);
             GOBJ_defeat(enemyShot);

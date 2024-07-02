@@ -7,7 +7,8 @@
 void BULLET_update(GameObject *self) {
     self->centerX += self->velX;
     self->centerY += self->velY;
-    if (GOBJ_isSpriteOnScreen(self)) {
+    GOBJ_updateBody(self);
+    if (GOBJ_isBodyOnScreen(self)) {
         GOBJ_updateSprite(self);
     } else {
         GAME_releaseObject(self);

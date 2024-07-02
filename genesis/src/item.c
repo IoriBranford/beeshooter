@@ -34,9 +34,11 @@ void GOBJ_updatePowerupDescend(GameObject *self) {
     self->velX = fix16Mul(cosFix16(fix32ToInt(movedDistY * 512 / POWERUP_SWAY_PERIOD)), self->speed);
     self->centerX += self->velX;
     self->centerY += self->velY;
-    GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffSideOrBottom(self)) {
+    GOBJ_updateBody(self);
+    if (GOBJ_isBodyOffBottom(self)) {
         GAME_releaseObject(self);
+    } else {
+        GOBJ_updateSprite(self);
     }
 }
 
@@ -50,5 +52,6 @@ void GOBJ_updatePowerupRise(GameObject *self) {
         self->speed = velX < 0 ? -POWERUP_SWAY_SPEED : POWERUP_SWAY_SPEED;
         OBJ_setUpdateMethod((Object*)self, (ObjectCallback*) GOBJ_updatePowerupDescend);
     }
+    GOBJ_updateBody(self);
     GOBJ_updateSprite(self);
 }

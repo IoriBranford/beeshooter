@@ -43,6 +43,7 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
         return NULL;
     obj->centerX = centerX;
     obj->centerY = centerY;
+    GOBJ_updateBody(obj);
     obj->health = def->health;
     obj->speed = def->speed;
     obj->definition = def;
@@ -115,25 +116,6 @@ bool GOBJ_isRectOverlapping(GameObject *self, fix16 rx, fix16 ry, fix16 rw, fix1
     return (x1 >= rx && x0 <= rx + rw && y1 >= ry && y0 <= ry + rh);
 }
 
-bool GOBJ_isHitting(GameObject *self, GameObject *other) {
-    fix16 x = self->centerX, y = self->centerY, hw = 0, hh = 0;
-    fix16 x2 = other->centerX, y2 = other->centerY, hw2 = 0, hh2 = 0;
-    const GameObjectDefinition *myDef = self->definition;
-    const GameObjectDefinition *theirDef = other->definition;
-    if (myDef) {
-        hw = myDef->bodyW;
-        hh = myDef->bodyH;
-    }
-    if (theirDef) {
-        hw2 = theirDef->bodyW;
-        hh2 = theirDef->bodyH;
-    }
-    return (x + hw >= x2 - hw2)
-        && (x - hw <= x2 + hw2)
-        && (y + hh >= y2 - hh2)
-        && (y - hh <= y2 + hh2);
-}
-
 void GOBJ_updateBody(GameObject *self) {
     fix16 x = self->centerX, y = self->centerY, hw = 0, hh = 0;
     const GameObjectDefinition *def = self->definition;
@@ -147,7 +129,7 @@ void GOBJ_updateBody(GameObject *self) {
     self->bodyY1 = y + hh;
 }
 
-bool GOBJ_isBodyHitting(GameObject *self, GameObject *other) {
+bool GOBJ_isHitting(GameObject *self, GameObject *other) {
     return self->bodyX1 >= other->bodyX0
         && self->bodyX0 <= other->bodyX1
         && self->bodyY1 >= other->bodyY0
@@ -209,8 +191,8 @@ void GOBJ_updateSprite(GameObject *self) {
             fix16ToRoundedInt(self->centerX) - (sprite->definition->w >> 1),
             fix16ToRoundedInt(self->centerY) - (sprite->definition->h >> 1));
     } else {
-        const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
-        if (spriteDef && GOBJ_isSpriteOnScreen(self)) {
+        // const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
+        if (GOBJ_isBodyOnScreen(self)) {
             GOBJ_initSprite(self);
         }
     }
@@ -318,8 +300,9 @@ void GOBJ_followStage(GameObject *self) {
 
 void GOBJ_updateIdleOnStage(GameObject *self) {
     GOBJ_followStage(self);
+    GOBJ_updateBody(self);
     GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffSideOrBottom(self)) {
+    if (GOBJ_isBodyOffBottom(self)) {
         GAME_releaseObject(self);
     }
 }
@@ -337,6 +320,7 @@ void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed)
         velY = 0;
         self->centerX = destX;
         self->centerY = destY;
+        GOBJ_updateBody(self);
     }
     self->pathPointDistLeft = dist;
     self->speed = speed;
@@ -351,6 +335,7 @@ bool GOBJ_updateMovement(GameObject *self) {
         self->pathPointDistLeft -= self->speed;
         self->centerX += self->velX;
         self->centerY += self->velY;
+        GOBJ_updateBody(self);
         return false;
     } else {
         self->pathPointDistLeft = 0;
@@ -358,6 +343,7 @@ bool GOBJ_updateMovement(GameObject *self) {
         self->velY = 0;
         self->centerX = self->destX;
         self->centerY = self->destY;
+        GOBJ_updateBody(self);
         return true;
     }
 }
@@ -477,21 +463,26 @@ void GOBJ_updatePathWalker(GameObject *self) {
     GOBJ_followPath(self);
     if (!GOBJ_isAllocated(self))
         return;
+    GOBJ_updateBody(self);
+    bool offscreen = GOBJ_isBodyOffSideOrBottom(self);
+    if (offscreen) {
+        if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints) {
+            GAME_releaseObject(self);
+            return;
+        }
+    }
     GOBJ_updateInvul(self);
     GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
-    bool offscreen = GOBJ_isSpriteOffSideOrBottom(self);
-    if (offscreen) {
-        if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints)
-            GAME_releaseObject(self);
-    }
 }
 
 void GOBJ_updateSpawner(GameObject *self) {
     GOBJ_followStage(self);
+    GOBJ_updateBody(self);
+    if (GOBJ_isBodyOffBottom(self)) {
+        GAME_releaseObject(self);
+        return;
+    }
     GOBJ_updateSpawning(self);
     GOBJ_updateSprite(self);
-    if (GOBJ_isSpriteOffBottom(self)) {
-        GAME_releaseObject(self);
-    }
 }
