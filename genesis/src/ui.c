@@ -38,7 +38,11 @@ void UI_initHud(PlayerObject *player, u16 timeLeft) {
     UI_updateWeaponLevel(player->health);
     UI_updateWeaponSelect(player->weapon);
     UI_updateSpeed(player->speed);
+#ifdef DEBUG
+#ifdef DEBUG_OBJECT_COUNT
     UI_updateObjectCount(0);
+#endif
+#endif
 }
 
 static const char *RESULT_MESSAGES[RESULTS] = {

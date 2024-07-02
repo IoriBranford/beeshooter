@@ -30,7 +30,7 @@ static const u32 EXTEND_SCORES[] = {
 };
 
 static u16 timeLeft;
-static u32 score;
+static u32 score, lastFrameScore;
 static u8 extendScoreIndex;
 static u8 result;
 static bool paused, running, timePaused;
@@ -77,7 +77,6 @@ void GAME_scorePoints(u32 points) {
         UI_updateLives(player.lives);
     }
     score = min(MAXSCORE, newScore);
-    UI_updateScore(score);
 }
 
 void GAME_setTimerPaused(bool paused) {
@@ -113,7 +112,11 @@ void GAME_putObjectInTeam(GameObject *gobj, Team team) {
 GameObject* GAME_createObject() {
     GameObject *gobj = (GameObject*)OBJ_create(gobjPool);
     GOBJ_init(gobj);
+#ifdef DEBUG
+#ifdef DEBUG_OBJECT_COUNT
     UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
+#endif
+#endif
     return gobj;
 }
 
@@ -121,7 +124,11 @@ void GAME_releaseObject(GameObject *gobj) {
     GAME_putObjectInTeam(gobj, TEAM_NONE);
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
+#ifdef DEBUG
+#ifdef DEBUG_OBJECT_COUNT
     UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
+#endif
+#endif
 }
 
 void GAME_end(GameResult r) {
@@ -209,7 +216,7 @@ int gameplay() {
     JOY_setEventHandler(gameplay_joyEvent);
 
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
-    score = 0;
+    score = lastFrameScore = 0;
     extendScoreIndex = 0;
     result = RESULT_NONE;
     timeLeft = GAMETIME;
@@ -248,8 +255,17 @@ int gameplay() {
         }
 
         SPR_update();
+#ifdef DEBUG
+#ifdef DEBUG_PERF
         UI_updateFPS(SYS_getFPS());
         UI_updateCPU(SYS_getCPULoad());
+#endif
+#endif
+        if (score != lastFrameScore) {
+            UI_updateScore(score);
+            lastFrameScore = score;
+        }
+
         SYS_doVBlankProcess();
     }
 
