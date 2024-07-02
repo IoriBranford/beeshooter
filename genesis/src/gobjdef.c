@@ -5,6 +5,7 @@
 #include "gobject.h"
 #include "bullet.h"
 #include "item.h"
+#include "enemy.h"
 
 GameObjectDefinition defPlayer = {
     .health = 1,
@@ -100,6 +101,29 @@ GameObjectDefinition defAntBig = {
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updateSpawner,
+    .onDefeat = ENEMY_onDefeatBigAnt
+};
+GameObjectDefinition defAntBigHead = {
+    .team = TEAM_ENEMY,
+    .health = 4, .speed = FIX16(1),
+    .defeatPoints = 250,
+    .spriteDef = &sprAntBigHead,
+    .spriteDepth = -10,
+    .palette = &palAnt,
+    .bodyW = FIX16(10), .bodyH = FIX16(10),
+    .defeatSoundDef = &sndBugKill2,
+    .update = GOBJ_updateFaller,
+};
+GameObjectDefinition defAntBigButt = {
+    .team = TEAM_ENEMY,
+    .health = 4, .speed = FIX16(1),
+    .defeatPoints = 250,
+    .spriteDef = &sprAntBigButt,
+    .spriteDepth = -10,
+    .palette = &palAnt,
+    .bodyW = FIX16(10), .bodyH = FIX16(10),
+    .defeatSoundDef = &sndBugKill2,
+    .update = GOBJ_updateFaller,
 };
 GameObjectDefinition defAlienGunner = {
     .team = TEAM_ENEMY,

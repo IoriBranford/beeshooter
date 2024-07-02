@@ -38,6 +38,8 @@ extern GameObjectDefinition
     defFlyBullet,
     defFly,
     defAntBig,
+    defAntBigHead,
+    defAntBigButt,
     defAlienGunner,
     defAlienPillager;
 
