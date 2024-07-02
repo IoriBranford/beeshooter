@@ -63,10 +63,11 @@ void UI_updateResult(GameResult result) {
 }
 
 void UI_updateScore(u32 score) {
+    score = u32ToBCD(score);
     string[7] = '\0';
     for (int i = 6; i >= 0; --i) {
-        string[i] = '0' + (score % 10);
-        score /= 10;
+        string[i] = '0' + (score & 0xF);
+        score >>= 4;
     }
     VDP_drawText(string, 8, 1);
 }
@@ -78,15 +79,17 @@ void UI_updateTimerMinutes(u16 minutes) {
 }
 
 void UI_updateTimerSeconds(u16 seconds) {
-    string[0] = '0' + (seconds / 10);
-    string[1] = '0' + (seconds % 10);
+    seconds = u16ToBCD(seconds);
+    string[0] = '0' + ((seconds >> 4) & 0xF);
+    string[1] = '0' + (seconds & 0xF);
     string[2] = '\0';
     VDP_drawText(string, 19, 1);
 }
 
 void UI_updateTimerFrames(u16 frames) {
-    string[0] = '0' + (frames / 10);
-    string[1] = '0' + (frames % 10);
+    frames = u16ToBCD(frames);
+    string[0] = '0' + ((frames >> 4) & 0xF);
+    string[1] = '0' + (frames & 0xF);
     string[2] = '\0';
     VDP_drawText(string, 22, 1);
 }
