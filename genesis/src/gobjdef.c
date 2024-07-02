@@ -27,7 +27,7 @@ GameObjectDefinition defPlayerShot = {
 GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
-    .defeatPoints = 200,
+    .defeatPoints = 100,
     .spriteDef = &sprAnt,
     .spriteDepth = -1,
     .palette = &palAnt,
