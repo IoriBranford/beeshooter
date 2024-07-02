@@ -209,7 +209,7 @@ void GOBJ_updateInvul(GameObject *self) {
     if (self->invulTimer) {
         --self->invulTimer;
         if (self->sprite) {
-            SPR_setVisibility(self->sprite, self->invulTimer % 2 ? HIDDEN : VISIBLE);
+            SPR_setVisibility(self->sprite, (self->invulTimer & 1) ? HIDDEN : VISIBLE);
         }
     }
 }

@@ -194,7 +194,7 @@ void PLAYER_updatePlay(PlayerObject *self) {
         self->shootTimer--;
     if (self->invulTimer) {
         self->invulTimer--;
-        SPR_setVisibility(self->sprite, (self->invulTimer % 2) ? HIDDEN : VISIBLE);
+        SPR_setVisibility(self->sprite, (self->invulTimer & 1) ? HIDDEN : VISIBLE);
     }
     PLAYER_joyUpdate(self, JOY_readJoypad(JOY_1));
     GOBJ_updateSprite((GameObject*)self);
