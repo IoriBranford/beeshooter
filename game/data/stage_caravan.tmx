@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="393" nextobjectid="3841">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="393" nextobjectid="3901">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -4185,7 +4185,9 @@ self.speed = 0.75</property>
    <object id="3575" template="triggers/UnpauseTimer.tx" type="Trigger" x="-48" y="3976"/>
    <object id="2181" template="enemies/Ant.tx" gid="2147484129" x="264" y="4016"/>
    <object id="2183" template="enemies/Ant.tx" gid="2147484129" x="280" y="4016"/>
+   <object id="3857" template="enemies/Ant.tx" gid="2147484129" x="272" y="4016"/>
    <object id="2184" template="enemies/Ant.tx" gid="2147484129" x="296" y="4016" rotation="0"/>
+   <object id="3858" template="enemies/Ant.tx" gid="2147484129" x="288" y="4016" rotation="0"/>
    <object id="2186" type="Path" x="264" y="4056">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -4221,7 +4223,9 @@ self.speed = 0.75</property>
   </objectgroup>
   <objectgroup id="234" name="room1ants2">
    <object id="2194" template="enemies/Ant.tx" gid="481" x="-24" y="3992"/>
+   <object id="3856" template="enemies/Ant.tx" gid="481" x="-16" y="3992"/>
    <object id="2195" template="enemies/Ant.tx" gid="481" x="-40" y="3992"/>
+   <object id="3855" template="enemies/Ant.tx" gid="481" x="-32" y="3992"/>
    <object id="2196" template="enemies/Ant.tx" gid="481" x="-8" y="3992"/>
    <object id="2198" template="triggers/SpawnCharacters.tx" x="-40" y="3960"/>
    <object id="2199" type="Path" x="-8" y="4032">
@@ -4263,14 +4267,21 @@ self.speed = 0.75</property>
     <polyline points="-8,0 8,0 24,-8 88,-8 136,-32 200,-32 232,-48 272,-48"/>
    </object>
    <object id="2205" template="enemies/Ant.tx" x="-8" y="3912"/>
-   <object id="2220" template="triggers/SpawnCharacters.tx" x="-32" y="3904"/>
-   <object id="3561" template="triggers/SpawnCharacters.tx" x="-32" y="3896"/>
-   <object id="3562" template="triggers/SpawnCharacters.tx" x="-32" y="3888"/>
-   <object id="3569" template="triggers/SpawnCharacters.tx" x="-32" y="3864"/>
-   <object id="3563" template="triggers/SpawnCharacters.tx" x="-32" y="3880"/>
-   <object id="3570" template="triggers/SpawnCharacters.tx" x="-32" y="3856"/>
-   <object id="3564" template="triggers/SpawnCharacters.tx" x="-32" y="3872"/>
-   <object id="3571" template="triggers/SpawnCharacters.tx" x="-32" y="3848"/>
+   <object id="2220" template="triggers/SpawnCharacters.tx" x="-44" y="3904"/>
+   <object id="3561" template="triggers/SpawnCharacters.tx" x="-44" y="3888"/>
+   <object id="3841" template="triggers/SpawnCharacters.tx" x="-44" y="3896"/>
+   <object id="3562" template="triggers/SpawnCharacters.tx" x="-44" y="3872"/>
+   <object id="3842" template="triggers/SpawnCharacters.tx" x="-44" y="3880"/>
+   <object id="3569" template="triggers/SpawnCharacters.tx" x="-44" y="3824"/>
+   <object id="3845" template="triggers/SpawnCharacters.tx" x="-44" y="3832"/>
+   <object id="3563" template="triggers/SpawnCharacters.tx" x="-44" y="3856"/>
+   <object id="3843" template="triggers/SpawnCharacters.tx" x="-44" y="3864"/>
+   <object id="3570" template="triggers/SpawnCharacters.tx" x="-44" y="3808"/>
+   <object id="3846" template="triggers/SpawnCharacters.tx" x="-44" y="3816"/>
+   <object id="3564" template="triggers/SpawnCharacters.tx" x="-44" y="3840"/>
+   <object id="3844" template="triggers/SpawnCharacters.tx" x="-44" y="3848"/>
+   <object id="3571" template="triggers/SpawnCharacters.tx" x="-44" y="3800"/>
+   <object id="3847" template="triggers/SpawnCharacters.tx" x="-44" y="3792"/>
   </objectgroup>
   <objectgroup id="236" name="room1ants4">
    <object id="2221" type="Path" x="264" y="3840">
@@ -4283,12 +4294,19 @@ self.speed = 0.75</property>
    <object id="2223" template="enemies/Ant.tx" gid="2147484129" x="264" y="3880" rotation="0"/>
    <object id="2252" template="triggers/SpawnCharacters.tx" x="-32" y="3832"/>
    <object id="3565" template="triggers/SpawnCharacters.tx" x="-32" y="3824"/>
+   <object id="3848" template="triggers/SpawnCharacters.tx" x="-32" y="3768"/>
    <object id="3566" template="triggers/SpawnCharacters.tx" x="-32" y="3816"/>
+   <object id="3849" template="triggers/SpawnCharacters.tx" x="-32" y="3760"/>
    <object id="3572" template="triggers/SpawnCharacters.tx" x="-32" y="3792"/>
+   <object id="3852" template="triggers/SpawnCharacters.tx" x="-32" y="3736"/>
    <object id="3567" template="triggers/SpawnCharacters.tx" x="-32" y="3808"/>
+   <object id="3850" template="triggers/SpawnCharacters.tx" x="-32" y="3752"/>
    <object id="3573" template="triggers/SpawnCharacters.tx" x="-32" y="3784"/>
+   <object id="3853" template="triggers/SpawnCharacters.tx" x="-32" y="3728"/>
    <object id="3568" template="triggers/SpawnCharacters.tx" x="-32" y="3800"/>
+   <object id="3851" template="triggers/SpawnCharacters.tx" x="-32" y="3744"/>
    <object id="3574" template="triggers/SpawnCharacters.tx" x="-32" y="3776"/>
+   <object id="3854" template="triggers/SpawnCharacters.tx" x="-32" y="3720"/>
    <object id="2253" type="Path" x="272" y="3880">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -4301,75 +4319,145 @@ self.speed = 0.75</property>
    <object id="2255" template="triggers/SpawnCharacters.tx" x="-20" y="3768"/>
   </objectgroup>
   <objectgroup id="238" name="room2ants1">
-   <object id="2257" template="enemies/Ant.tx" x="-8" y="3608"/>
-   <object id="2258" template="enemies/Ant.tx" gid="2147484129" x="264" y="3664" rotation="0"/>
-   <object id="2260" template="enemies/Ant.tx" x="-8" y="3656"/>
-   <object id="2263" template="enemies/Ant.tx" gid="2147484129" x="264" y="3712" rotation="0"/>
-   <object id="2264" template="enemies/Ant.tx" x="-8" y="3704"/>
-   <object id="2266" template="triggers/SpawnCharacters.tx" x="-56" y="3680"/>
-   <object id="2268" type="Path" x="-8" y="3616">
+   <object id="3880" template="enemies/Ant.tx" x="-8" y="3632"/>
+   <object id="3881" template="enemies/Ant.tx" x="-8" y="3608"/>
+   <object id="3882" template="enemies/Ant.tx" gid="2147484129" x="264" y="3664" rotation="0"/>
+   <object id="3883" template="enemies/Ant.tx" gid="2147484129" x="264" y="3640" rotation="0"/>
+   <object id="3884" template="enemies/Ant.tx" x="-8" y="3656"/>
+   <object id="3885" template="enemies/Ant.tx" gid="2147484129" x="264" y="3688" rotation="0"/>
+   <object id="3886" template="enemies/Ant.tx" x="-8" y="3680"/>
+   <object id="3887" template="enemies/Ant.tx" gid="2147484129" x="264" y="3712" rotation="0"/>
+   <object id="3888" template="enemies/Ant.tx" x="-8" y="3704"/>
+   <object id="3889" template="enemies/Ant.tx" gid="2147484129" x="264" y="3736" rotation="0"/>
+   <object id="3890" template="triggers/SpawnCharacters.tx" x="-56" y="3680"/>
+   <object id="3891" type="Path" x="-8" y="3632">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,0 80,24"/>
+   </object>
+   <object id="3892" type="Path" x="-8" y="3616">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,-8 88,24"/>
    </object>
-   <object id="2269" type="Path" x="264" y="3672">
+   <object id="3893" type="Path" x="264" y="3672">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,-8 -72,-8"/>
    </object>
-   <object id="2271" type="Path" x="-8" y="3648">
+   <object id="3894" type="Path" x="264" y="3656">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,-16 -72,-8"/>
+   </object>
+   <object id="3895" type="Path" x="-8" y="3648">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,8 72,24"/>
    </object>
-   <object id="2274" type="Path" x="264" y="3704">
+   <object id="3896" type="Path" x="264" y="3688">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,0 -88,-8"/>
+   </object>
+   <object id="3897" type="Path" x="-8" y="3664">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,16 72,24"/>
+   </object>
+   <object id="3898" type="Path" x="264" y="3704">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,8 -88,-8"/>
    </object>
-   <object id="2275" type="Path" x="-8" y="3680">
+   <object id="3899" type="Path" x="-8" y="3680">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,24 80,24"/>
    </object>
+   <object id="3900" type="Path" x="264" y="3720">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,16 -88,-8"/>
+   </object>
   </objectgroup>
   <objectgroup id="239" name="room2ants2">
-   <object id="2277" template="enemies/Ant.tx" x="-8" y="3640"/>
-   <object id="2280" template="enemies/Ant.tx" gid="2147484129" x="264" y="3648" rotation="0"/>
-   <object id="2282" template="enemies/Ant.tx" gid="2147484129" x="264" y="3696" rotation="0"/>
-   <object id="2283" template="enemies/Ant.tx" x="-8" y="3688"/>
-   <object id="2286" template="enemies/Ant.tx" gid="2147484129" x="264" y="3744" rotation="0"/>
-   <object id="2287" template="triggers/SpawnCharacters.tx" x="-56" y="3616"/>
-   <object id="2288" type="Path" x="-8" y="3624">
+   <object id="3859" template="enemies/Ant.tx" x="-8" y="3640"/>
+   <object id="3860" template="enemies/Ant.tx" x="-8" y="3616"/>
+   <object id="3861" template="enemies/Ant.tx" gid="2147484129" x="264" y="3672" rotation="0"/>
+   <object id="3862" template="enemies/Ant.tx" gid="2147484129" x="264" y="3648" rotation="0"/>
+   <object id="3863" template="enemies/Ant.tx" x="-8" y="3664"/>
+   <object id="3864" template="enemies/Ant.tx" gid="2147484129" x="264" y="3696" rotation="0"/>
+   <object id="3865" template="enemies/Ant.tx" x="-8" y="3688"/>
+   <object id="3866" template="enemies/Ant.tx" gid="2147484129" x="264" y="3720" rotation="0"/>
+   <object id="3867" template="enemies/Ant.tx" x="-8" y="3712"/>
+   <object id="3868" template="enemies/Ant.tx" gid="2147484129" x="264" y="3744" rotation="0"/>
+   <object id="3869" template="triggers/SpawnCharacters.tx" x="-56" y="3616"/>
+   <object id="3870" type="Path" x="-8" y="3624">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,16 88,24"/>
    </object>
-   <object id="2291" type="Path" x="264" y="3648">
+   <object id="3871" type="Path" x="-8" y="3608">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,8 88,24"/>
+   </object>
+   <object id="3872" type="Path" x="264" y="3664">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,8 -72,-8"/>
+   </object>
+   <object id="3873" type="Path" x="264" y="3648">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,0 -72,-8"/>
    </object>
-   <object id="2293" type="Path" x="264" y="3680">
+   <object id="3874" type="Path" x="-8" y="3640">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,24 72,24"/>
+   </object>
+   <object id="3875" type="Path" x="264" y="3680">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,16 -80,-8"/>
    </object>
-   <object id="2294" type="Path" x="-8" y="3656">
+   <object id="3876" type="Path" x="-8" y="3656">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,32 72,24"/>
    </object>
-   <object id="2297" type="Path" x="264" y="3712">
+   <object id="3877" type="Path" x="264" y="3696">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,24 -88,-8"/>
+   </object>
+   <object id="3878" type="Path" x="-8" y="3672">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,40 72,24"/>
+   </object>
+   <object id="3879" type="Path" x="264" y="3712">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
