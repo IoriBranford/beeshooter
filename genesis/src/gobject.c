@@ -444,19 +444,19 @@ void GOBJ_updatePathWalker(GameObject *self) {
         if (lobj) {
             path = lobj->path;
             pathIndex = lobj->pathIndex;
-            if (pathIndex) {
-                const PathPoint *prevPoint = &path->points[pathIndex - 1];
-                GOBJ_doPathPointActions(self, prevPoint);
-                if (!GOBJ_isAllocated(self))
-                    return;
-            }
         }
     
-        if (!path) {
-            path = LEVEL_findNearestPath(self->levelObject->group,
-                fix16ToFix32(self->centerX),
-                LEVEL_toWorldY(self->centerY));
+        if (path && pathIndex) {
+            const PathPoint *prevPoint = &path->points[pathIndex - 1];
+            GOBJ_doPathPointActions(self, prevPoint);
+            if (!GOBJ_isAllocated(self))
+                return;
+        } else {
+            self->update = (ObjectCallback*)GOBJ_updateIdleOnStage;
+            GOBJ_updateIdleOnStage(self);
+            return;
         }
+        
         self->path = path;
         GOBJ_startTowardsPathPoint(self, pathIndex);
     }
