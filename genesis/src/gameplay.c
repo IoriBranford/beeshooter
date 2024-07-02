@@ -10,7 +10,7 @@
 #include "level.h"
 #include "ui.h"
 
-const u16 GAMETIME = 60*60;
+#define GAMETIME 3600
 static const u32 MAXSCORE = 9999999;
 
 static const u32 EXTEND_SCORES[] = {
@@ -30,6 +30,7 @@ static const u32 EXTEND_SCORES[] = {
 };
 
 static u16 timeLeft;
+static u8 timerMinutes, timerSeconds, timerFrames;
 static u32 score, lastFrameScore;
 static u8 extendScoreIndex;
 static u8 result;
@@ -222,6 +223,9 @@ int gameplay() {
     extendScoreIndex = 0;
     result = RESULT_NONE;
     timeLeft = GAMETIME;
+    timerMinutes = GAMETIME / 3600;
+    timerSeconds = (GAMETIME / 60) % 60;
+    timerFrames = GAMETIME % 60;
     timePaused = true; // waiting for unpauseTimer trigger
     paused = false;
     running = true;
@@ -252,7 +256,24 @@ int gameplay() {
                     GAME_end(RESULT_LOSE_TIME);
                     XGM_stopPlay();
                 }
-                UI_updateTimeLeft(timeLeft);
+                
+                if (timerFrames) {
+                    --timerFrames;
+                } else {
+                    if (timerSeconds) {
+                        timerFrames = 59;
+                        --timerSeconds;
+                    } else {
+                        if (timerMinutes) {
+                            timerFrames = 59;
+                            timerSeconds = 59;
+                            --timerMinutes;
+                        }
+                        UI_updateTimerMinutes(timerMinutes);
+                    }
+                    UI_updateTimerSeconds(timerSeconds);
+                }
+                UI_updateTimerFrames(timerFrames);
             }
         }
 

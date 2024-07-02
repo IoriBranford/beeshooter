@@ -37,6 +37,7 @@ void UI_initHud(PlayerObject *player, u16 timeLeft) {
     UI_updateLives(player->lives);
     UI_updateWeaponLevel(player->health);
     UI_updateWeaponSelect(player->weapon);
+    VDP_drawText("Speed \x7f", 23, 26);
     UI_updateSpeed(player->speed);
 #ifdef DEBUG
 #ifdef DEBUG_OBJECT_COUNT
@@ -62,26 +63,67 @@ void UI_updateResult(GameResult result) {
 }
 
 void UI_updateScore(u32 score) {
-    sprintf(string, "%07lu", score);
+    string[7] = '\0';
+    for (int i = 6; i >= 0; --i) {
+        string[i] = '0' + (score % 10);
+        score /= 10;
+    }
     VDP_drawText(string, 8, 1);
 }
 
+void UI_updateTimerMinutes(u16 minutes) {
+    string[0] = '0' + minutes;
+    string[1] = '\0';
+    VDP_drawText(string, 17, 1);
+}
+
+void UI_updateTimerSeconds(u16 seconds) {
+    string[0] = '0' + (seconds / 10);
+    string[1] = '0' + (seconds % 10);
+    string[2] = '\0';
+    VDP_drawText(string, 19, 1);
+}
+
+void UI_updateTimerFrames(u16 frames) {
+    string[0] = '0' + (frames / 10);
+    string[1] = '0' + (frames % 10);
+    string[2] = '\0';
+    VDP_drawText(string, 22, 1);
+}
+
 void UI_updateTimeLeft(u16 timeLeft) {
-    u8 frames = timeLeft % 60;
-    u8 seconds = (timeLeft / 60) % 60;
-    u8 minutes = min(timeLeft / 60 / 60, 99);
-    sprintf(string, "%01u:%02u:%02u", minutes, seconds, frames);
-    VDP_drawText(string, 136>>3, 1);
+    u16 frames = timeLeft % 60;
+    u16 seconds = timeLeft / 60;
+    u16 minutes = min(seconds / 60, 9);
+    seconds %= 60;
+    string[0] = '0' + minutes;
+    string[1] = ':';
+    string[2] = '0' + (seconds / 10);
+    string[3] = '0' + (seconds % 10);
+    string[4] = ':';
+    string[5] = '0' + (frames / 10);
+    string[6] = '0' + (frames % 10);
+    string[7] = '\0';
+    VDP_drawText(string, 17, 1);
 }
 
 void UI_updateLives(u8 lives) {
-    int numPrinted = 0;
-    if (lives > 9)
-        numPrinted = sprintf(string, "\x7e %d", lives);
-    else
-        numPrinted = sprintf(string, "%.*s", lives, "\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e\x7e");
-    VDP_drawText(string, 1, 208>>3);
-    VDP_clearText(numPrinted + 1, 208>>3, 9 - numPrinted);
+    if (lives > 9) {
+        string[0] = '\x7e';
+        string[1] = ' ';
+        string[2] = '0' + (lives / 10);
+        string[3] = '0' + (lives % 10);
+        for (int i = 4; i < 9; ++i)
+            string[i] = ' ';
+    } else {
+        int i;
+        for (i = 0; i < lives; ++i)
+            string[i] = '\x7e';
+        for (; i < 9; ++i)
+            string[i] = ' ';
+    }
+    string[9] = '\0';
+    VDP_drawText(string, 1, 26);
 }
 
 void UI_updateWeaponLevel(u8 playerHealth) {
@@ -93,10 +135,9 @@ void UI_updateWeaponSelect(u8 weapon) {
 }
 
 void UI_updateSpeed(fix16 speed) {
-    speed = speed == PLAYER_FASTSPEED ? 2 : 1;
-    int numPrinted = sprintf(string, "Speed %.*s", speed, "\x7f\x7f");
-    VDP_drawText(string, 184>>3, 208>>3);
-    VDP_clearText(numPrinted + (184>>3), 208>>3, 8 - numPrinted);
+    string[0] = speed == PLAYER_FASTSPEED ? '\x7f' : ' ';
+    string[1] = '\0';
+    VDP_drawText(string, 30, 26);
 }
 
 void UI_updateObjectCount(int n) {
