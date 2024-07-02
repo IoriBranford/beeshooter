@@ -16,6 +16,8 @@ PALETTE palAlien "enemy/Aliens.png"
 
 SPRITE sprAnt "enemy/Ant.png" 2 2 NONE 6
 SPRITE sprAntBig "enemy/AntBig.png" 8 8 NONE 6
+SPRITE sprAntBigHead "enemy/AntBigHead.png" 3 3
+SPRITE sprAntBigButt "enemy/AntBigButt.png" 3 3
 SPRITE sprHoneyPot "enemy/HoneyPot.png" 2 2 NONE
 SPRITE sprFlyBullet "enemy/FlyBullet.png" 2 2 NONE
 SPRITE sprFly "enemy/Fly.png" 4 4 NONE 3
