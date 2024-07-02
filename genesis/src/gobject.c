@@ -486,3 +486,16 @@ void GOBJ_updateSpawner(GameObject *self) {
     GOBJ_updateSpawning(self);
     GOBJ_updateSprite(self);
 }
+
+void GOBJ_updateFaller(GameObject *self) {
+    const fix16 GRAVITY = FIX16(1)/8;
+    self->velY += GRAVITY;
+    self->centerX += self->velX;
+    self->centerY += self->velY;
+    GOBJ_updateBody(self);
+    if (GOBJ_isBodyOffBottom(self)) {
+        GAME_releaseObject(self);
+        return;
+    }
+    GOBJ_updateSprite(self);
+}

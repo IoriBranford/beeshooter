@@ -90,5 +90,6 @@ void GOBJ_updatePathWalker(GameObject *self);
 void GOBJ_followPath(GameObject *self);
 
 void GOBJ_updateSpawner(GameObject *self);
+void GOBJ_updateFaller(GameObject *self);
 
 #endif
