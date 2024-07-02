@@ -7,22 +7,22 @@
 void GOBJ_init(GameObject *self) {
     if (!self)
         return;
-    self->parentObject = 0;
-    self->parentType = 0;
+    // self->parentObject = 0;
+    self->parentType = PARENTTYPE_NONE;
     self->definition = 0;
     self->levelObject = 0;
     self->sprite = 0;
-    self->centerX = self->centerY = 0;
+    // self->centerX = self->centerY = 0;
     self->velX = self->velY = 0;
-    self->destX = self->destY = 0;
+    // self->destX = self->destY = 0;
     self->path = 0;
-    self->pathIndex = 0;
-    self->pathPointDistLeft = 0;
-    self->speed = FIX16(1);
-    self->health = 1;
+    // self->pathIndex = 0;
+    // self->pathPointDistLeft = 0;
+    // self->speed = FIX16(1);
+    // self->health = 1;
     self->team = TEAM_NONE;
     self->invulTimer = 0;
-    self->bodyX0 = self->bodyX1 = self->bodyY0 = self->bodyY1 = 0;
+    // self->bodyX0 = self->bodyX1 = self->bodyY0 = self->bodyY1 = 0;
     GOBJ_startShooting(self, 0, 0);
 }
 
