@@ -5,9 +5,7 @@
 #include "sprite_eng.h"
 #include "gameplay.h"
 #include "sounddef.h"
-
-typedef struct GameObject GameObject;
-typedef struct GameObjectDefinition GameObjectDefinition;
+#include "gobject.h"
 
 struct GameObjectDefinition {
     u16 health;

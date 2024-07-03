@@ -5,7 +5,14 @@
 #include "maths.h"
 #include "object.h"
 #include "sprite_eng.h"
-#include "level.h"
+
+typedef struct GameObject GameObject;
+typedef void (*GObjFunction)(GameObject *self);
+
+typedef struct GameObjectDefinition GameObjectDefinition;
+typedef struct Trigger Trigger;
+typedef struct Path Path;
+typedef struct LevelObject LevelObject;
 
 typedef enum ParentType {
     PARENTTYPE_NONE,

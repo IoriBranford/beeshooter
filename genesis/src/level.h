@@ -4,6 +4,7 @@
 #include "types.h"
 #include "pal.h"
 #include "anim.h"
+#include "gobject.h"
 #include "enemy.h"
 
 typedef struct Trigger Trigger;
@@ -12,7 +13,6 @@ typedef struct Path Path;
 typedef struct GameObjectDefinition GameObjectDefinition;
 typedef struct LevelObject LevelObject;
 typedef struct LevelObjectGroup LevelObjectGroup;
-typedef void (*GObjFunction)(GameObject *self);
 typedef void (*TriggerFunction)(const Trigger *self);
 typedef void (*GObjPathPointFunction)(GameObject *self, const PathPoint *pathPoint);
 

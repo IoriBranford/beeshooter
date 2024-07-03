@@ -2,6 +2,7 @@
 #include "gobjdef.h"
 #include "bullet.h"
 #include "sprite.h"
+#include "level.h"
 #include <genesis.h>
 
 void GOBJ_init(GameObject *self) {
