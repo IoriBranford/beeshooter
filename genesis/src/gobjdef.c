@@ -79,6 +79,7 @@ GameObjectDefinition defFly = {
     .pathParent = PATHPARENT_TRIGGER,
     .bulletDef = &defFlyBullet,
     .update = GOBJ_updatePathWalker,
+    .shootFunction = ENEMY_shootAtPlayer
 };
 GameObjectDefinition defHoneyCell = {
     .team = TEAM_ENEMY,
@@ -146,6 +147,7 @@ GameObjectDefinition defAlienGunner = {
     .defeatSoundDef = &sndBugKill2,
     .bulletDef = &defAlienGunnerBullet,
     .update = GOBJ_updatePathWalker,
+    .shootFunction = ENEMY_shootAtDir
 };
 GameObjectDefinition defAlienPillager = {
     .team = TEAM_ENEMY,
