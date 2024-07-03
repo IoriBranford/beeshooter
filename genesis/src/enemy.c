@@ -87,7 +87,7 @@ void ENEMY_updateAlienStartShooting(GameObject *self) {
     if (!self->shotsLeft) {
         if (self->shootTimer) {
             if (!--self->shootTimer) {
-                GOBJ_startShooting(self, 1, 5);
+                GOBJ_startShooting(self, 5, 1);
             }
         } else {
             self->shootTimer = 60;
