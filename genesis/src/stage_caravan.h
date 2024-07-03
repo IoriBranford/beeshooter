@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (191)
+#define stage_caravan_numTriggers (198)
 extern const Trigger stage_caravan_triggers[];
 
 #define stage_caravan_numGroups (118)
@@ -37,6 +37,7 @@ void setSpriteHidden(GameObject *self, const PathPoint *pathPoint);
 void faceLeft(GameObject *self, const PathPoint *pathPoint);
 void setSpriteVisible(GameObject *self, const PathPoint *pathPoint);
 void markDisappear(GameObject *self, const PathPoint *pathPoint);
+void setSpriteAnim(GameObject *self, const PathPoint *pathPoint);
 void climbUpToFloor(GameObject *self, const PathPoint *pathPoint);
 void startWaspAttack(GameObject *self, const PathPoint *pathPoint);
 void BeetleShoot(GameObject *self, const PathPoint *pathPoint);

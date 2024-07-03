@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="393" nextobjectid="3941">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="393" nextobjectid="4006">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -5362,9 +5362,12 @@ self.speed = 0.75</property>
    <object id="2395" template="triggers/SpawnCharacters.tx" x="-56" y="2504"/>
    <object id="2396" template="enemies/AlienGunner.tx" x="112" y="2496"/>
    <object id="2397" type="Path" x="112" y="2496">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="0,0 8,16 16,40"/>
    </object>
-   <object id="2398" template="enemies/PathPoint.tx" x="128" y="2536">
+   <object id="2398" template="enemies/PathPoint.tx" x="128" y="2552">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
@@ -5374,18 +5377,29 @@ end</property>
     </properties>
    </object>
    <object id="2399" template="enemies/HoneyPot.tx" x="128" y="2472"/>
+   <object id="3941" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="128" y="2536">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="252" name="room7alien2">
    <object id="2400" template="triggers/SpawnCharacters.tx" x="-80" y="2448"/>
    <object id="2401" template="enemies/AlienGunner.tx" x="48" y="2440"/>
    <object id="2402" template="enemies/AlienGunner.tx" gid="2147484170" x="208" y="2440" rotation="0"/>
    <object id="2403" type="Path" x="48" y="2440">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="0,0 8,16 16,40"/>
    </object>
    <object id="2404" type="Path" x="176" y="2440">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="32,0 24,16 16,40"/>
    </object>
-   <object id="2405" template="enemies/PathPoint.tx" x="64" y="2480">
+   <object id="2405" template="enemies/PathPoint.tx" x="64" y="2496">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
@@ -5394,13 +5408,23 @@ for i = 1,5 do
 end</property>
     </properties>
    </object>
-   <object id="2406" template="enemies/PathPoint.tx" x="192" y="2480">
+   <object id="2406" template="enemies/PathPoint.tx" x="196" y="2496">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
  wait(40)
  AlienGunner_shootAtPlayer(self)
 end</property>
+    </properties>
+   </object>
+   <object id="3948" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="192" y="2480">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
+   <object id="3949" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="64" y="2480">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
   </objectgroup>
@@ -5413,80 +5437,324 @@ end</property>
    <object id="2412" template="enemies/AlienPillager.tx" x="-24" y="2528"/>
    <object id="2413" template="enemies/AlienPillager.tx" gid="2147484176" x="280" y="2528" rotation="0"/>
    <object id="2414" type="Path" x="-24" y="2528">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="0,0 72,-64 104,-64 120,-48"/>
    </object>
    <object id="2415" type="Path" x="-16" y="2512">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="0,0 72,-64 104,-64 120,-48"/>
    </object>
    <object id="2416" type="Path" x="-8" y="2496">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="0,0 72,-64 104,-64 120,-48"/>
    </object>
    <object id="2417" type="Path" x="24" y="2496">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="240,0 168,-64 136,-64 120,-48"/>
    </object>
    <object id="2418" type="Path" x="32" y="2512">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="240,0 168,-64 136,-64 120,-48"/>
    </object>
    <object id="2419" type="Path" x="40" y="2528">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="240,0 168,-64 136,-64 120,-48"/>
    </object>
-   <object id="2420" template="enemies/PathPoint.tx" x="96" y="2480">
+   <object id="3942" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="96" y="2480">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
    </object>
-   <object id="2421" template="enemies/PathPoint.tx" x="112" y="2448">
+   <object id="3943" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="104" y="2464">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
    </object>
-   <object id="2422" template="enemies/PathPoint.tx" x="104" y="2464">
+   <object id="3944" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="112" y="2448">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
    </object>
-   <object id="2423" template="enemies/PathPoint.tx" x="144" y="2448">
+   <object id="3945" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="144" y="2448">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
    </object>
-   <object id="2424" template="enemies/PathPoint.tx" x="152" y="2464">
+   <object id="3946" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="152" y="2464">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
    </object>
-   <object id="2425" template="enemies/PathPoint.tx" x="160" y="2480">
+   <object id="3947" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="160" y="2480">
     <properties>
-     <property name="subscript" value="changeTile(self, &quot;claw_scrape&quot;)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
+   </object>
+   <object id="3950" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="-24" y="2528">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3951" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="-16" y="2512">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3952" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="-8" y="2496">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3953" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="280" y="2528" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3954" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="272" y="2512" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3955" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="264" y="2496" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
    </object>
   </objectgroup>
   <objectgroup id="254" name="room8alien1">
-   <object id="2426" template="enemies/AlienPillagerScrape.tx" x="120" y="2368"/>
-   <object id="2427" template="enemies/AlienPillagerScrape.tx" x="120" y="2312"/>
-   <object id="2428" template="enemies/AlienPillagerScrape.tx" x="112" y="2336"/>
-   <object id="2429" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2360" rotation="0"/>
-   <object id="2430" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="136" y="2320" rotation="0"/>
-   <object id="2431" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2336" rotation="0"/>
-   <object id="2432" template="enemies/AlienPillagerScrape.tx" x="104" y="2352"/>
-   <object id="2433" template="enemies/AlienPillagerScrape.tx" x="88" y="2304"/>
-   <object id="2434" template="enemies/AlienPillagerScrape.tx" x="96" y="2320"/>
-   <object id="2435" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2344" rotation="0"/>
-   <object id="2436" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="168" y="2304" rotation="0"/>
-   <object id="2437" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="160" y="2320" rotation="0"/>
-   <object id="2438" template="triggers/SpawnCharacters.tx" x="-32" y="2376"/>
+   <object id="2426" template="enemies/AlienPillagerScrape.tx" x="112" y="2368"/>
+   <object id="2427" template="enemies/AlienPillagerScrape.tx" x="112" y="2312"/>
+   <object id="2428" template="enemies/AlienPillagerScrape.tx" x="104" y="2336"/>
+   <object id="2429" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2360" rotation="0"/>
+   <object id="2430" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2320" rotation="0"/>
+   <object id="2431" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2336" rotation="0"/>
+   <object id="2432" template="enemies/AlienPillagerScrape.tx" x="96" y="2352"/>
+   <object id="2433" template="enemies/AlienPillagerScrape.tx" x="80" y="2304"/>
+   <object id="2434" template="enemies/AlienPillagerScrape.tx" x="88" y="2320"/>
+   <object id="2435" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="160" y="2344" rotation="0"/>
+   <object id="2436" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="176" y="2304" rotation="0"/>
+   <object id="2437" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="168" y="2320" rotation="0"/>
+   <object id="3962" template="enemies/Path.tx" x="112" y="2368">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3963" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="120" y="2368">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3964" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="112" y="2368">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3965" template="enemies/Path.tx" x="96" y="2352">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3966" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="104" y="2352">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3967" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="96" y="2352">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3968" template="enemies/Path.tx" x="104" y="2336">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3969" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="112" y="2336">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3970" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="104" y="2336">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3971" template="enemies/Path.tx" x="88" y="2320">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3972" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="96" y="2320">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3973" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="88" y="2320">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3974" template="enemies/Path.tx" x="112" y="2312">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3975" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="120" y="2312">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3976" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="112" y="2312">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3977" template="enemies/Path.tx" x="80" y="2304">
+    <polyline points="0,0 8,0"/>
+   </object>
+   <object id="3978" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="88" y="2304">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+   </object>
+   <object id="3979" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="80" y="2304">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+   </object>
+   <object id="3980" template="enemies/Path.tx" gid="0" x="152" y="2360" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3981" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="144" y="2360" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3982" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="152" y="2360" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3983" template="enemies/Path.tx" x="160" y="2344" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3984" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="152" y="2344" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3985" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="160" y="2344" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3986" template="enemies/Path.tx" x="152" y="2336" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3987" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="144" y="2336" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3988" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="152" y="2336" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3989" template="enemies/Path.tx" x="168" y="2320" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3990" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="160" y="2320" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3991" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="168" y="2320" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3992" template="enemies/Path.tx" x="176" y="2304" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3993" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="168" y="2304" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3994" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="176" y="2304" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3995" template="enemies/Path.tx" x="144" y="2320" rotation="0">
+    <polyline points="0,0 -8,0"/>
+   </object>
+   <object id="3996" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="136" y="2320" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3997" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="144" y="2320" rotation="0">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="3998" template="triggers/SpawnNextCharacters.tx" x="0" y="2376"/>
+   <object id="4000" template="triggers/SpawnNextCharacters.tx" x="-8" y="2360"/>
+   <object id="4001" template="triggers/SpawnNextCharacters.tx" x="32" y="2352"/>
+   <object id="4004" template="triggers/SpawnNextCharacters.tx" x="16" y="2320"/>
+   <object id="4002" template="triggers/SpawnNextCharacters.tx" x="12" y="2344">
+    <properties>
+     <property name="count" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="4005" template="triggers/SpawnNextCharacters.tx" x="8" y="2312">
+    <properties>
+     <property name="count" type="int" value="2"/>
+    </properties>
+   </object>
+   <object id="4003" template="triggers/SpawnNextCharacters.tx" x="12" y="2328">
+    <properties>
+     <property name="count" type="int" value="3"/>
+    </properties>
+   </object>
+   <object id="3999" template="triggers/SpawnNextCharacters.tx" x="28" y="2368"/>
   </objectgroup>
   <objectgroup id="255" name="room8alien2">
    <object id="2439" template="triggers/SpawnCharacters.tx" x="-56" y="2360"/>
    <object id="2440" template="enemies/AlienGunner.tx" gid="522" x="80" y="2352" rotation="0"/>
    <object id="2441" template="enemies/AlienGunner.tx" gid="2147484170" x="176" y="2352" rotation="0"/>
    <object id="2442" type="Path" x="88" y="2352">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="-8,0 -8,16 -40,48 -104,48"/>
    </object>
    <object id="2443" type="Path" x="152" y="2352">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="24,0 24,16 56,48 120,48"/>
    </object>
-   <object id="2444" template="enemies/PathPoint.tx" x="80" y="2368">
+   <object id="2444" template="enemies/PathPoint.tx" x="88" y="2384">
     <properties>
      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,2 do
@@ -5495,7 +5763,7 @@ for i = 1,2 do
 end</property>
     </properties>
    </object>
-   <object id="2445" template="enemies/PathPoint.tx" x="176" y="2368">
+   <object id="2445" template="enemies/PathPoint.tx" x="168" y="2384">
     <properties>
      <property name="subscript">self.speed = slowspeed or 1
 for i = 1,2 do
@@ -5504,6 +5772,8 @@ for i = 1,2 do
 end</property>
     </properties>
    </object>
+   <object id="3956" template="pathpoints/SetSpeed.tx" x="80" y="2368"/>
+   <object id="3957" template="pathpoints/SetSpeed.tx" x="176" y="2368"/>
   </objectgroup>
   <objectgroup id="256" name="room8alien3" visible="0">
    <object id="2446" template="enemies/AlienGunner.tx" gid="522" x="-16" y="2392" rotation="0"/>
@@ -5540,18 +5810,30 @@ end</property>
    <object id="2455" template="enemies/AlienGunner.tx" gid="2147484170" x="184" y="2248" rotation="0"/>
    <object id="2456" template="enemies/AlienGunner.tx" gid="2147484170" x="192" y="2232" rotation="0"/>
    <object id="2457" type="Path" x="96" y="2248">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="-16,8 16,40"/>
    </object>
    <object id="2458" type="Path" x="88" y="2232">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="-16,8 16,40"/>
    </object>
    <object id="2459" type="Path" x="160" y="2248">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="24,0 -16,40"/>
    </object>
    <object id="2460" type="Path" x="168" y="2232">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
     <polyline points="24,0 -16,40"/>
    </object>
-   <object id="2461" template="enemies/PathPoint.tx" x="112" y="2288">
+   <object id="2461" template="enemies/PathPoint.tx" x="112" y="2248">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
@@ -5560,7 +5842,7 @@ for i = 1,5 do
 end</property>
     </properties>
    </object>
-   <object id="2462" template="enemies/PathPoint.tx" x="104" y="2272">
+   <object id="2462" template="enemies/PathPoint.tx" x="104" y="2232">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
@@ -5569,7 +5851,7 @@ for i = 1,5 do
 end</property>
     </properties>
    </object>
-   <object id="2463" template="enemies/PathPoint.tx" x="144" y="2288">
+   <object id="2463" template="enemies/PathPoint.tx" x="144" y="2248">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
@@ -5578,13 +5860,33 @@ for i = 1,5 do
 end</property>
     </properties>
    </object>
-   <object id="2464" template="enemies/PathPoint.tx" x="152" y="2272">
+   <object id="2464" template="enemies/PathPoint.tx" x="152" y="2232">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 for i = 1,5 do
  wait(40)
  AlienGunner_shootAtPlayer(self)
 end</property>
+    </properties>
+   </object>
+   <object id="3958" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="144" y="2288">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
+   <object id="3959" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="152" y="2272">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
+   <object id="3960" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="104" y="2272">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
+   <object id="3961" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="112" y="2288">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
   </objectgroup>
