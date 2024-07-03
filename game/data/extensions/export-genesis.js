@@ -92,6 +92,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         let xDirTo = 0, yDirTo = 0, distTo = 0
                         let shootInterval = 0, shootCount = 0
                         let anim = 0
+                        let update = ''
                         prevPointData?.forEach(pointDatum => {
                             speed = pointDatum.resolvedProperty('speed') || speed
                         })
@@ -100,6 +101,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                             shootInterval = pointDatum.resolvedProperty('shootinterval') || shootInterval
                             shootCount = pointDatum.resolvedProperty('shoottimes') || shootCount
                             anim = pointDatum.resolvedProperty('anim') || anim
+                            update = pointDatum.resolvedProperty('update') || update
                         })
                         if (prevPoint) {
                             xDirTo = point.x - prevPoint.x
@@ -113,6 +115,7 @@ return `{
     .speedTo = ${toFix16(speed)}, .distTo = ${toFix16(distTo)},
     .xVelTo = ${toFix16(xDirTo)}, .yVelTo = ${toFix16(yDirTo)},
     .shootCount = ${shootCount}, .shootInterval = ${shootInterval}, .anim = ${anim},
+    .newUpdate = ${update === '' ? 0 : update},
     .numActions = ${pointsData[i].length},
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
 }`
