@@ -4,5 +4,6 @@
 typedef struct GameObject GameObject;
 
 void ENEMY_onDefeatBigAnt(GameObject *self);
+void ENEMY_updateAlienStandAndShoot(GameObject *self);
 
 #endif

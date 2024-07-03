@@ -82,3 +82,21 @@ void ENEMY_onDefeatBigAnt(GameObject *self) {
 
     GOBJ_defaultDefeatAction(self);
 }
+
+void ENEMY_updateAlienStartShooting(GameObject *self) {
+    if (!self->shotsLeft) {
+        if (self->shootTimer) {
+            if (!--self->shootTimer) {
+                GOBJ_startShooting(self, 1, 5);
+            }
+        } else {
+            self->shootTimer = 60;
+        }
+    }
+}
+
+void ENEMY_updateAlienStandAndShoot(GameObject *self) {
+    ENEMY_updateAlienStartShooting(self);
+    GOBJ_updateShooting(self);
+    GOBJ_updateIdleOnStage(self);
+}
