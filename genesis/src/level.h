@@ -28,7 +28,7 @@ struct PathPoint {
     fix16 speedTo, distTo;
     u8 shootInterval, shootCount;
     u16 anim;
-    GObjFunction *newUpdate;
+    GObjFunction newUpdate;
     u32 numActions;
     const GObjPathPointFunction *actions;
 };
