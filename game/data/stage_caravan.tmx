@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4027">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4036">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -5382,6 +5382,11 @@ end</property>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
+   <object id="4033" template="pathpoints/SetUpdate.tx" type="PathPoint" x="128" y="2536">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="252" name="room7alien2">
    <object id="2400" template="triggers/SpawnCharacters.tx" x="-80" y="2448"/>
@@ -5425,6 +5430,16 @@ end</property>
    <object id="3949" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="64" y="2480">
     <properties>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
+    </properties>
+   </object>
+   <object id="4034" template="pathpoints/SetUpdate.tx" type="PathPoint" x="64" y="2480">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4035" template="pathpoints/SetUpdate.tx" type="PathPoint" x="192" y="2480">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
   </objectgroup>
@@ -5889,6 +5904,26 @@ end</property>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
+   <object id="4029" template="pathpoints/SetUpdate.tx" type="PathPoint" x="104" y="2272">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4030" template="pathpoints/SetUpdate.tx" type="PathPoint" x="112" y="2288">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4031" template="pathpoints/SetUpdate.tx" type="PathPoint" x="144" y="2288">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4032" template="pathpoints/SetUpdate.tx" type="PathPoint" x="152" y="2272">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="258" name="room8powerup">
    <object id="2465" template="triggers/SpawnCharacters.tx" x="-32" y="2272"/>
@@ -5959,24 +5994,6 @@ end</property>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="-56,-232 -32,-216 -16,-176 -16,-48 -8,-40 8,-32 24,-40 32,-64 32,-112 32,-96 32,-80 32,-48 40,-24 64,-16"/>
-   </object>
-   <object id="2481" template="enemies/PathPoint.tx" x="24" y="2072">
-    <properties>
-     <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
-while true do
- wait(60)
- AlienGunner_shootAtPlayer(self)
-end</property>
-    </properties>
-   </object>
-   <object id="2482" template="enemies/PathPoint.tx" x="232" y="2072">
-    <properties>
-     <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
-while true do
- wait(60)
- AlienGunner_shootAtPlayer(self)
-end</property>
-    </properties>
    </object>
    <object id="2485" template="pathpoints/EnterForeground.tx" type="PathPoint" x="240" y="2192"/>
    <object id="2486" template="pathpoints/EnterForeground.tx" type="PathPoint" x="16" y="2192"/>
@@ -6056,6 +6073,16 @@ end</property>
    </object>
    <object id="4025" template="pathpoints/EnterBackground.tx" x="104" y="2024"/>
    <object id="4026" template="pathpoints/EnterBackground.tx" x="152" y="2024"/>
+   <object id="4027" template="pathpoints/SetUpdate.tx" type="PathPoint" x="40" y="2072">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4028" template="pathpoints/SetUpdate.tx" type="PathPoint" x="216" y="2072">
+    <properties>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="261" name="part2">
    <object id="2491" template="triggers/SpawnCharacters.tx" x="-24" y="2008"/>

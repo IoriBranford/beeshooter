@@ -38,6 +38,7 @@ void faceLeft(GameObject *self, const PathPoint *pathPoint);
 void setSpriteVisible(GameObject *self, const PathPoint *pathPoint);
 void markDisappear(GameObject *self, const PathPoint *pathPoint);
 void setSpriteAnim(GameObject *self, const PathPoint *pathPoint);
+void setUpdate(GameObject *self, const PathPoint *pathPoint);
 void climbUpToFloor(GameObject *self, const PathPoint *pathPoint);
 void startWaspAttack(GameObject *self, const PathPoint *pathPoint);
 void BeetleShoot(GameObject *self, const PathPoint *pathPoint);
