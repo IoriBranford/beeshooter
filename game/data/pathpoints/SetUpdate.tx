@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="SetUpdate" type="PathPoint">
+  <properties>
+   <property name="action" value="setUpdate"/>
+   <property name="update" value=""/>
+  </properties>
+  <point/>
+ </object>
+</template>
