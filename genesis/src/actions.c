@@ -61,6 +61,12 @@ void setSpriteHidden(GameObject *self, const PathPoint *pathPoint)
     SPR_setVisibility(self->sprite, HIDDEN);
 }
 
+void setSpriteAnim(GameObject *self, const PathPoint *pathPoint) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setAnim(self->sprite, pathPoint->anim);
+}
+
 void faceRight(GameObject *self, const PathPoint *pathPoint)
 {
     if (self->sprite)
