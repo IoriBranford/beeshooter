@@ -125,6 +125,16 @@ GameObjectDefinition defAntBigButt = {
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updateFaller,
 };
+GameObjectDefinition defAlienGunnerBullet = {
+    .team = TEAM_ENEMYSHOT,
+    .health = 1, .damage = 1,
+    .speed = FIX16(4),
+    .spriteDef = &sprFlyBullet,
+    .spriteDepth = -20,
+    .palette = &palFlyAndHoney,
+    .bodyW = FIX16(2), .bodyH = FIX16(2),
+    .update = BULLET_update,
+};
 GameObjectDefinition defAlienGunner = {
     .team = TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
@@ -134,7 +144,7 @@ GameObjectDefinition defAlienGunner = {
     .palette = &palAlien,
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
-    .bulletDef = &defFlyBullet,
+    .bulletDef = &defAlienGunnerBullet,
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defAlienPillager = {
@@ -170,7 +180,7 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *part1defs[9] = {
+GameObjectDefinition *part1defs[8] = {
     &defHoneyPot,
     &defPowerup,
     &defAnt,
@@ -178,7 +188,6 @@ GameObjectDefinition *part1defs[9] = {
     &defFly,
     &defAntBig,
     &defAlienGunner,
-    &defAlienPillager,
     &defAlienMind
 };
 
@@ -194,11 +203,15 @@ u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **
         ++def;
     }
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
+    defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
+    defAlienGunnerBullet.aniFrameTiles = defFlyBullet.aniFrameTiles;
     return tileIndex;
 }
 
 void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
     defHoneyCell.aniFrameTiles = NULL;
+    defAlienPillager.aniFrameTiles = NULL;
+    defAlienGunnerBullet.aniFrameTiles = NULL;
     GameObjectDefinition **def = defs;
     for (int i = 0; i < numDefs; ++i) {
         if ((*def)->aniFrameTiles) {
