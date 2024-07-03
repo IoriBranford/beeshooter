@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="393" nextobjectid="4006">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4027">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -5916,25 +5916,51 @@ end</property>
    <object id="2474" name="center" type="Path" x="128" y="2040">
     <polyline points="0,-56 0,24"/>
    </object>
+  </objectgroup>
+  <objectgroup id="393" name="r9aliensfromalienmind">
+   <object id="4019" template="enemies/Fly.tx" x="152" y="2024"/>
+   <object id="4020" template="enemies/Fly.tx" gid="2147484154" x="104" y="2024" rotation="0"/>
+   <object id="4021" template="enemies/AlienPillager.tx" x="136" y="2040"/>
+   <object id="4022" template="enemies/AlienPillager.tx" gid="2147484176" x="120" y="2040" rotation="0"/>
+   <object id="4023" template="enemies/AlienGunner.tx" x="152" y="2040"/>
+   <object id="4024" template="enemies/AlienGunner.tx" gid="2147484170" x="104" y="2040" rotation="0"/>
    <object id="2475" type="Path" x="96" y="2096">
-    <polyline points="24,-56 16,-56 8,-40 0,8 -16,16 -40,40 -48,72 -48,112 -16,144 -16,160"/>
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="24,-56 16,-56 8,-40 0,8 -16,16 -40,40 -48,72 -48,112 -16,144 -16,176"/>
    </object>
    <object id="2476" type="Path" x="160" y="2096">
-    <polyline points="-24,-56 -16,-56 -8,-40 0,8 16,16 40,40 48,72 48,128 16,160"/>
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="-24,-56 -16,-56 -8,-40 0,8 16,16 40,40 48,72 48,128 0,176"/>
    </object>
    <object id="2477" type="Path" x="-8" y="2072">
+    <properties>
+     <property name="speed" type="float" value="4"/>
+    </properties>
     <polyline points="112,-32 88,-48 64,-48 48,-24 48,0"/>
    </object>
    <object id="2478" type="Path" x="256" y="2048">
+    <properties>
+     <property name="speed" type="float" value="4"/>
+    </properties>
     <polyline points="-104,-8 -80,-24 -56,-24 -40,0 -40,24"/>
    </object>
    <object id="2479" type="Path" x="-16" y="2256">
-    <polyline points="120,-232 96,-216 80,-176 80,-48 72,-40 56,-32 40,-40 32,-64 32,-112 32,-48 24,-24 0,-16"/>
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="120,-232 96,-216 80,-176 80,-48 72,-40 56,-32 40,-40 32,-64 32,-112 32,-96 32,-80 32,-48 24,-24 0,-16"/>
    </object>
    <object id="2480" type="Path" x="208" y="2256">
-    <polyline points="-56,-232 -32,-216 -16,-176 -16,-48 -8,-40 8,-32 24,-40 32,-64 32,-112 32,-48 40,-24 64,-16"/>
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="-56,-232 -32,-216 -16,-176 -16,-48 -8,-40 8,-32 24,-40 32,-64 32,-112 32,-96 32,-80 32,-48 40,-24 64,-16"/>
    </object>
-   <object id="2481" template="enemies/PathPoint.tx" x="40" y="2072">
+   <object id="2481" template="enemies/PathPoint.tx" x="24" y="2072">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
@@ -5943,7 +5969,7 @@ while true do
 end</property>
     </properties>
    </object>
-   <object id="2482" template="enemies/PathPoint.tx" x="216" y="2072">
+   <object id="2482" template="enemies/PathPoint.tx" x="232" y="2072">
     <properties>
      <property name="subscript">changeTile(self, &quot;gun_stand&quot;)
 while true do
@@ -5952,56 +5978,84 @@ while true do
 end</property>
     </properties>
    </object>
-   <object id="2483" template="enemies/PathPoint.tx" x="16" y="2144">
+   <object id="2485" template="pathpoints/EnterForeground.tx" type="PathPoint" x="240" y="2192"/>
+   <object id="2486" template="pathpoints/EnterForeground.tx" type="PathPoint" x="16" y="2192"/>
+   <object id="2488" template="pathpoints/FaceLeft.tx" x="216" y="2224"/>
+   <object id="4006" template="pathpoints/FaceRight.tx" x="40" y="2224"/>
+   <object id="4007" template="pathpoints/SetSpeed.tx" x="16" y="2192">
     <properties>
-     <property name="subscript">for i=1,3 do
- setShooting(self, shootAtPlayer, 2, 3)
- wait(16)
-end</property>
+     <property name="speed" type="float" value="0.75"/>
     </properties>
    </object>
-   <object id="2484" template="enemies/PathPoint.tx" x="240" y="2144">
+   <object id="4008" template="pathpoints/SetSpeed.tx" x="240" y="2192">
     <properties>
-     <property name="subscript">for i=1,3 do
- setShooting(self, shootAtPlayer, 2, 3)
- wait(16)
-end</property>
+     <property name="speed" type="float" value="0.75"/>
     </properties>
    </object>
-   <object id="2485" type="PathPoint" x="240" y="2192">
+   <object id="4009" template="pathpoints/ShootAtPlayer.tx" x="240" y="2160" rotation="0">
     <properties>
-     <property name="subscript">enterForeground(self)
-self.speed = 0.75</property>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
     </properties>
     <point/>
    </object>
-   <object id="2486" type="PathPoint" x="16" y="2192">
+   <object id="4010" template="pathpoints/ShootAtPlayer.tx" x="240" y="2176" rotation="0">
     <properties>
-     <property name="subscript">enterForeground(self)
-self.speed = 0.75</property>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
     </properties>
     <point/>
    </object>
-   <object id="2487" template="enemies/PathPoint.tx" x="40" y="2224">
+   <object id="4011" template="pathpoints/ShootAtPlayer.tx" x="240" y="2144" rotation="0">
     <properties>
-     <property name="subscript" value="faceSpriteX(self, 1)"/>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4012" template="pathpoints/ShootAtPlayer.tx" x="16" y="2160" rotation="0">
+    <properties>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4013" template="pathpoints/ShootAtPlayer.tx" x="16" y="2176" rotation="0">
+    <properties>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4014" template="pathpoints/ShootAtPlayer.tx" x="16" y="2144" rotation="0">
+    <properties>
+     <property name="shootinterval" type="int" value="2"/>
+     <property name="shoottimes" type="int" value="3"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4015" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="120" y="2040">
+    <properties>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
    </object>
-   <object id="2488" template="enemies/PathPoint.tx" x="216" y="2224">
+   <object id="4016" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="136" y="2040">
     <properties>
-     <property name="subscript" value="faceSpriteX(self, -1)"/>
+     <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
    </object>
-   <object id="2489" template="enemies/PathPoint.tx" x="104" y="2040">
+   <object id="4017" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="40" y="2072">
     <properties>
-     <property name="subscript" value="self.speed = fastspeed or 4"/>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
-   <object id="2490" template="enemies/PathPoint.tx" x="152" y="2040">
+   <object id="4018" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="216" y="2072">
     <properties>
-     <property name="subscript" value="self.speed = fastspeed or 4"/>
+     <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
+   <object id="4025" template="pathpoints/EnterBackground.tx" x="104" y="2024"/>
+   <object id="4026" template="pathpoints/EnterBackground.tx" x="152" y="2024"/>
   </objectgroup>
   <objectgroup id="261" name="part2">
    <object id="2491" template="triggers/SpawnCharacters.tx" x="-24" y="2008"/>

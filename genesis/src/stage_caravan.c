@@ -5661,492 +5661,8 @@ static const Path path2474 = {
 }
 }
 };
-static const Path path2475 = {
-.x = 96, .y = 2096, .numPoints = 10, .points = {
-{
-    .x = 24, .y = -56,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 16, .y = -56,
-    .speedTo = 64, .distTo = 512,
-    .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 8, .y = -40,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = -29, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 8,
-    .speedTo = 64, .distTo = 3114,
-    .xVelTo = -11, .yVelTo = 63,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = 16,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = -58, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -40, .y = 40,
-    .speedTo = 64, .distTo = 2172,
-    .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -48, .y = 72,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = -16, .yVelTo = 62,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -48, .y = 112,
-    .speedTo = 64, .distTo = 2560,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = 144,
-    .speedTo = 64, .distTo = 2896,
-    .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = 160,
-    .speedTo = 64, .distTo = 1024,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-}
-}
-};
-static const Path path2476 = {
-.x = 160, .y = 2096, .numPoints = 9, .points = {
-{
-    .x = -24, .y = -56,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = -56,
-    .speedTo = 64, .distTo = 512,
-    .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -8, .y = -40,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = 28, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = 8,
-    .speedTo = 64, .distTo = 3114,
-    .xVelTo = 10, .yVelTo = 63,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 16, .y = 16,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = 57, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 40, .y = 40,
-    .speedTo = 64, .distTo = 2172,
-    .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 48, .y = 72,
-    .speedTo = 64, .distTo = 2111,
-    .xVelTo = 15, .yVelTo = 62,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 48, .y = 128,
-    .speedTo = 64, .distTo = 3584,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 16, .y = 160,
-    .speedTo = 64, .distTo = 2896,
-    .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-}
-}
-};
-static const GObjPathPointFunction path2477_0_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2477_4_actions[] = {
-0 /* to be assigned */
-};
-static const Path path2477 = {
-.x = -8, .y = 2072, .numPoints = 5, .points = {
-{
-    .x = 112, .y = -32,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2477_0_actions
-},
-{
-    .x = 88, .y = -48,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -54, .yVelTo = -36,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 64, .y = -48,
-    .speedTo = 64, .distTo = 1536,
-    .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 48, .y = -24,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -36, .yVelTo = 53,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 48, .y = 0,
-    .speedTo = 64, .distTo = 1536,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2477_4_actions
-}
-}
-};
-static const GObjPathPointFunction path2478_0_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2478_4_actions[] = {
-0 /* to be assigned */
-};
-static const Path path2478 = {
-.x = 256, .y = 2048, .numPoints = 5, .points = {
-{
-    .x = -104, .y = -8,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2478_0_actions
-},
-{
-    .x = -80, .y = -24,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 53, .yVelTo = -36,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -56, .y = -24,
-    .speedTo = 64, .distTo = 1536,
-    .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -40, .y = 0,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 35, .yVelTo = 53,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -40, .y = 24,
-    .speedTo = 64, .distTo = 1536,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2478_4_actions
-}
-}
-};
-static const GObjPathPointFunction path2479_5_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2479_7_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2479_8_actions[] = {
-0 /* to be assigned */
-};
-static const Path path2479 = {
-.x = -16, .y = 2256, .numPoints = 12, .points = {
-{
-    .x = 120, .y = -232,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 96, .y = -216,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = -54, .yVelTo = 35,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 80, .y = -176,
-    .speedTo = 64, .distTo = 2757,
-    .xVelTo = -24, .yVelTo = 59,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 80, .y = -48,
-    .speedTo = 64, .distTo = 8192,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 72, .y = -40,
-    .speedTo = 64, .distTo = 724,
-    .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 56, .y = -32,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = -58, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2479_5_actions
-},
-{
-    .x = 40, .y = -40,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = -58, .yVelTo = -29,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = -64,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = -21, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2479_7_actions
-},
-{
-    .x = 32, .y = -112,
-    .speedTo = 64, .distTo = 3072,
-    .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2479_8_actions
-},
-{
-    .x = 32, .y = -48,
-    .speedTo = 64, .distTo = 4096,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 24, .y = -24,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = -21, .yVelTo = 60,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 0, .y = -16,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = -61, .yVelTo = 20,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-}
-}
-};
-static const GObjPathPointFunction path2480_5_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2480_7_actions[] = {
-0 /* to be assigned */
-};
-static const GObjPathPointFunction path2480_8_actions[] = {
-0 /* to be assigned */
-};
-static const Path path2480 = {
-.x = 208, .y = 2256, .numPoints = 12, .points = {
-{
-    .x = -56, .y = -232,
-    .speedTo = 64, .distTo = 0,
-    .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -32, .y = -216,
-    .speedTo = 64, .distTo = 1846,
-    .xVelTo = 53, .yVelTo = 35,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = -176,
-    .speedTo = 64, .distTo = 2757,
-    .xVelTo = 23, .yVelTo = 59,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -16, .y = -48,
-    .speedTo = 64, .distTo = 8192,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = -8, .y = -40,
-    .speedTo = 64, .distTo = 724,
-    .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 8, .y = -32,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = 57, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2480_5_actions
-},
-{
-    .x = 24, .y = -40,
-    .speedTo = 64, .distTo = 1144,
-    .xVelTo = 57, .yVelTo = -29,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 32, .y = -64,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = 20, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2480_7_actions
-},
-{
-    .x = 32, .y = -112,
-    .speedTo = 64, .distTo = 3072,
-    .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 1,
-    .actions = path2480_8_actions
-},
-{
-    .x = 32, .y = -48,
-    .speedTo = 64, .distTo = 4096,
-    .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 40, .y = -24,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = 20, .yVelTo = 60,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-},
-{
-    .x = 64, .y = -16,
-    .speedTo = 64, .distTo = 1619,
-    .xVelTo = 60, .yVelTo = 20,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .numActions = 0,
-    .actions = 0
-}
-}
-};
 static const Path *room9alienmind_paths[] = {
-    &path2474,
-    &path2475,
-    &path2476,
-    &path2477,
-    &path2478,
-    &path2479,
-    &path2480
+    &path2474
 };
 static const LevelObject lobj2472 = {
     .definition = &defAlienMind,
@@ -6159,8 +5675,601 @@ static const LevelObject *room9alienmind_objects[] = {
     &lobj2472
 };
 LevelObjectGroup room9alienmind = {
-    .numPaths = 7, .paths = room9alienmind_paths,
+    .numPaths = 1, .paths = room9alienmind_paths,
     .numObjects = 1, .objects = room9alienmind_objects
+};
+extern LevelObjectGroup r9aliensfromalienmind;
+static const GObjPathPointFunction path2475_0_actions[] = {
+setSpriteAnim
+};
+static const Path path2475 = {
+.x = 96, .y = 2096, .numPoints = 10, .points = {
+{
+    .x = 24, .y = -56,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
+    .numActions = 1,
+    .actions = path2475_0_actions
+},
+{
+    .x = 16, .y = -56,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = -128, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = -40,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = -58, .yVelTo = 114,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 8,
+    .speedTo = 128, .distTo = 3114,
+    .xVelTo = -22, .yVelTo = 126,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -16, .y = 16,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = -115, .yVelTo = 57,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -40, .y = 40,
+    .speedTo = 128, .distTo = 2172,
+    .xVelTo = -91, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -48, .y = 72,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = -32, .yVelTo = 124,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -48, .y = 112,
+    .speedTo = 128, .distTo = 2560,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -16, .y = 144,
+    .speedTo = 128, .distTo = 2896,
+    .xVelTo = 90, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -16, .y = 176,
+    .speedTo = 128, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+}
+}
+};
+static const GObjPathPointFunction path2476_0_actions[] = {
+setSpriteAnim
+};
+static const Path path2476 = {
+.x = 160, .y = 2096, .numPoints = 9, .points = {
+{
+    .x = -24, .y = -56,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
+    .numActions = 1,
+    .actions = path2476_0_actions
+},
+{
+    .x = -16, .y = -56,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 128, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -8, .y = -40,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = 57, .yVelTo = 114,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 8,
+    .speedTo = 128, .distTo = 3114,
+    .xVelTo = 21, .yVelTo = 126,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 16, .y = 16,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = 114, .yVelTo = 57,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 40, .y = 40,
+    .speedTo = 128, .distTo = 2172,
+    .xVelTo = 90, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 48, .y = 72,
+    .speedTo = 128, .distTo = 2111,
+    .xVelTo = 31, .yVelTo = 124,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 48, .y = 128,
+    .speedTo = 128, .distTo = 3584,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = 176,
+    .speedTo = 128, .distTo = 4344,
+    .xVelTo = -91, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+}
+}
+};
+static const GObjPathPointFunction path2477_4_actions[] = {
+setSpriteAnim
+};
+static const Path path2477 = {
+.x = -8, .y = 2072, .numPoints = 5, .points = {
+{
+    .x = 112, .y = -32,
+    .speedTo = 256, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 88, .y = -48,
+    .speedTo = 256, .distTo = 1846,
+    .xVelTo = -214, .yVelTo = -143,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 64, .y = -48,
+    .speedTo = 256, .distTo = 1536,
+    .xVelTo = -256, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 48, .y = -24,
+    .speedTo = 256, .distTo = 1846,
+    .xVelTo = -143, .yVelTo = 213,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 48, .y = 0,
+    .speedTo = 256, .distTo = 1536,
+    .xVelTo = 0, .yVelTo = 256,
+    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
+    .numActions = 1,
+    .actions = path2477_4_actions
+}
+}
+};
+static const GObjPathPointFunction path2478_4_actions[] = {
+setSpriteAnim
+};
+static const Path path2478 = {
+.x = 256, .y = 2048, .numPoints = 5, .points = {
+{
+    .x = -104, .y = -8,
+    .speedTo = 256, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -80, .y = -24,
+    .speedTo = 256, .distTo = 1846,
+    .xVelTo = 213, .yVelTo = -143,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -56, .y = -24,
+    .speedTo = 256, .distTo = 1536,
+    .xVelTo = 256, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -40, .y = 0,
+    .speedTo = 256, .distTo = 1846,
+    .xVelTo = 142, .yVelTo = 213,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -40, .y = 24,
+    .speedTo = 256, .distTo = 1536,
+    .xVelTo = 0, .yVelTo = 256,
+    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
+    .numActions = 1,
+    .actions = path2478_4_actions
+}
+}
+};
+static const GObjPathPointFunction path2479_0_actions[] = {
+enterBackground
+};
+static const GObjPathPointFunction path2479_5_actions[] = {
+faceRight
+};
+static const GObjPathPointFunction path2479_7_actions[] = {
+enterForeground,
+PathPoint_SetSpeed
+};
+static const GObjPathPointFunction path2479_8_actions[] = {
+startShooting
+};
+static const GObjPathPointFunction path2479_9_actions[] = {
+startShooting
+};
+static const GObjPathPointFunction path2479_10_actions[] = {
+startShooting
+};
+static const Path path2479 = {
+.x = -16, .y = 2256, .numPoints = 14, .points = {
+{
+    .x = 120, .y = -232,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 1,
+    .actions = path2479_0_actions
+},
+{
+    .x = 96, .y = -216,
+    .speedTo = 128, .distTo = 1846,
+    .xVelTo = -107, .yVelTo = 71,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 80, .y = -176,
+    .speedTo = 128, .distTo = 2757,
+    .xVelTo = -48, .yVelTo = 118,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 80, .y = -48,
+    .speedTo = 128, .distTo = 8192,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 72, .y = -40,
+    .speedTo = 128, .distTo = 724,
+    .xVelTo = -91, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 56, .y = -32,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = -115, .yVelTo = 57,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 1,
+    .actions = path2479_5_actions
+},
+{
+    .x = 40, .y = -40,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = -115, .yVelTo = -58,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = -64,
+    .speedTo = 128, .distTo = 1619,
+    .xVelTo = -41, .yVelTo = -122,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 2,
+    .actions = path2479_7_actions
+},
+{
+    .x = 32, .y = -112,
+    .speedTo = 48, .distTo = 3072,
+    .xVelTo = 0, .yVelTo = -48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2479_8_actions
+},
+{
+    .x = 32, .y = -96,
+    .speedTo = 48, .distTo = 1024,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2479_9_actions
+},
+{
+    .x = 32, .y = -80,
+    .speedTo = 48, .distTo = 1024,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2479_10_actions
+},
+{
+    .x = 32, .y = -48,
+    .speedTo = 48, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 24, .y = -24,
+    .speedTo = 48, .distTo = 1619,
+    .xVelTo = -16, .yVelTo = 45,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 0, .y = -16,
+    .speedTo = 48, .distTo = 1619,
+    .xVelTo = -46, .yVelTo = 15,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+}
+}
+};
+static const GObjPathPointFunction path2480_0_actions[] = {
+enterBackground
+};
+static const GObjPathPointFunction path2480_5_actions[] = {
+faceLeft
+};
+static const GObjPathPointFunction path2480_7_actions[] = {
+enterForeground,
+PathPoint_SetSpeed
+};
+static const GObjPathPointFunction path2480_8_actions[] = {
+startShooting
+};
+static const GObjPathPointFunction path2480_9_actions[] = {
+startShooting
+};
+static const GObjPathPointFunction path2480_10_actions[] = {
+startShooting
+};
+static const Path path2480 = {
+.x = 208, .y = 2256, .numPoints = 14, .points = {
+{
+    .x = -56, .y = -232,
+    .speedTo = 128, .distTo = 0,
+    .xVelTo = 0, .yVelTo = 0,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 1,
+    .actions = path2480_0_actions
+},
+{
+    .x = -32, .y = -216,
+    .speedTo = 128, .distTo = 1846,
+    .xVelTo = 106, .yVelTo = 71,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -16, .y = -176,
+    .speedTo = 128, .distTo = 2757,
+    .xVelTo = 47, .yVelTo = 118,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -16, .y = -48,
+    .speedTo = 128, .distTo = 8192,
+    .xVelTo = 0, .yVelTo = 128,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = -8, .y = -40,
+    .speedTo = 128, .distTo = 724,
+    .xVelTo = 90, .yVelTo = 90,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 8, .y = -32,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = 114, .yVelTo = 57,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 1,
+    .actions = path2480_5_actions
+},
+{
+    .x = 24, .y = -40,
+    .speedTo = 128, .distTo = 1144,
+    .xVelTo = 114, .yVelTo = -58,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 32, .y = -64,
+    .speedTo = 128, .distTo = 1619,
+    .xVelTo = 40, .yVelTo = -122,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 2,
+    .actions = path2480_7_actions
+},
+{
+    .x = 32, .y = -112,
+    .speedTo = 48, .distTo = 3072,
+    .xVelTo = 0, .yVelTo = -48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2480_8_actions
+},
+{
+    .x = 32, .y = -96,
+    .speedTo = 48, .distTo = 1024,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2480_9_actions
+},
+{
+    .x = 32, .y = -80,
+    .speedTo = 48, .distTo = 1024,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 3, .shootInterval = 2, .anim = 0,
+    .numActions = 1,
+    .actions = path2480_10_actions
+},
+{
+    .x = 32, .y = -48,
+    .speedTo = 48, .distTo = 2048,
+    .xVelTo = 0, .yVelTo = 48,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 40, .y = -24,
+    .speedTo = 48, .distTo = 1619,
+    .xVelTo = 15, .yVelTo = 45,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+},
+{
+    .x = 64, .y = -16,
+    .speedTo = 48, .distTo = 1619,
+    .xVelTo = 45, .yVelTo = 15,
+    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .numActions = 0,
+    .actions = 0
+}
+}
+};
+static const Path *r9aliensfromalienmind_paths[] = {
+    &path2475,
+    &path2476,
+    &path2477,
+    &path2478,
+    &path2479,
+    &path2480
+};
+static const LevelObject lobj4023 = {
+    .definition = &defAlienGunner,
+    .x = 152, .y = 2040,
+    .animInd = 0, .flags = 32768,
+    .group = &r9aliensfromalienmind, .path = &path2478,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject lobj4021 = {
+    .definition = &defAlienPillager,
+    .x = 136, .y = 2040,
+    .animInd = 0, .flags = 32768,
+    .group = &r9aliensfromalienmind, .path = &path2476,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject lobj4022 = {
+    .definition = &defAlienPillager,
+    .x = 120, .y = 2040,
+    .animInd = 0, .flags = 34816,
+    .group = &r9aliensfromalienmind, .path = &path2475,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject lobj4024 = {
+    .definition = &defAlienGunner,
+    .x = 104, .y = 2040,
+    .animInd = 0, .flags = 34816,
+    .group = &r9aliensfromalienmind, .path = &path2477,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject lobj4019 = {
+    .definition = &defFly,
+    .x = 152, .y = 2024,
+    .animInd = 0, .flags = 32768,
+    .group = &r9aliensfromalienmind, .path = &path2480,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject lobj4020 = {
+    .definition = &defFly,
+    .x = 104, .y = 2024,
+    .animInd = 0, .flags = 34816,
+    .group = &r9aliensfromalienmind, .path = &path2479,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+static const LevelObject *r9aliensfromalienmind_objects[] = {
+    &lobj4023,
+    &lobj4021,
+    &lobj4022,
+    &lobj4024,
+    &lobj4019,
+    &lobj4020
+};
+LevelObjectGroup r9aliensfromalienmind = {
+    .numPaths = 6, .paths = r9aliensfromalienmind_paths,
+    .numObjects = 6, .objects = r9aliensfromalienmind_objects
 };
 extern LevelObjectGroup part2;
 LevelObjectGroup part2 = {
@@ -13568,6 +13677,7 @@ LevelObjectGroup *stage_caravan_groups[] = {
     &room8powerup,
     &room9powerup,
     &room9alienmind,
+    &r9aliensfromalienmind,
     &part2,
     &room10acidants,
     &room10acidants2,
