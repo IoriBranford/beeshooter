@@ -134,6 +134,7 @@ GameObjectDefinition defAlienGunner = {
     .palette = &palAlien,
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
+    .bulletDef = &defFlyBullet,
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defAlienPillager = {
