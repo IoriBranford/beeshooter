@@ -147,7 +147,7 @@ GameObjectDefinition defAlienGunner = {
     .defeatSoundDef = &sndBugKill2,
     .bulletDef = &defAlienGunnerBullet,
     .update = GOBJ_updatePathWalker,
-    .shootFunction = ENEMY_shootAtDir
+    .shootFunction = ENEMY_alienGunnerShoot
 };
 GameObjectDefinition defAlienPillager = {
     .team = TEAM_ENEMY,

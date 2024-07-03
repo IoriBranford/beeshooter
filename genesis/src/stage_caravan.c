@@ -4556,7 +4556,7 @@ LevelObjectGroup room6bigant = {
 extern LevelObjectGroup room7alien1;
 static const GObjPathPointFunction path2397_2_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2397 = {
 .x = 112, .y = 2496, .numPoints = 3, .points = {
@@ -4582,8 +4582,8 @@ static const Path path2397 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = 121,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2397_2_actions
 }
@@ -4617,7 +4617,7 @@ LevelObjectGroup room7alien1 = {
 extern LevelObjectGroup room7alien2;
 static const GObjPathPointFunction path2403_2_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2403 = {
 .x = 48, .y = 2440, .numPoints = 3, .points = {
@@ -4643,8 +4643,8 @@ static const Path path2403 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = 121,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2403_2_actions
 }
@@ -4652,7 +4652,7 @@ static const Path path2403 = {
 };
 static const GObjPathPointFunction path2404_2_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2404 = {
 .x = 176, .y = 2440, .numPoints = 3, .points = {
@@ -4678,8 +4678,8 @@ static const Path path2404 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = -41, .yVelTo = 121,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2404_2_actions
 }
@@ -5505,7 +5505,8 @@ LevelObjectGroup room8alien1 = {
 };
 extern LevelObjectGroup room8alien2;
 static const GObjPathPointFunction path2442_1_actions[] = {
-PathPoint_SetSpeed
+PathPoint_SetSpeed,
+startShooting
 };
 static const Path path2442 = {
 .x = 88, .y = 2352, .numPoints = 4, .points = {
@@ -5522,9 +5523,9 @@ static const Path path2442 = {
     .x = -8, .y = 16,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .shootCount = 5, .shootInterval = 40, .anim = 0,
     .newUpdate = 0,
-    .numActions = 1,
+    .numActions = 2,
     .actions = path2442_1_actions
 },
 {
@@ -5548,7 +5549,8 @@ static const Path path2442 = {
 }
 };
 static const GObjPathPointFunction path2443_1_actions[] = {
-PathPoint_SetSpeed
+PathPoint_SetSpeed,
+startShooting
 };
 static const Path path2443 = {
 .x = 152, .y = 2352, .numPoints = 4, .points = {
@@ -5565,9 +5567,9 @@ static const Path path2443 = {
     .x = 24, .y = 16,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
+    .shootCount = 5, .shootInterval = 40, .anim = 0,
     .newUpdate = 0,
-    .numActions = 1,
+    .numActions = 2,
     .actions = path2443_1_actions
 },
 {
@@ -5858,7 +5860,7 @@ LevelObjectGroup room8alien3 = {
 extern LevelObjectGroup room8alien4;
 static const GObjPathPointFunction path2457_1_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2457 = {
 .x = 96, .y = 2248, .numPoints = 2, .points = {
@@ -5875,8 +5877,8 @@ static const Path path2457 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2457_1_actions
 }
@@ -5884,7 +5886,7 @@ static const Path path2457 = {
 };
 static const GObjPathPointFunction path2458_1_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2458 = {
 .x = 88, .y = 2232, .numPoints = 2, .points = {
@@ -5901,8 +5903,8 @@ static const Path path2458 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2458_1_actions
 }
@@ -5910,7 +5912,7 @@ static const Path path2458 = {
 };
 static const GObjPathPointFunction path2459_1_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2459 = {
 .x = 160, .y = 2248, .numPoints = 2, .points = {
@@ -5927,8 +5929,8 @@ static const Path path2459 = {
     .x = -16, .y = 40,
     .speedTo = 128, .distTo = 3620,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2459_1_actions
 }
@@ -5936,7 +5938,7 @@ static const Path path2459 = {
 };
 static const GObjPathPointFunction path2460_1_actions[] = {
 setSpriteAnim,
-setUpdate
+startShooting
 };
 static const Path path2460 = {
 .x = 168, .y = 2232, .numPoints = 2, .points = {
@@ -5953,8 +5955,8 @@ static const Path path2460 = {
     .x = -16, .y = 40,
     .speedTo = 128, .distTo = 3620,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
+    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
+    .newUpdate = 0,
     .numActions = 2,
     .actions = path2460_1_actions
 }

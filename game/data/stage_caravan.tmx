@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4036">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4045">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -5382,9 +5382,15 @@ end</property>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
-   <object id="4033" template="pathpoints/SetUpdate.tx" type="PathPoint" x="128" y="2536">
+   <object id="4033" template="pathpoints/SetUpdate.tx" type="PathPoint" x="128" y="2572">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4038" template="pathpoints/ShootAtPlayer.tx" x="128" y="2536">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
     </properties>
    </object>
   </objectgroup>
@@ -5432,14 +5438,26 @@ end</property>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
-   <object id="4034" template="pathpoints/SetUpdate.tx" type="PathPoint" x="64" y="2480">
+   <object id="4034" template="pathpoints/SetUpdate.tx" type="PathPoint" x="64" y="2516">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
-   <object id="4035" template="pathpoints/SetUpdate.tx" type="PathPoint" x="192" y="2480">
+   <object id="4035" template="pathpoints/SetUpdate.tx" type="PathPoint" x="196" y="2516">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4039" template="pathpoints/ShootAtPlayer.tx" x="64" y="2480">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
+   <object id="4040" template="pathpoints/ShootAtPlayer.tx" x="192" y="2480">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
     </properties>
    </object>
   </objectgroup>
@@ -5532,19 +5550,19 @@ end</property>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
    </object>
-   <object id="3953" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="280" y="2528" rotation="0">
+   <object id="3953" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="280" y="2528" rotation="0">
     <properties>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
     <point/>
    </object>
-   <object id="3954" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="272" y="2512" rotation="0">
+   <object id="3954" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="272" y="2512" rotation="0">
     <properties>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
     <point/>
    </object>
-   <object id="3955" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="264" y="2496" rotation="0">
+   <object id="3955" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="264" y="2496" rotation="0">
     <properties>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
@@ -5642,16 +5660,16 @@ end</property>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
    </object>
-   <object id="3980" template="enemies/Path.tx" gid="0" x="152" y="2360" rotation="0">
+   <object id="3980" template="enemies/Path.tx" x="152" y="2360" rotation="0">
     <polyline points="0,0 -8,0"/>
    </object>
-   <object id="3981" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="144" y="2360" rotation="0">
+   <object id="3981" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="144" y="2360" rotation="0">
     <properties>
      <property name="anim" value="ANI_ALIEN_CLAW_STAND"/>
     </properties>
     <point/>
    </object>
-   <object id="3982" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" gid="0" x="152" y="2360" rotation="0">
+   <object id="3982" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="152" y="2360" rotation="0">
     <properties>
      <property name="anim" value="ANI_ALIEN_CLAW_RUN"/>
     </properties>
@@ -5769,26 +5787,20 @@ end</property>
     </properties>
     <polyline points="24,0 24,16 56,48 120,48"/>
    </object>
-   <object id="2444" template="enemies/PathPoint.tx" x="88" y="2384">
-    <properties>
-     <property name="subscript">self.speed = slowspeed or 1
-for i = 1,2 do
- wait(40)
- AlienGunner_shootAtPlayer(self)
-end</property>
-    </properties>
-   </object>
-   <object id="2445" template="enemies/PathPoint.tx" x="168" y="2384">
-    <properties>
-     <property name="subscript">self.speed = slowspeed or 1
-for i = 1,2 do
- wait(40)
- AlienGunner_shootAtPlayer(self)
-end</property>
-    </properties>
-   </object>
    <object id="3956" template="pathpoints/SetSpeed.tx" x="80" y="2368"/>
    <object id="3957" template="pathpoints/SetSpeed.tx" x="176" y="2368"/>
+   <object id="4036" template="pathpoints/ShootAtPlayer.tx" x="80" y="2368">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
+   <object id="4037" template="pathpoints/ShootAtPlayer.tx" x="176" y="2368">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="256" name="room8alien3" visible="0">
    <object id="2446" template="enemies/AlienGunner.tx" gid="522" x="-16" y="2392" rotation="0"/>
@@ -5904,24 +5916,48 @@ end</property>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
     </properties>
    </object>
-   <object id="4029" template="pathpoints/SetUpdate.tx" type="PathPoint" x="104" y="2272">
+   <object id="4029" template="pathpoints/SetUpdate.tx" type="PathPoint" x="104" y="2244">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
-   <object id="4030" template="pathpoints/SetUpdate.tx" type="PathPoint" x="112" y="2288">
+   <object id="4030" template="pathpoints/SetUpdate.tx" type="PathPoint" x="112" y="2260">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
-   <object id="4031" template="pathpoints/SetUpdate.tx" type="PathPoint" x="144" y="2288">
+   <object id="4031" template="pathpoints/SetUpdate.tx" type="PathPoint" x="144" y="2260">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
-   <object id="4032" template="pathpoints/SetUpdate.tx" type="PathPoint" x="152" y="2272">
+   <object id="4032" template="pathpoints/SetUpdate.tx" type="PathPoint" x="152" y="2244">
     <properties>
      <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
+    </properties>
+   </object>
+   <object id="4041" template="pathpoints/ShootAtPlayer.tx" x="104" y="2272">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
+   <object id="4042" template="pathpoints/ShootAtPlayer.tx" x="112" y="2288">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
+   <object id="4043" template="pathpoints/ShootAtPlayer.tx" x="144" y="2288">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
+    </properties>
+   </object>
+   <object id="4044" template="pathpoints/ShootAtPlayer.tx" x="152" y="2272">
+    <properties>
+     <property name="shootinterval" type="int" value="40"/>
+     <property name="shoottimes" type="int" value="5"/>
     </properties>
    </object>
   </objectgroup>
