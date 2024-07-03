@@ -1,0 +1,13 @@
+#ifndef _ANIM_H
+#define _ANIM_H
+
+enum AniAliens {
+    ANI_ALIEN_GUN_RUN,
+    ANI_ALIEN_GUN_STAND,
+    ANI_ALIEN_CLAW_RUN,
+    ANI_ALIEN_CLAW_STAND,
+    ANI_ALIEN_GUN_DIE,
+    ANI_ALIEN_CLAW_DIE,
+};
+
+#endif
