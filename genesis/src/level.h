@@ -4,14 +4,15 @@
 #include "types.h"
 #include "pal.h"
 #include "anim.h"
+#include "enemy.h"
 
 typedef struct Trigger Trigger;
 typedef struct PathPoint PathPoint;
 typedef struct Path Path;
 typedef struct GameObjectDefinition GameObjectDefinition;
-typedef struct GameObject GameObject;
 typedef struct LevelObject LevelObject;
 typedef struct LevelObjectGroup LevelObjectGroup;
+typedef void (*GObjFunction)(GameObject *self);
 typedef void (*TriggerFunction)(const Trigger *self);
 typedef void (*GObjPathPointFunction)(GameObject *self, const PathPoint *pathPoint);
 
@@ -27,6 +28,7 @@ struct PathPoint {
     fix16 speedTo, distTo;
     u8 shootInterval, shootCount;
     u16 anim;
+    GObjFunction *newUpdate;
     u32 numActions;
     const GObjPathPointFunction *actions;
 };
