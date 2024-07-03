@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="SetSpriteAnim" type="PathPoint">
+  <properties>
+   <property name="action" value="setSpriteAnim"/>
+   <property name="anim" value=""/>
+  </properties>
+  <point/>
+ </object>
+</template>
