@@ -43,6 +43,6 @@ extern GameObjectDefinition
     defAlienGunner,
     defAlienPillager;
 
-extern GameObjectDefinition *part1defs[8];
+extern GameObjectDefinition *part1defs[9];
 
 #endif

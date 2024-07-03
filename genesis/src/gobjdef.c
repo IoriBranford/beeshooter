@@ -148,7 +148,17 @@ GameObjectDefinition defAlienPillager = {
     .defeatSoundDef = &sndBugKill2,
     .update = GOBJ_updatePathWalker,
 };
-GameObjectDefinition defAlienMind;
+GameObjectDefinition defAlienMind = {
+    .team = TEAM_ENEMY,
+    .health = 64,
+    .defeatPoints = 10000,
+    .spriteDef = &sprAlienMind,
+    .spriteDepth = 1,
+    .palette = &palAlien,
+    .bodyW = FIX16(12), .bodyH = FIX16(12),
+    //.update = ENEMY_updateAlienMind,
+    //.onDefeat = ENEMY_onDefeatAlienMind
+};
 GameObjectDefinition defAcidAnt;
 GameObjectDefinition defWasp;
 GameObjectDefinition defReinforcedHoneyPot;
@@ -159,7 +169,7 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *part1defs[8] = {
+GameObjectDefinition *part1defs[9] = {
     &defHoneyPot,
     &defPowerup,
     &defAnt,
@@ -167,7 +177,8 @@ GameObjectDefinition *part1defs[8] = {
     &defFly,
     &defAntBig,
     &defAlienGunner,
-    &defAlienPillager
+    &defAlienPillager,
+    &defAlienMind
 };
 
 u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs) {
