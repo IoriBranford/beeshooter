@@ -22,8 +22,9 @@ struct GameObjectDefinition {
     fix16 bodyW, bodyH;
     Team team;
     PathParent pathParent;
-    void (*update)(GameObject*);
-    void (*onDefeat)(GameObject*);
+    GObjFunction update;
+    GObjFunction onDefeat;
+    GObjFunction shootFunction;
 };
 
 u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs);

@@ -51,9 +51,11 @@ typedef struct GameObject {
     u16 health;
     s16 team;
     u8 invulTimer;
+
     u8 shootTimer;
     u8 shootInterval;
     u8 shotsLeft;
+    fix16 shootDirX, shootDirY;
 } GameObject;
 
 enum {
