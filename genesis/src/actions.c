@@ -47,6 +47,11 @@ void stopStageScroll(const Trigger *trigger)
     LEVEL_setVelY(0);
 }
 
+void setUpdate(GameObject *self, const PathPoint *pathPoint) {
+    if (pathPoint->newUpdate)
+        self->update = (ObjectCallback*)pathPoint->newUpdate;
+}
+
 void setSpriteVisible(GameObject *self, const PathPoint *pathPoint)
 {
     if (!self->sprite)
