@@ -120,8 +120,10 @@ u16 LEVEL_getPaletteSlot(const Palette *palette) {
     u16 paletteSlot = PAL0;
     if (palette == paletteUsage[PAL0].palette) {
         paletteSlot = PAL0;
+        paletteUsage[paletteSlot].cameraY = cameraY;
     } else if (palette == paletteUsage[PAL1].palette) {
         paletteSlot = PAL1;
+        paletteUsage[paletteSlot].cameraY = cameraY;
     } else if (palette == &palPlayer) {
         paletteSlot = PLAYERPAL;
     } else if (!paletteUsage[PAL0].palette || paletteUsage[PAL0].cameraY > paletteUsage[PAL1].cameraY) {
