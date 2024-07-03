@@ -80,9 +80,18 @@ void BULLET_setVelocityXY(GameObject *self, fix16 dx, fix16 dy, fix16 speed) {
     }
 }
 
-GameObject* BULLET_shootAtTarget(fix16 centerX, fix16 centerY, GameObject *target, const GameObjectDefinition *def) {
+GameObject* BULLET_shootAtVector(fix16 centerX, fix16 centerY, fix16 dx, fix16 dy, const GameObjectDefinition *def) {
     GameObject *self = GOBJ_createFromDef(def, centerX, centerY);
-    if (self && target)
-        BULLET_setVelocityXY(self, target->centerX - centerX, target->centerY - centerY, self->speed);
+    if (self)
+        BULLET_setVelocityXY(self, dx, dy, self->speed);
     return self;
+}
+
+GameObject* BULLET_shootAtTarget(fix16 centerX, fix16 centerY, GameObject *target, const GameObjectDefinition *def) {
+    fix16 dx = 0, dy = 0;
+    if (target) {
+        dx = target->centerX - centerX;
+        dy = target->centerY - centerY;
+    }
+    return BULLET_shootAtVector(centerX, centerY, dx, dy, def);
 }
