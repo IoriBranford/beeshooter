@@ -2,6 +2,7 @@
 #include "gobjdef.h"
 #include "bullet.h"
 #include "player.h"
+#include "gameplay.h"
 #include <genesis.h>
 
 enum AniBigAnt {
@@ -96,6 +97,30 @@ void ENEMY_onDefeatBigAnt(GameObject *self) {
     }
 
     GOBJ_defaultDefeatAction(self);
+}
+
+void ENEMY_alienGunnerShoot(GameObject *self) {
+    if (self->centerY >= GAME_BOUNDH * 3 / 4) {
+        GOBJ_startShooting(self, 0, 0);
+        return;
+    }
+
+    PlayerObject *player = GAME_livePlayer();
+    if (!player) {
+        GOBJ_startShooting(self, 6, 40);
+        return;
+    }
+
+    if (self->shotsLeft == 5) {
+        self->shootDirX = player->centerX - self->centerX;
+        self->shootDirY = player->centerY - self->centerY;
+    }
+    ENEMY_shootAtDir(self);
+    if (self->shotsLeft <= 1) {
+        GOBJ_startShooting(self, 6, 40);
+    } else {
+        self->shootInterval = 1;
+    }
 }
 
 void ENEMY_updateAlienStartShooting(GameObject *self) {

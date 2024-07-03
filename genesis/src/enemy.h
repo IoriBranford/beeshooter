@@ -5,6 +5,7 @@ typedef struct GameObject GameObject;
 
 void ENEMY_shootAtPlayer(GameObject *self);
 void ENEMY_shootAtDir(GameObject *self);
+void ENEMY_alienGunnerShoot(GameObject *self);
 
 void ENEMY_onDefeatBigAnt(GameObject *self);
 void ENEMY_updateAlienStandAndShoot(GameObject *self);
