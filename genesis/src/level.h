@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "pal.h"
+#include "anim.h"
 
 typedef struct Trigger Trigger;
 typedef struct PathPoint PathPoint;
@@ -25,6 +26,7 @@ struct PathPoint {
     fix16 xVelTo, yVelTo;
     fix16 speedTo, distTo;
     u8 shootInterval, shootCount;
+    u16 anim;
     u32 numActions;
     const GObjPathPointFunction *actions;
 };
