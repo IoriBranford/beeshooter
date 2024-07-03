@@ -1,12 +1,27 @@
 #include "gobject.h"
 #include "gobjdef.h"
-
+#include "bullet.h"
+#include "player.h"
 #include <genesis.h>
 
 enum AniBigAnt {
     ANI_BIGANT_RIGHT,
     ANI_BIGANT_DOWN
 };
+
+void ENEMY_shootAtPlayer(GameObject *self) {
+    const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
+    GameObject *player = (GameObject*)GAME_livePlayer();
+    if (player && bulletDef) {
+        BULLET_shootAtTarget(self->centerX, self->centerY, player, bulletDef);
+    }
+}
+
+void ENEMY_shootAtDir(GameObject *self) {
+    const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
+    if (bulletDef)
+        BULLET_shootAtVector(self->centerX, self->centerY, self->shootDirX, self->shootDirY, bulletDef);
+}
 
 void ENEMY_onDefeatBigAnt(GameObject *self) {
     const fix16 SPEEDY = FIX16(4);
@@ -87,7 +102,12 @@ void ENEMY_updateAlienStartShooting(GameObject *self) {
     if (!self->shotsLeft) {
         if (self->shootTimer) {
             if (!--self->shootTimer) {
-                GOBJ_startShooting(self, 5, 1);
+                PlayerObject *player = GAME_livePlayer();
+                if (player) {
+                    self->shootDirX = player->centerX - self->centerX;
+                    self->shootDirY = player->centerY - self->centerY;
+                    GOBJ_startShooting(self, 5, 1);
+                }
             }
         } else {
             self->shootTimer = 60;
