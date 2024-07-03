@@ -3,12 +3,14 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "type": "shell",
-    "command": "make -f ${env:GDK}/makefile.gen",
+    "command": "make",
+    "args": ["-f", "${env:GDK}/makefile.gen"],
     "options": {
         "cwd": "${workspaceFolder}/genesis"
     },
     "windows": {
-        "command": "${env:GDK}\\bin\\make -f ${env:GDK}\\makefile.gen",
+        "command": "${env:GDK}\\bin\\make",
+        "args": ["-f", "${env:GDK}\\makefile.gen"]
     },
     "tasks": [
         {
@@ -34,7 +36,8 @@
         },
         {
             "label": "Start debug server",
-            "command": "${config:gens.path} -D out${pathSeparator}rom.bin",
+            "command": "${config:gens.path}",
+            "args": ["-D", "out${pathSeparator}rom.bin"],
             "problemMatcher": "$gcc",
             "isBackground": true
         },
