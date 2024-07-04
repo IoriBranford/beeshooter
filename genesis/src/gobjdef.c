@@ -41,6 +41,7 @@ GameObjectDefinition defAnt = {
     .palette = &palAnt,
     .bodyW = FIX16(8), .bodyH = FIX16(6),
     .defeatSoundDef = &sndBugKill1,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defHoneyPot = {
