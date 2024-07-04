@@ -505,6 +505,6 @@ void GOBJ_updateFaller(GameObject *self) {
 }
 
 void GOBJ_updateSpark(GameObject *self) {
-    if (SPR_getAnimationDone(self->sprite))
+    if (SPR_getAnimationWillBeDone(self->sprite))
         GAME_releaseObject(self);
 }
