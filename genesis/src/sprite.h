@@ -8,4 +8,6 @@ typedef struct Sprite Sprite;
  */
 void SPR_defaultFrameChange(Sprite *sprite);
 
+bool SPR_getAnimationWillBeDone(Sprite *sprite);
+
 #endif
