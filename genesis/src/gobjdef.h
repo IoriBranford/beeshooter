@@ -22,6 +22,7 @@ struct GameObjectDefinition {
     fix16 bodyW, bodyH;
     Team team;
     PathParent pathParent;
+    GObjFunction init;
     GObjFunction update;
     GObjFunction onDefeat;
     GObjFunction shootFunction;
