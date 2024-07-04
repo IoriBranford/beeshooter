@@ -26,6 +26,7 @@ GameObjectDefinition defPlayerShot = {
     .update = BULLET_update
 };
 GameObjectDefinition defBloodSmall = {
+    .team = TEAM_NONE,
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
     .palette = &palPlayer,
