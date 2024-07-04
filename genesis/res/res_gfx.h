@@ -11,6 +11,7 @@ extern const SpriteDefinition sprPlayerShot;
 extern const SpriteDefinition sprPowerup;
 extern const SpriteDefinition sprUiWeapons;
 extern const SpriteDefinition sprUiWeaponsCursor;
+extern const SpriteDefinition sprBloodSmall;
 extern const Palette palAnt;
 extern const Palette palFlyAndHoney;
 extern const Palette palAlien;
