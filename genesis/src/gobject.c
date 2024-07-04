@@ -250,6 +250,8 @@ void GOBJ_defaultDefeatAction(GameObject *self) {
         if (def->defeatSoundDef)
             SND_playDef(def->defeatSoundDef);
         GAME_scorePoints(def->defeatPoints);
+        if (def->corpseDef)
+            GOBJ_createFromDef(def->corpseDef, self->centerX, self->centerY);
     }
     GAME_releaseObject(self);
 }

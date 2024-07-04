@@ -16,6 +16,7 @@ struct GameObjectDefinition {
     s16 spriteDepth;
     SoundDefinition *defeatSoundDef;
     const GameObjectDefinition *bulletDef;
+    const GameObjectDefinition *corpseDef;
     const SpriteDefinition *spriteDef;
     const Palette *palette;
     u16 **aniFrameTiles;
