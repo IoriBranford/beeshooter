@@ -257,7 +257,6 @@ u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
 }
 
 void GOBJDEF_freePart1EnemyFrames() {
-    defHoneyCell.aniFrameTiles = NULL;
     defAlienPillager.aniFrameTiles = NULL;
     defAlienGunnerBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
