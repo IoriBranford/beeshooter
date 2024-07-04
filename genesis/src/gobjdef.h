@@ -29,8 +29,10 @@ struct GameObjectDefinition {
     GObjFunction shootFunction;
 };
 
-u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs);
-void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs);
+u16 GOBJDEF_loadCommonFrames(u16 tileIndex);
+void GOBJDEF_freeCommonFrames();
+u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex);
+void GOBJDEF_freePart1EnemyFrames();
 
 extern GameObjectDefinition
     defHoneyPot,
@@ -43,7 +45,5 @@ extern GameObjectDefinition
     defAntBigButt,
     defAlienGunner,
     defAlienPillager;
-
-extern GameObjectDefinition *part1defs[8];
 
 #endif

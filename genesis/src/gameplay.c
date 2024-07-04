@@ -212,7 +212,8 @@ int gameplay() {
 
     LEVEL_init(tileIndex);
     tileIndex += bgTileset.numTile;
-    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part1defs)/sizeof(part1defs[0]), part1defs);
+    tileIndex = GOBJDEF_loadCommonFrames(tileIndex);
+    tileIndex = GOBJDEF_loadPart1EnemyFrames(tileIndex);
     SYS_doVBlankProcess();
 
     PLAYER_init(&player);
@@ -292,7 +293,8 @@ int gameplay() {
         SYS_doVBlankProcess();
     }
 
-    GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(part1defs[0]), part1defs);
+    GOBJDEF_freePart1EnemyFrames();
+    GOBJDEF_freeCommonFrames();
     PLAYER_freeSpriteFrames();
     UI_freeSpriteFrames();
     LEVEL_destroy();

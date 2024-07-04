@@ -189,9 +189,13 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *part1defs[8] = {
-    &defHoneyPot,
+GameObjectDefinition *commondefs[3] = {
+    &defBloodSmall,
     &defPowerup,
+    &defHoneyPot,
+};
+
+GameObjectDefinition *part1defs[6] = {
     &defAnt,
     &defFlyBullet,
     &defFly,
@@ -211,16 +215,10 @@ u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **
         }
         ++def;
     }
-    defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
-    defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
-    defAlienGunnerBullet.aniFrameTiles = defFlyBullet.aniFrameTiles;
     return tileIndex;
 }
 
 void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
-    defHoneyCell.aniFrameTiles = NULL;
-    defAlienPillager.aniFrameTiles = NULL;
-    defAlienGunnerBullet.aniFrameTiles = NULL;
     GameObjectDefinition **def = defs;
     for (int i = 0; i < numDefs; ++i) {
         if ((*def)->aniFrameTiles) {
@@ -228,4 +226,29 @@ void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
             (*def)->aniFrameTiles = NULL;
         }
     }
+}
+
+u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
+    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
+    defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
+    return tileIndex;
+}
+
+void GOBJDEF_freeCommonFrames() {
+    defHoneyCell.aniFrameTiles = NULL;
+    GOBJDEF_freeSpriteFrames(sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
+}
+
+u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
+    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
+    defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
+    defAlienGunnerBullet.aniFrameTiles = defFlyBullet.aniFrameTiles;
+    return tileIndex;
+}
+
+void GOBJDEF_freePart1EnemyFrames() {
+    defHoneyCell.aniFrameTiles = NULL;
+    defAlienPillager.aniFrameTiles = NULL;
+    defAlienGunnerBullet.aniFrameTiles = NULL;
+    GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
 }
