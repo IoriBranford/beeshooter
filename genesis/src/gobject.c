@@ -503,3 +503,8 @@ void GOBJ_updateFaller(GameObject *self) {
     }
     GOBJ_updateSprite(self);
 }
+
+void GOBJ_updateSpark(GameObject *self) {
+    if (SPR_getAnimationDone(self->sprite))
+        GAME_releaseObject(self);
+}

@@ -102,4 +102,6 @@ void GOBJ_followStage(GameObject *self);
 void GOBJ_updateSpawner(GameObject *self);
 void GOBJ_updateFaller(GameObject *self);
 
+void GOBJ_updateSpark(GameObject *self);
+
 #endif
