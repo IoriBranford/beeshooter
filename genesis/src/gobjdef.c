@@ -87,6 +87,7 @@ GameObjectDefinition defFly = {
     .defeatSoundDef = &sndBugKill2,
     .pathParent = PATHPARENT_TRIGGER,
     .bulletDef = &defFlyBullet,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
     .shootFunction = ENEMY_shootAtPlayer
 };
@@ -110,6 +111,7 @@ GameObjectDefinition defAntBig = {
     .palette = &palAnt,
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updateSpawner,
     .onDefeat = ENEMY_onDefeatBigAnt
 };
@@ -122,6 +124,7 @@ GameObjectDefinition defAntBigHead = {
     .palette = &palAnt,
     .bodyW = FIX16(10), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updateFaller,
 };
 GameObjectDefinition defAntBigButt = {
@@ -133,6 +136,7 @@ GameObjectDefinition defAntBigButt = {
     .palette = &palAnt,
     .bodyW = FIX16(10), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updateFaller,
 };
 GameObjectDefinition defAlienGunnerBullet = {
@@ -155,6 +159,7 @@ GameObjectDefinition defAlienGunner = {
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBugKill2,
     .bulletDef = &defAlienGunnerBullet,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
     .shootFunction = ENEMY_alienGunnerShoot
 };
@@ -168,6 +173,7 @@ GameObjectDefinition defAlienPillager = {
     .bodyW = FIX16(10), .bodyH = FIX16(8),
     .animInd = 2,
     .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defAlienMind = {
