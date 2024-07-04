@@ -202,6 +202,8 @@ GameObjectDefinition *part1defs[6] = {
     &defFlyBullet,
     &defFly,
     &defAntBig,
+    &defAntBigHead,
+    &defAntBigButt,
     &defAlienGunner,
     &defAlienMind
 };
