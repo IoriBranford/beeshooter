@@ -25,6 +25,13 @@ GameObjectDefinition defPlayerShot = {
     // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
 };
+GameObjectDefinition defBloodSmall = {
+    .spriteDef = &sprBloodSmall,
+    .spriteDepth = -50,
+    .palette = &palPlayer,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
