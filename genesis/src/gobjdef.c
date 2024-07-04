@@ -203,7 +203,7 @@ GameObjectDefinition *commondefs[3] = {
     &defHoneyPot,
 };
 
-GameObjectDefinition *part1defs[6] = {
+GameObjectDefinition *part1defs[8] = {
     &defAnt,
     &defFlyBullet,
     &defFly,
