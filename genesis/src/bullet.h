@@ -9,5 +9,6 @@ GameObject* BULLET_shootAtVector(fix16 centerX, fix16 centerY, fix16 dx, fix16 d
 GameObject* BULLET_shootAtTarget(fix16 centerX, fix16 centerY, GameObject *target, const GameObjectDefinition *def);
 
 void BULLET_update(GameObject *self);
+void BULLET_updateAngleTester(GameObject *self);
 
 #endif

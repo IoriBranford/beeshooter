@@ -1,6 +1,7 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "gameplay.h"
+#include "player.h"
 #include "maths.h"
 #include "moremath.h"
 
@@ -75,9 +76,13 @@ void BULLET_updateSpriteDirectionAngle(GameObject *self, u16 angle) {
     }
 }
 
-void BULLET_updateSpriteDirection(GameObject *self) {
-    u16 angle = approximateAtan2(self->velY, self->velX);
-    BULLET_updateSpriteDirectionAngle(self, angle);
+void BULLET_updateAngleTester(GameObject *self) {
+    PlayerObject *player = GAME_livePlayer();
+    if (!player)
+        return;
+    fix16 dx = player->centerX - self->centerX;
+    fix16 dy = player->centerY - self->centerY;
+    BULLET_updateSpriteDirectionXY(self, dx, dy);
 }
 
 void BULLET_setVelocityAS(GameObject *self, u16 angle, fix16 speed) {

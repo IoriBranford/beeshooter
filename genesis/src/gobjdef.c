@@ -15,6 +15,13 @@ GameObjectDefinition defPlayer = {
     .bodyW = FIX16(4),
     .bodyH = FIX16(4),
 };
+GameObjectDefinition defAngleTester = {
+    .team = TEAM_NONE,
+    .spriteDef = &sprFlyBullet,
+    .spriteDepth = -90,
+    .palette = &palFlyAndHoney,
+    .update = BULLET_updateAngleTester
+};
 GameObjectDefinition defPlayerShot = {
     .team = TEAM_PLAYERSHOT,
     .speed = FIX16(16),
@@ -251,12 +258,14 @@ void GOBJDEF_freeCommonFrames() {
 
 u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
+    defAngleTester.aniFrameTiles = defFlyBullet.aniFrameTiles;
     defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
     defAlienGunnerBullet.aniFrameTiles = defFlyBullet.aniFrameTiles;
     return tileIndex;
 }
 
 void GOBJDEF_freePart1EnemyFrames() {
+    defAngleTester.aniFrameTiles = NULL;
     defAlienPillager.aniFrameTiles = NULL;
     defAlienGunnerBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);

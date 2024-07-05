@@ -35,6 +35,7 @@ u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex);
 void GOBJDEF_freePart1EnemyFrames();
 
 extern GameObjectDefinition
+    defAngleTester,
     defHoneyPot,
     defPowerup,
     defAnt,
