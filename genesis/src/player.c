@@ -10,12 +10,7 @@
 #include "sounddef.h"
 #include "res_gfx.h"
 #include "res_audio.h"
-
-enum PlayerAnimation {
-    ANI_FLYA,
-    ANI_FLYB,
-    ANI_DIE
-};
+#include "anim.h"
 
 const u8 SHOOTINTERVAL = 6;
 const fix16 MARGIN = FIX16(8);
@@ -138,7 +133,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
 void PLAYER_setSpeed(PlayerObject *self, fix16 speed) {
     self->speed = speed;
     s16 animInd = self->sprite->animInd;
-    if (animInd == ANI_FLYA || animInd == ANI_FLYB) {
+    if (animInd == ANI_PLAYER_FLYA || animInd == ANI_PLAYER_FLYB) {
         // set appropriate animation speed
     }
 }
@@ -146,9 +141,9 @@ void PLAYER_setSpeed(PlayerObject *self, fix16 speed) {
 void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
     self->weapon = weapon;
     switch (self->sprite->animInd) {
-        case ANI_FLYA:
-        case ANI_FLYB:
-            SPR_setAnim(self->sprite, weapon == WEAPON_B ? ANI_FLYB : ANI_FLYA);
+        case ANI_PLAYER_FLYA:
+        case ANI_PLAYER_FLYB:
+            SPR_setAnim(self->sprite, weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
             PLAYER_setSpeed(self, self->speed);
             break;
     }
@@ -265,7 +260,7 @@ void PLAYER_init(PlayerObject *self) {
         TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE), 0);
     self->sprite->data = (u32)shipAniFrame;
     SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
-    SPR_setAnim(self->sprite, self->weapon ? ANI_FLYB : ANI_FLYA);
+    SPR_setAnim(self->sprite, self->weapon ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);

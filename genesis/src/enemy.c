@@ -3,12 +3,8 @@
 #include "bullet.h"
 #include "player.h"
 #include "gameplay.h"
+#include "anim.h"
 #include <genesis.h>
-
-enum AniBigAnt {
-    ANI_BIGANT_RIGHT,
-    ANI_BIGANT_DOWN
-};
 
 void ENEMY_shootAtPlayer(GameObject *self) {
     const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;

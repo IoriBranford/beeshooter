@@ -2,8 +2,7 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "gameplay.h"
-
-#define HONEYPOT_ANI_OPEN 1
+#include "anim.h"
 
 #define POWERUP_RISE_DESTX FIX16(128)
 #define POWERUP_RISE_DESTY FIX16(36)
@@ -23,8 +22,8 @@ void GOBJ_openHoneypot(GameObject *self) {
         GAME_scorePoints(def->defeatPoints);
     }
     GOBJ_createFromDef(&defPowerup, self->centerX, self->centerY);
-    if (self->sprite && HONEYPOT_ANI_OPEN < def->spriteDef->numAnimation)
-        SPR_setAnim(self->sprite, HONEYPOT_ANI_OPEN);
+    if (self->sprite && ANI_POT_OPEN < def->spriteDef->numAnimation)
+        SPR_setAnim(self->sprite, ANI_POT_OPEN);
     else
         GAME_releaseObject(self);
 }
