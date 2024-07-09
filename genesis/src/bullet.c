@@ -16,6 +16,15 @@ void BULLET_update(GameObject *self) {
     }
 }
 
+void BULLET_updateFalling(GameObject *self) {
+    const fix16 GRAVITY = FIX16(.125);
+    fix16 lastVelY = self->velY;
+    self->velY += GRAVITY;
+    if (lastVelY < 0 && self->velY >= 0)
+        SPR_setVFlip(self->sprite, false);
+    BULLET_update(self);
+}
+
 GameObject* BULLET_create() {
     GameObject *self = GAME_createObject();
     if (self)
