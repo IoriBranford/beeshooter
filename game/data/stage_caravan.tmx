@@ -5968,13 +5968,13 @@ end</property>
    <object id="2474" name="center" type="Path" x="128" y="2040">
     <polyline points="0,-56 0,24"/>
    </object>
-   <object id="4076" template="pathpoints/SetUpdate.tx" type="PathPoint" x="128" y="2064">
-    <properties>
-     <property name="update" value="ENEMY_updateAlienMind"/>
-    </properties>
-   </object>
    <object id="4077" template="triggers/StopStageScroll.tx" x="-32" y="2016"/>
-   <object id="4080" template="pathpoints/SetInvul.tx" type="PathPoint" x="128" y="2064"/>
+   <object id="4080" name="StartAlienMindFight" type="PathPoint" x="128" y="2064">
+    <properties>
+     <property name="action" value="startAlienMindFight"/>
+    </properties>
+    <point/>
+   </object>
   </objectgroup>
   <objectgroup id="393" name="r9aliensfromalienmind">
    <object id="4019" template="enemies/Fly.tx" x="140" y="2036"/>
@@ -6105,16 +6105,14 @@ end</property>
    </object>
    <object id="4025" template="pathpoints/EnterBackground.tx" x="116" y="2036"/>
    <object id="4026" template="pathpoints/EnterBackground.tx" x="140" y="2036"/>
-   <object id="4078" template="pathpoints/ShootAtPlayer.tx" x="216" y="2072">
+   <object id="4078" template="pathpoints/SetUpdate.tx" x="216" y="2072">
     <properties>
-     <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="255"/>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
-   <object id="4079" template="pathpoints/ShootAtPlayer.tx" x="40" y="2072">
+   <object id="4079" template="pathpoints/SetUpdate.tx" x="40" y="2072">
     <properties>
-     <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="255"/>
+     <property name="update" value="ENEMY_updateAlienStandAndShoot"/>
     </properties>
    </object>
   </objectgroup>
