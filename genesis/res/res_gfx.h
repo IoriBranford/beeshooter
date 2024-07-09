@@ -25,6 +25,8 @@ extern const SpriteDefinition sprFly;
 extern const SpriteDefinition sprAlien;
 extern const SpriteDefinition sprAlienMind;
 extern const Palette palAcid;
+extern const Palette palWaspAndHoney;
 extern const SpriteDefinition sprAcidBullet;
+extern const SpriteDefinition sprWasp;
 
 #endif // _RES_RES_GFX_H_

@@ -31,4 +31,9 @@ enum AniAliens {
     ANI_ALIEN_CLAW_DIE,
 };
 
+enum AniWasp {
+    ANI_WASP_FLY,
+    ANI_WASP_BIRTH
+};
+
 #endif
