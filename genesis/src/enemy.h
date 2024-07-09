@@ -12,4 +12,6 @@ void ENEMY_updateAlienStandAndShoot(GameObject *self);
 
 void MIDBOSS_onDefeat(GameObject *self);
 
+void ENEMY_onDefeatShootUpward(GameObject *self);
+
 #endif

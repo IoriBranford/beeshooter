@@ -14,6 +14,11 @@ void ENEMY_shootAtPlayer(GameObject *self) {
     }
 }
 
+void ENEMY_onDefeatShootUpward(GameObject *self) {
+    BULLET_shootAtVector(self->centerX, self->centerY, 0, FIX16(-1), self->definition->bulletDef);
+    GOBJ_defaultDefeatAction(self);
+}
+
 void ENEMY_shootAtDir(GameObject *self) {
     const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
     if (bulletDef)
