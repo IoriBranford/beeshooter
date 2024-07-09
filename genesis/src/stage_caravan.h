@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (206)
+#define stage_caravan_numTriggers (207)
 extern const Trigger stage_caravan_triggers[];
 
 #define stage_caravan_numGroups (119)
@@ -28,23 +28,24 @@ void spawnCharacters(const Trigger *trigger);
 void unpauseTimer(const Trigger *trigger);
 void spawnNextCharacters(const Trigger *trigger);
 void stopStageScroll(const Trigger *trigger);
-void faceRight(GameObject *self, const PathPoint *pathPoint);
-void enterBackground(GameObject *self, const PathPoint *pathPoint);
-void enterForeground(GameObject *self, const PathPoint *pathPoint);
-void startShooting(GameObject *self, const PathPoint *pathPoint);
-void PathPoint_SetSpeed(GameObject *self, const PathPoint *pathPoint);
-void setSpriteHidden(GameObject *self, const PathPoint *pathPoint);
-void faceLeft(GameObject *self, const PathPoint *pathPoint);
-void setSpriteVisible(GameObject *self, const PathPoint *pathPoint);
-void markDisappear(GameObject *self, const PathPoint *pathPoint);
-void setSpriteAnim(GameObject *self, const PathPoint *pathPoint);
-void setUpdate(GameObject *self, const PathPoint *pathPoint);
-void climbUpToFloor(GameObject *self, const PathPoint *pathPoint);
-void startWaspAttack(GameObject *self, const PathPoint *pathPoint);
-void BeetleShoot(GameObject *self, const PathPoint *pathPoint);
-void PathPoint_Rotate(GameObject *self, const PathPoint *pathPoint);
-void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const PathPoint *pathPoint);
-void ChooseSweepPath_DamageFlashRed(GameObject *self, const PathPoint *pathPoint);
-void PathPoint_ShootBurstsAtAngle(GameObject *self, const PathPoint *pathPoint);
-void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const PathPoint *pathPoint);
+void faceRight(GameObject *self, const GameObjectAction *action);
+void enterBackground(GameObject *self, const GameObjectAction *action);
+void enterForeground(GameObject *self, const GameObjectAction *action);
+void startShooting(GameObject *self, const GameObjectAction *action);
+void PathPoint_SetSpeed(GameObject *self, const GameObjectAction *action);
+void setSpriteHidden(GameObject *self, const GameObjectAction *action);
+void faceLeft(GameObject *self, const GameObjectAction *action);
+void setSpriteVisible(GameObject *self, const GameObjectAction *action);
+void markDisappear(GameObject *self, const GameObjectAction *action);
+void setSpriteAnim(GameObject *self, const GameObjectAction *action);
+void setUpdate(GameObject *self, const GameObjectAction *action);
+void setInvul(GameObject *self, const GameObjectAction *action);
+void climbUpToFloor(GameObject *self, const GameObjectAction *action);
+void startWaspAttack(GameObject *self, const GameObjectAction *action);
+void BeetleShoot(GameObject *self, const GameObjectAction *action);
+void PathPoint_Rotate(GameObject *self, const GameObjectAction *action);
+void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const GameObjectAction *action);
+void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *action);
+void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action);
+void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action);
 #endif

@@ -395,12 +395,12 @@ void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
     self->pathIndex = pathIndex;
 }
 
-void GOBJ_doPathPointActions(GameObject *self, const PathPoint *pathPoint) {
-    const GObjPathPointFunction *action = pathPoint->actions;
+void GOBJ_doActions(GameObject *self, const u32 numActions, const GameObjectAction *actions) {
+    const GameObjectAction *action = actions;
     if (action) {
-        for (u32 i = 0; i < pathPoint->numActions; ++i) {
-            if (*action) {
-                (*action)(self, pathPoint);
+        for (u32 i = 0; i < numActions; ++i) {
+            if (*action->action) {
+                (*action->action)(self, action);
                 if (!GOBJ_isAllocated(self))
                     return;
             }
@@ -431,7 +431,7 @@ void GOBJ_followPath(GameObject *self) {
                 destY = LEVEL_toScreenY(FIX32(destY));
             self->centerX = destX;
             self->centerY = destY;
-            GOBJ_doPathPointActions(self, pathPoint);
+            GOBJ_doActions(self, pathPoint->numActions, pathPoint->actions);
             if (!GOBJ_isAllocated(self))
                 return;
         }
@@ -452,7 +452,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
     
         if (path && pathIndex) {
             const PathPoint *prevPoint = &path->points[pathIndex - 1];
-            GOBJ_doPathPointActions(self, prevPoint);
+            GOBJ_doActions(self, prevPoint->numActions, prevPoint->actions);
             if (!GOBJ_isAllocated(self))
                 return;
         } else {

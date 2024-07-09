@@ -40,7 +40,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
     write: (map, fileName) => {
         let baseName = fileName.match(/([^//\\]+).c$/)[1]
         /** @type {Record<string, string>} */
-        let pathPointActions = {}
+        let objectActions = {}
         /** @type {Record<string, string>} */
         let objectDefs = {}
 
@@ -67,17 +67,27 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         return
 
                     let pathPointActionsCName = `path${path.id}_${i}_actions`
-
-                    cCode.push(`static const GObjPathPointFunction ${pathPointActionsCName}[] = {`,
+                    cCode.push(`static const GameObjectAction ${pathPointActionsCName}[] = {`,
                         pathPoints.map((pathPoint) => {
                             let action = pathPoint.resolvedProperty('action')
+                            let params = ''
                             if (action) {
                                 action = action.replace(/\W/, '_')
-                                pathPointActions[action] = `void ${action}(GameObject *self, const PathPoint *pathPoint);`
+                                objectActions[action] = `void ${action}(GameObject *self, const GameObjectAction *action);`
+                                
+                                let shootInterval = pathPoint.resolvedProperty('shootinterval')
+                                let shootCount = pathPoint.resolvedProperty('shoottimes')
+                                let anim = pathPoint.resolvedProperty('anim')
+                                let update = pathPoint.resolvedProperty('update')
+                                params = (update && `.update = ${update}`)
+                                    || (anim && `.anim = ${anim}`)
+                                    || (shootCount && shootInterval && `.count = ${shootCount}, .interval = ${shootInterval}`)
+                                    || ''
                             } else {
                                 action = `0 /* to be assigned */`
                             }
-                            return `${action}`
+                            
+                            return `{.action = ${action}, ${params}}`
                         }).join(',\n'),
                         '};')
                 })
@@ -90,18 +100,11 @@ tiled.registerMapFormat("Honey Guardian C level", {
                         let prevPoint = i > 0 ? points[i-1] : null
                         let prevPointData = i > 0 ? pointsData[i-1] : null
                         let xDirTo = 0, yDirTo = 0, distTo = 0
-                        let shootInterval = 0, shootCount = 0
-                        let anim = 0
-                        let update = ''
                         prevPointData?.forEach(pointDatum => {
                             speed = pointDatum.resolvedProperty('speed') || speed
                         })
                         pointData?.forEach(pointDatum => {
                             speed = pointDatum.resolvedProperty('speedto') || speed
-                            shootInterval = pointDatum.resolvedProperty('shootinterval') || shootInterval
-                            shootCount = pointDatum.resolvedProperty('shoottimes') || shootCount
-                            anim = pointDatum.resolvedProperty('anim') || anim
-                            update = pointDatum.resolvedProperty('update') || update
                         })
                         if (prevPoint) {
                             xDirTo = point.x - prevPoint.x
@@ -114,8 +117,6 @@ return `{
     .x = ${point.x}, .y = ${point.y},
     .speedTo = ${toFix16(speed)}, .distTo = ${toFix16(distTo)},
     .xVelTo = ${toFix16(xDirTo)}, .yVelTo = ${toFix16(yDirTo)},
-    .shootCount = ${shootCount}, .shootInterval = ${shootInterval}, .anim = ${anim},
-    .newUpdate = ${update === '' ? 0 : update},
     .numActions = ${pointsData[i].length},
     .actions = ${pointsData[i].length > 0 ? `path${path.id}_${i}_actions` : '0'}
 }`
@@ -309,7 +310,7 @@ extern LevelObjectGroup *${baseName}_groups[];
 `,
             ...Object.values(objectDefs),
             ...Object.values(triggerActions),
-            ...Object.values(pathPointActions))
+            ...Object.values(objectActions))
         hCode.push('#endif')
 
         let cFile = new TextFile(fileName, TextFile.WriteOnly)

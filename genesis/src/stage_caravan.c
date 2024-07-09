@@ -6,8 +6,6 @@ static const Path path2186 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -15,8 +13,6 @@ static const Path path2186 = {
     .x = -40, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -24,8 +20,6 @@ static const Path path2186 = {
     .x = -56, .y = -56,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -33,8 +27,6 @@ static const Path path2186 = {
     .x = -104, .y = -56,
     .speedTo = 128, .distTo = 3072,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -46,8 +38,6 @@ static const Path path2187 = {
     .x = 0, .y = -48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -55,8 +45,6 @@ static const Path path2187 = {
     .x = -48, .y = -48,
     .speedTo = 128, .distTo = 3072,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -64,8 +52,6 @@ static const Path path2187 = {
     .x = -72, .y = -72,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -73,8 +59,6 @@ static const Path path2187 = {
     .x = -104, .y = -72,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -86,8 +70,6 @@ static const Path path2188 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -95,8 +77,6 @@ static const Path path2188 = {
     .x = -56, .y = -56,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -104,8 +84,6 @@ static const Path path2188 = {
     .x = -88, .y = -88,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -113,15 +91,13 @@ static const Path path2188 = {
     .x = -104, .y = -88,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2189_3_actions[] = {
-faceRight
+static const GameObjectAction path2189_3_actions[] = {
+{.action = faceRight, }
 };
 static const Path path2189 = {
 .x = 288, .y = 4080, .numPoints = 5, .points = {
@@ -129,8 +105,6 @@ static const Path path2189 = {
     .x = 0, .y = -64,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -138,8 +112,6 @@ static const Path path2189 = {
     .x = -64, .y = -64,
     .speedTo = 128, .distTo = 4096,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -147,8 +119,6 @@ static const Path path2189 = {
     .x = -96, .y = -96,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -156,8 +126,6 @@ static const Path path2189 = {
     .x = -96, .y = -104,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2189_3_actions
 },
@@ -165,15 +133,13 @@ static const Path path2189 = {
     .x = -88, .y = -112,
     .speedTo = 128, .distTo = 724,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2190_3_actions[] = {
-faceRight
+static const GameObjectAction path2190_3_actions[] = {
+{.action = faceRight, }
 };
 static const Path path2190 = {
 .x = 296, .y = 4088, .numPoints = 5, .points = {
@@ -181,8 +147,6 @@ static const Path path2190 = {
     .x = 0, .y = -72,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -190,8 +154,6 @@ static const Path path2190 = {
     .x = -72, .y = -72,
     .speedTo = 128, .distTo = 4608,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -199,8 +161,6 @@ static const Path path2190 = {
     .x = -96, .y = -96,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -208,8 +168,6 @@ static const Path path2190 = {
     .x = -96, .y = -104,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2190_3_actions
 },
@@ -217,8 +175,6 @@ static const Path path2190 = {
     .x = -88, .y = -112,
     .speedTo = 128, .distTo = 724,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -284,8 +240,6 @@ static const Path path2199 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -293,8 +247,6 @@ static const Path path2199 = {
     .x = 56, .y = -40,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -302,8 +254,6 @@ static const Path path2199 = {
     .x = 72, .y = -56,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -311,8 +261,6 @@ static const Path path2199 = {
     .x = 104, .y = -56,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -324,8 +272,6 @@ static const Path path2200 = {
     .x = 0, .y = -32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -333,8 +279,6 @@ static const Path path2200 = {
     .x = 56, .y = -32,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -342,8 +286,6 @@ static const Path path2200 = {
     .x = 80, .y = -56,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -351,8 +293,6 @@ static const Path path2200 = {
     .x = 104, .y = -56,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -364,8 +304,6 @@ static const Path path2201 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -373,8 +311,6 @@ static const Path path2201 = {
     .x = 56, .y = -24,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -382,8 +318,6 @@ static const Path path2201 = {
     .x = 88, .y = -56,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -391,8 +325,6 @@ static const Path path2201 = {
     .x = 112, .y = -56,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -404,8 +336,6 @@ static const Path path2202 = {
     .x = 0, .y = -32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -413,8 +343,6 @@ static const Path path2202 = {
     .x = 56, .y = -32,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -422,8 +350,6 @@ static const Path path2202 = {
     .x = 88, .y = -64,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -435,8 +361,6 @@ static const Path path2203 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -444,8 +368,6 @@ static const Path path2203 = {
     .x = 56, .y = -40,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -453,8 +375,6 @@ static const Path path2203 = {
     .x = 88, .y = -72,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -462,8 +382,6 @@ static const Path path2203 = {
     .x = 88, .y = -80,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -529,8 +447,6 @@ static const Path path2204 = {
     .x = -8, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -538,8 +454,6 @@ static const Path path2204 = {
     .x = 8, .y = 0,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -547,8 +461,6 @@ static const Path path2204 = {
     .x = 24, .y = -8,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 114, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -556,8 +468,6 @@ static const Path path2204 = {
     .x = 88, .y = -8,
     .speedTo = 128, .distTo = 4096,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -565,8 +475,6 @@ static const Path path2204 = {
     .x = 136, .y = -32,
     .speedTo = 128, .distTo = 3434,
     .xVelTo = 114, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -574,8 +482,6 @@ static const Path path2204 = {
     .x = 200, .y = -32,
     .speedTo = 128, .distTo = 4096,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -583,8 +489,6 @@ static const Path path2204 = {
     .x = 232, .y = -48,
     .speedTo = 128, .distTo = 2289,
     .xVelTo = 114, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -592,8 +496,6 @@ static const Path path2204 = {
     .x = 272, .y = -48,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -623,8 +525,6 @@ static const Path path2221 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -632,8 +532,6 @@ static const Path path2221 = {
     .x = -32, .y = 0,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -641,8 +539,6 @@ static const Path path2221 = {
     .x = -64, .y = -16,
     .speedTo = 128, .distTo = 2289,
     .xVelTo = -115, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -650,8 +546,6 @@ static const Path path2221 = {
     .x = -168, .y = -16,
     .speedTo = 128, .distTo = 6656,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -659,8 +553,6 @@ static const Path path2221 = {
     .x = -232, .y = -48,
     .speedTo = 128, .distTo = 4579,
     .xVelTo = -115, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -668,8 +560,6 @@ static const Path path2221 = {
     .x = -280, .y = -48,
     .speedTo = 128, .distTo = 3072,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -681,8 +571,6 @@ static const Path path2253 = {
     .x = -8, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -690,8 +578,6 @@ static const Path path2253 = {
     .x = -40, .y = 0,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -699,8 +585,6 @@ static const Path path2253 = {
     .x = -72, .y = 16,
     .speedTo = 128, .distTo = 2289,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -708,8 +592,6 @@ static const Path path2253 = {
     .x = -144, .y = 16,
     .speedTo = 128, .distTo = 4608,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -717,8 +599,6 @@ static const Path path2253 = {
     .x = -160, .y = 24,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -726,8 +606,6 @@ static const Path path2253 = {
     .x = -248, .y = 24,
     .speedTo = 128, .distTo = 5632,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -735,8 +613,6 @@ static const Path path2253 = {
     .x = -264, .y = 32,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -744,8 +620,6 @@ static const Path path2253 = {
     .x = -280, .y = 32,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -799,8 +673,6 @@ static const Path path3891 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -808,8 +680,6 @@ static const Path path3891 = {
     .x = 80, .y = 24,
     .speedTo = 128, .distTo = 5345,
     .xVelTo = 122, .yVelTo = 36,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -821,8 +691,6 @@ static const Path path3892 = {
     .x = 0, .y = -8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -830,8 +698,6 @@ static const Path path3892 = {
     .x = 88, .y = 24,
     .speedTo = 128, .distTo = 5992,
     .xVelTo = 120, .yVelTo = 43,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -843,8 +709,6 @@ static const Path path3893 = {
     .x = 0, .y = -8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -852,8 +716,6 @@ static const Path path3893 = {
     .x = -72, .y = -8,
     .speedTo = 128, .distTo = 4608,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -865,8 +727,6 @@ static const Path path3894 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -874,8 +734,6 @@ static const Path path3894 = {
     .x = -72, .y = -8,
     .speedTo = 128, .distTo = 4636,
     .xVelTo = -128, .yVelTo = 14,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -887,8 +745,6 @@ static const Path path3895 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -896,8 +752,6 @@ static const Path path3895 = {
     .x = 72, .y = 24,
     .speedTo = 128, .distTo = 4720,
     .xVelTo = 124, .yVelTo = 27,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -909,8 +763,6 @@ static const Path path3896 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -918,8 +770,6 @@ static const Path path3896 = {
     .x = -88, .y = -8,
     .speedTo = 128, .distTo = 5655,
     .xVelTo = -128, .yVelTo = -12,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -931,8 +781,6 @@ static const Path path3897 = {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -940,8 +788,6 @@ static const Path path3897 = {
     .x = 72, .y = 24,
     .speedTo = 128, .distTo = 4636,
     .xVelTo = 127, .yVelTo = 14,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -953,8 +799,6 @@ static const Path path3898 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -962,8 +806,6 @@ static const Path path3898 = {
     .x = -88, .y = -8,
     .speedTo = 128, .distTo = 5724,
     .xVelTo = -126, .yVelTo = -23,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -975,8 +817,6 @@ static const Path path3899 = {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -984,8 +824,6 @@ static const Path path3899 = {
     .x = 80, .y = 24,
     .speedTo = 128, .distTo = 5120,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -997,8 +835,6 @@ static const Path path3900 = {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1006,8 +842,6 @@ static const Path path3900 = {
     .x = -88, .y = -8,
     .speedTo = 128, .distTo = 5837,
     .xVelTo = -124, .yVelTo = -34,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1118,8 +952,6 @@ static const Path path3870 = {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1127,8 +959,6 @@ static const Path path3870 = {
     .x = 88, .y = 24,
     .speedTo = 128, .distTo = 5655,
     .xVelTo = 127, .yVelTo = 11,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1140,8 +970,6 @@ static const Path path3871 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1149,8 +977,6 @@ static const Path path3871 = {
     .x = 88, .y = 24,
     .speedTo = 128, .distTo = 5724,
     .xVelTo = 125, .yVelTo = 22,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1162,8 +988,6 @@ static const Path path3872 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1171,8 +995,6 @@ static const Path path3872 = {
     .x = -72, .y = -8,
     .speedTo = 128, .distTo = 4720,
     .xVelTo = -125, .yVelTo = -28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1184,8 +1006,6 @@ static const Path path3873 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1193,8 +1013,6 @@ static const Path path3873 = {
     .x = -72, .y = -8,
     .speedTo = 128, .distTo = 4636,
     .xVelTo = -128, .yVelTo = -15,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1206,8 +1024,6 @@ static const Path path3874 = {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1215,8 +1031,6 @@ static const Path path3874 = {
     .x = 72, .y = 24,
     .speedTo = 128, .distTo = 4608,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1228,8 +1042,6 @@ static const Path path3875 = {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1237,8 +1049,6 @@ static const Path path3875 = {
     .x = -80, .y = -8,
     .speedTo = 128, .distTo = 5345,
     .xVelTo = -123, .yVelTo = -37,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1250,8 +1060,6 @@ static const Path path3876 = {
     .x = 0, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1259,8 +1067,6 @@ static const Path path3876 = {
     .x = 72, .y = 24,
     .speedTo = 128, .distTo = 4636,
     .xVelTo = 127, .yVelTo = -15,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1272,8 +1078,6 @@ static const Path path3877 = {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1281,8 +1085,6 @@ static const Path path3877 = {
     .x = -88, .y = -8,
     .speedTo = 128, .distTo = 5992,
     .xVelTo = -121, .yVelTo = -44,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1294,8 +1096,6 @@ static const Path path3878 = {
     .x = 0, .y = 40,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1303,8 +1103,6 @@ static const Path path3878 = {
     .x = 72, .y = 24,
     .speedTo = 128, .distTo = 4720,
     .xVelTo = 124, .yVelTo = -28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1316,8 +1114,6 @@ static const Path path3879 = {
     .x = 0, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1325,8 +1121,6 @@ static const Path path3879 = {
     .x = -88, .y = -8,
     .speedTo = 128, .distTo = 6186,
     .xVelTo = -117, .yVelTo = -53,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1446,21 +1240,21 @@ LevelObjectGroup room2powerup = {
     .numObjects = 1, .objects = room2powerup_objects
 };
 extern LevelObjectGroup r3fly1;
-static const GObjPathPointFunction path2303_0_actions[] = {
-enterBackground
+static const GameObjectAction path2303_0_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2303_3_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2303_3_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2303_6_actions[] = {
-startShooting
+static const GameObjectAction path2303_6_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2303_8_actions[] = {
-startShooting
+static const GameObjectAction path2303_8_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2303_9_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2303_9_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
 static const Path path2303 = {
 .x = 0, .y = 3504, .numPoints = 12, .points = {
@@ -1468,8 +1262,6 @@ static const Path path2303 = {
     .x = 64, .y = 112,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2303_0_actions
 },
@@ -1477,8 +1269,6 @@ static const Path path2303 = {
     .x = 64, .y = 96,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1486,8 +1276,6 @@ static const Path path2303 = {
     .x = 72, .y = 80,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1495,8 +1283,6 @@ static const Path path2303 = {
     .x = 88, .y = 72,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 57, .yVelTo = -29,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2303_3_actions
 },
@@ -1504,8 +1290,6 @@ static const Path path2303 = {
     .x = 104, .y = 80,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1513,8 +1297,6 @@ static const Path path2303 = {
     .x = 112, .y = 96,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1522,8 +1304,6 @@ static const Path path2303 = {
     .x = 104, .y = 120,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -21, .yVelTo = 60,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2303_6_actions
 },
@@ -1531,8 +1311,6 @@ static const Path path2303 = {
     .x = 88, .y = 136,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1540,8 +1318,6 @@ static const Path path2303 = {
     .x = 64, .y = 144,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -61, .yVelTo = 20,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2303_8_actions
 },
@@ -1549,8 +1325,6 @@ static const Path path2303 = {
     .x = 40, .y = 136,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -61, .yVelTo = -21,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2303_9_actions
 },
@@ -1558,8 +1332,6 @@ static const Path path2303 = {
     .x = 16, .y = 96,
     .speedTo = 128, .distTo = 2985,
     .xVelTo = -66, .yVelTo = -110,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1567,28 +1339,26 @@ static const Path path2303 = {
     .x = -24, .y = 0,
     .speedTo = 128, .distTo = 6656,
     .xVelTo = -50, .yVelTo = -119,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2304_0_actions[] = {
-enterBackground
+static const GameObjectAction path2304_0_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2304_3_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2304_3_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2304_6_actions[] = {
-startShooting
+static const GameObjectAction path2304_6_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2304_8_actions[] = {
-startShooting
+static const GameObjectAction path2304_8_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2304_9_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2304_9_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
 static const Path path2304 = {
 .x = 224, .y = 3496, .numPoints = 12, .points = {
@@ -1596,8 +1366,6 @@ static const Path path2304 = {
     .x = -32, .y = 120,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2304_0_actions
 },
@@ -1605,8 +1373,6 @@ static const Path path2304 = {
     .x = -32, .y = 104,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1614,8 +1380,6 @@ static const Path path2304 = {
     .x = -40, .y = 88,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1623,8 +1387,6 @@ static const Path path2304 = {
     .x = -56, .y = 80,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -58, .yVelTo = -29,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2304_3_actions
 },
@@ -1632,8 +1394,6 @@ static const Path path2304 = {
     .x = -72, .y = 88,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1641,8 +1401,6 @@ static const Path path2304 = {
     .x = -80, .y = 104,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1650,8 +1408,6 @@ static const Path path2304 = {
     .x = -72, .y = 128,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 20, .yVelTo = 60,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2304_6_actions
 },
@@ -1659,8 +1415,6 @@ static const Path path2304 = {
     .x = -56, .y = 144,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1668,8 +1422,6 @@ static const Path path2304 = {
     .x = -32, .y = 152,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 60, .yVelTo = 20,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2304_8_actions
 },
@@ -1677,8 +1429,6 @@ static const Path path2304 = {
     .x = -8, .y = 144,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 60, .yVelTo = -21,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2304_9_actions
 },
@@ -1686,8 +1436,6 @@ static const Path path2304 = {
     .x = 16, .y = 104,
     .speedTo = 128, .distTo = 2985,
     .xVelTo = 65, .yVelTo = -110,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1695,8 +1443,6 @@ static const Path path2304 = {
     .x = 56, .y = 8,
     .speedTo = 128, .distTo = 6656,
     .xVelTo = 49, .yVelTo = -119,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1729,12 +1475,12 @@ LevelObjectGroup r3fly1 = {
     .numObjects = 2, .objects = r3fly1_objects
 };
 extern LevelObjectGroup room3fly3;
-static const GObjPathPointFunction path2314_1_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2314_1_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2314_4_actions[] = {
-startShooting
+static const GameObjectAction path2314_4_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
 static const Path path2314 = {
 .x = 0, .y = 3408, .numPoints = 10, .points = {
@@ -1742,8 +1488,6 @@ static const Path path2314 = {
     .x = 104, .y = 88,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1751,8 +1495,6 @@ static const Path path2314 = {
     .x = 88, .y = 72,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2314_1_actions
 },
@@ -1760,8 +1502,6 @@ static const Path path2314 = {
     .x = 80, .y = 72,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1769,8 +1509,6 @@ static const Path path2314 = {
     .x = 72, .y = 88,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1778,8 +1516,6 @@ static const Path path2314 = {
     .x = 64, .y = 112,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -21, .yVelTo = 60,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2314_4_actions
 },
@@ -1787,8 +1523,6 @@ static const Path path2314 = {
     .x = 56, .y = 120,
     .speedTo = 64, .distTo = 724,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1796,8 +1530,6 @@ static const Path path2314 = {
     .x = 48, .y = 112,
     .speedTo = 64, .distTo = 724,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1805,8 +1537,6 @@ static const Path path2314 = {
     .x = 40, .y = 88,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -21, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1814,8 +1544,6 @@ static const Path path2314 = {
     .x = 32, .y = 72,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1823,19 +1551,17 @@ static const Path path2314 = {
     .x = -40, .y = 0,
     .speedTo = 64, .distTo = 6516,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2315_1_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2315_1_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2315_4_actions[] = {
-startShooting
+static const GameObjectAction path2315_4_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
 static const Path path2315 = {
 .x = 224, .y = 3400, .numPoints = 10, .points = {
@@ -1843,8 +1569,6 @@ static const Path path2315 = {
     .x = -72, .y = 96,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1852,8 +1576,6 @@ static const Path path2315 = {
     .x = -56, .y = 80,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2315_1_actions
 },
@@ -1861,8 +1583,6 @@ static const Path path2315 = {
     .x = -48, .y = 80,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1870,8 +1590,6 @@ static const Path path2315 = {
     .x = -40, .y = 96,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1879,8 +1597,6 @@ static const Path path2315 = {
     .x = -32, .y = 120,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 20, .yVelTo = 60,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2315_4_actions
 },
@@ -1888,8 +1604,6 @@ static const Path path2315 = {
     .x = -24, .y = 128,
     .speedTo = 64, .distTo = 724,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1897,8 +1611,6 @@ static const Path path2315 = {
     .x = -16, .y = 120,
     .speedTo = 64, .distTo = 724,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1906,8 +1618,6 @@ static const Path path2315 = {
     .x = -8, .y = 96,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 20, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1915,8 +1625,6 @@ static const Path path2315 = {
     .x = 0, .y = 80,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1924,8 +1632,6 @@ static const Path path2315 = {
     .x = 72, .y = 8,
     .speedTo = 64, .distTo = 6516,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -1958,15 +1664,15 @@ LevelObjectGroup room3fly3 = {
     .numObjects = 2, .objects = room3fly3_objects
 };
 extern LevelObjectGroup room3fly4;
-static const GObjPathPointFunction path2323_2_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2323_2_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2323_5_actions[] = {
-startShooting
+static const GameObjectAction path2323_5_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2323_7_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2323_7_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
 static const Path path2323 = {
 .x = -32, .y = 3560, .numPoints = 9, .points = {
@@ -1974,8 +1680,6 @@ static const Path path2323 = {
     .x = 72, .y = -16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1983,8 +1687,6 @@ static const Path path2323 = {
     .x = 64, .y = -32,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -1992,8 +1694,6 @@ static const Path path2323 = {
     .x = 64, .y = -56,
     .speedTo = 64, .distTo = 1536,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2323_2_actions
 },
@@ -2001,8 +1701,6 @@ static const Path path2323 = {
     .x = 72, .y = -72,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2010,8 +1708,6 @@ static const Path path2323 = {
     .x = 80, .y = -88,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2019,8 +1715,6 @@ static const Path path2323 = {
     .x = 88, .y = -112,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 20, .yVelTo = -61,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2323_5_actions
 },
@@ -2028,8 +1722,6 @@ static const Path path2323 = {
     .x = 80, .y = -128,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2037,8 +1729,6 @@ static const Path path2323 = {
     .x = 72, .y = -136,
     .speedTo = 64, .distTo = 724,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2323_7_actions
 },
@@ -2046,22 +1736,20 @@ static const Path path2323 = {
     .x = 8, .y = -200,
     .speedTo = 128, .distTo = 5792,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2324_2_actions[] = {
-enterForeground,
-startShooting
+static const GameObjectAction path2324_2_actions[] = {
+{.action = enterForeground, },
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2324_5_actions[] = {
-startShooting
+static const GameObjectAction path2324_5_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2324_7_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2324_7_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
 static const Path path2324 = {
 .x = 288, .y = 3560, .numPoints = 9, .points = {
@@ -2069,8 +1757,6 @@ static const Path path2324 = {
     .x = -72, .y = -16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2078,8 +1764,6 @@ static const Path path2324 = {
     .x = -64, .y = -32,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2087,8 +1771,6 @@ static const Path path2324 = {
     .x = -64, .y = -56,
     .speedTo = 64, .distTo = 1536,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2324_2_actions
 },
@@ -2096,8 +1778,6 @@ static const Path path2324 = {
     .x = -72, .y = -72,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2105,8 +1785,6 @@ static const Path path2324 = {
     .x = -80, .y = -88,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -29, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2114,8 +1792,6 @@ static const Path path2324 = {
     .x = -88, .y = -112,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -21, .yVelTo = -61,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2324_5_actions
 },
@@ -2123,8 +1799,6 @@ static const Path path2324 = {
     .x = -80, .y = -128,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 28, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2132,8 +1806,6 @@ static const Path path2324 = {
     .x = -72, .y = -136,
     .speedTo = 64, .distTo = 724,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2324_7_actions
 },
@@ -2141,8 +1813,6 @@ static const Path path2324 = {
     .x = -8, .y = -200,
     .speedTo = 128, .distTo = 5792,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -2175,53 +1845,53 @@ LevelObjectGroup room3fly4 = {
     .numObjects = 2, .objects = room3fly4_objects
 };
 extern LevelObjectGroup r4r5ants;
-static const GObjPathPointFunction path2373_5_actions[] = {
-faceRight
+static const GameObjectAction path2373_5_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path2373_8_actions[] = {
-enterBackground
+static const GameObjectAction path2373_8_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2373_9_actions[] = {
-setSpriteHidden
+static const GameObjectAction path2373_9_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path2373_11_actions[] = {
-faceLeft
+static const GameObjectAction path2373_11_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path2373_13_actions[] = {
-setSpriteVisible
+static const GameObjectAction path2373_13_actions[] = {
+{.action = setSpriteVisible, }
 };
-static const GObjPathPointFunction path2373_14_actions[] = {
-enterForeground
+static const GameObjectAction path2373_14_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2373_17_actions[] = {
-faceRight
+static const GameObjectAction path2373_17_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path2373_20_actions[] = {
-enterBackground
+static const GameObjectAction path2373_20_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2373_21_actions[] = {
-setSpriteHidden
+static const GameObjectAction path2373_21_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path2373_23_actions[] = {
-faceLeft
+static const GameObjectAction path2373_23_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path2373_25_actions[] = {
-setSpriteVisible
+static const GameObjectAction path2373_25_actions[] = {
+{.action = setSpriteVisible, }
 };
-static const GObjPathPointFunction path2373_26_actions[] = {
-enterForeground
+static const GameObjectAction path2373_26_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2373_29_actions[] = {
-faceRight
+static const GameObjectAction path2373_29_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path2373_32_actions[] = {
-enterBackground
+static const GameObjectAction path2373_32_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2373_33_actions[] = {
-setSpriteHidden
+static const GameObjectAction path2373_33_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path2373_34_actions[] = {
-markDisappear
+static const GameObjectAction path2373_34_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2373 = {
 .x = 48, .y = 2936, .numPoints = 35, .points = {
@@ -2229,8 +1899,6 @@ static const Path path2373 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2238,8 +1906,6 @@ static const Path path2373 = {
     .x = -12, .y = 12,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2247,8 +1913,6 @@ static const Path path2373 = {
     .x = -20, .y = 28,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2256,8 +1920,6 @@ static const Path path2373 = {
     .x = -12, .y = 44,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2265,8 +1927,6 @@ static const Path path2373 = {
     .x = 0, .y = 56,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2274,8 +1934,6 @@ static const Path path2373 = {
     .x = 16, .y = 60,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_5_actions
 },
@@ -2283,8 +1941,6 @@ static const Path path2373 = {
     .x = 32, .y = 64,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2292,8 +1948,6 @@ static const Path path2373 = {
     .x = 44, .y = 76,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2301,8 +1955,6 @@ static const Path path2373 = {
     .x = 52, .y = 92,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_8_actions
 },
@@ -2310,8 +1962,6 @@ static const Path path2373 = {
     .x = 44, .y = 108,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_9_actions
 },
@@ -2319,8 +1969,6 @@ static const Path path2373 = {
     .x = 32, .y = 120,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2328,8 +1976,6 @@ static const Path path2373 = {
     .x = 16, .y = 124,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_11_actions
 },
@@ -2337,8 +1983,6 @@ static const Path path2373 = {
     .x = 0, .y = 128,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2346,8 +1990,6 @@ static const Path path2373 = {
     .x = -12, .y = 140,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_13_actions
 },
@@ -2355,8 +1997,6 @@ static const Path path2373 = {
     .x = -20, .y = 156,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_14_actions
 },
@@ -2364,8 +2004,6 @@ static const Path path2373 = {
     .x = -12, .y = 172,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2373,8 +2011,6 @@ static const Path path2373 = {
     .x = 0, .y = 184,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2382,8 +2018,6 @@ static const Path path2373 = {
     .x = 16, .y = 188,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_17_actions
 },
@@ -2391,8 +2025,6 @@ static const Path path2373 = {
     .x = 32, .y = 192,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2400,8 +2032,6 @@ static const Path path2373 = {
     .x = 44, .y = 204,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2409,8 +2039,6 @@ static const Path path2373 = {
     .x = 52, .y = 220,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_20_actions
 },
@@ -2418,8 +2046,6 @@ static const Path path2373 = {
     .x = 44, .y = 236,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_21_actions
 },
@@ -2427,8 +2053,6 @@ static const Path path2373 = {
     .x = 32, .y = 248,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2436,8 +2060,6 @@ static const Path path2373 = {
     .x = 16, .y = 252,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_23_actions
 },
@@ -2445,8 +2067,6 @@ static const Path path2373 = {
     .x = 0, .y = 256,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2454,8 +2074,6 @@ static const Path path2373 = {
     .x = -12, .y = 268,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_25_actions
 },
@@ -2463,8 +2081,6 @@ static const Path path2373 = {
     .x = -20, .y = 284,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_26_actions
 },
@@ -2472,8 +2088,6 @@ static const Path path2373 = {
     .x = -12, .y = 300,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2481,8 +2095,6 @@ static const Path path2373 = {
     .x = 0, .y = 312,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2490,8 +2102,6 @@ static const Path path2373 = {
     .x = 16, .y = 316,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_29_actions
 },
@@ -2499,8 +2109,6 @@ static const Path path2373 = {
     .x = 32, .y = 320,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2508,8 +2116,6 @@ static const Path path2373 = {
     .x = 44, .y = 332,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2517,8 +2123,6 @@ static const Path path2373 = {
     .x = 52, .y = 348,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_32_actions
 },
@@ -2526,8 +2130,6 @@ static const Path path2373 = {
     .x = 44, .y = 364,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_33_actions
 },
@@ -2535,60 +2137,58 @@ static const Path path2373 = {
     .x = 32, .y = 376,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2373_34_actions
 }
 }
 };
-static const GObjPathPointFunction path3723_5_actions[] = {
-faceLeft
+static const GameObjectAction path3723_5_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3723_8_actions[] = {
-enterBackground
+static const GameObjectAction path3723_8_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path3723_9_actions[] = {
-setSpriteHidden
+static const GameObjectAction path3723_9_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path3723_11_actions[] = {
-faceRight
+static const GameObjectAction path3723_11_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path3723_13_actions[] = {
-setSpriteVisible
+static const GameObjectAction path3723_13_actions[] = {
+{.action = setSpriteVisible, }
 };
-static const GObjPathPointFunction path3723_14_actions[] = {
-enterForeground
+static const GameObjectAction path3723_14_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3723_17_actions[] = {
-faceLeft
+static const GameObjectAction path3723_17_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3723_20_actions[] = {
-enterBackground
+static const GameObjectAction path3723_20_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path3723_21_actions[] = {
-setSpriteHidden
+static const GameObjectAction path3723_21_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path3723_23_actions[] = {
-faceRight
+static const GameObjectAction path3723_23_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path3723_25_actions[] = {
-setSpriteVisible
+static const GameObjectAction path3723_25_actions[] = {
+{.action = setSpriteVisible, }
 };
-static const GObjPathPointFunction path3723_26_actions[] = {
-enterForeground
+static const GameObjectAction path3723_26_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3723_29_actions[] = {
-faceLeft
+static const GameObjectAction path3723_29_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3723_32_actions[] = {
-enterBackground
+static const GameObjectAction path3723_32_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path3723_33_actions[] = {
-setSpriteHidden
+static const GameObjectAction path3723_33_actions[] = {
+{.action = setSpriteHidden, }
 };
-static const GObjPathPointFunction path3723_34_actions[] = {
-markDisappear
+static const GameObjectAction path3723_34_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3723 = {
 .x = 208, .y = 2936, .numPoints = 35, .points = {
@@ -2596,8 +2196,6 @@ static const Path path3723 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2605,8 +2203,6 @@ static const Path path3723 = {
     .x = 12, .y = 12,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2614,8 +2210,6 @@ static const Path path3723 = {
     .x = 20, .y = 28,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2623,8 +2217,6 @@ static const Path path3723 = {
     .x = 12, .y = 44,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2632,8 +2224,6 @@ static const Path path3723 = {
     .x = 0, .y = 56,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2641,8 +2231,6 @@ static const Path path3723 = {
     .x = -16, .y = 60,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_5_actions
 },
@@ -2650,8 +2238,6 @@ static const Path path3723 = {
     .x = -32, .y = 64,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2659,8 +2245,6 @@ static const Path path3723 = {
     .x = -44, .y = 76,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2668,8 +2252,6 @@ static const Path path3723 = {
     .x = -52, .y = 92,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_8_actions
 },
@@ -2677,8 +2259,6 @@ static const Path path3723 = {
     .x = -44, .y = 108,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_9_actions
 },
@@ -2686,8 +2266,6 @@ static const Path path3723 = {
     .x = -32, .y = 120,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2695,8 +2273,6 @@ static const Path path3723 = {
     .x = -16, .y = 124,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_11_actions
 },
@@ -2704,8 +2280,6 @@ static const Path path3723 = {
     .x = 0, .y = 128,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2713,8 +2287,6 @@ static const Path path3723 = {
     .x = 12, .y = 140,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_13_actions
 },
@@ -2722,8 +2294,6 @@ static const Path path3723 = {
     .x = 20, .y = 156,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_14_actions
 },
@@ -2731,8 +2301,6 @@ static const Path path3723 = {
     .x = 12, .y = 172,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2740,8 +2308,6 @@ static const Path path3723 = {
     .x = 0, .y = 184,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2749,8 +2315,6 @@ static const Path path3723 = {
     .x = -16, .y = 188,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_17_actions
 },
@@ -2758,8 +2322,6 @@ static const Path path3723 = {
     .x = -32, .y = 192,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2767,8 +2329,6 @@ static const Path path3723 = {
     .x = -44, .y = 204,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2776,8 +2336,6 @@ static const Path path3723 = {
     .x = -52, .y = 220,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_20_actions
 },
@@ -2785,8 +2343,6 @@ static const Path path3723 = {
     .x = -44, .y = 236,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_21_actions
 },
@@ -2794,8 +2350,6 @@ static const Path path3723 = {
     .x = -32, .y = 248,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2803,8 +2357,6 @@ static const Path path3723 = {
     .x = -16, .y = 252,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_23_actions
 },
@@ -2812,8 +2364,6 @@ static const Path path3723 = {
     .x = 0, .y = 256,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2821,8 +2371,6 @@ static const Path path3723 = {
     .x = 12, .y = 268,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_25_actions
 },
@@ -2830,8 +2378,6 @@ static const Path path3723 = {
     .x = 20, .y = 284,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_26_actions
 },
@@ -2839,8 +2385,6 @@ static const Path path3723 = {
     .x = 12, .y = 300,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2848,8 +2392,6 @@ static const Path path3723 = {
     .x = 0, .y = 312,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2857,8 +2399,6 @@ static const Path path3723 = {
     .x = -16, .y = 316,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_29_actions
 },
@@ -2866,8 +2406,6 @@ static const Path path3723 = {
     .x = -32, .y = 320,
     .speedTo = 128, .distTo = 1055,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2875,8 +2413,6 @@ static const Path path3723 = {
     .x = -44, .y = 332,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -2884,8 +2420,6 @@ static const Path path3723 = {
     .x = -52, .y = 348,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_32_actions
 },
@@ -2893,8 +2427,6 @@ static const Path path3723 = {
     .x = -44, .y = 364,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_33_actions
 },
@@ -2902,8 +2434,6 @@ static const Path path3723 = {
     .x = -32, .y = 376,
     .speedTo = 128, .distTo = 1086,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3723_34_actions
 }
@@ -3352,29 +2882,29 @@ LevelObjectGroup r4r5ants = {
     .numObjects = 54, .objects = r4r5ants_objects
 };
 extern LevelObjectGroup r4fly1;
-static const GObjPathPointFunction path2332_3_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2332_3_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2332_5_actions[] = {
-enterForeground
+static const GameObjectAction path2332_5_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2332_6_actions[] = {
-faceLeft
+static const GameObjectAction path2332_6_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path2332_9_actions[] = {
-startShooting
+static const GameObjectAction path2332_9_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2332_10_actions[] = {
-startShooting
+static const GameObjectAction path2332_10_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2332_11_actions[] = {
-startShooting
+static const GameObjectAction path2332_11_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2332_12_actions[] = {
-startShooting
+static const GameObjectAction path2332_12_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2332_13_actions[] = {
-startShooting
+static const GameObjectAction path2332_13_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
 static const Path path2332 = {
 .x = -16, .y = 3144, .numPoints = 18, .points = {
@@ -3382,8 +2912,6 @@ static const Path path2332 = {
     .x = 0, .y = 88,
     .speedTo = 256, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3391,8 +2919,6 @@ static const Path path2332 = {
     .x = 48, .y = 48,
     .speedTo = 256, .distTo = 3998,
     .xVelTo = 196, .yVelTo = -164,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3400,8 +2926,6 @@ static const Path path2332 = {
     .x = 88, .y = 32,
     .speedTo = 256, .distTo = 2757,
     .xVelTo = 237, .yVelTo = -96,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3409,8 +2933,6 @@ static const Path path2332 = {
     .x = 120, .y = 32,
     .speedTo = 256, .distTo = 2048,
     .xVelTo = 256, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_3_actions
 },
@@ -3418,8 +2940,6 @@ static const Path path2332 = {
     .x = 144, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 121, .yVelTo = 40,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3427,8 +2947,6 @@ static const Path path2332 = {
     .x = 160, .y = 48,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 114, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_5_actions
 },
@@ -3436,8 +2954,6 @@ static const Path path2332 = {
     .x = 168, .y = 64,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_6_actions
 },
@@ -3445,8 +2961,6 @@ static const Path path2332 = {
     .x = 168, .y = 72,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3454,8 +2968,6 @@ static const Path path2332 = {
     .x = 160, .y = 80,
     .speedTo = 128, .distTo = 724,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3463,8 +2975,6 @@ static const Path path2332 = {
     .x = 144, .y = 88,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_9_actions
 },
@@ -3472,8 +2982,6 @@ static const Path path2332 = {
     .x = 112, .y = 96,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = -125, .yVelTo = 31,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_10_actions
 },
@@ -3481,8 +2989,6 @@ static const Path path2332 = {
     .x = 80, .y = 112,
     .speedTo = 128, .distTo = 2289,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_11_actions
 },
@@ -3490,8 +2996,6 @@ static const Path path2332 = {
     .x = 56, .y = 136,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_12_actions
 },
@@ -3499,8 +3003,6 @@ static const Path path2332 = {
     .x = 48, .y = 168,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = -32, .yVelTo = 124,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2332_13_actions
 },
@@ -3508,8 +3010,6 @@ static const Path path2332 = {
     .x = 40, .y = 224,
     .speedTo = 128, .distTo = 3620,
     .xVelTo = -19, .yVelTo = 126,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3517,8 +3017,6 @@ static const Path path2332 = {
     .x = 56, .y = 264,
     .speedTo = 128, .distTo = 2757,
     .xVelTo = 47, .yVelTo = 118,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3526,8 +3024,6 @@ static const Path path2332 = {
     .x = 88, .y = 296,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3535,8 +3031,6 @@ static const Path path2332 = {
     .x = 160, .y = 336,
     .speedTo = 128, .distTo = 5271,
     .xVelTo = 111, .yVelTo = 62,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -3598,29 +3092,29 @@ LevelObjectGroup r5antsfrombigant = {
     .numObjects = 2, .objects = r5antsfrombigant_objects
 };
 extern LevelObjectGroup room5fly1;
-static const GObjPathPointFunction path2342_3_actions[] = {
-PathPoint_SetSpeed
+static const GameObjectAction path2342_3_actions[] = {
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2342_5_actions[] = {
-faceRight
+static const GameObjectAction path2342_5_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path2342_6_actions[] = {
-enterForeground
+static const GameObjectAction path2342_6_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2342_7_actions[] = {
-startShooting
+static const GameObjectAction path2342_7_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2342_8_actions[] = {
-startShooting
+static const GameObjectAction path2342_8_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2342_9_actions[] = {
-startShooting
+static const GameObjectAction path2342_9_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2342_10_actions[] = {
-startShooting
+static const GameObjectAction path2342_10_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2342_11_actions[] = {
-startShooting
+static const GameObjectAction path2342_11_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
 static const Path path2342 = {
 .x = 272, .y = 3104, .numPoints = 14, .points = {
@@ -3628,8 +3122,6 @@ static const Path path2342 = {
     .x = 0, .y = 88,
     .speedTo = 256, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3637,8 +3129,6 @@ static const Path path2342 = {
     .x = -32, .y = 72,
     .speedTo = 256, .distTo = 2289,
     .xVelTo = -229, .yVelTo = -115,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3646,8 +3136,6 @@ static const Path path2342 = {
     .x = -80, .y = 64,
     .speedTo = 256, .distTo = 3114,
     .xVelTo = -253, .yVelTo = -43,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3655,8 +3143,6 @@ static const Path path2342 = {
     .x = -120, .y = 56,
     .speedTo = 256, .distTo = 2610,
     .xVelTo = -252, .yVelTo = -51,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_3_actions
 },
@@ -3664,8 +3150,6 @@ static const Path path2342 = {
     .x = -160, .y = 32,
     .speedTo = 128, .distTo = 2985,
     .xVelTo = -110, .yVelTo = -66,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3673,8 +3157,6 @@ static const Path path2342 = {
     .x = -168, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = -115,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_5_actions
 },
@@ -3682,8 +3164,6 @@ static const Path path2342 = {
     .x = -160, .y = -8,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = -122,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_6_actions
 },
@@ -3691,8 +3171,6 @@ static const Path path2342 = {
     .x = -136, .y = -16,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 121, .yVelTo = -41,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_7_actions
 },
@@ -3700,8 +3178,6 @@ static const Path path2342 = {
     .x = -104, .y = -8,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = 124, .yVelTo = 31,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_8_actions
 },
@@ -3709,8 +3185,6 @@ static const Path path2342 = {
     .x = -72, .y = 8,
     .speedTo = 128, .distTo = 2289,
     .xVelTo = 114, .yVelTo = 57,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_9_actions
 },
@@ -3718,8 +3192,6 @@ static const Path path2342 = {
     .x = -48, .y = 32,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_10_actions
 },
@@ -3727,8 +3199,6 @@ static const Path path2342 = {
     .x = -40, .y = 64,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = 31, .yVelTo = 124,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2342_11_actions
 },
@@ -3736,8 +3206,6 @@ static const Path path2342 = {
     .x = -24, .y = 168,
     .speedTo = 128, .distTo = 6734,
     .xVelTo = 19, .yVelTo = 126,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3745,8 +3213,6 @@ static const Path path2342 = {
     .x = -16, .y = 208,
     .speedTo = 128, .distTo = 2610,
     .xVelTo = 25, .yVelTo = 125,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -3785,11 +3251,11 @@ LevelObjectGroup r5powerup = {
     .numObjects = 1, .objects = r5powerup_objects
 };
 extern LevelObjectGroup r6ants;
-static const GObjPathPointFunction path2389_12_actions[] = {
-enterBackground
+static const GameObjectAction path2389_12_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2389_13_actions[] = {
-markDisappear
+static const GameObjectAction path2389_13_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2389 = {
 .x = 28, .y = 2736, .numPoints = 14, .points = {
@@ -3797,8 +3263,6 @@ static const Path path2389 = {
     .x = 8, .y = -4,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3806,8 +3270,6 @@ static const Path path2389 = {
     .x = 8, .y = 8,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3815,8 +3277,6 @@ static const Path path2389 = {
     .x = 8, .y = 20,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3824,8 +3284,6 @@ static const Path path2389 = {
     .x = 8, .y = 32,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3833,8 +3291,6 @@ static const Path path2389 = {
     .x = 8, .y = 44,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3842,8 +3298,6 @@ static const Path path2389 = {
     .x = 8, .y = 56,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3851,8 +3305,6 @@ static const Path path2389 = {
     .x = 8, .y = 68,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3860,8 +3312,6 @@ static const Path path2389 = {
     .x = 8, .y = 80,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3869,8 +3319,6 @@ static const Path path2389 = {
     .x = 8, .y = 92,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3878,8 +3326,6 @@ static const Path path2389 = {
     .x = 8, .y = 104,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3887,8 +3333,6 @@ static const Path path2389 = {
     .x = 8, .y = 116,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3896,8 +3340,6 @@ static const Path path2389 = {
     .x = 8, .y = 128,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3905,8 +3347,6 @@ static const Path path2389 = {
     .x = 8, .y = 144,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2389_12_actions
 },
@@ -3914,18 +3354,16 @@ static const Path path2389 = {
     .x = -16, .y = 168,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2389_13_actions
 }
 }
 };
-static const GObjPathPointFunction path3786_12_actions[] = {
-enterBackground
+static const GameObjectAction path3786_12_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path3786_13_actions[] = {
-markDisappear
+static const GameObjectAction path3786_13_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3786 = {
 .x = 228, .y = 2736, .numPoints = 14, .points = {
@@ -3933,8 +3371,6 @@ static const Path path3786 = {
     .x = -8, .y = -4,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3942,8 +3378,6 @@ static const Path path3786 = {
     .x = -8, .y = 8,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3951,8 +3385,6 @@ static const Path path3786 = {
     .x = -8, .y = 20,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3960,8 +3392,6 @@ static const Path path3786 = {
     .x = -8, .y = 32,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3969,8 +3399,6 @@ static const Path path3786 = {
     .x = -8, .y = 44,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3978,8 +3406,6 @@ static const Path path3786 = {
     .x = -8, .y = 56,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3987,8 +3413,6 @@ static const Path path3786 = {
     .x = -8, .y = 68,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -3996,8 +3420,6 @@ static const Path path3786 = {
     .x = -8, .y = 80,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4005,8 +3427,6 @@ static const Path path3786 = {
     .x = -8, .y = 92,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4014,8 +3434,6 @@ static const Path path3786 = {
     .x = -8, .y = 104,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4023,8 +3441,6 @@ static const Path path3786 = {
     .x = -8, .y = 116,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4032,8 +3448,6 @@ static const Path path3786 = {
     .x = -8, .y = 128,
     .speedTo = 128, .distTo = 768,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4041,8 +3455,6 @@ static const Path path3786 = {
     .x = -8, .y = 144,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3786_12_actions
 },
@@ -4050,8 +3462,6 @@ static const Path path3786 = {
     .x = 16, .y = 168,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3786_13_actions
 }
@@ -4244,35 +3654,35 @@ LevelObjectGroup r6ants = {
     .numObjects = 22, .objects = r6ants_objects
 };
 extern LevelObjectGroup room6fly;
-static const GObjPathPointFunction path2351_1_actions[] = {
-startShooting,
-faceRight,
-enterForeground
+static const GameObjectAction path2351_1_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1},
+{.action = faceRight, },
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2351_3_actions[] = {
-startShooting
+static const GameObjectAction path2351_3_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_5_actions[] = {
-startShooting
+static const GameObjectAction path2351_5_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_7_actions[] = {
-startShooting
+static const GameObjectAction path2351_7_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_10_actions[] = {
-startShooting,
-faceLeft
+static const GameObjectAction path2351_10_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1},
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path2351_13_actions[] = {
-startShooting
+static const GameObjectAction path2351_13_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_15_actions[] = {
-startShooting
+static const GameObjectAction path2351_15_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_17_actions[] = {
-startShooting
+static const GameObjectAction path2351_17_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
-static const GObjPathPointFunction path2351_19_actions[] = {
-startShooting
+static const GameObjectAction path2351_19_actions[] = {
+{.action = startShooting, .count = 3, .interval = 1}
 };
 static const Path path2351 = {
 .x = 272, .y = 2832, .numPoints = 21, .points = {
@@ -4280,8 +3690,6 @@ static const Path path2351 = {
     .x = 0, .y = 0,
     .speedTo = 192, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4289,8 +3697,6 @@ static const Path path2351 = {
     .x = -152, .y = 0,
     .speedTo = 192, .distTo = 9728,
     .xVelTo = -192, .yVelTo = 0,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2351_1_actions
 },
@@ -4298,8 +3704,6 @@ static const Path path2351 = {
     .x = -176, .y = 8,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = -183, .yVelTo = 60,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4307,8 +3711,6 @@ static const Path path2351 = {
     .x = -200, .y = 24,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = -160, .yVelTo = 106,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_3_actions
 },
@@ -4316,8 +3718,6 @@ static const Path path2351 = {
     .x = -216, .y = 48,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = -107, .yVelTo = 159,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4325,8 +3725,6 @@ static const Path path2351 = {
     .x = -224, .y = 80,
     .speedTo = 192, .distTo = 2111,
     .xVelTo = -47, .yVelTo = 186,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_5_actions
 },
@@ -4334,8 +3732,6 @@ static const Path path2351 = {
     .x = -216, .y = 112,
     .speedTo = 192, .distTo = 2111,
     .xVelTo = 46, .yVelTo = 186,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4343,8 +3739,6 @@ static const Path path2351 = {
     .x = -200, .y = 136,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = 106, .yVelTo = 159,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_7_actions
 },
@@ -4352,8 +3746,6 @@ static const Path path2351 = {
     .x = -176, .y = 152,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = 159, .yVelTo = 106,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4361,8 +3753,6 @@ static const Path path2351 = {
     .x = -152, .y = 160,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = 182, .yVelTo = 60,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4370,8 +3760,6 @@ static const Path path2351 = {
     .x = -144, .y = 160,
     .speedTo = 192, .distTo = 512,
     .xVelTo = 192, .yVelTo = 0,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2351_10_actions
 },
@@ -4379,8 +3767,6 @@ static const Path path2351 = {
     .x = -136, .y = 160,
     .speedTo = 192, .distTo = 512,
     .xVelTo = 192, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4388,8 +3774,6 @@ static const Path path2351 = {
     .x = -112, .y = 152,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = 182, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4397,8 +3781,6 @@ static const Path path2351 = {
     .x = -88, .y = 136,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = 159, .yVelTo = -107,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_13_actions
 },
@@ -4406,8 +3788,6 @@ static const Path path2351 = {
     .x = -72, .y = 112,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = 106, .yVelTo = -160,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4415,8 +3795,6 @@ static const Path path2351 = {
     .x = -64, .y = 80,
     .speedTo = 192, .distTo = 2111,
     .xVelTo = 46, .yVelTo = -187,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_15_actions
 },
@@ -4424,8 +3802,6 @@ static const Path path2351 = {
     .x = -72, .y = 48,
     .speedTo = 192, .distTo = 2111,
     .xVelTo = -47, .yVelTo = -187,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4433,8 +3809,6 @@ static const Path path2351 = {
     .x = -88, .y = 24,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = -107, .yVelTo = -160,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_17_actions
 },
@@ -4442,8 +3816,6 @@ static const Path path2351 = {
     .x = -112, .y = 8,
     .speedTo = 192, .distTo = 1846,
     .xVelTo = -160, .yVelTo = -107,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4451,8 +3823,6 @@ static const Path path2351 = {
     .x = -136, .y = 0,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = -183, .yVelTo = -61,
-    .shootCount = 3, .shootInterval = 1, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2351_19_actions
 },
@@ -4460,8 +3830,6 @@ static const Path path2351 = {
     .x = -288, .y = 0,
     .speedTo = 192, .distTo = 9728,
     .xVelTo = -192, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -4554,9 +3922,9 @@ LevelObjectGroup room6bigant = {
     .numObjects = 2, .objects = room6bigant_objects
 };
 extern LevelObjectGroup room7alien1;
-static const GObjPathPointFunction path2397_2_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2397_2_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2397 = {
 .x = 112, .y = 2496, .numPoints = 3, .points = {
@@ -4564,8 +3932,6 @@ static const Path path2397 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4573,8 +3939,6 @@ static const Path path2397 = {
     .x = 8, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4582,8 +3946,6 @@ static const Path path2397 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = 121,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2397_2_actions
 }
@@ -4615,9 +3977,9 @@ LevelObjectGroup room7alien1 = {
     .numObjects = 2, .objects = room7alien1_objects
 };
 extern LevelObjectGroup room7alien2;
-static const GObjPathPointFunction path2403_2_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2403_2_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2403 = {
 .x = 48, .y = 2440, .numPoints = 3, .points = {
@@ -4625,8 +3987,6 @@ static const Path path2403 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4634,8 +3994,6 @@ static const Path path2403 = {
     .x = 8, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4643,16 +4001,14 @@ static const Path path2403 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = 121,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2403_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2404_2_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2404_2_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2404 = {
 .x = 176, .y = 2440, .numPoints = 3, .points = {
@@ -4660,8 +4016,6 @@ static const Path path2404 = {
     .x = 32, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4669,8 +4023,6 @@ static const Path path2404 = {
     .x = 24, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4678,8 +4030,6 @@ static const Path path2404 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = -41, .yVelTo = 121,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2404_2_actions
 }
@@ -4712,11 +4062,11 @@ LevelObjectGroup room7alien2 = {
     .numObjects = 2, .objects = room7alien2_objects
 };
 extern LevelObjectGroup room7alien3;
-static const GObjPathPointFunction path2414_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2414_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2414_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2414_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2414 = {
 .x = -24, .y = 2528, .numPoints = 4, .points = {
@@ -4724,8 +4074,6 @@ static const Path path2414 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2414_0_actions
 },
@@ -4733,8 +4081,6 @@ static const Path path2414 = {
     .x = 72, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = 95, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4742,8 +4088,6 @@ static const Path path2414 = {
     .x = 104, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4751,18 +4095,16 @@ static const Path path2414 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2414_3_actions
 }
 }
 };
-static const GObjPathPointFunction path2415_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2415_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2415_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2415_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2415 = {
 .x = -16, .y = 2512, .numPoints = 4, .points = {
@@ -4770,8 +4112,6 @@ static const Path path2415 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2415_0_actions
 },
@@ -4779,8 +4119,6 @@ static const Path path2415 = {
     .x = 72, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = 95, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4788,8 +4126,6 @@ static const Path path2415 = {
     .x = 104, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4797,18 +4133,16 @@ static const Path path2415 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2415_3_actions
 }
 }
 };
-static const GObjPathPointFunction path2416_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2416_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2416_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2416_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2416 = {
 .x = -8, .y = 2496, .numPoints = 4, .points = {
@@ -4816,8 +4150,6 @@ static const Path path2416 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2416_0_actions
 },
@@ -4825,8 +4157,6 @@ static const Path path2416 = {
     .x = 72, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = 95, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4834,8 +4164,6 @@ static const Path path2416 = {
     .x = 104, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4843,18 +4171,16 @@ static const Path path2416 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2416_3_actions
 }
 }
 };
-static const GObjPathPointFunction path2417_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2417_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2417_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2417_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2417 = {
 .x = 24, .y = 2496, .numPoints = 4, .points = {
@@ -4862,8 +4188,6 @@ static const Path path2417 = {
     .x = 240, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2417_0_actions
 },
@@ -4871,8 +4195,6 @@ static const Path path2417 = {
     .x = 168, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = -96, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4880,8 +4202,6 @@ static const Path path2417 = {
     .x = 136, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4889,18 +4209,16 @@ static const Path path2417 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2417_3_actions
 }
 }
 };
-static const GObjPathPointFunction path2418_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2418_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2418_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2418_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2418 = {
 .x = 32, .y = 2512, .numPoints = 4, .points = {
@@ -4908,8 +4226,6 @@ static const Path path2418 = {
     .x = 240, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2418_0_actions
 },
@@ -4917,8 +4233,6 @@ static const Path path2418 = {
     .x = 168, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = -96, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4926,8 +4240,6 @@ static const Path path2418 = {
     .x = 136, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4935,18 +4247,16 @@ static const Path path2418 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2418_3_actions
 }
 }
 };
-static const GObjPathPointFunction path2419_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2419_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path2419_3_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2419_3_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path2419 = {
 .x = 40, .y = 2528, .numPoints = 4, .points = {
@@ -4954,8 +4264,6 @@ static const Path path2419 = {
     .x = 240, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2419_0_actions
 },
@@ -4963,8 +4271,6 @@ static const Path path2419 = {
     .x = 168, .y = -64,
     .speedTo = 128, .distTo = 6165,
     .xVelTo = -96, .yVelTo = -86,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4972,8 +4278,6 @@ static const Path path2419 = {
     .x = 136, .y = -64,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -4981,8 +4285,6 @@ static const Path path2419 = {
     .x = 120, .y = -48,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2419_3_actions
 }
@@ -5051,11 +4353,11 @@ LevelObjectGroup room7alien3 = {
     .numObjects = 6, .objects = room7alien3_objects
 };
 extern LevelObjectGroup room8alien1;
-static const GObjPathPointFunction path3962_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3962_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3962_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3962_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3962 = {
 .x = 112, .y = 2368, .numPoints = 2, .points = {
@@ -5063,8 +4365,6 @@ static const Path path3962 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3962_0_actions
 },
@@ -5072,18 +4372,16 @@ static const Path path3962 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3962_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3965_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3965_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3965_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3965_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3965 = {
 .x = 96, .y = 2352, .numPoints = 2, .points = {
@@ -5091,8 +4389,6 @@ static const Path path3965 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3965_0_actions
 },
@@ -5100,18 +4396,16 @@ static const Path path3965 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3965_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3968_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3968_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3968_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3968_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3968 = {
 .x = 104, .y = 2336, .numPoints = 2, .points = {
@@ -5119,8 +4413,6 @@ static const Path path3968 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3968_0_actions
 },
@@ -5128,18 +4420,16 @@ static const Path path3968 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3968_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3971_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3971_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3971_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3971_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3971 = {
 .x = 88, .y = 2320, .numPoints = 2, .points = {
@@ -5147,8 +4437,6 @@ static const Path path3971 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3971_0_actions
 },
@@ -5156,18 +4444,16 @@ static const Path path3971 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3971_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3974_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3974_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3974_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3974_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3974 = {
 .x = 112, .y = 2312, .numPoints = 2, .points = {
@@ -5175,8 +4461,6 @@ static const Path path3974 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3974_0_actions
 },
@@ -5184,18 +4468,16 @@ static const Path path3974 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3974_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3977_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3977_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3977_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3977_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3977 = {
 .x = 80, .y = 2304, .numPoints = 2, .points = {
@@ -5203,8 +4485,6 @@ static const Path path3977 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3977_0_actions
 },
@@ -5212,18 +4492,16 @@ static const Path path3977 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3977_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3980_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3980_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3980_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3980_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3980 = {
 .x = 152, .y = 2360, .numPoints = 2, .points = {
@@ -5231,8 +4509,6 @@ static const Path path3980 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3980_0_actions
 },
@@ -5240,18 +4516,16 @@ static const Path path3980 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3980_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3983_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3983_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3983_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3983_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3983 = {
 .x = 160, .y = 2344, .numPoints = 2, .points = {
@@ -5259,8 +4533,6 @@ static const Path path3983 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3983_0_actions
 },
@@ -5268,18 +4540,16 @@ static const Path path3983 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3983_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3986_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3986_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3986_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3986_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3986 = {
 .x = 152, .y = 2336, .numPoints = 2, .points = {
@@ -5287,8 +4557,6 @@ static const Path path3986 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3986_0_actions
 },
@@ -5296,18 +4564,16 @@ static const Path path3986 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3986_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3989_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3989_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3989_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3989_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3989 = {
 .x = 168, .y = 2320, .numPoints = 2, .points = {
@@ -5315,8 +4581,6 @@ static const Path path3989 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3989_0_actions
 },
@@ -5324,18 +4588,16 @@ static const Path path3989 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3989_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3992_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3992_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3992_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3992_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3992 = {
 .x = 176, .y = 2304, .numPoints = 2, .points = {
@@ -5343,8 +4605,6 @@ static const Path path3992 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3992_0_actions
 },
@@ -5352,18 +4612,16 @@ static const Path path3992 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3992_1_actions
 }
 }
 };
-static const GObjPathPointFunction path3995_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3995_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
-static const GObjPathPointFunction path3995_1_actions[] = {
-setSpriteAnim
+static const GameObjectAction path3995_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_STAND}
 };
 static const Path path3995 = {
 .x = 144, .y = 2320, .numPoints = 2, .points = {
@@ -5371,8 +4629,6 @@ static const Path path3995 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3995_0_actions
 },
@@ -5380,8 +4636,6 @@ static const Path path3995 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 512,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_STAND,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3995_1_actions
 }
@@ -5504,9 +4758,9 @@ LevelObjectGroup room8alien1 = {
     .numObjects = 12, .objects = room8alien1_objects
 };
 extern LevelObjectGroup room8alien2;
-static const GObjPathPointFunction path2442_1_actions[] = {
-PathPoint_SetSpeed,
-startShooting
+static const GameObjectAction path2442_1_actions[] = {
+{.action = PathPoint_SetSpeed, },
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2442 = {
 .x = 88, .y = 2352, .numPoints = 4, .points = {
@@ -5514,8 +4768,6 @@ static const Path path2442 = {
     .x = -8, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5523,8 +4775,6 @@ static const Path path2442 = {
     .x = -8, .y = 16,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 5, .shootInterval = 40, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2442_1_actions
 },
@@ -5532,8 +4782,6 @@ static const Path path2442 = {
     .x = -40, .y = 48,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5541,16 +4789,14 @@ static const Path path2442 = {
     .x = -104, .y = 48,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2443_1_actions[] = {
-PathPoint_SetSpeed,
-startShooting
+static const GameObjectAction path2443_1_actions[] = {
+{.action = PathPoint_SetSpeed, },
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2443 = {
 .x = 152, .y = 2352, .numPoints = 4, .points = {
@@ -5558,8 +4804,6 @@ static const Path path2443 = {
     .x = 24, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5567,8 +4811,6 @@ static const Path path2443 = {
     .x = 24, .y = 16,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 5, .shootInterval = 40, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2443_1_actions
 },
@@ -5576,8 +4818,6 @@ static const Path path2443 = {
     .x = 56, .y = 48,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5585,8 +4825,6 @@ static const Path path2443 = {
     .x = 120, .y = 48,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -5619,8 +4857,8 @@ LevelObjectGroup room8alien2 = {
     .numObjects = 2, .objects = room8alien2_objects
 };
 extern LevelObjectGroup room8alien3;
-static const GObjPathPointFunction path2448_1_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2448_1_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
 static const Path path2448 = {
 .x = -16, .y = 2392, .numPoints = 11, .points = {
@@ -5628,8 +4866,6 @@ static const Path path2448 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5637,8 +4873,6 @@ static const Path path2448 = {
     .x = 64, .y = 0,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2448_1_actions
 },
@@ -5646,8 +4880,6 @@ static const Path path2448 = {
     .x = 96, .y = -32,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5655,8 +4887,6 @@ static const Path path2448 = {
     .x = 96, .y = -48,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5664,8 +4894,6 @@ static const Path path2448 = {
     .x = 80, .y = -64,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5673,8 +4901,6 @@ static const Path path2448 = {
     .x = 80, .y = -88,
     .speedTo = 64, .distTo = 1536,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5682,8 +4908,6 @@ static const Path path2448 = {
     .x = 96, .y = -104,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5691,8 +4915,6 @@ static const Path path2448 = {
     .x = 96, .y = -152,
     .speedTo = 64, .distTo = 3072,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5700,8 +4922,6 @@ static const Path path2448 = {
     .x = 64, .y = -184,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5709,8 +4929,6 @@ static const Path path2448 = {
     .x = 64, .y = -248,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5718,15 +4936,13 @@ static const Path path2448 = {
     .x = 112, .y = -296,
     .speedTo = 64, .distTo = 4344,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2449_1_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2449_1_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
 static const Path path2449 = {
 .x = 272, .y = 2392, .numPoints = 11, .points = {
@@ -5734,8 +4950,6 @@ static const Path path2449 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5743,8 +4957,6 @@ static const Path path2449 = {
     .x = -64, .y = 0,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2449_1_actions
 },
@@ -5752,8 +4964,6 @@ static const Path path2449 = {
     .x = -96, .y = -32,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5761,8 +4971,6 @@ static const Path path2449 = {
     .x = -96, .y = -48,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5770,8 +4978,6 @@ static const Path path2449 = {
     .x = -80, .y = -64,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5779,8 +4985,6 @@ static const Path path2449 = {
     .x = -80, .y = -88,
     .speedTo = 64, .distTo = 1536,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5788,8 +4992,6 @@ static const Path path2449 = {
     .x = -96, .y = -104,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5797,8 +4999,6 @@ static const Path path2449 = {
     .x = -96, .y = -152,
     .speedTo = 64, .distTo = 3072,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5806,8 +5006,6 @@ static const Path path2449 = {
     .x = -64, .y = -184,
     .speedTo = 64, .distTo = 2896,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5815,8 +5013,6 @@ static const Path path2449 = {
     .x = -64, .y = -248,
     .speedTo = 64, .distTo = 4096,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5824,8 +5020,6 @@ static const Path path2449 = {
     .x = -120, .y = -296,
     .speedTo = 64, .distTo = 4720,
     .xVelTo = -49, .yVelTo = -42,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -5858,9 +5052,9 @@ LevelObjectGroup room8alien3 = {
     .numObjects = 2, .objects = room8alien3_objects
 };
 extern LevelObjectGroup room8alien4;
-static const GObjPathPointFunction path2457_1_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2457_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2457 = {
 .x = 96, .y = 2248, .numPoints = 2, .points = {
@@ -5868,8 +5062,6 @@ static const Path path2457 = {
     .x = -16, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5877,16 +5069,14 @@ static const Path path2457 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2457_1_actions
 }
 }
 };
-static const GObjPathPointFunction path2458_1_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2458_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2458 = {
 .x = 88, .y = 2232, .numPoints = 2, .points = {
@@ -5894,8 +5084,6 @@ static const Path path2458 = {
     .x = -16, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5903,16 +5091,14 @@ static const Path path2458 = {
     .x = 16, .y = 40,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2458_1_actions
 }
 }
 };
-static const GObjPathPointFunction path2459_1_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2459_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2459 = {
 .x = 160, .y = 2248, .numPoints = 2, .points = {
@@ -5920,8 +5106,6 @@ static const Path path2459 = {
     .x = 24, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5929,16 +5113,14 @@ static const Path path2459 = {
     .x = -16, .y = 40,
     .speedTo = 128, .distTo = 3620,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2459_1_actions
 }
 }
 };
-static const GObjPathPointFunction path2460_1_actions[] = {
-setSpriteAnim,
-startShooting
+static const GameObjectAction path2460_1_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 5, .interval = 40}
 };
 static const Path path2460 = {
 .x = 168, .y = 2232, .numPoints = 2, .points = {
@@ -5946,8 +5128,6 @@ static const Path path2460 = {
     .x = 24, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -5955,8 +5135,6 @@ static const Path path2460 = {
     .x = -16, .y = 40,
     .speedTo = 128, .distTo = 3620,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 5, .shootInterval = 40, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2460_1_actions
 }
@@ -6061,14 +5239,16 @@ LevelObjectGroup room9powerup = {
     .numObjects = 3, .objects = room9powerup_objects
 };
 extern LevelObjectGroup room9alienmind;
+static const GameObjectAction path2474_1_actions[] = {
+{.action = setUpdate, .update = ENEMY_updateAlienMind},
+{.action = setInvul, }
+};
 static const Path path2474 = {
 .x = 128, .y = 2040, .numPoints = 2, .points = {
 {
     .x = 0, .y = -56,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6076,10 +5256,8 @@ static const Path path2474 = {
     .x = 0, .y = 24,
     .speedTo = 64, .distTo = 5120,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 2,
+    .actions = path2474_1_actions
 }
 }
 };
@@ -6101,26 +5279,29 @@ LevelObjectGroup room9alienmind = {
     .numObjects = 1, .objects = room9alienmind_objects
 };
 extern LevelObjectGroup r9aliensfromalienmind;
-static const GObjPathPointFunction path2475_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2475_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
 static const Path path2475 = {
-.x = 96, .y = 2096, .numPoints = 10, .points = {
+.x = 96, .y = 2096, .numPoints = 11, .points = {
 {
-    .x = 24, .y = -56,
+    .x = 28, .y = -52,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2475_0_actions
+},
+{
+    .x = 24, .y = -56,
+    .speedTo = 128, .distTo = 362,
+    .xVelTo = -91, .yVelTo = -91,
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = 16, .y = -56,
     .speedTo = 128, .distTo = 512,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6128,8 +5309,6 @@ static const Path path2475 = {
     .x = 8, .y = -40,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6137,8 +5316,6 @@ static const Path path2475 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 3114,
     .xVelTo = -22, .yVelTo = 126,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6146,8 +5323,6 @@ static const Path path2475 = {
     .x = -16, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6155,8 +5330,6 @@ static const Path path2475 = {
     .x = -40, .y = 40,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6164,8 +5337,6 @@ static const Path path2475 = {
     .x = -48, .y = 72,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = -32, .yVelTo = 124,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6173,8 +5344,6 @@ static const Path path2475 = {
     .x = -48, .y = 112,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6182,8 +5351,6 @@ static const Path path2475 = {
     .x = -16, .y = 144,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6191,33 +5358,34 @@ static const Path path2475 = {
     .x = -16, .y = 176,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2476_0_actions[] = {
-setSpriteAnim
+static const GameObjectAction path2476_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_CLAW_RUN}
 };
 static const Path path2476 = {
-.x = 160, .y = 2096, .numPoints = 9, .points = {
+.x = 160, .y = 2096, .numPoints = 10, .points = {
 {
-    .x = -24, .y = -56,
+    .x = -28, .y = -52,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_CLAW_RUN,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2476_0_actions
+},
+{
+    .x = -24, .y = -56,
+    .speedTo = 128, .distTo = 362,
+    .xVelTo = 90, .yVelTo = -91,
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = -16, .y = -56,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6225,8 +5393,6 @@ static const Path path2476 = {
     .x = -8, .y = -40,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 114,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6234,8 +5400,6 @@ static const Path path2476 = {
     .x = 0, .y = 8,
     .speedTo = 128, .distTo = 3114,
     .xVelTo = 21, .yVelTo = 126,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6243,8 +5407,6 @@ static const Path path2476 = {
     .x = 16, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 114, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6252,8 +5414,6 @@ static const Path path2476 = {
     .x = 40, .y = 40,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6261,8 +5421,6 @@ static const Path path2476 = {
     .x = 48, .y = 72,
     .speedTo = 128, .distTo = 2111,
     .xVelTo = 31, .yVelTo = 124,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6270,8 +5428,6 @@ static const Path path2476 = {
     .x = 48, .y = 128,
     .speedTo = 128, .distTo = 3584,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6279,34 +5435,28 @@ static const Path path2476 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 4344,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2477_4_actions[] = {
-setSpriteAnim,
-setUpdate
+static const GameObjectAction path2477_4_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 255, .interval = 40}
 };
 static const Path path2477 = {
 .x = -8, .y = 2072, .numPoints = 5, .points = {
 {
-    .x = 112, .y = -32,
+    .x = 128, .y = -32,
     .speedTo = 256, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = 88, .y = -48,
-    .speedTo = 256, .distTo = 1846,
-    .xVelTo = -214, .yVelTo = -143,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
+    .speedTo = 256, .distTo = 2757,
+    .xVelTo = -238, .yVelTo = -96,
     .numActions = 0,
     .actions = 0
 },
@@ -6314,8 +5464,6 @@ static const Path path2477 = {
     .x = 64, .y = -48,
     .speedTo = 256, .distTo = 1536,
     .xVelTo = -256, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6323,8 +5471,6 @@ static const Path path2477 = {
     .x = 48, .y = -24,
     .speedTo = 256, .distTo = 1846,
     .xVelTo = -143, .yVelTo = 213,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6332,34 +5478,28 @@ static const Path path2477 = {
     .x = 48, .y = 0,
     .speedTo = 256, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 256,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
     .numActions = 2,
     .actions = path2477_4_actions
 }
 }
 };
-static const GObjPathPointFunction path2478_4_actions[] = {
-setSpriteAnim,
-setUpdate
+static const GameObjectAction path2478_4_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
+{.action = startShooting, .count = 255, .interval = 40}
 };
 static const Path path2478 = {
 .x = 256, .y = 2048, .numPoints = 5, .points = {
 {
-    .x = -104, .y = -8,
+    .x = -120, .y = -8,
     .speedTo = 256, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
 {
     .x = -80, .y = -24,
-    .speedTo = 256, .distTo = 1846,
-    .xVelTo = 213, .yVelTo = -143,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
+    .speedTo = 256, .distTo = 2757,
+    .xVelTo = 237, .yVelTo = -96,
     .numActions = 0,
     .actions = 0
 },
@@ -6367,8 +5507,6 @@ static const Path path2478 = {
     .x = -56, .y = -24,
     .speedTo = 256, .distTo = 1536,
     .xVelTo = 256, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6376,8 +5514,6 @@ static const Path path2478 = {
     .x = -40, .y = 0,
     .speedTo = 256, .distTo = 1846,
     .xVelTo = 142, .yVelTo = 213,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6385,49 +5521,43 @@ static const Path path2478 = {
     .x = -40, .y = 24,
     .speedTo = 256, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 256,
-    .shootCount = 0, .shootInterval = 0, .anim = ANI_ALIEN_GUN_STAND,
-    .newUpdate = ENEMY_updateAlienStandAndShoot,
     .numActions = 2,
     .actions = path2478_4_actions
 }
 }
 };
-static const GObjPathPointFunction path2479_0_actions[] = {
-enterBackground
+static const GameObjectAction path2479_0_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2479_5_actions[] = {
-faceRight
+static const GameObjectAction path2479_5_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path2479_7_actions[] = {
-enterForeground,
-PathPoint_SetSpeed
+static const GameObjectAction path2479_7_actions[] = {
+{.action = enterForeground, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2479_8_actions[] = {
-startShooting
+static const GameObjectAction path2479_8_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2479_9_actions[] = {
-startShooting
+static const GameObjectAction path2479_9_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2479_10_actions[] = {
-startShooting
+static const GameObjectAction path2479_10_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
 static const Path path2479 = {
 .x = -16, .y = 2256, .numPoints = 14, .points = {
 {
-    .x = 120, .y = -232,
+    .x = 132, .y = -220,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2479_0_actions
 },
 {
     .x = 96, .y = -216,
-    .speedTo = 128, .distTo = 1846,
-    .xVelTo = -107, .yVelTo = 71,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
+    .speedTo = 128, .distTo = 2318,
+    .xVelTo = -128, .yVelTo = 14,
     .numActions = 0,
     .actions = 0
 },
@@ -6435,8 +5565,6 @@ static const Path path2479 = {
     .x = 80, .y = -176,
     .speedTo = 128, .distTo = 2757,
     .xVelTo = -48, .yVelTo = 118,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6444,8 +5572,6 @@ static const Path path2479 = {
     .x = 80, .y = -48,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6453,8 +5579,6 @@ static const Path path2479 = {
     .x = 72, .y = -40,
     .speedTo = 128, .distTo = 724,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6462,8 +5586,6 @@ static const Path path2479 = {
     .x = 56, .y = -32,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2479_5_actions
 },
@@ -6471,8 +5593,6 @@ static const Path path2479 = {
     .x = 40, .y = -40,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6480,8 +5600,6 @@ static const Path path2479 = {
     .x = 32, .y = -64,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = -41, .yVelTo = -122,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2479_7_actions
 },
@@ -6489,8 +5607,6 @@ static const Path path2479 = {
     .x = 32, .y = -112,
     .speedTo = 48, .distTo = 3072,
     .xVelTo = 0, .yVelTo = -48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2479_8_actions
 },
@@ -6498,8 +5614,6 @@ static const Path path2479 = {
     .x = 32, .y = -96,
     .speedTo = 48, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2479_9_actions
 },
@@ -6507,8 +5621,6 @@ static const Path path2479 = {
     .x = 32, .y = -80,
     .speedTo = 48, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2479_10_actions
 },
@@ -6516,8 +5628,6 @@ static const Path path2479 = {
     .x = 32, .y = -48,
     .speedTo = 48, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6525,8 +5635,6 @@ static const Path path2479 = {
     .x = 24, .y = -24,
     .speedTo = 48, .distTo = 1619,
     .xVelTo = -16, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6534,49 +5642,43 @@ static const Path path2479 = {
     .x = 0, .y = -16,
     .speedTo = 48, .distTo = 1619,
     .xVelTo = -46, .yVelTo = 15,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2480_0_actions[] = {
-enterBackground
+static const GameObjectAction path2480_0_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2480_5_actions[] = {
-faceLeft
+static const GameObjectAction path2480_5_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path2480_7_actions[] = {
-enterForeground,
-PathPoint_SetSpeed
+static const GameObjectAction path2480_7_actions[] = {
+{.action = enterForeground, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2480_8_actions[] = {
-startShooting
+static const GameObjectAction path2480_8_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2480_9_actions[] = {
-startShooting
+static const GameObjectAction path2480_9_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
-static const GObjPathPointFunction path2480_10_actions[] = {
-startShooting
+static const GameObjectAction path2480_10_actions[] = {
+{.action = startShooting, .count = 3, .interval = 2}
 };
 static const Path path2480 = {
 .x = 208, .y = 2256, .numPoints = 14, .points = {
 {
-    .x = -56, .y = -232,
+    .x = -68, .y = -220,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2480_0_actions
 },
 {
     .x = -32, .y = -216,
-    .speedTo = 128, .distTo = 1846,
-    .xVelTo = 106, .yVelTo = 71,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
+    .speedTo = 128, .distTo = 2318,
+    .xVelTo = 127, .yVelTo = 14,
     .numActions = 0,
     .actions = 0
 },
@@ -6584,8 +5686,6 @@ static const Path path2480 = {
     .x = -16, .y = -176,
     .speedTo = 128, .distTo = 2757,
     .xVelTo = 47, .yVelTo = 118,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6593,8 +5693,6 @@ static const Path path2480 = {
     .x = -16, .y = -48,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6602,8 +5700,6 @@ static const Path path2480 = {
     .x = -8, .y = -40,
     .speedTo = 128, .distTo = 724,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6611,8 +5707,6 @@ static const Path path2480 = {
     .x = 8, .y = -32,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 114, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2480_5_actions
 },
@@ -6620,8 +5714,6 @@ static const Path path2480 = {
     .x = 24, .y = -40,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = 114, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6629,8 +5721,6 @@ static const Path path2480 = {
     .x = 32, .y = -64,
     .speedTo = 128, .distTo = 1619,
     .xVelTo = 40, .yVelTo = -122,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2480_7_actions
 },
@@ -6638,8 +5728,6 @@ static const Path path2480 = {
     .x = 32, .y = -112,
     .speedTo = 48, .distTo = 3072,
     .xVelTo = 0, .yVelTo = -48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2480_8_actions
 },
@@ -6647,8 +5735,6 @@ static const Path path2480 = {
     .x = 32, .y = -96,
     .speedTo = 48, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2480_9_actions
 },
@@ -6656,8 +5742,6 @@ static const Path path2480 = {
     .x = 32, .y = -80,
     .speedTo = 48, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 3, .shootInterval = 2, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2480_10_actions
 },
@@ -6665,8 +5749,6 @@ static const Path path2480 = {
     .x = 32, .y = -48,
     .speedTo = 48, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 48,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6674,8 +5756,6 @@ static const Path path2480 = {
     .x = 40, .y = -24,
     .speedTo = 48, .distTo = 1619,
     .xVelTo = 15, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6683,8 +5763,6 @@ static const Path path2480 = {
     .x = 64, .y = -16,
     .speedTo = 48, .distTo = 1619,
     .xVelTo = 45, .yVelTo = 15,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -6698,55 +5776,55 @@ static const Path *r9aliensfromalienmind_paths[] = {
     &path2479,
     &path2480
 };
-static const LevelObject lobj4023 = {
-    .definition = &defAlienGunner,
-    .x = 152, .y = 2040,
-    .animInd = 0, .flags = 32768,
-    .group = &r9aliensfromalienmind, .path = &path2478,
-    .pathIndex = 1, .child = 0, .interval = 0
-};
-static const LevelObject lobj4021 = {
-    .definition = &defAlienPillager,
-    .x = 136, .y = 2040,
-    .animInd = 0, .flags = 32768,
-    .group = &r9aliensfromalienmind, .path = &path2476,
-    .pathIndex = 1, .child = 0, .interval = 0
-};
 static const LevelObject lobj4022 = {
     .definition = &defAlienPillager,
-    .x = 120, .y = 2040,
+    .x = 124, .y = 2044,
     .animInd = 0, .flags = 34816,
     .group = &r9aliensfromalienmind, .path = &path2475,
     .pathIndex = 1, .child = 0, .interval = 0
 };
-static const LevelObject lobj4024 = {
-    .definition = &defAlienGunner,
-    .x = 104, .y = 2040,
-    .animInd = 0, .flags = 34816,
-    .group = &r9aliensfromalienmind, .path = &path2477,
+static const LevelObject lobj4021 = {
+    .definition = &defAlienPillager,
+    .x = 132, .y = 2044,
+    .animInd = 0, .flags = 32768,
+    .group = &r9aliensfromalienmind, .path = &path2476,
     .pathIndex = 1, .child = 0, .interval = 0
 };
-static const LevelObject lobj4019 = {
-    .definition = &defFly,
-    .x = 152, .y = 2024,
+static const LevelObject lobj4023 = {
+    .definition = &defAlienGunner,
+    .x = 136, .y = 2040,
     .animInd = 0, .flags = 32768,
-    .group = &r9aliensfromalienmind, .path = &path2480,
-    .pathIndex = 1, .child = 0, .interval = 0
+    .group = &r9aliensfromalienmind, .path = &path2476,
+    .pathIndex = 2, .child = 0, .interval = 0
+};
+static const LevelObject lobj4024 = {
+    .definition = &defAlienGunner,
+    .x = 120, .y = 2040,
+    .animInd = 0, .flags = 34816,
+    .group = &r9aliensfromalienmind, .path = &path2475,
+    .pathIndex = 2, .child = 0, .interval = 0
 };
 static const LevelObject lobj4020 = {
     .definition = &defFly,
-    .x = 104, .y = 2024,
+    .x = 116, .y = 2036,
     .animInd = 0, .flags = 34816,
     .group = &r9aliensfromalienmind, .path = &path2479,
     .pathIndex = 1, .child = 0, .interval = 0
 };
+static const LevelObject lobj4019 = {
+    .definition = &defFly,
+    .x = 140, .y = 2036,
+    .animInd = 0, .flags = 32768,
+    .group = &r9aliensfromalienmind, .path = &path2480,
+    .pathIndex = 1, .child = 0, .interval = 0
+};
 static const LevelObject *r9aliensfromalienmind_objects[] = {
-    &lobj4023,
-    &lobj4021,
     &lobj4022,
+    &lobj4021,
+    &lobj4023,
     &lobj4024,
-    &lobj4019,
-    &lobj4020
+    &lobj4020,
+    &lobj4019
 };
 LevelObjectGroup r9aliensfromalienmind = {
     .numPaths = 6, .paths = r9aliensfromalienmind_paths,
@@ -6758,8 +5836,8 @@ LevelObjectGroup part2 = {
     .numObjects = 0, .objects = 0
 };
 extern LevelObjectGroup room10acidants;
-static const GObjPathPointFunction path2498_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2498_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2498 = {
 .x = 152, .y = 1920, .numPoints = 3, .points = {
@@ -6767,8 +5845,6 @@ static const Path path2498 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6776,8 +5852,6 @@ static const Path path2498 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2498_1_actions
 },
@@ -6785,15 +5859,13 @@ static const Path path2498 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2499_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2499_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2499 = {
 .x = 168, .y = 1928, .numPoints = 3, .points = {
@@ -6801,8 +5873,6 @@ static const Path path2499 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6810,8 +5880,6 @@ static const Path path2499 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2499_1_actions
 },
@@ -6819,15 +5887,13 @@ static const Path path2499 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2500_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2500_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2500 = {
 .x = 184, .y = 1928, .numPoints = 3, .points = {
@@ -6835,8 +5901,6 @@ static const Path path2500 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6844,8 +5908,6 @@ static const Path path2500 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2500_1_actions
 },
@@ -6853,15 +5915,13 @@ static const Path path2500 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2501_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2501_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2501 = {
 .x = 200, .y = 1920, .numPoints = 3, .points = {
@@ -6869,8 +5929,6 @@ static const Path path2501 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6878,8 +5936,6 @@ static const Path path2501 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2501_1_actions
 },
@@ -6887,15 +5943,13 @@ static const Path path2501 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2502_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2502_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2502 = {
 .x = 216, .y = 1904, .numPoints = 3, .points = {
@@ -6903,8 +5957,6 @@ static const Path path2502 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -6912,8 +5964,6 @@ static const Path path2502 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2502_1_actions
 },
@@ -6921,8 +5971,6 @@ static const Path path2502 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -6982,8 +6030,8 @@ LevelObjectGroup room10acidants = {
     .numObjects = 5, .objects = room10acidants_objects
 };
 extern LevelObjectGroup room10acidants2;
-static const GObjPathPointFunction path2514_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2514_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2514 = {
 .x = 40, .y = 1888, .numPoints = 3, .points = {
@@ -6991,8 +6039,6 @@ static const Path path2514 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7000,8 +6046,6 @@ static const Path path2514 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2514_1_actions
 },
@@ -7009,15 +6053,13 @@ static const Path path2514 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2515_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2515_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2515 = {
 .x = 56, .y = 1896, .numPoints = 3, .points = {
@@ -7025,8 +6067,6 @@ static const Path path2515 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7034,8 +6074,6 @@ static const Path path2515 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2515_1_actions
 },
@@ -7043,15 +6081,13 @@ static const Path path2515 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2516_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2516_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2516 = {
 .x = 72, .y = 1904, .numPoints = 3, .points = {
@@ -7059,8 +6095,6 @@ static const Path path2516 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7068,8 +6102,6 @@ static const Path path2516 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2516_1_actions
 },
@@ -7077,15 +6109,13 @@ static const Path path2516 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2517_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2517_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2517 = {
 .x = 88, .y = 1912, .numPoints = 3, .points = {
@@ -7093,8 +6123,6 @@ static const Path path2517 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7102,8 +6130,6 @@ static const Path path2517 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2517_1_actions
 },
@@ -7111,15 +6137,13 @@ static const Path path2517 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2518_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2518_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2518 = {
 .x = 104, .y = 1904, .numPoints = 3, .points = {
@@ -7127,8 +6151,6 @@ static const Path path2518 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7136,8 +6158,6 @@ static const Path path2518 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2518_1_actions
 },
@@ -7145,8 +6165,6 @@ static const Path path2518 = {
     .x = 0, .y = -56,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7206,8 +6224,8 @@ LevelObjectGroup room10acidants2 = {
     .numObjects = 5, .objects = room10acidants2_objects
 };
 extern LevelObjectGroup r11acidants1a;
-static const GObjPathPointFunction path2526_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2526_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2526 = {
 .x = 264, .y = 1784, .numPoints = 3, .points = {
@@ -7215,8 +6233,6 @@ static const Path path2526 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7224,8 +6240,6 @@ static const Path path2526 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2526_1_actions
 },
@@ -7233,8 +6247,6 @@ static const Path path2526 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7258,8 +6270,8 @@ LevelObjectGroup r11acidants1a = {
     .numObjects = 1, .objects = r11acidants1a_objects
 };
 extern LevelObjectGroup r11acidants1b;
-static const GObjPathPointFunction path2530_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2530_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2530 = {
 .x = 232, .y = 1784, .numPoints = 3, .points = {
@@ -7267,8 +6279,6 @@ static const Path path2530 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7276,8 +6286,6 @@ static const Path path2530 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2530_1_actions
 },
@@ -7285,8 +6293,6 @@ static const Path path2530 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7310,8 +6316,8 @@ LevelObjectGroup r11acidants1b = {
     .numObjects = 1, .objects = r11acidants1b_objects
 };
 extern LevelObjectGroup r11acidants1c;
-static const GObjPathPointFunction path2534_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2534_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2534 = {
 .x = 200, .y = 1784, .numPoints = 3, .points = {
@@ -7319,8 +6325,6 @@ static const Path path2534 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7328,8 +6332,6 @@ static const Path path2534 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2534_1_actions
 },
@@ -7337,8 +6339,6 @@ static const Path path2534 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7362,8 +6362,8 @@ LevelObjectGroup r11acidants1c = {
     .numObjects = 1, .objects = r11acidants1c_objects
 };
 extern LevelObjectGroup r11acidants1d;
-static const GObjPathPointFunction path2538_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2538_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2538 = {
 .x = 168, .y = 1784, .numPoints = 3, .points = {
@@ -7371,8 +6371,6 @@ static const Path path2538 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7380,8 +6378,6 @@ static const Path path2538 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2538_1_actions
 },
@@ -7389,8 +6385,6 @@ static const Path path2538 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7414,8 +6408,8 @@ LevelObjectGroup r11acidants1d = {
     .numObjects = 1, .objects = r11acidants1d_objects
 };
 extern LevelObjectGroup r11acidants1e;
-static const GObjPathPointFunction path2542_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2542_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2542 = {
 .x = 152, .y = 1776, .numPoints = 3, .points = {
@@ -7423,8 +6417,6 @@ static const Path path2542 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7432,8 +6424,6 @@ static const Path path2542 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2542_1_actions
 },
@@ -7441,8 +6431,6 @@ static const Path path2542 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7466,8 +6454,8 @@ LevelObjectGroup r11acidants1e = {
     .numObjects = 1, .objects = r11acidants1e_objects
 };
 extern LevelObjectGroup r11acidants1f;
-static const GObjPathPointFunction path2546_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2546_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2546 = {
 .x = 120, .y = 1768, .numPoints = 3, .points = {
@@ -7475,8 +6463,6 @@ static const Path path2546 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7484,8 +6470,6 @@ static const Path path2546 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2546_1_actions
 },
@@ -7493,8 +6477,6 @@ static const Path path2546 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7518,8 +6500,8 @@ LevelObjectGroup r11acidants1f = {
     .numObjects = 1, .objects = r11acidants1f_objects
 };
 extern LevelObjectGroup r11acidants1g;
-static const GObjPathPointFunction path2550_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2550_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2550 = {
 .x = 88, .y = 1768, .numPoints = 3, .points = {
@@ -7527,8 +6509,6 @@ static const Path path2550 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7536,8 +6516,6 @@ static const Path path2550 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2550_1_actions
 },
@@ -7545,8 +6523,6 @@ static const Path path2550 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7570,8 +6546,8 @@ LevelObjectGroup r11acidants1g = {
     .numObjects = 1, .objects = r11acidants1g_objects
 };
 extern LevelObjectGroup r11acidants1h;
-static const GObjPathPointFunction path2554_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2554_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2554 = {
 .x = 56, .y = 1768, .numPoints = 3, .points = {
@@ -7579,8 +6555,6 @@ static const Path path2554 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7588,8 +6562,6 @@ static const Path path2554 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2554_1_actions
 },
@@ -7597,8 +6569,6 @@ static const Path path2554 = {
     .x = -32, .y = -24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7622,8 +6592,8 @@ LevelObjectGroup r11acidants1h = {
     .numObjects = 1, .objects = r11acidants1h_objects
 };
 extern LevelObjectGroup room11acidants2a;
-static const GObjPathPointFunction path2567_0_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2567_0_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2567 = {
 .x = 272, .y = 1616, .numPoints = 2, .points = {
@@ -7631,8 +6601,6 @@ static const Path path2567 = {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2567_0_actions
 },
@@ -7640,8 +6608,6 @@ static const Path path2567 = {
     .x = -288, .y = -24,
     .speedTo = 128, .distTo = 18686,
     .xVelTo = -127, .yVelTo = -22,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7665,8 +6631,8 @@ LevelObjectGroup room11acidants2a = {
     .numObjects = 1, .objects = room11acidants2a_objects
 };
 extern LevelObjectGroup room11acidants2b;
-static const GObjPathPointFunction path2580_0_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2580_0_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2580 = {
 .x = -16, .y = 1576, .numPoints = 2, .points = {
@@ -7674,8 +6640,6 @@ static const Path path2580 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2580_0_actions
 },
@@ -7683,8 +6647,6 @@ static const Path path2580 = {
     .x = 288, .y = 48,
     .speedTo = 128, .distTo = 18686,
     .xVelTo = 126, .yVelTo = 21,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7708,8 +6670,8 @@ LevelObjectGroup room11acidants2b = {
     .numObjects = 1, .objects = room11acidants2b_objects
 };
 extern LevelObjectGroup r11acidants3a;
-static const GObjPathPointFunction path2583_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2583_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2583 = {
 .x = 248, .y = 1736, .numPoints = 3, .points = {
@@ -7717,8 +6679,6 @@ static const Path path2583 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7726,8 +6686,6 @@ static const Path path2583 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2583_1_actions
 },
@@ -7735,8 +6693,6 @@ static const Path path2583 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7760,8 +6716,8 @@ LevelObjectGroup r11acidants3a = {
     .numObjects = 1, .objects = r11acidants3a_objects
 };
 extern LevelObjectGroup r11acidants3b;
-static const GObjPathPointFunction path2587_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2587_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2587 = {
 .x = 224, .y = 1736, .numPoints = 3, .points = {
@@ -7769,8 +6725,6 @@ static const Path path2587 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7778,8 +6732,6 @@ static const Path path2587 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2587_1_actions
 },
@@ -7787,8 +6739,6 @@ static const Path path2587 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7812,8 +6762,8 @@ LevelObjectGroup r11acidants3b = {
     .numObjects = 1, .objects = r11acidants3b_objects
 };
 extern LevelObjectGroup r11acidants3c;
-static const GObjPathPointFunction path2591_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2591_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2591 = {
 .x = 200, .y = 1736, .numPoints = 3, .points = {
@@ -7821,8 +6771,6 @@ static const Path path2591 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7830,8 +6778,6 @@ static const Path path2591 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2591_1_actions
 },
@@ -7839,8 +6785,6 @@ static const Path path2591 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7864,8 +6808,8 @@ LevelObjectGroup r11acidants3c = {
     .numObjects = 1, .objects = r11acidants3c_objects
 };
 extern LevelObjectGroup r11acidants3d;
-static const GObjPathPointFunction path2595_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2595_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2595 = {
 .x = 176, .y = 1736, .numPoints = 3, .points = {
@@ -7873,8 +6817,6 @@ static const Path path2595 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7882,8 +6824,6 @@ static const Path path2595 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2595_1_actions
 },
@@ -7891,8 +6831,6 @@ static const Path path2595 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7916,8 +6854,8 @@ LevelObjectGroup r11acidants3d = {
     .numObjects = 1, .objects = r11acidants3d_objects
 };
 extern LevelObjectGroup r11acidants3e;
-static const GObjPathPointFunction path2599_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2599_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2599 = {
 .x = 152, .y = 1736, .numPoints = 3, .points = {
@@ -7925,8 +6863,6 @@ static const Path path2599 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7934,8 +6870,6 @@ static const Path path2599 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2599_1_actions
 },
@@ -7943,8 +6877,6 @@ static const Path path2599 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -7968,8 +6900,8 @@ LevelObjectGroup r11acidants3e = {
     .numObjects = 1, .objects = r11acidants3e_objects
 };
 extern LevelObjectGroup r11acidants3f;
-static const GObjPathPointFunction path2603_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2603_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2603 = {
 .x = 128, .y = 1720, .numPoints = 3, .points = {
@@ -7977,8 +6909,6 @@ static const Path path2603 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -7986,8 +6916,6 @@ static const Path path2603 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2603_1_actions
 },
@@ -7995,8 +6923,6 @@ static const Path path2603 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8020,8 +6946,8 @@ LevelObjectGroup r11acidants3f = {
     .numObjects = 1, .objects = r11acidants3f_objects
 };
 extern LevelObjectGroup r11acidants3g;
-static const GObjPathPointFunction path2607_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2607_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2607 = {
 .x = 104, .y = 1720, .numPoints = 3, .points = {
@@ -8029,8 +6955,6 @@ static const Path path2607 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -8038,8 +6962,6 @@ static const Path path2607 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2607_1_actions
 },
@@ -8047,8 +6969,6 @@ static const Path path2607 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8072,8 +6992,8 @@ LevelObjectGroup r11acidants3g = {
     .numObjects = 1, .objects = r11acidants3g_objects
 };
 extern LevelObjectGroup r11acidants3h;
-static const GObjPathPointFunction path2611_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2611_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2611 = {
 .x = 80, .y = 1720, .numPoints = 3, .points = {
@@ -8081,8 +7001,6 @@ static const Path path2611 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -8090,8 +7008,6 @@ static const Path path2611 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2611_1_actions
 },
@@ -8099,8 +7015,6 @@ static const Path path2611 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8124,8 +7038,8 @@ LevelObjectGroup r11acidants3h = {
     .numObjects = 1, .objects = r11acidants3h_objects
 };
 extern LevelObjectGroup r11acidants3i;
-static const GObjPathPointFunction path2615_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2615_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2615 = {
 .x = 56, .y = 1720, .numPoints = 3, .points = {
@@ -8133,8 +7047,6 @@ static const Path path2615 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -8142,8 +7054,6 @@ static const Path path2615 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2615_1_actions
 },
@@ -8151,8 +7061,6 @@ static const Path path2615 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8176,8 +7084,8 @@ LevelObjectGroup r11acidants3i = {
     .numObjects = 1, .objects = r11acidants3i_objects
 };
 extern LevelObjectGroup r11acidants3j;
-static const GObjPathPointFunction path2619_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2619_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2619 = {
 .x = 32, .y = 1720, .numPoints = 3, .points = {
@@ -8185,8 +7093,6 @@ static const Path path2619 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -8194,8 +7100,6 @@ static const Path path2619 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2619_1_actions
 },
@@ -8203,8 +7107,6 @@ static const Path path2619 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8228,8 +7130,8 @@ LevelObjectGroup r11acidants3j = {
     .numObjects = 1, .objects = r11acidants3j_objects
 };
 extern LevelObjectGroup r11acidants3k;
-static const GObjPathPointFunction path2623_1_actions[] = {
-climbUpToFloor
+static const GameObjectAction path2623_1_actions[] = {
+{.action = climbUpToFloor, }
 };
 static const Path path2623 = {
 .x = 8, .y = 1720, .numPoints = 3, .points = {
@@ -8237,8 +7139,6 @@ static const Path path2623 = {
     .x = 0, .y = -16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -8246,8 +7146,6 @@ static const Path path2623 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2623_1_actions
 },
@@ -8255,8 +7153,6 @@ static const Path path2623 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -8295,14 +7191,14 @@ LevelObjectGroup r11powerup = {
     .numObjects = 1, .objects = r11powerup_objects
 };
 extern LevelObjectGroup r12wasp1a;
-static const GObjPathPointFunction path2630_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2630_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2630_1_actions[] = {
-enterForeground
+static const GameObjectAction path2630_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2630_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2630_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2630 = {
 .x = 96, .y = 1512, .numPoints = 3, .points = {
@@ -8310,8 +7206,6 @@ static const Path path2630 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2630_0_actions
 },
@@ -8319,8 +7213,6 @@ static const Path path2630 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2630_1_actions
 },
@@ -8328,8 +7220,6 @@ static const Path path2630 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2630_2_actions
 }
@@ -8353,14 +7243,14 @@ LevelObjectGroup r12wasp1a = {
     .numObjects = 1, .objects = r12wasp1a_objects
 };
 extern LevelObjectGroup r12wasp1b;
-static const GObjPathPointFunction path2636_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2636_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2636_1_actions[] = {
-enterForeground
+static const GameObjectAction path2636_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2636_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2636_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2636 = {
 .x = 128, .y = 1528, .numPoints = 3, .points = {
@@ -8368,8 +7258,6 @@ static const Path path2636 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2636_0_actions
 },
@@ -8377,8 +7265,6 @@ static const Path path2636 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2636_1_actions
 },
@@ -8386,8 +7272,6 @@ static const Path path2636 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2636_2_actions
 }
@@ -8411,14 +7295,14 @@ LevelObjectGroup r12wasp1b = {
     .numObjects = 1, .objects = r12wasp1b_objects
 };
 extern LevelObjectGroup r12wasp1c;
-static const GObjPathPointFunction path2642_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2642_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2642_1_actions[] = {
-enterForeground
+static const GameObjectAction path2642_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2642_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2642_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2642 = {
 .x = 160, .y = 1544, .numPoints = 3, .points = {
@@ -8426,8 +7310,6 @@ static const Path path2642 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2642_0_actions
 },
@@ -8435,8 +7317,6 @@ static const Path path2642 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2642_1_actions
 },
@@ -8444,8 +7324,6 @@ static const Path path2642 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2642_2_actions
 }
@@ -8469,14 +7347,14 @@ LevelObjectGroup r12wasp1c = {
     .numObjects = 1, .objects = r12wasp1c_objects
 };
 extern LevelObjectGroup r12wasp2a;
-static const GObjPathPointFunction path2648_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2648_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2648_1_actions[] = {
-enterForeground
+static const GameObjectAction path2648_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2648_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2648_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2648 = {
 .x = 80, .y = 1448, .numPoints = 3, .points = {
@@ -8484,8 +7362,6 @@ static const Path path2648 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2648_0_actions
 },
@@ -8493,8 +7369,6 @@ static const Path path2648 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2648_1_actions
 },
@@ -8502,8 +7376,6 @@ static const Path path2648 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2648_2_actions
 }
@@ -8527,14 +7399,14 @@ LevelObjectGroup r12wasp2a = {
     .numObjects = 1, .objects = r12wasp2a_objects
 };
 extern LevelObjectGroup r12wasp2b;
-static const GObjPathPointFunction path2654_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2654_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2654_1_actions[] = {
-enterForeground
+static const GameObjectAction path2654_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2654_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2654_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2654 = {
 .x = 56, .y = 1472, .numPoints = 3, .points = {
@@ -8542,8 +7414,6 @@ static const Path path2654 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2654_0_actions
 },
@@ -8551,8 +7421,6 @@ static const Path path2654 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2654_1_actions
 },
@@ -8560,8 +7428,6 @@ static const Path path2654 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2654_2_actions
 }
@@ -8585,14 +7451,14 @@ LevelObjectGroup r12wasp2b = {
     .numObjects = 1, .objects = r12wasp2b_objects
 };
 extern LevelObjectGroup r12wasp2c;
-static const GObjPathPointFunction path2660_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2660_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2660_1_actions[] = {
-enterForeground
+static const GameObjectAction path2660_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2660_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2660_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2660 = {
 .x = 32, .y = 1496, .numPoints = 3, .points = {
@@ -8600,8 +7466,6 @@ static const Path path2660 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2660_0_actions
 },
@@ -8609,8 +7473,6 @@ static const Path path2660 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2660_1_actions
 },
@@ -8618,8 +7480,6 @@ static const Path path2660 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2660_2_actions
 }
@@ -8643,14 +7503,14 @@ LevelObjectGroup r12wasp2c = {
     .numObjects = 1, .objects = r12wasp2c_objects
 };
 extern LevelObjectGroup r12wasp3a;
-static const GObjPathPointFunction path2666_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2666_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2666_1_actions[] = {
-enterForeground
+static const GameObjectAction path2666_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2666_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2666_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2666 = {
 .x = 176, .y = 1472, .numPoints = 3, .points = {
@@ -8658,8 +7518,6 @@ static const Path path2666 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2666_0_actions
 },
@@ -8667,8 +7525,6 @@ static const Path path2666 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2666_1_actions
 },
@@ -8676,8 +7532,6 @@ static const Path path2666 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2666_2_actions
 }
@@ -8701,14 +7555,14 @@ LevelObjectGroup r12wasp3a = {
     .numObjects = 1, .objects = r12wasp3a_objects
 };
 extern LevelObjectGroup r12wasp3b;
-static const GObjPathPointFunction path2672_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2672_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2672_1_actions[] = {
-enterForeground
+static const GameObjectAction path2672_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2672_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2672_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2672 = {
 .x = 200, .y = 1496, .numPoints = 3, .points = {
@@ -8716,8 +7570,6 @@ static const Path path2672 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2672_0_actions
 },
@@ -8725,8 +7577,6 @@ static const Path path2672 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2672_1_actions
 },
@@ -8734,8 +7584,6 @@ static const Path path2672 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2672_2_actions
 }
@@ -8759,14 +7607,14 @@ LevelObjectGroup r12wasp3b = {
     .numObjects = 1, .objects = r12wasp3b_objects
 };
 extern LevelObjectGroup r12wasp3c;
-static const GObjPathPointFunction path2678_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2678_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2678_1_actions[] = {
-enterForeground
+static const GameObjectAction path2678_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2678_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2678_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2678 = {
 .x = 224, .y = 1520, .numPoints = 3, .points = {
@@ -8774,8 +7622,6 @@ static const Path path2678 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2678_0_actions
 },
@@ -8783,8 +7629,6 @@ static const Path path2678 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2678_1_actions
 },
@@ -8792,8 +7636,6 @@ static const Path path2678 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2678_2_actions
 }
@@ -8817,14 +7659,14 @@ LevelObjectGroup r12wasp3c = {
     .numObjects = 1, .objects = r12wasp3c_objects
 };
 extern LevelObjectGroup r12wasp4a;
-static const GObjPathPointFunction path2684_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2684_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2684_1_actions[] = {
-enterForeground
+static const GameObjectAction path2684_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2684_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2684_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2684 = {
 .x = 48, .y = 1416, .numPoints = 3, .points = {
@@ -8832,8 +7674,6 @@ static const Path path2684 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2684_0_actions
 },
@@ -8841,8 +7681,6 @@ static const Path path2684 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2684_1_actions
 },
@@ -8850,8 +7688,6 @@ static const Path path2684 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2684_2_actions
 }
@@ -8875,14 +7711,14 @@ LevelObjectGroup r12wasp4a = {
     .numObjects = 1, .objects = r12wasp4a_objects
 };
 extern LevelObjectGroup r12wasp4b;
-static const GObjPathPointFunction path2690_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2690_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2690_1_actions[] = {
-enterForeground
+static const GameObjectAction path2690_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2690_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2690_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2690 = {
 .x = 208, .y = 1416, .numPoints = 3, .points = {
@@ -8890,8 +7726,6 @@ static const Path path2690 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2690_0_actions
 },
@@ -8899,8 +7733,6 @@ static const Path path2690 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2690_1_actions
 },
@@ -8908,8 +7740,6 @@ static const Path path2690 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2690_2_actions
 }
@@ -8933,14 +7763,14 @@ LevelObjectGroup r12wasp4b = {
     .numObjects = 1, .objects = r12wasp4b_objects
 };
 extern LevelObjectGroup r12wasp4c;
-static const GObjPathPointFunction path2696_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2696_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2696_1_actions[] = {
-enterForeground
+static const GameObjectAction path2696_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2696_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2696_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2696 = {
 .x = 32, .y = 1504, .numPoints = 3, .points = {
@@ -8948,8 +7778,6 @@ static const Path path2696 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2696_0_actions
 },
@@ -8957,8 +7785,6 @@ static const Path path2696 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2696_1_actions
 },
@@ -8966,8 +7792,6 @@ static const Path path2696 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2696_2_actions
 }
@@ -8991,14 +7815,14 @@ LevelObjectGroup r12wasp4c = {
     .numObjects = 1, .objects = r12wasp4c_objects
 };
 extern LevelObjectGroup r12wasp4d;
-static const GObjPathPointFunction path2702_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2702_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2702_1_actions[] = {
-enterForeground
+static const GameObjectAction path2702_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2702_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path2702_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2702 = {
 .x = 224, .y = 1504, .numPoints = 3, .points = {
@@ -9006,8 +7830,6 @@ static const Path path2702 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2702_0_actions
 },
@@ -9015,8 +7837,6 @@ static const Path path2702 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2702_1_actions
 },
@@ -9024,8 +7844,6 @@ static const Path path2702 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2702_2_actions
 }
@@ -9064,8 +7882,8 @@ LevelObjectGroup r12powerup = {
     .numObjects = 1, .objects = r12powerup_objects
 };
 extern LevelObjectGroup r13acidants1;
-static const GObjPathPointFunction path2715_2_actions[] = {
-markDisappear
+static const GameObjectAction path2715_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2715 = {
 .x = 232, .y = 1152, .numPoints = 3, .points = {
@@ -9073,8 +7891,6 @@ static const Path path2715 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9082,8 +7898,6 @@ static const Path path2715 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9091,15 +7905,13 @@ static const Path path2715 = {
     .x = 0, .y = 192,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2715_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2716_2_actions[] = {
-markDisappear
+static const GameObjectAction path2716_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2716 = {
 .x = 240, .y = 1168, .numPoints = 3, .points = {
@@ -9107,8 +7919,6 @@ static const Path path2716 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9116,8 +7926,6 @@ static const Path path2716 = {
     .x = 0, .y = 160,
     .speedTo = 128, .distTo = 7168,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9125,15 +7933,13 @@ static const Path path2716 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2716_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2717_2_actions[] = {
-markDisappear
+static const GameObjectAction path2717_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2717 = {
 .x = 16, .y = 1168, .numPoints = 3, .points = {
@@ -9141,8 +7947,6 @@ static const Path path2717 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9150,8 +7954,6 @@ static const Path path2717 = {
     .x = 0, .y = 160,
     .speedTo = 128, .distTo = 7168,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9159,15 +7961,13 @@ static const Path path2717 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2717_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2718_2_actions[] = {
-markDisappear
+static const GameObjectAction path2718_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2718 = {
 .x = 24, .y = 1152, .numPoints = 3, .points = {
@@ -9175,8 +7975,6 @@ static const Path path2718 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9184,8 +7982,6 @@ static const Path path2718 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9193,15 +7989,13 @@ static const Path path2718 = {
     .x = 0, .y = 192,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2718_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2719_2_actions[] = {
-markDisappear
+static const GameObjectAction path2719_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2719 = {
 .x = 248, .y = 1152, .numPoints = 3, .points = {
@@ -9209,8 +8003,6 @@ static const Path path2719 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9218,8 +8010,6 @@ static const Path path2719 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9227,15 +8017,13 @@ static const Path path2719 = {
     .x = 0, .y = 192,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2719_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2720_2_actions[] = {
-markDisappear
+static const GameObjectAction path2720_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2720 = {
 .x = 8, .y = 1152, .numPoints = 3, .points = {
@@ -9243,8 +8031,6 @@ static const Path path2720 = {
     .x = 0, .y = 48,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9252,8 +8038,6 @@ static const Path path2720 = {
     .x = 0, .y = 176,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9261,8 +8045,6 @@ static const Path path2720 = {
     .x = 0, .y = 192,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2720_2_actions
 }
@@ -9331,17 +8113,17 @@ LevelObjectGroup r13acidants1 = {
     .numObjects = 6, .objects = r13acidants1_objects
 };
 extern LevelObjectGroup r13beetle1;
-static const GObjPathPointFunction path2730_1_actions[] = {
-enterForeground
+static const GameObjectAction path2730_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2730_2_actions[] = {
-BeetleShoot
+static const GameObjectAction path2730_2_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2730_3_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2730_3_actions[] = {
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2730_4_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2730_4_actions[] = {
+{.action = PathPoint_Rotate, }
 };
 static const Path path2730 = {
 .x = 56, .y = 1320, .numPoints = 6, .points = {
@@ -9349,8 +8131,6 @@ static const Path path2730 = {
     .x = 0, .y = 0,
     .speedTo = 32, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9358,8 +8138,6 @@ static const Path path2730 = {
     .x = 0, .y = -16,
     .speedTo = 32, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2730_1_actions
 },
@@ -9367,8 +8145,6 @@ static const Path path2730 = {
     .x = 0, .y = -24,
     .speedTo = 32, .distTo = 512,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2730_2_actions
 },
@@ -9376,8 +8152,6 @@ static const Path path2730 = {
     .x = 0, .y = -144,
     .speedTo = 32, .distTo = 7680,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2730_3_actions
 },
@@ -9385,8 +8159,6 @@ static const Path path2730 = {
     .x = -16, .y = -160,
     .speedTo = 32, .distTo = 1448,
     .xVelTo = -23, .yVelTo = -23,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2730_4_actions
 },
@@ -9394,24 +8166,22 @@ static const Path path2730 = {
     .x = -112, .y = -160,
     .speedTo = 32, .distTo = 6144,
     .xVelTo = -32, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2731_1_actions[] = {
-enterForeground
+static const GameObjectAction path2731_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2731_2_actions[] = {
-BeetleShoot
+static const GameObjectAction path2731_2_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2731_3_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2731_3_actions[] = {
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2731_4_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2731_4_actions[] = {
+{.action = PathPoint_Rotate, }
 };
 static const Path path2731 = {
 .x = 200, .y = 1320, .numPoints = 6, .points = {
@@ -9419,8 +8189,6 @@ static const Path path2731 = {
     .x = 0, .y = 0,
     .speedTo = 32, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9428,8 +8196,6 @@ static const Path path2731 = {
     .x = 0, .y = -16,
     .speedTo = 32, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2731_1_actions
 },
@@ -9437,8 +8203,6 @@ static const Path path2731 = {
     .x = 0, .y = -24,
     .speedTo = 32, .distTo = 512,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2731_2_actions
 },
@@ -9446,8 +8210,6 @@ static const Path path2731 = {
     .x = 0, .y = -144,
     .speedTo = 32, .distTo = 7680,
     .xVelTo = 0, .yVelTo = -32,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2731_3_actions
 },
@@ -9455,8 +8217,6 @@ static const Path path2731 = {
     .x = 16, .y = -160,
     .speedTo = 32, .distTo = 1448,
     .xVelTo = 22, .yVelTo = -23,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2731_4_actions
 },
@@ -9464,8 +8224,6 @@ static const Path path2731 = {
     .x = 112, .y = -160,
     .speedTo = 32, .distTo = 6144,
     .xVelTo = 32, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -9498,16 +8256,16 @@ LevelObjectGroup r13beetle1 = {
     .numObjects = 2, .objects = r13beetle1_objects
 };
 extern LevelObjectGroup r13fly1;
-static const GObjPathPointFunction path2742_3_actions[] = {
-enterForeground,
-faceLeft,
-PathPoint_SetSpeed
+static const GameObjectAction path2742_3_actions[] = {
+{.action = enterForeground, },
+{.action = faceLeft, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2742_4_actions[] = {
-startShooting
+static const GameObjectAction path2742_4_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2742_5_actions[] = {
-startWaspAttack
+static const GameObjectAction path2742_5_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2742 = {
 .x = 32, .y = 1264, .numPoints = 6, .points = {
@@ -9515,8 +8273,6 @@ static const Path path2742 = {
     .x = 0, .y = 0,
     .speedTo = 192, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9524,8 +8280,6 @@ static const Path path2742 = {
     .x = 56, .y = 0,
     .speedTo = 192, .distTo = 3584,
     .xVelTo = 192, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9533,8 +8287,6 @@ static const Path path2742 = {
     .x = 96, .y = -8,
     .speedTo = 192, .distTo = 2610,
     .xVelTo = 188, .yVelTo = -38,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9542,8 +8294,6 @@ static const Path path2742 = {
     .x = 120, .y = -16,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = 182, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2742_3_actions
 },
@@ -9551,8 +8301,6 @@ static const Path path2742 = {
     .x = 136, .y = -24,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 57, .yVelTo = -29,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2742_4_actions
 },
@@ -9560,8 +8308,6 @@ static const Path path2742 = {
     .x = 152, .y = -40,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2742_5_actions
 }
@@ -9585,21 +8331,21 @@ LevelObjectGroup r13fly1 = {
     .numObjects = 1, .objects = r13fly1_objects
 };
 extern LevelObjectGroup r13fly2;
-static const GObjPathPointFunction path2751_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2751_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2751_2_actions[] = {
-0 /* to be assigned */,
-PathPoint_SetSpeed
+static const GameObjectAction path2751_2_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2751_3_actions[] = {
-enterForeground
+static const GameObjectAction path2751_3_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2751_4_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2751_4_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2751_5_actions[] = {
-startWaspAttack
+static const GameObjectAction path2751_5_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2751 = {
 .x = 24, .y = 1232, .numPoints = 6, .points = {
@@ -9607,8 +8353,6 @@ static const Path path2751 = {
     .x = 24, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2751_0_actions
 },
@@ -9616,8 +8360,6 @@ static const Path path2751 = {
     .x = 56, .y = 0,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9625,8 +8367,6 @@ static const Path path2751 = {
     .x = 96, .y = 8,
     .speedTo = 64, .distTo = 2610,
     .xVelTo = 62, .yVelTo = 12,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2751_2_actions
 },
@@ -9634,8 +8374,6 @@ static const Path path2751 = {
     .x = 120, .y = 16,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = 60, .yVelTo = 20,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2751_3_actions
 },
@@ -9643,8 +8381,6 @@ static const Path path2751 = {
     .x = 136, .y = 24,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = 57, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2751_4_actions
 },
@@ -9652,8 +8388,6 @@ static const Path path2751 = {
     .x = 152, .y = 40,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2751_5_actions
 }
@@ -9677,16 +8411,16 @@ LevelObjectGroup r13fly2 = {
     .numObjects = 1, .objects = r13fly2_objects
 };
 extern LevelObjectGroup r13fly3;
-static const GObjPathPointFunction path2760_3_actions[] = {
-enterForeground,
-faceRight,
-PathPoint_SetSpeed
+static const GameObjectAction path2760_3_actions[] = {
+{.action = enterForeground, },
+{.action = faceRight, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2760_4_actions[] = {
-startShooting
+static const GameObjectAction path2760_4_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2760_5_actions[] = {
-startWaspAttack
+static const GameObjectAction path2760_5_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2760 = {
 .x = 224, .y = 1224, .numPoints = 6, .points = {
@@ -9694,8 +8428,6 @@ static const Path path2760 = {
     .x = 0, .y = 0,
     .speedTo = 192, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9703,8 +8435,6 @@ static const Path path2760 = {
     .x = -56, .y = 0,
     .speedTo = 192, .distTo = 3584,
     .xVelTo = -192, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9712,8 +8442,6 @@ static const Path path2760 = {
     .x = -96, .y = -8,
     .speedTo = 192, .distTo = 2610,
     .xVelTo = -189, .yVelTo = -38,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9721,8 +8449,6 @@ static const Path path2760 = {
     .x = -120, .y = -16,
     .speedTo = 192, .distTo = 1619,
     .xVelTo = -183, .yVelTo = -61,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2760_3_actions
 },
@@ -9730,8 +8456,6 @@ static const Path path2760 = {
     .x = -136, .y = -24,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -58, .yVelTo = -29,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2760_4_actions
 },
@@ -9739,8 +8463,6 @@ static const Path path2760 = {
     .x = -152, .y = -40,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2760_5_actions
 }
@@ -9764,21 +8486,21 @@ LevelObjectGroup r13fly3 = {
     .numObjects = 1, .objects = r13fly3_objects
 };
 extern LevelObjectGroup r14fly4;
-static const GObjPathPointFunction path2769_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2769_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2769_2_actions[] = {
-0 /* to be assigned */,
-PathPoint_SetSpeed
+static const GameObjectAction path2769_2_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_SetSpeed, }
 };
-static const GObjPathPointFunction path2769_3_actions[] = {
-enterForeground
+static const GameObjectAction path2769_3_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2769_4_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2769_4_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2769_5_actions[] = {
-startWaspAttack
+static const GameObjectAction path2769_5_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2769 = {
 .x = 232, .y = 1192, .numPoints = 6, .points = {
@@ -9786,8 +8508,6 @@ static const Path path2769 = {
     .x = -24, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2769_0_actions
 },
@@ -9795,8 +8515,6 @@ static const Path path2769 = {
     .x = -56, .y = 0,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9804,8 +8522,6 @@ static const Path path2769 = {
     .x = -96, .y = 8,
     .speedTo = 64, .distTo = 2610,
     .xVelTo = -63, .yVelTo = 12,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2769_2_actions
 },
@@ -9813,8 +8529,6 @@ static const Path path2769 = {
     .x = -120, .y = 16,
     .speedTo = 64, .distTo = 1619,
     .xVelTo = -61, .yVelTo = 20,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2769_3_actions
 },
@@ -9822,8 +8536,6 @@ static const Path path2769 = {
     .x = -136, .y = 24,
     .speedTo = 64, .distTo = 1144,
     .xVelTo = -58, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2769_4_actions
 },
@@ -9831,8 +8543,6 @@ static const Path path2769 = {
     .x = -152, .y = 40,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2769_5_actions
 }
@@ -9856,110 +8566,110 @@ LevelObjectGroup r14fly4 = {
     .numObjects = 1, .objects = r14fly4_objects
 };
 extern LevelObjectGroup r14beetles;
-static const GObjPathPointFunction path2779_1_actions[] = {
-enterForeground
+static const GameObjectAction path2779_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2779_2_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2779_2_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2779_4_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2779_4_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_5_actions[] = {
-BeetleShoot
+static const GameObjectAction path2779_5_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_6_actions[] = {
-enterBackground
+static const GameObjectAction path2779_6_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2779_7_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_7_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_9_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_9_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_10_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2779_10_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_12_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2779_12_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2779_13_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2779_13_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_14_actions[] = {
-BeetleShoot
+static const GameObjectAction path2779_14_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_15_actions[] = {
-enterBackground
+static const GameObjectAction path2779_15_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2779_16_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_16_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_17_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_17_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_18_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2779_18_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_20_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2779_20_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2779_21_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2779_21_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_22_actions[] = {
-BeetleShoot
+static const GameObjectAction path2779_22_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_23_actions[] = {
-enterBackground
+static const GameObjectAction path2779_23_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2779_24_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_24_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_25_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2779_25_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_26_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2779_26_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_28_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2779_28_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2779_29_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2779_29_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2779_30_actions[] = {
-BeetleShoot
+static const GameObjectAction path2779_30_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2779_31_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2779_31_actions[] = {
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2779_32_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2779_32_actions[] = {
+{.action = PathPoint_Rotate, }
 };
 static const Path path2779 = {
 .x = 40, .y = 856, .numPoints = 34, .points = {
@@ -9967,8 +8677,6 @@ static const Path path2779 = {
     .x = 64, .y = 240,
     .speedTo = 80, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -9976,8 +8684,6 @@ static const Path path2779 = {
     .x = 64, .y = 224,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_1_actions
 },
@@ -9985,8 +8691,6 @@ static const Path path2779 = {
     .x = 40, .y = 208,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_2_actions
 },
@@ -9994,8 +8698,6 @@ static const Path path2779 = {
     .x = 32, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10003,8 +8705,6 @@ static const Path path2779 = {
     .x = 24, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_4_actions
 },
@@ -10012,8 +8712,6 @@ static const Path path2779 = {
     .x = 0, .y = 192,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_5_actions
 },
@@ -10021,8 +8719,6 @@ static const Path path2779 = {
     .x = 0, .y = 176,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_6_actions
 },
@@ -10030,8 +8726,6 @@ static const Path path2779 = {
     .x = 24, .y = 160,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_7_actions
 },
@@ -10039,8 +8733,6 @@ static const Path path2779 = {
     .x = 32, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10048,8 +8740,6 @@ static const Path path2779 = {
     .x = 40, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_9_actions
 },
@@ -10057,8 +8747,6 @@ static const Path path2779 = {
     .x = 64, .y = 144,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_10_actions
 },
@@ -10066,8 +8754,6 @@ static const Path path2779 = {
     .x = 64, .y = 128,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10075,8 +8761,6 @@ static const Path path2779 = {
     .x = 40, .y = 112,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_12_actions
 },
@@ -10084,8 +8768,6 @@ static const Path path2779 = {
     .x = 24, .y = 112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_13_actions
 },
@@ -10093,8 +8775,6 @@ static const Path path2779 = {
     .x = 0, .y = 96,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_14_actions
 },
@@ -10102,8 +8782,6 @@ static const Path path2779 = {
     .x = 0, .y = 80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_15_actions
 },
@@ -10111,8 +8789,6 @@ static const Path path2779 = {
     .x = 24, .y = 64,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_16_actions
 },
@@ -10120,8 +8796,6 @@ static const Path path2779 = {
     .x = 40, .y = 64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_17_actions
 },
@@ -10129,8 +8803,6 @@ static const Path path2779 = {
     .x = 64, .y = 48,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_18_actions
 },
@@ -10138,8 +8810,6 @@ static const Path path2779 = {
     .x = 64, .y = 32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10147,8 +8817,6 @@ static const Path path2779 = {
     .x = 40, .y = 16,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_20_actions
 },
@@ -10156,8 +8824,6 @@ static const Path path2779 = {
     .x = 24, .y = 16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_21_actions
 },
@@ -10165,8 +8831,6 @@ static const Path path2779 = {
     .x = 0, .y = 0,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_22_actions
 },
@@ -10174,8 +8838,6 @@ static const Path path2779 = {
     .x = 0, .y = -16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_23_actions
 },
@@ -10183,8 +8845,6 @@ static const Path path2779 = {
     .x = 24, .y = -32,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_24_actions
 },
@@ -10192,8 +8852,6 @@ static const Path path2779 = {
     .x = 40, .y = -32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_25_actions
 },
@@ -10201,8 +8859,6 @@ static const Path path2779 = {
     .x = 64, .y = -48,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_26_actions
 },
@@ -10210,8 +8866,6 @@ static const Path path2779 = {
     .x = 64, .y = -64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10219,8 +8873,6 @@ static const Path path2779 = {
     .x = 40, .y = -80,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2779_28_actions
 },
@@ -10228,8 +8880,6 @@ static const Path path2779 = {
     .x = 24, .y = -80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2779_29_actions
 },
@@ -10237,8 +8887,6 @@ static const Path path2779 = {
     .x = 0, .y = -96,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_30_actions
 },
@@ -10246,8 +8894,6 @@ static const Path path2779 = {
     .x = 0, .y = -112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_31_actions
 },
@@ -10255,8 +8901,6 @@ static const Path path2779 = {
     .x = 16, .y = -128,
     .speedTo = 80, .distTo = 1448,
     .xVelTo = 56, .yVelTo = -57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2779_32_actions
 },
@@ -10264,115 +8908,113 @@ static const Path path2779 = {
     .x = 24, .y = -128,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
 }
 };
-static const GObjPathPointFunction path2780_2_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2780_2_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2780_4_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2780_4_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_5_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2780_5_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_7_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_7_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_9_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_9_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_10_actions[] = {
-BeetleShoot
+static const GameObjectAction path2780_10_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_11_actions[] = {
-enterBackground
+static const GameObjectAction path2780_11_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2780_12_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2780_12_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2780_13_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2780_13_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_14_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2780_14_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_16_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_16_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_17_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_17_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_18_actions[] = {
-BeetleShoot
+static const GameObjectAction path2780_18_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_19_actions[] = {
-enterBackground
+static const GameObjectAction path2780_19_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2780_20_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2780_20_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2780_21_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2780_21_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_22_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2780_22_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_24_actions[] = {
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_24_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_25_actions[] = {
-faceLeft,
-PathPoint_Rotate,
-0 /* to be assigned */
+static const GameObjectAction path2780_25_actions[] = {
+{.action = faceLeft, },
+{.action = PathPoint_Rotate, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_26_actions[] = {
-BeetleShoot
+static const GameObjectAction path2780_26_actions[] = {
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_27_actions[] = {
-enterBackground
+static const GameObjectAction path2780_27_actions[] = {
+{.action = enterBackground, }
 };
-static const GObjPathPointFunction path2780_28_actions[] = {
-0 /* to be assigned */,
-PathPoint_Rotate
+static const GameObjectAction path2780_28_actions[] = {
+{.action = 0 /* to be assigned */, },
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2780_29_actions[] = {
-PathPoint_Rotate,
-faceRight,
-0 /* to be assigned */
+static const GameObjectAction path2780_29_actions[] = {
+{.action = PathPoint_Rotate, },
+{.action = faceRight, },
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2780_30_actions[] = {
-enterForeground,
-BeetleShoot
+static const GameObjectAction path2780_30_actions[] = {
+{.action = enterForeground, },
+{.action = BeetleShoot, }
 };
-static const GObjPathPointFunction path2780_31_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2780_31_actions[] = {
+{.action = PathPoint_Rotate, }
 };
-static const GObjPathPointFunction path2780_32_actions[] = {
-PathPoint_Rotate
+static const GameObjectAction path2780_32_actions[] = {
+{.action = PathPoint_Rotate, }
 };
 static const Path path2780 = {
 .x = 152, .y = 856, .numPoints = 34, .points = {
@@ -10380,8 +9022,6 @@ static const Path path2780 = {
     .x = 64, .y = 240,
     .speedTo = 80, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10389,8 +9029,6 @@ static const Path path2780 = {
     .x = 64, .y = 224,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10398,8 +9036,6 @@ static const Path path2780 = {
     .x = 40, .y = 208,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_2_actions
 },
@@ -10407,8 +9043,6 @@ static const Path path2780 = {
     .x = 32, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10416,8 +9050,6 @@ static const Path path2780 = {
     .x = 24, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_4_actions
 },
@@ -10425,8 +9057,6 @@ static const Path path2780 = {
     .x = 0, .y = 192,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_5_actions
 },
@@ -10434,8 +9064,6 @@ static const Path path2780 = {
     .x = 0, .y = 176,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10443,8 +9071,6 @@ static const Path path2780 = {
     .x = 24, .y = 160,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_7_actions
 },
@@ -10452,8 +9078,6 @@ static const Path path2780 = {
     .x = 32, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10461,8 +9085,6 @@ static const Path path2780 = {
     .x = 40, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_9_actions
 },
@@ -10470,8 +9092,6 @@ static const Path path2780 = {
     .x = 64, .y = 144,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_10_actions
 },
@@ -10479,8 +9099,6 @@ static const Path path2780 = {
     .x = 64, .y = 128,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_11_actions
 },
@@ -10488,8 +9106,6 @@ static const Path path2780 = {
     .x = 40, .y = 112,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_12_actions
 },
@@ -10497,8 +9113,6 @@ static const Path path2780 = {
     .x = 24, .y = 112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_13_actions
 },
@@ -10506,8 +9120,6 @@ static const Path path2780 = {
     .x = 0, .y = 96,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_14_actions
 },
@@ -10515,8 +9127,6 @@ static const Path path2780 = {
     .x = 0, .y = 80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10524,8 +9134,6 @@ static const Path path2780 = {
     .x = 24, .y = 64,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_16_actions
 },
@@ -10533,8 +9141,6 @@ static const Path path2780 = {
     .x = 40, .y = 64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_17_actions
 },
@@ -10542,8 +9148,6 @@ static const Path path2780 = {
     .x = 64, .y = 48,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_18_actions
 },
@@ -10551,8 +9155,6 @@ static const Path path2780 = {
     .x = 64, .y = 32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_19_actions
 },
@@ -10560,8 +9162,6 @@ static const Path path2780 = {
     .x = 40, .y = 16,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_20_actions
 },
@@ -10569,8 +9169,6 @@ static const Path path2780 = {
     .x = 24, .y = 16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_21_actions
 },
@@ -10578,8 +9176,6 @@ static const Path path2780 = {
     .x = 0, .y = 0,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_22_actions
 },
@@ -10587,8 +9183,6 @@ static const Path path2780 = {
     .x = 0, .y = -16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10596,8 +9190,6 @@ static const Path path2780 = {
     .x = 24, .y = -32,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_24_actions
 },
@@ -10605,8 +9197,6 @@ static const Path path2780 = {
     .x = 40, .y = -32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_25_actions
 },
@@ -10614,8 +9204,6 @@ static const Path path2780 = {
     .x = 64, .y = -48,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_26_actions
 },
@@ -10623,8 +9211,6 @@ static const Path path2780 = {
     .x = 64, .y = -64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_27_actions
 },
@@ -10632,8 +9218,6 @@ static const Path path2780 = {
     .x = 40, .y = -80,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_28_actions
 },
@@ -10641,8 +9225,6 @@ static const Path path2780 = {
     .x = 24, .y = -80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 3,
     .actions = path2780_29_actions
 },
@@ -10650,8 +9232,6 @@ static const Path path2780 = {
     .x = 0, .y = -96,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 2,
     .actions = path2780_30_actions
 },
@@ -10659,8 +9239,6 @@ static const Path path2780 = {
     .x = 0, .y = -112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -80,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_31_actions
 },
@@ -10668,8 +9246,6 @@ static const Path path2780 = {
     .x = 16, .y = -128,
     .speedTo = 80, .distTo = 1448,
     .xVelTo = 56, .yVelTo = -57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2780_32_actions
 },
@@ -10677,8 +9253,6 @@ static const Path path2780 = {
     .x = 24, .y = -128,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 }
@@ -10751,8 +9325,8 @@ LevelObjectGroup r14beetles = {
     .numObjects = 7, .objects = r14beetles_objects
 };
 extern LevelObjectGroup r14acidants1;
-static const GObjPathPointFunction path2891_2_actions[] = {
-markDisappear
+static const GameObjectAction path2891_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2891 = {
 .x = 120, .y = 976, .numPoints = 3, .points = {
@@ -10760,8 +9334,6 @@ static const Path path2891 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10769,8 +9341,6 @@ static const Path path2891 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10778,15 +9348,13 @@ static const Path path2891 = {
     .x = 0, .y = 160,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2891_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2892_2_actions[] = {
-markDisappear
+static const GameObjectAction path2892_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2892 = {
 .x = 184, .y = 976, .numPoints = 3, .points = {
@@ -10794,8 +9362,6 @@ static const Path path2892 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10803,8 +9369,6 @@ static const Path path2892 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10812,8 +9376,6 @@ static const Path path2892 = {
     .x = 0, .y = 160,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2892_2_actions
 }
@@ -10846,8 +9408,8 @@ LevelObjectGroup r14acidants1 = {
     .numObjects = 2, .objects = r14acidants1_objects
 };
 extern LevelObjectGroup r14acidants2;
-static const GObjPathPointFunction path2898_2_actions[] = {
-markDisappear
+static const GameObjectAction path2898_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2898 = {
 .x = 128, .y = 992, .numPoints = 3, .points = {
@@ -10855,8 +9417,6 @@ static const Path path2898 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10864,8 +9424,6 @@ static const Path path2898 = {
     .x = 0, .y = 128,
     .speedTo = 64, .distTo = 7168,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10873,15 +9431,13 @@ static const Path path2898 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2898_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2899_2_actions[] = {
-markDisappear
+static const GameObjectAction path2899_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2899 = {
 .x = 176, .y = 992, .numPoints = 3, .points = {
@@ -10889,8 +9445,6 @@ static const Path path2899 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10898,8 +9452,6 @@ static const Path path2899 = {
     .x = 0, .y = 128,
     .speedTo = 64, .distTo = 7168,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10907,8 +9459,6 @@ static const Path path2899 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2899_2_actions
 }
@@ -10941,8 +9491,8 @@ LevelObjectGroup r14acidants2 = {
     .numObjects = 2, .objects = r14acidants2_objects
 };
 extern LevelObjectGroup r14acidants3;
-static const GObjPathPointFunction path2905_2_actions[] = {
-markDisappear
+static const GameObjectAction path2905_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2905 = {
 .x = 136, .y = 976, .numPoints = 3, .points = {
@@ -10950,8 +9500,6 @@ static const Path path2905 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10959,8 +9507,6 @@ static const Path path2905 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10968,15 +9514,13 @@ static const Path path2905 = {
     .x = 0, .y = 160,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2905_2_actions
 }
 }
 };
-static const GObjPathPointFunction path2906_2_actions[] = {
-markDisappear
+static const GameObjectAction path2906_2_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path2906 = {
 .x = 168, .y = 976, .numPoints = 3, .points = {
@@ -10984,8 +9528,6 @@ static const Path path2906 = {
     .x = 0, .y = 16,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -10993,8 +9535,6 @@ static const Path path2906 = {
     .x = 0, .y = 144,
     .speedTo = 64, .distTo = 8192,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -11002,8 +9542,6 @@ static const Path path2906 = {
     .x = 0, .y = 160,
     .speedTo = 64, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2906_2_actions
 }
@@ -11036,17 +9574,17 @@ LevelObjectGroup r14acidants3 = {
     .numObjects = 2, .objects = r14acidants3_objects
 };
 extern LevelObjectGroup r14wasp1a;
-static const GObjPathPointFunction path2911_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2911_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2911_1_actions[] = {
-enterForeground
+static const GameObjectAction path2911_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2911_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2911_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2911_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2911_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2911 = {
 .x = 136, .y = 1128, .numPoints = 4, .points = {
@@ -11054,8 +9592,6 @@ static const Path path2911 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2911_0_actions
 },
@@ -11063,8 +9599,6 @@ static const Path path2911 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2911_1_actions
 },
@@ -11072,8 +9606,6 @@ static const Path path2911 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2911_2_actions
 },
@@ -11081,8 +9613,6 @@ static const Path path2911 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2911_3_actions
 }
@@ -11106,17 +9636,17 @@ LevelObjectGroup r14wasp1a = {
     .numObjects = 1, .objects = r14wasp1a_objects
 };
 extern LevelObjectGroup r14wasp1b;
-static const GObjPathPointFunction path2921_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2921_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2921_1_actions[] = {
-enterForeground
+static const GameObjectAction path2921_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2921_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2921_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2921_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2921_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2921 = {
 .x = 120, .y = 1136, .numPoints = 4, .points = {
@@ -11124,8 +9654,6 @@ static const Path path2921 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2921_0_actions
 },
@@ -11133,8 +9661,6 @@ static const Path path2921 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2921_1_actions
 },
@@ -11142,8 +9668,6 @@ static const Path path2921 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2921_2_actions
 },
@@ -11151,8 +9675,6 @@ static const Path path2921 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2921_3_actions
 }
@@ -11176,17 +9698,17 @@ LevelObjectGroup r14wasp1b = {
     .numObjects = 1, .objects = r14wasp1b_objects
 };
 extern LevelObjectGroup r14wasp2a;
-static const GObjPathPointFunction path2928_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2928_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2928_1_actions[] = {
-enterForeground
+static const GameObjectAction path2928_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2928_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2928_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2928_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2928_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2928 = {
 .x = 24, .y = 1072, .numPoints = 4, .points = {
@@ -11194,8 +9716,6 @@ static const Path path2928 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2928_0_actions
 },
@@ -11203,8 +9723,6 @@ static const Path path2928 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2928_1_actions
 },
@@ -11212,8 +9730,6 @@ static const Path path2928 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2928_2_actions
 },
@@ -11221,8 +9737,6 @@ static const Path path2928 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2928_3_actions
 }
@@ -11246,17 +9760,17 @@ LevelObjectGroup r14wasp2a = {
     .numObjects = 1, .objects = r14wasp2a_objects
 };
 extern LevelObjectGroup r14wasp2b;
-static const GObjPathPointFunction path2935_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2935_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2935_1_actions[] = {
-enterForeground
+static const GameObjectAction path2935_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2935_2_actions[] = {
-startShooting
+static const GameObjectAction path2935_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2935_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2935_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2935 = {
 .x = 120, .y = 1096, .numPoints = 4, .points = {
@@ -11264,8 +9778,6 @@ static const Path path2935 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2935_0_actions
 },
@@ -11273,8 +9785,6 @@ static const Path path2935 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2935_1_actions
 },
@@ -11282,8 +9792,6 @@ static const Path path2935 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2935_2_actions
 },
@@ -11291,8 +9799,6 @@ static const Path path2935 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2935_3_actions
 }
@@ -11316,17 +9822,17 @@ LevelObjectGroup r14wasp2b = {
     .numObjects = 1, .objects = r14wasp2b_objects
 };
 extern LevelObjectGroup r14wasp3a;
-static const GObjPathPointFunction path2942_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2942_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2942_1_actions[] = {
-enterForeground
+static const GameObjectAction path2942_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2942_2_actions[] = {
-startShooting
+static const GameObjectAction path2942_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2942_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2942_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2942 = {
 .x = 136, .y = 1056, .numPoints = 4, .points = {
@@ -11334,8 +9840,6 @@ static const Path path2942 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2942_0_actions
 },
@@ -11343,8 +9847,6 @@ static const Path path2942 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2942_1_actions
 },
@@ -11352,8 +9854,6 @@ static const Path path2942 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2942_2_actions
 },
@@ -11361,8 +9861,6 @@ static const Path path2942 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2942_3_actions
 }
@@ -11386,17 +9884,17 @@ LevelObjectGroup r14wasp3a = {
     .numObjects = 1, .objects = r14wasp3a_objects
 };
 extern LevelObjectGroup r14wasp3b;
-static const GObjPathPointFunction path2949_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2949_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2949_1_actions[] = {
-enterForeground
+static const GameObjectAction path2949_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2949_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2949_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2949_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2949_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2949 = {
 .x = 232, .y = 1032, .numPoints = 4, .points = {
@@ -11404,8 +9902,6 @@ static const Path path2949 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2949_0_actions
 },
@@ -11413,8 +9909,6 @@ static const Path path2949 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2949_1_actions
 },
@@ -11422,8 +9916,6 @@ static const Path path2949 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2949_2_actions
 },
@@ -11431,8 +9923,6 @@ static const Path path2949 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2949_3_actions
 }
@@ -11456,17 +9946,17 @@ LevelObjectGroup r14wasp3b = {
     .numObjects = 1, .objects = r14wasp3b_objects
 };
 extern LevelObjectGroup r14wasp4a;
-static const GObjPathPointFunction path2956_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2956_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2956_1_actions[] = {
-enterForeground
+static const GameObjectAction path2956_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2956_2_actions[] = {
-startShooting
+static const GameObjectAction path2956_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2956_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2956_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2956 = {
 .x = 24, .y = 960, .numPoints = 4, .points = {
@@ -11474,8 +9964,6 @@ static const Path path2956 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2956_0_actions
 },
@@ -11483,8 +9971,6 @@ static const Path path2956 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2956_1_actions
 },
@@ -11492,8 +9978,6 @@ static const Path path2956 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2956_2_actions
 },
@@ -11501,8 +9985,6 @@ static const Path path2956 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2956_3_actions
 }
@@ -11526,17 +10008,17 @@ LevelObjectGroup r14wasp4a = {
     .numObjects = 1, .objects = r14wasp4a_objects
 };
 extern LevelObjectGroup r14wasp4b;
-static const GObjPathPointFunction path2963_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2963_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2963_1_actions[] = {
-enterForeground
+static const GameObjectAction path2963_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2963_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2963_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2963_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2963_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2963 = {
 .x = 136, .y = 952, .numPoints = 4, .points = {
@@ -11544,8 +10026,6 @@ static const Path path2963 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2963_0_actions
 },
@@ -11553,8 +10033,6 @@ static const Path path2963 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2963_1_actions
 },
@@ -11562,8 +10040,6 @@ static const Path path2963 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2963_2_actions
 },
@@ -11571,8 +10047,6 @@ static const Path path2963 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2963_3_actions
 }
@@ -11596,17 +10070,17 @@ LevelObjectGroup r14wasp4b = {
     .numObjects = 1, .objects = r14wasp4b_objects
 };
 extern LevelObjectGroup r14wasp4c;
-static const GObjPathPointFunction path2970_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2970_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2970_1_actions[] = {
-enterForeground
+static const GameObjectAction path2970_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2970_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2970_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2970_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2970_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2970 = {
 .x = 24, .y = 984, .numPoints = 4, .points = {
@@ -11614,8 +10088,6 @@ static const Path path2970 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2970_0_actions
 },
@@ -11623,8 +10095,6 @@ static const Path path2970 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2970_1_actions
 },
@@ -11632,8 +10102,6 @@ static const Path path2970 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2970_2_actions
 },
@@ -11641,8 +10109,6 @@ static const Path path2970 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2970_3_actions
 }
@@ -11666,17 +10132,17 @@ LevelObjectGroup r14wasp4c = {
     .numObjects = 1, .objects = r14wasp4c_objects
 };
 extern LevelObjectGroup r14wasp5a;
-static const GObjPathPointFunction path2977_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2977_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2977_1_actions[] = {
-enterForeground
+static const GameObjectAction path2977_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2977_2_actions[] = {
-startShooting
+static const GameObjectAction path2977_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path2977_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2977_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2977 = {
 .x = 232, .y = 896, .numPoints = 4, .points = {
@@ -11684,8 +10150,6 @@ static const Path path2977 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2977_0_actions
 },
@@ -11693,8 +10157,6 @@ static const Path path2977 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2977_1_actions
 },
@@ -11702,8 +10164,6 @@ static const Path path2977 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2977_2_actions
 },
@@ -11711,8 +10171,6 @@ static const Path path2977 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2977_3_actions
 }
@@ -11736,17 +10194,17 @@ LevelObjectGroup r14wasp5a = {
     .numObjects = 1, .objects = r14wasp5a_objects
 };
 extern LevelObjectGroup r14wasp5b;
-static const GObjPathPointFunction path2984_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2984_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2984_1_actions[] = {
-enterForeground
+static const GameObjectAction path2984_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2984_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2984_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2984_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2984_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2984 = {
 .x = 120, .y = 888, .numPoints = 4, .points = {
@@ -11754,8 +10212,6 @@ static const Path path2984 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2984_0_actions
 },
@@ -11763,8 +10219,6 @@ static const Path path2984 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2984_1_actions
 },
@@ -11772,8 +10226,6 @@ static const Path path2984 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2984_2_actions
 },
@@ -11781,8 +10233,6 @@ static const Path path2984 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2984_3_actions
 }
@@ -11806,17 +10256,17 @@ LevelObjectGroup r14wasp5b = {
     .numObjects = 1, .objects = r14wasp5b_objects
 };
 extern LevelObjectGroup r14wasp5c;
-static const GObjPathPointFunction path2991_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path2991_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path2991_1_actions[] = {
-enterForeground
+static const GameObjectAction path2991_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path2991_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path2991_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path2991_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path2991_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path2991 = {
 .x = 232, .y = 920, .numPoints = 4, .points = {
@@ -11824,8 +10274,6 @@ static const Path path2991 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2991_0_actions
 },
@@ -11833,8 +10281,6 @@ static const Path path2991 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2991_1_actions
 },
@@ -11842,8 +10288,6 @@ static const Path path2991 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2991_2_actions
 },
@@ -11851,8 +10295,6 @@ static const Path path2991 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path2991_3_actions
 }
@@ -11876,17 +10318,17 @@ LevelObjectGroup r14wasp5c = {
     .numObjects = 1, .objects = r14wasp5c_objects
 };
 extern LevelObjectGroup r14wasp6a;
-static const GObjPathPointFunction path3002_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3002_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3002_1_actions[] = {
-enterForeground
+static const GameObjectAction path3002_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3002_2_actions[] = {
-startShooting
+static const GameObjectAction path3002_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3002_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3002_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3002 = {
 .x = 24, .y = 832, .numPoints = 4, .points = {
@@ -11894,8 +10336,6 @@ static const Path path3002 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3002_0_actions
 },
@@ -11903,8 +10343,6 @@ static const Path path3002 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3002_1_actions
 },
@@ -11912,8 +10350,6 @@ static const Path path3002 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3002_2_actions
 },
@@ -11921,24 +10357,22 @@ static const Path path3002 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3002_3_actions
 }
 }
 };
-static const GObjPathPointFunction path3003_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3003_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3003_1_actions[] = {
-enterForeground
+static const GameObjectAction path3003_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3003_2_actions[] = {
-startShooting
+static const GameObjectAction path3003_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3003_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3003_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3003 = {
 .x = 120, .y = 832, .numPoints = 4, .points = {
@@ -11946,8 +10380,6 @@ static const Path path3003 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3003_0_actions
 },
@@ -11955,8 +10387,6 @@ static const Path path3003 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3003_1_actions
 },
@@ -11964,8 +10394,6 @@ static const Path path3003 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3003_2_actions
 },
@@ -11973,8 +10401,6 @@ static const Path path3003 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3003_3_actions
 }
@@ -12007,17 +10433,17 @@ LevelObjectGroup r14wasp6a = {
     .numObjects = 2, .objects = r14wasp6a_objects
 };
 extern LevelObjectGroup r14wasp6b;
-static const GObjPathPointFunction path3015_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3015_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3015_1_actions[] = {
-enterForeground
+static const GameObjectAction path3015_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3015_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path3015_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path3015_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3015_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3015 = {
 .x = 24, .y = 848, .numPoints = 4, .points = {
@@ -12025,8 +10451,6 @@ static const Path path3015 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3015_0_actions
 },
@@ -12034,8 +10458,6 @@ static const Path path3015 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3015_1_actions
 },
@@ -12043,8 +10465,6 @@ static const Path path3015 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3015_2_actions
 },
@@ -12052,24 +10472,22 @@ static const Path path3015 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3015_3_actions
 }
 }
 };
-static const GObjPathPointFunction path3016_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3016_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3016_1_actions[] = {
-enterForeground
+static const GameObjectAction path3016_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3016_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path3016_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path3016_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3016_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3016 = {
 .x = 120, .y = 848, .numPoints = 4, .points = {
@@ -12077,8 +10495,6 @@ static const Path path3016 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3016_0_actions
 },
@@ -12086,8 +10502,6 @@ static const Path path3016 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3016_1_actions
 },
@@ -12095,8 +10509,6 @@ static const Path path3016 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3016_2_actions
 },
@@ -12104,8 +10516,6 @@ static const Path path3016 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3016_3_actions
 }
@@ -12138,17 +10548,17 @@ LevelObjectGroup r14wasp6b = {
     .numObjects = 2, .objects = r14wasp6b_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6a;
-static const GObjPathPointFunction path3028_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3028_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3028_1_actions[] = {
-enterForeground
+static const GameObjectAction path3028_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3028_2_actions[] = {
-startShooting
+static const GameObjectAction path3028_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3028_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3028_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3028 = {
 .x = 136, .y = 800, .numPoints = 4, .points = {
@@ -12156,8 +10566,6 @@ static const Path path3028 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3028_0_actions
 },
@@ -12165,8 +10573,6 @@ static const Path path3028 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3028_1_actions
 },
@@ -12174,8 +10580,6 @@ static const Path path3028 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3028_2_actions
 },
@@ -12183,24 +10587,22 @@ static const Path path3028 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3028_3_actions
 }
 }
 };
-static const GObjPathPointFunction path3029_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3029_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3029_1_actions[] = {
-enterForeground
+static const GameObjectAction path3029_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3029_2_actions[] = {
-startShooting
+static const GameObjectAction path3029_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3029_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3029_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3029 = {
 .x = 232, .y = 800, .numPoints = 4, .points = {
@@ -12208,8 +10610,6 @@ static const Path path3029 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3029_0_actions
 },
@@ -12217,8 +10617,6 @@ static const Path path3029 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3029_1_actions
 },
@@ -12226,8 +10624,6 @@ static const Path path3029 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3029_2_actions
 },
@@ -12235,8 +10631,6 @@ static const Path path3029 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3029_3_actions
 }
@@ -12269,17 +10663,17 @@ LevelObjectGroup Copy_of_r14wasp6a = {
     .numObjects = 2, .objects = Copy_of_r14wasp6a_objects
 };
 extern LevelObjectGroup Copy_of_r14wasp6b;
-static const GObjPathPointFunction path3041_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3041_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3041_1_actions[] = {
-enterForeground
+static const GameObjectAction path3041_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3041_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path3041_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path3041_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3041_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3041 = {
 .x = 136, .y = 800, .numPoints = 4, .points = {
@@ -12287,8 +10681,6 @@ static const Path path3041 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3041_0_actions
 },
@@ -12296,8 +10688,6 @@ static const Path path3041 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3041_1_actions
 },
@@ -12305,8 +10695,6 @@ static const Path path3041 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3041_2_actions
 },
@@ -12314,24 +10702,22 @@ static const Path path3041 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3041_3_actions
 }
 }
 };
-static const GObjPathPointFunction path3042_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3042_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3042_1_actions[] = {
-enterForeground
+static const GameObjectAction path3042_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3042_2_actions[] = {
-PathPoint_SlowSpeedAndShootBurstsAtTarget
+static const GameObjectAction path3042_2_actions[] = {
+{.action = PathPoint_SlowSpeedAndShootBurstsAtTarget, }
 };
-static const GObjPathPointFunction path3042_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3042_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3042 = {
 .x = 232, .y = 800, .numPoints = 4, .points = {
@@ -12339,8 +10725,6 @@ static const Path path3042 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3042_0_actions
 },
@@ -12348,8 +10732,6 @@ static const Path path3042 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3042_1_actions
 },
@@ -12357,8 +10739,6 @@ static const Path path3042 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3042_2_actions
 },
@@ -12366,8 +10746,6 @@ static const Path path3042 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3042_3_actions
 }
@@ -12400,8 +10778,8 @@ LevelObjectGroup Copy_of_r14wasp6b = {
     .numObjects = 2, .objects = Copy_of_r14wasp6b_objects
 };
 extern LevelObjectGroup r14powerup1;
-static const GObjPathPointFunction path3047_1_actions[] = {
-markDisappear
+static const GameObjectAction path3047_1_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3047 = {
 .x = 72, .y = 992, .numPoints = 2, .points = {
@@ -12409,8 +10787,6 @@ static const Path path3047 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12418,8 +10794,6 @@ static const Path path3047 = {
     .x = 0, .y = 120,
     .speedTo = 64, .distTo = 7680,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3047_1_actions
 }
@@ -12443,8 +10817,8 @@ LevelObjectGroup r14powerup1 = {
     .numObjects = 1, .objects = r14powerup1_objects
 };
 extern LevelObjectGroup r14powerup2;
-static const GObjPathPointFunction path3051_1_actions[] = {
-markDisappear
+static const GameObjectAction path3051_1_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3051 = {
 .x = 184, .y = 960, .numPoints = 2, .points = {
@@ -12452,8 +10826,6 @@ static const Path path3051 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12461,8 +10833,6 @@ static const Path path3051 = {
     .x = 0, .y = 152,
     .speedTo = 64, .distTo = 9728,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3051_1_actions
 }
@@ -12486,8 +10856,8 @@ LevelObjectGroup r14powerup2 = {
     .numObjects = 1, .objects = r14powerup2_objects
 };
 extern LevelObjectGroup r15powerup2;
-static const GObjPathPointFunction path3055_1_actions[] = {
-markDisappear
+static const GameObjectAction path3055_1_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3055 = {
 .x = 72, .y = 800, .numPoints = 2, .points = {
@@ -12495,8 +10865,6 @@ static const Path path3055 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12504,8 +10872,6 @@ static const Path path3055 = {
     .x = 0, .y = 312,
     .speedTo = 128, .distTo = 19968,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3055_1_actions
 }
@@ -12529,8 +10895,8 @@ LevelObjectGroup r15powerup2 = {
     .numObjects = 1, .objects = r15powerup2_objects
 };
 extern LevelObjectGroup r15powerup1;
-static const GObjPathPointFunction path3059_1_actions[] = {
-markDisappear
+static const GameObjectAction path3059_1_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3059 = {
 .x = 184, .y = 864, .numPoints = 2, .points = {
@@ -12538,8 +10904,6 @@ static const Path path3059 = {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12547,8 +10911,6 @@ static const Path path3059 = {
     .x = 0, .y = 248,
     .speedTo = 128, .distTo = 15872,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3059_1_actions
 }
@@ -12572,17 +10934,17 @@ LevelObjectGroup r15powerup1 = {
     .numObjects = 1, .objects = r15powerup1_objects
 };
 extern LevelObjectGroup r16acidants1;
-static const GObjPathPointFunction path3063_1_actions[] = {
-enterForeground
+static const GameObjectAction path3063_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3063_2_actions[] = {
-faceRight
+static const GameObjectAction path3063_2_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path3063_6_actions[] = {
-faceLeft
+static const GameObjectAction path3063_6_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3063_7_actions[] = {
-markDisappear
+static const GameObjectAction path3063_7_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3063 = {
 .x = 40, .y = 544, .numPoints = 8, .points = {
@@ -12590,8 +10952,6 @@ static const Path path3063 = {
     .x = 0, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12599,8 +10959,6 @@ static const Path path3063 = {
     .x = -16, .y = 24,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3063_1_actions
 },
@@ -12608,8 +10966,6 @@ static const Path path3063 = {
     .x = -16, .y = 40,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3063_2_actions
 },
@@ -12617,8 +10973,6 @@ static const Path path3063 = {
     .x = 8, .y = 64,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12626,8 +10980,6 @@ static const Path path3063 = {
     .x = 168, .y = 64,
     .speedTo = 128, .distTo = 10240,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12635,8 +10987,6 @@ static const Path path3063 = {
     .x = 192, .y = 40,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12644,8 +10994,6 @@ static const Path path3063 = {
     .x = 192, .y = 24,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3063_6_actions
 },
@@ -12653,8 +11001,6 @@ static const Path path3063 = {
     .x = 176, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = -58,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3063_7_actions
 }
@@ -12701,17 +11047,17 @@ LevelObjectGroup r16powerup = {
     .numObjects = 2, .objects = r16powerup_objects
 };
 extern LevelObjectGroup r16acidants2;
-static const GObjPathPointFunction path3074_1_actions[] = {
-enterForeground
+static const GameObjectAction path3074_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3074_3_actions[] = {
-faceLeft
+static const GameObjectAction path3074_3_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3074_7_actions[] = {
-faceRight
+static const GameObjectAction path3074_7_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path3074_8_actions[] = {
-markDisappear
+static const GameObjectAction path3074_8_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3074 = {
 .x = 184, .y = 464, .numPoints = 9, .points = {
@@ -12719,8 +11065,6 @@ static const Path path3074 = {
     .x = 0, .y = -8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12728,8 +11072,6 @@ static const Path path3074 = {
     .x = 16, .y = 8,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3074_1_actions
 },
@@ -12737,8 +11079,6 @@ static const Path path3074 = {
     .x = 32, .y = 24,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12746,8 +11086,6 @@ static const Path path3074 = {
     .x = 32, .y = 56,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3074_3_actions
 },
@@ -12755,8 +11093,6 @@ static const Path path3074 = {
     .x = 8, .y = 80,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12764,8 +11100,6 @@ static const Path path3074 = {
     .x = -120, .y = 80,
     .speedTo = 128, .distTo = 8192,
     .xVelTo = -128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12773,8 +11107,6 @@ static const Path path3074 = {
     .x = -144, .y = 56,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12782,8 +11114,6 @@ static const Path path3074 = {
     .x = -144, .y = 24,
     .speedTo = 128, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3074_7_actions
 },
@@ -12791,24 +11121,22 @@ static const Path path3074 = {
     .x = -112, .y = -8,
     .speedTo = 128, .distTo = 2896,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3074_8_actions
 }
 }
 };
-static const GObjPathPointFunction path3075_1_actions[] = {
-enterForeground
+static const GameObjectAction path3075_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3075_2_actions[] = {
-faceRight
+static const GameObjectAction path3075_2_actions[] = {
+{.action = faceRight, }
 };
-static const GObjPathPointFunction path3075_6_actions[] = {
-faceLeft
+static const GameObjectAction path3075_6_actions[] = {
+{.action = faceLeft, }
 };
-static const GObjPathPointFunction path3075_7_actions[] = {
-markDisappear
+static const GameObjectAction path3075_7_actions[] = {
+{.action = markDisappear, }
 };
 static const Path path3075 = {
 .x = 88, .y = 456, .numPoints = 8, .points = {
@@ -12816,8 +11144,6 @@ static const Path path3075 = {
     .x = -16, .y = 16,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12825,8 +11151,6 @@ static const Path path3075 = {
     .x = -32, .y = 32,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3075_1_actions
 },
@@ -12834,8 +11158,6 @@ static const Path path3075 = {
     .x = -32, .y = 48,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = 128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3075_2_actions
 },
@@ -12843,8 +11165,6 @@ static const Path path3075 = {
     .x = -8, .y = 72,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = 90,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12852,8 +11172,6 @@ static const Path path3075 = {
     .x = 88, .y = 72,
     .speedTo = 128, .distTo = 6144,
     .xVelTo = 128, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12861,8 +11179,6 @@ static const Path path3075 = {
     .x = 112, .y = 48,
     .speedTo = 128, .distTo = 2172,
     .xVelTo = 90, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -12870,8 +11186,6 @@ static const Path path3075 = {
     .x = 112, .y = 32,
     .speedTo = 128, .distTo = 1024,
     .xVelTo = 0, .yVelTo = -128,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3075_6_actions
 },
@@ -12879,8 +11193,6 @@ static const Path path3075 = {
     .x = 96, .y = 16,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = -91,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3075_7_actions
 }
@@ -12959,17 +11271,17 @@ LevelObjectGroup r17powerup = {
     .numObjects = 3, .objects = r17powerup_objects
 };
 extern LevelObjectGroup r17fly1a;
-static const GObjPathPointFunction path3092_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3092_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3092_1_actions[] = {
-enterForeground
+static const GameObjectAction path3092_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3092_2_actions[] = {
-startShooting
+static const GameObjectAction path3092_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3092_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3092_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3092 = {
 .x = 40, .y = 472, .numPoints = 4, .points = {
@@ -12977,8 +11289,6 @@ static const Path path3092 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3092_0_actions
 },
@@ -12986,8 +11296,6 @@ static const Path path3092 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3092_1_actions
 },
@@ -12995,8 +11303,6 @@ static const Path path3092 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3092_2_actions
 },
@@ -13004,8 +11310,6 @@ static const Path path3092 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3092_3_actions
 }
@@ -13029,17 +11333,17 @@ LevelObjectGroup r17fly1a = {
     .numObjects = 1, .objects = r17fly1a_objects
 };
 extern LevelObjectGroup r17fly1b;
-static const GObjPathPointFunction path3099_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3099_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3099_1_actions[] = {
-enterForeground
+static const GameObjectAction path3099_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3099_2_actions[] = {
-startShooting
+static const GameObjectAction path3099_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3099_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3099_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3099 = {
 .x = 208, .y = 472, .numPoints = 4, .points = {
@@ -13047,8 +11351,6 @@ static const Path path3099 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3099_0_actions
 },
@@ -13056,8 +11358,6 @@ static const Path path3099 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3099_1_actions
 },
@@ -13065,8 +11365,6 @@ static const Path path3099 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3099_2_actions
 },
@@ -13074,8 +11372,6 @@ static const Path path3099 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3099_3_actions
 }
@@ -13099,17 +11395,17 @@ LevelObjectGroup r17fly1b = {
     .numObjects = 1, .objects = r17fly1b_objects
 };
 extern LevelObjectGroup r17fly2a;
-static const GObjPathPointFunction path3106_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3106_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3106_1_actions[] = {
-enterForeground
+static const GameObjectAction path3106_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3106_2_actions[] = {
-startShooting
+static const GameObjectAction path3106_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3106_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3106_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3106 = {
 .x = 24, .y = 496, .numPoints = 4, .points = {
@@ -13117,8 +11413,6 @@ static const Path path3106 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3106_0_actions
 },
@@ -13126,8 +11420,6 @@ static const Path path3106 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3106_1_actions
 },
@@ -13135,8 +11427,6 @@ static const Path path3106 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3106_2_actions
 },
@@ -13144,8 +11434,6 @@ static const Path path3106 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3106_3_actions
 }
@@ -13169,17 +11457,17 @@ LevelObjectGroup r17fly2a = {
     .numObjects = 1, .objects = r17fly2a_objects
 };
 extern LevelObjectGroup r17fly2b;
-static const GObjPathPointFunction path3113_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3113_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3113_1_actions[] = {
-enterForeground
+static const GameObjectAction path3113_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3113_2_actions[] = {
-startShooting
+static const GameObjectAction path3113_2_actions[] = {
+{.action = startShooting, .count = 3, .interval = 6}
 };
-static const GObjPathPointFunction path3113_3_actions[] = {
-startWaspAttack
+static const GameObjectAction path3113_3_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3113 = {
 .x = 232, .y = 496, .numPoints = 4, .points = {
@@ -13187,8 +11475,6 @@ static const Path path3113 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3113_0_actions
 },
@@ -13196,8 +11482,6 @@ static const Path path3113 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3113_1_actions
 },
@@ -13205,8 +11489,6 @@ static const Path path3113 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 3, .shootInterval = 6, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3113_2_actions
 },
@@ -13214,8 +11496,6 @@ static const Path path3113 = {
     .x = 0, .y = -8,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3113_3_actions
 }
@@ -13239,14 +11519,14 @@ LevelObjectGroup r17fly2b = {
     .numObjects = 1, .objects = r17fly2b_objects
 };
 extern LevelObjectGroup r17wasp1;
-static const GObjPathPointFunction path3121_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3121_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3121_1_actions[] = {
-enterForeground
+static const GameObjectAction path3121_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3121_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3121_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3121 = {
 .x = 16, .y = 456, .numPoints = 3, .points = {
@@ -13254,8 +11534,6 @@ static const Path path3121 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3121_0_actions
 },
@@ -13263,8 +11541,6 @@ static const Path path3121 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3121_1_actions
 },
@@ -13272,21 +11548,19 @@ static const Path path3121 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3121_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3122_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3122_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3122_1_actions[] = {
-enterForeground
+static const GameObjectAction path3122_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3122_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3122_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3122 = {
 .x = 240, .y = 456, .numPoints = 3, .points = {
@@ -13294,8 +11568,6 @@ static const Path path3122 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3122_0_actions
 },
@@ -13303,8 +11575,6 @@ static const Path path3122 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3122_1_actions
 },
@@ -13312,8 +11582,6 @@ static const Path path3122 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3122_2_actions
 }
@@ -13346,14 +11614,14 @@ LevelObjectGroup r17wasp1 = {
     .numObjects = 2, .objects = r17wasp1_objects
 };
 extern LevelObjectGroup r17wasp3;
-static const GObjPathPointFunction path3132_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3132_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3132_1_actions[] = {
-enterForeground
+static const GameObjectAction path3132_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3132_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3132_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3132 = {
 .x = 56, .y = 408, .numPoints = 3, .points = {
@@ -13361,8 +11629,6 @@ static const Path path3132 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3132_0_actions
 },
@@ -13370,8 +11636,6 @@ static const Path path3132 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3132_1_actions
 },
@@ -13379,21 +11643,19 @@ static const Path path3132 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3132_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3133_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3133_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3133_1_actions[] = {
-enterForeground
+static const GameObjectAction path3133_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3133_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3133_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3133 = {
 .x = 200, .y = 408, .numPoints = 3, .points = {
@@ -13401,8 +11663,6 @@ static const Path path3133 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3133_0_actions
 },
@@ -13410,8 +11670,6 @@ static const Path path3133 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3133_1_actions
 },
@@ -13419,8 +11677,6 @@ static const Path path3133 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3133_2_actions
 }
@@ -13453,14 +11709,14 @@ LevelObjectGroup r17wasp3 = {
     .numObjects = 2, .objects = r17wasp3_objects
 };
 extern LevelObjectGroup r17wasp5;
-static const GObjPathPointFunction path3143_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3143_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3143_1_actions[] = {
-enterForeground
+static const GameObjectAction path3143_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3143_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3143_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3143 = {
 .x = 112, .y = 384, .numPoints = 3, .points = {
@@ -13468,8 +11724,6 @@ static const Path path3143 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3143_0_actions
 },
@@ -13477,8 +11731,6 @@ static const Path path3143 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3143_1_actions
 },
@@ -13486,21 +11738,19 @@ static const Path path3143 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3143_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3144_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3144_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3144_1_actions[] = {
-enterForeground
+static const GameObjectAction path3144_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3144_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3144_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3144 = {
 .x = 144, .y = 384, .numPoints = 3, .points = {
@@ -13508,8 +11758,6 @@ static const Path path3144 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3144_0_actions
 },
@@ -13517,8 +11765,6 @@ static const Path path3144 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3144_1_actions
 },
@@ -13526,8 +11772,6 @@ static const Path path3144 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3144_2_actions
 }
@@ -13560,14 +11804,14 @@ LevelObjectGroup r17wasp5 = {
     .numObjects = 2, .objects = r17wasp5_objects
 };
 extern LevelObjectGroup r17wasp7;
-static const GObjPathPointFunction path3154_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3154_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3154_1_actions[] = {
-enterForeground
+static const GameObjectAction path3154_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3154_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3154_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3154 = {
 .x = 80, .y = 360, .numPoints = 3, .points = {
@@ -13575,8 +11819,6 @@ static const Path path3154 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3154_0_actions
 },
@@ -13584,8 +11826,6 @@ static const Path path3154 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3154_1_actions
 },
@@ -13593,21 +11833,19 @@ static const Path path3154 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3154_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3155_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3155_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3155_1_actions[] = {
-enterForeground
+static const GameObjectAction path3155_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3155_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3155_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3155 = {
 .x = 176, .y = 360, .numPoints = 3, .points = {
@@ -13615,8 +11853,6 @@ static const Path path3155 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3155_0_actions
 },
@@ -13624,8 +11860,6 @@ static const Path path3155 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3155_1_actions
 },
@@ -13633,8 +11867,6 @@ static const Path path3155 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3155_2_actions
 }
@@ -13667,14 +11899,14 @@ LevelObjectGroup r17wasp7 = {
     .numObjects = 2, .objects = r17wasp7_objects
 };
 extern LevelObjectGroup r17wasp9;
-static const GObjPathPointFunction path3165_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3165_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3165_1_actions[] = {
-enterForeground
+static const GameObjectAction path3165_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3165_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3165_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3165 = {
 .x = 40, .y = 384, .numPoints = 3, .points = {
@@ -13682,8 +11914,6 @@ static const Path path3165 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3165_0_actions
 },
@@ -13691,8 +11921,6 @@ static const Path path3165 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3165_1_actions
 },
@@ -13700,21 +11928,19 @@ static const Path path3165 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3165_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3166_0_actions[] = {
-0 /* to be assigned */
+static const GameObjectAction path3166_0_actions[] = {
+{.action = 0 /* to be assigned */, }
 };
-static const GObjPathPointFunction path3166_1_actions[] = {
-enterForeground
+static const GameObjectAction path3166_1_actions[] = {
+{.action = enterForeground, }
 };
-static const GObjPathPointFunction path3166_2_actions[] = {
-startWaspAttack
+static const GameObjectAction path3166_2_actions[] = {
+{.action = startWaspAttack, }
 };
 static const Path path3166 = {
 .x = 216, .y = 384, .numPoints = 3, .points = {
@@ -13722,8 +11948,6 @@ static const Path path3166 = {
     .x = 0, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3166_0_actions
 },
@@ -13731,8 +11955,6 @@ static const Path path3166 = {
     .x = 0, .y = -32,
     .speedTo = 64, .distTo = 2048,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3166_1_actions
 },
@@ -13740,8 +11962,6 @@ static const Path path3166 = {
     .x = 0, .y = -40,
     .speedTo = 64, .distTo = 512,
     .xVelTo = 0, .yVelTo = -64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3166_2_actions
 }
@@ -13804,8 +12024,8 @@ LevelObjectGroup r18powerup3 = {
     .numObjects = 1, .objects = r18powerup3_objects
 };
 extern LevelObjectGroup waspboss;
-static const GObjPathPointFunction path3179_4_actions[] = {
-ChooseSweepPath_DamageFlashRed
+static const GameObjectAction path3179_4_actions[] = {
+{.action = ChooseSweepPath_DamageFlashRed, }
 };
 static const Path path3179 = {
 .x = -80, .y = 48, .numPoints = 5, .points = {
@@ -13813,8 +12033,6 @@ static const Path path3179 = {
     .x = 208, .y = 120,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13822,8 +12040,6 @@ static const Path path3179 = {
     .x = 192, .y = 136,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13831,8 +12047,6 @@ static const Path path3179 = {
     .x = 160, .y = 152,
     .speedTo = 64, .distTo = 2289,
     .xVelTo = -58, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13840,8 +12054,6 @@ static const Path path3179 = {
     .x = 128, .y = 136,
     .speedTo = 64, .distTo = 2289,
     .xVelTo = -58, .yVelTo = -29,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13849,15 +12061,13 @@ static const Path path3179 = {
     .x = 112, .y = 112,
     .speedTo = 64, .distTo = 1846,
     .xVelTo = -36, .yVelTo = -54,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3179_4_actions
 }
 }
 };
-static const GObjPathPointFunction path3180_4_actions[] = {
-ChooseSweepPath_DamageFlashRed
+static const GameObjectAction path3180_4_actions[] = {
+{.action = ChooseSweepPath_DamageFlashRed, }
 };
 static const Path path3180 = {
 .x = -32, .y = 192, .numPoints = 5, .points = {
@@ -13865,8 +12075,6 @@ static const Path path3180 = {
     .x = 160, .y = -24,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13874,8 +12082,6 @@ static const Path path3180 = {
     .x = 176, .y = -8,
     .speedTo = 64, .distTo = 1448,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13883,8 +12089,6 @@ static const Path path3180 = {
     .x = 208, .y = 8,
     .speedTo = 64, .distTo = 2289,
     .xVelTo = 57, .yVelTo = 28,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13892,8 +12096,6 @@ static const Path path3180 = {
     .x = 240, .y = -8,
     .speedTo = 64, .distTo = 2289,
     .xVelTo = 57, .yVelTo = -29,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13901,18 +12103,16 @@ static const Path path3180 = {
     .x = 256, .y = -32,
     .speedTo = 64, .distTo = 1846,
     .xVelTo = 35, .yVelTo = -54,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3180_4_actions
 }
 }
 };
-static const GObjPathPointFunction path3181_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3181_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3181_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3181_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3181 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
@@ -13920,8 +12120,6 @@ static const Path path3181 = {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3181_0_actions
 },
@@ -13929,8 +12127,6 @@ static const Path path3181 = {
     .x = 0, .y = 96,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13938,18 +12134,16 @@ static const Path path3181 = {
     .x = 0, .y = 192,
     .speedTo = 64, .distTo = 6144,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3181_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3182_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3182_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3182_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3182_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3182 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
@@ -13957,8 +12151,6 @@ static const Path path3182 = {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3182_0_actions
 },
@@ -13966,8 +12158,6 @@ static const Path path3182 = {
     .x = 0, .y = 96,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -13975,18 +12165,16 @@ static const Path path3182 = {
     .x = 0, .y = 192,
     .speedTo = 64, .distTo = 6144,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3182_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3183_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3183_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3183_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3183_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3183 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
@@ -13994,8 +12182,6 @@ static const Path path3183 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3183_0_actions
 },
@@ -14003,8 +12189,6 @@ static const Path path3183 = {
     .x = 96, .y = 0,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14012,18 +12196,16 @@ static const Path path3183 = {
     .x = 208, .y = 0,
     .speedTo = 64, .distTo = 7168,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3183_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3184_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3184_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3184_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3184_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3184 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
@@ -14031,8 +12213,6 @@ static const Path path3184 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3184_0_actions
 },
@@ -14040,8 +12220,6 @@ static const Path path3184 = {
     .x = -96, .y = 0,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14049,18 +12227,16 @@ static const Path path3184 = {
     .x = -208, .y = 0,
     .speedTo = 64, .distTo = 7168,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3184_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3201_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3201_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3201_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3201_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3201 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
@@ -14068,8 +12244,6 @@ static const Path path3201 = {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3201_0_actions
 },
@@ -14077,8 +12251,6 @@ static const Path path3201 = {
     .x = 0, .y = 96,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14086,18 +12258,16 @@ static const Path path3201 = {
     .x = 88, .y = 8,
     .speedTo = 64, .distTo = 7964,
     .xVelTo = 45, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3201_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3202_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3202_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3202_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3202_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3202 = {
 .x = 32, .y = 160, .numPoints = 3, .points = {
@@ -14105,8 +12275,6 @@ static const Path path3202 = {
     .x = 8, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3202_0_actions
 },
@@ -14114,8 +12282,6 @@ static const Path path3202 = {
     .x = 96, .y = 0,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14123,18 +12289,16 @@ static const Path path3202 = {
     .x = 8, .y = 88,
     .speedTo = 64, .distTo = 7964,
     .xVelTo = -46, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3202_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3203_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3203_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3203_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3203_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3203 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
@@ -14142,8 +12306,6 @@ static const Path path3203 = {
     .x = -8, .y = 0,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3203_0_actions
 },
@@ -14151,8 +12313,6 @@ static const Path path3203 = {
     .x = -96, .y = 0,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = -64, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14160,18 +12320,16 @@ static const Path path3203 = {
     .x = -8, .y = 88,
     .speedTo = 64, .distTo = 7964,
     .xVelTo = 45, .yVelTo = 45,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3203_2_actions
 }
 }
 };
-static const GObjPathPointFunction path3204_0_actions[] = {
-PathPoint_ShootBurstsAtAngle
+static const GameObjectAction path3204_0_actions[] = {
+{.action = PathPoint_ShootBurstsAtAngle, }
 };
-static const GObjPathPointFunction path3204_2_actions[] = {
-ChargeAndLayEggs_DamageFlashRed
+static const GameObjectAction path3204_2_actions[] = {
+{.action = ChargeAndLayEggs_DamageFlashRed, }
 };
 static const Path path3204 = {
 .x = 224, .y = 160, .numPoints = 3, .points = {
@@ -14179,8 +12337,6 @@ static const Path path3204 = {
     .x = 0, .y = 8,
     .speedTo = 64, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3204_0_actions
 },
@@ -14188,8 +12344,6 @@ static const Path path3204 = {
     .x = 0, .y = 96,
     .speedTo = 64, .distTo = 5632,
     .xVelTo = 0, .yVelTo = 64,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 0,
     .actions = 0
 },
@@ -14197,8 +12351,6 @@ static const Path path3204 = {
     .x = -88, .y = 8,
     .speedTo = 64, .distTo = 7964,
     .xVelTo = -46, .yVelTo = -46,
-    .shootCount = 0, .shootInterval = 0, .anim = 0,
-    .newUpdate = 0,
     .numActions = 1,
     .actions = path3204_2_actions
 }
@@ -14339,112 +12491,113 @@ const Trigger stage_caravan_triggers[] = {
 /*  97 */ { .group = &room8alien4, .action = spawnCharacters, .count = 0, .x = -72, .y = 2264 },
 /*  98 */ { .group = &room9powerup, .action = spawnCharacters, .count = 0, .x = -16, .y = 2184 },
 /*  99 */ { .group = &room9alienmind, .action = spawnCharacters, .count = 0, .x = -16, .y = 2016 },
-/* 100 */ { .group = &part2, .action = spawnCharacters, .count = 0, .x = -24, .y = 2008 },
-/* 101 */ { .group = &room10acidants, .action = spawnCharacters, .count = 0, .x = -32, .y = 1856 },
-/* 102 */ { .group = &room10acidants, .action = unpauseTimer, .count = 0, .x = -40, .y = 1856 },
-/* 103 */ { .group = &room10acidants2, .action = spawnCharacters, .count = 0, .x = -32, .y = 1840 },
-/* 104 */ { .group = &r11acidants1a, .action = spawnCharacters, .count = 0, .x = -48, .y = 1760 },
-/* 105 */ { .group = &r11acidants1b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1752 },
-/* 106 */ { .group = &r11acidants1c, .action = spawnCharacters, .count = 0, .x = -48, .y = 1744 },
-/* 107 */ { .group = &r11acidants1d, .action = spawnCharacters, .count = 0, .x = -56, .y = 1736 },
-/* 108 */ { .group = &r11acidants1e, .action = spawnCharacters, .count = 0, .x = -48, .y = 1728 },
-/* 109 */ { .group = &r11acidants1f, .action = spawnCharacters, .count = 0, .x = -56, .y = 1720 },
-/* 110 */ { .group = &r11acidants1g, .action = spawnCharacters, .count = 0, .x = -48, .y = 1712 },
-/* 111 */ { .group = &r11acidants1h, .action = spawnCharacters, .count = 0, .x = -56, .y = 1704 },
-/* 112 */ { .group = &r11powerup, .action = spawnCharacters, .count = 0, .x = -96, .y = 1664 },
-/* 113 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1632 },
-/* 114 */ { .group = &r11acidants3a, .action = spawnCharacters, .count = 0, .x = -48, .y = 1632 },
-/* 115 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1624 },
-/* 116 */ { .group = &r11acidants3b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1624 },
-/* 117 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1616 },
-/* 118 */ { .group = &r11acidants3c, .action = spawnCharacters, .count = 0, .x = -48, .y = 1616 },
-/* 119 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1608 },
-/* 120 */ { .group = &r11acidants3d, .action = spawnCharacters, .count = 0, .x = -56, .y = 1608 },
-/* 121 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1600 },
-/* 122 */ { .group = &r11acidants3e, .action = spawnCharacters, .count = 0, .x = -48, .y = 1600 },
-/* 123 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1592 },
-/* 124 */ { .group = &r11acidants3f, .action = spawnCharacters, .count = 0, .x = -56, .y = 1592 },
-/* 125 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1584 },
-/* 126 */ { .group = &r11acidants3g, .action = spawnCharacters, .count = 0, .x = -48, .y = 1584 },
-/* 127 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1584 },
-/* 128 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1576 },
-/* 129 */ { .group = &r11acidants3h, .action = spawnCharacters, .count = 0, .x = -56, .y = 1576 },
-/* 130 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1576 },
-/* 131 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1568 },
-/* 132 */ { .group = &r11acidants3i, .action = spawnCharacters, .count = 0, .x = -48, .y = 1568 },
-/* 133 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1568 },
-/* 134 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1560 },
-/* 135 */ { .group = &r11acidants3j, .action = spawnCharacters, .count = 0, .x = -56, .y = 1560 },
-/* 136 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1560 },
-/* 137 */ { .group = &r11acidants3k, .action = spawnCharacters, .count = 0, .x = -48, .y = 1552 },
-/* 138 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1552 },
-/* 139 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1544 },
-/* 140 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1536 },
-/* 141 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1528 },
-/* 142 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1520 },
-/* 143 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1512 },
-/* 144 */ { .group = &r12wasp1c, .action = spawnCharacters, .count = 0, .x = -40, .y = 1488 },
-/* 145 */ { .group = &r12wasp1b, .action = spawnCharacters, .count = 0, .x = -48, .y = 1472 },
-/* 146 */ { .group = &r12wasp1a, .action = spawnCharacters, .count = 0, .x = -56, .y = 1456 },
-/* 147 */ { .group = &r12wasp3a, .action = spawnCharacters, .count = 0, .x = -40, .y = 1416 },
-/* 148 */ { .group = &r12wasp3b, .action = spawnCharacters, .count = 0, .x = -32, .y = 1408 },
-/* 149 */ { .group = &r12wasp3c, .action = spawnCharacters, .count = 0, .x = -24, .y = 1400 },
-/* 150 */ { .group = &r12wasp2a, .action = spawnCharacters, .count = 0, .x = -56, .y = 1392 },
-/* 151 */ { .group = &r12wasp2b, .action = spawnCharacters, .count = 0, .x = -64, .y = 1384 },
-/* 152 */ { .group = &r12wasp2c, .action = spawnCharacters, .count = 0, .x = -72, .y = 1376 },
-/* 153 */ { .group = &r12powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 1368 },
-/* 154 */ { .group = &r12wasp4b, .action = spawnCharacters, .count = 0, .x = -16, .y = 1336 },
-/* 155 */ { .group = &r12wasp4a, .action = spawnCharacters, .count = 0, .x = -80, .y = 1336 },
-/* 156 */ { .group = &r13acidants1, .action = spawnCharacters, .count = 0, .x = -96, .y = 1328 },
-/* 157 */ { .group = &r12wasp4d, .action = spawnCharacters, .count = 0, .x = -32, .y = 1312 },
-/* 158 */ { .group = &r12wasp4c, .action = spawnCharacters, .count = 0, .x = -64, .y = 1312 },
-/* 159 */ { .group = &r13beetle1, .action = spawnCharacters, .count = 0, .x = -48, .y = 1288 },
-/* 160 */ { .group = &r13fly1, .action = spawnCharacters, .count = 0, .x = -64, .y = 1192 },
-/* 161 */ { .group = &r13fly2, .action = spawnCharacters, .count = 0, .x = -72, .y = 1184 },
-/* 162 */ { .group = &r13fly3, .action = spawnCharacters, .count = 0, .x = -48, .y = 1152 },
-/* 163 */ { .group = &r14fly4, .action = spawnCharacters, .count = 0, .x = -56, .y = 1144 },
-/* 164 */ { .group = &r14acidants1, .action = spawnCharacters, .count = 0, .x = -48, .y = 1128 },
-/* 165 */ { .group = &r14beetles, .action = spawnCharacters, .count = 0, .x = -24, .y = 1072 },
-/* 166 */ { .group = &r14acidants2, .action = spawnCharacters, .count = 0, .x = -48, .y = 1064 },
-/* 167 */ { .group = &r14wasp1a, .action = spawnCharacters, .count = 0, .x = -64, .y = 1064 },
-/* 168 */ { .group = &r14wasp1b, .action = spawnCharacters, .count = 0, .x = -72, .y = 1056 },
-/* 169 */ { .group = &r14wasp2b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1032 },
-/* 170 */ { .group = &r14acidants3, .action = spawnCharacters, .count = 0, .x = -48, .y = 1000 },
-/* 171 */ { .group = &r14powerup1, .action = spawnCharacters, .count = 0, .x = -136, .y = 1000 },
-/* 172 */ { .group = &r14wasp2a, .action = spawnCharacters, .count = 0, .x = -48, .y = 992 },
-/* 173 */ { .group = &r14wasp3a, .action = spawnCharacters, .count = 0, .x = -88, .y = 976 },
-/* 174 */ { .group = &r14powerup2, .action = spawnCharacters, .count = 0, .x = -48, .y = 968 },
-/* 175 */ { .group = &r14wasp3b, .action = spawnCharacters, .count = 0, .x = -96, .y = 936 },
-/* 176 */ { .group = &r14wasp4b, .action = spawnCharacters, .count = 0, .x = -72, .y = 880 },
-/* 177 */ { .group = &r15powerup1, .action = spawnCharacters, .count = 0, .x = -48, .y = 872 },
-/* 178 */ { .group = &r14wasp4a, .action = spawnCharacters, .count = 0, .x = -88, .y = 872 },
-/* 179 */ { .group = &r14wasp4c, .action = spawnCharacters, .count = 0, .x = -104, .y = 864 },
-/* 180 */ { .group = &r14wasp5b, .action = spawnCharacters, .count = 0, .x = -104, .y = 816 },
-/* 181 */ { .group = &r14wasp5a, .action = spawnCharacters, .count = 0, .x = -88, .y = 808 },
-/* 182 */ { .group = &r15powerup2, .action = spawnCharacters, .count = 0, .x = -136, .y = 808 },
-/* 183 */ { .group = &r14wasp5c, .action = spawnCharacters, .count = 0, .x = -72, .y = 800 },
-/* 184 */ { .group = &r14wasp6a, .action = spawnCharacters, .count = 0, .x = -120, .y = 760 },
-/* 185 */ { .group = &Copy_of_r14wasp6a, .action = spawnCharacters, .count = 0, .x = -8, .y = 728 },
-/* 186 */ { .group = &r14wasp6b, .action = spawnCharacters, .count = 0, .x = -120, .y = 728 },
-/* 187 */ { .group = &Copy_of_r14wasp6b, .action = spawnCharacters, .count = 0, .x = -8, .y = 680 },
-/* 188 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 656 },
-/* 189 */ { .group = &r16powerup, .action = spawnCharacters, .count = 0, .x = -32, .y = 608 },
-/* 190 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 592 },
-/* 191 */ { .group = &r16powerup2, .action = spawnCharacters, .count = 0, .x = -16, .y = 520 },
-/* 192 */ { .group = &r17powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 424 },
-/* 193 */ { .group = &r17fly1b, .action = spawnCharacters, .count = 0, .x = -104, .y = 408 },
-/* 194 */ { .group = &r17fly1a, .action = spawnCharacters, .count = 0, .x = -184, .y = 408 },
-/* 195 */ { .group = &r17fly2b, .action = spawnCharacters, .count = 0, .x = -120, .y = 384 },
-/* 196 */ { .group = &r17fly2a, .action = spawnCharacters, .count = 0, .x = -200, .y = 384 },
-/* 197 */ { .group = &r17wasp1, .action = spawnCharacters, .count = 0, .x = -104, .y = 344 },
-/* 198 */ { .group = &r17wasp3, .action = spawnCharacters, .count = 0, .x = -104, .y = 328 },
-/* 199 */ { .group = &r17wasp5, .action = spawnCharacters, .count = 0, .x = -104, .y = 312 },
-/* 200 */ { .group = &r17wasp7, .action = spawnCharacters, .count = 0, .x = -104, .y = 296 },
-/* 201 */ { .group = &r17wasp9, .action = spawnCharacters, .count = 0, .x = -104, .y = 280 },
-/* 202 */ { .group = &waspboss, .action = spawnCharacters, .count = 0, .x = -16, .y = 224 },
-/* 203 */ { .group = &r18powerup2, .action = spawnCharacters, .count = 0, .x = -152, .y = 208 },
-/* 204 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 },
-/* 205 */ { .group = &r18powerup3, .action = spawnCharacters, .count = 0, .x = -184, .y = 144 }
+/* 100 */ { .group = &room9alienmind, .action = stopStageScroll, .count = 0, .x = -32, .y = 2016 },
+/* 101 */ { .group = &part2, .action = spawnCharacters, .count = 0, .x = -24, .y = 2008 },
+/* 102 */ { .group = &room10acidants, .action = spawnCharacters, .count = 0, .x = -32, .y = 1856 },
+/* 103 */ { .group = &room10acidants, .action = unpauseTimer, .count = 0, .x = -40, .y = 1856 },
+/* 104 */ { .group = &room10acidants2, .action = spawnCharacters, .count = 0, .x = -32, .y = 1840 },
+/* 105 */ { .group = &r11acidants1a, .action = spawnCharacters, .count = 0, .x = -48, .y = 1760 },
+/* 106 */ { .group = &r11acidants1b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1752 },
+/* 107 */ { .group = &r11acidants1c, .action = spawnCharacters, .count = 0, .x = -48, .y = 1744 },
+/* 108 */ { .group = &r11acidants1d, .action = spawnCharacters, .count = 0, .x = -56, .y = 1736 },
+/* 109 */ { .group = &r11acidants1e, .action = spawnCharacters, .count = 0, .x = -48, .y = 1728 },
+/* 110 */ { .group = &r11acidants1f, .action = spawnCharacters, .count = 0, .x = -56, .y = 1720 },
+/* 111 */ { .group = &r11acidants1g, .action = spawnCharacters, .count = 0, .x = -48, .y = 1712 },
+/* 112 */ { .group = &r11acidants1h, .action = spawnCharacters, .count = 0, .x = -56, .y = 1704 },
+/* 113 */ { .group = &r11powerup, .action = spawnCharacters, .count = 0, .x = -96, .y = 1664 },
+/* 114 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1632 },
+/* 115 */ { .group = &r11acidants3a, .action = spawnCharacters, .count = 0, .x = -48, .y = 1632 },
+/* 116 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1624 },
+/* 117 */ { .group = &r11acidants3b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1624 },
+/* 118 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1616 },
+/* 119 */ { .group = &r11acidants3c, .action = spawnCharacters, .count = 0, .x = -48, .y = 1616 },
+/* 120 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1608 },
+/* 121 */ { .group = &r11acidants3d, .action = spawnCharacters, .count = 0, .x = -56, .y = 1608 },
+/* 122 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1600 },
+/* 123 */ { .group = &r11acidants3e, .action = spawnCharacters, .count = 0, .x = -48, .y = 1600 },
+/* 124 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1592 },
+/* 125 */ { .group = &r11acidants3f, .action = spawnCharacters, .count = 0, .x = -56, .y = 1592 },
+/* 126 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1584 },
+/* 127 */ { .group = &r11acidants3g, .action = spawnCharacters, .count = 0, .x = -48, .y = 1584 },
+/* 128 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1584 },
+/* 129 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1576 },
+/* 130 */ { .group = &r11acidants3h, .action = spawnCharacters, .count = 0, .x = -56, .y = 1576 },
+/* 131 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1576 },
+/* 132 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1568 },
+/* 133 */ { .group = &r11acidants3i, .action = spawnCharacters, .count = 0, .x = -48, .y = 1568 },
+/* 134 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1568 },
+/* 135 */ { .group = &room11acidants2a, .action = spawnCharacters, .count = 0, .x = -32, .y = 1560 },
+/* 136 */ { .group = &r11acidants3j, .action = spawnCharacters, .count = 0, .x = -56, .y = 1560 },
+/* 137 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1560 },
+/* 138 */ { .group = &r11acidants3k, .action = spawnCharacters, .count = 0, .x = -48, .y = 1552 },
+/* 139 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1552 },
+/* 140 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1544 },
+/* 141 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1536 },
+/* 142 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1528 },
+/* 143 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1520 },
+/* 144 */ { .group = &room11acidants2b, .action = spawnCharacters, .count = 0, .x = -88, .y = 1512 },
+/* 145 */ { .group = &r12wasp1c, .action = spawnCharacters, .count = 0, .x = -40, .y = 1488 },
+/* 146 */ { .group = &r12wasp1b, .action = spawnCharacters, .count = 0, .x = -48, .y = 1472 },
+/* 147 */ { .group = &r12wasp1a, .action = spawnCharacters, .count = 0, .x = -56, .y = 1456 },
+/* 148 */ { .group = &r12wasp3a, .action = spawnCharacters, .count = 0, .x = -40, .y = 1416 },
+/* 149 */ { .group = &r12wasp3b, .action = spawnCharacters, .count = 0, .x = -32, .y = 1408 },
+/* 150 */ { .group = &r12wasp3c, .action = spawnCharacters, .count = 0, .x = -24, .y = 1400 },
+/* 151 */ { .group = &r12wasp2a, .action = spawnCharacters, .count = 0, .x = -56, .y = 1392 },
+/* 152 */ { .group = &r12wasp2b, .action = spawnCharacters, .count = 0, .x = -64, .y = 1384 },
+/* 153 */ { .group = &r12wasp2c, .action = spawnCharacters, .count = 0, .x = -72, .y = 1376 },
+/* 154 */ { .group = &r12powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 1368 },
+/* 155 */ { .group = &r12wasp4b, .action = spawnCharacters, .count = 0, .x = -16, .y = 1336 },
+/* 156 */ { .group = &r12wasp4a, .action = spawnCharacters, .count = 0, .x = -80, .y = 1336 },
+/* 157 */ { .group = &r13acidants1, .action = spawnCharacters, .count = 0, .x = -96, .y = 1328 },
+/* 158 */ { .group = &r12wasp4d, .action = spawnCharacters, .count = 0, .x = -32, .y = 1312 },
+/* 159 */ { .group = &r12wasp4c, .action = spawnCharacters, .count = 0, .x = -64, .y = 1312 },
+/* 160 */ { .group = &r13beetle1, .action = spawnCharacters, .count = 0, .x = -48, .y = 1288 },
+/* 161 */ { .group = &r13fly1, .action = spawnCharacters, .count = 0, .x = -64, .y = 1192 },
+/* 162 */ { .group = &r13fly2, .action = spawnCharacters, .count = 0, .x = -72, .y = 1184 },
+/* 163 */ { .group = &r13fly3, .action = spawnCharacters, .count = 0, .x = -48, .y = 1152 },
+/* 164 */ { .group = &r14fly4, .action = spawnCharacters, .count = 0, .x = -56, .y = 1144 },
+/* 165 */ { .group = &r14acidants1, .action = spawnCharacters, .count = 0, .x = -48, .y = 1128 },
+/* 166 */ { .group = &r14beetles, .action = spawnCharacters, .count = 0, .x = -24, .y = 1072 },
+/* 167 */ { .group = &r14acidants2, .action = spawnCharacters, .count = 0, .x = -48, .y = 1064 },
+/* 168 */ { .group = &r14wasp1a, .action = spawnCharacters, .count = 0, .x = -64, .y = 1064 },
+/* 169 */ { .group = &r14wasp1b, .action = spawnCharacters, .count = 0, .x = -72, .y = 1056 },
+/* 170 */ { .group = &r14wasp2b, .action = spawnCharacters, .count = 0, .x = -56, .y = 1032 },
+/* 171 */ { .group = &r14acidants3, .action = spawnCharacters, .count = 0, .x = -48, .y = 1000 },
+/* 172 */ { .group = &r14powerup1, .action = spawnCharacters, .count = 0, .x = -136, .y = 1000 },
+/* 173 */ { .group = &r14wasp2a, .action = spawnCharacters, .count = 0, .x = -48, .y = 992 },
+/* 174 */ { .group = &r14wasp3a, .action = spawnCharacters, .count = 0, .x = -88, .y = 976 },
+/* 175 */ { .group = &r14powerup2, .action = spawnCharacters, .count = 0, .x = -48, .y = 968 },
+/* 176 */ { .group = &r14wasp3b, .action = spawnCharacters, .count = 0, .x = -96, .y = 936 },
+/* 177 */ { .group = &r14wasp4b, .action = spawnCharacters, .count = 0, .x = -72, .y = 880 },
+/* 178 */ { .group = &r15powerup1, .action = spawnCharacters, .count = 0, .x = -48, .y = 872 },
+/* 179 */ { .group = &r14wasp4a, .action = spawnCharacters, .count = 0, .x = -88, .y = 872 },
+/* 180 */ { .group = &r14wasp4c, .action = spawnCharacters, .count = 0, .x = -104, .y = 864 },
+/* 181 */ { .group = &r14wasp5b, .action = spawnCharacters, .count = 0, .x = -104, .y = 816 },
+/* 182 */ { .group = &r14wasp5a, .action = spawnCharacters, .count = 0, .x = -88, .y = 808 },
+/* 183 */ { .group = &r15powerup2, .action = spawnCharacters, .count = 0, .x = -136, .y = 808 },
+/* 184 */ { .group = &r14wasp5c, .action = spawnCharacters, .count = 0, .x = -72, .y = 800 },
+/* 185 */ { .group = &r14wasp6a, .action = spawnCharacters, .count = 0, .x = -120, .y = 760 },
+/* 186 */ { .group = &Copy_of_r14wasp6a, .action = spawnCharacters, .count = 0, .x = -8, .y = 728 },
+/* 187 */ { .group = &r14wasp6b, .action = spawnCharacters, .count = 0, .x = -120, .y = 728 },
+/* 188 */ { .group = &Copy_of_r14wasp6b, .action = spawnCharacters, .count = 0, .x = -8, .y = 680 },
+/* 189 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 656 },
+/* 190 */ { .group = &r16powerup, .action = spawnCharacters, .count = 0, .x = -32, .y = 608 },
+/* 191 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 592 },
+/* 192 */ { .group = &r16powerup2, .action = spawnCharacters, .count = 0, .x = -16, .y = 520 },
+/* 193 */ { .group = &r17powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 424 },
+/* 194 */ { .group = &r17fly1b, .action = spawnCharacters, .count = 0, .x = -104, .y = 408 },
+/* 195 */ { .group = &r17fly1a, .action = spawnCharacters, .count = 0, .x = -184, .y = 408 },
+/* 196 */ { .group = &r17fly2b, .action = spawnCharacters, .count = 0, .x = -120, .y = 384 },
+/* 197 */ { .group = &r17fly2a, .action = spawnCharacters, .count = 0, .x = -200, .y = 384 },
+/* 198 */ { .group = &r17wasp1, .action = spawnCharacters, .count = 0, .x = -104, .y = 344 },
+/* 199 */ { .group = &r17wasp3, .action = spawnCharacters, .count = 0, .x = -104, .y = 328 },
+/* 200 */ { .group = &r17wasp5, .action = spawnCharacters, .count = 0, .x = -104, .y = 312 },
+/* 201 */ { .group = &r17wasp7, .action = spawnCharacters, .count = 0, .x = -104, .y = 296 },
+/* 202 */ { .group = &r17wasp9, .action = spawnCharacters, .count = 0, .x = -104, .y = 280 },
+/* 203 */ { .group = &waspboss, .action = spawnCharacters, .count = 0, .x = -16, .y = 224 },
+/* 204 */ { .group = &r18powerup2, .action = spawnCharacters, .count = 0, .x = -152, .y = 208 },
+/* 205 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 },
+/* 206 */ { .group = &r18powerup3, .action = spawnCharacters, .count = 0, .x = -184, .y = 144 }
 };
 LevelObjectGroup *stage_caravan_groups[] = {
     &room1ants1,

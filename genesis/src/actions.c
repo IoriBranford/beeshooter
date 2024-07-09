@@ -47,91 +47,95 @@ void stopStageScroll(const Trigger *trigger)
     LEVEL_setVelY(0);
 }
 
-void setUpdate(GameObject *self, const PathPoint *pathPoint) {
-    if (pathPoint->newUpdate)
-        self->update = (ObjectCallback*)pathPoint->newUpdate;
+void setInvul(GameObject *self, const GameObjectAction *action) {
+    self->invulTimer = action->invulTime;
 }
 
-void setSpriteVisible(GameObject *self, const PathPoint *pathPoint)
+void setUpdate(GameObject *self, const GameObjectAction *action) {
+    if (action->update)
+        self->update = (ObjectCallback*)action->update;
+}
+
+void setSpriteVisible(GameObject *self, const GameObjectAction *action)
 {
     if (!self->sprite)
         GOBJ_initSprite(self);
     SPR_setVisibility(self->sprite, VISIBLE);
 }
 
-void setSpriteHidden(GameObject *self, const PathPoint *pathPoint)
+void setSpriteHidden(GameObject *self, const GameObjectAction *action)
 {
     if (!self->sprite)
         GOBJ_initSprite(self);
     SPR_setVisibility(self->sprite, HIDDEN);
 }
 
-void setSpriteAnim(GameObject *self, const PathPoint *pathPoint) {
+void setSpriteAnim(GameObject *self, const GameObjectAction *action) {
     if (!self->sprite)
         GOBJ_initSprite(self);
-    SPR_setAnim(self->sprite, pathPoint->anim);
+    SPR_setAnim(self->sprite, action->anim);
 }
 
-void faceRight(GameObject *self, const PathPoint *pathPoint)
+void faceRight(GameObject *self, const GameObjectAction *action)
 {
     if (self->sprite)
         SPR_setHFlip(self->sprite, false);
 }
 
-void startShooting(GameObject *self, const PathPoint *pathPoint) {
-    GOBJ_startShooting(self, pathPoint->shootCount, pathPoint->shootInterval);
+void startShooting(GameObject *self, const GameObjectAction *action) {
+    GOBJ_startShooting(self, action->count, action->interval);
 }
 
-void PathPoint_SetSpeed(GameObject *self, const PathPoint *pathPoint)
+void PathPoint_SetSpeed(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void climbUpToFloor(GameObject *self, const PathPoint *pathPoint)
+void climbUpToFloor(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void enterForeground(GameObject *self, const PathPoint *pathPoint)
+void enterForeground(GameObject *self, const GameObjectAction *action)
 {
     GOBJ_setInForeground(self, true);
 }
 
-void startWaspAttack(GameObject *self, const PathPoint *pathPoint)
+void startWaspAttack(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void markDisappear(GameObject *self, const PathPoint *pathPoint)
+void markDisappear(GameObject *self, const GameObjectAction *action)
 {
     GAME_releaseObject(self);
 }
 
-void BeetleShoot(GameObject *self, const PathPoint *pathPoint)
+void BeetleShoot(GameObject *self, const GameObjectAction *action)
 {
 }
-void PathPoint_Rotate(GameObject *self, const PathPoint *pathPoint)
+void PathPoint_Rotate(GameObject *self, const GameObjectAction *action)
 {
 }
-void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const PathPoint *pathPoint)
+void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void enterBackground(GameObject *self, const PathPoint *pathPoint)
+void enterBackground(GameObject *self, const GameObjectAction *action)
 {
     GOBJ_setInForeground(self, false);
 }
 
-void faceLeft(GameObject *self, const PathPoint *pathPoint)
+void faceLeft(GameObject *self, const GameObjectAction *action)
 {
     SPR_setHFlip(self->sprite, true);
 }
 
-void ChooseSweepPath_DamageFlashRed(GameObject *self, const PathPoint *pathPoint)
+void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void PathPoint_ShootBurstsAtAngle(GameObject *self, const PathPoint *pathPoint)
+void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action)
 {
 }
 
-void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const PathPoint *pathPoint)
+void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action)
 {
 }

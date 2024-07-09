@@ -9,6 +9,9 @@
 typedef struct GameObject GameObject;
 typedef void (*GObjFunction)(GameObject *self);
 
+typedef struct GameObjectAction GameObjectAction;
+typedef void (*GObjActionFunction)(GameObject *self, const GameObjectAction *action);
+
 typedef struct GameObjectDefinition GameObjectDefinition;
 typedef struct Trigger Trigger;
 typedef struct Path Path;
@@ -57,6 +60,24 @@ typedef struct GameObject {
     u8 shotsLeft;
     fix16 shootDirX, shootDirY;
 } GameObject;
+
+struct GameObjectAction {
+    GObjActionFunction action;
+    union {
+        struct {
+            u8 count, interval;
+        };
+        struct {
+            u16 anim;
+        };
+        struct {
+            u8 invulTime;
+        };
+        struct {
+            GObjFunction update;
+        };
+    };
+};
 
 enum {
     DIR_RIGHT,

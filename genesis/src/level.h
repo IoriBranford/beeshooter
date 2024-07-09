@@ -14,7 +14,6 @@ typedef struct GameObjectDefinition GameObjectDefinition;
 typedef struct LevelObject LevelObject;
 typedef struct LevelObjectGroup LevelObjectGroup;
 typedef void (*TriggerFunction)(const Trigger *self);
-typedef void (*GObjPathPointFunction)(GameObject *self, const PathPoint *pathPoint);
 
 struct Trigger {
     s16 x, y;
@@ -26,11 +25,8 @@ struct PathPoint {
     s16 x, y;
     fix16 xVelTo, yVelTo;
     fix16 speedTo, distTo;
-    u8 shootInterval, shootCount;
-    u16 anim;
-    GObjFunction newUpdate;
     u32 numActions;
-    const GObjPathPointFunction *actions;
+    const GameObjectAction *actions;
 };
 struct Path {
     s16 x, y;
