@@ -56,6 +56,18 @@ void setUpdate(GameObject *self, const GameObjectAction *action) {
         self->update = (ObjectCallback*)action->update;
 }
 
+void setSpriteHFlip(GameObject *self, const GameObjectAction *action) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setHFlip(self->sprite, action->flip);
+}
+
+void setSpriteVFlip(GameObject *self, const GameObjectAction *action) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setVFlip(self->sprite, action->flip);
+}
+
 void setSpriteVisible(GameObject *self, const GameObjectAction *action)
 {
     if (!self->sprite)

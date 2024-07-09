@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="SetSpriteVFlip" type="PathPoint">
+  <properties>
+   <property name="action" value="setSpriteVFlip"/>
+   <property name="flip" type="bool" value="false"/>
+  </properties>
+  <point/>
+ </object>
+</template>

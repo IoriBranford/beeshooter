@@ -72,6 +72,9 @@ struct GameObjectAction {
             u16 anim;
         };
         struct {
+            bool flip;
+        };
+        struct {
             u8 invulTime;
         };
         struct {
