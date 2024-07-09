@@ -15,7 +15,9 @@ void ENEMY_shootAtPlayer(GameObject *self) {
 }
 
 void ENEMY_onDefeatShootUpward(GameObject *self) {
-    BULLET_shootAtVector(self->centerX, self->centerY, 0, FIX16(-1), self->definition->bulletDef);
+    self->shootDirX = 0;
+    self->shootDirY = FIX16(-8);
+    ENEMY_shootAtDir(self);
     GOBJ_defaultDefeatAction(self);
 }
 
