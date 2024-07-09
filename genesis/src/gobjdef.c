@@ -241,7 +241,20 @@ GameObjectDefinition defWasp = {
 GameObjectDefinition defReinforcedHoneyPot;
 GameObjectDefinition defAntHole;
 GameObjectDefinition defBeetle;
-GameObjectDefinition defWaspShooter;
+GameObjectDefinition defWaspShooter = {
+    .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
+    .health = 2, .speed = FIX16(1),
+    .damage = 1,
+    .defeatPoints = 750,
+    .spriteDef = &sprWasp,
+    .spriteDepth = 10,
+    .pathParent = PATHPARENT_TRIGGER,
+    .palette = &palWaspShooterAndHoney,
+    .bodyW = FIX16(12), .bodyH = FIX16(10),
+    .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
+    .update = GOBJ_updatePathWalker,
+};
 GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
