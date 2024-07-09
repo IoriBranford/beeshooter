@@ -192,7 +192,7 @@ GameObjectDefinition defAlienMind = {
     .palette = &palAlien,
     .bodyW = FIX16(12), .bodyH = FIX16(12),
     .update = GOBJ_updatePathWalker,
-    //.onDefeat = ENEMY_onDefeatAlienMind
+    .onDefeat = MIDBOSS_onDefeat
 };
 GameObjectDefinition defAcidAnt;
 GameObjectDefinition defWasp;
