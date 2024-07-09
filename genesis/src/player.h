@@ -25,6 +25,7 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state);
 void PLAYER_joyUpdate(PlayerObject *self, u16 state);
 
 void PLAYER_powerUp(PlayerObject *self);
+void PLAYER_giveInvul(PlayerObject *self, u8 invul);
 
 void PLAYER_takeDamage(PlayerObject *self, u16 damage);
 
