@@ -54,7 +54,7 @@ void loadPart2(const Trigger *trigger)
 }
 
 void setInvul(GameObject *self, const GameObjectAction *action) {
-    self->invulTimer = action->invulTime;
+    self->invulTimer = min(255, action->time);
 }
 
 void setUpdate(GameObject *self, const GameObjectAction *action) {

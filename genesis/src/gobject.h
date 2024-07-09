@@ -75,7 +75,7 @@ struct GameObjectAction {
             bool flip;
         };
         struct {
-            u8 invulTime;
+            u16 time;
         };
         struct {
             GObjFunction update;
