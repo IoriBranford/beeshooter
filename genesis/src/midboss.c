@@ -1,6 +1,8 @@
 #include "level.h"
 #include "gobject.h"
+#include "player.h"
 #include "gobjdef.h"
+#include <genesis.h>
 
 extern const LevelObject lobj4019, lobj4020, lobj4021, lobj4022, lobj4023, lobj4024;
 const LevelObject
@@ -54,6 +56,43 @@ void MIDBOSS_updateAlienMind(GameObject *self) {
     }
     if (reinforceTimer >= 180)
         reinforceTimer = 0;
+}
+
+void MIDBOSS_updateDefeat(GameObject *self) {
+    fix16 width = self->bodyX1 - self->bodyX0;
+    fix16 height= self->bodyY1 - self->bodyY0;
+    if (reinforceTimer < 120) {
+        if (reinforceTimer % 6 == 0) {
+            SND_playDef(&sndBugKill1);
+            GOBJ_createFromDef(&defBloodSmall, self->bodyX0 + (random() % width), self->bodyY0 + (random() % height));
+        }
+    } else {
+        SND_playDef(&sndBugKill2);
+        GOBJ_createFromDef(&defBloodSmall, self->centerX, self->centerY);
+        GAME_releaseObject(self);
+        LEVEL_setVelY(FIX32(-.75));
+    }
+    self->centerY += self->velY;
+    GOBJ_updateBody(self);
+    reinforceTimer = reinforceTimer + 1;
+}
+
+void MIDBOSS_onDefeat(GameObject *self) {
+    GAME_addTime(60*60);
+    GAME_setTimerPaused(true);
+    GAME_defeatTeam(TEAM_ENEMY);
+    GAME_defeatTeam(TEAM_ENEMYSHOT);
+    self->velY = FIX16(.125);
+    const GameObjectDefinition *def = self->definition;
+    if (def) {
+        GAME_scorePoints(def->defeatPoints);
+    }
+    self->update = (ObjectCallback*)MIDBOSS_updateDefeat;
+    reinforceTimer = 0;
+    XGM_stopPlayPCM(sndBugKill1.channel);
+    PlayerObject *player = GAME_livePlayer();
+    if (player)
+        PLAYER_giveInvul(player, 240);
 }
 
 void startAlienMindFight(GameObject *self, GameObjectAction *action) {
