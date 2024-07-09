@@ -132,6 +132,7 @@ void ENEMY_updateAlienStartShooting(GameObject *self) {
                     self->shootDirX = player->centerX - self->centerX;
                     self->shootDirY = player->centerY - self->centerY;
                     GOBJ_startShooting(self, 5, 1);
+                    SPR_setHFlip(self->sprite, self->shootDirX < 0);
                 }
             }
         } else {
