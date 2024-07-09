@@ -149,3 +149,24 @@ void ENEMY_updateAlienStandAndShoot(GameObject *self) {
     GOBJ_updateShooting(self);
     GOBJ_updateIdleOnStage(self);
 }
+
+void ENEMY_chargeAtPlayer(GameObject *self) {
+    const fix16 CHARGESPEED = FIX16(5);
+    fix16 velX = 0;
+    fix16 velY = CHARGESPEED;
+    PlayerObject *player = GAME_livePlayer();
+    if (player) {
+        velX = player->centerX - self->centerX;
+        velY = player->centerY - self->centerY;
+        if (velX || velY) {
+            fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(velX), fix16ToInt(velY)));
+            velX = fix16Mul(fix16Div(velX, dist), CHARGESPEED);
+            velY = fix16Mul(fix16Div(velY, dist), CHARGESPEED);
+        }
+        if (!velX && !velY)
+            velY = CHARGESPEED;
+    }
+    self->velX = velX;
+    self->velY = velY;
+    self->update = (ObjectCallback*)BULLET_update;
+}

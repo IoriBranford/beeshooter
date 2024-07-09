@@ -119,6 +119,7 @@ void enterForeground(GameObject *self, const GameObjectAction *action)
 
 void startWaspAttack(GameObject *self, const GameObjectAction *action)
 {
+    ENEMY_chargeAtPlayer(self);
 }
 
 void markDisappear(GameObject *self, const GameObjectAction *action)

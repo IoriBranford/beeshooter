@@ -14,4 +14,6 @@ void MIDBOSS_onDefeat(GameObject *self);
 
 void ENEMY_onDefeatShootUpward(GameObject *self);
 
+void ENEMY_chargeAtPlayer(GameObject *self);
+
 #endif
