@@ -252,6 +252,13 @@ GameObjectDefinition *part1defs[8] = {
     &defAlienMind
 };
 
+GameObjectDefinition *part2defs[2] = {
+    &defAcidAnt,
+    &defAcidAntBullet,
+};
+
+static u16 levelObjectTileStart;
+
 u16 GOBJDEF_loadSpriteFrames(u16 tileIndex, int numDefs, GameObjectDefinition **defs) {
     u16 numTiles;
     GameObjectDefinition **def = defs;
@@ -288,6 +295,7 @@ void GOBJDEF_freeCommonFrames() {
 }
 
 u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
+    levelObjectTileStart = tileIndex;
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
     defAngleTester.aniFrameTiles = defFlyBullet.aniFrameTiles;
     defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
@@ -295,9 +303,21 @@ u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
     return tileIndex;
 }
 
-void GOBJDEF_freePart1EnemyFrames() {
+u16 GOBJDEF_freePart1EnemyFrames() {
     defAngleTester.aniFrameTiles = NULL;
     defAlienPillager.aniFrameTiles = NULL;
     defAlienGunnerBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part1defs) / sizeof(GameObjectDefinition*), part1defs);
+    return levelObjectTileStart;
+}
+
+u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex) {
+    levelObjectTileStart = tileIndex;
+    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
+    return tileIndex;
+}
+
+u16 GOBJDEF_freePart2EnemyFrames() {
+    GOBJDEF_freeSpriteFrames(sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
+    return levelObjectTileStart;
 }

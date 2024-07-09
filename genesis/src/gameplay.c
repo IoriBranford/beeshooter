@@ -37,6 +37,7 @@ static u8 result;
 static bool paused, running, timePaused;
 static PlayerObject player;
 static Pool *gobjPool;
+static u16 tileIndex;
 
 #define TEAM_LIMIT 64
 static u8 teamSizes[NUM_TEAMS];
@@ -148,6 +149,11 @@ void GAME_releaseObject(GameObject *gobj) {
 #endif
 }
 
+void GAME_loadPart2Sprites() {
+    tileIndex = GOBJDEF_freePart1EnemyFrames();
+    tileIndex = GOBJDEF_loadPart2EnemyFrames(tileIndex);
+}
+
 void GAME_end(GameResult r) {
     result = r;
     UI_updateResult(r);
@@ -220,7 +226,7 @@ int gameplay() {
     VDP_setTextPriority(1);
     VDP_setTextPalette(PLAYERPAL);
 
-    u16 tileIndex = TILE_USER_INDEX;
+    tileIndex = TILE_USER_INDEX;
 
     SPR_reset();
     tileIndex = PLAYER_loadSpriteFrames(tileIndex);

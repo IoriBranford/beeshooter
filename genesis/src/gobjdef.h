@@ -32,7 +32,9 @@ struct GameObjectDefinition {
 u16 GOBJDEF_loadCommonFrames(u16 tileIndex);
 void GOBJDEF_freeCommonFrames();
 u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex);
-void GOBJDEF_freePart1EnemyFrames();
+u16 GOBJDEF_freePart1EnemyFrames();
+u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex);
+u16 GOBJDEF_freePart2EnemyFrames();
 
 extern GameObjectDefinition
     defBloodSmall,
@@ -46,6 +48,7 @@ extern GameObjectDefinition
     defAntBigHead,
     defAntBigButt,
     defAlienGunner,
-    defAlienPillager;
+    defAlienPillager,
+    defAcidAntBullet;
 
 #endif

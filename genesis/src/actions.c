@@ -1,5 +1,6 @@
 #include "level.h"
 #include "gobject.h"
+#include "gobjdef.h"
 #include "gameplay.h"
 
 #include <genesis.h>
@@ -45,6 +46,11 @@ void spawnNextCharacters(const Trigger *trigger)
 void stopStageScroll(const Trigger *trigger)
 {
     LEVEL_setVelY(0);
+}
+
+void loadPart2(const Trigger *trigger)
+{
+    GAME_loadPart2Sprites();
 }
 
 void setInvul(GameObject *self, const GameObjectAction *action) {
