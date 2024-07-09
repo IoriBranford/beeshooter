@@ -88,6 +88,7 @@ enum {
 
 bool GOBJ_isSpriteOnScreen(GameObject *self);
 bool GOBJ_isSpriteOffSideOrBottom(GameObject *self);
+bool GOBJ_isAllocated(GameObject *self);
 
 Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
