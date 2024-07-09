@@ -121,6 +121,34 @@ void GAME_putObjectInTeam(GameObject *gobj, Team team) {
     }
 }
 
+void GAME_addObjectToTeams(GameObject *gobj, u16 teams) {
+    for (u16 team = 0; team < NUM_TEAMS; ++team) {
+        if (((1<<team) & teams)) {
+            if (teamSizes[team] < TEAM_LIMIT) {
+                teamObjects[team][teamSizes[team]] = gobj;
+                teamSizes[team]++;
+                gobj->team = team;
+            }
+        }
+    }
+}
+
+void GAME_removeObjectFromAllTeams(GameObject *gobj) {
+    for (u16 team = 0; team < NUM_TEAMS; ++team) {
+        GameObject **objects = teamObjects[team];
+        u8 n = teamSizes[team];
+        for (int i = 0; i < n; ++i) {
+            if (objects[i] == gobj) {
+                objects[i] = objects[--n];
+                objects[n] = NULL;
+                teamSizes[team] = n;
+                gobj->team = TEAM_NONE;
+                break;
+            }
+        }
+    }
+}
+
 void GAME_defeatTeam(Team team) {
     for (int i = teamSizes[team] - 1; i >= 0; --i) {
         GOBJ_defeat(teamObjects[team][i]);
