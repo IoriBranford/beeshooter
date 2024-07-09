@@ -26,4 +26,6 @@ SPRITE sprFly "enemy/Fly.png" 4 4 NONE 3
 SPRITE sprAlien "enemy/Aliens.png" 3 2 NONE 6
 SPRITE sprAlienMind "enemy/AlienMind.png" 4 6 NONE 6
 
-PALETTE palAnt2 "enemy/AcidAnt.png"
+PALETTE palAcid "enemy/AcidBullet.png"
+
+SPRITE sprAcidBullet "enemy/AcidBullet.png" 3 3
