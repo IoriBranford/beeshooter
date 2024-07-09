@@ -80,8 +80,10 @@ tiled.registerMapFormat("Honey Guardian C level", {
                                 let anim = pathPoint.resolvedProperty('anim')
                                 let update = pathPoint.resolvedProperty('update')
                                 let flip = pathPoint.resolvedProperty('flip')
+                                let time = pathPoint.resolvedProperty('time')
                                 params = (update && `.update = ${update}`)
                                     || (anim && `.anim = ${anim}`)
+                                    || (time && `.time = ${time}`)
                                     || (shootCount && shootInterval && `.count = ${shootCount}, .interval = ${shootInterval}`)
                                     || (flip != null && `.flip = ${flip}`)
                                     || ''
