@@ -59,6 +59,7 @@ typedef struct GameObject {
     u8 shootInterval;
     u8 shotsLeft;
     fix16 shootDirX, shootDirY;
+    GObjFunction shootFunction;
 } GameObject;
 
 struct GameObjectAction {

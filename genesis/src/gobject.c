@@ -272,7 +272,9 @@ void GOBJ_startShooting(GameObject *self, u8 count, u8 interval) {
 
 void GOBJ_updateShooting(GameObject *self) {
     if (self->shootTimer && !--self->shootTimer) {
-        const GObjFunction shootFunction = self->definition ? self->definition->shootFunction : NULL;
+        const GObjFunction shootFunction =
+            self->shootFunction ? self->shootFunction :
+            self->definition ? self->definition->shootFunction : NULL;
         if (shootFunction) {
             (*shootFunction)(self);
         }
