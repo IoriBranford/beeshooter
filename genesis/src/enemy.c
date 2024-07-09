@@ -14,17 +14,17 @@ void ENEMY_shootAtPlayer(GameObject *self) {
     }
 }
 
+void ENEMY_shootAtDir(GameObject *self) {
+    const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
+    if (bulletDef)
+        BULLET_shootAtVector(self->centerX, self->centerY, self->shootDirX, self->shootDirY, bulletDef);
+}
+
 void ENEMY_onDefeatShootUpward(GameObject *self) {
     self->shootDirX = 0;
     self->shootDirY = FIX16(-8);
     ENEMY_shootAtDir(self);
     GOBJ_defaultDefeatAction(self);
-}
-
-void ENEMY_shootAtDir(GameObject *self) {
-    const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
-    if (bulletDef)
-        BULLET_shootAtVector(self->centerX, self->centerY, self->shootDirX, self->shootDirY, bulletDef);
 }
 
 void ENEMY_onDefeatBigAnt(GameObject *self) {
