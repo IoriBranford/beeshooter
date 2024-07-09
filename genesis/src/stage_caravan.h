@@ -3,10 +3,10 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (207)
+#define stage_caravan_numTriggers (190)
 extern const Trigger stage_caravan_triggers[];
 
-#define stage_caravan_numGroups (119)
+#define stage_caravan_numGroups (102)
 extern LevelObjectGroup *stage_caravan_groups[];
 
 extern GameObjectDefinition defAnt;
@@ -47,7 +47,6 @@ void setSpriteHFlip(GameObject *self, const GameObjectAction *action);
 void startWaspAttack(GameObject *self, const GameObjectAction *action);
 void BeetleShoot(GameObject *self, const GameObjectAction *action);
 void PathPoint_Rotate(GameObject *self, const GameObjectAction *action);
-void PathPoint_SlowSpeedAndShootBurstsAtTarget(GameObject *self, const GameObjectAction *action);
 void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *action);
 void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action);
 void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action);
