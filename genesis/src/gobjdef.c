@@ -40,6 +40,14 @@ GameObjectDefinition defBloodSmall = {
     .init = GOBJ_initSprite,
     .update = GOBJ_updateSpark
 };
+GameObjectDefinition defAcidBloodSmall = {
+    .team = TEAM_NONE,
+    .spriteDef = &sprBloodSmall,
+    .spriteDepth = -50,
+    .palette = &palAcid,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defAnt = {
     .team = TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
@@ -194,7 +202,30 @@ GameObjectDefinition defAlienMind = {
     .update = GOBJ_updatePathWalker,
     .onDefeat = MIDBOSS_onDefeat
 };
-GameObjectDefinition defAcidAnt;
+GameObjectDefinition defAcidAntBullet = {
+    .team = TEAM_ENEMYSHOT,
+    .health = 1, .damage = 1,
+    .speed = FIX16(3),
+    .spriteDef = &sprAcidBullet,
+    .spriteDepth = -20,
+    .palette = &palAcid,
+    .bodyW = FIX16(2), .bodyH = FIX16(2),
+    .update = BULLET_updateFalling,
+};
+GameObjectDefinition defAcidAnt = {
+    .team = TEAM_ENEMY,
+    .health = 1, .speed = FIX16(2),
+    .defeatPoints = 250,
+    .spriteDef = &sprAnt,
+    .spriteDepth = -1,
+    .palette = &palAcid,
+    .bodyW = FIX16(8), .bodyH = FIX16(6),
+    .defeatSoundDef = &sndBugKill1,
+    .corpseDef = &defAcidBloodSmall,
+    .bulletDef = &defAcidAntBullet,
+    .update = GOBJ_updatePathWalker,
+    .onDefeat = ENEMY_onDefeatShootUpward
+};;
 GameObjectDefinition defWasp;
 GameObjectDefinition defReinforcedHoneyPot;
 GameObjectDefinition defAntHole;
