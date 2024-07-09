@@ -10,6 +10,4 @@ void ENEMY_alienGunnerShoot(GameObject *self);
 void ENEMY_onDefeatBigAnt(GameObject *self);
 void ENEMY_updateAlienStandAndShoot(GameObject *self);
 
-void ENEMY_updateAlienMind(GameObject *self);
-
 #endif

@@ -146,7 +146,3 @@ void ENEMY_updateAlienStandAndShoot(GameObject *self) {
     GOBJ_updateShooting(self);
     GOBJ_updateIdleOnStage(self);
 }
-
-void ENEMY_updateAlienMind(GameObject *self) {
-    
-}
