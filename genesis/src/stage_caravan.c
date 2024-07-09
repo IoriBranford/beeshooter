@@ -190,6 +190,7 @@ static const Path *room1ants1_paths[] = {
 const LevelObject lobj2184 = {
     .definition = &defAnt,
     .x = 296, .y = 4016,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2190,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -197,6 +198,7 @@ const LevelObject lobj2184 = {
 const LevelObject lobj3858 = {
     .definition = &defAnt,
     .x = 288, .y = 4016,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2189,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -204,6 +206,7 @@ const LevelObject lobj3858 = {
 const LevelObject lobj3857 = {
     .definition = &defAnt,
     .x = 272, .y = 4016,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2187,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -211,6 +214,7 @@ const LevelObject lobj3857 = {
 const LevelObject lobj2181 = {
     .definition = &defAnt,
     .x = 264, .y = 4016,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2186,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -218,6 +222,7 @@ const LevelObject lobj2181 = {
 const LevelObject lobj2183 = {
     .definition = &defAnt,
     .x = 280, .y = 4016,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants1, .path = &path2188,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -397,6 +402,7 @@ static const Path *room1ants2_paths[] = {
 const LevelObject lobj3855 = {
     .definition = &defAnt,
     .x = -32, .y = 3992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2202,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -404,6 +410,7 @@ const LevelObject lobj3855 = {
 const LevelObject lobj2196 = {
     .definition = &defAnt,
     .x = -8, .y = 3992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2199,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -411,6 +418,7 @@ const LevelObject lobj2196 = {
 const LevelObject lobj2195 = {
     .definition = &defAnt,
     .x = -40, .y = 3992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2203,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -418,6 +426,7 @@ const LevelObject lobj2195 = {
 const LevelObject lobj2194 = {
     .definition = &defAnt,
     .x = -24, .y = 3992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2201,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -425,6 +434,7 @@ const LevelObject lobj2194 = {
 const LevelObject lobj3856 = {
     .definition = &defAnt,
     .x = -16, .y = 3992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants2, .path = &path2200,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -507,6 +517,7 @@ static const Path *room1ants3_paths[] = {
 const LevelObject lobj2205 = {
     .definition = &defAnt,
     .x = -8, .y = 3912,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1ants3, .path = &path2204,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -632,6 +643,7 @@ static const Path *room1ants4_paths[] = {
 const LevelObject lobj2223 = {
     .definition = &defAnt,
     .x = 264, .y = 3880,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants4, .path = &path2253,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -639,6 +651,7 @@ const LevelObject lobj2223 = {
 const LevelObject lobj2222 = {
     .definition = &defAnt,
     .x = 264, .y = 3840,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room1ants4, .path = &path2221,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -655,6 +668,7 @@ extern LevelObjectGroup room1powerup;
 const LevelObject lobj2254 = {
     .definition = &defHoneyPot,
     .x = 80, .y = 3752,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -862,6 +876,7 @@ static const Path *room2ants1_paths[] = {
 const LevelObject lobj3889 = {
     .definition = &defAnt,
     .x = 264, .y = 3736,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path3900,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -869,6 +884,7 @@ const LevelObject lobj3889 = {
 const LevelObject lobj3887 = {
     .definition = &defAnt,
     .x = 264, .y = 3712,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path3898,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -876,6 +892,7 @@ const LevelObject lobj3887 = {
 const LevelObject lobj3888 = {
     .definition = &defAnt,
     .x = -8, .y = 3704,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path3899,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -883,6 +900,7 @@ const LevelObject lobj3888 = {
 const LevelObject lobj3885 = {
     .definition = &defAnt,
     .x = 264, .y = 3688,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path3896,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -890,6 +908,7 @@ const LevelObject lobj3885 = {
 const LevelObject lobj3886 = {
     .definition = &defAnt,
     .x = -8, .y = 3680,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path3897,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -897,6 +916,7 @@ const LevelObject lobj3886 = {
 const LevelObject lobj3882 = {
     .definition = &defAnt,
     .x = 264, .y = 3664,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path3893,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -904,6 +924,7 @@ const LevelObject lobj3882 = {
 const LevelObject lobj3884 = {
     .definition = &defAnt,
     .x = -8, .y = 3656,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path3895,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -911,6 +932,7 @@ const LevelObject lobj3884 = {
 const LevelObject lobj3883 = {
     .definition = &defAnt,
     .x = 264, .y = 3640,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants1, .path = &path3894,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -918,6 +940,7 @@ const LevelObject lobj3883 = {
 const LevelObject lobj3880 = {
     .definition = &defAnt,
     .x = -8, .y = 3632,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path3891,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -925,6 +948,7 @@ const LevelObject lobj3880 = {
 const LevelObject lobj3881 = {
     .definition = &defAnt,
     .x = -8, .y = 3608,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants1, .path = &path3892,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1141,6 +1165,7 @@ static const Path *room2ants2_paths[] = {
 const LevelObject lobj3868 = {
     .definition = &defAnt,
     .x = 264, .y = 3744,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path3879,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1148,6 +1173,7 @@ const LevelObject lobj3868 = {
 const LevelObject lobj3866 = {
     .definition = &defAnt,
     .x = 264, .y = 3720,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path3877,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1155,6 +1181,7 @@ const LevelObject lobj3866 = {
 const LevelObject lobj3867 = {
     .definition = &defAnt,
     .x = -8, .y = 3712,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path3878,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1162,6 +1189,7 @@ const LevelObject lobj3867 = {
 const LevelObject lobj3864 = {
     .definition = &defAnt,
     .x = 264, .y = 3696,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path3875,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1169,6 +1197,7 @@ const LevelObject lobj3864 = {
 const LevelObject lobj3865 = {
     .definition = &defAnt,
     .x = -8, .y = 3688,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path3876,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1176,6 +1205,7 @@ const LevelObject lobj3865 = {
 const LevelObject lobj3861 = {
     .definition = &defAnt,
     .x = 264, .y = 3672,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path3872,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1183,6 +1213,7 @@ const LevelObject lobj3861 = {
 const LevelObject lobj3863 = {
     .definition = &defAnt,
     .x = -8, .y = 3664,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path3874,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1190,6 +1221,7 @@ const LevelObject lobj3863 = {
 const LevelObject lobj3862 = {
     .definition = &defAnt,
     .x = 264, .y = 3648,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room2ants2, .path = &path3873,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1197,6 +1229,7 @@ const LevelObject lobj3862 = {
 const LevelObject lobj3859 = {
     .definition = &defAnt,
     .x = -8, .y = 3640,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path3870,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1204,6 +1237,7 @@ const LevelObject lobj3859 = {
 const LevelObject lobj3860 = {
     .definition = &defAnt,
     .x = -8, .y = 3616,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2ants2, .path = &path3871,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1228,6 +1262,7 @@ extern LevelObjectGroup room2powerup;
 const LevelObject lobj2298 = {
     .definition = &defHoneyPot,
     .x = 136, .y = 3568,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -1455,6 +1490,7 @@ static const Path *r3fly1_paths[] = {
 const LevelObject lobj2301 = {
     .definition = &defFly,
     .x = 64, .y = 3616,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r3fly1, .path = &path2303,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1462,6 +1498,7 @@ const LevelObject lobj2301 = {
 const LevelObject lobj2302 = {
     .definition = &defFly,
     .x = 192, .y = 3616,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r3fly1, .path = &path2304,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1644,6 +1681,7 @@ static const Path *room3fly3_paths[] = {
 const LevelObject lobj2312 = {
     .definition = &defFly,
     .x = 104, .y = 3496,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &room3fly3, .path = &path2314,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1651,6 +1689,7 @@ const LevelObject lobj2312 = {
 const LevelObject lobj2313 = {
     .definition = &defFly,
     .x = 152, .y = 3496,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &room3fly3, .path = &path2315,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1825,6 +1864,7 @@ static const Path *room3fly4_paths[] = {
 const LevelObject lobj2321 = {
     .definition = &defFly,
     .x = 40, .y = 3544,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &room3fly4, .path = &path2323,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -1832,6 +1872,7 @@ const LevelObject lobj2321 = {
 const LevelObject lobj2322 = {
     .definition = &defFly,
     .x = 216, .y = 3544,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &room3fly4, .path = &path2324,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -2446,6 +2487,7 @@ static const Path *r4r5ants_paths[] = {
 const LevelObject lobj3682 = {
     .definition = &defAnt,
     .x = 36, .y = 3236,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 28, .child = 0, .interval = 0
@@ -2453,6 +2495,7 @@ const LevelObject lobj3682 = {
 const LevelObject lobj3688 = {
     .definition = &defAnt,
     .x = 220, .y = 3236,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 28, .child = 0, .interval = 0
@@ -2460,6 +2503,7 @@ const LevelObject lobj3688 = {
 const LevelObject lobj3617 = {
     .definition = &defAnt,
     .x = 28, .y = 3220,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 27, .child = 0, .interval = 0
@@ -2467,6 +2511,7 @@ const LevelObject lobj3617 = {
 const LevelObject lobj3690 = {
     .definition = &defAnt,
     .x = 228, .y = 3220,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 27, .child = 0, .interval = 0
@@ -2474,6 +2519,7 @@ const LevelObject lobj3690 = {
 const LevelObject lobj3681 = {
     .definition = &defAnt,
     .x = 36, .y = 3204,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 26, .child = 0, .interval = 0
@@ -2481,6 +2527,7 @@ const LevelObject lobj3681 = {
 const LevelObject lobj3691 = {
     .definition = &defAnt,
     .x = 220, .y = 3204,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 26, .child = 0, .interval = 0
@@ -2488,6 +2535,7 @@ const LevelObject lobj3691 = {
 const LevelObject lobj3692 = {
     .definition = &defAnt,
     .x = 208, .y = 3192,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 25, .child = 0, .interval = 0
@@ -2495,6 +2543,7 @@ const LevelObject lobj3692 = {
 const LevelObject lobj3616 = {
     .definition = &defAnt,
     .x = 48, .y = 3192,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 25, .child = 0, .interval = 0
@@ -2502,6 +2551,7 @@ const LevelObject lobj3616 = {
 const LevelObject lobj3680 = {
     .definition = &defAnt,
     .x = 64, .y = 3188,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 24, .child = 0, .interval = 0
@@ -2509,6 +2559,7 @@ const LevelObject lobj3680 = {
 const LevelObject lobj3693 = {
     .definition = &defAnt,
     .x = 192, .y = 3188,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 24, .child = 0, .interval = 0
@@ -2516,6 +2567,7 @@ const LevelObject lobj3693 = {
 const LevelObject lobj3695 = {
     .definition = &defAnt,
     .x = 176, .y = 3184,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 23, .child = 0, .interval = 0
@@ -2523,6 +2575,7 @@ const LevelObject lobj3695 = {
 const LevelObject lobj3615 = {
     .definition = &defAnt,
     .x = 80, .y = 3184,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 23, .child = 0, .interval = 0
@@ -2530,6 +2583,7 @@ const LevelObject lobj3615 = {
 const LevelObject lobj3696 = {
     .definition = &defAnt,
     .x = 164, .y = 3172,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 22, .child = 0, .interval = 0
@@ -2537,6 +2591,7 @@ const LevelObject lobj3696 = {
 const LevelObject lobj3679 = {
     .definition = &defAnt,
     .x = 92, .y = 3172,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 22, .child = 0, .interval = 0
@@ -2544,6 +2599,7 @@ const LevelObject lobj3679 = {
 const LevelObject lobj3614 = {
     .definition = &defAnt,
     .x = 100, .y = 3156,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 21, .child = 0, .interval = 0
@@ -2551,6 +2607,7 @@ const LevelObject lobj3614 = {
 const LevelObject lobj3698 = {
     .definition = &defAnt,
     .x = 156, .y = 3156,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 21, .child = 0, .interval = 0
@@ -2558,6 +2615,7 @@ const LevelObject lobj3698 = {
 const LevelObject lobj3699 = {
     .definition = &defAnt,
     .x = 164, .y = 3140,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 20, .child = 0, .interval = 0
@@ -2565,6 +2623,7 @@ const LevelObject lobj3699 = {
 const LevelObject lobj3678 = {
     .definition = &defAnt,
     .x = 92, .y = 3140,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 20, .child = 0, .interval = 0
@@ -2572,6 +2631,7 @@ const LevelObject lobj3678 = {
 const LevelObject lobj3700 = {
     .definition = &defAnt,
     .x = 176, .y = 3128,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 19, .child = 0, .interval = 0
@@ -2579,6 +2639,7 @@ const LevelObject lobj3700 = {
 const LevelObject lobj3613 = {
     .definition = &defAnt,
     .x = 80, .y = 3128,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 19, .child = 0, .interval = 0
@@ -2586,6 +2647,7 @@ const LevelObject lobj3613 = {
 const LevelObject lobj3677 = {
     .definition = &defAnt,
     .x = 64, .y = 3124,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 18, .child = 0, .interval = 0
@@ -2593,6 +2655,7 @@ const LevelObject lobj3677 = {
 const LevelObject lobj3701 = {
     .definition = &defAnt,
     .x = 192, .y = 3124,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 18, .child = 0, .interval = 0
@@ -2600,6 +2663,7 @@ const LevelObject lobj3701 = {
 const LevelObject lobj3611 = {
     .definition = &defAnt,
     .x = 48, .y = 3120,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 17, .child = 0, .interval = 0
@@ -2607,6 +2671,7 @@ const LevelObject lobj3611 = {
 const LevelObject lobj3703 = {
     .definition = &defAnt,
     .x = 208, .y = 3120,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 17, .child = 0, .interval = 0
@@ -2614,6 +2679,7 @@ const LevelObject lobj3703 = {
 const LevelObject lobj3704 = {
     .definition = &defAnt,
     .x = 220, .y = 3108,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 16, .child = 0, .interval = 0
@@ -2621,6 +2687,7 @@ const LevelObject lobj3704 = {
 const LevelObject lobj3676 = {
     .definition = &defAnt,
     .x = 36, .y = 3108,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 16, .child = 0, .interval = 0
@@ -2628,6 +2695,7 @@ const LevelObject lobj3676 = {
 const LevelObject lobj3610 = {
     .definition = &defAnt,
     .x = 28, .y = 3092,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 15, .child = 0, .interval = 0
@@ -2635,6 +2703,7 @@ const LevelObject lobj3610 = {
 const LevelObject lobj3706 = {
     .definition = &defAnt,
     .x = 228, .y = 3092,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 15, .child = 0, .interval = 0
@@ -2642,6 +2711,7 @@ const LevelObject lobj3706 = {
 const LevelObject lobj3675 = {
     .definition = &defAnt,
     .x = 36, .y = 3076,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 14, .child = 0, .interval = 0
@@ -2649,6 +2719,7 @@ const LevelObject lobj3675 = {
 const LevelObject lobj3707 = {
     .definition = &defAnt,
     .x = 220, .y = 3076,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 14, .child = 0, .interval = 0
@@ -2656,6 +2727,7 @@ const LevelObject lobj3707 = {
 const LevelObject lobj3708 = {
     .definition = &defAnt,
     .x = 208, .y = 3064,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 13, .child = 0, .interval = 0
@@ -2663,6 +2735,7 @@ const LevelObject lobj3708 = {
 const LevelObject lobj3609 = {
     .definition = &defAnt,
     .x = 48, .y = 3064,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 13, .child = 0, .interval = 0
@@ -2670,6 +2743,7 @@ const LevelObject lobj3609 = {
 const LevelObject lobj3709 = {
     .definition = &defAnt,
     .x = 192, .y = 3060,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 12, .child = 0, .interval = 0
@@ -2677,6 +2751,7 @@ const LevelObject lobj3709 = {
 const LevelObject lobj3674 = {
     .definition = &defAnt,
     .x = 64, .y = 3060,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 12, .child = 0, .interval = 0
@@ -2684,6 +2759,7 @@ const LevelObject lobj3674 = {
 const LevelObject lobj3608 = {
     .definition = &defAnt,
     .x = 80, .y = 3056,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 11, .child = 0, .interval = 0
@@ -2691,6 +2767,7 @@ const LevelObject lobj3608 = {
 const LevelObject lobj3711 = {
     .definition = &defAnt,
     .x = 176, .y = 3056,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 11, .child = 0, .interval = 0
@@ -2698,6 +2775,7 @@ const LevelObject lobj3711 = {
 const LevelObject lobj3673 = {
     .definition = &defAnt,
     .x = 92, .y = 3044,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 10, .child = 0, .interval = 0
@@ -2705,6 +2783,7 @@ const LevelObject lobj3673 = {
 const LevelObject lobj3712 = {
     .definition = &defAnt,
     .x = 164, .y = 3044,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 10, .child = 0, .interval = 0
@@ -2712,6 +2791,7 @@ const LevelObject lobj3712 = {
 const LevelObject lobj3607 = {
     .definition = &defAnt,
     .x = 100, .y = 3028,
+    .palette = 0,
     .animInd = 1, .flags = 0,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 9, .child = 0, .interval = 0
@@ -2719,6 +2799,7 @@ const LevelObject lobj3607 = {
 const LevelObject lobj3714 = {
     .definition = &defAnt,
     .x = 156, .y = 3028,
+    .palette = 0,
     .animInd = 1, .flags = 2048,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 9, .child = 0, .interval = 0
@@ -2726,6 +2807,7 @@ const LevelObject lobj3714 = {
 const LevelObject lobj3672 = {
     .definition = &defAnt,
     .x = 92, .y = 3012,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 8, .child = 0, .interval = 0
@@ -2733,6 +2815,7 @@ const LevelObject lobj3672 = {
 const LevelObject lobj3715 = {
     .definition = &defAnt,
     .x = 164, .y = 3012,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 8, .child = 0, .interval = 0
@@ -2740,6 +2823,7 @@ const LevelObject lobj3715 = {
 const LevelObject lobj3716 = {
     .definition = &defAnt,
     .x = 176, .y = 3000,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 7, .child = 0, .interval = 0
@@ -2747,6 +2831,7 @@ const LevelObject lobj3716 = {
 const LevelObject lobj3606 = {
     .definition = &defAnt,
     .x = 80, .y = 3000,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 7, .child = 0, .interval = 0
@@ -2754,6 +2839,7 @@ const LevelObject lobj3606 = {
 const LevelObject lobj3717 = {
     .definition = &defAnt,
     .x = 192, .y = 2996,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 6, .child = 0, .interval = 0
@@ -2761,6 +2847,7 @@ const LevelObject lobj3717 = {
 const LevelObject lobj3671 = {
     .definition = &defAnt,
     .x = 64, .y = 2996,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 6, .child = 0, .interval = 0
@@ -2768,6 +2855,7 @@ const LevelObject lobj3671 = {
 const LevelObject lobj3719 = {
     .definition = &defAnt,
     .x = 208, .y = 2992,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 5, .child = 0, .interval = 0
@@ -2775,6 +2863,7 @@ const LevelObject lobj3719 = {
 const LevelObject lobj3605 = {
     .definition = &defAnt,
     .x = 48, .y = 2992,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 5, .child = 0, .interval = 0
@@ -2782,6 +2871,7 @@ const LevelObject lobj3605 = {
 const LevelObject lobj3670 = {
     .definition = &defAnt,
     .x = 36, .y = 2980,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 4, .child = 0, .interval = 0
@@ -2789,6 +2879,7 @@ const LevelObject lobj3670 = {
 const LevelObject lobj3720 = {
     .definition = &defAnt,
     .x = 220, .y = 2980,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 4, .child = 0, .interval = 0
@@ -2796,6 +2887,7 @@ const LevelObject lobj3720 = {
 const LevelObject lobj3721 = {
     .definition = &defAnt,
     .x = 228, .y = 2964,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 3, .child = 0, .interval = 0
@@ -2803,6 +2895,7 @@ const LevelObject lobj3721 = {
 const LevelObject lobj3604 = {
     .definition = &defAnt,
     .x = 28, .y = 2964,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 3, .child = 0, .interval = 0
@@ -2810,6 +2903,7 @@ const LevelObject lobj3604 = {
 const LevelObject lobj3802 = {
     .definition = &defAnt,
     .x = 220, .y = 2948,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r4r5ants, .path = &path3723,
     .pathIndex = 2, .child = 0, .interval = 0
@@ -2817,6 +2911,7 @@ const LevelObject lobj3802 = {
 const LevelObject lobj3683 = {
     .definition = &defAnt,
     .x = 36, .y = 2948,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r4r5ants, .path = &path2373,
     .pathIndex = 2, .child = 0, .interval = 0
@@ -3042,6 +3137,7 @@ static const Path *r4fly1_paths[] = {
 const LevelObject lobj2333 = {
     .definition = &defFly,
     .x = -16, .y = 3232,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r4fly1, .path = &path2332,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3057,6 +3153,7 @@ extern LevelObjectGroup room4powerup;
 const LevelObject lobj2339 = {
     .definition = &defHoneyCell,
     .x = 192, .y = 3184,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room4powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -3072,6 +3169,7 @@ extern LevelObjectGroup r5antsfrombigant;
 const LevelObject lobj3801 = {
     .definition = &defAnt,
     .x = 48, .y = 2936,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r5antsfrombigant, .path = &path2373,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3079,6 +3177,7 @@ const LevelObject lobj3801 = {
 const LevelObject lobj3722 = {
     .definition = &defAnt,
     .x = 208, .y = 2936,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r5antsfrombigant, .path = &path3723,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3224,6 +3323,7 @@ static const Path *room5fly1_paths[] = {
 const LevelObject lobj2343 = {
     .definition = &defFly,
     .x = 272, .y = 3192,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &room5fly1, .path = &path2342,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3239,6 +3339,7 @@ extern LevelObjectGroup r5powerup;
 const LevelObject lobj2349 = {
     .definition = &defHoneyCell,
     .x = 64, .y = 3056,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r5powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -3474,6 +3575,7 @@ static const Path *r6ants_paths[] = {
 const LevelObject lobj3645 = {
     .definition = &defAnt,
     .x = 220, .y = 2864,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 12, .child = 0, .interval = 0
@@ -3481,6 +3583,7 @@ const LevelObject lobj3645 = {
 const LevelObject lobj3649 = {
     .definition = &defAnt,
     .x = 36, .y = 2864,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 12, .child = 0, .interval = 0
@@ -3488,6 +3591,7 @@ const LevelObject lobj3649 = {
 const LevelObject lobj3769 = {
     .definition = &defAnt,
     .x = 36, .y = 2852,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 11, .child = 0, .interval = 0
@@ -3495,6 +3599,7 @@ const LevelObject lobj3769 = {
 const LevelObject lobj3770 = {
     .definition = &defAnt,
     .x = 220, .y = 2852,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 11, .child = 0, .interval = 0
@@ -3502,6 +3607,7 @@ const LevelObject lobj3770 = {
 const LevelObject lobj3741 = {
     .definition = &defAnt,
     .x = 36, .y = 2840,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 10, .child = 0, .interval = 0
@@ -3509,6 +3615,7 @@ const LevelObject lobj3741 = {
 const LevelObject lobj3747 = {
     .definition = &defAnt,
     .x = 220, .y = 2840,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 10, .child = 0, .interval = 0
@@ -3516,6 +3623,7 @@ const LevelObject lobj3747 = {
 const LevelObject lobj3772 = {
     .definition = &defAnt,
     .x = 36, .y = 2828,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 9, .child = 0, .interval = 0
@@ -3523,6 +3631,7 @@ const LevelObject lobj3772 = {
 const LevelObject lobj3773 = {
     .definition = &defAnt,
     .x = 220, .y = 2828,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 9, .child = 0, .interval = 0
@@ -3530,6 +3639,7 @@ const LevelObject lobj3773 = {
 const LevelObject lobj3647 = {
     .definition = &defAnt,
     .x = 220, .y = 2816,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 8, .child = 0, .interval = 0
@@ -3537,6 +3647,7 @@ const LevelObject lobj3647 = {
 const LevelObject lobj3650 = {
     .definition = &defAnt,
     .x = 36, .y = 2816,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 8, .child = 0, .interval = 0
@@ -3544,6 +3655,7 @@ const LevelObject lobj3650 = {
 const LevelObject lobj3775 = {
     .definition = &defAnt,
     .x = 36, .y = 2804,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 7, .child = 0, .interval = 0
@@ -3551,6 +3663,7 @@ const LevelObject lobj3775 = {
 const LevelObject lobj3776 = {
     .definition = &defAnt,
     .x = 220, .y = 2804,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 7, .child = 0, .interval = 0
@@ -3558,6 +3671,7 @@ const LevelObject lobj3776 = {
 const LevelObject lobj3748 = {
     .definition = &defAnt,
     .x = 220, .y = 2792,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 6, .child = 0, .interval = 0
@@ -3565,6 +3679,7 @@ const LevelObject lobj3748 = {
 const LevelObject lobj3743 = {
     .definition = &defAnt,
     .x = 36, .y = 2792,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 6, .child = 0, .interval = 0
@@ -3572,6 +3687,7 @@ const LevelObject lobj3743 = {
 const LevelObject lobj3778 = {
     .definition = &defAnt,
     .x = 36, .y = 2780,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 5, .child = 0, .interval = 0
@@ -3579,6 +3695,7 @@ const LevelObject lobj3778 = {
 const LevelObject lobj3779 = {
     .definition = &defAnt,
     .x = 220, .y = 2780,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 5, .child = 0, .interval = 0
@@ -3586,6 +3703,7 @@ const LevelObject lobj3779 = {
 const LevelObject lobj3651 = {
     .definition = &defAnt,
     .x = 36, .y = 2768,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 4, .child = 0, .interval = 0
@@ -3593,6 +3711,7 @@ const LevelObject lobj3651 = {
 const LevelObject lobj3646 = {
     .definition = &defAnt,
     .x = 220, .y = 2768,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 4, .child = 0, .interval = 0
@@ -3600,6 +3719,7 @@ const LevelObject lobj3646 = {
 const LevelObject lobj3781 = {
     .definition = &defAnt,
     .x = 36, .y = 2756,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 3, .child = 0, .interval = 0
@@ -3607,6 +3727,7 @@ const LevelObject lobj3781 = {
 const LevelObject lobj3782 = {
     .definition = &defAnt,
     .x = 220, .y = 2756,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 3, .child = 0, .interval = 0
@@ -3614,6 +3735,7 @@ const LevelObject lobj3782 = {
 const LevelObject lobj3749 = {
     .definition = &defAnt,
     .x = 220, .y = 2744,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &r6ants, .path = &path3786,
     .pathIndex = 2, .child = 0, .interval = 0
@@ -3621,6 +3743,7 @@ const LevelObject lobj3749 = {
 const LevelObject lobj3745 = {
     .definition = &defAnt,
     .x = 36, .y = 2744,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &r6ants, .path = &path2389,
     .pathIndex = 2, .child = 0, .interval = 0
@@ -3841,6 +3964,7 @@ static const Path *room6fly_paths[] = {
 const LevelObject lobj2352 = {
     .definition = &defFly,
     .x = 272, .y = 2832,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &room6fly, .path = &path2351,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3856,6 +3980,7 @@ extern LevelObjectGroup room5bigant;
 const LevelObject lobj2369 = {
     .definition = &defAntBig,
     .x = 64, .y = 2928,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room5bigant, .path = 0,
     .pathIndex = 0, .child = &lobj3801, .interval = 24
@@ -3863,6 +3988,7 @@ const LevelObject lobj2369 = {
 const LevelObject lobj2370 = {
     .definition = &defAntBig,
     .x = 192, .y = 2928,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room5bigant, .path = 0,
     .pathIndex = 0, .child = &lobj3722, .interval = 24
@@ -3879,6 +4005,7 @@ extern LevelObjectGroup room6antsfrombigants;
 const LevelObject lobj3834 = {
     .definition = &defAnt,
     .x = 36, .y = 2732,
+    .palette = 0,
     .animInd = 1, .flags = 32768,
     .group = &room6antsfrombigants, .path = &path2389,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3886,6 +4013,7 @@ const LevelObject lobj3834 = {
 const LevelObject lobj3835 = {
     .definition = &defAnt,
     .x = 220, .y = 2732,
+    .palette = 0,
     .animInd = 1, .flags = 34816,
     .group = &room6antsfrombigants, .path = &path3786,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3902,6 +4030,7 @@ extern LevelObjectGroup room6bigant;
 const LevelObject lobj2386 = {
     .definition = &defAntBig,
     .x = 216, .y = 2708,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room6bigant, .path = 0,
     .pathIndex = 0, .child = &lobj3835, .interval = 16
@@ -3909,6 +4038,7 @@ const LevelObject lobj2386 = {
 const LevelObject lobj2387 = {
     .definition = &defAntBig,
     .x = 40, .y = 2708,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &room6bigant, .path = 0,
     .pathIndex = 0, .child = &lobj3834, .interval = 16
@@ -3957,6 +4087,7 @@ static const Path *room7alien1_paths[] = {
 const LevelObject lobj2396 = {
     .definition = &defAlienGunner,
     .x = 112, .y = 2496,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien1, .path = &path2397,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -3964,6 +4095,7 @@ const LevelObject lobj2396 = {
 const LevelObject lobj2399 = {
     .definition = &defHoneyPot,
     .x = 128, .y = 2472,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien1, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -4042,6 +4174,7 @@ static const Path *room7alien2_paths[] = {
 const LevelObject lobj2401 = {
     .definition = &defAlienGunner,
     .x = 48, .y = 2440,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien2, .path = &path2403,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4049,6 +4182,7 @@ const LevelObject lobj2401 = {
 const LevelObject lobj2402 = {
     .definition = &defAlienGunner,
     .x = 208, .y = 2440,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room7alien2, .path = &path2404,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4301,6 +4435,7 @@ static const Path *room7alien3_paths[] = {
 const LevelObject lobj2413 = {
     .definition = &defAlienPillager,
     .x = 280, .y = 2528,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2419,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4308,6 +4443,7 @@ const LevelObject lobj2413 = {
 const LevelObject lobj2412 = {
     .definition = &defAlienPillager,
     .x = -24, .y = 2528,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2414,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4315,6 +4451,7 @@ const LevelObject lobj2412 = {
 const LevelObject lobj2411 = {
     .definition = &defAlienPillager,
     .x = 272, .y = 2512,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2418,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4322,6 +4459,7 @@ const LevelObject lobj2411 = {
 const LevelObject lobj2410 = {
     .definition = &defAlienPillager,
     .x = -16, .y = 2512,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2415,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4329,6 +4467,7 @@ const LevelObject lobj2410 = {
 const LevelObject lobj2409 = {
     .definition = &defAlienPillager,
     .x = 264, .y = 2496,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room7alien3, .path = &path2417,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4336,6 +4475,7 @@ const LevelObject lobj2409 = {
 const LevelObject lobj2408 = {
     .definition = &defAlienPillager,
     .x = -8, .y = 2496,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien3, .path = &path2416,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4658,6 +4798,7 @@ static const Path *room8alien1_paths[] = {
 const LevelObject lobj2426 = {
     .definition = &defAlienPillager,
     .x = 112, .y = 2368,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3962,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4665,6 +4806,7 @@ const LevelObject lobj2426 = {
 const LevelObject lobj2429 = {
     .definition = &defAlienPillager,
     .x = 152, .y = 2360,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3980,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4672,6 +4814,7 @@ const LevelObject lobj2429 = {
 const LevelObject lobj2432 = {
     .definition = &defAlienPillager,
     .x = 96, .y = 2352,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3965,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4679,6 +4822,7 @@ const LevelObject lobj2432 = {
 const LevelObject lobj2435 = {
     .definition = &defAlienPillager,
     .x = 160, .y = 2344,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3983,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4686,6 +4830,7 @@ const LevelObject lobj2435 = {
 const LevelObject lobj2428 = {
     .definition = &defAlienPillager,
     .x = 104, .y = 2336,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3968,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4693,6 +4838,7 @@ const LevelObject lobj2428 = {
 const LevelObject lobj2431 = {
     .definition = &defAlienPillager,
     .x = 152, .y = 2336,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3986,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4700,6 +4846,7 @@ const LevelObject lobj2431 = {
 const LevelObject lobj2437 = {
     .definition = &defAlienPillager,
     .x = 168, .y = 2320,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3989,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4707,6 +4854,7 @@ const LevelObject lobj2437 = {
 const LevelObject lobj2430 = {
     .definition = &defAlienPillager,
     .x = 144, .y = 2320,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3995,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4714,6 +4862,7 @@ const LevelObject lobj2430 = {
 const LevelObject lobj2434 = {
     .definition = &defAlienPillager,
     .x = 88, .y = 2320,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3971,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4721,6 +4870,7 @@ const LevelObject lobj2434 = {
 const LevelObject lobj2427 = {
     .definition = &defAlienPillager,
     .x = 112, .y = 2312,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3974,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4728,6 +4878,7 @@ const LevelObject lobj2427 = {
 const LevelObject lobj2436 = {
     .definition = &defAlienPillager,
     .x = 176, .y = 2304,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien1, .path = &path3992,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4735,6 +4886,7 @@ const LevelObject lobj2436 = {
 const LevelObject lobj2433 = {
     .definition = &defAlienPillager,
     .x = 80, .y = 2304,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien1, .path = &path3977,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4837,6 +4989,7 @@ static const Path *room8alien2_paths[] = {
 const LevelObject lobj2440 = {
     .definition = &defAlienGunner,
     .x = 80, .y = 2352,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien2, .path = &path2442,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -4844,6 +4997,7 @@ const LevelObject lobj2440 = {
 const LevelObject lobj2441 = {
     .definition = &defAlienGunner,
     .x = 176, .y = 2352,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien2, .path = &path2443,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5032,6 +5186,7 @@ static const Path *room8alien3_paths[] = {
 const LevelObject lobj2446 = {
     .definition = &defAlienGunner,
     .x = -16, .y = 2392,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien3, .path = &path2448,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5039,6 +5194,7 @@ const LevelObject lobj2446 = {
 const LevelObject lobj2447 = {
     .definition = &defAlienGunner,
     .x = 272, .y = 2392,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien3, .path = &path2449,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5149,6 +5305,7 @@ static const Path *room8alien4_paths[] = {
 const LevelObject lobj2453 = {
     .definition = &defAlienGunner,
     .x = 80, .y = 2256,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien4, .path = &path2457,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5156,6 +5313,7 @@ const LevelObject lobj2453 = {
 const LevelObject lobj2455 = {
     .definition = &defAlienGunner,
     .x = 184, .y = 2248,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien4, .path = &path2459,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5163,6 +5321,7 @@ const LevelObject lobj2455 = {
 const LevelObject lobj2454 = {
     .definition = &defAlienGunner,
     .x = 72, .y = 2240,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8alien4, .path = &path2458,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5170,6 +5329,7 @@ const LevelObject lobj2454 = {
 const LevelObject lobj2456 = {
     .definition = &defAlienGunner,
     .x = 192, .y = 2232,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room8alien4, .path = &path2460,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5188,6 +5348,7 @@ extern LevelObjectGroup room8powerup;
 const LevelObject lobj2467 = {
     .definition = &defHoneyPot,
     .x = 120, .y = 2264,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -5195,6 +5356,7 @@ const LevelObject lobj2467 = {
 const LevelObject lobj2466 = {
     .definition = &defHoneyPot,
     .x = 136, .y = 2256,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -5211,6 +5373,7 @@ extern LevelObjectGroup room9powerup;
 const LevelObject lobj2471 = {
     .definition = &defHoneyPot,
     .x = 128, .y = 2176,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -5218,6 +5381,7 @@ const LevelObject lobj2471 = {
 const LevelObject lobj2470 = {
     .definition = &defHoneyPot,
     .x = 144, .y = 2168,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -5225,6 +5389,7 @@ const LevelObject lobj2470 = {
 const LevelObject lobj2469 = {
     .definition = &defHoneyPot,
     .x = 120, .y = 2160,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -5266,6 +5431,7 @@ static const Path *room9alienmind_paths[] = {
 const LevelObject lobj2472 = {
     .definition = &defAlienMind,
     .x = 128, .y = 1984,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &room9alienmind, .path = &path2474,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5778,6 +5944,7 @@ static const Path *r9aliensfromalienmind_paths[] = {
 const LevelObject lobj4022 = {
     .definition = &defAlienPillager,
     .x = 124, .y = 2044,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &r9aliensfromalienmind, .path = &path2475,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5785,6 +5952,7 @@ const LevelObject lobj4022 = {
 const LevelObject lobj4021 = {
     .definition = &defAlienPillager,
     .x = 132, .y = 2044,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r9aliensfromalienmind, .path = &path2476,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5792,6 +5960,7 @@ const LevelObject lobj4021 = {
 const LevelObject lobj4023 = {
     .definition = &defAlienGunner,
     .x = 136, .y = 2040,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r9aliensfromalienmind, .path = &path2478,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5799,6 +5968,7 @@ const LevelObject lobj4023 = {
 const LevelObject lobj4024 = {
     .definition = &defAlienGunner,
     .x = 120, .y = 2040,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &r9aliensfromalienmind, .path = &path2477,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5806,6 +5976,7 @@ const LevelObject lobj4024 = {
 const LevelObject lobj4020 = {
     .definition = &defFly,
     .x = 116, .y = 2036,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &r9aliensfromalienmind, .path = &path2479,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -5813,6 +5984,7 @@ const LevelObject lobj4020 = {
 const LevelObject lobj4019 = {
     .definition = &defFly,
     .x = 140, .y = 2036,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r9aliensfromalienmind, .path = &path2480,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6015,6 +6187,7 @@ static const Path *room10acidants_paths[] = {
 const LevelObject lobj2495 = {
     .definition = &defAcidAnt,
     .x = 168, .y = 1928,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2499,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6022,6 +6195,7 @@ const LevelObject lobj2495 = {
 const LevelObject lobj2493 = {
     .definition = &defAcidAnt,
     .x = 184, .y = 1928,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2500,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6029,6 +6203,7 @@ const LevelObject lobj2493 = {
 const LevelObject lobj2494 = {
     .definition = &defAcidAnt,
     .x = 200, .y = 1920,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants, .path = &path2501,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6036,6 +6211,7 @@ const LevelObject lobj2494 = {
 const LevelObject lobj2496 = {
     .definition = &defAcidAnt,
     .x = 152, .y = 1920,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants, .path = &path2498,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6043,6 +6219,7 @@ const LevelObject lobj2496 = {
 const LevelObject lobj2492 = {
     .definition = &defAcidAnt,
     .x = 216, .y = 1904,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants, .path = &path2502,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6239,6 +6416,7 @@ static const Path *room10acidants2_paths[] = {
 const LevelObject lobj2511 = {
     .definition = &defAcidAnt,
     .x = 88, .y = 1912,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants2, .path = &path2517,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6246,6 +6424,7 @@ const LevelObject lobj2511 = {
 const LevelObject lobj2509 = {
     .definition = &defAcidAnt,
     .x = 104, .y = 1904,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &room10acidants2, .path = &path2518,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6253,6 +6432,7 @@ const LevelObject lobj2509 = {
 const LevelObject lobj2510 = {
     .definition = &defAcidAnt,
     .x = 72, .y = 1904,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2516,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6260,6 +6440,7 @@ const LevelObject lobj2510 = {
 const LevelObject lobj2512 = {
     .definition = &defAcidAnt,
     .x = 56, .y = 1896,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2515,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6267,6 +6448,7 @@ const LevelObject lobj2512 = {
 const LevelObject lobj2513 = {
     .definition = &defAcidAnt,
     .x = 40, .y = 1888,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &room10acidants2, .path = &path2514,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6323,6 +6505,7 @@ static const Path *r11acidants1a_paths[] = {
 const LevelObject lobj2524 = {
     .definition = &defAcidAnt,
     .x = 232, .y = 1816,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1a, .path = &path2526,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6375,6 +6558,7 @@ static const Path *r11acidants1b_paths[] = {
 const LevelObject lobj2528 = {
     .definition = &defAcidAnt,
     .x = 200, .y = 1816,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1b, .path = &path2530,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6427,6 +6611,7 @@ static const Path *r11acidants1c_paths[] = {
 const LevelObject lobj2532 = {
     .definition = &defAcidAnt,
     .x = 168, .y = 1816,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1c, .path = &path2534,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6479,6 +6664,7 @@ static const Path *r11acidants1d_paths[] = {
 const LevelObject lobj2536 = {
     .definition = &defAcidAnt,
     .x = 136, .y = 1816,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1d, .path = &path2538,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6531,6 +6717,7 @@ static const Path *r11acidants1e_paths[] = {
 const LevelObject lobj2540 = {
     .definition = &defAcidAnt,
     .x = 120, .y = 1808,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1e, .path = &path2542,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6583,6 +6770,7 @@ static const Path *r11acidants1f_paths[] = {
 const LevelObject lobj2544 = {
     .definition = &defAcidAnt,
     .x = 88, .y = 1800,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1f, .path = &path2546,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6635,6 +6823,7 @@ static const Path *r11acidants1g_paths[] = {
 const LevelObject lobj2548 = {
     .definition = &defAcidAnt,
     .x = 56, .y = 1800,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &r11acidants1g, .path = &path2550,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6687,6 +6876,7 @@ static const Path *r11acidants1h_paths[] = {
 const LevelObject lobj2552 = {
     .definition = &defAcidAnt,
     .x = 24, .y = 1800,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r11acidants1h, .path = &path2554,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6723,6 +6913,7 @@ static const Path *room11acidants2a_paths[] = {
 const LevelObject lobj2566 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1640,
+    .palette = 0,
     .animInd = 0, .flags = 34816,
     .group = &room11acidants2a, .path = &path2567,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6759,6 +6950,7 @@ static const Path *room11acidants2b_paths[] = {
 const LevelObject lobj2579 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1576,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room11acidants2b, .path = &path2580,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6808,6 +7000,7 @@ static const Path *r11acidants3a_paths[] = {
 const LevelObject lobj2582 = {
     .definition = &defAcidAnt,
     .x = 248, .y = 1720,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3a, .path = &path2583,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6857,6 +7050,7 @@ static const Path *r11acidants3b_paths[] = {
 const LevelObject lobj2586 = {
     .definition = &defAcidAnt,
     .x = 224, .y = 1720,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3b, .path = &path2587,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6906,6 +7100,7 @@ static const Path *r11acidants3c_paths[] = {
 const LevelObject lobj2590 = {
     .definition = &defAcidAnt,
     .x = 200, .y = 1720,
+    .palette = 0,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3c, .path = &path2591,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -6955,6 +7150,7 @@ static const Path *r11acidants3d_paths[] = {
 const LevelObject lobj2594 = {
     .definition = &defAcidAnt,
     .x = 176, .y = 1720,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3d, .path = &path2595,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7004,6 +7200,7 @@ static const Path *r11acidants3e_paths[] = {
 const LevelObject lobj2598 = {
     .definition = &defAcidAnt,
     .x = 152, .y = 1720,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3e, .path = &path2599,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7053,6 +7250,7 @@ static const Path *r11acidants3f_paths[] = {
 const LevelObject lobj2602 = {
     .definition = &defAcidAnt,
     .x = 128, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3f, .path = &path2603,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7102,6 +7300,7 @@ static const Path *r11acidants3g_paths[] = {
 const LevelObject lobj2606 = {
     .definition = &defAcidAnt,
     .x = 104, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3g, .path = &path2607,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7151,6 +7350,7 @@ static const Path *r11acidants3h_paths[] = {
 const LevelObject lobj2610 = {
     .definition = &defAcidAnt,
     .x = 80, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3h, .path = &path2611,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7200,6 +7400,7 @@ static const Path *r11acidants3i_paths[] = {
 const LevelObject lobj2614 = {
     .definition = &defAcidAnt,
     .x = 56, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r11acidants3i, .path = &path2615,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7249,6 +7450,7 @@ static const Path *r11acidants3j_paths[] = {
 const LevelObject lobj2618 = {
     .definition = &defAcidAnt,
     .x = 32, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3j, .path = &path2619,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7298,6 +7500,7 @@ static const Path *r11acidants3k_paths[] = {
 const LevelObject lobj2622 = {
     .definition = &defAcidAnt,
     .x = 8, .y = 1704,
+    .palette = 0,
     .animInd = 1, .flags = 6144,
     .group = &r11acidants3k, .path = &path2623,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7313,6 +7516,7 @@ extern LevelObjectGroup r11powerup;
 const LevelObject lobj2626 = {
     .definition = &defHoneyPot,
     .x = 120, .y = 1656,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r11powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -7365,6 +7569,7 @@ static const Path *r12wasp1a_paths[] = {
 const LevelObject lobj2629 = {
     .definition = &defWasp,
     .x = 96, .y = 1512,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1a, .path = &path2630,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7417,6 +7622,7 @@ static const Path *r12wasp1b_paths[] = {
 const LevelObject lobj2635 = {
     .definition = &defWasp,
     .x = 128, .y = 1528,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1b, .path = &path2636,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7469,6 +7675,7 @@ static const Path *r12wasp1c_paths[] = {
 const LevelObject lobj2641 = {
     .definition = &defWasp,
     .x = 160, .y = 1544,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp1c, .path = &path2642,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7521,6 +7728,7 @@ static const Path *r12wasp2a_paths[] = {
 const LevelObject lobj2647 = {
     .definition = &defWasp,
     .x = 80, .y = 1448,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2a, .path = &path2648,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7573,6 +7781,7 @@ static const Path *r12wasp2b_paths[] = {
 const LevelObject lobj2653 = {
     .definition = &defWasp,
     .x = 56, .y = 1472,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2b, .path = &path2654,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7625,6 +7834,7 @@ static const Path *r12wasp2c_paths[] = {
 const LevelObject lobj2659 = {
     .definition = &defWasp,
     .x = 32, .y = 1496,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp2c, .path = &path2660,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7677,6 +7887,7 @@ static const Path *r12wasp3a_paths[] = {
 const LevelObject lobj2665 = {
     .definition = &defWasp,
     .x = 176, .y = 1472,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3a, .path = &path2666,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7729,6 +7940,7 @@ static const Path *r12wasp3b_paths[] = {
 const LevelObject lobj2671 = {
     .definition = &defWasp,
     .x = 200, .y = 1496,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3b, .path = &path2672,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7781,6 +7993,7 @@ static const Path *r12wasp3c_paths[] = {
 const LevelObject lobj2677 = {
     .definition = &defWasp,
     .x = 224, .y = 1520,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp3c, .path = &path2678,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7833,6 +8046,7 @@ static const Path *r12wasp4a_paths[] = {
 const LevelObject lobj2683 = {
     .definition = &defWasp,
     .x = 48, .y = 1416,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4a, .path = &path2684,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7885,6 +8099,7 @@ static const Path *r12wasp4b_paths[] = {
 const LevelObject lobj2689 = {
     .definition = &defWasp,
     .x = 208, .y = 1416,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4b, .path = &path2690,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7937,6 +8152,7 @@ static const Path *r12wasp4c_paths[] = {
 const LevelObject lobj2695 = {
     .definition = &defWasp,
     .x = 32, .y = 1504,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4c, .path = &path2696,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -7989,6 +8205,7 @@ static const Path *r12wasp4d_paths[] = {
 const LevelObject lobj2701 = {
     .definition = &defWasp,
     .x = 224, .y = 1504,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r12wasp4d, .path = &path2702,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8004,6 +8221,7 @@ extern LevelObjectGroup r12powerup;
 const LevelObject lobj2707 = {
     .definition = &defReinforcedHoneyPot,
     .x = 128, .y = 1360,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r12powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -8195,6 +8413,7 @@ static const Path *r13acidants1_paths[] = {
 const LevelObject lobj2711 = {
     .definition = &defAntHole,
     .x = 16, .y = 1216,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2717,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8202,6 +8421,7 @@ const LevelObject lobj2711 = {
 const LevelObject lobj2710 = {
     .definition = &defAntHole,
     .x = 240, .y = 1216,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2716,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8209,6 +8429,7 @@ const LevelObject lobj2710 = {
 const LevelObject lobj2713 = {
     .definition = &defAntHole,
     .x = 248, .y = 1200,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2719,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8216,6 +8437,7 @@ const LevelObject lobj2713 = {
 const LevelObject lobj2712 = {
     .definition = &defAntHole,
     .x = 24, .y = 1200,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2718,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8223,6 +8445,7 @@ const LevelObject lobj2712 = {
 const LevelObject lobj2709 = {
     .definition = &defAntHole,
     .x = 232, .y = 1200,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2715,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8230,6 +8453,7 @@ const LevelObject lobj2709 = {
 const LevelObject lobj2714 = {
     .definition = &defAntHole,
     .x = 8, .y = 1200,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r13acidants1, .path = &path2720,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -8370,6 +8594,7 @@ static const Path *r13beetle1_paths[] = {
 const LevelObject lobj2727 = {
     .definition = &defBeetle,
     .x = 56, .y = 1320,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &r13beetle1, .path = &path2730,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8377,6 +8602,7 @@ const LevelObject lobj2727 = {
 const LevelObject lobj2728 = {
     .definition = &defBeetle,
     .x = 200, .y = 1320,
+    .palette = 0,
     .animInd = 1, .flags = 38912,
     .group = &r13beetle1, .path = &path2731,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8453,6 +8679,7 @@ static const Path *r13fly1_paths[] = {
 const LevelObject lobj2741 = {
     .definition = &defWaspShooter,
     .x = 32, .y = 1264,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r13fly1, .path = &path2742,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8533,6 +8760,7 @@ static const Path *r13fly2_paths[] = {
 const LevelObject lobj2750 = {
     .definition = &defWaspShooter,
     .x = 48, .y = 1232,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r13fly2, .path = &path2751,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8608,6 +8836,7 @@ static const Path *r13fly3_paths[] = {
 const LevelObject lobj2759 = {
     .definition = &defWaspShooter,
     .x = 224, .y = 1224,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r13fly3, .path = &path2760,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -8688,6 +8917,7 @@ static const Path *r14fly4_paths[] = {
 const LevelObject lobj2768 = {
     .definition = &defWaspShooter,
     .x = 208, .y = 1192,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14fly4, .path = &path2769,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9399,6 +9629,7 @@ static const Path *r14beetles_paths[] = {
 const LevelObject lobj2777 = {
     .definition = &defBeetle,
     .x = 104, .y = 1096,
+    .palette = 0,
     .animInd = 1, .flags = 36864,
     .group = &r14beetles, .path = &path2779,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9406,6 +9637,7 @@ const LevelObject lobj2777 = {
 const LevelObject lobj2778 = {
     .definition = &defBeetle,
     .x = 216, .y = 1096,
+    .palette = 0,
     .animInd = 1, .flags = 4096,
     .group = &r14beetles, .path = &path2780,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9413,6 +9645,7 @@ const LevelObject lobj2778 = {
 const LevelObject lobj2883 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 996,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -9420,6 +9653,7 @@ const LevelObject lobj2883 = {
 const LevelObject lobj2886 = {
     .definition = 0 /* to be assigned */,
     .x = 256, .y = 932,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -9427,6 +9661,7 @@ const LevelObject lobj2886 = {
 const LevelObject lobj2884 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 860,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -9434,6 +9669,7 @@ const LevelObject lobj2884 = {
 const LevelObject lobj2887 = {
     .definition = 0 /* to be assigned */,
     .x = 256, .y = 796,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -9441,6 +9677,7 @@ const LevelObject lobj2887 = {
 const LevelObject lobj2885 = {
     .definition = 0 /* to be assigned */,
     .x = -40, .y = 728,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14beetles, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -9522,6 +9759,7 @@ static const Path *r14acidants1_paths[] = {
 const LevelObject lobj2889 = {
     .definition = &defAntHole,
     .x = 120, .y = 992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants1, .path = &path2891,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9529,6 +9767,7 @@ const LevelObject lobj2889 = {
 const LevelObject lobj2890 = {
     .definition = &defAntHole,
     .x = 184, .y = 992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants1, .path = &path2892,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9605,6 +9844,7 @@ static const Path *r14acidants2_paths[] = {
 const LevelObject lobj2896 = {
     .definition = &defAntHole,
     .x = 128, .y = 1008,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants2, .path = &path2898,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9612,6 +9852,7 @@ const LevelObject lobj2896 = {
 const LevelObject lobj2897 = {
     .definition = &defAntHole,
     .x = 176, .y = 1008,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants2, .path = &path2899,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9688,6 +9929,7 @@ static const Path *r14acidants3_paths[] = {
 const LevelObject lobj2903 = {
     .definition = &defAntHole,
     .x = 168, .y = 992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants3, .path = &path2906,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9695,6 +9937,7 @@ const LevelObject lobj2903 = {
 const LevelObject lobj2904 = {
     .definition = &defAntHole,
     .x = 136, .y = 992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14acidants3, .path = &path2905,
     .pathIndex = 1, .child = 0, .interval = 6
@@ -9758,6 +10001,7 @@ static const Path *r14wasp1a_paths[] = {
 const LevelObject lobj2910 = {
     .definition = &defWaspShooter,
     .x = 136, .y = 1128,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp1a, .path = &path2911,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9820,6 +10064,7 @@ static const Path *r14wasp1b_paths[] = {
 const LevelObject lobj2917 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 1136,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp1b, .path = &path2921,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9882,6 +10127,7 @@ static const Path *r14wasp2a_paths[] = {
 const LevelObject lobj2924 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 1072,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp2a, .path = &path2928,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -9944,6 +10190,7 @@ static const Path *r14wasp2b_paths[] = {
 const LevelObject lobj2931 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 1096,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp2b, .path = &path2935,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10006,6 +10253,7 @@ static const Path *r14wasp3a_paths[] = {
 const LevelObject lobj2938 = {
     .definition = &defWaspShooter,
     .x = 136, .y = 1056,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp3a, .path = &path2942,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10068,6 +10316,7 @@ static const Path *r14wasp3b_paths[] = {
 const LevelObject lobj2945 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 1032,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp3b, .path = &path2949,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10130,6 +10379,7 @@ static const Path *r14wasp4a_paths[] = {
 const LevelObject lobj2952 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 960,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp4a, .path = &path2956,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10192,6 +10442,7 @@ static const Path *r14wasp4b_paths[] = {
 const LevelObject lobj2959 = {
     .definition = &defWaspShooter,
     .x = 136, .y = 952,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp4b, .path = &path2963,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10254,6 +10505,7 @@ static const Path *r14wasp4c_paths[] = {
 const LevelObject lobj2966 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 984,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp4c, .path = &path2970,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10316,6 +10568,7 @@ static const Path *r14wasp5a_paths[] = {
 const LevelObject lobj2973 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 896,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp5a, .path = &path2977,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10378,6 +10631,7 @@ static const Path *r14wasp5b_paths[] = {
 const LevelObject lobj2980 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 888,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp5b, .path = &path2984,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10440,6 +10694,7 @@ static const Path *r14wasp5c_paths[] = {
 const LevelObject lobj2987 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 920,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp5c, .path = &path2991,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10547,6 +10802,7 @@ static const Path *r14wasp6a_paths[] = {
 const LevelObject lobj2994 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 832,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp6a, .path = &path3002,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10554,6 +10810,7 @@ const LevelObject lobj2994 = {
 const LevelObject lobj2995 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 832,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp6a, .path = &path3003,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10662,6 +10919,7 @@ static const Path *r14wasp6b_paths[] = {
 const LevelObject lobj3007 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 848,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r14wasp6b, .path = &path3015,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10669,6 +10927,7 @@ const LevelObject lobj3007 = {
 const LevelObject lobj3008 = {
     .definition = &defWaspShooter,
     .x = 120, .y = 848,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r14wasp6b, .path = &path3016,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10777,6 +11036,7 @@ static const Path *Copy_of_r14wasp6a_paths[] = {
 const LevelObject lobj3020 = {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &Copy_of_r14wasp6a, .path = &path3028,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10784,6 +11044,7 @@ const LevelObject lobj3020 = {
 const LevelObject lobj3021 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &Copy_of_r14wasp6a, .path = &path3029,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10892,6 +11153,7 @@ static const Path *Copy_of_r14wasp6b_paths[] = {
 const LevelObject lobj3033 = {
     .definition = &defWaspShooter,
     .x = 136, .y = 800,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &Copy_of_r14wasp6b, .path = &path3041,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10899,6 +11161,7 @@ const LevelObject lobj3033 = {
 const LevelObject lobj3034 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 800,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &Copy_of_r14wasp6b, .path = &path3042,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10939,6 +11202,7 @@ static const Path *r14powerup1_paths[] = {
 const LevelObject lobj3046 = {
     .definition = &defHoneyCell,
     .x = 72, .y = 992,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14powerup1, .path = &path3047,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -10978,6 +11242,7 @@ static const Path *r14powerup2_paths[] = {
 const LevelObject lobj3050 = {
     .definition = &defHoneyCell,
     .x = 184, .y = 960,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r14powerup2, .path = &path3051,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11017,6 +11282,7 @@ static const Path *r15powerup2_paths[] = {
 const LevelObject lobj3054 = {
     .definition = &defHoneyCell,
     .x = 72, .y = 800,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r15powerup2, .path = &path3055,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11056,6 +11322,7 @@ static const Path *r15powerup1_paths[] = {
 const LevelObject lobj3058 = {
     .definition = &defHoneyCell,
     .x = 184, .y = 864,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r15powerup1, .path = &path3059,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11146,6 +11413,7 @@ static const Path *r16acidants1_paths[] = {
 const LevelObject lobj3062 = {
     .definition = &defAntHole,
     .x = 40, .y = 560,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants1, .path = &path3063,
     .pathIndex = 1, .child = 0, .interval = 15
@@ -11161,6 +11429,7 @@ extern LevelObjectGroup r16powerup;
 const LevelObject lobj3069 = {
     .definition = &defHoneyPot,
     .x = 168, .y = 592,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11168,6 +11437,7 @@ const LevelObject lobj3069 = {
 const LevelObject lobj3070 = {
     .definition = &defHoneyPot,
     .x = 88, .y = 592,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11339,6 +11609,7 @@ static const Path *r16acidants2_paths[] = {
 const LevelObject lobj3073 = {
     .definition = &defAntHole,
     .x = 72, .y = 472,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants2, .path = &path3075,
     .pathIndex = 1, .child = 0, .interval = 15
@@ -11346,6 +11617,7 @@ const LevelObject lobj3073 = {
 const LevelObject lobj3072 = {
     .definition = &defAntHole,
     .x = 184, .y = 456,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16acidants2, .path = &path3074,
     .pathIndex = 1, .child = 0, .interval = 15
@@ -11362,6 +11634,7 @@ extern LevelObjectGroup r16powerup2;
 const LevelObject lobj3085 = {
     .definition = &defReinforcedHoneyPot,
     .x = 128, .y = 512,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup2, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11377,6 +11650,7 @@ extern LevelObjectGroup r17powerup;
 const LevelObject lobj3088 = {
     .definition = &defHoneyPot,
     .x = 128, .y = 408,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11384,6 +11658,7 @@ const LevelObject lobj3088 = {
 const LevelObject lobj3087 = {
     .definition = &defHoneyPot,
     .x = 152, .y = 400,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11391,6 +11666,7 @@ const LevelObject lobj3087 = {
 const LevelObject lobj3089 = {
     .definition = &defHoneyPot,
     .x = 112, .y = 400,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11455,6 +11731,7 @@ static const Path *r17fly1a_paths[] = {
 const LevelObject lobj3091 = {
     .definition = &defWaspShooter,
     .x = 40, .y = 472,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17fly1a, .path = &path3092,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11517,6 +11794,7 @@ static const Path *r17fly1b_paths[] = {
 const LevelObject lobj3098 = {
     .definition = &defWaspShooter,
     .x = 208, .y = 472,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17fly1b, .path = &path3099,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11579,6 +11857,7 @@ static const Path *r17fly2a_paths[] = {
 const LevelObject lobj3105 = {
     .definition = &defWaspShooter,
     .x = 24, .y = 496,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17fly2a, .path = &path3106,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11641,6 +11920,7 @@ static const Path *r17fly2b_paths[] = {
 const LevelObject lobj3112 = {
     .definition = &defWaspShooter,
     .x = 232, .y = 496,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17fly2b, .path = &path3113,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11728,6 +12008,7 @@ static const Path *r17wasp1_paths[] = {
 const LevelObject lobj3119 = {
     .definition = &defWasp,
     .x = 16, .y = 456,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17wasp1, .path = &path3121,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11735,6 +12016,7 @@ const LevelObject lobj3119 = {
 const LevelObject lobj3120 = {
     .definition = &defWasp,
     .x = 240, .y = 456,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp1, .path = &path3122,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11823,6 +12105,7 @@ static const Path *r17wasp3_paths[] = {
 const LevelObject lobj3130 = {
     .definition = &defWasp,
     .x = 56, .y = 408,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17wasp3, .path = &path3132,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11830,6 +12113,7 @@ const LevelObject lobj3130 = {
 const LevelObject lobj3131 = {
     .definition = &defWasp,
     .x = 200, .y = 408,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp3, .path = &path3133,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11918,6 +12202,7 @@ static const Path *r17wasp5_paths[] = {
 const LevelObject lobj3141 = {
     .definition = &defWasp,
     .x = 112, .y = 384,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17wasp5, .path = &path3143,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -11925,6 +12210,7 @@ const LevelObject lobj3141 = {
 const LevelObject lobj3142 = {
     .definition = &defWasp,
     .x = 144, .y = 384,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp5, .path = &path3144,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -12013,6 +12299,7 @@ static const Path *r17wasp7_paths[] = {
 const LevelObject lobj3152 = {
     .definition = &defWasp,
     .x = 80, .y = 360,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17wasp7, .path = &path3154,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -12020,6 +12307,7 @@ const LevelObject lobj3152 = {
 const LevelObject lobj3153 = {
     .definition = &defWasp,
     .x = 176, .y = 360,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp7, .path = &path3155,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -12108,6 +12396,7 @@ static const Path *r17wasp9_paths[] = {
 const LevelObject lobj3163 = {
     .definition = &defWasp,
     .x = 40, .y = 384,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &r17wasp9, .path = &path3165,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -12115,6 +12404,7 @@ const LevelObject lobj3163 = {
 const LevelObject lobj3164 = {
     .definition = &defWasp,
     .x = 216, .y = 384,
+    .palette = 0,
     .animInd = 0, .flags = 2048,
     .group = &r17wasp9, .path = &path3166,
     .pathIndex = 1, .child = 0, .interval = 0
@@ -12131,6 +12421,7 @@ extern LevelObjectGroup r18powerup2;
 const LevelObject lobj3174 = {
     .definition = &defReinforcedHoneyPot,
     .x = 120, .y = 192,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r18powerup2, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -12146,6 +12437,7 @@ extern LevelObjectGroup r18powerup3;
 const LevelObject lobj3176 = {
     .definition = &defReinforcedHoneyPot,
     .x = 136, .y = 128,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r18powerup3, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -12505,6 +12797,7 @@ static const Path *waspboss_paths[] = {
 const LevelObject lobj3178 = {
     .definition = &defWaspBoss,
     .x = 128, .y = 440,
+    .palette = 0,
     .animInd = 0, .flags = 0,
     .group = &waspboss, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -12512,6 +12805,7 @@ const LevelObject lobj3178 = {
 const LevelObject lobj3200 = {
     .definition = 0 /* to be assigned */,
     .x = 128, .y = 96,
+    .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &waspboss, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0

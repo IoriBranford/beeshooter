@@ -6872,7 +6872,11 @@ end</property>
    <object id="4141" template="pathpoints/EnterForeground.tx" x="8" y="1696"/>
   </objectgroup>
   <objectgroup id="285" name="r11powerup">
-   <object id="2626" template="enemies/HoneyPot.tx" x="120" y="1656"/>
+   <object id="2626" template="enemies/HoneyPot.tx" x="120" y="1656">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
    <object id="2627" template="triggers/SpawnCharacters.tx" x="-96" y="1664"/>
   </objectgroup>
   <objectgroup id="286" name="r12wasp1a">
