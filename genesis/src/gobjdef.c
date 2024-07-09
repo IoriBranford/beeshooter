@@ -191,7 +191,7 @@ GameObjectDefinition defAlienMind = {
     .spriteDepth = 1,
     .palette = &palAlien,
     .bodyW = FIX16(12), .bodyH = FIX16(12),
-    //.update = ENEMY_updateAlienMind,
+    .update = GOBJ_updatePathWalker,
     //.onDefeat = ENEMY_onDefeatAlienMind
 };
 GameObjectDefinition defAcidAnt;
