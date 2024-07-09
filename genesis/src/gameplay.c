@@ -80,6 +80,16 @@ void GAME_scorePoints(u32 points) {
     score = min(MAXSCORE, newScore);
 }
 
+void GAME_addTime(u16 time) {
+    timeLeft += time;
+    timerMinutes = timeLeft / 3600;
+    timerSeconds = (timeLeft / 60) % 60;
+    timerFrames = timeLeft % 60;
+    UI_updateTimerMinutes(timerMinutes);
+    UI_updateTimerSeconds(timerSeconds);
+    UI_updateTimerFrames(timerFrames);
+}
+
 void GAME_setTimerPaused(bool paused) {
     timePaused = paused;
 }
@@ -107,6 +117,12 @@ void GAME_putObjectInTeam(GameObject *gobj, Team team) {
             teamSizes[team]++;
             gobj->team = team;
         }
+    }
+}
+
+void GAME_defeatTeam(Team team) {
+    for (int i = teamSizes[team] - 1; i >= 0; --i) {
+        GOBJ_defeat(teamObjects[team][i]);
     }
 }
 

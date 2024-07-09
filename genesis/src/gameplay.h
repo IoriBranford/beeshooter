@@ -26,8 +26,11 @@ typedef enum GameResult {
 typedef struct PlayerObject PlayerObject;
 
 void GAME_scorePoints(u32 points);
+void GAME_addTime(u16 time);
 void GAME_setTimerPaused(bool paused);
 void GAME_end(GameResult r);
+
+void GAME_defeatTeam(Team team);
 
 PlayerObject* GAME_livePlayer();
 
