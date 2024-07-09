@@ -263,9 +263,10 @@ GameObjectDefinition *part1defs[8] = {
     &defAlienMind
 };
 
-GameObjectDefinition *part2defs[2] = {
+GameObjectDefinition *part2defs[3] = {
     &defAcidAnt,
     &defAcidAntBullet,
+    &defWasp
 };
 
 static u16 levelObjectTileStart;
@@ -326,11 +327,13 @@ u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex) {
     levelObjectTileStart = tileIndex;
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
+    defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
     return tileIndex;
 }
 
 u16 GOBJDEF_freePart2EnemyFrames() {
     defAcidBloodSmall.aniFrameTiles = NULL;
+    defWaspShooter.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     return levelObjectTileStart;
 }
