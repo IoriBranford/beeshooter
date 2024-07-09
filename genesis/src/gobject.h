@@ -52,7 +52,7 @@ typedef struct GameObject {
     fix16 speed;
 
     u16 health;
-    s16 team;
+    u16 teams;
     u8 invulTimer;
 
     u8 shootTimer;

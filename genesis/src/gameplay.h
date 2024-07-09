@@ -36,7 +36,7 @@ PlayerObject* GAME_livePlayer();
 
 GameObject* GAME_createObject();
 void GAME_addObjectToTeams(GameObject *gobj, u16 teams);
-void GAME_removeObjectFromAllTeams(GameObject *gobj);
+void GAME_removeObjectFromTeams(GameObject *gobj);
 void GAME_releaseObject(GameObject *gobj);
 
 #endif

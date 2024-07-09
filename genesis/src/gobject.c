@@ -21,7 +21,7 @@ void GOBJ_init(GameObject *self) {
     // self->pathPointDistLeft = 0;
     // self->speed = FIX16(1);
     // self->health = 1;
-    self->team = TEAM_NONE;
+    self->teams = 0;
     self->invulTimer = 0;
     // self->bodyX0 = self->bodyX1 = self->bodyY0 = self->bodyY1 = 0;
     GOBJ_startShooting(self, 0, 0);

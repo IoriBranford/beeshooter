@@ -95,55 +95,32 @@ void GAME_setTimerPaused(bool paused) {
     timePaused = paused;
 }
 
-void GAME_putObjectInTeam(GameObject *gobj, Team team) {
-    Team oldTeam = gobj->team;
-    if (team == oldTeam)
-        return;
-    if (oldTeam > TEAM_NONE) {
-        GameObject **objects = teamObjects[oldTeam];
-        u8 n = teamSizes[oldTeam];
-        for (int i = 0; i < n; ++i) {
-            if (objects[i] == gobj) {
-                objects[i] = objects[--n];
-                objects[n] = NULL;
-                teamSizes[oldTeam] = n;
-                gobj->team = TEAM_NONE;
-                break;
-            }
-        }
-    }
-    if (team > TEAM_NONE) {
-        if (teamSizes[team] < TEAM_LIMIT) {
-            teamObjects[team][teamSizes[team]] = gobj;
-            teamSizes[team]++;
-            gobj->team = team;
-        }
-    }
-}
-
 void GAME_addObjectToTeams(GameObject *gobj, u16 teams) {
     for (u16 team = 0; team < NUM_TEAMS; ++team) {
         if (((1<<team) & teams)) {
             if (teamSizes[team] < TEAM_LIMIT) {
                 teamObjects[team][teamSizes[team]] = gobj;
                 teamSizes[team]++;
-                gobj->team = team;
+                gobj->teams |= (1<<team);
             }
         }
     }
 }
 
-void GAME_removeObjectFromAllTeams(GameObject *gobj) {
+void GAME_removeObjectFromTeams(GameObject *gobj) {
+    u16 teams = gobj->teams;
     for (u16 team = 0; team < NUM_TEAMS; ++team) {
-        GameObject **objects = teamObjects[team];
-        u8 n = teamSizes[team];
-        for (int i = 0; i < n; ++i) {
-            if (objects[i] == gobj) {
-                objects[i] = objects[--n];
-                objects[n] = NULL;
-                teamSizes[team] = n;
-                gobj->team = TEAM_NONE;
-                break;
+        if (((1<<team) & teams)) {
+            GameObject **objects = teamObjects[team];
+            u8 n = teamSizes[team];
+            for (int i = 0; i < n; ++i) {
+                if (objects[i] == gobj) {
+                    objects[i] = objects[--n];
+                    objects[n] = NULL;
+                    teamSizes[team] = n;
+                    gobj->teams &= ~(1<<team);
+                    break;
+                }
             }
         }
     }
@@ -167,7 +144,7 @@ GameObject* GAME_createObject() {
 }
 
 void GAME_releaseObject(GameObject *gobj) {
-    GAME_removeObjectFromAllTeams(gobj);
+    GAME_removeObjectFromTeams(gobj);
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
 #ifdef DEBUG
@@ -204,7 +181,7 @@ void GAME_doCollision() {
                 if (enemy->health) {
                     GOBJ_dealDamage(enemy, 1);
                     if (!enemy->health) {
-                        GAME_removeObjectFromAllTeams(enemy);
+                        GAME_removeObjectFromTeams(enemy);
                         GOBJ_defeat(enemy);
                     }
                 }
@@ -239,7 +216,7 @@ void GAME_doCollision() {
                 PLAYER_powerUp(&player);
             }
             if (enemyShot->health <= 1) {
-                GAME_removeObjectFromAllTeams(enemyShot);
+                GAME_removeObjectFromTeams(enemyShot);
                 GOBJ_defeat(enemyShot);
             } else {
                 ++s;
