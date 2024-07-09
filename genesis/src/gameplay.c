@@ -167,7 +167,7 @@ GameObject* GAME_createObject() {
 }
 
 void GAME_releaseObject(GameObject *gobj) {
-    GAME_putObjectInTeam(gobj, TEAM_NONE);
+    GAME_removeObjectFromAllTeams(gobj);
     GOBJ_releaseSprite(gobj);
     OBJ_release(gobjPool, (Object*)gobj, true);
 #ifdef DEBUG
@@ -204,7 +204,7 @@ void GAME_doCollision() {
                 if (enemy->health) {
                     GOBJ_dealDamage(enemy, 1);
                     if (!enemy->health) {
-                        GAME_putObjectInTeam(enemy, TEAM_NONE);
+                        GAME_removeObjectFromAllTeams(enemy);
                         GOBJ_defeat(enemy);
                     }
                 }
@@ -225,16 +225,24 @@ void GAME_doCollision() {
     GOBJ_updateBody(gobjPlayer);
     for (u8 s = 0; s < teamSizes[TEAM_ENEMYSHOT];) {
         GameObject *enemyShot = enemyShots[s];
+        if (enemyShot->invulTimer) {
+            ++s;
+            continue;
+        }
         if (GOBJ_isHitting(gobjPlayer, enemyShot)) {
             u16 damage = enemyShot->definition->damage;
-            GAME_putObjectInTeam(enemyShot, TEAM_NONE);
-            GOBJ_defeat(enemyShot);
             if (damage) {
                 if (!player.invulTimer) {
                     PLAYER_takeDamage(&player, damage);
                 }
             } else {
                 PLAYER_powerUp(&player);
+            }
+            if (enemyShot->health <= 1) {
+                GAME_removeObjectFromAllTeams(enemyShot);
+                GOBJ_defeat(enemyShot);
+            } else {
+                ++s;
             }
         } else {
             ++s;

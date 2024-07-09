@@ -49,7 +49,7 @@ GameObject* GOBJ_createFromDef(const GameObjectDefinition *def, fix16 centerX, f
     obj->health = def->health;
     obj->speed = def->speed;
     obj->update = (ObjectCallback*)def->update;
-    GAME_putObjectInTeam(obj, def->team);
+    GAME_addObjectToTeams(obj, def->teams);
     if (def->init)
         (*def->init)(obj);
     return obj;

@@ -21,7 +21,7 @@ struct GameObjectDefinition {
     const Palette *palette;
     u16 **aniFrameTiles;
     fix16 bodyW, bodyH;
-    Team team;
+    u16 teams;
     PathParent pathParent;
     GObjFunction init;
     GObjFunction update;

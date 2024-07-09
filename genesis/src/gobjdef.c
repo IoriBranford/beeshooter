@@ -16,14 +16,13 @@ GameObjectDefinition defPlayer = {
     .bodyH = FIX16(4),
 };
 GameObjectDefinition defAngleTester = {
-    .team = TEAM_NONE,
     .spriteDef = &sprFlyBullet,
     .spriteDepth = -90,
     .palette = &palFlyAndHoney,
     .update = BULLET_updateAngleTester
 };
 GameObjectDefinition defPlayerShot = {
-    .team = TEAM_PLAYERSHOT,
+    .teams = 1<<TEAM_PLAYERSHOT,
     .speed = FIX16(16),
     .spriteDef = &sprPlayerShot,
     .spriteDepth = -90,
@@ -33,7 +32,6 @@ GameObjectDefinition defPlayerShot = {
     .update = BULLET_update
 };
 GameObjectDefinition defBloodSmall = {
-    .team = TEAM_NONE,
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
     .palette = &palPlayer,
@@ -41,7 +39,6 @@ GameObjectDefinition defBloodSmall = {
     .update = GOBJ_updateSpark
 };
 GameObjectDefinition defAcidBloodSmall = {
-    .team = TEAM_NONE,
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
     .palette = &palAcid,
@@ -49,7 +46,7 @@ GameObjectDefinition defAcidBloodSmall = {
     .update = GOBJ_updateSpark
 };
 GameObjectDefinition defAnt = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
     .defeatPoints = 125,
     .spriteDef = &sprAnt,
@@ -61,7 +58,7 @@ GameObjectDefinition defAnt = {
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defHoneyPot = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 1,
     .spriteDef = &sprHoneyPot,
     .spriteDepth = -1,
@@ -72,7 +69,7 @@ GameObjectDefinition defHoneyPot = {
     .onDefeat = GOBJ_openHoneypot,
 };
 GameObjectDefinition defPowerup = {
-    .team = TEAM_ENEMYSHOT,
+    .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1,
     .spriteDef = &sprPowerup,
     .spriteDepth = -20,
@@ -82,7 +79,7 @@ GameObjectDefinition defPowerup = {
     .update = GOBJ_updatePowerupRise,
 };
 GameObjectDefinition defFlyBullet = {
-    .team = TEAM_ENEMYSHOT,
+    .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
     .speed = FIX16(3),
     .spriteDef = &sprFlyBullet,
@@ -92,7 +89,7 @@ GameObjectDefinition defFlyBullet = {
     .update = BULLET_update,
 };
 GameObjectDefinition defFly = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
     .defeatPoints = 500,
     .spriteDef = &sprFly,
@@ -107,7 +104,7 @@ GameObjectDefinition defFly = {
     .shootFunction = ENEMY_shootAtPlayer
 };
 GameObjectDefinition defHoneyCell = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 1,
     .spriteDef = &sprPowerup,
     .spriteDepth = -1,
@@ -118,7 +115,7 @@ GameObjectDefinition defHoneyCell = {
     .onDefeat = GOBJ_openHoneypot,
 };
 GameObjectDefinition defAntBig = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 16, .speed = FIX16(1),
     .defeatPoints = 2500,
     .spriteDef = &sprAntBig,
@@ -131,7 +128,7 @@ GameObjectDefinition defAntBig = {
     .onDefeat = ENEMY_onDefeatBigAnt
 };
 GameObjectDefinition defAntBigHead = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 4, .speed = FIX16(1),
     .defeatPoints = 250,
     .spriteDef = &sprAntBigHead,
@@ -143,7 +140,7 @@ GameObjectDefinition defAntBigHead = {
     .update = GOBJ_updateFaller,
 };
 GameObjectDefinition defAntBigButt = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 4, .speed = FIX16(1),
     .defeatPoints = 250,
     .spriteDef = &sprAntBigButt,
@@ -155,7 +152,7 @@ GameObjectDefinition defAntBigButt = {
     .update = GOBJ_updateFaller,
 };
 GameObjectDefinition defAlienGunnerBullet = {
-    .team = TEAM_ENEMYSHOT,
+    .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
     .speed = FIX16(4),
     .spriteDef = &sprFlyBullet,
@@ -165,7 +162,7 @@ GameObjectDefinition defAlienGunnerBullet = {
     .update = BULLET_update,
 };
 GameObjectDefinition defAlienGunner = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
     .defeatPoints = 500,
     .spriteDef = &sprAlien,
@@ -179,7 +176,7 @@ GameObjectDefinition defAlienGunner = {
     .shootFunction = ENEMY_alienGunnerShoot
 };
 GameObjectDefinition defAlienPillager = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 4, .speed = FIX16(2),
     .defeatPoints = 250,
     .spriteDef = &sprAlien,
@@ -192,8 +189,9 @@ GameObjectDefinition defAlienPillager = {
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defAlienMind = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
     .health = 64,
+    .damage = 65535,
     .defeatPoints = 10000,
     .spriteDef = &sprAlienMind,
     .spriteDepth = 1,
@@ -203,7 +201,7 @@ GameObjectDefinition defAlienMind = {
     .onDefeat = MIDBOSS_onDefeat
 };
 GameObjectDefinition defAcidAntBullet = {
-    .team = TEAM_ENEMYSHOT,
+    .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
     .speed = FIX16(3),
     .spriteDef = &sprAcidBullet,
@@ -213,7 +211,7 @@ GameObjectDefinition defAcidAntBullet = {
     .update = BULLET_updateFalling,
 };
 GameObjectDefinition defAcidAnt = {
-    .team = TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
     .defeatPoints = 250,
     .spriteDef = &sprAnt,
