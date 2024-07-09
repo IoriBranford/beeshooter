@@ -62,16 +62,21 @@ void GOBJ_initSprite(GameObject *self) {
     const SpriteDefinition *spriteDef = def->spriteDef;
     if (!spriteDef)
         return;
-    u16 paletteSlot = LEVEL_getPaletteSlot(def->palette);
-    u16 attr = TILE_ATTR(paletteSlot, false, false, false);
+    const Palette *palette = 0;
+    u16 attr = 0;
     u16 animInd = 0;
     if (self->levelObject) {
+        palette = self->levelObject->palette;
         attr |= self->levelObject->flags;
         animInd = self->levelObject->animInd;
     } else {
         attr |= TILE_ATTR_PRIORITY_MASK;
         animInd = def->animInd;
     }
+    if (!palette)
+        palette = def->palette;
+    u16 paletteSlot = LEVEL_getPaletteSlot(palette);
+    attr |= TILE_ATTR(paletteSlot, false, false, false);
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
     s16 sprX = fix16ToRoundedInt(tl.x), sprY = fix16ToRoundedInt(tl.y);
     if (def->aniFrameTiles) {

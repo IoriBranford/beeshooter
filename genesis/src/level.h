@@ -6,6 +6,8 @@
 #include "anim.h"
 #include "gobject.h"
 #include "enemy.h"
+#include "map.h"
+#include "res_gfx.h"
 
 typedef struct Trigger Trigger;
 typedef struct PathPoint PathPoint;
@@ -35,6 +37,7 @@ struct Path {
 };
 struct LevelObject {
     const GameObjectDefinition *definition;
+    const Palette *palette;
     s16 x, y;
     u8 animInd;
     u8 pathIndex;

@@ -183,9 +183,12 @@ return `{
                     child = child && `&lobj${child.id}` || '0'
 
                     let interval = object.resolvedProperty('spawninterval') || 0
+
+                    let palette = object.resolvedProperty('palette')
 return `const LevelObject lobj${object.id} = {
     .definition = ${definition},
     .x = ${object.x}, .y = ${object.y},
+    .palette = ${palette && `&${palette}` || 0},
     .animInd = ${anim}, .flags = ${flags},
     .group = &${cName}, .path = ${objPath == null && '0' || `&path${objPath.id}`},
     .pathIndex = ${objPathPointIndex}, .child = ${child}, .interval = ${interval}
