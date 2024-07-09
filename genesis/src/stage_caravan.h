@@ -41,6 +41,7 @@ void markDisappear(GameObject *self, const GameObjectAction *action);
 void setSpriteAnim(GameObject *self, const GameObjectAction *action);
 void startAlienMindFight(GameObject *self, const GameObjectAction *action);
 void setUpdate(GameObject *self, const GameObjectAction *action);
+void setInvul(GameObject *self, const GameObjectAction *action);
 void setSpriteVFlip(GameObject *self, const GameObjectAction *action);
 void setSpriteHFlip(GameObject *self, const GameObjectAction *action);
 void startWaspAttack(GameObject *self, const GameObjectAction *action);

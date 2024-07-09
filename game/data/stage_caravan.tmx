@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4152">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4196">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -6217,6 +6217,36 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4152" template="pathpoints/SetInvul.tx" x="216" y="1904">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4153" template="pathpoints/SetInvul.tx" x="216" y="1864"/>
+   <object id="4154" template="pathpoints/SetInvul.tx" x="200" y="1920">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4155" template="pathpoints/SetInvul.tx" x="200" y="1880"/>
+   <object id="4156" template="pathpoints/SetInvul.tx" x="184" y="1928">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4157" template="pathpoints/SetInvul.tx" x="184" y="1888"/>
+   <object id="4158" template="pathpoints/SetInvul.tx" x="168" y="1928">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4159" template="pathpoints/SetInvul.tx" x="168" y="1888"/>
+   <object id="4160" template="pathpoints/SetInvul.tx" x="152" y="1920">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4161" template="pathpoints/SetInvul.tx" x="152" y="1880"/>
   </objectgroup>
   <objectgroup id="263" name="room10acidants2">
    <object id="2508" template="triggers/SpawnCharacters.tx" x="-32" y="1840"/>
@@ -6314,6 +6344,36 @@ end</property>
      <property name="flip" type="bool" value="true"/>
     </properties>
    </object>
+   <object id="4162" template="pathpoints/SetInvul.tx" x="104" y="1904">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4163" template="pathpoints/SetInvul.tx" x="104" y="1864"/>
+   <object id="4164" template="pathpoints/SetInvul.tx" x="88" y="1912">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4165" template="pathpoints/SetInvul.tx" x="88" y="1872"/>
+   <object id="4166" template="pathpoints/SetInvul.tx" x="72" y="1904">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4167" template="pathpoints/SetInvul.tx" x="72" y="1864"/>
+   <object id="4168" template="pathpoints/SetInvul.tx" x="56" y="1896">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4169" template="pathpoints/SetInvul.tx" x="56" y="1856"/>
+   <object id="4170" template="pathpoints/SetInvul.tx" x="40" y="1888">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4171" template="pathpoints/SetInvul.tx" x="40" y="1848"/>
   </objectgroup>
   <objectgroup id="264" name="r11acidants1a">
    <object id="2524" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="232" y="1816" rotation="90"/>
@@ -6335,6 +6395,12 @@ end</property>
      <property name="flip" type="bool" value="true"/>
     </properties>
    </object>
+   <object id="4172" template="pathpoints/SetInvul.tx" x="232" y="1816">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4173" template="pathpoints/SetInvul.tx" x="232" y="1776"/>
   </objectgroup>
   <objectgroup id="265" name="r11acidants1b">
    <object id="2528" template="enemies/AcidAntClimbForeground.tx" gid="483" x="200" y="1816" rotation="-90"/>
@@ -6356,6 +6422,12 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4180" template="pathpoints/SetInvul.tx" x="200" y="1816">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4181" template="pathpoints/SetInvul.tx" x="200" y="1776"/>
   </objectgroup>
   <objectgroup id="266" name="r11acidants1c">
    <object id="2532" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="168" y="1816" rotation="90"/>
@@ -6377,6 +6449,12 @@ end</property>
      <property name="flip" type="bool" value="true"/>
     </properties>
    </object>
+   <object id="4182" template="pathpoints/SetInvul.tx" x="168" y="1816">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4183" template="pathpoints/SetInvul.tx" x="168" y="1776"/>
   </objectgroup>
   <objectgroup id="267" name="r11acidants1d">
    <object id="2536" template="enemies/AcidAntClimbForeground.tx" gid="483" x="136" y="1816" rotation="-90"/>
@@ -6398,6 +6476,12 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4184" template="pathpoints/SetInvul.tx" x="136" y="1816">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4185" template="pathpoints/SetInvul.tx" x="136" y="1776"/>
   </objectgroup>
   <objectgroup id="268" name="r11acidants1e">
    <object id="2540" template="enemies/AcidAntClimbForeground.tx" gid="483" x="120" y="1808" rotation="-90"/>
@@ -6419,6 +6503,12 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4186" template="pathpoints/SetInvul.tx" x="120" y="1808">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4187" template="pathpoints/SetInvul.tx" x="120" y="1768"/>
   </objectgroup>
   <objectgroup id="269" name="r11acidants1f">
    <object id="2544" template="enemies/AcidAntClimbForeground.tx" gid="483" x="88" y="1800" rotation="-90"/>
@@ -6440,6 +6530,12 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4188" template="pathpoints/SetInvul.tx" x="88" y="1800">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4189" template="pathpoints/SetInvul.tx" x="88" y="1760"/>
   </objectgroup>
   <objectgroup id="270" name="r11acidants1g">
    <object id="2548" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="56" y="1800" rotation="90"/>
@@ -6461,6 +6557,12 @@ end</property>
      <property name="flip" type="bool" value="true"/>
     </properties>
    </object>
+   <object id="4190" template="pathpoints/SetInvul.tx" x="56" y="1800">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4191" template="pathpoints/SetInvul.tx" x="56" y="1760"/>
   </objectgroup>
   <objectgroup id="271" name="r11acidants1h">
    <object id="2552" template="enemies/AcidAntClimbForeground.tx" gid="483" x="24" y="1800" rotation="-90"/>
@@ -6482,6 +6584,12 @@ end</property>
      <property name="flip" type="bool" value="false"/>
     </properties>
    </object>
+   <object id="4192" template="pathpoints/SetInvul.tx" x="24" y="1800">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4193" template="pathpoints/SetInvul.tx" x="24" y="1760"/>
   </objectgroup>
   <objectgroup id="272" name="room11acidants2a">
    <object id="2556" template="triggers/SpawnCharacters.tx" x="-32" y="1632"/>
