@@ -5836,7 +5836,9 @@ LevelObjectGroup part2 = {
 };
 extern LevelObjectGroup room10acidants;
 static const GameObjectAction path2498_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2498 = {
 .x = 152, .y = 1920, .numPoints = 3, .points = {
@@ -5851,7 +5853,7 @@ static const Path path2498 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2498_1_actions
 },
 {
@@ -5864,7 +5866,9 @@ static const Path path2498 = {
 }
 };
 static const GameObjectAction path2499_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2499 = {
 .x = 168, .y = 1928, .numPoints = 3, .points = {
@@ -5879,7 +5883,7 @@ static const Path path2499 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2499_1_actions
 },
 {
@@ -5892,7 +5896,9 @@ static const Path path2499 = {
 }
 };
 static const GameObjectAction path2500_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2500 = {
 .x = 184, .y = 1928, .numPoints = 3, .points = {
@@ -5907,7 +5913,7 @@ static const Path path2500 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2500_1_actions
 },
 {
@@ -5920,7 +5926,9 @@ static const Path path2500 = {
 }
 };
 static const GameObjectAction path2501_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2501 = {
 .x = 200, .y = 1920, .numPoints = 3, .points = {
@@ -5935,7 +5943,7 @@ static const Path path2501 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2501_1_actions
 },
 {
@@ -5948,7 +5956,9 @@ static const Path path2501 = {
 }
 };
 static const GameObjectAction path2502_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2502 = {
 .x = 216, .y = 1904, .numPoints = 3, .points = {
@@ -5963,7 +5973,7 @@ static const Path path2502 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2502_1_actions
 },
 {
@@ -6030,7 +6040,9 @@ LevelObjectGroup room10acidants = {
 };
 extern LevelObjectGroup room10acidants2;
 static const GameObjectAction path2514_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2514 = {
 .x = 40, .y = 1888, .numPoints = 3, .points = {
@@ -6045,7 +6057,7 @@ static const Path path2514 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2514_1_actions
 },
 {
@@ -6058,7 +6070,9 @@ static const Path path2514 = {
 }
 };
 static const GameObjectAction path2515_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2515 = {
 .x = 56, .y = 1896, .numPoints = 3, .points = {
@@ -6073,7 +6087,7 @@ static const Path path2515 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2515_1_actions
 },
 {
@@ -6086,7 +6100,9 @@ static const Path path2515 = {
 }
 };
 static const GameObjectAction path2516_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2516 = {
 .x = 72, .y = 1904, .numPoints = 3, .points = {
@@ -6101,7 +6117,7 @@ static const Path path2516 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2516_1_actions
 },
 {
@@ -6114,7 +6130,9 @@ static const Path path2516 = {
 }
 };
 static const GameObjectAction path2517_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2517 = {
 .x = 88, .y = 1912, .numPoints = 3, .points = {
@@ -6129,7 +6147,7 @@ static const Path path2517 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2517_1_actions
 },
 {
@@ -6142,7 +6160,9 @@ static const Path path2517 = {
 }
 };
 static const GameObjectAction path2518_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2518 = {
 .x = 104, .y = 1904, .numPoints = 3, .points = {
@@ -6157,7 +6177,7 @@ static const Path path2518 = {
     .x = 0, .y = -40,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2518_1_actions
 },
 {
@@ -6224,7 +6244,9 @@ LevelObjectGroup room10acidants2 = {
 };
 extern LevelObjectGroup r11acidants1a;
 static const GameObjectAction path2526_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2526 = {
 .x = 264, .y = 1784, .numPoints = 3, .points = {
@@ -6239,7 +6261,7 @@ static const Path path2526 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2526_1_actions
 },
 {
@@ -6270,7 +6292,9 @@ LevelObjectGroup r11acidants1a = {
 };
 extern LevelObjectGroup r11acidants1b;
 static const GameObjectAction path2530_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2530 = {
 .x = 232, .y = 1784, .numPoints = 3, .points = {
@@ -6285,7 +6309,7 @@ static const Path path2530 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2530_1_actions
 },
 {
@@ -6316,7 +6340,9 @@ LevelObjectGroup r11acidants1b = {
 };
 extern LevelObjectGroup r11acidants1c;
 static const GameObjectAction path2534_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2534 = {
 .x = 200, .y = 1784, .numPoints = 3, .points = {
@@ -6331,7 +6357,7 @@ static const Path path2534 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2534_1_actions
 },
 {
@@ -6362,7 +6388,9 @@ LevelObjectGroup r11acidants1c = {
 };
 extern LevelObjectGroup r11acidants1d;
 static const GameObjectAction path2538_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2538 = {
 .x = 168, .y = 1784, .numPoints = 3, .points = {
@@ -6377,7 +6405,7 @@ static const Path path2538 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2538_1_actions
 },
 {
@@ -6408,7 +6436,9 @@ LevelObjectGroup r11acidants1d = {
 };
 extern LevelObjectGroup r11acidants1e;
 static const GameObjectAction path2542_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2542 = {
 .x = 152, .y = 1776, .numPoints = 3, .points = {
@@ -6423,7 +6453,7 @@ static const Path path2542 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2542_1_actions
 },
 {
@@ -6454,7 +6484,9 @@ LevelObjectGroup r11acidants1e = {
 };
 extern LevelObjectGroup r11acidants1f;
 static const GameObjectAction path2546_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2546 = {
 .x = 120, .y = 1768, .numPoints = 3, .points = {
@@ -6469,7 +6501,7 @@ static const Path path2546 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2546_1_actions
 },
 {
@@ -6500,7 +6532,9 @@ LevelObjectGroup r11acidants1f = {
 };
 extern LevelObjectGroup r11acidants1g;
 static const GameObjectAction path2550_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2550 = {
 .x = 88, .y = 1768, .numPoints = 3, .points = {
@@ -6515,7 +6549,7 @@ static const Path path2550 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2550_1_actions
 },
 {
@@ -6546,7 +6580,9 @@ LevelObjectGroup r11acidants1g = {
 };
 extern LevelObjectGroup r11acidants1h;
 static const GameObjectAction path2554_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2554 = {
 .x = 56, .y = 1768, .numPoints = 3, .points = {
@@ -6561,7 +6597,7 @@ static const Path path2554 = {
     .x = -32, .y = -8,
     .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2554_1_actions
 },
 {
@@ -6591,17 +6627,14 @@ LevelObjectGroup r11acidants1h = {
     .numObjects = 1, .objects = r11acidants1h_objects
 };
 extern LevelObjectGroup room11acidants2a;
-static const GameObjectAction path2567_0_actions[] = {
-{.action = climbUpToFloor, }
-};
 static const Path path2567 = {
 .x = 272, .y = 1616, .numPoints = 2, .points = {
 {
     .x = 0, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 1,
-    .actions = path2567_0_actions
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = -288, .y = -24,
@@ -6618,7 +6651,7 @@ static const Path *room11acidants2a_paths[] = {
 const LevelObject lobj2566 = {
     .definition = &defAcidAnt,
     .x = 272, .y = 1640,
-    .animInd = 0, .flags = 2048,
+    .animInd = 0, .flags = 34816,
     .group = &room11acidants2a, .path = &path2567,
     .pathIndex = 1, .child = 0, .interval = 0
 };
@@ -6630,17 +6663,14 @@ LevelObjectGroup room11acidants2a = {
     .numObjects = 1, .objects = room11acidants2a_objects
 };
 extern LevelObjectGroup room11acidants2b;
-static const GameObjectAction path2580_0_actions[] = {
-{.action = climbUpToFloor, }
-};
 static const Path path2580 = {
 .x = -16, .y = 1576, .numPoints = 2, .points = {
 {
     .x = 0, .y = 0,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 1,
-    .actions = path2580_0_actions
+    .numActions = 0,
+    .actions = 0
 },
 {
     .x = 288, .y = 48,
@@ -6657,7 +6687,7 @@ static const Path *room11acidants2b_paths[] = {
 const LevelObject lobj2579 = {
     .definition = &defAcidAnt,
     .x = -16, .y = 1576,
-    .animInd = 0, .flags = 0,
+    .animInd = 0, .flags = 32768,
     .group = &room11acidants2b, .path = &path2580,
     .pathIndex = 1, .child = 0, .interval = 0
 };
@@ -6670,7 +6700,10 @@ LevelObjectGroup room11acidants2b = {
 };
 extern LevelObjectGroup r11acidants3a;
 static const GameObjectAction path2583_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2583 = {
 .x = 248, .y = 1736, .numPoints = 3, .points = {
@@ -6685,7 +6718,7 @@ static const Path path2583 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2583_1_actions
 },
 {
@@ -6716,7 +6749,10 @@ LevelObjectGroup r11acidants3a = {
 };
 extern LevelObjectGroup r11acidants3b;
 static const GameObjectAction path2587_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2587 = {
 .x = 224, .y = 1736, .numPoints = 3, .points = {
@@ -6731,7 +6767,7 @@ static const Path path2587 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2587_1_actions
 },
 {
@@ -6762,7 +6798,10 @@ LevelObjectGroup r11acidants3b = {
 };
 extern LevelObjectGroup r11acidants3c;
 static const GameObjectAction path2591_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false},
+{.action = enterForeground, }
 };
 static const Path path2591 = {
 .x = 200, .y = 1736, .numPoints = 3, .points = {
@@ -6777,7 +6816,7 @@ static const Path path2591 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2591_1_actions
 },
 {
@@ -6808,7 +6847,10 @@ LevelObjectGroup r11acidants3c = {
 };
 extern LevelObjectGroup r11acidants3d;
 static const GameObjectAction path2595_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2595 = {
 .x = 176, .y = 1736, .numPoints = 3, .points = {
@@ -6823,7 +6865,7 @@ static const Path path2595 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2595_1_actions
 },
 {
@@ -6854,7 +6896,10 @@ LevelObjectGroup r11acidants3d = {
 };
 extern LevelObjectGroup r11acidants3e;
 static const GameObjectAction path2599_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2599 = {
 .x = 152, .y = 1736, .numPoints = 3, .points = {
@@ -6869,7 +6914,7 @@ static const Path path2599 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2599_1_actions
 },
 {
@@ -6900,7 +6945,10 @@ LevelObjectGroup r11acidants3e = {
 };
 extern LevelObjectGroup r11acidants3f;
 static const GameObjectAction path2603_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2603 = {
 .x = 128, .y = 1720, .numPoints = 3, .points = {
@@ -6915,7 +6963,7 @@ static const Path path2603 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2603_1_actions
 },
 {
@@ -6946,7 +6994,10 @@ LevelObjectGroup r11acidants3f = {
 };
 extern LevelObjectGroup r11acidants3g;
 static const GameObjectAction path2607_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2607 = {
 .x = 104, .y = 1720, .numPoints = 3, .points = {
@@ -6961,7 +7012,7 @@ static const Path path2607 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2607_1_actions
 },
 {
@@ -6992,7 +7043,10 @@ LevelObjectGroup r11acidants3g = {
 };
 extern LevelObjectGroup r11acidants3h;
 static const GameObjectAction path2611_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2611 = {
 .x = 80, .y = 1720, .numPoints = 3, .points = {
@@ -7007,7 +7061,7 @@ static const Path path2611 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2611_1_actions
 },
 {
@@ -7038,7 +7092,10 @@ LevelObjectGroup r11acidants3h = {
 };
 extern LevelObjectGroup r11acidants3i;
 static const GameObjectAction path2615_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true},
+{.action = enterForeground, }
 };
 static const Path path2615 = {
 .x = 56, .y = 1720, .numPoints = 3, .points = {
@@ -7053,7 +7110,7 @@ static const Path path2615 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2615_1_actions
 },
 {
@@ -7084,7 +7141,10 @@ LevelObjectGroup r11acidants3i = {
 };
 extern LevelObjectGroup r11acidants3j;
 static const GameObjectAction path2619_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false},
+{.action = enterForeground, }
 };
 static const Path path2619 = {
 .x = 32, .y = 1720, .numPoints = 3, .points = {
@@ -7099,7 +7159,7 @@ static const Path path2619 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2619_1_actions
 },
 {
@@ -7130,7 +7190,10 @@ LevelObjectGroup r11acidants3j = {
 };
 extern LevelObjectGroup r11acidants3k;
 static const GameObjectAction path2623_1_actions[] = {
-{.action = climbUpToFloor, }
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false},
+{.action = enterForeground, }
 };
 static const Path path2623 = {
 .x = 8, .y = 1720, .numPoints = 3, .points = {
@@ -7145,7 +7208,7 @@ static const Path path2623 = {
     .x = 0, .y = -24,
     .speedTo = 128, .distTo = 512,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 4,
     .actions = path2623_1_actions
 },
 {
@@ -12491,7 +12554,7 @@ const Trigger stage_caravan_triggers[] = {
 /*  98 */ { .group = &room9powerup, .action = spawnCharacters, .count = 0, .x = -16, .y = 2184 },
 /*  99 */ { .group = &room9alienmind, .action = spawnCharacters, .count = 0, .x = -16, .y = 2016 },
 /* 100 */ { .group = &room9alienmind, .action = stopStageScroll, .count = 0, .x = -32, .y = 2016 },
-/* 101 */ { .group = &part2, .action = spawnCharacters, .count = 0, .x = -24, .y = 2008 },
+/* 101 */ { .group = &part2, .action = loadPart2, .count = 0, .x = -24, .y = 2008 },
 /* 102 */ { .group = &room10acidants, .action = spawnCharacters, .count = 0, .x = -32, .y = 1856 },
 /* 103 */ { .group = &room10acidants, .action = unpauseTimer, .count = 0, .x = -40, .y = 1856 },
 /* 104 */ { .group = &room10acidants2, .action = spawnCharacters, .count = 0, .x = -32, .y = 1840 },

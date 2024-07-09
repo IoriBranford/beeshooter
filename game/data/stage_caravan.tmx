@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4081">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="394" nextobjectid="4152">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -6117,7 +6117,12 @@ end</property>
    </object>
   </objectgroup>
   <objectgroup id="261" name="part2">
-   <object id="2491" template="triggers/SpawnCharacters.tx" x="-24" y="2008"/>
+   <object id="2491" name="loadPart2" type="Trigger" x="-24" y="2008">
+    <properties>
+     <property name="action" value="loadPart2"/>
+    </properties>
+    <point/>
+   </object>
   </objectgroup>
   <objectgroup id="262" name="room10acidants">
    <object id="2492" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="216" y="1904" rotation="90"/>
@@ -6156,20 +6161,62 @@ end</property>
     </properties>
     <polyline points="0,0 0,-40 0,-56"/>
    </object>
-   <object id="2503" template="pathpoints/ClimbUpToFloor.tx" x="152" y="1880"/>
-   <object id="2504" template="pathpoints/ClimbUpToFloor.tx" x="168" y="1888">
+   <object id="2503" template="pathpoints/SetSpriteAnim.tx" x="152" y="1880">
     <properties>
-     <property name="speed" type="float" value="2"/>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
     </properties>
    </object>
-   <object id="2505" template="pathpoints/ClimbUpToFloor.tx" x="184" y="1888">
+   <object id="2504" template="pathpoints/SetSpriteAnim.tx" x="168" y="1888">
     <properties>
-     <property name="speed" type="float" value="2"/>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
     </properties>
    </object>
-   <object id="2506" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1880"/>
-   <object id="2507" template="pathpoints/ClimbUpToFloor.tx" x="216" y="1864"/>
+   <object id="2505" template="pathpoints/SetSpriteAnim.tx" x="184" y="1888">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2506" template="pathpoints/SetSpriteAnim.tx" x="200" y="1880">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2507" template="pathpoints/SetSpriteAnim.tx" x="216" y="1864">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
    <object id="3576" template="triggers/UnpauseTimer.tx" type="Trigger" x="-40" y="1856"/>
+   <object id="4081" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="216" y="1864"/>
+   <object id="4082" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="200" y="1880"/>
+   <object id="4083" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="184" y="1888"/>
+   <object id="4084" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="168" y="1888"/>
+   <object id="4085" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="152" y="1880"/>
+   <object id="4110" template="pathpoints/SetSpriteHFlip.tx" x="216" y="1864">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4111" template="pathpoints/SetSpriteHFlip.tx" x="200" y="1880">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4112" template="pathpoints/SetSpriteHFlip.tx" x="184" y="1888">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4113" template="pathpoints/SetSpriteHFlip.tx" x="168" y="1888">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4114" template="pathpoints/SetSpriteHFlip.tx" x="152" y="1880">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="263" name="room10acidants2">
    <object id="2508" template="triggers/SpawnCharacters.tx" x="-32" y="1840"/>
@@ -6212,11 +6259,61 @@ end</property>
     </properties>
     <polyline points="0,0 0,-40 0,-56"/>
    </object>
-   <object id="2519" template="pathpoints/ClimbUpToFloor.tx" x="40" y="1848"/>
-   <object id="2520" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1856"/>
-   <object id="2521" template="pathpoints/ClimbUpToFloor.tx" x="72" y="1864"/>
-   <object id="2522" template="pathpoints/ClimbUpToFloor.tx" x="88" y="1872"/>
-   <object id="2523" template="pathpoints/ClimbUpToFloor.tx" x="104" y="1864"/>
+   <object id="2519" template="pathpoints/SetSpriteAnim.tx" x="40" y="1848">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2520" template="pathpoints/SetSpriteAnim.tx" x="56" y="1856">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2521" template="pathpoints/SetSpriteAnim.tx" x="72" y="1864">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2522" template="pathpoints/SetSpriteAnim.tx" x="88" y="1872">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="2523" template="pathpoints/SetSpriteAnim.tx" x="104" y="1864">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4086" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="104" y="1864"/>
+   <object id="4087" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="88" y="1872"/>
+   <object id="4088" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="72" y="1864"/>
+   <object id="4089" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="56" y="1856"/>
+   <object id="4090" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="40" y="1848"/>
+   <object id="4115" template="pathpoints/SetSpriteHFlip.tx" x="40" y="1848">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4116" template="pathpoints/SetSpriteHFlip.tx" x="56" y="1856">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4117" template="pathpoints/SetSpriteHFlip.tx" x="72" y="1864">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4118" template="pathpoints/SetSpriteHFlip.tx" x="104" y="1864">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4119" template="pathpoints/SetSpriteHFlip.tx" x="88" y="1872">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="264" name="r11acidants1a">
    <object id="2524" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="232" y="1816" rotation="90"/>
@@ -6227,7 +6324,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2527" template="pathpoints/ClimbUpToFloor.tx" x="232" y="1776"/>
+   <object id="2527" template="pathpoints/SetSpriteAnim.tx" x="232" y="1776">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4098" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="232" y="1776"/>
+   <object id="4120" template="pathpoints/SetSpriteHFlip.tx" x="232" y="1776">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="265" name="r11acidants1b">
    <object id="2528" template="enemies/AcidAntClimbForeground.tx" gid="483" x="200" y="1816" rotation="-90"/>
@@ -6238,7 +6345,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2531" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1776"/>
+   <object id="2531" template="pathpoints/SetSpriteAnim.tx" x="200" y="1776">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4097" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="200" y="1776"/>
+   <object id="4129" template="pathpoints/SetSpriteHFlip.tx" x="200" y="1776">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="266" name="r11acidants1c">
    <object id="2532" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="168" y="1816" rotation="90"/>
@@ -6249,7 +6366,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2535" template="pathpoints/ClimbUpToFloor.tx" x="168" y="1776"/>
+   <object id="2535" template="pathpoints/SetSpriteAnim.tx" x="168" y="1776">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4096" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="168" y="1776"/>
+   <object id="4123" template="pathpoints/SetSpriteHFlip.tx" x="168" y="1776">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="267" name="r11acidants1d">
    <object id="2536" template="enemies/AcidAntClimbForeground.tx" gid="483" x="136" y="1816" rotation="-90"/>
@@ -6260,7 +6387,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2539" template="pathpoints/ClimbUpToFloor.tx" x="136" y="1776"/>
+   <object id="2539" template="pathpoints/SetSpriteAnim.tx" x="136" y="1776">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4095" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="136" y="1776"/>
+   <object id="4128" template="pathpoints/SetSpriteHFlip.tx" x="136" y="1776">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="268" name="r11acidants1e">
    <object id="2540" template="enemies/AcidAntClimbForeground.tx" gid="483" x="120" y="1808" rotation="-90"/>
@@ -6271,7 +6408,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2543" template="pathpoints/ClimbUpToFloor.tx" x="120" y="1768"/>
+   <object id="2543" template="pathpoints/SetSpriteAnim.tx" x="120" y="1768">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4094" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="120" y="1768"/>
+   <object id="4127" template="pathpoints/SetSpriteHFlip.tx" x="120" y="1768">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="269" name="r11acidants1f">
    <object id="2544" template="enemies/AcidAntClimbForeground.tx" gid="483" x="88" y="1800" rotation="-90"/>
@@ -6282,7 +6429,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2547" template="pathpoints/ClimbUpToFloor.tx" x="88" y="1760"/>
+   <object id="2547" template="pathpoints/SetSpriteAnim.tx" x="88" y="1760">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4093" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="88" y="1760"/>
+   <object id="4126" template="pathpoints/SetSpriteHFlip.tx" x="88" y="1760">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="270" name="r11acidants1g">
    <object id="2548" template="enemies/AcidAntClimbForeground.tx" gid="2147484131" x="56" y="1800" rotation="90"/>
@@ -6293,7 +6450,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2551" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1760"/>
+   <object id="2551" template="pathpoints/SetSpriteAnim.tx" x="56" y="1760">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4091" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="56" y="1760"/>
+   <object id="4124" template="pathpoints/SetSpriteHFlip.tx" x="56" y="1760">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="271" name="r11acidants1h">
    <object id="2552" template="enemies/AcidAntClimbForeground.tx" gid="483" x="24" y="1800" rotation="-90"/>
@@ -6304,7 +6471,17 @@ end</property>
     </properties>
     <polyline points="-32,32 -32,-8 -32,-24"/>
    </object>
-   <object id="2555" template="pathpoints/ClimbUpToFloor.tx" x="24" y="1760"/>
+   <object id="2555" template="pathpoints/SetSpriteAnim.tx" x="24" y="1760">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4092" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="24" y="1760"/>
+   <object id="4125" template="pathpoints/SetSpriteHFlip.tx" x="24" y="1760">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="272" name="room11acidants2a">
    <object id="2556" template="triggers/SpawnCharacters.tx" x="-32" y="1632"/>
@@ -6317,14 +6494,13 @@ end</property>
    <object id="4056" template="triggers/SpawnCharacters.tx" x="-32" y="1608"/>
    <object id="4060" template="triggers/SpawnCharacters.tx" x="-32" y="1576"/>
    <object id="4062" template="triggers/SpawnCharacters.tx" x="-32" y="1560"/>
-   <object id="2566" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="272" y="1640" rotation="0"/>
+   <object id="2566" template="enemies/AcidAnt.tx" gid="2147484131" x="272" y="1640" rotation="0"/>
    <object id="2567" type="Path" x="272" y="1616">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,24 -288,-24"/>
    </object>
-   <object id="2568" template="pathpoints/ClimbUpToFloor.tx" x="272" y="1640"/>
   </objectgroup>
   <objectgroup id="273" name="room11acidants2b">
    <object id="2569" template="triggers/SpawnCharacters.tx" x="-88" y="1584"/>
@@ -6337,14 +6513,13 @@ end</property>
    <object id="4051" template="triggers/SpawnCharacters.tx" x="-88" y="1528"/>
    <object id="4052" template="triggers/SpawnCharacters.tx" x="-88" y="1520"/>
    <object id="4053" template="triggers/SpawnCharacters.tx" x="-88" y="1512"/>
-   <object id="2579" template="enemies/AcidAntClimbBackground.tx" x="-16" y="1576"/>
+   <object id="2579" template="enemies/AcidAnt.tx" x="-16" y="1576"/>
    <object id="2580" type="Path" x="-16" y="1576">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,0 288,48"/>
    </object>
-   <object id="2581" template="pathpoints/ClimbUpToFloor.tx" x="-16" y="1576"/>
   </objectgroup>
   <objectgroup id="274" name="r11acidants3a">
    <object id="2582" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="248" y="1720" rotation="90"/>
@@ -6355,7 +6530,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2584" template="triggers/SpawnCharacters.tx" x="-48" y="1632"/>
-   <object id="2585" template="pathpoints/ClimbUpToFloor.tx" x="248" y="1712"/>
+   <object id="2585" template="pathpoints/SetSpriteAnim.tx" x="248" y="1712">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4099" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="248" y="1712"/>
+   <object id="4133" template="pathpoints/SetSpriteHFlip.tx" x="248" y="1712">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4151" template="pathpoints/EnterForeground.tx" x="248" y="1712"/>
   </objectgroup>
   <objectgroup id="275" name="r11acidants3b">
    <object id="2586" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="224" y="1720" rotation="90"/>
@@ -6366,7 +6552,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2588" template="triggers/SpawnCharacters.tx" x="-56" y="1624"/>
-   <object id="2589" template="pathpoints/ClimbUpToFloor.tx" x="224" y="1712"/>
+   <object id="2589" template="pathpoints/SetSpriteAnim.tx" x="224" y="1712">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4100" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="224" y="1712"/>
+   <object id="4134" template="pathpoints/SetSpriteHFlip.tx" x="224" y="1712">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4150" template="pathpoints/EnterForeground.tx" x="224" y="1712"/>
   </objectgroup>
   <objectgroup id="276" name="r11acidants3c">
    <object id="2590" template="enemies/AcidAntClimbBackground.tx" gid="483" x="200" y="1720" rotation="-90"/>
@@ -6377,7 +6574,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2592" template="triggers/SpawnCharacters.tx" x="-48" y="1616"/>
-   <object id="2593" template="pathpoints/ClimbUpToFloor.tx" x="200" y="1712"/>
+   <object id="2593" template="pathpoints/SetSpriteAnim.tx" x="200" y="1712">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4101" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="200" y="1712"/>
+   <object id="4132" template="pathpoints/SetSpriteHFlip.tx" x="200" y="1712">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4149" template="pathpoints/EnterForeground.tx" x="200" y="1712"/>
   </objectgroup>
   <objectgroup id="277" name="r11acidants3d">
    <object id="2594" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="176" y="1720" rotation="90"/>
@@ -6388,7 +6596,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2596" template="triggers/SpawnCharacters.tx" x="-56" y="1608"/>
-   <object id="2597" template="pathpoints/ClimbUpToFloor.tx" x="176" y="1712"/>
+   <object id="2597" template="pathpoints/SetSpriteAnim.tx" x="176" y="1712">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4102" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="176" y="1712"/>
+   <object id="4135" template="pathpoints/SetSpriteHFlip.tx" x="176" y="1712">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4148" template="pathpoints/EnterForeground.tx" x="176" y="1712"/>
   </objectgroup>
   <objectgroup id="278" name="r11acidants3e">
    <object id="2598" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="152" y="1720" rotation="90"/>
@@ -6399,7 +6618,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2600" template="triggers/SpawnCharacters.tx" x="-48" y="1600"/>
-   <object id="2601" template="pathpoints/ClimbUpToFloor.tx" x="152" y="1712"/>
+   <object id="2601" template="pathpoints/SetSpriteAnim.tx" x="152" y="1712">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4103" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="152" y="1712"/>
+   <object id="4136" template="pathpoints/SetSpriteHFlip.tx" x="152" y="1712">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4147" template="pathpoints/EnterForeground.tx" x="152" y="1712"/>
   </objectgroup>
   <objectgroup id="279" name="r11acidants3f">
    <object id="2602" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="128" y="1704" rotation="90"/>
@@ -6410,7 +6640,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2604" template="triggers/SpawnCharacters.tx" x="-56" y="1592"/>
-   <object id="2605" template="pathpoints/ClimbUpToFloor.tx" x="128" y="1696"/>
+   <object id="2605" template="pathpoints/SetSpriteAnim.tx" x="128" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4104" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="128" y="1696"/>
+   <object id="4137" template="pathpoints/SetSpriteHFlip.tx" x="128" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4146" template="pathpoints/EnterForeground.tx" x="128" y="1696"/>
   </objectgroup>
   <objectgroup id="280" name="r11acidants3g">
    <object id="2606" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="104" y="1704" rotation="90"/>
@@ -6421,7 +6662,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2608" template="triggers/SpawnCharacters.tx" x="-48" y="1584"/>
-   <object id="2609" template="pathpoints/ClimbUpToFloor.tx" x="104" y="1696"/>
+   <object id="2609" template="pathpoints/SetSpriteAnim.tx" x="104" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4105" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="104" y="1696"/>
+   <object id="4138" template="pathpoints/SetSpriteHFlip.tx" x="104" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4145" template="pathpoints/EnterForeground.tx" x="104" y="1696"/>
   </objectgroup>
   <objectgroup id="281" name="r11acidants3h">
    <object id="2610" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="80" y="1704" rotation="90"/>
@@ -6432,7 +6684,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2612" template="triggers/SpawnCharacters.tx" x="-56" y="1576"/>
-   <object id="2613" template="pathpoints/ClimbUpToFloor.tx" x="80" y="1696"/>
+   <object id="2613" template="pathpoints/SetSpriteAnim.tx" x="80" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4106" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="80" y="1696"/>
+   <object id="4139" template="pathpoints/SetSpriteHFlip.tx" x="80" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4144" template="pathpoints/EnterForeground.tx" x="80" y="1696"/>
   </objectgroup>
   <objectgroup id="282" name="r11acidants3i">
    <object id="2614" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="56" y="1704" rotation="90"/>
@@ -6443,7 +6706,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2616" template="triggers/SpawnCharacters.tx" x="-48" y="1568"/>
-   <object id="2617" template="pathpoints/ClimbUpToFloor.tx" x="56" y="1696"/>
+   <object id="2617" template="pathpoints/SetSpriteAnim.tx" x="56" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4107" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="56" y="1696"/>
+   <object id="4140" template="pathpoints/SetSpriteHFlip.tx" x="56" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4143" template="pathpoints/EnterForeground.tx" x="56" y="1696"/>
   </objectgroup>
   <objectgroup id="283" name="r11acidants3j">
    <object id="2618" template="enemies/AcidAntClimbBackground.tx" gid="483" x="32" y="1704" rotation="-90"/>
@@ -6454,7 +6728,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2620" template="triggers/SpawnCharacters.tx" x="-56" y="1560"/>
-   <object id="2621" template="pathpoints/ClimbUpToFloor.tx" x="32" y="1696"/>
+   <object id="2621" template="pathpoints/SetSpriteAnim.tx" x="32" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4108" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="32" y="1696"/>
+   <object id="4131" template="pathpoints/SetSpriteHFlip.tx" x="32" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4142" template="pathpoints/EnterForeground.tx" x="32" y="1696"/>
   </objectgroup>
   <objectgroup id="284" name="r11acidants3k">
    <object id="2622" template="enemies/AcidAntClimbBackground.tx" gid="483" x="8" y="1704" rotation="-90"/>
@@ -6465,7 +6750,18 @@ end</property>
     <polyline points="0,-16 0,-24 0,0"/>
    </object>
    <object id="2624" template="triggers/SpawnCharacters.tx" x="-48" y="1552"/>
-   <object id="2625" template="pathpoints/ClimbUpToFloor.tx" x="8" y="1696"/>
+   <object id="2625" template="pathpoints/SetSpriteAnim.tx" x="8" y="1696">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4109" template="pathpoints/SetSpriteVFlip.tx" type="PathPoint" x="8" y="1696"/>
+   <object id="4130" template="pathpoints/SetSpriteHFlip.tx" x="8" y="1696">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4141" template="pathpoints/EnterForeground.tx" x="8" y="1696"/>
   </objectgroup>
   <objectgroup id="285" name="r11powerup">
    <object id="2626" template="enemies/HoneyPot.tx" x="120" y="1656"/>
