@@ -5981,8 +5981,16 @@ end</property>
    <object id="4020" template="enemies/Fly.tx" gid="2147484154" x="116" y="2036" rotation="0"/>
    <object id="4021" template="enemies/AlienPillager.tx" x="132" y="2044"/>
    <object id="4022" template="enemies/AlienPillager.tx" gid="2147484176" x="124" y="2044" rotation="0"/>
-   <object id="4023" template="enemies/AlienGunner.tx" x="136" y="2040"/>
-   <object id="4024" template="enemies/AlienGunner.tx" gid="2147484170" x="120" y="2040" rotation="0"/>
+   <object id="4023" template="enemies/AlienGunner.tx" x="136" y="2040">
+    <properties>
+     <property name="path" type="object" value="2478"/>
+    </properties>
+   </object>
+   <object id="4024" template="enemies/AlienGunner.tx" gid="2147484170" x="120" y="2040" rotation="0">
+    <properties>
+     <property name="path" type="object" value="2477"/>
+    </properties>
+   </object>
    <object id="2475" type="Path" x="96" y="2096">
     <properties>
      <property name="speed" type="float" value="2"/>

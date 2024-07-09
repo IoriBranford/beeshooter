@@ -5794,15 +5794,15 @@ static const LevelObject lobj4023 = {
     .definition = &defAlienGunner,
     .x = 136, .y = 2040,
     .animInd = 0, .flags = 32768,
-    .group = &r9aliensfromalienmind, .path = &path2476,
-    .pathIndex = 2, .child = 0, .interval = 0
+    .group = &r9aliensfromalienmind, .path = &path2478,
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject lobj4024 = {
     .definition = &defAlienGunner,
     .x = 120, .y = 2040,
     .animInd = 0, .flags = 34816,
-    .group = &r9aliensfromalienmind, .path = &path2475,
-    .pathIndex = 2, .child = 0, .interval = 0
+    .group = &r9aliensfromalienmind, .path = &path2477,
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject lobj4020 = {
     .definition = &defFly,
