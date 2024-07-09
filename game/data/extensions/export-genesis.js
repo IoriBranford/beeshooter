@@ -179,7 +179,7 @@ return `{
                     child = child && `&lobj${child.id}` || '0'
 
                     let interval = object.resolvedProperty('spawninterval') || 0
-return `static const LevelObject lobj${object.id} = {
+return `const LevelObject lobj${object.id} = {
     .definition = ${definition},
     .x = ${object.x}, .y = ${object.y},
     .animInd = ${anim}, .flags = ${flags},
