@@ -70,21 +70,6 @@ void BULLET_updateSpriteDirectionXY(GameObject *self, fix16 dx, fix16 dy) {
     SPR_setVFlip(self->sprite, dy < 0);
 }
 
-void BULLET_updateSpriteDirectionAngle(GameObject *self, u16 angle) {
-    if (!self->sprite)
-        GOBJ_initSprite(self);
-    if (self->sprite && angle < 1024) {
-        const SpriteDefinition *spriteDef = self->sprite->definition;
-        u16 lastAnim = spriteDef->numAnimation - 1;
-        fix16 abssin = abs(sinFix16(angle));
-        fix16 fanim = abssin * lastAnim + (FIX16(1) / 2);
-        u16 anim = fix16ToInt(fanim);
-        SPR_setAnim(self->sprite, anim);
-        SPR_setHFlip(self->sprite, self->velX < 0);
-        SPR_setVFlip(self->sprite, self->velY < 0);
-    }
-}
-
 void BULLET_updateAngleTester(GameObject *self) {
     PlayerObject *player = GAME_livePlayer();
     if (!player)
@@ -94,38 +79,31 @@ void BULLET_updateAngleTester(GameObject *self) {
     BULLET_updateSpriteDirectionXY(self, dx, dy);
 }
 
-void BULLET_setVelocityAS(GameObject *self, u16 angle, fix16 speed) {
-    self->velX = fix16Mul(speed, cosFix16(angle));
-    self->velY = fix16Mul(speed, sinFix16(angle));
-    BULLET_updateSpriteDirectionXY(self, self->velX, self->velY);
-}
-
-GameObject* BULLET_createAngAndDef(fix16 centerX, fix16 centerY, u16 angle, const GameObjectDefinition *def) {
+GameObject* BULLET_shootAtVelocity(fix16 centerX, fix16 centerY, fix16 velX, fix16 velY, const GameObjectDefinition *def) {
     GameObject *self = GOBJ_createFromDef(def, centerX, centerY);
-    if (!self)
-        return NULL;
-    BULLET_setVelocityAS(self, angle, self->speed);
-    return self;
-}
-
-void BULLET_setVelocityXY(GameObject *self, fix16 dx, fix16 dy, fix16 speed) {
-    fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(dx), fix16ToInt(dy)));
-    if (dist) {
-        fix16 speed = self->speed;
-        self->velX = fix16Mul(fix16Div(dx, dist), speed);
-        self->velY = fix16Mul(fix16Div(dy, dist), speed);
-    BULLET_updateSpriteDirectionXY(self, self->velX, self->velY);
-    } else {
-        self->velX = 0;
-        self->velY = 0;
+    if (self) {
+        self->velX = velX;
+        self->velY = velY;
+        BULLET_updateSpriteDirectionXY(self, velX, velY);
     }
+    return self;
 }
 
 GameObject* BULLET_shootAtVector(fix16 centerX, fix16 centerY, fix16 dx, fix16 dy, const GameObjectDefinition *def) {
-    GameObject *self = GOBJ_createFromDef(def, centerX, centerY);
-    if (self)
-        BULLET_setVelocityXY(self, dx, dy, self->speed);
-    return self;
+    fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(dx), fix16ToInt(dy)));
+    fix16 velX = 0, velY = 0;
+    if (dist) {
+        fix16 speed = def->speed;
+        velX = fix16Mul(fix16Div(dx, dist), speed);
+        velY = fix16Mul(fix16Div(dy, dist), speed);
+    }
+    return BULLET_shootAtVelocity(centerX, centerY, velX, velY, def);
+}
+
+GameObject* BULLET_shootAtAngleSpeed(fix16 centerX, fix16 centerY, u16 angle, fix16 speed, const GameObjectDefinition *def) {
+    fix16 velX = fix16Mul(speed, cosFix16(angle));
+    fix16 velY = fix16Mul(speed, sinFix16(angle));
+    return BULLET_shootAtVelocity(centerX, centerY, velX, velY, def);
 }
 
 GameObject* BULLET_shootAtTarget(fix16 centerX, fix16 centerY, GameObject *target, const GameObjectDefinition *def) {
