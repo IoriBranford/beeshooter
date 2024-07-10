@@ -240,7 +240,29 @@ GameObjectDefinition defWasp = {
 };
 GameObjectDefinition defReinforcedHoneyPot;
 GameObjectDefinition defAntHole;
-GameObjectDefinition defBeetle;
+GameObjectDefinition defBeetleBullet = {
+    .teams = 1<<TEAM_ENEMYSHOT,
+    .health = 1, .damage = 1,
+    .speed = FIX16(2),
+    .spriteDef = &sprAcidBullet,
+    .spriteDepth = -20,
+    .palette = &palAcidAndBeetle,
+    .bodyW = FIX16(2), .bodyH = FIX16(2),
+    .update = BULLET_update,
+};
+GameObjectDefinition defBeetle = {
+    .teams = 1<<TEAM_ENEMY,
+    .health = 25, .speed = FIX16(.5),
+    .defeatPoints = 5000,
+    .spriteDef = &sprBeetle,
+    .spriteDepth = -1,
+    .palette = &palAcidAndBeetle,
+    .bodyW = FIX16(12), .bodyH = FIX16(12),
+    .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defBloodSmall,
+    .bulletDef = &defBeetleBullet,
+    .update = GOBJ_updatePathWalker,
+};
 GameObjectDefinition defWaspShooter = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
     .health = 2, .speed = FIX16(1),
@@ -276,10 +298,11 @@ GameObjectDefinition *part1defs[8] = {
     &defAlienMind
 };
 
-GameObjectDefinition *part2defs[3] = {
+GameObjectDefinition *part2defs[4] = {
     &defAcidAnt,
     &defAcidAntBullet,
-    &defWasp
+    &defWasp,
+    &defBeetle
 };
 
 static u16 levelObjectTileStart;
@@ -341,12 +364,14 @@ u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
     defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
+    defBeetleBullet.aniFrameTiles = defAcidAntBullet.aniFrameTiles;
     return tileIndex;
 }
 
 u16 GOBJDEF_freePart2EnemyFrames() {
     defAcidBloodSmall.aniFrameTiles = NULL;
     defWaspShooter.aniFrameTiles = NULL;
+    defBeetleBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     return levelObjectTileStart;
 }
