@@ -36,4 +36,13 @@ enum AniWasp {
     ANI_WASP_BIRTH
 };
 
+enum AniBeetle {
+    ANI_BEETLE_0,
+    ANI_BEETLE_45,
+    ANI_BEETLE_90,
+    ANI_BEETLE_135,
+    ANI_BEETLE_BACK,
+    ANI_BEETLE_EAT
+};
+
 #endif
