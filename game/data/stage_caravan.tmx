@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="395" nextobjectid="4196">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="395" nextobjectid="4254">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -7190,26 +7190,54 @@ end</property>
      <property name="bursts" type="int" value="5"/>
     </properties>
    </object>
-   <object id="2736" template="pathpoints/Rotate.tx" x="56" y="1176">
+   <object id="2736" template="pathpoints/SetSpriteAnim.tx" x="56" y="1176">
     <properties>
-     <property name="delta" type="float" value="-45"/>
+     <property name="anim" value="ANI_BEETLE_135"/>
     </properties>
    </object>
-   <object id="2737" template="pathpoints/Rotate.tx" x="200" y="1176">
+   <object id="2737" template="pathpoints/SetSpriteAnim.tx" x="200" y="1176">
     <properties>
-     <property name="delta" type="float" value="45"/>
+     <property name="anim" value="ANI_BEETLE_135"/>
     </properties>
    </object>
-   <object id="2738" template="pathpoints/Rotate.tx" x="40" y="1160">
+   <object id="2738" template="pathpoints/SetSpriteAnim.tx" x="40" y="1160">
     <properties>
-     <property name="delta" type="float" value="-45"/>
+     <property name="anim" value="ANI_BEETLE_0"/>
     </properties>
    </object>
-   <object id="2739" template="pathpoints/Rotate.tx" x="216" y="1160">
+   <object id="2739" template="pathpoints/SetSpriteAnim.tx" x="216" y="1160">
     <properties>
-     <property name="delta" type="float" value="45"/>
+     <property name="anim" value="ANI_BEETLE_0"/>
     </properties>
    </object>
+   <object id="4196" template="pathpoints/SetInvul.tx" x="56" y="1320">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4198" template="pathpoints/SetInvul.tx" x="200" y="1320">
+    <properties>
+     <property name="time" type="int" value="255"/>
+    </properties>
+   </object>
+   <object id="4199" template="pathpoints/SetSpriteAnim.tx" x="56" y="1320">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4200" template="pathpoints/SetSpriteAnim.tx" x="200" y="1320">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4202" template="pathpoints/SetSpriteVFlip.tx" x="40" y="1160"/>
+   <object id="4203" template="pathpoints/SetSpriteVFlip.tx" x="216" y="1160"/>
+   <object id="4204" template="pathpoints/SetSpriteHFlip.tx" x="40" y="1160">
+    <properties>
+     <property name="flip" type="bool" value="true"/>
+    </properties>
+   </object>
+   <object id="4205" template="pathpoints/SetSpriteHFlip.tx" x="216" y="1160"/>
   </objectgroup>
   <objectgroup id="302" name="r13fly1">
    <object id="2740" template="triggers/SpawnCharacters.tx" x="-64" y="1192"/>
@@ -7310,332 +7338,40 @@ end</property>
     </properties>
     <polyline points="64,240 64,224 40,208 32,208 24,208 0,192 0,176 24,160 32,160 40,160 64,144 64,128 40,112 24,112 0,96 0,80 24,64 40,64 64,48 64,32 40,16 24,16 0,0 0,-16 24,-32 40,-32 64,-48 64,-64 40,-80 24,-80 0,-96 0,-112 16,-128 24,-128"/>
    </object>
-   <object id="2781" template="pathpoints/Rotate.tx" x="64" y="1064">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2782" template="pathpoints/Rotate.tx" x="176" y="1064">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2783" template="pathpoints/FaceRight.tx" x="64" y="1064"/>
-   <object id="2784" template="pathpoints/FaceRight.tx" x="176" y="1064"/>
-   <object id="2785" template="pathpoints/FaceLeft.tx" x="80" y="1016"/>
-   <object id="2786" template="pathpoints/FaceLeft.tx" x="192" y="1016"/>
-   <object id="2787" template="pathpoints/Rotate.tx" x="80" y="1016">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2788" template="pathpoints/Rotate.tx" x="192" y="1016">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2789" template="pathpoints/Rotate.tx" x="64" y="1016">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2790" template="pathpoints/Rotate.tx" x="176" y="1016">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
+   <object id="2783" template="pathpoints/FaceRight.tx" x="80" y="1016"/>
+   <object id="2785" template="pathpoints/FaceLeft.tx" x="64" y="1064"/>
    <object id="2791" template="pathpoints/EnterForeground.tx" type="PathPoint" x="104" y="1080"/>
    <object id="2792" template="pathpoints/EnterForeground.tx" type="PathPoint" x="152" y="1048"/>
    <object id="2793" template="pathpoints/EnterForeground.tx" type="PathPoint" x="104" y="1000"/>
    <object id="2794" template="pathpoints/EnterForeground.tx" type="PathPoint" x="152" y="952"/>
-   <object id="2795" template="pathpoints/ChangeTile.tx" x="80" y="1064">
+   <object id="2795" template="pathpoints/SetSpriteAnim.tx" x="80" y="1064">
     <properties>
-     <property name="tile" value="walk1"/>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
     </properties>
    </object>
-   <object id="2796" template="pathpoints/ChangeTile.tx" x="192" y="1064">
+   <object id="2797" template="pathpoints/SetSpriteAnim.tx" x="64" y="1064">
     <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2797" template="pathpoints/ChangeTile.tx" x="64" y="1064">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2798" template="pathpoints/ChangeTile.tx" x="176" y="1064">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2799" template="pathpoints/ChangeTile.tx" x="80" y="1016">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2800" template="pathpoints/ChangeTile.tx" x="192" y="1016">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2801" template="pathpoints/Rotate.tx" x="80" y="1064">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2802" template="pathpoints/Rotate.tx" x="192" y="1064">
-    <properties>
-     <property name="delta" type="float" value="90"/>
+     <property name="anim" value="ANI_BEETLE_90"/>
     </properties>
    </object>
    <object id="2803" template="pathpoints/EnterBackground.tx" type="PathPoint" x="40" y="1032"/>
    <object id="2804" template="pathpoints/EnterBackground.tx" type="PathPoint" x="216" y="984"/>
-   <object id="2805" template="pathpoints/ChangeTile.tx" x="64" y="1016">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2806" template="pathpoints/ChangeTile.tx" x="176" y="1016">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2807" template="pathpoints/Rotate.tx" x="64" y="968">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2808" template="pathpoints/Rotate.tx" x="176" y="968">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2809" template="pathpoints/FaceRight.tx" x="64" y="968"/>
-   <object id="2810" template="pathpoints/FaceRight.tx" x="176" y="968"/>
-   <object id="2811" template="pathpoints/FaceLeft.tx" x="80" y="920"/>
-   <object id="2812" template="pathpoints/FaceLeft.tx" x="192" y="920"/>
-   <object id="2813" template="pathpoints/Rotate.tx" x="80" y="920">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2814" template="pathpoints/Rotate.tx" x="192" y="920">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2815" template="pathpoints/Rotate.tx" x="64" y="920">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2816" template="pathpoints/Rotate.tx" x="176" y="920">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
    <object id="2817" template="pathpoints/EnterForeground.tx" type="PathPoint" x="104" y="904"/>
    <object id="2818" template="pathpoints/EnterForeground.tx" type="PathPoint" x="152" y="856"/>
-   <object id="2819" template="pathpoints/ChangeTile.tx" x="80" y="968">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2820" template="pathpoints/ChangeTile.tx" x="192" y="968">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2821" template="pathpoints/ChangeTile.tx" x="64" y="968">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2822" template="pathpoints/ChangeTile.tx" x="176" y="968">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2823" template="pathpoints/ChangeTile.tx" x="80" y="920">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2824" template="pathpoints/ChangeTile.tx" x="192" y="920">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2825" template="pathpoints/Rotate.tx" x="80" y="968">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2826" template="pathpoints/Rotate.tx" x="192" y="968">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
    <object id="2827" template="pathpoints/EnterBackground.tx" type="PathPoint" x="40" y="936"/>
    <object id="2828" template="pathpoints/EnterBackground.tx" type="PathPoint" x="216" y="888"/>
-   <object id="2829" template="pathpoints/ChangeTile.tx" x="64" y="920">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2830" template="pathpoints/ChangeTile.tx" x="176" y="920">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2831" template="pathpoints/Rotate.tx" x="64" y="872">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2832" template="pathpoints/Rotate.tx" x="176" y="872">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2833" template="pathpoints/FaceRight.tx" x="64" y="872"/>
-   <object id="2834" template="pathpoints/FaceRight.tx" x="176" y="872"/>
-   <object id="2835" template="pathpoints/FaceLeft.tx" x="80" y="824"/>
-   <object id="2836" template="pathpoints/FaceLeft.tx" x="192" y="824"/>
-   <object id="2837" template="pathpoints/Rotate.tx" x="80" y="824">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2838" template="pathpoints/Rotate.tx" x="192" y="824">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2839" template="pathpoints/Rotate.tx" x="64" y="824">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
-   <object id="2840" template="pathpoints/Rotate.tx" x="176" y="824">
-    <properties>
-     <property name="delta" type="float" value="-90"/>
-    </properties>
-   </object>
    <object id="2841" template="pathpoints/EnterForeground.tx" type="PathPoint" x="104" y="808"/>
    <object id="2842" template="pathpoints/EnterForeground.tx" type="PathPoint" x="152" y="760"/>
-   <object id="2843" template="pathpoints/ChangeTile.tx" x="80" y="872">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2844" template="pathpoints/ChangeTile.tx" x="192" y="872">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2845" template="pathpoints/ChangeTile.tx" x="64" y="872">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2846" template="pathpoints/ChangeTile.tx" x="176" y="872">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2847" template="pathpoints/ChangeTile.tx" x="80" y="824">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2848" template="pathpoints/ChangeTile.tx" x="192" y="824">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2849" template="pathpoints/Rotate.tx" x="80" y="872">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2850" template="pathpoints/Rotate.tx" x="192" y="872">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
    <object id="2851" template="pathpoints/EnterBackground.tx" type="PathPoint" x="40" y="840"/>
    <object id="2852" template="pathpoints/EnterBackground.tx" type="PathPoint" x="216" y="792"/>
-   <object id="2853" template="pathpoints/ChangeTile.tx" x="64" y="824">
+   <object id="2865" template="pathpoints/SetSpriteAnim.tx" x="40" y="744">
     <properties>
-     <property name="tile" value="walk1"/>
+     <property name="anim" value="ANI_BEETLE_135"/>
     </properties>
    </object>
-   <object id="2854" template="pathpoints/ChangeTile.tx" x="176" y="824">
+   <object id="2867" template="pathpoints/SetSpriteAnim.tx" x="56" y="728">
     <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2855" template="pathpoints/Rotate.tx" x="64" y="776">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2856" template="pathpoints/Rotate.tx" x="176" y="776">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2857" template="pathpoints/FaceRight.tx" x="64" y="776"/>
-   <object id="2858" template="pathpoints/FaceRight.tx" x="176" y="776"/>
-   <object id="2859" template="pathpoints/ChangeTile.tx" x="80" y="776">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2860" template="pathpoints/ChangeTile.tx" x="192" y="776">
-    <properties>
-     <property name="tile" value="walk1"/>
-    </properties>
-   </object>
-   <object id="2861" template="pathpoints/ChangeTile.tx" x="64" y="776">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2862" template="pathpoints/ChangeTile.tx" x="176" y="776">
-    <properties>
-     <property name="tile" value="walk0"/>
-    </properties>
-   </object>
-   <object id="2863" template="pathpoints/Rotate.tx" x="80" y="776">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2864" template="pathpoints/Rotate.tx" x="192" y="776">
-    <properties>
-     <property name="delta" type="float" value="90"/>
-    </properties>
-   </object>
-   <object id="2865" template="pathpoints/Rotate.tx" x="40" y="744">
-    <properties>
-     <property name="delta" type="float" value="45"/>
-    </properties>
-   </object>
-   <object id="2866" template="pathpoints/Rotate.tx" x="152" y="744">
-    <properties>
-     <property name="delta" type="float" value="45"/>
-    </properties>
-   </object>
-   <object id="2867" template="pathpoints/Rotate.tx" x="56" y="728">
-    <properties>
-     <property name="delta" type="float" value="45"/>
-    </properties>
-   </object>
-   <object id="2868" template="pathpoints/Rotate.tx" x="168" y="728">
-    <properties>
-     <property name="delta" type="float" value="45"/>
+     <property name="anim" value="ANI_BEETLE_0"/>
     </properties>
    </object>
    <object id="2869" template="pathpoints/BeetleShoot.tx" x="40" y="1048"/>
@@ -7666,6 +7402,190 @@ end</property>
    </object>
    <object id="2887" x="256" y="796" width="40" height="8">
     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">&lt;FIRE</text>
+   </object>
+   <object id="4206" template="pathpoints/SetSpriteAnim.tx" x="104" y="1096">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4207" template="pathpoints/SetSpriteAnim.tx" x="216" y="1096">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4208" template="pathpoints/SetSpriteAnim.tx" x="64" y="1016">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4209" template="pathpoints/SetSpriteAnim.tx" x="80" y="1016">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4210" template="pathpoints/FaceRight.tx" x="192" y="1016"/>
+   <object id="4211" template="pathpoints/FaceLeft.tx" x="176" y="1064"/>
+   <object id="4212" template="pathpoints/SetSpriteAnim.tx" x="192" y="1064">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4213" template="pathpoints/SetSpriteAnim.tx" x="176" y="1064">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4214" template="pathpoints/SetSpriteAnim.tx" x="176" y="1016">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4215" template="pathpoints/SetSpriteAnim.tx" x="192" y="1016">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4216" template="pathpoints/FaceRight.tx" x="80" y="920"/>
+   <object id="4217" template="pathpoints/FaceLeft.tx" x="64" y="968"/>
+   <object id="4218" template="pathpoints/SetSpriteAnim.tx" x="80" y="968">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4219" template="pathpoints/SetSpriteAnim.tx" x="64" y="968">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4220" template="pathpoints/SetSpriteAnim.tx" x="64" y="920">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4221" template="pathpoints/SetSpriteAnim.tx" x="80" y="920">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4222" template="pathpoints/FaceRight.tx" x="80" y="824"/>
+   <object id="4223" template="pathpoints/FaceLeft.tx" x="64" y="872"/>
+   <object id="4224" template="pathpoints/SetSpriteAnim.tx" x="80" y="872">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4225" template="pathpoints/SetSpriteAnim.tx" x="64" y="872">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4226" template="pathpoints/SetSpriteAnim.tx" x="64" y="824">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4227" template="pathpoints/SetSpriteAnim.tx" x="80" y="824">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4228" template="pathpoints/FaceLeft.tx" x="64" y="776"/>
+   <object id="4229" template="pathpoints/SetSpriteAnim.tx" x="80" y="776">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4230" template="pathpoints/SetSpriteAnim.tx" x="64" y="776">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4231" template="pathpoints/FaceRight.tx" x="56" y="728"/>
+   <object id="4232" template="pathpoints/SetSpriteVFlip.tx" x="56" y="728">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4233" template="pathpoints/SetSpriteAnim.tx" x="152" y="744">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_135"/>
+    </properties>
+   </object>
+   <object id="4234" template="pathpoints/SetSpriteAnim.tx" x="168" y="728">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_0"/>
+    </properties>
+   </object>
+   <object id="4235" template="pathpoints/FaceRight.tx" x="168" y="728"/>
+   <object id="4236" template="pathpoints/SetSpriteVFlip.tx" x="168" y="728">
+    <properties>
+     <property name="flip" type="bool" value="false"/>
+    </properties>
+   </object>
+   <object id="4237" template="pathpoints/FaceRight.tx" x="192" y="920"/>
+   <object id="4238" template="pathpoints/FaceLeft.tx" x="176" y="968"/>
+   <object id="4239" template="pathpoints/SetSpriteAnim.tx" x="192" y="968">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4240" template="pathpoints/SetSpriteAnim.tx" x="176" y="968">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4241" template="pathpoints/SetSpriteAnim.tx" x="176" y="920">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4242" template="pathpoints/SetSpriteAnim.tx" x="192" y="920">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4243" template="pathpoints/FaceRight.tx" x="192" y="824"/>
+   <object id="4244" template="pathpoints/FaceLeft.tx" x="176" y="872"/>
+   <object id="4245" template="pathpoints/SetSpriteAnim.tx" x="192" y="872">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4246" template="pathpoints/SetSpriteAnim.tx" x="176" y="872">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4247" template="pathpoints/SetSpriteAnim.tx" x="176" y="824">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4248" template="pathpoints/SetSpriteAnim.tx" x="192" y="824">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4249" template="pathpoints/FaceLeft.tx" x="176" y="776"/>
+   <object id="4250" template="pathpoints/SetSpriteAnim.tx" x="192" y="776">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_BACK"/>
+    </properties>
+   </object>
+   <object id="4251" template="pathpoints/SetSpriteAnim.tx" x="176" y="776">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_90"/>
+    </properties>
+   </object>
+   <object id="4252" template="pathpoints/SetSpriteAnim.tx" x="64" y="728">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_EAT"/>
+    </properties>
+   </object>
+   <object id="4253" template="pathpoints/SetSpriteAnim.tx" x="176" y="728">
+    <properties>
+     <property name="anim" value="ANI_BEETLE_EAT"/>
+    </properties>
    </object>
   </objectgroup>
   <objectgroup id="313" name="r14wasp2b">

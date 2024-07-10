@@ -46,7 +46,6 @@ void setSpriteVFlip(GameObject *self, const GameObjectAction *action);
 void setSpriteHFlip(GameObject *self, const GameObjectAction *action);
 void startWaspAttack(GameObject *self, const GameObjectAction *action);
 void BeetleShoot(GameObject *self, const GameObjectAction *action);
-void PathPoint_Rotate(GameObject *self, const GameObjectAction *action);
 void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *action);
 void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action);
 void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action);

@@ -8471,6 +8471,10 @@ LevelObjectGroup r13acidants1 = {
     .numObjects = 6, .objects = r13acidants1_objects
 };
 extern LevelObjectGroup r13beetle1;
+static const GameObjectAction path2730_0_actions[] = {
+{.action = setInvul, .time = 255},
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
+};
 static const GameObjectAction path2730_1_actions[] = {
 {.action = enterForeground, }
 };
@@ -8478,10 +8482,12 @@ static const GameObjectAction path2730_2_actions[] = {
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2730_3_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_135}
 };
 static const GameObjectAction path2730_4_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_0},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = true}
 };
 static const Path path2730 = {
 .x = 56, .y = 1320, .numPoints = 6, .points = {
@@ -8489,8 +8495,8 @@ static const Path path2730 = {
     .x = 0, .y = 0,
     .speedTo = 32, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 2,
+    .actions = path2730_0_actions
 },
 {
     .x = 0, .y = -16,
@@ -8517,7 +8523,7 @@ static const Path path2730 = {
     .x = -16, .y = -160,
     .speedTo = 32, .distTo = 1448,
     .xVelTo = -23, .yVelTo = -23,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2730_4_actions
 },
 {
@@ -8529,6 +8535,10 @@ static const Path path2730 = {
 }
 }
 };
+static const GameObjectAction path2731_0_actions[] = {
+{.action = setInvul, .time = 255},
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
+};
 static const GameObjectAction path2731_1_actions[] = {
 {.action = enterForeground, }
 };
@@ -8536,10 +8546,12 @@ static const GameObjectAction path2731_2_actions[] = {
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2731_3_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_135}
 };
 static const GameObjectAction path2731_4_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_0},
+{.action = setSpriteVFlip, .flip = false},
+{.action = setSpriteHFlip, .flip = false}
 };
 static const Path path2731 = {
 .x = 200, .y = 1320, .numPoints = 6, .points = {
@@ -8547,8 +8559,8 @@ static const Path path2731 = {
     .x = 0, .y = 0,
     .speedTo = 32, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 2,
+    .actions = path2731_0_actions
 },
 {
     .x = 0, .y = -16,
@@ -8575,7 +8587,7 @@ static const Path path2731 = {
     .x = 16, .y = -160,
     .speedTo = 32, .distTo = 1448,
     .xVelTo = 22, .yVelTo = -23,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2731_4_actions
 },
 {
@@ -8768,17 +8780,18 @@ LevelObjectGroup r13fly3 = {
     .numObjects = 1, .objects = r13fly3_objects
 };
 extern LevelObjectGroup r14beetles;
+static const GameObjectAction path2779_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
+};
 static const GameObjectAction path2779_1_actions[] = {
 {.action = enterForeground, }
 };
 static const GameObjectAction path2779_2_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_4_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_5_actions[] = {
 {.action = BeetleShoot, }
@@ -8787,26 +8800,22 @@ static const GameObjectAction path2779_6_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2779_7_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_9_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_10_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2779_12_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_13_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_14_actions[] = {
 {.action = BeetleShoot, }
@@ -8815,26 +8824,22 @@ static const GameObjectAction path2779_15_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2779_16_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_17_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_18_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2779_20_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_21_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_22_actions[] = {
 {.action = BeetleShoot, }
@@ -8843,35 +8848,36 @@ static const GameObjectAction path2779_23_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2779_24_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_25_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_26_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2779_28_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2779_29_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2779_30_actions[] = {
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2779_31_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_135}
 };
 static const GameObjectAction path2779_32_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_0},
+{.action = faceRight, },
+{.action = setSpriteVFlip, .flip = false}
+};
+static const GameObjectAction path2779_33_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_BEETLE_EAT}
 };
 static const Path path2779 = {
 .x = 40, .y = 856, .numPoints = 34, .points = {
@@ -8879,8 +8885,8 @@ static const Path path2779 = {
     .x = 64, .y = 240,
     .speedTo = 80, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 1,
+    .actions = path2779_0_actions
 },
 {
     .x = 64, .y = 224,
@@ -8893,7 +8899,7 @@ static const Path path2779 = {
     .x = 40, .y = 208,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_2_actions
 },
 {
@@ -8907,7 +8913,7 @@ static const Path path2779 = {
     .x = 24, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_4_actions
 },
 {
@@ -8928,7 +8934,7 @@ static const Path path2779 = {
     .x = 24, .y = 160,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_7_actions
 },
 {
@@ -8942,7 +8948,7 @@ static const Path path2779 = {
     .x = 40, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_9_actions
 },
 {
@@ -8963,14 +8969,14 @@ static const Path path2779 = {
     .x = 40, .y = 112,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_12_actions
 },
 {
     .x = 24, .y = 112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_13_actions
 },
 {
@@ -8991,14 +8997,14 @@ static const Path path2779 = {
     .x = 24, .y = 64,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_16_actions
 },
 {
     .x = 40, .y = 64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_17_actions
 },
 {
@@ -9019,14 +9025,14 @@ static const Path path2779 = {
     .x = 40, .y = 16,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_20_actions
 },
 {
     .x = 24, .y = 16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_21_actions
 },
 {
@@ -9047,14 +9053,14 @@ static const Path path2779 = {
     .x = 24, .y = -32,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_24_actions
 },
 {
     .x = 40, .y = -32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_25_actions
 },
 {
@@ -9075,14 +9081,14 @@ static const Path path2779 = {
     .x = 40, .y = -80,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2779_28_actions
 },
 {
     .x = 24, .y = -80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2779_29_actions
 },
 {
@@ -9103,39 +9109,38 @@ static const Path path2779 = {
     .x = 16, .y = -128,
     .speedTo = 80, .distTo = 1448,
     .xVelTo = 56, .yVelTo = -57,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2779_32_actions
 },
 {
     .x = 24, .y = -128,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 1,
+    .actions = path2779_33_actions
 }
 }
+};
+static const GameObjectAction path2780_0_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_2_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_4_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_5_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2780_7_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_9_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_10_actions[] = {
 {.action = BeetleShoot, }
@@ -9144,26 +9149,22 @@ static const GameObjectAction path2780_11_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2780_12_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_13_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_14_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2780_16_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_17_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_18_actions[] = {
 {.action = BeetleShoot, }
@@ -9172,26 +9173,22 @@ static const GameObjectAction path2780_19_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2780_20_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_21_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_22_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2780_24_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_25_actions[] = {
-{.action = faceLeft, },
-{.action = PathPoint_Rotate, },
-{.action = 0 /* to be assigned */, }
+{.action = faceRight, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_26_actions[] = {
 {.action = BeetleShoot, }
@@ -9200,23 +9197,26 @@ static const GameObjectAction path2780_27_actions[] = {
 {.action = enterBackground, }
 };
 static const GameObjectAction path2780_28_actions[] = {
-{.action = 0 /* to be assigned */, },
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_BACK}
 };
 static const GameObjectAction path2780_29_actions[] = {
-{.action = PathPoint_Rotate, },
-{.action = faceRight, },
-{.action = 0 /* to be assigned */, }
+{.action = faceLeft, },
+{.action = setSpriteAnim, .anim = ANI_BEETLE_90}
 };
 static const GameObjectAction path2780_30_actions[] = {
 {.action = enterForeground, },
 {.action = BeetleShoot, }
 };
 static const GameObjectAction path2780_31_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_135}
 };
 static const GameObjectAction path2780_32_actions[] = {
-{.action = PathPoint_Rotate, }
+{.action = setSpriteAnim, .anim = ANI_BEETLE_0},
+{.action = faceRight, },
+{.action = setSpriteVFlip, .flip = false}
+};
+static const GameObjectAction path2780_33_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_BEETLE_EAT}
 };
 static const Path path2780 = {
 .x = 152, .y = 856, .numPoints = 34, .points = {
@@ -9224,8 +9224,8 @@ static const Path path2780 = {
     .x = 64, .y = 240,
     .speedTo = 80, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 1,
+    .actions = path2780_0_actions
 },
 {
     .x = 64, .y = 224,
@@ -9238,7 +9238,7 @@ static const Path path2780 = {
     .x = 40, .y = 208,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_2_actions
 },
 {
@@ -9252,7 +9252,7 @@ static const Path path2780 = {
     .x = 24, .y = 208,
     .speedTo = 80, .distTo = 512,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_4_actions
 },
 {
@@ -9273,7 +9273,7 @@ static const Path path2780 = {
     .x = 24, .y = 160,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_7_actions
 },
 {
@@ -9287,7 +9287,7 @@ static const Path path2780 = {
     .x = 40, .y = 160,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_9_actions
 },
 {
@@ -9308,14 +9308,14 @@ static const Path path2780 = {
     .x = 40, .y = 112,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_12_actions
 },
 {
     .x = 24, .y = 112,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_13_actions
 },
 {
@@ -9336,14 +9336,14 @@ static const Path path2780 = {
     .x = 24, .y = 64,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_16_actions
 },
 {
     .x = 40, .y = 64,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_17_actions
 },
 {
@@ -9364,14 +9364,14 @@ static const Path path2780 = {
     .x = 40, .y = 16,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_20_actions
 },
 {
     .x = 24, .y = 16,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_21_actions
 },
 {
@@ -9392,14 +9392,14 @@ static const Path path2780 = {
     .x = 24, .y = -32,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = 66, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_24_actions
 },
 {
     .x = 40, .y = -32,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_25_actions
 },
 {
@@ -9420,14 +9420,14 @@ static const Path path2780 = {
     .x = 40, .y = -80,
     .speedTo = 80, .distTo = 1846,
     .xVelTo = -67, .yVelTo = -45,
-    .numActions = 2,
+    .numActions = 1,
     .actions = path2780_28_actions
 },
 {
     .x = 24, .y = -80,
     .speedTo = 80, .distTo = 1024,
     .xVelTo = -80, .yVelTo = 0,
-    .numActions = 3,
+    .numActions = 2,
     .actions = path2780_29_actions
 },
 {
@@ -9448,15 +9448,15 @@ static const Path path2780 = {
     .x = 16, .y = -128,
     .speedTo = 80, .distTo = 1448,
     .xVelTo = 56, .yVelTo = -57,
-    .numActions = 1,
+    .numActions = 3,
     .actions = path2780_32_actions
 },
 {
     .x = 24, .y = -128,
     .speedTo = 80, .distTo = 512,
     .xVelTo = 80, .yVelTo = 0,
-    .numActions = 0,
-    .actions = 0
+    .numActions = 1,
+    .actions = path2780_33_actions
 }
 }
 };
