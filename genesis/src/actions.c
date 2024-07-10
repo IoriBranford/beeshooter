@@ -129,7 +129,9 @@ void markDisappear(GameObject *self, const GameObjectAction *action)
 
 void BeetleShoot(GameObject *self, const GameObjectAction *action)
 {
+    GOBJ_startShooting(self, BEETLE_SHOT_COUNT, BEETLE_SHOT_INTERVAL);
 }
+
 void PathPoint_Rotate(GameObject *self, const GameObjectAction *action)
 {
 }

@@ -262,6 +262,7 @@ GameObjectDefinition defBeetle = {
     .corpseDef = &defBloodSmall,
     .bulletDef = &defBeetleBullet,
     .update = GOBJ_updatePathWalker,
+    .shootFunction = ENEMY_beetleShoot
 };
 GameObjectDefinition defWaspShooter = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,

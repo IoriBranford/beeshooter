@@ -49,6 +49,7 @@ extern GameObjectDefinition
     defAntBigButt,
     defAlienGunner,
     defAlienPillager,
-    defAcidAntBullet;
+    defAcidAntBullet,
+    defBeetleBullet;
 
 #endif

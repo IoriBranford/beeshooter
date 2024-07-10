@@ -1,3 +1,4 @@
+#include "enemy.h"
 #include "gobject.h"
 #include "gobjdef.h"
 #include "bullet.h"
@@ -169,4 +170,34 @@ void ENEMY_chargeAtPlayer(GameObject *self) {
     self->velX = velX;
     self->velY = velY;
     self->update = (ObjectCallback*)BULLET_update;
+}
+
+static const fix16 BEETLE_SHOT_SPEEDS[BEETLE_SHOT_COUNT] = {
+    FIX16(2.25),
+    FIX16(2.00),
+    FIX16(1.75),
+    FIX16(1.5),
+    FIX16(1.25),
+};
+
+static const u16 BEETLE_SHOT_ANGLES[BEETLE_SHOT_COUNT] = {
+    256-0,
+    256-32,
+    256-64,
+    256-96,
+    256-128
+};
+
+void ENEMY_beetleShoot(GameObject *self) {
+    u16 angle = BEETLE_SHOT_ANGLES[self->shotsLeft-1];
+    fix16 speed = BEETLE_SHOT_SPEEDS[self->shotsLeft-1];
+    fix16 velX = fix16Mul(speed, cosFix16(angle));
+    fix16 velY = fix16Mul(speed, sinFix16(angle));
+    if (self->sprite->attribut & TILE_ATTR_HFLIP_MASK) {
+        velX = -velX;
+    }
+    BULLET_shootAtVelocity(
+        self->centerX, self->centerY,
+        velX, velY, &defBeetleBullet
+    );
 }

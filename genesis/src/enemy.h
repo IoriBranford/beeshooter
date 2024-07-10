@@ -16,4 +16,9 @@ void ENEMY_onDefeatShootUpward(GameObject *self);
 
 void ENEMY_chargeAtPlayer(GameObject *self);
 
+void ENEMY_beetleShoot(GameObject *self);
+
+#define BEETLE_SHOT_COUNT 5
+#define BEETLE_SHOT_INTERVAL 2
+
 #endif
