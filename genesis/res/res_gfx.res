@@ -28,7 +28,7 @@ SPRITE sprAlienMind "enemy/AlienMind.png" 4 6 NONE 6
 
 PALETTE palAcidAndBeetle "enemy/Beetle.png"
 PALETTE palWaspAndHoney "enemy/Wasp.png"
-PALETTE palWaspShooterAndHoney "enemy/WaspShooter.png"
+PALETTE palWaspShooterAndReinforcedHoney "enemy/WaspShooter.png"
 
 SPRITE sprAcidBullet "enemy/AcidBullet.png" 3 3
 SPRITE sprWasp "enemy/Wasp.png" 5 4 NONE 3

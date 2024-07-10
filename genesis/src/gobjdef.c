@@ -271,7 +271,7 @@ GameObjectDefinition defWaspShooter = {
     .spriteDef = &sprWasp,
     .spriteDepth = 10,
     .pathParent = PATHPARENT_TRIGGER,
-    .palette = &palWaspShooterAndHoney,
+    .palette = &palWaspShooterAndReinforcedHoney,
     .bodyW = FIX16(12), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
     .corpseDef = &defBloodSmall,
