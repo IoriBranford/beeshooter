@@ -88,6 +88,16 @@ GameObjectDefinition defFlyBullet = {
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
 };
+GameObjectDefinition defWaspBullet = {
+    .teams = 1<<TEAM_ENEMYSHOT,
+    .health = 1, .damage = 1,
+    .speed = FIX16(3),
+    .spriteDef = &sprFlyBullet,
+    .spriteDepth = -20,
+    .palette = &palWaspShooterAndReinforcedHoney,
+    .bodyW = FIX16(2), .bodyH = FIX16(2),
+    .update = BULLET_update,
+};
 GameObjectDefinition defFly = {
     .teams = 1<<TEAM_ENEMY,
     .health = 8, .speed = FIX16(2),
@@ -277,6 +287,8 @@ GameObjectDefinition defWaspShooter = {
     .defeatSoundDef = &sndBugKill2,
     .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
+    .bulletDef = &defWaspBullet,
+    .shootFunction = ENEMY_shootAtPlayer
 };
 GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;

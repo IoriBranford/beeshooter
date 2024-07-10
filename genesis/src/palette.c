@@ -13,7 +13,7 @@ void PAL_updateAlternatingColors(u16 paletteSlot, const Palette *palette, u8 i, 
 }
 
 void PAL_update(u16 paletteSlot, const Palette *palette) {
-    if (palette == &palFlyAndHoney) {
+    if (palette == &palFlyAndHoney || palette == &palWaspShooterAndReinforcedHoney) {
         PAL_updateAlternatingColors(paletteSlot, palette, 1, 2);
     } else if (palette == &palAcidAndBeetle) {
         PAL_updateAlternatingColors(paletteSlot, palette, 6, 7);
