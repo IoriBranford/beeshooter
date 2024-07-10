@@ -41,7 +41,7 @@ GameObjectDefinition defBloodSmall = {
 GameObjectDefinition defAcidBloodSmall = {
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
-    .palette = &palAcid,
+    .palette = &palAcidAndBeetle,
     .init = GOBJ_initSprite,
     .update = GOBJ_updateSpark
 };
@@ -206,7 +206,7 @@ GameObjectDefinition defAcidAntBullet = {
     .speed = FIX16(3),
     .spriteDef = &sprAcidBullet,
     .spriteDepth = -20,
-    .palette = &palAcid,
+    .palette = &palAcidAndBeetle,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_updateFalling,
 };
@@ -216,7 +216,7 @@ GameObjectDefinition defAcidAnt = {
     .defeatPoints = 250,
     .spriteDef = &sprAnt,
     .spriteDepth = -1,
-    .palette = &palAcid,
+    .palette = &palAcidAndBeetle,
     .bodyW = FIX16(8), .bodyH = FIX16(6),
     .defeatSoundDef = &sndBugKill1,
     .corpseDef = &defAcidBloodSmall,
