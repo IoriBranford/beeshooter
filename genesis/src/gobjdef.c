@@ -327,11 +327,13 @@ GameObjectDefinition *part1defs[8] = {
     &defAlienMind
 };
 
-GameObjectDefinition *part2defs[4] = {
+GameObjectDefinition *part2defs[] = {
     &defAcidAnt,
     &defAcidAntBullet,
     &defWasp,
-    &defBeetle
+    &defWaspBullet,
+    &defBeetle,
+    &defAntHole
 };
 
 static u16 levelObjectTileStart;
@@ -363,11 +365,15 @@ void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
 u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
+    defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
+    defReinforcedHoneyPot.aniFrameTiles = defHoneyPot.aniFrameTiles;
     return tileIndex;
 }
 
 void GOBJDEF_freeCommonFrames() {
     defHoneyCell.aniFrameTiles = NULL;
+    defAcidBloodSmall.aniFrameTiles = NULL;
+    defReinforcedHoneyPot.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
 }
 
@@ -391,14 +397,12 @@ u16 GOBJDEF_freePart1EnemyFrames() {
 u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex) {
     levelObjectTileStart = tileIndex;
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
-    defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
     defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
     defBeetleBullet.aniFrameTiles = defAcidAntBullet.aniFrameTiles;
     return tileIndex;
 }
 
 u16 GOBJDEF_freePart2EnemyFrames() {
-    defAcidBloodSmall.aniFrameTiles = NULL;
     defWaspShooter.aniFrameTiles = NULL;
     defBeetleBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
