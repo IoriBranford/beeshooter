@@ -6,7 +6,7 @@
 #define stage_caravan_numTriggers (190)
 extern const Trigger stage_caravan_triggers[];
 
-#define stage_caravan_numGroups (102)
+#define stage_caravan_numGroups (105)
 extern LevelObjectGroup *stage_caravan_groups[];
 
 extern GameObjectDefinition defAnt;

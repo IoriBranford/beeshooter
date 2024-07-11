@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="395" nextobjectid="4254">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4280">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -7065,68 +7065,10 @@ end</property>
    <object id="2706" template="triggers/SpawnCharacters.tx" x="-40" y="1368"/>
    <object id="2707" template="enemies/ReinforcedHoneyPot.tx" x="128" y="1360"/>
   </objectgroup>
-  <objectgroup id="300" name="r13acidants1">
-   <object id="2708" template="triggers/SpawnCharacters.tx" x="-96" y="1328"/>
-   <object id="2709" type="AntHole" gid="496" x="232" y="1200" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDown"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2710" type="AntHole" gid="496" x="240" y="1216" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDown"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2711" type="AntHole" gid="496" x="16" y="1216" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2712" type="AntHole" gid="496" x="24" y="1200" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2713" type="AntHole" gid="496" x="248" y="1200" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDown"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2714" type="AntHole" gid="496" x="8" y="1200" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="60"/>
-     <property name="spawninterval" type="float" value="6"/>
-     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="2715" template="enemies/Path.tx" x="232" y="1152">
-    <properties>
-     <property name="speed" type="float" value="2"/>
-    </properties>
-    <polyline points="0,48 0,176 0,192"/>
-   </object>
-   <object id="2716" template="enemies/Path.tx" x="240" y="1168">
-    <properties>
-     <property name="speed" type="float" value="2"/>
-    </properties>
-    <polyline points="0,48 0,160 0,176"/>
-   </object>
+  <objectgroup id="395" name="r13acidantsfromholes">
+   <object id="4254" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1200" rotation="270"/>
+   <object id="4255" template="enemies/AcidAnt.tx" gid="2147484131" x="16" y="1216" rotation="270"/>
+   <object id="4256" template="enemies/AcidAnt.tx" gid="2147484131" x="8" y="1200" rotation="270"/>
    <object id="2717" template="enemies/Path.tx" x="16" y="1168">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -7139,13 +7081,28 @@ end</property>
     </properties>
     <polyline points="0,48 0,176 0,192"/>
    </object>
-   <object id="2719" template="enemies/Path.tx" x="248" y="1152">
+   <object id="2720" template="enemies/Path.tx" x="8" y="1152">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
     <polyline points="0,48 0,176 0,192"/>
    </object>
-   <object id="2720" template="enemies/Path.tx" x="8" y="1152">
+   <object id="2723" template="pathpoints/Disappear.tx" x="16" y="1344"/>
+   <object id="2724" template="pathpoints/Disappear.tx" x="24" y="1344"/>
+   <object id="2726" template="pathpoints/Disappear.tx" x="8" y="1344"/>
+   <object id="2715" template="enemies/Path.tx" x="232" y="1152">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,48 0,176 0,192"/>
+   </object>
+   <object id="2716" template="enemies/Path.tx" x="240" y="1168">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,48 0,160 0,176"/>
+   </object>
+   <object id="2719" template="enemies/Path.tx" x="248" y="1152">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
@@ -7153,10 +7110,67 @@ end</property>
    </object>
    <object id="2721" template="pathpoints/Disappear.tx" x="232" y="1344"/>
    <object id="2722" template="pathpoints/Disappear.tx" x="240" y="1344"/>
-   <object id="2723" template="pathpoints/Disappear.tx" x="16" y="1344"/>
-   <object id="2724" template="pathpoints/Disappear.tx" x="24" y="1344"/>
    <object id="2725" template="pathpoints/Disappear.tx" x="248" y="1344"/>
-   <object id="2726" template="pathpoints/Disappear.tx" x="8" y="1344"/>
+   <object id="4257" template="enemies/AcidAnt.tx" gid="483" x="232" y="1200" rotation="-270"/>
+   <object id="4258" template="enemies/AcidAnt.tx" gid="483" x="240" y="1216" rotation="-270"/>
+   <object id="4259" template="enemies/AcidAnt.tx" gid="483" x="248" y="1200" rotation="-270"/>
+   <object id="2710" type="AntHole" gid="496" x="240" y="1216" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4258"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDown"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="2711" type="AntHole" gid="496" x="16" y="1216" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4255"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+  </objectgroup>
+  <objectgroup id="300" name="r13acidantholes">
+   <object id="2708" template="triggers/SpawnCharacters.tx" x="-96" y="1328"/>
+   <object id="2709" type="AntHole" gid="496" x="232" y="1200" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4257"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDown"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="2712" type="AntHole" gid="496" x="24" y="1200" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4254"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="2713" type="AntHole" gid="496" x="248" y="1200" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4259"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDown"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="2714" type="AntHole" gid="496" x="8" y="1200" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4256"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="301" name="r13beetle1">
    <properties>
@@ -7170,13 +7184,13 @@ end</property>
     <properties>
      <property name="speed" type="float" value="0.5"/>
     </properties>
-    <polyline points="0,0 0,-16 0,-24 0,-144 -16,-160 -112,-160"/>
+    <polyline points="0,0 0,-16 0,-24 0,-48 0,-72 0,-96 0,-120 0,-144 -16,-160 -112,-160"/>
    </object>
    <object id="2731" template="enemies/Path.tx" x="200" y="1320" rotation="0">
     <properties>
      <property name="speed" type="float" value="0.5"/>
     </properties>
-    <polyline points="0,0 0,-16 0,-24 0,-144 16,-160 112,-160"/>
+    <polyline points="0,0 0,-16 0,-24 0,-48 0,-72 0,-96 0,-120 0,-144 16,-160 112,-160"/>
    </object>
    <object id="2732" template="pathpoints/FinishEnterForeground.tx" x="56" y="1304"/>
    <object id="2733" template="pathpoints/FinishEnterForeground.tx" x="200" y="1304"/>
@@ -7238,6 +7252,14 @@ end</property>
     </properties>
    </object>
    <object id="4205" template="pathpoints/SetSpriteHFlip.tx" x="216" y="1160"/>
+   <object id="4272" template="pathpoints/BeetleShoot.tx" x="56" y="1272"/>
+   <object id="4273" template="pathpoints/BeetleShoot.tx" x="56" y="1248"/>
+   <object id="4274" template="pathpoints/BeetleShoot.tx" x="56" y="1224"/>
+   <object id="4275" template="pathpoints/BeetleShoot.tx" x="56" y="1200"/>
+   <object id="4276" template="pathpoints/BeetleShoot.tx" x="200" y="1272"/>
+   <object id="4277" template="pathpoints/BeetleShoot.tx" x="200" y="1248"/>
+   <object id="4278" template="pathpoints/BeetleShoot.tx" x="200" y="1224"/>
+   <object id="4279" template="pathpoints/BeetleShoot.tx" x="200" y="1200"/>
   </objectgroup>
   <objectgroup id="302" name="r13fly1">
    <object id="2740" template="triggers/SpawnCharacters.tx" x="-64" y="1192"/>
@@ -7749,37 +7771,88 @@ end</property>
     </properties>
    </object>
   </objectgroup>
+  <objectgroup id="396" name="r14powerupholes">
+   <object id="4260" type="AntHole" gid="496" x="72" y="992" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4261"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="4261" template="enemies/AcidAnt.tx" gid="2147484131" x="72" y="992" rotation="270"/>
+   <object id="3047" template="enemies/Path.tx" x="72" y="992">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,0 0,120"/>
+   </object>
+   <object id="3048" template="pathpoints/Disappear.tx" x="72" y="1112"/>
+   <object id="3051" template="enemies/Path.tx" x="184" y="960">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,0 0,152"/>
+   </object>
+   <object id="3052" template="pathpoints/Disappear.tx" x="184" y="1112"/>
+   <object id="4262" type="AntHole" gid="496" x="184" y="960" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4263"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="4263" template="enemies/AcidAnt.tx" gid="2147484131" x="184" y="960" rotation="270"/>
+  </objectgroup>
   <objectgroup id="326" name="r14powerup1">
    <object id="3045" template="triggers/SpawnCharacters.tx" x="-136" y="1000"/>
    <object id="3046" template="enemies/HoneyCell.tx" x="72" y="992">
     <properties>
+     <property name="child" type="object" value="4260"/>
      <property name="defeatdrops" value="Powerup AcidAntHole"/>
     </properties>
    </object>
-   <object id="3047" template="enemies/Path.tx" x="72" y="992">
-    <polyline points="0,0 0,120"/>
-   </object>
-   <object id="3048" template="pathpoints/Disappear.tx" x="72" y="1112"/>
   </objectgroup>
   <objectgroup id="327" name="r14powerup2">
    <object id="3049" template="triggers/SpawnCharacters.tx" x="-48" y="968"/>
    <object id="3050" template="enemies/HoneyCell.tx" x="184" y="960">
     <properties>
+     <property name="child" type="object" value="4262"/>
      <property name="defeatdrops" value="Powerup AcidAntHole"/>
     </properties>
    </object>
-   <object id="3051" template="enemies/Path.tx" x="184" y="960">
-    <polyline points="0,0 0,152"/>
-   </object>
-   <object id="3052" template="pathpoints/Disappear.tx" x="184" y="1112"/>
   </objectgroup>
-  <objectgroup id="328" name="r15powerup2">
-   <object id="3053" template="triggers/SpawnCharacters.tx" x="-136" y="808"/>
-   <object id="3054" template="enemies/HoneyCell.tx" x="72" y="800">
+  <objectgroup id="397" name="r15powerupholes">
+   <object id="4264" type="AntHole" gid="496" x="72" y="800" width="16" height="32">
     <properties>
-     <property name="defeatdrops" value="Powerup AcidAntHole"/>
+     <property name="child" type="object" value="4265"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
     </properties>
    </object>
+   <object id="4265" template="enemies/AcidAnt.tx" gid="2147484131" x="72" y="800" rotation="270"/>
+   <object id="4270" type="AntHole" gid="496" x="184" y="864" width="16" height="32">
+    <properties>
+     <property name="child" type="object" value="4271"/>
+     <property name="spawncount" type="float" value="60"/>
+     <property name="spawninterval" type="float" value="24"/>
+     <property name="spawntype" value="AcidAntClimbingDownLeft"/>
+     <property name="z" type="float" value="0.75"/>
+    </properties>
+   </object>
+   <object id="4271" template="enemies/AcidAnt.tx" gid="483" x="184" y="864" rotation="90"/>
+   <object id="3059" template="enemies/Path.tx" x="184" y="864">
+    <properties>
+     <property name="speed" type="float" value="2"/>
+    </properties>
+    <polyline points="0,0 0,248"/>
+   </object>
+   <object id="3060" template="pathpoints/Disappear.tx" x="184" y="1112"/>
    <object id="3055" template="enemies/Path.tx" x="72" y="800">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -7788,20 +7861,23 @@ end</property>
    </object>
    <object id="3056" template="pathpoints/Disappear.tx" x="72" y="1112"/>
   </objectgroup>
+  <objectgroup id="328" name="r15powerup2">
+   <object id="3053" template="triggers/SpawnCharacters.tx" x="-136" y="808"/>
+   <object id="3054" template="enemies/HoneyCell.tx" x="72" y="800">
+    <properties>
+     <property name="child" type="object" value="4264"/>
+     <property name="defeatdrops" value="Powerup AcidAntHole"/>
+    </properties>
+   </object>
+  </objectgroup>
   <objectgroup id="329" name="r15powerup1">
    <object id="3057" template="triggers/SpawnCharacters.tx" x="-48" y="872"/>
    <object id="3058" template="enemies/HoneyCell.tx" x="184" y="864">
     <properties>
+     <property name="child" type="object" value="4270"/>
      <property name="defeatdrops" value="Powerup AcidAntHole"/>
     </properties>
    </object>
-   <object id="3059" template="enemies/Path.tx" x="184" y="864">
-    <properties>
-     <property name="speed" type="float" value="2"/>
-    </properties>
-    <polyline points="0,0 0,248"/>
-   </object>
-   <object id="3060" template="pathpoints/Disappear.tx" x="184" y="1112"/>
   </objectgroup>
   <objectgroup id="330" name="r16acidants1">
    <object id="3061" template="triggers/SpawnCharacters.tx" x="-72" y="656"/>
