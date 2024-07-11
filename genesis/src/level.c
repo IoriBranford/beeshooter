@@ -126,6 +126,8 @@ u16 LEVEL_getPaletteSlot(const Palette *palette) {
         paletteUsage[paletteSlot].cameraY = cameraY;
     } else if (palette == &palPlayer) {
         paletteSlot = PLAYERPAL;
+    } else if (palette == &bgPalette) {
+        paletteSlot = BG_PALETTE;
     } else if (!paletteUsage[PAL0].palette || paletteUsage[PAL0].cameraY > paletteUsage[PAL1].cameraY) {
         paletteSlot = PAL0;
         LEVEL_setPalette(paletteSlot, palette);
