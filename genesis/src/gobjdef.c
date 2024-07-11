@@ -249,7 +249,13 @@ GameObjectDefinition defWasp = {
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defReinforcedHoneyPot;
-GameObjectDefinition defAntHole;
+GameObjectDefinition defAntHole = {
+    .bodyW = FIX16(8), .bodyH = FIX16(10),
+    .spriteDef = &sprAntHole,
+    .spriteDepth = 0,
+    .palette = &bgPalette,
+    .update = GOBJ_updateSpawner,
+};
 GameObjectDefinition defBeetleBullet = {
     .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
