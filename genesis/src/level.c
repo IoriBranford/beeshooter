@@ -19,11 +19,12 @@ static const Trigger *nextTrigger;
 static u32 nextTriggerIndex;
 static u32 numTriggers;
 
+#define PALETTE_USAGE_SLOTS 2
 typedef struct PaletteUsage {
     const Palette *palette;
     fix32 cameraY;
 } PaletteUsage;
-PaletteUsage paletteUsage[2];
+PaletteUsage paletteUsage[PALETTE_USAGE_SLOTS];
 
 void LEVEL_init(u16 tileIndex) {
     cameraY = FIX32(4256);
@@ -44,10 +45,10 @@ void LEVEL_init(u16 tileIndex) {
     bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(BG_PALETTE, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
-    paletteUsage[0].palette = NULL;
-    paletteUsage[0].cameraY = cameraY;
-    paletteUsage[1].palette = NULL;
-    paletteUsage[1].cameraY = cameraY;
+    for (int i = 1; i < PALETTE_USAGE_SLOTS; ++i) {
+        paletteUsage[i].palette = NULL;
+        paletteUsage[i].cameraY = cameraY;
+    }
 }
 
 void LEVEL_update() {
@@ -110,32 +111,37 @@ const Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 y
     return closest;
 }
 
-void LEVEL_setPalette(u16 slot, const Palette *palette) {
-    paletteUsage[slot].palette = palette;
-    paletteUsage[slot].cameraY = cameraY;
-    PAL_setPalette(slot, palette->data, DMA_QUEUE);
+u16 LEVEL_findPaletteSlot(const Palette *palette) {
+    for (u16 i = 0; i < PALETTE_USAGE_SLOTS; ++i) {
+        if (!paletteUsage[i].palette || palette == paletteUsage[i].palette) {
+            return i;
+        }
+    }
+
+    u16 slot = PAL0;
+    fix32 y = 0;
+    for (u16 i = 0; i < PALETTE_USAGE_SLOTS; ++i) {
+        if (y < paletteUsage[i].cameraY) {
+            y = paletteUsage[i].cameraY;
+            slot = i;
+        }
+    }
+
+    return slot;
 }
 
 u16 LEVEL_getPaletteSlot(const Palette *palette) {
-    u16 paletteSlot = PAL0;
-    if (palette == paletteUsage[PAL0].palette) {
-        paletteSlot = PAL0;
-        paletteUsage[paletteSlot].cameraY = cameraY;
-    } else if (palette == paletteUsage[PAL1].palette) {
-        paletteSlot = PAL1;
-        paletteUsage[paletteSlot].cameraY = cameraY;
-    } else if (palette == &palPlayer) {
-        paletteSlot = PLAYERPAL;
-    } else if (palette == &bgPalette) {
-        paletteSlot = BG_PALETTE;
-    } else if (!paletteUsage[PAL0].palette || paletteUsage[PAL0].cameraY > paletteUsage[PAL1].cameraY) {
-        paletteSlot = PAL0;
-        LEVEL_setPalette(paletteSlot, palette);
-    } else {
-        paletteSlot = PAL1;
-        LEVEL_setPalette(paletteSlot, palette);
+    if (palette == &palPlayer)
+        return PLAYERPAL;
+    if (palette == &bgPalette)
+        return BG_PALETTE;
+    u16 slot = LEVEL_findPaletteSlot(palette);
+    paletteUsage[slot].cameraY = cameraY;
+    if (paletteUsage[slot].palette != palette) {
+        paletteUsage[slot].palette = palette;
+        PAL_setPalette(slot, palette->data, DMA_QUEUE);
     }
-    return paletteSlot;
+    return slot;
 }
 
 GameObject* LEVEL_createObject(const LevelObject *lobj) {
