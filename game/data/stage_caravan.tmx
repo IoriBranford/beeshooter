@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4280">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4332">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -7881,24 +7881,29 @@ end</property>
   </objectgroup>
   <objectgroup id="330" name="r16acidants1">
    <object id="3061" template="triggers/SpawnCharacters.tx" x="-72" y="656"/>
-   <object id="3062" type="AntHole" gid="496" x="40" y="560" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="15"/>
-     <property name="spawninterval" type="float" value="15"/>
-     <property name="spawntype" value="AcidAntLeftBehind"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
+   <object id="4296" template="triggers/SpawnCharacters.tx" x="-72" y="560"/>
+   <object id="4290" template="triggers/SpawnCharacters.tx" x="-72" y="608"/>
+   <object id="4302" template="triggers/SpawnCharacters.tx" x="-72" y="512"/>
+   <object id="4288" template="triggers/SpawnCharacters.tx" x="-72" y="624"/>
+   <object id="4300" template="triggers/SpawnCharacters.tx" x="-72" y="528"/>
+   <object id="4294" template="triggers/SpawnCharacters.tx" x="-72" y="576"/>
+   <object id="4306" template="triggers/SpawnCharacters.tx" x="-72" y="480"/>
+   <object id="4286" template="triggers/SpawnCharacters.tx" x="-72" y="640"/>
+   <object id="4298" template="triggers/SpawnCharacters.tx" x="-72" y="544"/>
+   <object id="4292" template="triggers/SpawnCharacters.tx" x="-72" y="592"/>
+   <object id="4304" template="triggers/SpawnCharacters.tx" x="-72" y="496"/>
+   <object id="3062" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="40" y="552" rotation="0"/>
    <object id="3063" template="enemies/Path.tx" x="40" y="544">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
-    <polyline points="0,16 -16,24 -16,40 8,64 168,64 192,40 192,24 176,16"/>
+    <polyline points="0,8 -16,16 -16,40 8,64 168,64 192,40 192,16 176,8"/>
    </object>
-   <object id="3064" template="pathpoints/Disappear.tx" x="216" y="560"/>
+   <object id="3064" template="pathpoints/Disappear.tx" x="216" y="552"/>
    <object id="3065" template="pathpoints/FaceRight.tx" x="24" y="584"/>
-   <object id="3066" template="pathpoints/FaceLeft.tx" x="232" y="568"/>
-   <object id="3067" template="pathpoints/FinishEnterForeground.tx" x="24" y="568"/>
+   <object id="3066" template="pathpoints/FaceLeft.tx" x="232" y="560"/>
+   <object id="3067" template="pathpoints/FinishEnterForeground.tx" x="24" y="560"/>
+   <object id="4284" template="pathpoints/EnterBackground.tx" x="232" y="560"/>
   </objectgroup>
   <objectgroup id="331" name="r16powerup">
    <object id="3068" template="triggers/SpawnCharacters.tx" x="-32" y="608"/>
@@ -7907,42 +7912,51 @@ end</property>
   </objectgroup>
   <objectgroup id="332" name="r16acidants2">
    <object id="3071" template="triggers/SpawnCharacters.tx" x="-56" y="592"/>
-   <object id="3072" type="AntHole" gid="496" x="184" y="456" width="16" height="32" visible="0">
-    <properties>
-     <property name="spawncount" type="float" value="15"/>
-     <property name="spawninterval" type="float" value="15"/>
-     <property name="spawntype" value="AcidAntBehind"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
-   <object id="3073" type="AntHole" gid="496" x="72" y="472" width="16" height="32">
-    <properties>
-     <property name="spawncount" type="float" value="15"/>
-     <property name="spawninterval" type="float" value="15"/>
-     <property name="spawntype" value="AcidAntLeftBehind"/>
-     <property name="z" type="float" value="0.75"/>
-    </properties>
-   </object>
+   <object id="3072" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="216" y="488" rotation="90"/>
+   <object id="3073" template="enemies/AcidAntClimbBackground.tx" gid="2147484131" x="72" y="448" rotation="0"/>
    <object id="3074" template="enemies/Path.tx" x="184" y="464">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
-    <polyline points="0,-8 16,8 32,24 32,56 8,80 -120,80 -144,56 -144,24 -112,-8"/>
+    <polyline points="32,24 32,16 32,56 8,80 -120,80 -144,56 -144,16 -144,32"/>
    </object>
    <object id="3075" template="enemies/Path.tx" x="88" y="456">
     <properties>
      <property name="speed" type="float" value="2"/>
     </properties>
-    <polyline points="-16,16 -32,32 -32,48 -8,72 88,72 112,48 112,32 96,16"/>
+    <polyline points="-16,-8 -32,8 -32,48 -8,72 88,72 112,48 112,8 96,-8"/>
    </object>
-   <object id="3076" template="pathpoints/Disappear.tx" x="72" y="456"/>
-   <object id="3077" template="pathpoints/Disappear.tx" x="184" y="472"/>
+   <object id="3076" template="pathpoints/Disappear.tx" x="40" y="496"/>
+   <object id="3077" template="pathpoints/Disappear.tx" x="184" y="448"/>
    <object id="3078" template="pathpoints/FaceRight.tx" x="56" y="504"/>
-   <object id="3079" template="pathpoints/FaceRight.tx" x="40" y="488"/>
-   <object id="3080" template="pathpoints/FaceLeft.tx" x="200" y="488"/>
-   <object id="3081" template="pathpoints/FaceLeft.tx" x="216" y="520"/>
-   <object id="3082" template="pathpoints/FinishEnterForeground.tx" x="56" y="488"/>
-   <object id="3083" template="pathpoints/FinishEnterForeground.tx" x="200" y="472"/>
+   <object id="3079" template="pathpoints/SetSpriteAnim.tx" x="40" y="480">
+    <properties>
+     <property name="anim" value="ANI_ANT_DOWN"/>
+    </properties>
+   </object>
+   <object id="3080" template="pathpoints/FaceLeft.tx" x="200" y="464"/>
+   <object id="3081" template="pathpoints/FaceLeft.tx" x="216" y="480"/>
+   <object id="3082" template="pathpoints/FinishEnterForeground.tx" x="56" y="464"/>
+   <object id="3083" template="pathpoints/FinishEnterForeground.tx" x="216" y="480"/>
+   <object id="4280" template="pathpoints/SetSpriteAnim.tx" x="216" y="480">
+    <properties>
+     <property name="anim" value="ANI_ANT_RIGHT"/>
+    </properties>
+   </object>
+   <object id="4282" template="pathpoints/EnterBackground.tx" x="40" y="480"/>
+   <object id="4283" template="pathpoints/EnterBackground.tx" x="200" y="464"/>
+   <object id="4309" template="triggers/SpawnCharacters.tx" x="-56" y="496"/>
+   <object id="4310" template="triggers/SpawnCharacters.tx" x="-56" y="544"/>
+   <object id="4311" template="triggers/SpawnCharacters.tx" x="-56" y="448"/>
+   <object id="4319" template="triggers/SpawnCharacters.tx" x="-56" y="560"/>
+   <object id="4320" template="triggers/SpawnCharacters.tx" x="-56" y="464"/>
+   <object id="4321" template="triggers/SpawnCharacters.tx" x="-56" y="512"/>
+   <object id="4322" template="triggers/SpawnCharacters.tx" x="-56" y="416"/>
+   <object id="4323" template="triggers/SpawnCharacters.tx" x="-56" y="576"/>
+   <object id="4324" template="triggers/SpawnCharacters.tx" x="-56" y="480"/>
+   <object id="4325" template="triggers/SpawnCharacters.tx" x="-56" y="528"/>
+   <object id="4326" template="triggers/SpawnCharacters.tx" x="-56" y="432"/>
+   <object id="4331" template="pathpoints/SetSpriteVFlip.tx" x="216" y="480"/>
   </objectgroup>
   <objectgroup id="333" name="r16powerup2">
    <object id="3084" template="triggers/SpawnCharacters.tx" x="-16" y="520"/>

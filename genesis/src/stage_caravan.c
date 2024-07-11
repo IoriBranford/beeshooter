@@ -10671,7 +10671,8 @@ static const GameObjectAction path3063_2_actions[] = {
 {.action = faceRight, }
 };
 static const GameObjectAction path3063_6_actions[] = {
-{.action = faceLeft, }
+{.action = faceLeft, },
+{.action = enterBackground, }
 };
 static const GameObjectAction path3063_7_actions[] = {
 {.action = markDisappear, }
@@ -10679,14 +10680,14 @@ static const GameObjectAction path3063_7_actions[] = {
 static const Path path3063 = {
 .x = 40, .y = 544, .numPoints = 8, .points = {
 {
-    .x = 0, .y = 16,
+    .x = 0, .y = 8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
     .numActions = 0,
     .actions = 0
 },
 {
-    .x = -16, .y = 24,
+    .x = -16, .y = 16,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = 57,
     .numActions = 1,
@@ -10694,7 +10695,7 @@ static const Path path3063 = {
 },
 {
     .x = -16, .y = 40,
-    .speedTo = 128, .distTo = 1024,
+    .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = 128,
     .numActions = 1,
     .actions = path3063_2_actions
@@ -10721,14 +10722,14 @@ static const Path path3063 = {
     .actions = 0
 },
 {
-    .x = 192, .y = 24,
-    .speedTo = 128, .distTo = 1024,
+    .x = 192, .y = 16,
+    .speedTo = 128, .distTo = 1536,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 2,
     .actions = path3063_6_actions
 },
 {
-    .x = 176, .y = 16,
+    .x = 176, .y = 8,
     .speedTo = 128, .distTo = 1144,
     .xVelTo = -115, .yVelTo = -58,
     .numActions = 1,
@@ -10741,12 +10742,12 @@ static const Path *r16acidants1_paths[] = {
 };
 extern const LevelObject lobj3062;
 const LevelObject lobj3062 = {
-    .definition = &defAntHole,
-    .x = 40, .y = 560,
+    .definition = &defAcidAnt,
+    .x = 40, .y = 552,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 0, .flags = 2048,
     .group = &r16acidants1, .path = &path3063,
-    .pathIndex = 1, .child = 0, .interval = 15
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject *r16acidants1_objects[] = {
     &lobj3062
@@ -10784,46 +10785,40 @@ LevelObjectGroup r16powerup = {
 };
 extern LevelObjectGroup r16acidants2;
 static const GameObjectAction path3074_1_actions[] = {
-{.action = enterForeground, }
+{.action = faceLeft, },
+{.action = enterForeground, },
+{.action = setSpriteAnim, .anim = ANI_ANT_RIGHT},
+{.action = setSpriteVFlip, .flip = false}
 };
-static const GameObjectAction path3074_3_actions[] = {
-{.action = faceLeft, }
+static const GameObjectAction path3074_6_actions[] = {
+{.action = setSpriteAnim, .anim = ANI_ANT_DOWN},
+{.action = enterBackground, }
 };
 static const GameObjectAction path3074_7_actions[] = {
-{.action = faceRight, }
-};
-static const GameObjectAction path3074_8_actions[] = {
 {.action = markDisappear, }
 };
 static const Path path3074 = {
-.x = 184, .y = 464, .numPoints = 9, .points = {
+.x = 184, .y = 464, .numPoints = 8, .points = {
 {
-    .x = 0, .y = -8,
+    .x = 32, .y = 24,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
     .numActions = 0,
     .actions = 0
 },
 {
-    .x = 16, .y = 8,
-    .speedTo = 128, .distTo = 1448,
-    .xVelTo = 90, .yVelTo = 90,
-    .numActions = 1,
+    .x = 32, .y = 16,
+    .speedTo = 128, .distTo = 512,
+    .xVelTo = 0, .yVelTo = -128,
+    .numActions = 4,
     .actions = path3074_1_actions
 },
 {
-    .x = 32, .y = 24,
-    .speedTo = 128, .distTo = 1448,
-    .xVelTo = 90, .yVelTo = 90,
+    .x = 32, .y = 56,
+    .speedTo = 128, .distTo = 2560,
+    .xVelTo = 0, .yVelTo = 128,
     .numActions = 0,
     .actions = 0
-},
-{
-    .x = 32, .y = 56,
-    .speedTo = 128, .distTo = 2048,
-    .xVelTo = 0, .yVelTo = 128,
-    .numActions = 1,
-    .actions = path3074_3_actions
 },
 {
     .x = 8, .y = 80,
@@ -10847,18 +10842,18 @@ static const Path path3074 = {
     .actions = 0
 },
 {
-    .x = -144, .y = 24,
-    .speedTo = 128, .distTo = 2048,
+    .x = -144, .y = 16,
+    .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
-    .actions = path3074_7_actions
+    .numActions = 2,
+    .actions = path3074_6_actions
 },
 {
-    .x = -112, .y = -8,
-    .speedTo = 128, .distTo = 2896,
-    .xVelTo = 90, .yVelTo = -91,
+    .x = -144, .y = 32,
+    .speedTo = 128, .distTo = 1024,
+    .xVelTo = 0, .yVelTo = 128,
     .numActions = 1,
-    .actions = path3074_8_actions
+    .actions = path3074_7_actions
 }
 }
 };
@@ -10869,7 +10864,8 @@ static const GameObjectAction path3075_2_actions[] = {
 {.action = faceRight, }
 };
 static const GameObjectAction path3075_6_actions[] = {
-{.action = faceLeft, }
+{.action = faceLeft, },
+{.action = enterBackground, }
 };
 static const GameObjectAction path3075_7_actions[] = {
 {.action = markDisappear, }
@@ -10877,14 +10873,14 @@ static const GameObjectAction path3075_7_actions[] = {
 static const Path path3075 = {
 .x = 88, .y = 456, .numPoints = 8, .points = {
 {
-    .x = -16, .y = 16,
+    .x = -16, .y = -8,
     .speedTo = 128, .distTo = 0,
     .xVelTo = 0, .yVelTo = 0,
     .numActions = 0,
     .actions = 0
 },
 {
-    .x = -32, .y = 32,
+    .x = -32, .y = 8,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = 90,
     .numActions = 1,
@@ -10892,7 +10888,7 @@ static const Path path3075 = {
 },
 {
     .x = -32, .y = 48,
-    .speedTo = 128, .distTo = 1024,
+    .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = 128,
     .numActions = 1,
     .actions = path3075_2_actions
@@ -10919,14 +10915,14 @@ static const Path path3075 = {
     .actions = 0
 },
 {
-    .x = 112, .y = 32,
-    .speedTo = 128, .distTo = 1024,
+    .x = 112, .y = 8,
+    .speedTo = 128, .distTo = 2560,
     .xVelTo = 0, .yVelTo = -128,
-    .numActions = 1,
+    .numActions = 2,
     .actions = path3075_6_actions
 },
 {
-    .x = 96, .y = 16,
+    .x = 96, .y = -8,
     .speedTo = 128, .distTo = 1448,
     .xVelTo = -91, .yVelTo = -91,
     .numActions = 1,
@@ -10938,27 +10934,27 @@ static const Path *r16acidants2_paths[] = {
     &path3074,
     &path3075
 };
-extern const LevelObject lobj3073;
 extern const LevelObject lobj3072;
-const LevelObject lobj3073 = {
-    .definition = &defAntHole,
-    .x = 72, .y = 472,
-    .palette = 0,
-    .animInd = 0, .flags = 32768,
-    .group = &r16acidants2, .path = &path3075,
-    .pathIndex = 1, .child = 0, .interval = 15
-};
+extern const LevelObject lobj3073;
 const LevelObject lobj3072 = {
-    .definition = &defAntHole,
-    .x = 184, .y = 456,
+    .definition = &defAcidAnt,
+    .x = 216, .y = 488,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 1, .flags = 4096,
     .group = &r16acidants2, .path = &path3074,
-    .pathIndex = 1, .child = 0, .interval = 15
+    .pathIndex = 1, .child = 0, .interval = 0
+};
+const LevelObject lobj3073 = {
+    .definition = &defAcidAnt,
+    .x = 72, .y = 448,
+    .palette = 0,
+    .animInd = 0, .flags = 2048,
+    .group = &r16acidants2, .path = &path3075,
+    .pathIndex = 1, .child = 0, .interval = 0
 };
 static const LevelObject *r16acidants2_objects[] = {
-    &lobj3073,
-    &lobj3072
+    &lobj3072,
+    &lobj3073
 };
 LevelObjectGroup r16acidants2 = {
     .numPaths = 2, .paths = r16acidants2_paths,
@@ -12316,21 +12312,43 @@ const Trigger stage_caravan_triggers[] = {
 /* 172 */ { .group = &r14wasp6a, .action = spawnCharacters, .count = 0, .x = -120, .y = 760 },
 /* 173 */ { .group = &Copy_of_r14wasp6a, .action = spawnCharacters, .count = 0, .x = -8, .y = 728 },
 /* 174 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 656 },
-/* 175 */ { .group = &r16powerup, .action = spawnCharacters, .count = 0, .x = -32, .y = 608 },
-/* 176 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 592 },
-/* 177 */ { .group = &r16powerup2, .action = spawnCharacters, .count = 0, .x = -16, .y = 520 },
-/* 178 */ { .group = &r17powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 424 },
-/* 179 */ { .group = &r17fly1b, .action = spawnCharacters, .count = 0, .x = -104, .y = 408 },
-/* 180 */ { .group = &r17fly1a, .action = spawnCharacters, .count = 0, .x = -184, .y = 408 },
-/* 181 */ { .group = &r17fly2b, .action = spawnCharacters, .count = 0, .x = -120, .y = 384 },
-/* 182 */ { .group = &r17fly2a, .action = spawnCharacters, .count = 0, .x = -200, .y = 384 },
-/* 183 */ { .group = &r17wasp1, .action = spawnCharacters, .count = 0, .x = -104, .y = 344 },
-/* 184 */ { .group = &r17wasp3, .action = spawnCharacters, .count = 0, .x = -104, .y = 328 },
-/* 185 */ { .group = &r17wasp5, .action = spawnCharacters, .count = 0, .x = -104, .y = 312 },
-/* 186 */ { .group = &r17wasp7, .action = spawnCharacters, .count = 0, .x = -104, .y = 296 },
-/* 187 */ { .group = &r17wasp9, .action = spawnCharacters, .count = 0, .x = -104, .y = 280 },
-/* 188 */ { .group = &waspboss, .action = spawnCharacters, .count = 0, .x = -16, .y = 224 },
-/* 189 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 }
+/* 175 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 640 },
+/* 176 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 624 },
+/* 177 */ { .group = &r16powerup, .action = spawnCharacters, .count = 0, .x = -32, .y = 608 },
+/* 178 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 608 },
+/* 179 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 592 },
+/* 180 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 592 },
+/* 181 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 576 },
+/* 182 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 576 },
+/* 183 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 560 },
+/* 184 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 560 },
+/* 185 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 544 },
+/* 186 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 544 },
+/* 187 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 528 },
+/* 188 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 528 },
+/* 189 */ { .group = &r16powerup2, .action = spawnCharacters, .count = 0, .x = -16, .y = 520 },
+/* 190 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 512 },
+/* 191 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 512 },
+/* 192 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 496 },
+/* 193 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 496 },
+/* 194 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 480 },
+/* 195 */ { .group = &r16acidants1, .action = spawnCharacters, .count = 0, .x = -72, .y = 480 },
+/* 196 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 464 },
+/* 197 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 448 },
+/* 198 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 432 },
+/* 199 */ { .group = &r17powerup, .action = spawnCharacters, .count = 0, .x = -40, .y = 424 },
+/* 200 */ { .group = &r16acidants2, .action = spawnCharacters, .count = 0, .x = -56, .y = 416 },
+/* 201 */ { .group = &r17fly1b, .action = spawnCharacters, .count = 0, .x = -104, .y = 408 },
+/* 202 */ { .group = &r17fly1a, .action = spawnCharacters, .count = 0, .x = -184, .y = 408 },
+/* 203 */ { .group = &r17fly2b, .action = spawnCharacters, .count = 0, .x = -120, .y = 384 },
+/* 204 */ { .group = &r17fly2a, .action = spawnCharacters, .count = 0, .x = -200, .y = 384 },
+/* 205 */ { .group = &r17wasp1, .action = spawnCharacters, .count = 0, .x = -104, .y = 344 },
+/* 206 */ { .group = &r17wasp3, .action = spawnCharacters, .count = 0, .x = -104, .y = 328 },
+/* 207 */ { .group = &r17wasp5, .action = spawnCharacters, .count = 0, .x = -104, .y = 312 },
+/* 208 */ { .group = &r17wasp7, .action = spawnCharacters, .count = 0, .x = -104, .y = 296 },
+/* 209 */ { .group = &r17wasp9, .action = spawnCharacters, .count = 0, .x = -104, .y = 280 },
+/* 210 */ { .group = &waspboss, .action = spawnCharacters, .count = 0, .x = -16, .y = 224 },
+/* 211 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 }
 };
 LevelObjectGroup *stage_caravan_groups[] = {
     &room1ants1,

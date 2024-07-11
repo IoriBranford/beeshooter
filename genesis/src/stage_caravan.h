@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (190)
+#define stage_caravan_numTriggers (212)
 extern const Trigger stage_caravan_triggers[];
 
 #define stage_caravan_numGroups (105)
