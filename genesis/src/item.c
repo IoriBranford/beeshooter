@@ -15,14 +15,19 @@ const u32 POWERUP_SWAY_PERIOD = 32;
 
 extern GameObjectDefinition defPowerup;
 
-void GOBJ_openHoneypot(GameObject *self) {
+void GOBJ_openHoneypot(GameObject *self, u16 numPowerups) {
     const GameObjectDefinition *def = self->definition;
     if (def) {
         if (def->defeatSoundDef)
             SND_playDef(def->defeatSoundDef);
         GAME_scorePoints(def->defeatPoints);
     }
-    GOBJ_createFromDef(&defPowerup, self->centerX, self->centerY);
+    if (numPowerups <= 1) {
+        GOBJ_createFromDef(&defPowerup, self->centerX, self->centerY);
+    } else {
+        GOBJ_createFromDef(&defPowerup, self->centerX - FIX16(1), self->centerY);
+        GOBJ_createFromDef(&defPowerup, self->centerX + FIX16(1), self->centerY);
+    }
     if (self->levelObject && self->levelObject->child) {
         LEVEL_createObject(self->levelObject->child);
     }
@@ -30,6 +35,14 @@ void GOBJ_openHoneypot(GameObject *self) {
         SPR_setAnim(self->sprite, ANI_POT_OPEN);
     else
         GAME_releaseObject(self);
+}
+
+void GOBJ_openStandardHoneypot(GameObject *self) {
+    GOBJ_openHoneypot(self, 1);
+}
+
+void GOBJ_openReinforcedHoneypot(GameObject *self) {
+    GOBJ_openHoneypot(self, 2);
 }
 
 void GOBJ_updatePowerupDescend(GameObject *self) {

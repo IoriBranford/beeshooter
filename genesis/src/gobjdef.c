@@ -66,7 +66,7 @@ GameObjectDefinition defHoneyPot = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
-    .onDefeat = GOBJ_openHoneypot,
+    .onDefeat = GOBJ_openStandardHoneypot,
 };
 GameObjectDefinition defPowerup = {
     .teams = 1<<TEAM_ENEMYSHOT,
@@ -122,7 +122,7 @@ GameObjectDefinition defHoneyCell = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
-    .onDefeat = GOBJ_openHoneypot,
+    .onDefeat = GOBJ_openStandardHoneypot,
 };
 GameObjectDefinition defAntBig = {
     .teams = 1<<TEAM_ENEMY,
@@ -248,7 +248,17 @@ GameObjectDefinition defWasp = {
     .corpseDef = &defBloodSmall,
     .update = GOBJ_updatePathWalker,
 };
-GameObjectDefinition defReinforcedHoneyPot;
+GameObjectDefinition defReinforcedHoneyPot = {
+    .teams = 1<<TEAM_ENEMY,
+    .health = 16,
+    .spriteDef = &sprHoneyPot,
+    .spriteDepth = -1,
+    .palette = &palWaspShooterAndReinforcedHoney,
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
+    .defeatSoundDef = &sndBreakPot,
+    .update = GOBJ_updateIdleOnStage,
+    .onDefeat = GOBJ_openReinforcedHoneypot,
+};
 GameObjectDefinition defAntHole = {
     .bodyW = FIX16(8), .bodyH = FIX16(10),
     .spriteDef = &sprAntHole,
