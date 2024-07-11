@@ -137,6 +137,7 @@ return `{
             }
 
             if (levelObjectGroup.LevelObject.length > 0) {
+                cCode.push(...levelObjectGroup.LevelObject.map(object => `extern const LevelObject lobj${object.id};`))
                 cCode.push(...levelObjectGroup.LevelObject.map(object => {
                     let objPathPointIndex = -1
                     let objPath = object.resolvedProperty('path')
