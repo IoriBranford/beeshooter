@@ -3,7 +3,6 @@
 
 #include "gobject.h"
 
-#define PLAYERPAL PAL3
 #define PLAYER_NORMALSPEED FIX16(2)
 #define PLAYER_FASTSPEED FIX16(4)
 

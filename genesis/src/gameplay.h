@@ -7,6 +7,8 @@
 #define GAME_BOUNDW (FIX16(256))
 #define GAME_BOUNDH (FIX16(224))
 
+#define PAL_PLAYER_AND_BG PAL3
+
 typedef enum Team {
     TEAM_NONE = -1,
     TEAM_PLAYERSHOT,

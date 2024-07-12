@@ -94,7 +94,7 @@ void PLAYER_shoot(PlayerObject *self) {
             bullet->velX = shot->velX;
             bullet->velY = shot->velY;
 
-            u16 attr = TILE_ATTR(PLAYERPAL, true,
+            u16 attr = TILE_ATTR(PAL_PLAYER_AND_BG, true,
                 (shot->animAndFlags & TILE_ATTR_VFLIP_MASK) != 0,
                 (shot->animAndFlags & TILE_ATTR_HFLIP_MASK) != 0);
             bullet->sprite = SPR_addSpriteEx(bulletSpriteDef,
@@ -257,7 +257,7 @@ void PLAYER_init(PlayerObject *self) {
     self->sprite = SPR_addSpriteEx(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
-        TILE_ATTR(PLAYERPAL, TRUE, FALSE, FALSE), 0);
+        TILE_ATTR(PAL_PLAYER_AND_BG, TRUE, FALSE, FALSE), 0);
     self->sprite->data = (u32)shipAniFrame;
     SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
     SPR_setAnim(self->sprite, self->weapon ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);

@@ -11,7 +11,7 @@ GameObjectDefinition defPlayer = {
     .health = 1,
     .spriteDepth = -100,
     .spriteDef = &sprPlayer,
-    .palette = &palPlayer,
+    .palette = &palPlayerAndBG,
     .bodyW = FIX16(4),
     .bodyH = FIX16(4),
 };
@@ -26,7 +26,7 @@ GameObjectDefinition defPlayerShot = {
     .speed = FIX16(16),
     .spriteDef = &sprPlayerShot,
     .spriteDepth = -90,
-    .palette = &palPlayer,
+    .palette = &palPlayerAndBG,
     .bodyW = FIX16(6), .bodyH = FIX16(6),
     // .defeatSoundDef = &sndPlayerShotHit,
     .update = BULLET_update
@@ -34,7 +34,7 @@ GameObjectDefinition defPlayerShot = {
 GameObjectDefinition defBloodSmall = {
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
-    .palette = &palPlayer,
+    .palette = &palAnt,
     .init = GOBJ_initSprite,
     .update = GOBJ_updateSpark
 };
@@ -73,7 +73,7 @@ GameObjectDefinition defPowerup = {
     .health = 1,
     .spriteDef = &sprPowerup,
     .spriteDepth = -20,
-    .palette = &palPlayer,
+    .palette = &palPlayerAndBG,
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise,
@@ -118,7 +118,7 @@ GameObjectDefinition defHoneyCell = {
     .health = 1,
     .spriteDef = &sprPowerup,
     .spriteDepth = -1,
-    .palette = &palPlayer,
+    .palette = &palPlayerAndBG,
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndBreakPot,
     .update = GOBJ_updateIdleOnStage,
@@ -245,7 +245,7 @@ GameObjectDefinition defWasp = {
     .palette = &palWaspAndHoney,
     .bodyW = FIX16(12), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
-    .corpseDef = &defBloodSmall,
+    .corpseDef = &defAcidBloodSmall,
     .update = GOBJ_updatePathWalker,
 };
 GameObjectDefinition defReinforcedHoneyPot = {
@@ -263,7 +263,7 @@ GameObjectDefinition defAntHole = {
     .bodyW = FIX16(8), .bodyH = FIX16(10),
     .spriteDef = &sprAntHole,
     .spriteDepth = 0,
-    .palette = &bgPalette,
+    .palette = &palPlayerAndBG,
     .update = GOBJ_updateSpawner,
 };
 GameObjectDefinition defBeetleBullet = {
@@ -285,7 +285,7 @@ GameObjectDefinition defBeetle = {
     .palette = &palAcidAndBeetle,
     .bodyW = FIX16(12), .bodyH = FIX16(12),
     .defeatSoundDef = &sndBugKill2,
-    .corpseDef = &defBloodSmall,
+    .corpseDef = &defAcidBloodSmall,
     .bulletDef = &defBeetleBullet,
     .update = GOBJ_updatePathWalker,
     .shootFunction = ENEMY_beetleShoot
@@ -301,7 +301,7 @@ GameObjectDefinition defWaspShooter = {
     .palette = &palWaspShooterAndReinforcedHoney,
     .bodyW = FIX16(12), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
-    .corpseDef = &defBloodSmall,
+    .corpseDef = &defAcidBloodSmall,
     .update = GOBJ_updatePathWalker,
     .bulletDef = &defWaspBullet,
     .shootFunction = ENEMY_shootAtPlayer

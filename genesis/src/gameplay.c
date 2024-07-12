@@ -231,13 +231,13 @@ int gameplay() {
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
 
-    PAL_setPalette(PLAYERPAL, palPlayer.data, DMA);
+    PAL_setPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, DMA);
 
     VDP_setHilightShadow(true);
 
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
-    VDP_setTextPalette(PLAYERPAL);
+    VDP_setTextPalette(PAL_PLAYER_AND_BG);
 
     tileIndex = TILE_USER_INDEX;
 

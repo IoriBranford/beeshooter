@@ -11,7 +11,6 @@
 #include "res_gfx.h"
 
 #define STARTTRIGGER 0
-#define BG_PALETTE (PAL2)
 
 static Map *bg;
 static fix32 cameraY, cameraVelY;
@@ -19,7 +18,7 @@ static const Trigger *nextTrigger;
 static u32 nextTriggerIndex;
 static u32 numTriggers;
 
-#define PALETTE_USAGE_SLOTS 2
+#define PALETTE_USAGE_SLOTS 3
 typedef struct PaletteUsage {
     const Palette *palette;
     fix32 cameraY;
@@ -39,10 +38,9 @@ void LEVEL_init(u16 tileIndex) {
     for (int i = 0; i < stage_caravan_numGroups; ++i)
         stage_caravan_groups[i]->numObjectsSpawned = 0;
 
-    PAL_setPalette(BG_PALETTE, bgPalette.data, DMA);
-    VDP_setBackgroundColor((BG_PALETTE << 4) + 1);
+    VDP_setBackgroundColor((PAL_PLAYER_AND_BG << 4) + 1);
     VDP_loadTileSet(&bgTileset, tileIndex, DMA);
-    bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(BG_PALETTE, false, false, false, tileIndex));
+    bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
     for (int i = 1; i < PALETTE_USAGE_SLOTS; ++i) {
@@ -131,10 +129,8 @@ u16 LEVEL_findPaletteSlot(const Palette *palette) {
 }
 
 u16 LEVEL_getPaletteSlot(const Palette *palette) {
-    if (palette == &palPlayer)
-        return PLAYERPAL;
-    if (palette == &bgPalette)
-        return BG_PALETTE;
+    if (palette == &palPlayerAndBG)
+        return PAL_PLAYER_AND_BG;
     u16 slot = LEVEL_findPaletteSlot(palette);
     paletteUsage[slot].cameraY = cameraY;
     if (paletteUsage[slot].palette != palette) {

@@ -25,8 +25,8 @@ void UI_freeSpriteFrames() {
 }
 
 void UI_initHud(PlayerObject *player, u16 timeLeft) {
-    weaponSelectSprite = SPR_addSpriteEx(&sprUiWeapons, 208, 184, TILE_ATTR(PLAYERPAL, true, false, false), 0);
-    weaponCursorSprite = SPR_addSpriteEx(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PLAYERPAL, true, false, false), 0);
+    weaponSelectSprite = SPR_addSpriteEx(&sprUiWeapons, 208, 184, TILE_ATTR(PAL_PLAYER_AND_BG, true, false, false), 0);
+    weaponCursorSprite = SPR_addSpriteEx(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PAL_PLAYER_AND_BG, true, false, false), 0);
     weaponSelectSprite->data = (u32)weaponSelectFrames;
     weaponCursorSprite->data = (u32)weaponCursorFrames;
     SPR_setFrameChangeCallback(weaponSelectSprite, SPR_defaultFrameChange);

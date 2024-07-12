@@ -1,12 +1,11 @@
-PALETTE bgPalette "bg.png"
 TILESET bgTileset "bg.png"
 MAP bgMap "bg.png" bgTileset
 
-PALETTE palPlayer "player/ship.png"
+PALETTE palPlayerAndBG "player/ship.png"
 TILESET font "font.png"
 SPRITE sprPlayer "player/ship.png" 4 4
 SPRITE sprPlayerShot "player/shot.png" 2 2
-SPRITE sprPowerup "player/Powerup.png" 2 2 NONE 3
+SPRITE sprPowerup "player/Powerup.png" 2 3 NONE 3
 SPRITE sprUiWeapons "ui/weaponselect.png" 5 2
 SPRITE sprUiWeaponsCursor "ui/weaponcursor.png" 3 3
 
