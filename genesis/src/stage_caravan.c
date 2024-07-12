@@ -10762,7 +10762,7 @@ extern const LevelObject lobj3070;
 const LevelObject lobj3069 = {
     .definition = &defHoneyPot,
     .x = 168, .y = 592,
-    .palette = 0,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -10770,7 +10770,7 @@ const LevelObject lobj3069 = {
 const LevelObject lobj3070 = {
     .definition = &defHoneyPot,
     .x = 88, .y = 592,
-    .palette = 0,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -10984,7 +10984,7 @@ extern const LevelObject lobj3089;
 const LevelObject lobj3088 = {
     .definition = &defHoneyPot,
     .x = 128, .y = 408,
-    .palette = 0,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -10992,7 +10992,7 @@ const LevelObject lobj3088 = {
 const LevelObject lobj3087 = {
     .definition = &defHoneyPot,
     .x = 152, .y = 400,
-    .palette = 0,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
@@ -11000,7 +11000,7 @@ const LevelObject lobj3087 = {
 const LevelObject lobj3089 = {
     .definition = &defHoneyPot,
     .x = 112, .y = 400,
-    .palette = 0,
+    .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r17powerup, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0

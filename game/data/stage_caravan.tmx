@@ -7907,8 +7907,16 @@ end</property>
   </objectgroup>
   <objectgroup id="331" name="r16powerup">
    <object id="3068" template="triggers/SpawnCharacters.tx" x="-32" y="608"/>
-   <object id="3069" template="enemies/HoneyPot.tx" x="168" y="592"/>
-   <object id="3070" template="enemies/HoneyPot.tx" x="88" y="592"/>
+   <object id="3069" template="enemies/HoneyPot.tx" x="168" y="592">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
+   <object id="3070" template="enemies/HoneyPot.tx" x="88" y="592">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="332" name="r16acidants2">
    <object id="3071" template="triggers/SpawnCharacters.tx" x="-56" y="592"/>
@@ -7964,9 +7972,21 @@ end</property>
   </objectgroup>
   <objectgroup id="334" name="r17powerup">
    <object id="3086" template="triggers/SpawnCharacters.tx" x="-40" y="424"/>
-   <object id="3087" template="enemies/HoneyPot.tx" x="152" y="400"/>
-   <object id="3088" template="enemies/HoneyPot.tx" x="128" y="408"/>
-   <object id="3089" template="enemies/HoneyPot.tx" x="112" y="400"/>
+   <object id="3087" template="enemies/HoneyPot.tx" x="152" y="400">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
+   <object id="3088" template="enemies/HoneyPot.tx" x="128" y="408">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
+   <object id="3089" template="enemies/HoneyPot.tx" x="112" y="400">
+    <properties>
+     <property name="palette" value="palWaspAndHoney"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="335" name="r17fly1a">
    <object id="3090" template="triggers/SpawnCharacters.tx" x="-184" y="408"/>
