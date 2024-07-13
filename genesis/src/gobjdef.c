@@ -327,7 +327,7 @@ GameObjectDefinition *part1defs[8] = {
     &defAlienMind
 };
 
-GameObjectDefinition *part2defs[] = {
+GameObjectDefinition *part2defs[6] = {
     &defAcidAnt,
     &defAcidAntBullet,
     &defWasp,
