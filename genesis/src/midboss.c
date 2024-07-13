@@ -23,15 +23,15 @@ void MIDBOSS_spawnPillager(GameObject *self) {
     nextPillager = (nextPillager == lobj_rightPillager) ? lobj_leftPillager : lobj_rightPillager;
 }
 
-GameObject* MIDBOSS_updateDeadSummon(GameObject *summon) {
-    return (summon && GOBJ_isAllocated(summon)) ? summon : NULL;
+GameObject* MIDBOSS_updateDeadSummon(GameObject *gobj, const LevelObject *lobj) {
+    return (gobj && GOBJ_isAllocated(gobj) && gobj->levelObject == lobj) ? gobj : NULL;
 }
 
 void MIDBOSS_updateAlienMind(GameObject *self) {
-    leftGunner = MIDBOSS_updateDeadSummon(leftGunner);
-    rightGunner = MIDBOSS_updateDeadSummon(rightGunner);
-    leftFly = MIDBOSS_updateDeadSummon(leftFly);
-    rightFly = MIDBOSS_updateDeadSummon(rightFly);
+    leftGunner = MIDBOSS_updateDeadSummon(leftGunner, lobj_leftGunner);
+    rightGunner = MIDBOSS_updateDeadSummon(rightGunner, lobj_rightGunner);
+    leftFly = MIDBOSS_updateDeadSummon(leftFly, lobj_leftFly);
+    rightFly = MIDBOSS_updateDeadSummon(rightFly, lobj_rightFly);
 
     GOBJ_updateShooting(self);
     
