@@ -46,12 +46,18 @@ void MIDBOSS_updateAlienMind(GameObject *self) {
                 rightGunner = LEVEL_createObject(lobj_rightGunner);
             break;
         case 120:
-            if (!leftFly)
+            if (!leftFly) {
                 leftFly = LEVEL_createObject(lobj_leftFly);
+                leftFly->parentType = PARENTTYPE_TRIGGER;
+                leftFly->parentTrigger = self->parentTrigger;
+            }
             break;
         case 75:
-            if (!rightFly)
+            if (!rightFly) {
                 rightFly = LEVEL_createObject(lobj_rightFly);
+                rightFly->parentType = PARENTTYPE_TRIGGER;
+                rightFly->parentTrigger = self->parentTrigger;
+            }
             break;
     }
     if (reinforceTimer >= 180)
