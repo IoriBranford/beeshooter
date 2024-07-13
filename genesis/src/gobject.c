@@ -445,8 +445,10 @@ void GOBJ_followPath(GameObject *self) {
         if (self->update == (ObjectCallback*)GOBJ_updatePathWalker) {
             if (++pathIndex < path->numPoints) {
                 GOBJ_startTowardsPathPoint(self, pathIndex);
-            } else  {
+            } else if (GOBJ_isBodyOnScreen(self)) {
                 self->update = (ObjectCallback*)GOBJ_updateIdleOnStage;
+            } else {
+                GAME_releaseObject(self);
             }
         }
     }
