@@ -21,6 +21,20 @@ GameObjectDefinition defAngleTester = {
     .palette = &palFlyAndHoney,
     .update = BULLET_updateAngleTester
 };
+GameObjectDefinition defHit = {
+    .spriteDef = &sprHit,
+    .spriteDepth = -50,
+    .palette = &palAnt,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
+GameObjectDefinition defAcidHit = {
+    .spriteDef = &sprHit,
+    .spriteDepth = -50,
+    .palette = &palAcidAndBeetle,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defPlayerShot = {
     .teams = 1<<TEAM_PLAYERSHOT,
     .speed = FIX16(16),
@@ -29,6 +43,7 @@ GameObjectDefinition defPlayerShot = {
     .palette = &palPlayerAndBG,
     .bodyW = FIX16(6), .bodyH = FIX16(6),
     // .defeatSoundDef = &sndPlayerShotHit,
+    .corpseDef = &defHit,
     .update = BULLET_update
 };
 GameObjectDefinition defBloodSmall = {
@@ -310,7 +325,8 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *commondefs[3] = {
+GameObjectDefinition *commondefs[4] = {
+    &defHit,
     &defBloodSmall,
     &defPowerup,
     &defHoneyPot,
@@ -364,6 +380,7 @@ void GOBJDEF_freeSpriteFrames(int numDefs, GameObjectDefinition **defs) {
 
 u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
+    defAcidHit.aniFrameTiles = defHit.aniFrameTiles;
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
     defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
     defReinforcedHoneyPot.aniFrameTiles = defHoneyPot.aniFrameTiles;
@@ -383,6 +400,7 @@ u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex) {
     defAngleTester.aniFrameTiles = defFlyBullet.aniFrameTiles;
     defAlienPillager.aniFrameTiles = defAlienGunner.aniFrameTiles;
     defAlienGunnerBullet.aniFrameTiles = defFlyBullet.aniFrameTiles;
+    defPlayerShot.corpseDef = &defHit;
     return tileIndex;
 }
 
@@ -399,6 +417,7 @@ u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
     defBeetleBullet.aniFrameTiles = defAcidAntBullet.aniFrameTiles;
+    defPlayerShot.corpseDef = &defAcidHit;
     return tileIndex;
 }
 

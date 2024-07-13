@@ -9,7 +9,8 @@ SPRITE sprPowerup "player/Powerup.png" 2 3 NONE 3
 SPRITE sprUiWeapons "ui/weaponselect.png" 5 2
 SPRITE sprUiWeaponsCursor "ui/weaponcursor.png" 3 3
 
-SPRITE sprBloodSmall "fx/BloodSmall.png" 8 8 NONE 2
+SPRITE sprHit "fx/Hit.png" 3 3 NONE 2
+SPRITE sprBloodSmall "fx/BloodSmall.png" 8 8 NONE 3
 
 PALETTE palAnt "enemy/Ant.png"
 PALETTE palFlyAndHoney "enemy/Fly.png"
