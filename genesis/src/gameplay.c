@@ -233,8 +233,6 @@ int gameplay() {
 
     PAL_setPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, DMA);
 
-    VDP_setHilightShadow(true);
-
     VDP_loadFont(&font, DMA);
     VDP_setTextPriority(1);
     VDP_setTextPalette(PAL_PLAYER_AND_BG);
