@@ -43,7 +43,7 @@ void LEVEL_init(u16 tileIndex) {
     bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
-    for (int i = 1; i < PALETTE_USAGE_SLOTS; ++i) {
+    for (int i = 0; i < PALETTE_USAGE_SLOTS; ++i) {
         paletteUsage[i].palette = NULL;
         paletteUsage[i].cameraY = cameraY;
     }
