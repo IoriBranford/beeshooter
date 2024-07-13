@@ -25,6 +25,10 @@ typedef struct PaletteUsage {
 } PaletteUsage;
 PaletteUsage paletteUsage[PALETTE_USAGE_SLOTS];
 
+static LevelObject *doubleKillBonusEnemies[2];
+static fix32 doubleKillBonusEnemiesDefeatedAt[2];
+static u32 doubleKillBonusPoints;
+
 void LEVEL_init(u16 tileIndex) {
     cameraY = FIX32(4256);
     cameraVelY = -FIX32(3) / 4;
@@ -47,6 +51,8 @@ void LEVEL_init(u16 tileIndex) {
         paletteUsage[i].palette = NULL;
         paletteUsage[i].cameraY = cameraY;
     }
+
+    LEVEL_postDoubleKillBonus(NULL, NULL, 0);
 }
 
 void LEVEL_update() {
@@ -153,4 +159,39 @@ GameObject* LEVEL_createObject(const LevelObject *lobj) {
         GOBJ_setInForeground(obj, false);
     }
     return obj;
+}
+
+void LEVEL_postDoubleKillBonus(LevelObject *enemy0, LevelObject *enemy1, u32 bonusPoints) {
+    doubleKillBonusEnemies[0] = enemy0;
+    doubleKillBonusEnemies[1] = enemy1;
+    doubleKillBonusEnemiesDefeatedAt[0] = -1;
+    doubleKillBonusEnemiesDefeatedAt[1] = -1;
+    doubleKillBonusPoints = bonusPoints;
+}
+
+void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy) {
+    if (!doubleKillBonusPoints)
+        return;
+
+    LevelObject *lobj = defeatedEnemy->levelObject;
+    if (!lobj)
+        return;
+
+    if (defeatedEnemy == doubleKillBonusEnemies[0]) {
+        doubleKillBonusEnemiesDefeatedAt[0] = cameraY;
+        if (doubleKillBonusEnemiesDefeatedAt[1] < 0)
+            return;
+    } else if (defeatedEnemy == doubleKillBonusEnemies[1]) {
+        doubleKillBonusEnemiesDefeatedAt[1] = cameraY;
+        if (doubleKillBonusEnemiesDefeatedAt[0] < 0)
+            return;
+    } else {
+        return;
+    }
+
+    if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < 30) {
+        GAME_scorePoints(doubleKillBonusPoints);
+        SND_playDef(&sndBonus);
+        LEVEL_postDoubleKillBonus(NULL, NULL, 0);
+    }
 }
