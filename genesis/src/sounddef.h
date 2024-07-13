@@ -26,6 +26,7 @@ extern SoundDefinition
     sndBugKill1,
     sndBugKill2,
     sndBreakPot,
-    sndPowerup;
+    sndPowerup,
+    sndBonus;
 
 #endif

@@ -14,3 +14,4 @@ WAV wavBugKill1 "wav/bugkill1.wav" XGM
 WAV wavBugKill2 "wav/bugkill2.wav" XGM
 WAV wavBreakPot "wav/breakpot.wav" XGM
 WAV wavPowerup "wav/powerup.wav" XGM
+WAV wavBonus "wav/bonus.wav" XGM

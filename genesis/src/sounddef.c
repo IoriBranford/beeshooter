@@ -75,6 +75,11 @@ SoundDefinition sndPowerup = {
     .channel = SOUND_PCM_CH2,
     .priority = 10
 };
+SoundDefinition sndBonus = {
+    DATA_AND_LENGTH(wavBonus),
+    .channel = SOUND_PCM_CH2,
+    .priority = 14
+};
 
 static SoundDefinition *SOUNDDEFS[] = {
     &sndPause,
@@ -90,6 +95,7 @@ static SoundDefinition *SOUNDDEFS[] = {
     &sndBugKill2,
     &sndBreakPot,
     &sndPowerup,
+    &sndBonus,
     0
 };
 
