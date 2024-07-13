@@ -14,6 +14,7 @@ enum PlayerWeapon {
 typedef struct PlayerObject {
     GameObject;
     u8 weapon, lives;
+    u16 buttonsPressed;
 } PlayerObject;
 
 u16 PLAYER_loadSpriteFrames(u16 tileIndex);

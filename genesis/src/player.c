@@ -111,25 +111,6 @@ void PLAYER_shoot(PlayerObject *self) {
     }
 }
 
-void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
-    s16 dirX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
-    s16 dirY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
-    fix16 velX = (dirX * self->speed);
-    fix16 velY = (dirY * self->speed);
-    velX = max(MARGIN - self->centerX, min(velX, GAME_BOUNDW - MARGIN - self->centerX));
-    velY = max(MARGIN - self->centerY, min(velY, GAME_BOUNDH - MARGIN - self->centerY));
-    self->centerX += velX;
-    self->centerY += velY;
-
-    if (state & BUTTON_B) {
-        if (self->shootTimer == 0) {
-            self->shootTimer = SHOOTINTERVAL;
-            PLAYER_shoot(self);
-            SND_playDef(&sndPlayerShot);
-        }
-    }
-}
-
 void PLAYER_setSpeed(PlayerObject *self, fix16 speed) {
     self->speed = speed;
     s16 animInd = self->sprite->animInd;
@@ -150,24 +131,48 @@ void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
 }
 
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
-    if (state & button) {
-        if (button == BUTTON_A) {
-            fix16 speed = self->speed;
-            if (speed > PLAYER_NORMALSPEED) {
-                speed = PLAYER_NORMALSPEED;
-                SND_playDef(&sndChangeSpeedSlow);
-            } else {
-                speed = PLAYER_FASTSPEED;
-                SND_playDef(&sndChangeSpeedFast);
-            }
-            PLAYER_setSpeed(self, speed);
-            UI_updateSpeed(speed);
-        } else if (button == BUTTON_C) {
-            PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
-            SND_playDef(&sndChangeWeapon);
-            UI_updateWeaponSelect(self->weapon);
+    if (button & state)
+        self->buttonsPressed |= button;
+}
+
+void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
+    s16 dirX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
+    s16 dirY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
+    fix16 velX = (dirX * self->speed);
+    fix16 velY = (dirY * self->speed);
+    velX = max(MARGIN - self->centerX, min(velX, GAME_BOUNDW - MARGIN - self->centerX));
+    velY = max(MARGIN - self->centerY, min(velY, GAME_BOUNDH - MARGIN - self->centerY));
+    self->centerX += velX;
+    self->centerY += velY;
+
+    if (state & BUTTON_B) {
+        if (self->shootTimer == 0) {
+            self->shootTimer = SHOOTINTERVAL;
+            PLAYER_shoot(self);
+            SND_playDef(&sndPlayerShot);
         }
     }
+
+    if (self->buttonsPressed & BUTTON_A) {
+        fix16 speed = self->speed;
+        if (speed > PLAYER_NORMALSPEED) {
+            speed = PLAYER_NORMALSPEED;
+            SND_playDef(&sndChangeSpeedSlow);
+        } else {
+            speed = PLAYER_FASTSPEED;
+            SND_playDef(&sndChangeSpeedFast);
+        }
+        PLAYER_setSpeed(self, speed);
+        UI_updateSpeed(speed);
+    }
+
+    if (self->buttonsPressed & BUTTON_C) {
+        PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
+        SND_playDef(&sndChangeWeapon);
+        UI_updateWeaponSelect(self->weapon);
+    }
+
+    self->buttonsPressed = 0;
 }
 
 void PLAYER_giveInvul(PlayerObject *self, u8 invul) {
@@ -254,6 +259,7 @@ void PLAYER_init(PlayerObject *self) {
     self->lives = 3;
     self->weapon = WEAPON_A;
     self->speed = PLAYER_NORMALSPEED;
+    self->buttonsPressed = 0;
     self->sprite = SPR_addSpriteEx(
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
