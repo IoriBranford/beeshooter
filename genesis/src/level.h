@@ -69,7 +69,7 @@ u16 LEVEL_getPaletteSlot(const Palette *palette);
 const Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 yWorld);
 GameObject* LEVEL_createObject(const LevelObject *lobj);
 
-void LEVEL_postDoubleKillBonus(LevelObject *enemy0, LevelObject *enemy1, u32 bonusPoints);
+void LEVEL_postDoubleKillBonus(const LevelObject *enemy0, const LevelObject *enemy1, u32 bonusPoints);
 void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy);
 
 #endif
