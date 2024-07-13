@@ -312,6 +312,8 @@ void GOBJ_followStage(GameObject *self) {
 void GOBJ_updateIdleOnStage(GameObject *self) {
     GOBJ_followStage(self);
     GOBJ_updateBody(self);
+    GOBJ_updateInvul(self);
+    GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
     if (GOBJ_isBodyOffBottom(self)) {
         GAME_releaseObject(self);
