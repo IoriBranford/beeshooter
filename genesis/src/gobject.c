@@ -8,7 +8,7 @@
 void GOBJ_init(GameObject *self) {
     if (!self)
         return;
-    // self->parentObject = 0;
+    self->parentObject = 0;
     self->parentType = PARENTTYPE_NONE;
     self->definition = 0;
     self->levelObject = 0;
@@ -25,6 +25,7 @@ void GOBJ_init(GameObject *self) {
     self->invulTimer = 0;
     // self->bodyX0 = self->bodyX1 = self->bodyY0 = self->bodyY1 = 0;
     GOBJ_startShooting(self, 0, 0);
+    self->shootFunction = 0;
 }
 
 const SpriteDefinition* GOBJ_spriteDef(GameObject *self) {
