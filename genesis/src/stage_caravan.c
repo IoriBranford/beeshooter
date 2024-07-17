@@ -12348,7 +12348,8 @@ const Trigger stage_caravan_triggers[] = {
 /* 208 */ { .group = &r17wasp7, .action = spawnCharacters, .count = 0, .x = -104, .y = 296 },
 /* 209 */ { .group = &r17wasp9, .action = spawnCharacters, .count = 0, .x = -104, .y = 280 },
 /* 210 */ { .group = &waspboss, .action = spawnCharacters, .count = 0, .x = -16, .y = 224 },
-/* 211 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 }
+/* 211 */ { .group = &waspboss, .action = startBackgroundExplosion, .count = 0, .x = -44, .y = 224 },
+/* 212 */ { .group = &waspboss, .action = stopStageScroll, .count = 0, .x = -32, .y = 144 }
 };
 LevelObjectGroup *stage_caravan_groups[] = {
     &room1ants1,

@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (212)
+#define stage_caravan_numTriggers (213)
 extern const Trigger stage_caravan_triggers[];
 
 #define stage_caravan_numGroups (105)
@@ -29,6 +29,7 @@ void unpauseTimer(const Trigger *trigger);
 void spawnNextCharacters(const Trigger *trigger);
 void stopStageScroll(const Trigger *trigger);
 void loadPart2(const Trigger *trigger);
+void startBackgroundExplosion(const Trigger *trigger);
 void faceRight(GameObject *self, const GameObjectAction *action);
 void enterBackground(GameObject *self, const GameObjectAction *action);
 void enterForeground(GameObject *self, const GameObjectAction *action);
