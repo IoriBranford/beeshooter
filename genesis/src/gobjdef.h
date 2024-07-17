@@ -37,6 +37,7 @@ u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex);
 u16 GOBJDEF_freePart2EnemyFrames();
 
 extern GameObjectDefinition
+    defPlayerBlood,
     defBloodSmall,
     defAngleTester,
     defHoneyPot,

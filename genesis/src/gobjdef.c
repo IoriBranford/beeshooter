@@ -60,6 +60,13 @@ GameObjectDefinition defAcidBloodSmall = {
     .init = GOBJ_initSprite,
     .update = GOBJ_updateSpark
 };
+GameObjectDefinition defPlayerBlood = {
+    .spriteDef = &sprPlayerBlood,
+    .spriteDepth = -50,
+    .palette = &palPlayerAndBG,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defAnt = {
     .teams = 1<<TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
@@ -330,6 +337,7 @@ GameObjectDefinition *commondefs[4] = {
     &defBloodSmall,
     &defPowerup,
     &defHoneyPot,
+    &defPlayerBlood
 };
 
 GameObjectDefinition *part1defs[8] = {

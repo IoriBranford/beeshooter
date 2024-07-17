@@ -268,6 +268,7 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         self->health -= damage;
         SND_playDef(&sndPlayerHurt);
     } else {
+        GOBJ_createFromDef(&defPlayerBlood, self->centerX, self->centerY - FIX16(16));
         SND_playDef(&sndPlayerDie);
         SPR_setAutoAnimation(self->sprite, true);
         SPR_setAnimationLoop(self->sprite, false);
