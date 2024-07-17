@@ -7,6 +7,7 @@ extern const Palette palPlayerAndBG;
 extern const TileSet font;
 extern const SpriteDefinition sprPlayer;
 extern const SpriteDefinition sprPlayerShot;
+extern const SpriteDefinition sprPlayerBlood;
 extern const SpriteDefinition sprPowerup;
 extern const SpriteDefinition sprUiWeapons;
 extern const SpriteDefinition sprUiWeaponsCursor;
