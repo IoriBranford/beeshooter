@@ -218,11 +218,18 @@ void PLAYER_spawn(PlayerObject *self) {
     self->shootTimer = 0;
     self->invulTimer = ENTERINVUL;
     self->update = (ObjectCallback*)PLAYER_updateEnter;
+    GOBJ_updateSprite((GameObject*)self);
+    SPR_setAutoAnimation(self->sprite, true);
+    SPR_setAnimationLoop(self->sprite, true);
+    SPR_setAnim(self->sprite, self->weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
     SPR_setVisibility(self->sprite, VISIBLE);
     UI_updateLives(self->lives);
 }
 
 void PLAYER_updateDie(PlayerObject *self) {
+    if (SPR_getVisibility(self->sprite) != HIDDEN)
+        if (SPR_getAnimationDone(self->sprite))
+            SPR_setVisibility(self->sprite, HIDDEN);
     if (--self->invulTimer <= 1) {
         if (self->lives) {
             if (!XGM_isPlaying())
@@ -242,7 +249,8 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         SND_playDef(&sndPlayerHurt);
     } else {
         SND_playDef(&sndPlayerDie);
-        SPR_setVisibility(self->sprite, HIDDEN);
+        SPR_setAnimationLoop(self->sprite, false);
+        SPR_setAnim(self->sprite, ANI_PLAYER_DIE);
         self->centerX = STARTENTERX;
         self->centerY = STARTENTERY;
         self->health = 0;
@@ -266,7 +274,6 @@ void PLAYER_init(PlayerObject *self) {
         TILE_ATTR(PAL_PLAYER_AND_BG, TRUE, FALSE, FALSE), 0);
     self->sprite->data = (u32)shipAniFrame;
     SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
-    SPR_setAnim(self->sprite, self->weapon ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
