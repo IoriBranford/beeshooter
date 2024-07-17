@@ -13,6 +13,7 @@ extern const SpriteDefinition sprUiWeapons;
 extern const SpriteDefinition sprUiWeaponsCursor;
 extern const SpriteDefinition sprHit;
 extern const SpriteDefinition sprBloodSmall;
+extern const SpriteDefinition sprBloodMedium;
 extern const Palette palAnt;
 extern const Palette palFlyAndHoney;
 extern const Palette palAlien;
