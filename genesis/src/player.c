@@ -111,12 +111,29 @@ void PLAYER_shoot(PlayerObject *self) {
     }
 }
 
+void PLAYER_initSpriteFrameTimer(PlayerObject *self) {
+    switch (self->sprite->animInd) {
+        case ANI_PLAYER_FLYA:
+        case ANI_PLAYER_FLYB:
+            self->sprite->timer = self->speed == PLAYER_FASTSPEED ? 6 : 12;
+            break;
+    }
+}
+
+void PLAYERsprite_onFrameChange(Sprite *sprite) {
+    PlayerObject *self = (PlayerObject*)sprite->data;
+    SPR_setVRAMTileIndex(sprite, shipAniFrame[sprite->animInd][sprite->frameInd]);
+    PLAYER_initSpriteFrameTimer(self);
+}
+
+void PLAYER_updateSpriteFrameTimer(PlayerObject *self) {
+    if (!--self->sprite->timer)
+        SPR_nextFrame(self->sprite);
+}
+
 void PLAYER_setSpeed(PlayerObject *self, fix16 speed) {
     self->speed = speed;
-    s16 animInd = self->sprite->animInd;
-    if (animInd == ANI_PLAYER_FLYA || animInd == ANI_PLAYER_FLYB) {
-        // set appropriate animation speed
-    }
+    PLAYER_initSpriteFrameTimer(self);
 }
 
 void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
@@ -125,7 +142,7 @@ void PLAYER_setWeapon(PlayerObject *self, u8 weapon) {
         case ANI_PLAYER_FLYA:
         case ANI_PLAYER_FLYB:
             SPR_setAnim(self->sprite, weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
-            PLAYER_setSpeed(self, self->speed);
+            PLAYER_initSpriteFrameTimer(self);
             break;
     }
 }
@@ -198,6 +215,7 @@ void PLAYER_updatePlay(PlayerObject *self) {
     }
     PLAYER_joyUpdate(self, JOY_readJoypad(JOY_1));
     GOBJ_updateSprite((GameObject*)self);
+    PLAYER_updateSpriteFrameTimer(self);
 }
 
 void PLAYER_updateEnter(PlayerObject *self) {
@@ -208,6 +226,7 @@ void PLAYER_updateEnter(PlayerObject *self) {
         self->update = (ObjectCallback*)PLAYER_updatePlay;
     }
     GOBJ_updateSprite((GameObject*)self);
+    PLAYER_updateSpriteFrameTimer(self);
 }
 
 void PLAYER_spawn(PlayerObject *self) {
@@ -219,9 +238,10 @@ void PLAYER_spawn(PlayerObject *self) {
     self->invulTimer = ENTERINVUL;
     self->update = (ObjectCallback*)PLAYER_updateEnter;
     GOBJ_updateSprite((GameObject*)self);
-    SPR_setAutoAnimation(self->sprite, true);
+    SPR_setAutoAnimation(self->sprite, false);
     SPR_setAnimationLoop(self->sprite, true);
     SPR_setAnim(self->sprite, self->weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
+    PLAYER_initSpriteFrameTimer(self);
     SPR_setVisibility(self->sprite, VISIBLE);
     UI_updateLives(self->lives);
 }
@@ -249,6 +269,7 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         SND_playDef(&sndPlayerHurt);
     } else {
         SND_playDef(&sndPlayerDie);
+        SPR_setAutoAnimation(self->sprite, true);
         SPR_setAnimationLoop(self->sprite, false);
         SPR_setAnim(self->sprite, ANI_PLAYER_DIE);
         self->centerX = STARTENTERX;
@@ -272,8 +293,8 @@ void PLAYER_init(PlayerObject *self) {
         &sprPlayer,
         fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
         TILE_ATTR(PAL_PLAYER_AND_BG, TRUE, FALSE, FALSE), 0);
-    self->sprite->data = (u32)shipAniFrame;
-    SPR_setFrameChangeCallback(self->sprite, SPR_defaultFrameChange);
+    self->sprite->data = (u32)self;
+    SPR_setFrameChangeCallback(self->sprite, PLAYERsprite_onFrameChange);
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
