@@ -221,11 +221,21 @@ void LEVEL_postDoubleKillBonus(const LevelObject *enemy0, const LevelObject *ene
     doubleKillBonusPoints = bonusPoints;
 }
 
-void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy) {
+void LEVEL_cancelDoubleKillBonusOnEnemyEscape(GameObject *enemy) {
+    if (!doubleKillBonusPoints)
+        return;
+    const LevelObject *lobj = enemy->levelObject;
+    if (!lobj)
+        return;
+    if (lobj == doubleKillBonusEnemies[0] || lobj == doubleKillBonusEnemies[1])
+        LEVEL_postDoubleKillBonus(NULL, NULL, 0);
+}
+
+void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy) {
     if (!doubleKillBonusPoints)
         return;
 
-    const LevelObject *lobj = defeatedEnemy->levelObject;
+    const LevelObject *lobj = enemy->levelObject;
     if (!lobj)
         return;
 
@@ -244,6 +254,6 @@ void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy) {
     if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < 30) {
         GAME_scorePoints(doubleKillBonusPoints);
         SND_playDef(&sndBonus);
-        LEVEL_postDoubleKillBonus(NULL, NULL, 0);
     }
+    LEVEL_postDoubleKillBonus(NULL, NULL, 0);
 }

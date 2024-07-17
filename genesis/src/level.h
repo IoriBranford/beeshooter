@@ -70,7 +70,8 @@ const Path* LEVEL_findNearestPath(LevelObjectGroup *group, fix32 xWorld, fix32 y
 GameObject* LEVEL_createObject(const LevelObject *lobj);
 
 void LEVEL_postDoubleKillBonus(const LevelObject *enemy0, const LevelObject *enemy1, u32 bonusPoints);
-void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy);
+void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy);
+void LEVEL_cancelDoubleKillBonusOnEnemyEscape(GameObject *enemy);
 
 void LEVEL_startBackgroundExplosion();
 
