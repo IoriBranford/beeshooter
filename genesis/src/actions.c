@@ -48,6 +48,10 @@ void stopStageScroll(const Trigger *trigger)
     LEVEL_setVelY(0);
 }
 
+void startBackgroundExplosion(const Trigger *trigger) {
+    LEVEL_startBackgroundExplosion();
+}
+
 void loadPart2(const Trigger *trigger)
 {
     GAME_loadPart2Sprites();

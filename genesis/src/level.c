@@ -11,6 +11,7 @@
 #include "res_gfx.h"
 
 #define STARTTRIGGER 0
+#define BG_PLANE BG_B
 
 static Map *bg;
 static fix32 cameraY, cameraVelY;
@@ -29,6 +30,43 @@ static const LevelObject *doubleKillBonusEnemies[2];
 static fix32 doubleKillBonusEnemiesDefeatedAt[2];
 static u32 doubleKillBonusPoints;
 
+#define BG_EXPLODE_LINES 224
+#define BG_EXPLODE_MAX_X 256
+static fix16 bgExplodeLinesVelX[BG_EXPLODE_LINES];
+static fix16 bgExplodeLinesPosX[BG_EXPLODE_LINES];
+static s16 bgExplodeLinesScrollX[BG_EXPLODE_LINES];
+
+void LEVEL_updateBackgroundExplosion() {
+    if (bgExplodeLinesScrollX[0] >= BG_EXPLODE_MAX_X)
+        return;
+
+    for (u32 l = 0; l < 224; l += 2) {
+        fix16 posX = bgExplodeLinesPosX[l];
+        fix16 velX = bgExplodeLinesVelX[l];
+        if (posX < FIX16(BG_EXPLODE_MAX_X)) {
+            posX += velX;
+            bgExplodeLinesPosX[l] = posX;
+            bgExplodeLinesScrollX[l] = fix16ToInt(posX);
+        }
+    }
+
+    for (u32 l = 1; l < 224; l += 2) {
+        fix16 posX = bgExplodeLinesPosX[l];
+        fix16 velX = bgExplodeLinesVelX[l];
+        if (posX > -FIX16(BG_EXPLODE_MAX_X)) {
+            posX += velX;
+            bgExplodeLinesPosX[l] = posX;
+            bgExplodeLinesScrollX[l] = fix16ToInt(posX);
+        }
+    }
+
+    VDP_setHorizontalScrollLine(BG_PLANE, 0, bgExplodeLinesScrollX, BG_EXPLODE_LINES, DMA_QUEUE);
+}
+
+void LEVEL_startBackgroundExplosion() {
+    VDP_setScrollingMode(HSCROLL_LINE, VSCROLL_PLANE);
+}
+
 void LEVEL_init(u16 tileIndex) {
     cameraY = FIX32(4256);
     cameraVelY = -FIX32(3) / 4;
@@ -42,9 +80,10 @@ void LEVEL_init(u16 tileIndex) {
     for (int i = 0; i < stage_caravan_numGroups; ++i)
         stage_caravan_groups[i]->numObjectsSpawned = 0;
 
+    VDP_setScrollingMode(HSCROLL_PLANE, VSCROLL_PLANE);
     VDP_setBackgroundColor((PAL_PLAYER_AND_BG << 4) + 14);
     VDP_loadTileSet(&bgTileset, tileIndex, DMA);
-    bg = MAP_create(&bgMap, BG_B, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
+    bg = MAP_create(&bgMap, BG_PLANE, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
     for (int i = 0; i < PALETTE_USAGE_SLOTS; ++i) {
@@ -53,6 +92,15 @@ void LEVEL_init(u16 tileIndex) {
     }
 
     LEVEL_postDoubleKillBonus(NULL, NULL, 0);
+    
+    memset(bgExplodeLinesScrollX, 0, sizeof(bgExplodeLinesScrollX));
+    memset(bgExplodeLinesPosX, 0, sizeof(bgExplodeLinesPosX));
+    for (u32 l = 0; l < 224; l += 2) {
+        bgExplodeLinesVelX[l] = sinFix16(l+1)<<3;
+    }
+    for (u32 l = 1; l < 224; l += 2) {
+        bgExplodeLinesVelX[l] = -sinFix16(l+1)<<3;
+    }
 }
 
 void LEVEL_update() {
@@ -66,6 +114,10 @@ void LEVEL_update() {
             ++nextTriggerIndex;
         }
     }
+    
+    if (VDP_getHorizontalScrollingMode() == HSCROLL_LINE)
+        LEVEL_updateBackgroundExplosion();
+    // else
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
 
     for (int i = PAL0; i <= PAL1; ++i) {

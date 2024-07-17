@@ -72,4 +72,6 @@ GameObject* LEVEL_createObject(const LevelObject *lobj);
 void LEVEL_postDoubleKillBonus(const LevelObject *enemy0, const LevelObject *enemy1, u32 bonusPoints);
 void LEVEL_updateDoubleKillBonus(GameObject *defeatedEnemy);
 
+void LEVEL_startBackgroundExplosion();
+
 #endif
