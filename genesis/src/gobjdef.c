@@ -53,8 +53,22 @@ GameObjectDefinition defBloodSmall = {
     .init = GOBJ_initSprite,
     .update = GOBJ_updateSpark
 };
+GameObjectDefinition defBloodMedium = {
+    .spriteDef = &sprBloodMedium,
+    .spriteDepth = -50,
+    .palette = &palAnt,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defAcidBloodSmall = {
     .spriteDef = &sprBloodSmall,
+    .spriteDepth = -50,
+    .palette = &palAcidAndBeetle,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
+GameObjectDefinition defAcidBloodMedium = {
+    .spriteDef = &sprBloodMedium,
     .spriteDepth = -50,
     .palette = &palAcidAndBeetle,
     .init = GOBJ_initSprite,
@@ -155,7 +169,7 @@ GameObjectDefinition defAntBig = {
     .palette = &palAnt,
     .bodyW = FIX16(20), .bodyH = FIX16(10),
     .defeatSoundDef = &sndBugKill2,
-    .corpseDef = &defBloodSmall,
+    .corpseDef = &defBloodMedium,
     .update = GOBJ_updateSpawner,
     .onDefeat = ENEMY_onDefeatBigAnt
 };
@@ -307,7 +321,7 @@ GameObjectDefinition defBeetle = {
     .palette = &palAcidAndBeetle,
     .bodyW = FIX16(12), .bodyH = FIX16(12),
     .defeatSoundDef = &sndBugKill2,
-    .corpseDef = &defAcidBloodSmall,
+    .corpseDef = &defAcidBloodMedium,
     .bulletDef = &defBeetleBullet,
     .update = GOBJ_updatePathWalker,
     .shootFunction = ENEMY_beetleShoot
@@ -332,9 +346,10 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *commondefs[4] = {
+GameObjectDefinition *commondefs[6] = {
     &defHit,
     &defBloodSmall,
+    &defBloodMedium,
     &defPowerup,
     &defHoneyPot,
     &defPlayerBlood
@@ -391,6 +406,7 @@ u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
     defAcidHit.aniFrameTiles = defHit.aniFrameTiles;
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
     defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
+    defAcidBloodMedium.aniFrameTiles = defBloodMedium.aniFrameTiles;
     defReinforcedHoneyPot.aniFrameTiles = defHoneyPot.aniFrameTiles;
     return tileIndex;
 }
