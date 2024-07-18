@@ -26,6 +26,12 @@ static void writeScore(u32 scoreOffset, HighScore *score) {
     SRAM_writeLong(scoreOffset + fieldOffset(score, &score->bcdPoints), score->bcdPoints);
 }
 
+static void clearScore(u32 scoreOffset, HighScore *score) {
+    score->name = ('N'<<24) + ('O'<<16) + ('N'<<8) + 'E';
+    score->bcdPoints = 0;
+    writeScore(scoreOffset, score);
+}
+
 static void initData(UserData *data) {
     SRAM_enable();
 
@@ -42,13 +48,13 @@ static void initData(UserData *data) {
     for (int i = 0; i < NUM_SCORES; ++i) {
         HighScore *score = &scores[i];
         u32 name = SRAM_readLong(scoreOffset + fieldOffset(score, &score->name));
-        u32 bcdPoints = SRAM_readLong(scoreOffset + fieldOffset(score, &score->bcdPoints));
-        if (!name) {
-            name = ('N'<<24) + ('O'<<16) + ('N'<<8) + 'E';
-            SRAM_writeLong(scoreOffset + fieldOffset(score, &score->name), name);
+        if (name) {
+            u32 bcdPoints = SRAM_readLong(scoreOffset + fieldOffset(score, &score->bcdPoints));
+            score->name = name;
+            score->bcdPoints = bcdPoints;
+        } else {
+            clearScore(scoreOffset, score);
         }
-        score->name = name;
-        score->bcdPoints = bcdPoints;
         scoreOffset += sizeof(HighScore);
     }
 }
@@ -90,4 +96,15 @@ void USERDATA_saveButtonConfig(u16 config) {
 
 int USERDATA_saveScore(u32 name, u32 score) {
     return saveScore(&userData, name, score);
+}
+
+void USERDATA_clearScores() {
+    UserData *data = &userData;
+    HighScore *scores = data->highScores;
+    u32 scoreOffset = fieldOffset(data, scores);
+    for (int i = 0; i < NUM_SCORES; ++i) {
+        HighScore *score = &scores[i];
+        clearScore(scoreOffset, score);
+        scoreOffset += sizeof(HighScore);
+    }
 }

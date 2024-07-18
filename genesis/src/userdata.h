@@ -8,5 +8,6 @@
 void USERDATA_init();
 void USERDATA_saveButtonConfig(u16 config);
 int USERDATA_saveScore(u32 name, u32 score);
+void USERDATA_clearScores();
 
 #endif
