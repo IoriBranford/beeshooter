@@ -4,9 +4,10 @@
  * Use "Genesis Code: Compile" command to compile this program.
  **/
 #include <genesis.h>
+#include "res_gfx.h"
 #include "sounddef.h"
 
-int gameplay();
+int title();
 
 int main()
 {
@@ -14,8 +15,11 @@ int main()
     SPR_init();
     SND_initSoundDefs();
 
+    VDP_loadFont(&font, DMA);
+    VDP_setTextPriority(1);
+
     while (1) {
-        gameplay();
+        title();
         SYS_reset();
     }
 

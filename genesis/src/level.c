@@ -94,7 +94,6 @@ void LEVEL_init(u16 tileIndex) {
         stage_caravan_groups[i]->numObjectsSpawned = 0;
 
     VDP_setScrollingMode(HSCROLL_PLANE, VSCROLL_PLANE);
-    VDP_setBackgroundColor((PAL_PLAYER_AND_BG << 4) + 14);
     VDP_loadTileSet(&bgTileset, tileIndex, DMA);
     bg = MAP_create(&bgMap, BG_PLANE, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
     MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));

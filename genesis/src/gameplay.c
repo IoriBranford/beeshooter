@@ -231,10 +231,10 @@ int gameplay() {
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
 
-    PAL_setPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, DMA);
-
-    VDP_loadFont(&font, DMA);
-    VDP_setTextPriority(1);
+    // PAL_setPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, DMA);
+    for (int i = 0; i < 64; ++i)
+        PAL_setColor(i, 0);
+    VDP_setBackgroundColor((PAL_PLAYER_AND_BG << 4) + 14);
     VDP_setTextPalette(PAL_PLAYER_AND_BG);
 
     tileIndex = TILE_USER_INDEX;
@@ -272,6 +272,7 @@ int gameplay() {
     DMA_waitCompletion();
     DMA_setBufferSizeToDefault();
     DMA_setMaxTransferSizeToDefault();
+    PAL_fadeInPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, 15, true);
     XGM_startPlay(bgm);
 
     while(running)
