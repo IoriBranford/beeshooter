@@ -1,3 +1,5 @@
+IMAGE imgTitle "title-player-closeup.png"
+
 TILESET bgTileset "bg.png"
 MAP bgMap "bg.png" bgTileset
 

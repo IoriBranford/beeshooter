@@ -7,6 +7,7 @@
 #include "gobject.h"
 #include "enemy.h"
 #include "map.h"
+#include "vdp_bg.h"
 #include "res_gfx.h"
 
 typedef struct Trigger Trigger;

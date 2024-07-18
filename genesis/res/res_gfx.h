@@ -1,6 +1,7 @@
 #ifndef _RES_RES_GFX_H_
 #define _RES_RES_GFX_H_
 
+extern const Image imgTitle;
 extern const TileSet bgTileset;
 extern const MapDefinition bgMap;
 extern const Palette palPlayerAndBG;
