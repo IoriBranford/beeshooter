@@ -17,6 +17,10 @@ u16 GJOY_getConfig() {
     return config;
 }
 
+void GJOY_setConfig(u16 newConfig) {
+    config = newConfig;
+}
+
 u16 GJOY_changeConfig(s8 dir) {
     int i;
     for (i = 0; i < NUM_BUTTON_CONFIGS; ++i) {
