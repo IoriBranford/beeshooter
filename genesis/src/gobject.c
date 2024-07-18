@@ -263,11 +263,17 @@ void GOBJ_defaultDefeatAction(GameObject *self) {
 }
 
 void GOBJ_defeat(GameObject *self) {
+    LEVEL_updateDoubleKillBonusOnEnemyDefeat(self);
     const GameObjectDefinition *def = self->definition;
     if (def && def->onDefeat)
         def->onDefeat(self);
     else
         GOBJ_defaultDefeatAction(self);
+}
+
+void GOBJ_escape(GameObject *self) {
+    LEVEL_cancelDoubleKillBonusOnEnemyEscape(self);
+    GAME_releaseObject(self);
 }
 
 void GOBJ_startShooting(GameObject *self, u8 count, u8 interval) {
@@ -317,7 +323,7 @@ void GOBJ_updateIdleOnStage(GameObject *self) {
     GOBJ_updateShooting(self);
     GOBJ_updateSprite(self);
     if (GOBJ_isBodyOffBottom(self)) {
-        GAME_releaseObject(self);
+        GOBJ_escape(self);
     }
 }
 
@@ -451,7 +457,7 @@ void GOBJ_followPath(GameObject *self) {
             } else if (GOBJ_isBodyOnScreen(self)) {
                 self->update = (ObjectCallback*)GOBJ_updateIdleOnStage;
             } else {
-                GAME_releaseObject(self);
+                GOBJ_escape(self);
             }
         }
     }
@@ -489,7 +495,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
     bool offscreen = GOBJ_isBodyOffSideOrBottom(self);
     if (offscreen) {
         if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints) {
-            GAME_releaseObject(self);
+            GOBJ_escape(self);
             return;
         }
     }
@@ -502,7 +508,7 @@ void GOBJ_updateSpawner(GameObject *self) {
     GOBJ_followStage(self);
     GOBJ_updateBody(self);
     if (GOBJ_isBodyOffBottom(self)) {
-        GAME_releaseObject(self);
+        GOBJ_escape(self);
         return;
     }
     GOBJ_updateSpawning(self);
@@ -516,7 +522,7 @@ void GOBJ_updateFaller(GameObject *self) {
     self->centerY += self->velY;
     GOBJ_updateBody(self);
     if (GOBJ_isBodyOffBottom(self)) {
-        GAME_releaseObject(self);
+        GOBJ_escape(self);
         return;
     }
     GOBJ_updateSprite(self);
