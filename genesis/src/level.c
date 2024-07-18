@@ -11,7 +11,7 @@
 
 #include "res_gfx.h"
 
-#define STARTTRIGGER 33
+#define STARTTRIGGER 0
 #define BG_PLANE BG_B
 
 static Map *bg;
