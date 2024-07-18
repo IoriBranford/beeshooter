@@ -1,4 +1,6 @@
 #include "menu.h"
+#include "gjoy.h"
+#include "gameplay.h"
 #include <genesis.h>
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
@@ -25,7 +27,7 @@ const Menu MAIN_MENU = {
         {
             .x = 2, .y = 4,
             .name = "OPTIONS",
-            // .activateAction = showOptionsMenu
+            .activateAction = showOptionsMenu
         },
         {
             .x = 2, .y = 6,
@@ -35,46 +37,46 @@ const Menu MAIN_MENU = {
     }
 };
 
-// const Menu OPTIONS_MENU = {
-//     .x = 4, .y = 7,
-//     .name = "OPTIONS",
-//     .length = 3,
-//     .items = {
-//         {
-//             .x = 2, .y = 2,
-//             .name = "BUTTON CONFIG",
-//             .moveAction = changeButtonConfig
-//         },
-//         {
-//             .x = 2, .y = 8,
-//             .name = "CLEAR HIGH SCORES",
-//             .activateAction = showHighScoreClear,
-//         },
-//         {
-//             .x = 2, .y = 10,
-//             .name = "RETURN TO MAIN",
-//             .activateAction = showMainMenu
-//         },
-//     }
-// };
+const Menu OPTIONS_MENU = {
+    .x = 2, .y = 7,
+    .name = "OPTIONS",
+    .length = 3,
+    .items = {
+        {
+            .x = 2, .y = 2,
+            .name = "BUTTON CONFIG",
+            .moveAction = changeButtonConfig
+        },
+        {
+            .x = 2, .y = 12,
+            .name = "CLEAR HIGH SCORES",
+            .activateAction = showHighScoreClear,
+        },
+        {
+            .x = 2, .y = 14,
+            .name = "RETURN TO MAIN",
+            .activateAction = showMainMenu
+        },
+    }
+};
 
-// const Menu CLEAR_HISCORES_MENU = {
-//     .x = 4, .y = 7,
-//     .name = "CLEAR HIGH SCORES?",
-//     .length = 2,
-//     .items = {
-//         {
-//             .x = 2, .y = 2,
-//             .name = "NO",
-//             .moveAction = showOptionsMenu
-//         },
-//         {
-//             .x = 2, .y = 4,
-//             .name = "YES",
-//             .activateAction = clearHighScores
-//         }
-//     }
-// };
+const Menu CLEAR_HISCORES_MENU = {
+    .x = 2, .y = 14,
+    .name = "CLEAR HIGH SCORES?",
+    .length = 2,
+    .items = {
+        {
+            .x = 2, .y = 2,
+            .name = "NO",
+            .activateAction = showOptionsMenu
+        },
+        {
+            .x = 2, .y = 4,
+            .name = "YES",
+            // .activateAction = clearHighScores
+        }
+    }
+};
 
 #define MENU_PLANE BG_A
 
@@ -83,6 +85,7 @@ static const char *CURSOR_STRING = "\x7f";
 
 static const Menu *currentMenu;
 static u16 cursorPos;
+static char string[32];
 
 void MENU_moveCursor(const Menu *menu, s8 dy) {
     u8 x = menu->x, y = menu->y;
@@ -152,5 +155,58 @@ void MENU_joyEvent(u16 joy, u16 button, u16 state) {
 }
 
 void showMainMenu(const Menu *menu, const MenuItem *item, u16 input) {
+    VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&MAIN_MENU);
+}
+
+void MENU_showButtonConfig(const Menu *menu, const MenuItem *item, u16 config) {
+    const u16 BUTTONS[3] = {
+        BUTTON_A, BUTTON_B, BUTTON_C
+    };
+
+    const char *ACTION_NAMES[3] = {
+        "CHANGE SPEED ",
+        "FIRE         ",
+        "CHANGE WEAPON",
+    };
+
+    u16 x = menu->x + item->x + 1;
+    u16 y = menu->y + item->y + 2;
+
+    strcpy(string, "A: ");
+
+    for (int b = 0; b < 3; ++b) {
+        u16 button = BUTTONS[b];
+        u16 cfg = config;
+        for (int a = 0; a < 3; ++a) {
+            u16 cfgButton = (cfg & 0xf) << 4;
+            if ((cfgButton & button)) {
+                strcpy(&string[3], ACTION_NAMES[a]);
+                break;
+            }
+            cfg >>= 4;
+        }
+        VDP_drawText(string, x, y);
+        y += 2;
+        string[0]++;
+    }
+}
+
+void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
+    VDP_clearTextArea(0, 0, 32, 28);
+    MENU_show(&OPTIONS_MENU);
+    MENU_showButtonConfig(&OPTIONS_MENU, &OPTIONS_MENU.items[0], GJOY_getConfig());
+}
+
+void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
+    if (input & BUTTON_LEFT)
+        GJOY_changeConfig(-1);
+    if (input & BUTTON_RIGHT)
+        GJOY_changeConfig(1);
+    MENU_showButtonConfig(menu, item, GJOY_getConfig());
+}
+
+void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
+    VDP_clearTextArea(0, 0, 32, 28);
+    MENU_show(&CLEAR_HISCORES_MENU);
 }
