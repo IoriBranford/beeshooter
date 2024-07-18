@@ -39,6 +39,7 @@ u16 GOBJDEF_freePart2EnemyFrames();
 extern GameObjectDefinition
     defPlayerBlood,
     defBloodSmall,
+    defBloodMedium,
     defAngleTester,
     defHoneyPot,
     defPowerup,
