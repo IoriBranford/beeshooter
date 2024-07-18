@@ -4,7 +4,7 @@
 #include "gameplay.h"
 #include "player.h"
 #include "palette.h"
-#include "ui.h"
+#include "hud.h"
 #include "stage_caravan.h"
 
 #include <genesis.h>
@@ -266,7 +266,7 @@ void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy) {
 
     if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < abs(cameraVelY)*30) {
         GAME_scorePoints(doubleKillBonusPoints);
-        UI_initBonus(doubleKillBonusPoints);
+        HUD_initBonus(doubleKillBonusPoints);
         SND_playDef(&sndBonus);
     }
     LEVEL_postDoubleKillBonus(NULL, NULL, 0);

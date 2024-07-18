@@ -8,7 +8,7 @@
 
 #include "player.h"
 #include "level.h"
-#include "ui.h"
+#include "hud.h"
 
 #define GAMETIME 3600
 static const u32 MAXSCORE = 9999999;
@@ -76,7 +76,7 @@ void GAME_scorePoints(u32 points) {
         SND_playDef(&sndExtend);
         ++player.lives;
         ++extendScoreIndex;
-        UI_updateLives(player.lives);
+        HUD_updateLives(player.lives);
     }
     score = min(MAXSCORE, newScore);
 }
@@ -86,9 +86,9 @@ void GAME_addTime(u16 time) {
     timerMinutes = timeLeft / 3600;
     timerSeconds = (timeLeft / 60) % 60;
     timerFrames = timeLeft % 60;
-    UI_updateTimerMinutes(timerMinutes);
-    UI_updateTimerSeconds(timerSeconds);
-    UI_updateTimerFrames(timerFrames);
+    HUD_updateTimerMinutes(timerMinutes);
+    HUD_updateTimerSeconds(timerSeconds);
+    HUD_updateTimerFrames(timerFrames);
 }
 
 void GAME_setTimerPaused(bool paused) {
@@ -137,7 +137,7 @@ GameObject* GAME_createObject() {
     GOBJ_init(gobj);
 #ifdef DEBUG
 #ifdef DEBUG_OBJECT_COUNT
-    UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
+    HUD_updateObjectCount(POOL_getNumAllocated(gobjPool));
 #endif
 #endif
     return gobj;
@@ -149,7 +149,7 @@ void GAME_releaseObject(GameObject *gobj) {
     OBJ_release(gobjPool, (Object*)gobj, true);
 #ifdef DEBUG
 #ifdef DEBUG_OBJECT_COUNT
-    UI_updateObjectCount(POOL_getNumAllocated(gobjPool));
+    HUD_updateObjectCount(POOL_getNumAllocated(gobjPool));
 #endif
 #endif
 }
@@ -161,7 +161,7 @@ void GAME_loadPart2Sprites() {
 
 void GAME_end(GameResult r) {
     result = r;
-    UI_updateResult(r);
+    HUD_updateResult(r);
 }
 
 void GAME_doCollision() {
@@ -241,7 +241,7 @@ int gameplay() {
 
     SPR_reset();
     tileIndex = PLAYER_loadSpriteFrames(tileIndex);
-    tileIndex = UI_loadSpriteFrames(tileIndex);
+    tileIndex = HUD_loadSpriteFrames(tileIndex);
 
     LEVEL_init(tileIndex);
     tileIndex += bgTileset.numTile;
@@ -268,7 +268,7 @@ int gameplay() {
     running = true;
     memset(teamSizes, 0, sizeof(teamSizes));
     memset(teamObjects, 0, sizeof(teamObjects));
-    UI_initHud(&player, timeLeft);
+    HUD_init(&player, timeLeft);
 
     DMA_waitCompletion();
     DMA_setBufferSizeToDefault();
@@ -306,24 +306,24 @@ int gameplay() {
                             timerSeconds = 59;
                             --timerMinutes;
                         }
-                        UI_updateTimerMinutes(timerMinutes);
+                        HUD_updateTimerMinutes(timerMinutes);
                     }
-                    UI_updateTimerSeconds(timerSeconds);
+                    HUD_updateTimerSeconds(timerSeconds);
                 }
-                UI_updateTimerFrames(timerFrames);
+                HUD_updateTimerFrames(timerFrames);
             }
         }
 
-        UI_updateBonus();
+        HUD_updateBonus();
         SPR_update();
 #ifdef DEBUG
 #ifdef DEBUG_PERF
-        UI_updateFPS(SYS_getFPS());
-        UI_updateCPU(SYS_getCPULoad());
+        HUD_updateFPS(SYS_getFPS());
+        HUD_updateCPU(SYS_getCPULoad());
 #endif
 #endif
         if (score != lastFrameScore) {
-            UI_updateScore(score);
+            HUD_updateScore(score);
             lastFrameScore = score;
         }
 
@@ -334,7 +334,7 @@ int gameplay() {
     GOBJDEF_freePart2EnemyFrames();
     GOBJDEF_freeCommonFrames();
     PLAYER_freeSpriteFrames();
-    UI_freeSpriteFrames();
+    HUD_freeSpriteFrames();
     LEVEL_destroy();
     XGM_stopPlay();
     POOL_destroy(gobjPool);

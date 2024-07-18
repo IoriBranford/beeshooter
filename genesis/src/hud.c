@@ -1,5 +1,5 @@
 #include <genesis.h>
-#include "ui.h"
+#include "hud.h"
 #include "sprite.h"
 #include "res_gfx.h"
 
@@ -24,7 +24,7 @@ void bcdsnprint(char *s, u32 n, u32 bcd) {
     }
 }
 
-u16 UI_loadSpriteFrames(u16 tileIndex) {
+u16 HUD_loadSpriteFrames(u16 tileIndex) {
     u16 numTiles;
     weaponSelectFrames = SPR_loadAllFrames(&sprUiWeapons, tileIndex, &numTiles);
     tileIndex += numTiles;
@@ -33,31 +33,31 @@ u16 UI_loadSpriteFrames(u16 tileIndex) {
     return tileIndex;
 }
 
-void UI_freeSpriteFrames() {
+void HUD_freeSpriteFrames() {
     MEM_free(weaponCursorFrames);
     MEM_free(weaponSelectFrames);
     weaponCursorFrames = NULL;
     weaponSelectFrames = NULL;
 }
 
-void UI_initHud(PlayerObject *player, u16 timeLeft) {
+void HUD_init(PlayerObject *player, u16 timeLeft) {
     weaponSelectSprite = SPR_addSpriteEx(&sprUiWeapons, 208, 184, TILE_ATTR(PAL_PLAYER_AND_BG, true, false, false), 0);
     weaponCursorSprite = SPR_addSpriteEx(&sprUiWeaponsCursor, 204, 180, TILE_ATTR(PAL_PLAYER_AND_BG, true, false, false), 0);
     weaponSelectSprite->data = (u32)weaponSelectFrames;
     weaponCursorSprite->data = (u32)weaponCursorFrames;
     SPR_setFrameChangeCallback(weaponSelectSprite, SPR_defaultFrameChange);
     SPR_setFrameChangeCallback(weaponCursorSprite, SPR_defaultFrameChange);
-    UI_updateScore(0);
-    UI_updateTimeLeft(timeLeft);
-    UI_updateResult(RESULT_NONE);
-    UI_updateLives(player->lives);
-    UI_updateWeaponLevel(player->health);
-    UI_updateWeaponSelect(player->weapon);
+    HUD_updateScore(0);
+    HUD_updateTimeLeft(timeLeft);
+    HUD_updateResult(RESULT_NONE);
+    HUD_updateLives(player->lives);
+    HUD_updateWeaponLevel(player->health);
+    HUD_updateWeaponSelect(player->weapon);
     VDP_drawText("Speed \x7f", 23, 26);
-    UI_updateSpeed(player->speed);
+    HUD_updateSpeed(player->speed);
 #ifdef DEBUG
 #ifdef DEBUG_OBJECT_COUNT
-    UI_updateObjectCount(0);
+    HUD_updateObjectCount(0);
 #endif
 #endif
 }
@@ -69,7 +69,7 @@ static const char *RESULT_MESSAGES[RESULTS] = {
     " TIME UP! "
 };
 
-void UI_updateResult(GameResult result) {
+void HUD_updateResult(GameResult result) {
     if (result) {
         const char *message = RESULT_MESSAGES[result];
         VDP_drawText(message, 11, 13);
@@ -78,27 +78,27 @@ void UI_updateResult(GameResult result) {
     }
 }
 
-void UI_updateScore(u32 score) {
+void HUD_updateScore(u32 score) {
     bcdsnprint(string, 7, u32ToBCD(score));
     VDP_drawText(string, 8, 1);
 }
 
-void UI_updateTimerMinutes(u16 minutes) {
+void HUD_updateTimerMinutes(u16 minutes) {
     bcdsnprint(string, 1, u16ToBCD(minutes));
     VDP_drawText(string, 17, 1);
 }
 
-void UI_updateTimerSeconds(u16 seconds) {
+void HUD_updateTimerSeconds(u16 seconds) {
     bcdsnprint(string, 2, u16ToBCD(seconds));
     VDP_drawText(string, 19, 1);
 }
 
-void UI_updateTimerFrames(u16 frames) {
+void HUD_updateTimerFrames(u16 frames) {
     bcdsnprint(string, 2, u16ToBCD(frames));
     VDP_drawText(string, 22, 1);
 }
 
-void UI_updateTimeLeft(u16 timeLeft) {
+void HUD_updateTimeLeft(u16 timeLeft) {
     u16 frames = timeLeft % 60;
     u16 seconds = timeLeft / 60;
     u16 minutes = min(seconds / 60, 9);
@@ -114,7 +114,7 @@ void UI_updateTimeLeft(u16 timeLeft) {
     VDP_drawText(string, 17, 1);
 }
 
-void UI_updateLives(u8 lives) {
+void HUD_updateLives(u8 lives) {
     if (lives > 9) {
         string[0] = '\x7e';
         string[1] = ' ';
@@ -133,28 +133,28 @@ void UI_updateLives(u8 lives) {
     VDP_drawText(string, 1, 26);
 }
 
-void UI_updateWeaponLevel(u8 playerHealth) {
+void HUD_updateWeaponLevel(u8 playerHealth) {
     SPR_setFrame(weaponSelectSprite, max(0, playerHealth - 1));
 }
 
-void UI_updateWeaponSelect(u8 weapon) {
+void HUD_updateWeaponSelect(u8 weapon) {
     SPR_setPosition(weaponCursorSprite, weapon == WEAPON_A ? 204 : 228, 180);
 }
 
-void UI_updateSpeed(fix16 speed) {
+void HUD_updateSpeed(fix16 speed) {
     string[0] = speed == PLAYER_FASTSPEED ? '\x7f' : ' ';
     string[1] = '\0';
     VDP_drawText(string, 30, 26);
 }
 
-void UI_initBonus(u16 points) {
+void HUD_initBonus(u16 points) {
     bonusTimer = 120;
     VDP_drawText("BONUS!", 3, 3);
     bcdsnprint(string, 5, u16ToBCD(points));
     VDP_drawText(string, 10, 3);
 }
 
-void UI_updateBonus() {
+void HUD_updateBonus() {
     if (!bonusTimer)
         return;
     u16 color = bonusColors[--bonusTimer % BONUS_COLOR_COUNT];
@@ -163,17 +163,17 @@ void UI_updateBonus() {
         VDP_clearText(3, 3, 12);
 }
 
-void UI_updateObjectCount(int n) {
+void HUD_updateObjectCount(int n) {
     sprintf(string, "%3d obj", n);
     VDP_drawText(string, 12, 26);
 }
 
-void UI_updateFPS(u32 fps) {
+void HUD_updateFPS(u32 fps) {
     sprintf(string, "%3ld fps", fps);
     VDP_drawText(string, 12, 25);
 }
 
-void UI_updateCPU(u16 cpu) {
+void HUD_updateCPU(u16 cpu) {
     sprintf(string, "%3d cpu", cpu);
     VDP_drawText(string, 12, 27);
 }

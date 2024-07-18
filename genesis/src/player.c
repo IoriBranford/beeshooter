@@ -1,7 +1,7 @@
 #include "player.h"
 #include "bullet.h"
 #include "gameplay.h"
-#include "ui.h"
+#include "hud.h"
 #include "sprite.h"
 
 #include <genesis.h>
@@ -180,13 +180,13 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
             SND_playDef(&sndChangeSpeedFast);
         }
         PLAYER_setSpeed(self, speed);
-        UI_updateSpeed(speed);
+        HUD_updateSpeed(speed);
     }
 
     if (self->buttonsPressed & BUTTON_C) {
         PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
         SND_playDef(&sndChangeWeapon);
-        UI_updateWeaponSelect(self->weapon);
+        HUD_updateWeaponSelect(self->weapon);
     }
 
     self->buttonsPressed = 0;
@@ -199,7 +199,7 @@ void PLAYER_giveInvul(PlayerObject *self, u8 invul) {
 void PLAYER_powerUp(PlayerObject *self) {
     if (self->health < POWERLEVELS) {
         ++self->health;
-        UI_updateWeaponLevel(self->health);
+        HUD_updateWeaponLevel(self->health);
     } else {
         GAME_scorePoints(1000);
     }
@@ -243,7 +243,7 @@ void PLAYER_spawn(PlayerObject *self) {
     SPR_setAnim(self->sprite, self->weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
     PLAYER_initSpriteFrameTimer(self);
     SPR_setVisibility(self->sprite, VISIBLE);
-    UI_updateLives(self->lives);
+    HUD_updateLives(self->lives);
 }
 
 void PLAYER_updateDie(PlayerObject *self) {
@@ -281,7 +281,7 @@ void PLAYER_takeDamage(PlayerObject *self, u16 damage) {
         if (!self->lives)
             XGM_stopPlay();
     }
-    UI_updateWeaponLevel(self->health);
+    HUD_updateWeaponLevel(self->health);
 }
 
 void PLAYER_init(PlayerObject *self) {
