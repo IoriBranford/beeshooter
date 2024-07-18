@@ -314,6 +314,7 @@ int gameplay() {
             }
         }
 
+        UI_updateBonus();
         SPR_update();
 #ifdef DEBUG
 #ifdef DEBUG_PERF
