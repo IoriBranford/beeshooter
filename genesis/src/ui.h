@@ -19,6 +19,8 @@ void UI_updateLives(u8 lives);
 void UI_updateWeaponLevel(u8 playerHealth);
 void UI_updateWeaponSelect(u8 weapon);
 void UI_updateSpeed(fix16 speed);
+void UI_initBonus(u16 points);
+void UI_updateBonus();
 void UI_updateObjectCount(int n);
 void UI_updateFPS(u32 fps);
 void UI_updateCPU(u16 cpu);

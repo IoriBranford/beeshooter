@@ -3,10 +3,26 @@
 #include "sprite.h"
 #include "res_gfx.h"
 
-Sprite *weaponSelectSprite, *weaponCursorSprite;
-u16 **weaponSelectFrames, **weaponCursorFrames;
+static Sprite *weaponSelectSprite, *weaponCursorSprite;
+static u16 **weaponSelectFrames, **weaponCursorFrames;
+
+static u16 bonusTimer;
+
+#define BONUS_COLOR_COUNT 7
+static const u16 bonusColors[BONUS_COLOR_COUNT] = {
+    0xfff, 0xf0f, 0xf00, 0xff0, 0x0f0, 0x0ff, 0x00f
+};
+#define BONUS_COLOR_INDEX (PAL_PLAYER_AND_BG<<4 + 13)
 
 static char string[32];
+
+void bcdsnprint(char *s, u32 n, u32 bcd) {
+    s[n] = '\0';
+    for (int i = n-1; i >= 0; --i) {
+        s[i] = '0' + (bcd & 0xF);
+        bcd >>= 4;
+    }
+}
 
 u16 UI_loadSpriteFrames(u16 tileIndex) {
     u16 numTiles;
@@ -63,34 +79,22 @@ void UI_updateResult(GameResult result) {
 }
 
 void UI_updateScore(u32 score) {
-    score = u32ToBCD(score);
-    string[7] = '\0';
-    for (int i = 6; i >= 0; --i) {
-        string[i] = '0' + (score & 0xF);
-        score >>= 4;
-    }
+    bcdsnprint(string, 7, u32ToBCD(score));
     VDP_drawText(string, 8, 1);
 }
 
 void UI_updateTimerMinutes(u16 minutes) {
-    string[0] = '0' + minutes;
-    string[1] = '\0';
+    bcdsnprint(string, 1, u16ToBCD(minutes));
     VDP_drawText(string, 17, 1);
 }
 
 void UI_updateTimerSeconds(u16 seconds) {
-    seconds = u16ToBCD(seconds);
-    string[0] = '0' + ((seconds >> 4) & 0xF);
-    string[1] = '0' + (seconds & 0xF);
-    string[2] = '\0';
+    bcdsnprint(string, 2, u16ToBCD(seconds));
     VDP_drawText(string, 19, 1);
 }
 
 void UI_updateTimerFrames(u16 frames) {
-    frames = u16ToBCD(frames);
-    string[0] = '0' + ((frames >> 4) & 0xF);
-    string[1] = '0' + (frames & 0xF);
-    string[2] = '\0';
+    bcdsnprint(string, 2, u16ToBCD(frames));
     VDP_drawText(string, 22, 1);
 }
 
@@ -141,6 +145,22 @@ void UI_updateSpeed(fix16 speed) {
     string[0] = speed == PLAYER_FASTSPEED ? '\x7f' : ' ';
     string[1] = '\0';
     VDP_drawText(string, 30, 26);
+}
+
+void UI_initBonus(u16 points) {
+    bonusTimer = 120;
+    VDP_drawText("BONUS!", 3, 3);
+    bcdsnprint(string, 5, u16ToBCD(points));
+    VDP_drawText(string, 10, 3);
+}
+
+void UI_updateBonus() {
+    if (!bonusTimer)
+        return;
+    u16 color = bonusColors[--bonusTimer % BONUS_COLOR_COUNT];
+    PAL_setColor(BONUS_COLOR_INDEX, color);
+    if (!bonusTimer)
+        VDP_clearText(3, 3, 12);
 }
 
 void UI_updateObjectCount(int n) {
