@@ -8,9 +8,9 @@ static u16 **weaponSelectFrames, **weaponCursorFrames;
 
 static u16 bonusTimer;
 
-#define BONUS_COLOR_COUNT 7
+#define BONUS_COLOR_COUNT 4
 static const u16 bonusColors[BONUS_COLOR_COUNT] = {
-    0xfff, 0xf0f, 0xf00, 0xff0, 0x0f0, 0x0ff, 0x00f
+    0xfff, 0xf0f, 0xff0, 0x0ff
 };
 #define BONUS_COLOR_INDEX ((PAL_PLAYER_AND_BG<<4) + 13)
 
