@@ -42,9 +42,6 @@ typedef struct {
     u16 animAndFlags;
 } PlayerShot;
 
-static u16 **shipAniFrame;
-static u16 **shotAniFrame;
-
 static const PlayerShot PLAYER_WEAPONSA[][2] = {
     {
         {.offsetX = -FIX16(6), .velY = -BULLETSPEED, .animAndFlags = BULLET_ANI_90|TILE_ATTR_VFLIP_MASK},
@@ -78,7 +75,7 @@ static const PlayerShot PLAYER_WEAPONSB[][2] = {
 void PLAYER_shoot(PlayerObject *self) {
     const GameObjectDefinition *bulletDef = &defPlayerShot;
     const SpriteDefinition *bulletSpriteDef = bulletDef->spriteDef;
-
+    u16 **shotAniFrame = bulletDef->aniFrameTiles;
     for (int w = 0; w < self->health; ++w) {
         PlayerShot *shots = (PlayerShot*)(self->weapon == WEAPON_B ? &PLAYER_WEAPONSB[w] : &PLAYER_WEAPONSA[w]);
         for (int s = 0; s < 2; ++s) {
@@ -122,6 +119,7 @@ void PLAYER_initSpriteFrameTimer(PlayerObject *self) {
 
 void PLAYERsprite_onFrameChange(Sprite *sprite) {
     PlayerObject *self = (PlayerObject*)sprite->data;
+    u16 **shipAniFrame = self->definition->aniFrameTiles;
     SPR_setVRAMTileIndex(sprite, shipAniFrame[sprite->animInd][sprite->frameInd]);
     PLAYER_initSpriteFrameTimer(self);
 }
@@ -299,20 +297,4 @@ void PLAYER_init(PlayerObject *self) {
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
-}
-
-u16 PLAYER_loadSpriteFrames(u16 tileIndex) {
-    u16 numTiles;
-    shipAniFrame = SPR_loadAllFrames(&sprPlayer, tileIndex, &numTiles);
-    tileIndex += numTiles;
-    shotAniFrame = SPR_loadAllFrames(&sprPlayerShot, tileIndex, &numTiles);
-    tileIndex += numTiles;
-    return tileIndex;
-}
-
-void PLAYER_freeSpriteFrames() {
-    MEM_free(shipAniFrame);
-    MEM_free(shotAniFrame);
-    shipAniFrame = NULL;
-    shotAniFrame = NULL;
 }

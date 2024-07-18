@@ -240,7 +240,6 @@ int gameplay() {
     tileIndex = TILE_USER_INDEX;
 
     SPR_reset();
-    tileIndex = PLAYER_loadSpriteFrames(tileIndex);
     tileIndex = HUD_loadSpriteFrames(tileIndex);
 
     LEVEL_init(tileIndex);
@@ -334,7 +333,6 @@ int gameplay() {
     GOBJDEF_freePart1EnemyFrames();
     GOBJDEF_freePart2EnemyFrames();
     GOBJDEF_freeCommonFrames();
-    PLAYER_freeSpriteFrames();
     HUD_freeSpriteFrames();
     LEVEL_destroy();
     XGM_stopPlay();

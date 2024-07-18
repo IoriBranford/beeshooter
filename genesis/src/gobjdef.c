@@ -347,7 +347,9 @@ GameObjectDefinition defWaspBoss;
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
-GameObjectDefinition *commondefs[6] = {
+GameObjectDefinition *commondefs[8] = {
+    &defPlayer,
+    &defPlayerShot,
     &defHit,
     &defBloodSmall,
     &defBloodMedium,
