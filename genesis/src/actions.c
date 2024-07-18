@@ -43,6 +43,13 @@ void spawnNextCharacters(const Trigger *trigger)
     }
 }
 
+void postDoubleKillBonus(const Trigger *trigger) {
+    const LevelObjectGroup *group = trigger->group;
+    if (!group || group->numObjects < 2)
+        return;
+    LEVEL_postDoubleKillBonus(group->objects[0], group->objects[1], trigger->count);
+}
+
 void stopStageScroll(const Trigger *trigger)
 {
     LEVEL_setVelY(0);

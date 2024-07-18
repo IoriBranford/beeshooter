@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="PostDoubleKillBonus" type="Trigger">
+  <properties>
+   <property name="action" value="postDoubleKillBonus"/>
+   <property name="count" type="int" value="0"/>
+  </properties>
+  <point/>
+ </object>
+</template>
