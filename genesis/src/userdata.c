@@ -69,7 +69,12 @@ static int saveScore(UserData *data, u32 name, u32 bcdPoints) {
         writeScore(scoreOffset, &scores[j]);
         scoreOffset -= sizeof(HighScore);
     }
-    writeScore(scoreOffset, &scores[i]);
+
+    HighScore *score = &scores[i];
+    score->name = name;
+    score->bcdPoints = bcdPoints;
+    writeScore(scoreOffset, score);
+
     return i + 1;
 }
 
