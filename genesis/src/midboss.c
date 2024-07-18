@@ -74,7 +74,7 @@ void MIDBOSS_updateDefeat(GameObject *self) {
         }
     } else {
         SND_playDef(&sndBugKill2);
-        GOBJ_createFromDef(&defBloodSmall, self->centerX, self->centerY);
+        GOBJ_createFromDef(&defBloodMedium, self->centerX, self->centerY);
         GAME_releaseObject(self);
         LEVEL_setVelY(FIX32(-.75));
     }
