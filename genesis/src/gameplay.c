@@ -330,6 +330,7 @@ int gameplay() {
         SYS_doVBlankProcess();
     }
 
+    JOY_setEventHandler(NULL);
     GOBJDEF_freePart1EnemyFrames();
     GOBJDEF_freePart2EnemyFrames();
     GOBJDEF_freeCommonFrames();
