@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4333">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4337">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -5308,6 +5308,11 @@ self.speed = 0.75</property>
     </properties>
    </object>
    <object id="2371" template="triggers/SpawnCharacters.tx" x="-36" y="2948"/>
+   <object id="4336" template="triggers/PostDoubleKillBonus.tx" type="Trigger" x="-28" y="2948">
+    <properties>
+     <property name="count" type="int" value="10000"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="387" name="room6antsfrombigants">
    <object id="3834" template="enemies/Ant.tx" gid="481" x="36" y="2732" rotation="90">
@@ -5347,6 +5352,11 @@ self.speed = 0.75</property>
     </properties>
    </object>
    <object id="2388" template="triggers/SpawnCharacters.tx" x="-8" y="2736"/>
+   <object id="4335" template="triggers/PostDoubleKillBonus.tx" type="Trigger" x="0" y="2736">
+    <properties>
+     <property name="count" type="int" value="10000"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="251" name="room7alien1">
    <object id="2395" template="triggers/SpawnCharacters.tx" x="-56" y="2504"/>
@@ -7260,6 +7270,11 @@ end</property>
    <object id="4277" template="pathpoints/BeetleShoot.tx" x="200" y="1248"/>
    <object id="4278" template="pathpoints/BeetleShoot.tx" x="200" y="1224"/>
    <object id="4279" template="pathpoints/BeetleShoot.tx" x="200" y="1200"/>
+   <object id="4334" template="triggers/PostDoubleKillBonus.tx" type="Trigger" x="-40" y="1288">
+    <properties>
+     <property name="count" type="int" value="25000"/>
+    </properties>
+   </object>
   </objectgroup>
   <objectgroup id="302" name="r13fly1">
    <object id="2740" template="triggers/SpawnCharacters.tx" x="-64" y="1192"/>
@@ -7337,6 +7352,11 @@ end</property>
     <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
    </properties>
    <object id="2776" template="triggers/SpawnCharacters.tx" x="-24" y="1072"/>
+   <object id="4333" template="triggers/PostDoubleKillBonus.tx" type="Trigger" x="-12" y="1072">
+    <properties>
+     <property name="count" type="int" value="50000"/>
+    </properties>
+   </object>
    <object id="2777" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="104" y="1096" width="48" height="48" rotation="90">
     <properties>
      <property name="speed" type="float" value="1.25"/>
@@ -7410,21 +7430,6 @@ end</property>
    <object id="2880" template="pathpoints/BeetleShoot.tx" x="152" y="856"/>
    <object id="2881" template="pathpoints/BeetleShoot.tx" x="216" y="808"/>
    <object id="2882" template="pathpoints/BeetleShoot.tx" x="152" y="760"/>
-   <object id="2883" x="-40" y="996" width="40" height="8">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">FIRE&gt;</text>
-   </object>
-   <object id="2884" x="-40" y="860" width="40" height="8">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">FIRE&gt;</text>
-   </object>
-   <object id="2885" x="-40" y="728" width="40" height="8">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right">FIRE&gt;</text>
-   </object>
-   <object id="2886" x="256" y="932" width="40" height="8">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">&lt;FIRE</text>
-   </object>
-   <object id="2887" x="256" y="796" width="40" height="8">
-    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">&lt;FIRE</text>
-   </object>
    <object id="4206" template="pathpoints/SetSpriteAnim.tx" x="104" y="1096">
     <properties>
      <property name="anim" value="ANI_BEETLE_90"/>

@@ -3,7 +3,7 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (213)
+#define stage_caravan_numTriggers (217)
 extern const Trigger stage_caravan_triggers[];
 
 #define stage_caravan_numGroups (105)
@@ -27,6 +27,7 @@ extern GameObjectDefinition defWaspBoss;
 void spawnCharacters(const Trigger *trigger);
 void unpauseTimer(const Trigger *trigger);
 void spawnNextCharacters(const Trigger *trigger);
+void postDoubleKillBonus(const Trigger *trigger);
 void stopStageScroll(const Trigger *trigger);
 void loadPart2(const Trigger *trigger);
 void startBackgroundExplosion(const Trigger *trigger);
