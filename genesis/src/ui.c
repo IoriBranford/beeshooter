@@ -12,7 +12,7 @@ static u16 bonusTimer;
 static const u16 bonusColors[BONUS_COLOR_COUNT] = {
     0xfff, 0xf0f, 0xf00, 0xff0, 0x0f0, 0x0ff, 0x00f
 };
-#define BONUS_COLOR_INDEX (PAL_PLAYER_AND_BG<<4 + 13)
+#define BONUS_COLOR_INDEX ((PAL_PLAYER_AND_BG<<4) + 13)
 
 static char string[32];
 
