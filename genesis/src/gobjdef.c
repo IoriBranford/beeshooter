@@ -135,7 +135,8 @@ GameObjectDefinition defWaspBullet = {
     .update = BULLET_update,
 };
 GameObjectDefinition defFly = {
-    .teams = 1<<TEAM_ENEMY,
+    .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
+    .damage = 1,
     .health = 8, .speed = FIX16(2),
     .defeatPoints = 500,
     .spriteDef = &sprFly,
