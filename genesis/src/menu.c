@@ -1,6 +1,7 @@
 #include "menu.h"
 #include "gjoy.h"
 #include "gameplay.h"
+#include "userdata.h"
 #include <genesis.h>
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
@@ -199,11 +200,13 @@ void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
 }
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
+    u16 config = GJOY_getConfig();
     if (input & BUTTON_LEFT)
-        GJOY_changeConfig(-1);
+        config = GJOY_changeConfig(-1);
     if (input & BUTTON_RIGHT)
-        GJOY_changeConfig(1);
-    MENU_showButtonConfig(menu, item, GJOY_getConfig());
+        config = GJOY_changeConfig(1);
+    MENU_showButtonConfig(menu, item, config);
+    USERDATA_saveButtonConfig(config);
 }
 
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
