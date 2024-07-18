@@ -10,7 +10,7 @@
 
 #include "res_gfx.h"
 
-#define STARTTRIGGER 0
+#define STARTTRIGGER 33
 #define BG_PLANE BG_B
 
 static Map *bg;
@@ -251,7 +251,7 @@ void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy) {
         return;
     }
 
-    if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < 30) {
+    if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < abs(cameraVelY)*30) {
         GAME_scorePoints(doubleKillBonusPoints);
         SND_playDef(&sndBonus);
     }
