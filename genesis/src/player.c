@@ -3,7 +3,7 @@
 #include "gameplay.h"
 #include "hud.h"
 #include "sprite.h"
-
+#include "gjoy.h"
 #include <genesis.h>
 
 #include "gobjdef.h"
@@ -160,7 +160,11 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
     self->centerX += velX;
     self->centerY += velY;
 
-    if (state & BUTTON_B) {
+    u16 speedButton = (GJOY_getConfig() & BUTTONCONFIG_SPEEDMASK) << 4;
+    u16 fireButton = GJOY_getConfig() & BUTTONCONFIG_FIREMASK;
+    u16 weaponButton = (GJOY_getConfig() & BUTTONCONFIG_WEAPONMASK) >> 4;
+
+    if (state & fireButton) {
         if (self->shootTimer == 0) {
             self->shootTimer = SHOOTINTERVAL;
             PLAYER_shoot(self);
@@ -168,7 +172,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
         }
     }
 
-    if (self->buttonsPressed & BUTTON_A) {
+    if (self->buttonsPressed & speedButton) {
         fix16 speed = self->speed;
         if (speed > PLAYER_NORMALSPEED) {
             speed = PLAYER_NORMALSPEED;
@@ -181,7 +185,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
         HUD_updateSpeed(speed);
     }
 
-    if (self->buttonsPressed & BUTTON_C) {
+    if (self->buttonsPressed & weaponButton) {
         PLAYER_setWeapon(self, self->weapon == WEAPON_A ? WEAPON_B : WEAPON_A);
         SND_playDef(&sndChangeWeapon);
         HUD_updateWeaponSelect(self->weapon);
