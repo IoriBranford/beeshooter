@@ -31,37 +31,49 @@ static const LevelObject *doubleKillBonusEnemies[2];
 static fix32 doubleKillBonusEnemiesDefeatedAt[2];
 static u32 doubleKillBonusPoints;
 
-#define BG_EXPLODE_LINES 224
+#define BG_EXPLODE_LINES 80
+#define BG_EXPLODE_FIRST_LINE (224-BG_EXPLODE_LINES)
 #define BG_EXPLODE_MAX_X 256
+#define BG_EXPLODE_SPEED_SHIFT 4
 static fix16 bgExplodeLinesVelX[BG_EXPLODE_LINES];
 static fix16 bgExplodeLinesPosX[BG_EXPLODE_LINES];
 static s16 bgExplodeLinesScrollX[BG_EXPLODE_LINES];
 
 void LEVEL_updateBackgroundExplosion() {
-    if (bgExplodeLinesScrollX[0] >= BG_EXPLODE_MAX_X)
+    if (abs(bgExplodeLinesScrollX[BG_EXPLODE_LINES-1]) >= BG_EXPLODE_MAX_X)
         return;
 
-    for (u32 l = 0; l < 224; l += 2) {
-        fix16 posX = bgExplodeLinesPosX[l];
+    for (u32 l = 0; l < BG_EXPLODE_LINES; l += 2) {
         fix16 velX = bgExplodeLinesVelX[l];
-        if (posX < FIX16(BG_EXPLODE_MAX_X)) {
+        if (!velX)
+            continue;
+        fix16 posX = bgExplodeLinesPosX[l];
+        if (posX + velX >= FIX16(BG_EXPLODE_MAX_X) || posX + velX < posX) {
+            posX = FIX16(BG_EXPLODE_MAX_X);
+            bgExplodeLinesVelX[l] = 0;
+        } else {
             posX += velX;
-            bgExplodeLinesPosX[l] = posX;
-            bgExplodeLinesScrollX[l] = fix16ToInt(posX);
         }
+        bgExplodeLinesPosX[l] = posX;
+        bgExplodeLinesScrollX[l] = fix16ToInt(posX);
     }
 
-    for (u32 l = 1; l < 224; l += 2) {
-        fix16 posX = bgExplodeLinesPosX[l];
+    for (u32 l = 1; l < BG_EXPLODE_LINES; l += 2) {
         fix16 velX = bgExplodeLinesVelX[l];
-        if (posX > -FIX16(BG_EXPLODE_MAX_X)) {
+        if (!velX)
+            continue;
+        fix16 posX = bgExplodeLinesPosX[l];
+        if (posX + velX <= -FIX16(BG_EXPLODE_MAX_X) || posX + velX > posX) {
+            posX = -FIX16(BG_EXPLODE_MAX_X);
+            bgExplodeLinesVelX[l] = 0;
+        } else {
             posX += velX;
-            bgExplodeLinesPosX[l] = posX;
-            bgExplodeLinesScrollX[l] = fix16ToInt(posX);
         }
+        bgExplodeLinesPosX[l] = posX;
+        bgExplodeLinesScrollX[l] = fix16ToInt(posX);
     }
 
-    VDP_setHorizontalScrollLine(BG_PLANE, 0, bgExplodeLinesScrollX, BG_EXPLODE_LINES, DMA_QUEUE);
+    VDP_setHorizontalScrollLine(BG_PLANE, BG_EXPLODE_FIRST_LINE, bgExplodeLinesScrollX, BG_EXPLODE_LINES, DMA_QUEUE);
 }
 
 void LEVEL_startBackgroundExplosion() {
@@ -96,11 +108,11 @@ void LEVEL_init(u16 tileIndex) {
     
     memset(bgExplodeLinesScrollX, 0, sizeof(bgExplodeLinesScrollX));
     memset(bgExplodeLinesPosX, 0, sizeof(bgExplodeLinesPosX));
-    for (u32 l = 0; l < 224; l += 2) {
-        bgExplodeLinesVelX[l] = sinFix16(l+1)<<3;
+    for (u32 l = 0; l < BG_EXPLODE_LINES; l += 2) {
+        bgExplodeLinesVelX[l] = cosFix16((l+1)<<1)<<BG_EXPLODE_SPEED_SHIFT;
     }
-    for (u32 l = 1; l < 224; l += 2) {
-        bgExplodeLinesVelX[l] = -sinFix16(l+1)<<3;
+    for (u32 l = 1; l < BG_EXPLODE_LINES; l += 2) {
+        bgExplodeLinesVelX[l] = -cosFix16(l<<1)<<BG_EXPLODE_SPEED_SHIFT;
     }
 }
 
