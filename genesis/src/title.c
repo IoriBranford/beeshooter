@@ -2,11 +2,13 @@
 #include "gameplay.h"
 #include <genesis.h>
 #include "res_gfx.h"
+#include "sounddef.h"
 
 static bool waitingToStart;
 
 void startGame(const Menu *menu, const MenuItem *item, u16 input) {
     waitingToStart = false;
+    SND_playDef(&sndExtend);
 }
 
 int title() {

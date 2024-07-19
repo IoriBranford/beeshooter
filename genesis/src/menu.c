@@ -8,14 +8,15 @@
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
 void startGame(const Menu *menu, const MenuItem *item, u16 input);
-void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
+void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
+void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
 void showHighScores(const Menu *menu, const MenuItem *item, u16 input);
 
 void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input);
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input);
-void showMainMenu(const Menu *menu, const MenuItem *item, u16 input);
+void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input);
 
 void clearHighScores(const Menu *menu, const MenuItem *item, u16 input);
 
@@ -32,7 +33,7 @@ const Menu MAIN_MENU = {
         {
             .x = 2, .y = 4,
             .name = "OPTIONS",
-            .activateAction = showOptionsMenu
+            .activateAction = enterOptionsMenu
         },
         {
             .x = 2, .y = 6,
@@ -60,7 +61,7 @@ const Menu OPTIONS_MENU = {
         {
             .x = 2, .y = 14,
             .name = "RETURN TO MAIN",
-            .activateAction = showMainMenu
+            .activateAction = returnToMainMenu
         },
     }
 };
@@ -87,7 +88,7 @@ const Menu CLEAR_HISCORES_MENU = {
         {
             .x = 2, .y = 2,
             .name = "NO",
-            .activateAction = showOptionsMenu
+            .activateAction = returnToOptionsMenu
         },
         {
             .x = 2, .y = 4,
@@ -184,6 +185,11 @@ void showMainMenu(const Menu *menu, const MenuItem *item, u16 input) {
     MENU_show(&MAIN_MENU);
 }
 
+void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input) {
+    showMainMenu(menu, item, input);
+    SND_playDef(&sndChangeSpeedSlow);
+}
+
 void MENU_showButtonConfig(const Menu *menu, const MenuItem *item, u16 config) {
     const u16 BUTTONS[3] = {
         BUTTON_A, BUTTON_B, BUTTON_C
@@ -223,6 +229,16 @@ void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
     MENU_showButtonConfig(&OPTIONS_MENU, OPTIONS_BUTTON_CONFIG_ITEM, GJOY_getConfig());
 }
 
+void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
+    showOptionsMenu(menu, item, input);
+    SND_playDef(&sndChangeSpeedFast);
+}
+
+void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
+    showOptionsMenu(menu, item, input);
+    SND_playDef(&sndChangeSpeedSlow);
+}
+
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
     u16 config = GJOY_getConfig();
     if (input & BUTTON_LEFT)
@@ -236,12 +252,14 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
 void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input) {
     if (input) {
         showMainMenu(NULL, NULL, 0);
+        SND_playDef(&sndChangeSpeedSlow);
     }
 }
 
 void showHighScores(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&HISCORES_MENU);
+    SND_playDef(&sndChangeSpeedFast);
 
     menu = currentMenu;
     item = &currentMenu->items[0];
@@ -278,6 +296,7 @@ void showHighScores(const Menu *menu, const MenuItem *item, u16 input) {
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&CLEAR_HISCORES_MENU);
+    SND_playDef(&sndChangeSpeedFast);
 }
 
 void clearHighScores(const Menu *menu, const MenuItem *item, u16 input) {
