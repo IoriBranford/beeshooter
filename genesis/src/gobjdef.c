@@ -344,6 +344,19 @@ GameObjectDefinition defWaspShooter = {
     .shootFunction = ENEMY_shootAtPlayer
 };
 GameObjectDefinition defWaspBoss;
+GameObjectDefinition defWaspBossWIP = {
+    .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
+    .speed = FIX16(4),
+    .health = 100,
+    .damage = 65535,
+    .defeatPoints = 25000,
+    .spriteDef = &sprWaspBoss,
+    .spriteDepth = 10,
+    .palette = &palAlien,
+    .bodyW = FIX16(28), .bodyH = FIX16(12),
+    .update = GOBJ_updatePathWalker,
+    .onDefeat = MIDBOSS_onDefeat
+};
 GameObjectDefinition defTick;
 GameObjectDefinition defWaspEgg;
 
@@ -376,6 +389,12 @@ GameObjectDefinition *part2defs[6] = {
     &defWaspBullet,
     &defBeetle,
     &defAntHole
+};
+
+GameObjectDefinition *bossdefs[3] = {
+    &defWaspBoss,
+    &defWaspEgg,
+    &defWasp,
 };
 
 static u16 levelObjectTileStart;
@@ -453,4 +472,12 @@ u16 GOBJDEF_freePart2EnemyFrames() {
     defBeetleBullet.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(part2defs) / sizeof(GameObjectDefinition*), part2defs);
     return levelObjectTileStart;
+}
+
+u16 GOBJDEF_loadBossFrames(u16 tileIndex) {
+    levelObjectTileStart = tileIndex;
+    tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(bossdefs) / sizeof(GameObjectDefinition*), bossdefs);
+    defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
+    defPlayerShot.corpseDef = &defAcidHit;
+    return tileIndex;
 }
