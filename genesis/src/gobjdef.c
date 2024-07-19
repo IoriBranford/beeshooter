@@ -123,6 +123,7 @@ GameObjectDefinition defFlyBullet = {
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
+    .soundWhenFiredDef = &sndEnemyShot
 };
 GameObjectDefinition defWaspBullet = {
     .teams = 1<<TEAM_ENEMYSHOT,
@@ -133,6 +134,7 @@ GameObjectDefinition defWaspBullet = {
     .palette = &palWaspShooterAndReinforcedHoney,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
+    .soundWhenFiredDef = &sndEnemyShot
 };
 GameObjectDefinition defFly = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
@@ -207,6 +209,7 @@ GameObjectDefinition defAlienGunnerBullet = {
     .palette = &palFlyAndHoney,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
+    .soundWhenFiredDef = &sndEnemyShot
 };
 GameObjectDefinition defAlienGunner = {
     .teams = 1<<TEAM_ENEMY,
@@ -312,6 +315,7 @@ GameObjectDefinition defBeetleBullet = {
     .palette = &palAcidAndBeetle,
     .bodyW = FIX16(2), .bodyH = FIX16(2),
     .update = BULLET_update,
+    .soundWhenFiredDef = &sndLiquidShot
 };
 GameObjectDefinition defBeetle = {
     .teams = 1<<TEAM_ENEMY,

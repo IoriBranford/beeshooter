@@ -14,6 +14,7 @@ struct GameObjectDefinition {
     fix16 speed;
     u16 animInd;
     s16 spriteDepth;
+    SoundDefinition *soundWhenFiredDef;
     SoundDefinition *defeatSoundDef;
     const GameObjectDefinition *bulletDef;
     const GameObjectDefinition *corpseDef;

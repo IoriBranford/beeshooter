@@ -85,6 +85,8 @@ GameObject* BULLET_shootAtVelocity(fix16 centerX, fix16 centerY, fix16 velX, fix
         self->velX = velX;
         self->velY = velY;
         BULLET_updateSpriteDirectionXY(self, velX, velY);
+        if (def->soundWhenFiredDef)
+            SND_playDef(def->soundWhenFiredDef);
     }
     return self;
 }
