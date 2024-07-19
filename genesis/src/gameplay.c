@@ -159,6 +159,17 @@ void GAME_loadPart2Sprites() {
     tileIndex = GOBJDEF_loadPart2EnemyFrames(tileIndex);
 }
 
+void GAME_releaseAllObjects() {
+    GameObject** objects = (GameObject**) POOL_getFirst(gobjPool);
+    u16 num = POOL_getNumAllocated(gobjPool);
+
+    while(num--)
+    {
+        GameObject* object = *objects++;
+        GAME_releaseObject(object);
+    }
+}
+
 void GAME_end(GameResult r) {
     result = r;
     HUD_updateResult(r);
