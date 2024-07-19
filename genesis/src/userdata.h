@@ -13,7 +13,7 @@ typedef struct HighScore {
 
 void USERDATA_init();
 void USERDATA_saveButtonConfig(u16 config);
-int USERDATA_saveScore(u32 name, u32 score);
+u8 USERDATA_saveScore(u32 name, u32 score);
 const HighScore* USERDATA_getScore(u32 i);
 void USERDATA_clearScores();
 u32 USERDATA_getName();

@@ -67,7 +67,7 @@ static void initData(UserData *data) {
     }
 }
 
-static int saveScore(UserData *data, u32 name, u32 bcdPoints) {
+static u8 addScore(UserData *data, u32 name, u32 bcdPoints) {
     HighScore *scores = data->highScores;
     int i = 0;
     for (i = 0; i < NUM_SCORES; ++i) {
@@ -102,8 +102,8 @@ void USERDATA_saveButtonConfig(u16 config) {
     saveButtonConfig(&userData, config);
 }
 
-int USERDATA_saveScore(u32 name, u32 bcdPoints) {
-    return saveScore(&userData, name, bcdPoints);
+u8 USERDATA_saveScore(u32 name, u32 points) {
+    return addScore(&userData, name, u32ToBCD(points));
 }
 
 const HighScore* USERDATA_getScore(u32 i) {
