@@ -99,6 +99,17 @@ const Menu CLEAR_HISCORES_MENU = {
     }
 };
 
+const Menu HISCORE_ENTRY = {
+    .x = 8, .y = 6,
+    .inputAction = MENU_highScoreEntryInput,
+    .length = 0,
+    .items = {
+        {
+            .x = 0, .y = 2
+        }
+    }
+};
+
 #define MENU_PLANE BG_A
 
 static const char *MENU_CURSOR = "\x7f";
@@ -308,4 +319,101 @@ void clearHighScores(const Menu *menu, const MenuItem *item, u16 input) {
     USERDATA_clearScores();
     SND_playDef(&sndBugKill2);
     showOptionsMenu(NULL, NULL, 0);
+}
+
+void hideNameCursor(u8 nameX, u8 nameY) {
+    u8 cursorX = nameX + cursorPos, cursorY = nameY + 1;
+    VDP_clearText(cursorX, cursorY, 1);
+}
+
+void moveNameCursor(u8 nameX, u8 nameY, s8 dx) {
+    hideNameCursor(nameX, nameY);
+    if (dx < 0 && cursorPos == 0)
+        cursorPos = HISCORE_NAME_LENGTH - 1;
+    else if (dx > 0 && cursorPos == HISCORE_NAME_LENGTH - 1)
+        cursorPos = 0;
+    else
+        cursorPos += dx;
+    u8 cursorX = nameX + cursorPos, cursorY = nameY + 1;
+    VDP_drawText(HISCORE_CURSOR, cursorX, cursorY);
+}
+
+static u8 highScoreRank = 0;
+static char highScoreName[HISCORE_NAME_LENGTH+1];
+static u32 tickWhenHighScoreEntryDone;
+
+#define TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE 600
+
+void changeLetter(u8 nameX, u8 nameY, u8 i, u8 delta) {
+    i = i % HISCORE_NAME_LENGTH;
+    char *c = highScoreName + i;
+    char newC = *c + delta;
+    if (newC > 'Z')
+        newC = 'A';
+    else if (newC < 'A')
+        newC = 'Z';
+    *c = newC;
+    VDP_drawText(highScoreName, nameX, nameY);
+}
+
+void MENU_showHighScoreEntry(u8 rank) {
+    highScoreRank = rank;
+    u32 name = USERDATA_getName();
+    memcpy(highScoreName, (char*)&name, HISCORE_NAME_LENGTH);
+    tickWhenHighScoreEntryDone = rank == 0 ? getTick() : 0;
+
+    MENU_show(&HISCORE_ENTRY);
+
+    const Menu *menu = currentMenu;
+    const MenuItem *item = &currentMenu->items[0];
+
+    u8 scoresX = menu->x, scoresY = menu->y;
+    u8 dy = item->y;
+    drawHighScores(scoresX, scoresY, dy);
+
+    if (rank) {
+        u8 rankY = scoresY + dy*(rank-1);
+        VDP_drawText(MENU_CURSOR, scoresX - 2, rankY);
+        VDP_setTileMapXY(VDP_getTextPlane(),
+            TILE_ATTR_FULL(
+                VDP_getTextPalette(),
+                VDP_getTextPriority(),
+                false, true,
+                TILE_FONT_INDEX + MENU_CURSOR[0] - ' '),
+            scoresX + 17, rankY);
+        cursorPos = 0;
+        moveNameCursor(scoresX + HISCORE_NAME_START, rankY, 0);
+    }
+}
+
+void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input) {
+    if (tickWhenHighScoreEntryDone) {
+        if (tickWhenHighScoreEntryDone + TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE < getTick())
+            GAME_close();
+        return;
+    }
+
+    menu = &HISCORE_ENTRY;
+    item = &HISCORE_ENTRY.items[0];
+    u8 nameX = menu->x + HISCORE_NAME_START;
+    u8 nameY = menu->y + item->y*(highScoreRank-1);
+
+    if (input & BUTTON_LEFT)
+        moveNameCursor(nameX, nameY, -1);
+    if (input & BUTTON_RIGHT)
+        moveNameCursor(nameX, nameY, 1);
+    if (input & BUTTON_UP)
+        changeLetter(nameX, nameY, cursorPos, -1);
+    if (input & BUTTON_DOWN)
+        changeLetter(nameX, nameY, cursorPos, 1);
+    if (input & (BUTTON_UP|BUTTON_DOWN))
+        SND_playDef(&sndChangeWeapon);
+    if (input & (BUTTON_LEFT|BUTTON_RIGHT))
+        SND_playDef(&sndEnemyShot);
+    if (input & (BUTTON_START)) {
+        hideNameCursor(nameX, nameY);
+        USERDATA_updateScoreName(highScoreRank-1, highScoreName);
+        tickWhenHighScoreEntryDone = getTick();
+        SND_playDef(&sndExtend);
+    }
 }
