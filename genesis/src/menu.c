@@ -4,6 +4,7 @@
 #include "userdata.h"
 #include "ui.h"
 #include <genesis.h>
+#include "sounddef.h"
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
 void startGame(const Menu *menu, const MenuItem *item, u16 input);
@@ -156,10 +157,14 @@ void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input) {
         MENU_moveCursor(menu, -1);
     if (input & BUTTON_DOWN)
         MENU_moveCursor(menu, 1);
-    if (input & (BUTTON_LEFT|BUTTON_RIGHT))
+    if (input & (BUTTON_LEFT|BUTTON_RIGHT)) {
         MENU_moveMenuItem(menu, item, input);
+        SND_playDef(&sndChangeWeapon);
+    }
     if (input & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START))
         MENU_activateMenuItem(menu, item, input);
+    if (input & (BUTTON_UP|BUTTON_DOWN))
+        SND_playDef(&sndEnemyShot);
 }
 
 void MENU_joyEvent(u16 joy, u16 button, u16 state) {
@@ -277,5 +282,6 @@ void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
 
 void clearHighScores(const Menu *menu, const MenuItem *item, u16 input) {
     USERDATA_clearScores();
+    SND_playDef(&sndBugKill2);
     showOptionsMenu(NULL, NULL, 0);
 }
