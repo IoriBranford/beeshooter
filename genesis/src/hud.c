@@ -9,10 +9,6 @@ static u16 **weaponSelectFrames, **weaponCursorFrames;
 
 static u16 bonusTimer;
 
-#define BONUS_COLOR_COUNT 4
-static const u16 bonusColors[BONUS_COLOR_COUNT] = {
-    0xfff, 0xf0f, 0xff0, 0x0ff
-};
 #define BONUS_COLOR_INDEX ((PAL_PLAYER_AND_BG<<4) + 13)
 
 static char string[32];
@@ -150,8 +146,7 @@ void HUD_initBonus(u16 points) {
 void HUD_updateBonus() {
     if (!bonusTimer)
         return;
-    u16 color = bonusColors[--bonusTimer % BONUS_COLOR_COUNT];
-    PAL_setColor(BONUS_COLOR_INDEX, color);
+    UI_updateBonusColorFlash(BONUS_COLOR_INDEX, --bonusTimer);
     if (!bonusTimer)
         VDP_clearText(3, 3, 12);
 }
