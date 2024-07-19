@@ -39,18 +39,15 @@ static void clearScore(UserData *data, u8 i) {
 static void initData(UserData *data) {
     SRAM_enable();
 
-    u32 name = SRAM_readLong(fieldOffset(data, &data->name));
-    if (!name) {
-        name = ('A'<<24) | ('A'<<16) | ('A'<<8) | ('A'<<0);
-        saveName(data, name);
-    }
+    data->name = SRAM_readLong(fieldOffset(data, &data->name));
+    if (!data->name)
+        saveName(data, ('A'<<24) | ('A'<<16) | ('A'<<8) | ('A'<<0));
 
-    u16 config = SRAM_readWord(fieldOffset(data, &data->buttonConfig));
-    if (config) {
-        GJOY_setConfig(config);
+    data->buttonConfig = SRAM_readWord(fieldOffset(data, &data->buttonConfig));
+    if (data->buttonConfig) {
+        GJOY_setConfig(data->buttonConfig);
     } else {
-        config = GJOY_getConfig();
-        saveButtonConfig(data, config);
+        saveButtonConfig(data, GJOY_getConfig());
     }
 
     HighScore *scores = data->highScores;
