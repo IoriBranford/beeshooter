@@ -61,6 +61,8 @@ const Menu OPTIONS_MENU = {
     }
 };
 
+const MenuItem *OPTIONS_BUTTON_CONFIG_ITEM = &OPTIONS_MENU.items[0];
+
 const Menu CLEAR_HISCORES_MENU = {
     .x = 2, .y = 14,
     .name = "CLEAR HIGH SCORES?",
@@ -74,7 +76,7 @@ const Menu CLEAR_HISCORES_MENU = {
         {
             .x = 2, .y = 4,
             .name = "YES",
-            // .activateAction = clearHighScores
+            .activateAction = clearHighScores
         }
     }
 };
@@ -196,7 +198,7 @@ void MENU_showButtonConfig(const Menu *menu, const MenuItem *item, u16 config) {
 void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&OPTIONS_MENU);
-    MENU_showButtonConfig(&OPTIONS_MENU, &OPTIONS_MENU.items[0], GJOY_getConfig());
+    MENU_showButtonConfig(&OPTIONS_MENU, OPTIONS_BUTTON_CONFIG_ITEM, GJOY_getConfig());
 }
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
@@ -212,4 +214,9 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&CLEAR_HISCORES_MENU);
+}
+
+void clearHighScores(const Menu *menu, const MenuItem *item, u16 input) {
+    USERDATA_clearScores();
+    showOptionsMenu(NULL, NULL, 0);
 }
