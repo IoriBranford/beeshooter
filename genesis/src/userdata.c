@@ -6,6 +6,7 @@
 typedef struct UserData {
     u16 buttonConfig;
     HighScore highScores[NUM_SCORES];
+    u32 name;
 } UserData;
 
 static u32 fieldOffset(void* data, void *field) {
@@ -15,6 +16,11 @@ static u32 fieldOffset(void* data, void *field) {
 static void saveButtonConfig(UserData *data, u16 config) {
     data->buttonConfig = config;
     SRAM_writeWord(fieldOffset(data, &data->buttonConfig), config);
+}
+
+static void saveName(UserData *data, u32 name) {
+    data->name = name;
+    SRAM_writeLong(fieldOffset(data, &data->name), name);
 }
 
 static void writeScore(u32 scoreOffset, HighScore *score) {
@@ -30,6 +36,12 @@ static void clearScore(u32 scoreOffset, HighScore *score) {
 
 static void initData(UserData *data) {
     SRAM_enable();
+
+    u32 name = SRAM_readLong(fieldOffset(data, &data->name));
+    if (!name) {
+        name = ('A'<<24) | ('A'<<16) | ('A'<<8) | ('A'<<0);
+        saveName(data, name);
+    }
 
     u16 config = SRAM_readWord(fieldOffset(data, &data->buttonConfig));
     if (config) {
@@ -107,4 +119,8 @@ void USERDATA_clearScores() {
         clearScore(scoreOffset, score);
         scoreOffset += sizeof(HighScore);
     }
+}
+
+u32 USERDATA_getName() {
+    return userData.name;
 }
