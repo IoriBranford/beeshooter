@@ -65,9 +65,9 @@ static const char *RESULT_MESSAGES[RESULTS] = {
 void HUD_updateResult(GameResult result) {
     if (result) {
         const char *message = RESULT_MESSAGES[result];
-        VDP_drawText(message, 11, 13);
+        VDP_drawText(message, 11, 4);
     } else {
-        VDP_clearText(11, 13, 10);
+        VDP_clearText(11, 4, 10);
     }
 }
 
