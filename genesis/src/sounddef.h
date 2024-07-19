@@ -20,6 +20,8 @@ extern SoundDefinition
     sndChangeSpeedSlow,
     sndChangeWeapon,
     sndExtend,
+    sndEnemyShot,
+    sndLiquidShot,
     sndPlayerShotHit,
     sndPlayerHurt,
     sndPlayerDie,

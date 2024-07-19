@@ -55,6 +55,16 @@ SoundDefinition sndPlayerDie = {
     .channel = SOUND_PCM_CH2,
     .priority = 15
 };
+SoundDefinition sndEnemyShot = {
+    DATA_AND_LENGTH(wavEnemyShot),
+    .channel = SOUND_PCM_CH3,
+    .priority = 4
+};
+SoundDefinition sndLiquidShot = {
+    DATA_AND_LENGTH(wavLiquidShot),
+    .channel = SOUND_PCM_CH3,
+    .priority = 3
+};
 SoundDefinition sndBugKill1 = {
     DATA_AND_LENGTH(wavBugKill1),
     .channel = SOUND_PCM_CH3,
@@ -91,6 +101,8 @@ static SoundDefinition *SOUNDDEFS[] = {
     &sndPlayerShotHit,
     &sndPlayerHurt,
     &sndPlayerDie,
+    &sndEnemyShot,
+    &sndLiquidShot,
     &sndBugKill1,
     &sndBugKill2,
     &sndBreakPot,
