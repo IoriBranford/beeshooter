@@ -16,8 +16,9 @@ int title() {
     DMA_setBufferSize(8192);
     DMA_setMaxTransferSize(8192);
 
-    for (int i = 0; i < 64; ++i)
-        PAL_setColor(i, 0);
+    u16 fadeDest[64];
+    memsetU16(fadeDest, 0, 64);
+    PAL_setColors(0, fadeDest, 64, DMA);
 
     PAL_setPalette(PAL_PLAYER_AND_BG, palPlayerAndBG.data, DMA);
     VDP_setTextPalette(PAL_PLAYER_AND_BG);
@@ -29,7 +30,7 @@ int title() {
     DMA_setBufferSizeToDefault();
     DMA_setMaxTransferSizeToDefault();
 
-    PAL_fadeInPalette(PAL0, imgTitle.palette->data, 15, true);
+    PAL_fadeToPalette(PAL0, imgTitle.palette->data, 15, true);
 
     while (waitingToStart) {
         if (imageX) {
@@ -43,7 +44,8 @@ int title() {
     }
 
     JOY_setEventHandler(NULL);
-    PAL_fadeOutAll(15, false);
+    memsetU16(fadeDest, 0xffff, 64);
+    PAL_fadeToAll(fadeDest, 60, false);
     VDP_clearTextArea(0, 0, 32, 28);
     VDP_clearPlane(BG_B, true);
 
