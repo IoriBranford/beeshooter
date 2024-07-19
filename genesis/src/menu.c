@@ -105,6 +105,10 @@ static const char *MENU_CURSOR = "\x7f";
 #define MENU_CURSOR_CHAR (MENU_CURSOR[0])
 static const char *HISCORE_CURSOR = "^";
 
+#define HISCORE_RANK_START (0)
+#define HISCORE_NAME_START (4)
+#define HISCORE_SCORE_START (9)
+
 static const Menu *currentMenu;
 static u16 cursorPos;
 static char string[32];
@@ -261,15 +265,15 @@ void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input)
 
 void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score) {
     // "##. NAME 0123456"
-    string[0] = rank < 10 ? ' ' : ('0' + rank / 10);
-    string[1] = '0' + (rank % 10);
-    strcpy(&string[2], ". ");
+    string[HISCORE_RANK_START] = rank < 10 ? ' ' : ('0' + rank / 10);
+    string[HISCORE_RANK_START+1] = '0' + (rank % 10);
+    strcpy(&string[HISCORE_RANK_START+2], ". ");
 
-    char *nameString = &string[4];
+    char *nameString = &string[HISCORE_NAME_START];
     memcpy(nameString, (const char*)&score->name, HISCORE_NAME_LENGTH);
-    string[8] = ' ';
-    char *scoreString = &string[9];
-    bcdsnprint(scoreString, 7, score->bcdPoints);
+    string[HISCORE_NAME_START+HISCORE_NAME_LENGTH] = ' ';
+    char *scoreString = &string[HISCORE_SCORE_START];
+    bcdsnprint(scoreString, HISCORE_SCORE_LENGTH, score->bcdPoints);
 
     VDP_drawText(string, x, y);
 }
