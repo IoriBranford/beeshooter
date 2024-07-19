@@ -10,9 +10,10 @@ void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
 void startGame(const Menu *menu, const MenuItem *item, u16 input);
 void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
 void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
-void showHighScores(const Menu *menu, const MenuItem *item, u16 input);
+void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input);
 
-void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input);
+void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input);
+void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input);
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input);
@@ -38,7 +39,7 @@ const Menu MAIN_MENU = {
         {
             .x = 2, .y = 6,
             .name = "HIGH SCORES",
-            .activateAction = showHighScores
+            .activateAction = showHighScoreTable
         },
     }
 };
@@ -68,10 +69,10 @@ const Menu OPTIONS_MENU = {
 
 const MenuItem *OPTIONS_BUTTON_CONFIG_ITEM = &OPTIONS_MENU.items[0];
 
-const Menu HISCORES_MENU = {
+const Menu HISCORES_TABLE = {
     .x = 2, .y = 2,
     .name = "HIGH SCORES",
-    .inputAction = MENU_highScoresInput,
+    .inputAction = MENU_highScoreTableInput,
     .length = 0,
     .items = {
         {
@@ -100,8 +101,9 @@ const Menu CLEAR_HISCORES_MENU = {
 
 #define MENU_PLANE BG_A
 
-static const char *CURSOR_STRING = "\x7f";
-#define CURSOR_CHAR (CURSOR_STRING[0])
+static const char *MENU_CURSOR = "\x7f";
+#define MENU_CURSOR_CHAR (MENU_CURSOR[0])
+static const char *HISCORE_CURSOR = "^";
 
 static const Menu *currentMenu;
 static u16 cursorPos;
@@ -122,7 +124,7 @@ void MENU_moveCursor(const Menu *menu, s8 dy) {
     else
         cursorPos += dy;
     item = &menu->items[cursorPos];
-    VDP_drawText(CURSOR_STRING, x, y + item->y);
+    VDP_drawText(MENU_CURSOR, x, y + item->y);
 }
 
 void MENU_show(const Menu *menu) {
@@ -134,7 +136,8 @@ void MENU_show(const Menu *menu) {
 
     for (int i = 0; i < menu->length; ++i) {
         const MenuItem *item = &menu->items[i];
-        VDP_drawText(item->name, x + item->x, y + item->y);
+        if (item->name)
+            VDP_drawText(item->name, x + item->x, y + item->y);
     }
 
     cursorPos = 0;
@@ -249,48 +252,46 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
     USERDATA_saveButtonConfig(config);
 }
 
-void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input) {
+void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input) {
     if (input) {
         showMainMenu(NULL, NULL, 0);
         SND_playDef(&sndChangeSpeedSlow);
     }
 }
 
-void showHighScores(const Menu *menu, const MenuItem *item, u16 input) {
+void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score) {
+    // "##. NAME 0123456"
+    string[0] = rank < 10 ? ' ' : ('0' + rank / 10);
+    string[1] = '0' + (rank % 10);
+    strcpy(&string[2], ". ");
+
+    char *nameString = &string[4];
+    memcpy(nameString, (const char*)&score->name, HISCORE_NAME_LENGTH);
+    string[8] = ' ';
+    char *scoreString = &string[9];
+    bcdsnprint(scoreString, 7, score->bcdPoints);
+
+    VDP_drawText(string, x, y);
+}
+
+void drawHighScores(u8 x, u8 y, u8 dy) {
+    dy = max(1, dy);
+    for (int i = 0; i < NUM_SCORES; ++i) {
+        const HighScore *score = USERDATA_getScore(i);
+        drawHighScore(x, y, i+1, score);
+        y += dy;
+    }
+}
+
+void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
-    MENU_show(&HISCORES_MENU);
+    MENU_show(&HISCORES_TABLE);
     SND_playDef(&sndChangeSpeedFast);
 
     menu = currentMenu;
     item = &currentMenu->items[0];
 
-    // "##. NAME 0123456"
-    strcpy(string, " 1. ");
-    string[8] = ' ';
-    
-    u8 x = menu->x + item->x, y = menu->y + item->y;
-    for (int i = 0; i < NUM_SCORES; ++i) {
-        const HighScore *score = USERDATA_getScore(i);
-
-        char *nameString = &string[4];
-        memcpy(nameString, (const char*)&score->name, HISCORE_NAME_LENGTH);
-        
-        char *scoreString = &string[9];
-        bcdsnprint(scoreString, 7, score->bcdPoints);
-
-        VDP_drawText(string, x, y);
-
-        if (string[1] == '9') {
-            if (string[0] == ' ')
-                string[0] = '1';
-            else
-                string[0]++;
-            string[1] = '0';
-        } else {
-            string[1]++;
-        }
-        y += item->y;
-    }
+    drawHighScores(menu->x + item->x, menu->y + item->y, item->y);
 }
 
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
