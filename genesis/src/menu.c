@@ -2,12 +2,15 @@
 #include "gjoy.h"
 #include "gameplay.h"
 #include "userdata.h"
+#include "ui.h"
 #include <genesis.h>
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
 void startGame(const Menu *menu, const MenuItem *item, u16 input);
 void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
 void showHighScores(const Menu *menu, const MenuItem *item, u16 input);
+
+void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input);
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input);
@@ -33,7 +36,7 @@ const Menu MAIN_MENU = {
         {
             .x = 2, .y = 6,
             .name = "HIGH SCORES",
-            // .activateAction = showHighScores
+            .activateAction = showHighScores
         },
     }
 };
@@ -63,6 +66,18 @@ const Menu OPTIONS_MENU = {
 
 const MenuItem *OPTIONS_BUTTON_CONFIG_ITEM = &OPTIONS_MENU.items[0];
 
+const Menu HISCORES_MENU = {
+    .x = 2, .y = 2,
+    .name = "HIGH SCORES",
+    .inputAction = MENU_highScoresInput,
+    .length = 0,
+    .items = {
+        {
+            .x = 0, .y = 2,
+        }
+    }
+};
+
 const Menu CLEAR_HISCORES_MENU = {
     .x = 2, .y = 14,
     .name = "CLEAR HIGH SCORES?",
@@ -91,9 +106,11 @@ static u16 cursorPos;
 static char string[32];
 
 void MENU_moveCursor(const Menu *menu, s8 dy) {
+    u16 length = menu->length;
+    if (!length)
+        return;
     u8 x = menu->x, y = menu->y;
     const MenuItem *item = &menu->items[cursorPos];
-    u16 length = menu->length;
 
     VDP_clearText(x, y + item->y, 1);
     if (dy < 0 && cursorPos == 0)
@@ -209,6 +226,48 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
         config = GJOY_changeConfig(1);
     MENU_showButtonConfig(menu, item, config);
     USERDATA_saveButtonConfig(config);
+}
+
+void MENU_highScoresInput(const Menu *menu, const MenuItem *item, u16 input) {
+    if (input) {
+        showMainMenu(NULL, NULL, 0);
+    }
+}
+
+void showHighScores(const Menu *menu, const MenuItem *item, u16 input) {
+    VDP_clearTextArea(0, 0, 32, 28);
+    MENU_show(&HISCORES_MENU);
+
+    menu = currentMenu;
+    item = &currentMenu->items[0];
+
+    // "##. NAME 0123456"
+    strcpy(string, " 1. ");
+    string[8] = ' ';
+    
+    u8 x = menu->x + item->x, y = menu->y + item->y;
+    for (int i = 0; i < NUM_SCORES; ++i) {
+        const HighScore *score = USERDATA_getScore(i);
+
+        char *nameString = &string[4];
+        memcpy(nameString, (const char*)&score->name, HISCORE_NAME_LENGTH);
+        
+        char *scoreString = &string[9];
+        bcdsnprint(scoreString, 7, score->bcdPoints);
+
+        VDP_drawText(string, x, y);
+
+        if (string[1] == '9') {
+            if (string[0] == ' ')
+                string[0] = '1';
+            else
+                string[0]++;
+            string[1] = '0';
+        } else {
+            string[1]++;
+        }
+        y += item->y;
+    }
 }
 
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
