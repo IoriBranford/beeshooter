@@ -170,6 +170,10 @@ void GAME_releaseAllObjects() {
     }
 }
 
+void GAME_close() {
+    running = false;
+}
+
 void GAME_end(GameResult r) {
     result = r;
     HUD_updateResult(r);
