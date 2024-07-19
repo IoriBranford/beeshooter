@@ -17,5 +17,6 @@ u8 USERDATA_saveScore(u32 name, u32 score);
 const HighScore* USERDATA_getScore(u32 i);
 void USERDATA_clearScores();
 u32 USERDATA_getName();
+void USERDATA_updateScoreName(u32 i, const char *nameStr);
 
 #endif

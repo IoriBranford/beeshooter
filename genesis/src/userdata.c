@@ -118,3 +118,12 @@ void USERDATA_clearScores() {
 u32 USERDATA_getName() {
     return userData.name;
 }
+
+void USERDATA_updateScoreName(u32 i, const char *nameStr) {
+    u32 name = (nameStr[0]<<24) | (nameStr[1]<<16) | (nameStr[2]<<8) | (nameStr[3]);
+    saveName(&userData, name);
+
+    HighScore *score = &userData.highScores[i];
+    score->name = name;
+    SRAM_writeLong(fieldOffset(&userData, &score->name), name);
+}
