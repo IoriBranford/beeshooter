@@ -1,6 +1,7 @@
 #include <genesis.h>
 #include "hud.h"
 #include "sprite.h"
+#include "ui.h"
 #include "res_gfx.h"
 
 static Sprite *weaponSelectSprite, *weaponCursorSprite;
@@ -15,14 +16,6 @@ static const u16 bonusColors[BONUS_COLOR_COUNT] = {
 #define BONUS_COLOR_INDEX ((PAL_PLAYER_AND_BG<<4) + 13)
 
 static char string[32];
-
-void bcdsnprint(char *s, u32 n, u32 bcd) {
-    s[n] = '\0';
-    for (int i = n-1; i >= 0; --i) {
-        s[i] = '0' + (bcd & 0xF);
-        bcd >>= 4;
-    }
-}
 
 u16 HUD_loadSpriteFrames(u16 tileIndex) {
     u16 numTiles;
