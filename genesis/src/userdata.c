@@ -3,10 +3,6 @@
 #include "gjoy.h"
 #include <genesis.h>
 
-typedef struct HighScore {
-    u32 name, bcdPoints;
-} HighScore;
-
 typedef struct UserData {
     u16 buttonConfig;
     HighScore highScores[NUM_SCORES];
@@ -94,8 +90,12 @@ void USERDATA_saveButtonConfig(u16 config) {
     saveButtonConfig(&userData, config);
 }
 
-int USERDATA_saveScore(u32 name, u32 score) {
-    return saveScore(&userData, name, score);
+int USERDATA_saveScore(u32 name, u32 bcdPoints) {
+    return saveScore(&userData, name, bcdPoints);
+}
+
+const HighScore* USERDATA_getScore(u32 i) {
+    return &userData.highScores[i];
 }
 
 void USERDATA_clearScores() {
