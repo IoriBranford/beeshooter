@@ -68,6 +68,9 @@ static void initData(UserData *data) {
 }
 
 static u8 addScore(UserData *data, u32 name, u32 bcdPoints) {
+    if (!bcdPoints)
+        return 0;
+
     HighScore *scores = data->highScores;
     int i = 0;
     for (i = 0; i < NUM_SCORES; ++i) {
