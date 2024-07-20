@@ -6,6 +6,7 @@
 #include "bullet.h"
 #include "item.h"
 #include "enemy.h"
+#include "anim.h"
 
 GameObjectDefinition defPlayer = {
     .health = 1,
@@ -362,8 +363,33 @@ GameObjectDefinition defWaspBossWIP = {
     .update = GOBJ_updatePathWalker,
     .onDefeat = MIDBOSS_onDefeat
 };
-GameObjectDefinition defTick;
-GameObjectDefinition defWaspEgg;
+GameObjectDefinition defWaspEgg = {
+    .teams = 1<<TEAM_ENEMY,
+    .health = 6,
+    .defeatSoundDef = &sndBugKill1,
+    .defeatPoints = 2500,
+    .spriteDef = &sprWaspEgg,
+    .spriteDepth = 10,
+    .palette = &palWaspAndHoney,
+    .bodyW = FIX16(4), .bodyH = FIX16(4),
+    .corpseDef = &defAcidBloodSmall,
+    .update = ENEMY_updateEggWaitingToHatch,
+};
+GameObjectDefinition defWaspHatch = {
+    .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
+    .health = 3, .speed = FIX16(1),
+    .damage = 1,
+    .defeatPoints = 750,
+    .spriteDef = &sprWasp,
+    .spriteDepth = 10,
+    .pathParent = PATHPARENT_TRIGGER,
+    .palette = &palWaspAndHoney,
+    .bodyW = FIX16(12), .bodyH = FIX16(10),
+    .defeatSoundDef = &sndBugKill2,
+    .corpseDef = &defAcidBloodSmall,
+    .animInd = ANI_WASP_BIRTH,
+    .update = ENEMY_updateWaspHatching,
+};
 
 GameObjectDefinition *commondefs[8] = {
     &defPlayer,
@@ -399,7 +425,7 @@ GameObjectDefinition *part2defs[6] = {
 GameObjectDefinition *bossdefs[3] = {
     &defWaspBoss,
     &defWaspEgg,
-    &defWasp,
+    &defWaspHatch,
 };
 
 static u16 levelObjectTileStart;
@@ -484,7 +510,7 @@ u16 GOBJDEF_freePart2EnemyFrames() {
 u16 GOBJDEF_loadBossFrames(u16 tileIndex) {
     levelObjectTileStart = tileIndex;
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(bossdefs) / sizeof(GameObjectDefinition*), bossdefs);
-    defWaspShooter.aniFrameTiles = defWasp.aniFrameTiles;
+    defWaspShooter.aniFrameTiles = defWaspHatch.aniFrameTiles;
     defPlayerShot.corpseDef = &defAcidHit;
     return tileIndex;
 }
