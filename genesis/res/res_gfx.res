@@ -39,5 +39,7 @@ SPRITE sprWasp "enemy/Wasp.png" 5 4 NONE 3
 SPRITE sprBeetle "enemy/Beetle.png" 6 6 NONE 6
 SPRITE sprAntHole "enemy/AntHole.png" 2 3
 
+PALETTE palWaspBoss "enemy/WaspBoss.png"
+
 SPRITE sprWaspBoss "enemy/WaspBoss.png" 16 16 NONE 3
 SPRITE sprWaspEgg "enemy/WaspEgg.png" 1 1 NONE 3
