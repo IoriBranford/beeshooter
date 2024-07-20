@@ -4,6 +4,7 @@
 #include "userdata.h"
 #include "ui.h"
 #include <genesis.h>
+#include "res_gfx.h"
 #include "sounddef.h"
 
 void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
@@ -119,6 +120,9 @@ static const char *HISCORE_CURSOR = "^";
 #define HISCORE_RANK_START (0)
 #define HISCORE_NAME_START (4)
 #define HISCORE_SCORE_START (9)
+
+#define FLASHING_PALETTE PAL2
+#define FLASHING_COLOR ((FLASHING_PALETTE<<4) + 13)
 
 static const Menu *currentMenu;
 static u16 cursorPos;
@@ -274,7 +278,7 @@ void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input)
     }
 }
 
-void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score) {
+void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score, bool flashing) {
     // "##. NAME 0123456"
     string[HISCORE_RANK_START] = rank < 10 ? ' ' : ('0' + rank / 10);
     string[HISCORE_RANK_START+1] = '0' + (rank % 10);
@@ -286,14 +290,17 @@ void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score) {
     char *scoreString = &string[HISCORE_SCORE_START];
     bcdsnprint(scoreString, HISCORE_SCORE_LENGTH, score->bcdPoints);
 
-    VDP_drawText(string, x, y);
+    u16 palette = flashing ? FLASHING_PALETTE : VDP_getTextPalette();
+    u16 attr = TILE_ATTR(palette, VDP_getTextPriority(), false, false);
+    VDP_drawTextEx(VDP_getTextPlane(), string, attr, x, y, DMA);
 }
 
-void drawHighScores(u8 x, u8 y, u8 dy) {
+void drawHighScores(u8 x, u8 y, u8 dy, u8 flashingRank) {
     dy = max(1, dy);
     for (int i = 0; i < NUM_SCORES; ++i) {
         const HighScore *score = USERDATA_getScore(i);
-        drawHighScore(x, y, i+1, score);
+        u8 rank = i + 1;
+        drawHighScore(x, y, rank, score, flashingRank == rank);
         y += dy;
     }
 }
@@ -306,7 +313,7 @@ void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input) {
     menu = currentMenu;
     item = &currentMenu->items[0];
 
-    drawHighScores(menu->x + item->x, menu->y + item->y, item->y);
+    drawHighScores(menu->x + item->x, menu->y + item->y, item->y, 0);
 }
 
 void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
@@ -344,7 +351,7 @@ static u32 tickWhenHighScoreEntryDone;
 
 #define TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE 900
 
-void changeLetter(u8 nameX, u8 nameY, u8 i, u8 delta) {
+void changeLetter(u8 nameX, u8 nameY, u8 i, u8 delta, bool flashing) {
     i = i % HISCORE_NAME_LENGTH;
     char *c = highScoreName + i;
     char newC = *c + delta;
@@ -353,7 +360,10 @@ void changeLetter(u8 nameX, u8 nameY, u8 i, u8 delta) {
     else if (newC < 'A')
         newC = 'Z';
     *c = newC;
-    VDP_drawText(highScoreName, nameX, nameY);
+
+    u16 palette = flashing ? FLASHING_PALETTE : VDP_getTextPalette();
+    u16 attr = TILE_ATTR(palette, VDP_getTextPriority(), false, false);
+    VDP_drawTextEx(VDP_getTextPlane(), highScoreName, attr, nameX, nameY, DMA);
 }
 
 void MENU_showHighScoreEntry(u8 rank) {
@@ -364,23 +374,21 @@ void MENU_showHighScoreEntry(u8 rank) {
 
     MENU_show(&HISCORE_ENTRY);
 
+    PAL_setPalette(FLASHING_PALETTE, &palPlayerAndBG.data, DMA);
+
     const Menu *menu = currentMenu;
     const MenuItem *item = &currentMenu->items[0];
 
     u8 scoresX = menu->x, scoresY = menu->y;
     u8 dy = item->y;
-    drawHighScores(scoresX, scoresY, dy);
+    drawHighScores(scoresX, scoresY, dy, 0);
 
     if (rank) {
         u8 rankY = scoresY + dy*(rank-1);
-        VDP_drawText(MENU_CURSOR, scoresX - 2, rankY);
-        VDP_setTileMapXY(VDP_getTextPlane(),
-            TILE_ATTR_FULL(
-                VDP_getTextPalette(),
-                VDP_getTextPriority(),
-                false, true,
-                TILE_FONT_INDEX + MENU_CURSOR[0] - ' '),
-            scoresX + 17, rankY);
+        u16 attr = TILE_ATTR(FLASHING_PALETTE, VDP_getTextPriority(), false, false);
+        VDP_drawTextEx(VDP_getTextPlane(), MENU_CURSOR, attr, scoresX - 2, rankY, DMA);
+        attr |= TILE_ATTR_HFLIP_MASK;
+        VDP_drawTextEx(VDP_getTextPlane(), MENU_CURSOR, attr, scoresX + 17, rankY, DMA);
         cursorPos = 0;
         moveNameCursor(scoresX + HISCORE_NAME_START, rankY, 0);
     }
@@ -403,9 +411,9 @@ void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input)
     if (input & BUTTON_RIGHT)
         moveNameCursor(nameX, nameY, 1);
     if (input & BUTTON_UP)
-        changeLetter(nameX, nameY, cursorPos, -1);
+        changeLetter(nameX, nameY, cursorPos, -1, false);
     if (input & BUTTON_DOWN)
-        changeLetter(nameX, nameY, cursorPos, 1);
+        changeLetter(nameX, nameY, cursorPos, 1, false);
     if (input & (BUTTON_UP|BUTTON_DOWN))
         SND_playDef(&sndChangeWeapon);
     if (input & (BUTTON_LEFT|BUTTON_RIGHT))
@@ -415,16 +423,17 @@ void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input)
         USERDATA_updateScoreName(highScoreRank-1, highScoreName);
         tickWhenHighScoreEntryDone = getTick();
         SND_playDef(&sndExtend);
+        u8 scoresX = menu->x, scoresY = menu->y;
+        u8 dy = item->y;
+        drawHighScores(scoresX, scoresY, dy, highScoreRank);
     }
 }
 
 void MENU_updateHighScoreEntry() {
     u32 now = getTick();
-
+    UI_updateBonusColorFlash(FLASHING_COLOR, now/5);
     if (tickWhenHighScoreEntryDone) {
         if (tickWhenHighScoreEntryDone + TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE < now)
             GAME_close();
-        return;
     }
-
 }
