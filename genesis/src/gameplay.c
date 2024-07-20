@@ -3,6 +3,8 @@
 #include "gobject.h"
 #include "gobjdef.h"
 #include "sounddef.h"
+#include "userdata.h"
+#include "menu.h"
 #include "res_gfx.h"
 #include "res_audio.h"
 
@@ -177,6 +179,13 @@ void GAME_close() {
 void GAME_end(GameResult r) {
     result = r;
     HUD_updateResult(r);
+
+    GAME_releaseAllObjects();
+    
+    u32 name = USERDATA_getName();
+    u8 rank = USERDATA_saveScore(name, score);
+    MENU_showHighScoreEntry(rank);
+    JOY_setEventHandler(MENU_joyEvent);
 }
 
 void GAME_doCollision() {
