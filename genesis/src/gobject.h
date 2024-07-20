@@ -122,6 +122,10 @@ void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed)
 bool GOBJ_updateMovement(GameObject *self);
 
 void GOBJ_updateIdleOnStage(GameObject *self);
+
+void GOBJ_updateInvul(GameObject *self);
+
+void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex);
 void GOBJ_updatePathWalker(GameObject *self);
 void GOBJ_followPath(GameObject *self);
 void GOBJ_followStage(GameObject *self);
