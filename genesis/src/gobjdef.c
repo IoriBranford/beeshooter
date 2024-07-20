@@ -369,7 +369,8 @@ GameObjectDefinition defWaspBossWIP = {
     .defeatPoints = 25000,
     .spriteDef = &sprWaspBoss,
     .spriteDepth = 10,
-    .palette = &palAlien,
+    .bulletDef = &defFlyBullet,
+    .palette = &palWaspBoss,
     .bodyW = FIX16(28), .bodyH = FIX16(12),
     .update = GOBJ_updatePathWalker,
     .onDefeat = MIDBOSS_onDefeat
