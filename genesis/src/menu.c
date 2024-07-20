@@ -342,7 +342,7 @@ static u8 highScoreRank = 0;
 static char highScoreName[HISCORE_NAME_LENGTH+1];
 static u32 tickWhenHighScoreEntryDone;
 
-#define TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE 600
+#define TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE 900
 
 void changeLetter(u8 nameX, u8 nameY, u8 i, u8 delta) {
     i = i % HISCORE_NAME_LENGTH;
@@ -388,7 +388,7 @@ void MENU_showHighScoreEntry(u8 rank) {
 
 void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input) {
     if (tickWhenHighScoreEntryDone) {
-        if (tickWhenHighScoreEntryDone + TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE < getTick())
+        if (input & (BUTTON_START))
             GAME_close();
         return;
     }
@@ -416,4 +416,15 @@ void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input)
         tickWhenHighScoreEntryDone = getTick();
         SND_playDef(&sndExtend);
     }
+}
+
+void MENU_updateHighScoreEntry() {
+    u32 now = getTick();
+
+    if (tickWhenHighScoreEntryDone) {
+        if (tickWhenHighScoreEntryDone + TICKS_TO_SHOW_HIGH_SCORE_ENTRY_DONE < now)
+            GAME_close();
+        return;
+    }
+
 }

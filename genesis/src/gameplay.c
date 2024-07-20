@@ -298,7 +298,9 @@ int gameplay() {
 
     while(running)
     {
-        if (result || paused) {
+        if (result) {
+            MENU_updateHighScoreEntry();
+        } else if (paused) {
         } else {
             if (player.update)
                 player.update((Object*)&player);

@@ -29,5 +29,6 @@ void MENU_show(const Menu *menu);
 void MENU_joyEvent(u16 joy, u16 button, u16 state);
 
 void MENU_showHighScoreEntry(u8 rank);
+void MENU_updateHighScoreEntry();
 
 #endif
