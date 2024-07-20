@@ -67,6 +67,7 @@ struct GameObjectAction {
     union {
         struct {
             u8 count, interval;
+            u16 angle;
         };
         struct {
             u16 anim;
