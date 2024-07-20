@@ -150,7 +150,7 @@ void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state) {
         self->buttonsPressed |= button;
 }
 
-void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
+void PLAYER_joyUpdateHeld(PlayerObject *self, u16 state) {
     s16 dirX = ((state & BUTTON_RIGHT) != 0) - ((state & BUTTON_LEFT) != 0);
     s16 dirY = ((state & BUTTON_DOWN ) != 0) - ((state & BUTTON_UP  ) != 0);
     fix16 velX = (dirX * self->speed);
@@ -160,9 +160,7 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
     self->centerX += velX;
     self->centerY += velY;
 
-    u16 speedButton = (GJOY_getConfig() & BUTTONCONFIG_SPEEDMASK) << 4;
     u16 fireButton = GJOY_getConfig() & BUTTONCONFIG_FIREMASK;
-    u16 weaponButton = (GJOY_getConfig() & BUTTONCONFIG_WEAPONMASK) >> 4;
 
     if (state & fireButton) {
         if (self->shootTimer == 0) {
@@ -171,6 +169,11 @@ void PLAYER_joyUpdate(PlayerObject *self, u16 state) {
             SND_playDef(&sndPlayerShot);
         }
     }
+}
+
+void PLAYER_joyUpdatePressed(PlayerObject *self) {
+    u16 speedButton = (GJOY_getConfig() & BUTTONCONFIG_SPEEDMASK) << 4;
+    u16 weaponButton = (GJOY_getConfig() & BUTTONCONFIG_WEAPONMASK) >> 4;
 
     if (self->buttonsPressed & speedButton) {
         fix16 speed = self->speed;
@@ -215,7 +218,8 @@ void PLAYER_updatePlay(PlayerObject *self) {
         self->invulTimer--;
         SPR_setVisibility(self->sprite, (self->invulTimer & 1) ? HIDDEN : VISIBLE);
     }
-    PLAYER_joyUpdate(self, JOY_readJoypad(JOY_1));
+    PLAYER_joyUpdateHeld(self, JOY_readJoypad(JOY_1));
+    PLAYER_joyUpdatePressed(self);
     GOBJ_updateSprite((GameObject*)self);
     PLAYER_updateSpriteFrameTimer(self);
 }

@@ -63,6 +63,10 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
             }
         } else {
             PLAYER_joyEvent(&player, button, state);
+            if (paused) {
+                PLAYER_joyUpdatePressed(&player);
+                SPR_update();
+            }
         }
     }
 }
@@ -335,10 +339,10 @@ int gameplay() {
                 }
                 HUD_updateTimerFrames(timerFrames);
             }
+            SPR_update();
         }
 
         HUD_updateBonus();
-        SPR_update();
 #ifdef DEBUG
 #ifdef DEBUG_PERF
         HUD_updateFPS(SYS_getFPS());

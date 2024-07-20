@@ -19,7 +19,8 @@ typedef struct PlayerObject {
 
 void PLAYER_init(PlayerObject *self);
 void PLAYER_joyEvent(PlayerObject *self, u16 button, u16 state);
-void PLAYER_joyUpdate(PlayerObject *self, u16 state);
+void PLAYER_joyUpdateHeld(PlayerObject *self, u16 state);
+void PLAYER_joyUpdatePressed(PlayerObject *self);
 
 void PLAYER_powerUp(PlayerObject *self);
 void PLAYER_giveInvul(PlayerObject *self, u8 invul);
