@@ -240,8 +240,6 @@ void GAME_doCollision() {
                 if (!player.invulTimer) {
                     PLAYER_takeDamage(&player, damage);
                 }
-            } else {
-                PLAYER_powerUp(&player);
             }
             if (enemyShot->health <= 1) {
                 GAME_removeObjectFromTeams(enemyShot);

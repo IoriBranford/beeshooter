@@ -113,6 +113,7 @@ GameObjectDefinition defPowerup = {
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise,
+    .onDefeat = GOBJ_pickupPowerup,
 };
 GameObjectDefinition defFlyBullet = {
     .teams = 1<<TEAM_ENEMYSHOT,
