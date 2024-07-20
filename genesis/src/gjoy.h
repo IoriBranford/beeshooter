@@ -11,5 +11,6 @@
 u16 GJOY_getConfig();
 void GJOY_setConfig(u16 newConfig);
 u16 GJOY_changeConfig(s8 dir);
+bool GJOY_isValidConfig(u16 config);
 
 #endif

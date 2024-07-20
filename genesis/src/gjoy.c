@@ -39,3 +39,11 @@ u16 GJOY_changeConfig(s8 dir) {
     config = BUTTON_CONFIGS[i];
     return config;
 }
+
+bool GJOY_isValidConfig(u16 config) {
+    for (int i = 0; i < NUM_BUTTON_CONFIGS; ++i) {
+        if (config == BUTTON_CONFIGS[i])
+            return true;
+    }
+    return false;
+}
