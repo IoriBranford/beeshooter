@@ -1,4 +1,5 @@
 #include "ui.h"
+#include <genesis.h>
 
 void bcdsnprint(char *s, u32 n, u32 bcd) {
     s[n] = '\0';
