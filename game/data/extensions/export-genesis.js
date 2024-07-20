@@ -75,16 +75,18 @@ tiled.registerMapFormat("Honey Guardian C level", {
                                 action = action.replace(/\W/, '_')
                                 objectActions[action] = `void ${action}(GameObject *self, const GameObjectAction *action);`
                                 
-                                let shootInterval = pathPoint.resolvedProperty('shootinterval')
-                                let shootCount = pathPoint.resolvedProperty('shoottimes')
+                                let shootInterval = pathPoint.resolvedProperty('shootinterval') || pathPoint.resolvedProperty('shotinterval')
+                                let shootCount = pathPoint.resolvedProperty('shoottimes') || pathPoint.resolvedProperty('burstshots')
                                 let anim = pathPoint.resolvedProperty('anim')
                                 let update = pathPoint.resolvedProperty('update')
                                 let flip = pathPoint.resolvedProperty('flip')
                                 let time = pathPoint.resolvedProperty('time')
+                                let angle = pathPoint.resolvedProperty('angle')
                                 params = (update && `.update = ${update}`)
                                     || (anim && `.anim = ${anim}`)
                                     || (time && `.time = ${time}`)
-                                    || (shootCount && shootInterval && `.count = ${shootCount}, .interval = ${shootInterval}`)
+                                    || ((shootCount && shootInterval && `.count = ${shootCount}, .interval = ${shootInterval}` || '')
+                                        + (angle && `, .angle = ${Math.floor(angle * 1024 / 360)}` || ''))
                                     || (flip != null && `.flip = ${flip}`)
                                     || ''
                             } else {
