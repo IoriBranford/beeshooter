@@ -14,6 +14,6 @@ static const u16 bonusColors[BONUS_COLOR_COUNT] = {
 };
 
 void UI_updateBonusColorFlash(u16 colorIndex, u16 timer) {
-    u16 color = bonusColors[--timer % BONUS_COLOR_COUNT];
+    u16 color = bonusColors[timer % BONUS_COLOR_COUNT];
     PAL_setColor(colorIndex, color);
 }
