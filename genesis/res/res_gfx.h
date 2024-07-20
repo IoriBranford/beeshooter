@@ -35,5 +35,6 @@ extern const SpriteDefinition sprWasp;
 extern const SpriteDefinition sprBeetle;
 extern const SpriteDefinition sprAntHole;
 extern const SpriteDefinition sprWaspBoss;
+extern const SpriteDefinition sprWaspEgg;
 
 #endif // _RES_RES_GFX_H_
