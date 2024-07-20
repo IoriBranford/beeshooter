@@ -439,8 +439,10 @@ u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
 }
 
 void GOBJDEF_freeCommonFrames() {
+    defAcidHit.aniFrameTiles = NULL;
     defHoneyCell.aniFrameTiles = NULL;
     defAcidBloodSmall.aniFrameTiles = NULL;
+    defAcidBloodMedium.aniFrameTiles = NULL;
     defReinforcedHoneyPot.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
 }
