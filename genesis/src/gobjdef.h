@@ -36,6 +36,8 @@ u16 GOBJDEF_loadPart1EnemyFrames(u16 tileIndex);
 u16 GOBJDEF_freePart1EnemyFrames();
 u16 GOBJDEF_loadPart2EnemyFrames(u16 tileIndex);
 u16 GOBJDEF_freePart2EnemyFrames();
+u16 GOBJDEF_loadBossFrames(u16 tileIndex);
+u16 GOBJDEF_freeBossFrames();
 
 extern GameObjectDefinition
     defPlayerBlood,

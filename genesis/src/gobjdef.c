@@ -514,3 +514,9 @@ u16 GOBJDEF_loadBossFrames(u16 tileIndex) {
     defPlayerShot.corpseDef = &defAcidHit;
     return tileIndex;
 }
+
+u16 GOBJDEF_freeBossFrames() {
+    defWaspShooter.aniFrameTiles = NULL;
+    GOBJDEF_freeSpriteFrames(sizeof(bossdefs) / sizeof(GameObjectDefinition*), bossdefs);
+    return levelObjectTileStart;
+}
