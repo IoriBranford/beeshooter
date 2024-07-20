@@ -4,6 +4,7 @@
 #include "gameplay.h"
 #include "anim.h"
 #include "level.h"
+#include "player.h"
 
 #define POWERUP_RISE_DESTX FIX16(128)
 #define POWERUP_RISE_DESTY FIX16(36)
@@ -70,4 +71,11 @@ void GOBJ_updatePowerupRise(GameObject *self) {
     }
     GOBJ_updateBody(self);
     GOBJ_updateSprite(self);
+}
+
+void GOBJ_pickupPowerup(GameObject *self) {
+    PlayerObject *player = GAME_livePlayer();
+    if (player)
+        PLAYER_powerUp(player);
+    GOBJ_defaultDefeatAction(self);
 }
