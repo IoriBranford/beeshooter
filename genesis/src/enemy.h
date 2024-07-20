@@ -21,4 +21,8 @@ void ENEMY_beetleShoot(GameObject *self);
 #define BEETLE_SHOT_COUNT 5
 #define BEETLE_SHOT_INTERVAL 2
 
+void ENEMY_updateEggWaitingToHatch(GameObject *self);
+void ENEMY_updateWaspHatching(GameObject *self);
+
+
 #endif

@@ -5,7 +5,10 @@
 #include "player.h"
 #include "gameplay.h"
 #include "anim.h"
+#include "sprite.h"
 #include <genesis.h>
+
+#define EGG_HATCH_TIME 45
 
 void ENEMY_shootAtPlayer(GameObject *self) {
     const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
@@ -200,4 +203,21 @@ void ENEMY_beetleShoot(GameObject *self) {
         self->centerX, self->centerY,
         velX, velY, &defBeetleBullet
     );
+}
+
+void ENEMY_updateEggWaitingToHatch(GameObject *self) {
+    GOBJ_updateSprite(self);
+    if (++self->shootTimer >= EGG_HATCH_TIME) {
+        fix16 x = self->centerX, y = self->centerY;
+        GAME_releaseObject(self);
+        GOBJ_createFromDef(&defWaspHatch, x, y);
+    }
+}
+
+void ENEMY_updateWaspHatching(GameObject *self) {
+    GOBJ_updateSprite(self);
+    if (SPR_getAnimationWillBeDone(self->sprite)) {
+        SPR_setAnim(self->sprite, ANI_WASP_FLY);
+        ENEMY_chargeAtPlayer(self);
+    }
 }
