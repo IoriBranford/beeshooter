@@ -16,6 +16,12 @@ const u32 POWERUP_SWAY_PERIOD = 32;
 
 extern GameObjectDefinition defPowerup;
 
+#define POWERUP_TIME_EXTEND_MAX 360
+#define POWERUP_TIME_EXTEND_MIN 120
+#define POWERUP_TIME_EXTEND_DEC 60
+
+static u16 powerupTimeExtend;
+
 void GOBJ_openHoneypot(GameObject *self, u16 numPowerups) {
     const GameObjectDefinition *def = self->definition;
     if (def) {
@@ -78,4 +84,17 @@ void GOBJ_pickupPowerup(GameObject *self) {
     if (player)
         PLAYER_powerUp(player);
     GOBJ_defaultDefeatAction(self);
+}
+
+void ITEM_resetPowerupTimeExtend() {
+    powerupTimeExtend = POWERUP_TIME_EXTEND_MAX;
+}
+
+void ITEM_pickupTimeExtendPowerup(GameObject *self) {
+    GAME_addTime(powerupTimeExtend);
+    if (powerupTimeExtend >= POWERUP_TIME_EXTEND_MIN + POWERUP_TIME_EXTEND_DEC)
+        powerupTimeExtend -= POWERUP_TIME_EXTEND_DEC;
+    else
+        powerupTimeExtend = POWERUP_TIME_EXTEND_MIN;
+    GOBJ_pickupPowerup(self);
 }

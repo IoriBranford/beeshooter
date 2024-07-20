@@ -46,6 +46,7 @@ extern GameObjectDefinition
     defAngleTester,
     defHoneyPot,
     defPowerup,
+    defTimeExtendPowerup,
     defAnt,
     defFlyBullet,
     defFly,

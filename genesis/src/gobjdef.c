@@ -116,6 +116,17 @@ GameObjectDefinition defPowerup = {
     .update = GOBJ_updatePowerupRise,
     .onDefeat = GOBJ_pickupPowerup,
 };
+GameObjectDefinition defTimeExtendPowerup = {
+    .teams = 1<<TEAM_ENEMYSHOT,
+    .health = 1,
+    .spriteDef = &sprPowerup,
+    .spriteDepth = -20,
+    .palette = &palWaspBoss,
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
+    .defeatSoundDef = &sndPowerup,
+    .update = GOBJ_updatePowerupRise,
+    .onDefeat = ITEM_pickupTimeExtendPowerup,
+};
 GameObjectDefinition defFlyBullet = {
     .teams = 1<<TEAM_ENEMYSHOT,
     .health = 1, .damage = 1,
@@ -458,6 +469,7 @@ u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
     defAcidHit.aniFrameTiles = defHit.aniFrameTiles;
     defHoneyCell.aniFrameTiles = defPowerup.aniFrameTiles;
+    defTimeExtendPowerup.aniFrameTiles = defPowerup.aniFrameTiles;
     defAcidBloodSmall.aniFrameTiles = defBloodSmall.aniFrameTiles;
     defAcidBloodMedium.aniFrameTiles = defBloodMedium.aniFrameTiles;
     defReinforcedHoneyPot.aniFrameTiles = defHoneyPot.aniFrameTiles;
@@ -467,6 +479,7 @@ u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
 void GOBJDEF_freeCommonFrames() {
     defAcidHit.aniFrameTiles = NULL;
     defHoneyCell.aniFrameTiles = NULL;
+    defTimeExtendPowerup.aniFrameTiles = NULL;
     defAcidBloodSmall.aniFrameTiles = NULL;
     defAcidBloodMedium.aniFrameTiles = NULL;
     defReinforcedHoneyPot.aniFrameTiles = NULL;
