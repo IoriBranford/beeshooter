@@ -374,7 +374,7 @@ void MENU_showHighScoreEntry(u8 rank) {
 
     MENU_show(&HISCORE_ENTRY);
 
-    PAL_setPalette(FLASHING_PALETTE, &palPlayerAndBG.data, DMA);
+    PAL_setPalette(FLASHING_PALETTE, palPlayerAndBG.data, DMA);
 
     const Menu *menu = currentMenu;
     const MenuItem *item = &currentMenu->items[0];
