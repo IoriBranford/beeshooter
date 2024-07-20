@@ -166,6 +166,10 @@ void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *ac
 
 void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action)
 {
+    u16 angle = action->angle;
+    self->shootDirX = cosFix16(angle);
+    self->shootDirY = sinFix16(angle);
+    GOBJ_startShooting(self, action->count, action->interval);
 }
 
 void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action)
