@@ -5390,7 +5390,7 @@ end</property>
    <object id="4038" template="pathpoints/ShootAtPlayer.tx" x="128" y="2536">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
   </objectgroup>
@@ -5451,13 +5451,13 @@ end</property>
    <object id="4039" template="pathpoints/ShootAtPlayer.tx" x="64" y="2480">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
    <object id="4040" template="pathpoints/ShootAtPlayer.tx" x="192" y="2480">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
   </objectgroup>
@@ -5792,13 +5792,13 @@ end</property>
    <object id="4036" template="pathpoints/ShootAtPlayer.tx" x="80" y="2368">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
    <object id="4037" template="pathpoints/ShootAtPlayer.tx" x="176" y="2368">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
   </objectgroup>
@@ -5939,25 +5939,25 @@ end</property>
    <object id="4041" template="pathpoints/ShootAtPlayer.tx" x="104" y="2272">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
    <object id="4042" template="pathpoints/ShootAtPlayer.tx" x="112" y="2288">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
    <object id="4043" template="pathpoints/ShootAtPlayer.tx" x="144" y="2288">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
    <object id="4044" template="pathpoints/ShootAtPlayer.tx" x="152" y="2272">
     <properties>
      <property name="shootinterval" type="int" value="40"/>
-     <property name="shoottimes" type="int" value="5"/>
+     <property name="shoottimes" type="int" value="2"/>
     </properties>
    </object>
   </objectgroup>

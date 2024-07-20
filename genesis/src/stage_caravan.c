@@ -4184,7 +4184,7 @@ LevelObjectGroup room6bigant = {
 extern LevelObjectGroup room7alien1;
 static const GameObjectAction path2397_2_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2397 = {
 .x = 112, .y = 2496, .numPoints = 3, .points = {
@@ -4243,7 +4243,7 @@ LevelObjectGroup room7alien1 = {
 extern LevelObjectGroup room7alien2;
 static const GameObjectAction path2403_2_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2403 = {
 .x = 48, .y = 2440, .numPoints = 3, .points = {
@@ -4272,7 +4272,7 @@ static const Path path2403 = {
 };
 static const GameObjectAction path2404_2_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2404 = {
 .x = 176, .y = 2440, .numPoints = 3, .points = {
@@ -5064,7 +5064,7 @@ LevelObjectGroup room8alien1 = {
 extern LevelObjectGroup room8alien2;
 static const GameObjectAction path2442_1_actions[] = {
 {.action = PathPoint_SetSpeed, },
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2442 = {
 .x = 88, .y = 2352, .numPoints = 4, .points = {
@@ -5100,7 +5100,7 @@ static const Path path2442 = {
 };
 static const GameObjectAction path2443_1_actions[] = {
 {.action = PathPoint_SetSpeed, },
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2443 = {
 .x = 152, .y = 2352, .numPoints = 4, .points = {
@@ -5366,7 +5366,7 @@ LevelObjectGroup room8alien3 = {
 extern LevelObjectGroup room8alien4;
 static const GameObjectAction path2457_1_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2457 = {
 .x = 96, .y = 2248, .numPoints = 2, .points = {
@@ -5388,7 +5388,7 @@ static const Path path2457 = {
 };
 static const GameObjectAction path2458_1_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2458 = {
 .x = 88, .y = 2232, .numPoints = 2, .points = {
@@ -5410,7 +5410,7 @@ static const Path path2458 = {
 };
 static const GameObjectAction path2459_1_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2459 = {
 .x = 160, .y = 2248, .numPoints = 2, .points = {
@@ -5432,7 +5432,7 @@ static const Path path2459 = {
 };
 static const GameObjectAction path2460_1_actions[] = {
 {.action = setSpriteAnim, .anim = ANI_ALIEN_GUN_STAND},
-{.action = startShooting, .count = 5, .interval = 40}
+{.action = startShooting, .count = 2, .interval = 40}
 };
 static const Path path2460 = {
 .x = 168, .y = 2232, .numPoints = 2, .points = {

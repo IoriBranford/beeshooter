@@ -111,19 +111,19 @@ void ENEMY_alienGunnerShoot(GameObject *self) {
 
     PlayerObject *player = GAME_livePlayer();
     if (!player) {
-        GOBJ_startShooting(self, 6, 40);
+        GOBJ_startShooting(self, 3, 40);
         return;
     }
 
-    if (self->shotsLeft == 5) {
+    if (self->shotsLeft == 2) {
         self->shootDirX = player->centerX - self->centerX;
         self->shootDirY = player->centerY - self->centerY;
     }
     ENEMY_shootAtDir(self);
     if (self->shotsLeft <= 1) {
-        GOBJ_startShooting(self, 6, 40);
+        GOBJ_startShooting(self, 3, 40);
     } else {
-        self->shootInterval = 1;
+        self->shootInterval = 3;
     }
 }
 
@@ -135,7 +135,7 @@ void ENEMY_updateAlienStartShooting(GameObject *self) {
                 if (player) {
                     self->shootDirX = player->centerX - self->centerX;
                     self->shootDirY = player->centerY - self->centerY;
-                    GOBJ_startShooting(self, 5, 1);
+                    GOBJ_startShooting(self, 2, 3);
                     SPR_setHFlip(self->sprite, self->shootDirX < 0);
                 }
             }
