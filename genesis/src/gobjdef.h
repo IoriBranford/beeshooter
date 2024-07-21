@@ -43,6 +43,8 @@ extern GameObjectDefinition
     defPlayerBlood,
     defBloodSmall,
     defBloodMedium,
+    defAcidBloodSmall,
+    defAcidBloodMedium,
     defAngleTester,
     defHoneyPot,
     defPowerup,
