@@ -60,8 +60,8 @@ void clearEnemiesAndBullets(const Trigger *trigger) {
     GAME_defeatTeam(TEAM_ENEMY);
 }
 
-void clearEnemies(const Trigger *trigger) {
-    GAME_defeatTeam(TEAM_ENEMY);
+void clearObjects(const Trigger *trigger) {
+    GAME_releaseAllObjects();
 }
 
 void loadBossPart(const Trigger *trigger) {
