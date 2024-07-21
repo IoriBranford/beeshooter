@@ -241,7 +241,7 @@ return `const LevelObject lobj${object.id} = {
                         break;
                 }
             })
-            levelObjectGroup.LevelObject.sort((a, b) => b.y - a.y)
+            levelObjectGroup.LevelObject.sort((a, b) => (b.y - a.y) || (b.x - a.x))
             return levelObjectGroup
         }
 
@@ -272,11 +272,7 @@ return `const LevelObject lobj${object.id} = {
             triggers.push(...levelObjectGroup.Trigger)
             return triggers
         }, [])
-        triggers.sort((a, b) => {
-            if (b.y == a.y)
-                return b.x - a.x
-            return b.y - a.y
-        })
+        triggers.sort((a, b) => (b.y - a.y) || (a.x - b.x))
 
         /** @type {Record<string, string>} */
         let triggerActions = {}
