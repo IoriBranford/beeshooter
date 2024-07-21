@@ -360,8 +360,7 @@ GameObjectDefinition defWaspShooter = {
     .bulletDef = &defWaspBullet,
     .shootFunction = ENEMY_shootAtPlayer
 };
-GameObjectDefinition defWaspBoss;
-GameObjectDefinition defWaspBossWIP = {
+GameObjectDefinition defWaspBoss = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
     .speed = FIX16(4),
     .health = 100,
@@ -372,8 +371,9 @@ GameObjectDefinition defWaspBossWIP = {
     .bulletDef = &defFlyBullet,
     .palette = &palWaspAndHoney,
     .bodyW = FIX16(28), .bodyH = FIX16(12),
+    .init = BOSS_init,
     .update = GOBJ_updatePathWalker,
-    .onDefeat = MIDBOSS_onDefeat
+    .onDefeat = BOSS_onDefeat
 };
 GameObjectDefinition defWaspEgg = {
     .teams = 1<<TEAM_ENEMY,
@@ -386,6 +386,7 @@ GameObjectDefinition defWaspEgg = {
     .bodyW = FIX16(4), .bodyH = FIX16(4),
     .corpseDef = &defAcidBloodSmall,
     .update = ENEMY_updateEggWaitingToHatch,
+    .onDefeat = ENEMY_defeatBossChild
 };
 GameObjectDefinition defWaspHatch = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
@@ -401,6 +402,7 @@ GameObjectDefinition defWaspHatch = {
     .corpseDef = &defAcidBloodSmall,
     .animInd = ANI_WASP_BIRTH,
     .update = ENEMY_updateWaspHatching,
+    .onDefeat = ENEMY_defeatBossChild
 };
 
 GameObjectDefinition *commondefs[8] = {
