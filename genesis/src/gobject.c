@@ -463,6 +463,12 @@ void GOBJ_followPath(GameObject *self) {
     }
 }
 
+void GOBJ_startOnPath(GameObject *self, const Path *path, u8 pathIndex) {
+    self->path = path;
+    self->update = (ObjectCallback*)GOBJ_updatePathWalker;
+    GOBJ_startTowardsPathPoint(self, pathIndex);
+}
+
 void GOBJ_updatePathWalker(GameObject *self) {
     const Path *path = self->path;
     if (!path) {
