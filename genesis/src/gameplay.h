@@ -34,6 +34,7 @@ void GAME_end(GameResult r);
 void GAME_loadPart2Sprites();
 void GAME_defeatTeam(Team team);
 
+PlayerObject* GAME_player();
 PlayerObject* GAME_livePlayer();
 
 GameObject* GAME_createObject();

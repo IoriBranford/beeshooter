@@ -71,6 +71,10 @@ static void gameplay_joyEvent(u16 joy, u16 button, u16 state) {
     }
 }
 
+PlayerObject* GAME_player() {
+    return &player;
+}
+
 PlayerObject* GAME_livePlayer() {
     return player.health ? &player : NULL;
 }
