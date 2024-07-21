@@ -21,8 +21,12 @@ void ENEMY_beetleShoot(GameObject *self);
 #define BEETLE_SHOT_COUNT 5
 #define BEETLE_SHOT_INTERVAL 2
 
+void BOSS_init(GameObject *self);
+void BOSS_startSweepPath(GameObject *self);
+void BOSS_chargeAndLayEggs(GameObject *self);
 void ENEMY_updateEggWaitingToHatch(GameObject *self);
 void ENEMY_updateWaspHatching(GameObject *self);
-
+void ENEMY_defeatBossChild(GameObject *self);
+void BOSS_onDefeat(GameObject *self);
 
 #endif

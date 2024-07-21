@@ -173,8 +173,8 @@ void faceLeft(GameObject *self, const GameObjectAction *action)
     SPR_setHFlip(self->sprite, true);
 }
 
-void ChooseSweepPath_DamageFlashRed(GameObject *self, const GameObjectAction *action)
-{
+void ChooseSweepPath(GameObject *self, const GameObjectAction *action) {
+    BOSS_startSweepPath(self);
 }
 
 void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *action)
@@ -185,6 +185,7 @@ void PathPoint_ShootBurstsAtAngle(GameObject *self, const GameObjectAction *acti
     GOBJ_startShooting(self, action->count, action->interval);
 }
 
-void ChargeAndLayEggs_DamageFlashRed(GameObject *self, const GameObjectAction *action)
+void ChargeAndLayEggs(GameObject *self, const GameObjectAction *action)
 {
+    BOSS_chargeAndLayEggs(self);
 }
