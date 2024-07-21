@@ -55,6 +55,19 @@ void stopStageScroll(const Trigger *trigger)
     LEVEL_setVelY(0);
 }
 
+void clearEnemiesAndBullets(const Trigger *trigger) {
+    GAME_defeatTeam(TEAM_ENEMYSHOT);
+    GAME_defeatTeam(TEAM_ENEMY);
+}
+
+void clearEnemies(const Trigger *trigger) {
+    GAME_defeatTeam(TEAM_ENEMY);
+}
+
+void loadBossPart(const Trigger *trigger) {
+    GAME_loadBossPartSprites();
+}
+
 void startBackgroundExplosion(const Trigger *trigger) {
     LEVEL_startBackgroundExplosion();
 }
