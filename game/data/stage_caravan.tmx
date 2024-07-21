@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4337">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4340">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -8099,7 +8099,7 @@ end</property>
    <object id="3128" template="pathpoints/WaspAttack.tx" type="PathPoint" x="240" y="416"/>
   </objectgroup>
   <objectgroup id="340" name="r17wasp3">
-   <object id="3129" template="triggers/SpawnCharacters.tx" x="-104" y="328"/>
+   <object id="3129" template="triggers/SpawnCharacters.tx" x="-104" y="332"/>
    <object id="3130" template="enemies/WaspBackground.tx" x="56" y="408" rotation="0"/>
    <object id="3131" template="enemies/WaspBackground.tx" gid="2147484212" x="200" y="408" rotation="0"/>
    <object id="3132" template="enemies/Path.tx" x="56" y="408">
@@ -8124,7 +8124,7 @@ end</property>
    <object id="3139" template="pathpoints/WaspAttack.tx" type="PathPoint" x="200" y="368"/>
   </objectgroup>
   <objectgroup id="341" name="r17wasp5">
-   <object id="3140" template="triggers/SpawnCharacters.tx" x="-104" y="312"/>
+   <object id="3140" template="triggers/SpawnCharacters.tx" x="-104" y="320"/>
    <object id="3141" template="enemies/WaspBackground.tx" x="112" y="384" rotation="0"/>
    <object id="3142" template="enemies/WaspBackground.tx" gid="2147484212" x="144" y="384" rotation="0"/>
    <object id="3143" template="enemies/Path.tx" x="112" y="384">
@@ -8149,7 +8149,7 @@ end</property>
    <object id="3150" template="pathpoints/WaspAttack.tx" type="PathPoint" x="144" y="344"/>
   </objectgroup>
   <objectgroup id="342" name="r17wasp7">
-   <object id="3151" template="triggers/SpawnCharacters.tx" x="-104" y="296"/>
+   <object id="3151" template="triggers/SpawnCharacters.tx" x="-104" y="308"/>
    <object id="3152" template="enemies/WaspBackground.tx" x="80" y="360" rotation="0"/>
    <object id="3153" template="enemies/WaspBackground.tx" gid="2147484212" x="176" y="360" rotation="0"/>
    <object id="3154" template="enemies/Path.tx" x="80" y="360">
@@ -8174,7 +8174,7 @@ end</property>
    <object id="3161" template="pathpoints/WaspAttack.tx" type="PathPoint" x="176" y="320"/>
   </objectgroup>
   <objectgroup id="343" name="r17wasp9">
-   <object id="3162" template="triggers/SpawnCharacters.tx" x="-104" y="280"/>
+   <object id="3162" template="triggers/SpawnCharacters.tx" x="-104" y="296"/>
    <object id="3163" template="enemies/WaspBackground.tx" x="40" y="384" rotation="0"/>
    <object id="3164" template="enemies/WaspBackground.tx" gid="2147484212" x="216" y="384" rotation="0"/>
    <object id="3165" template="enemies/Path.tx" x="40" y="384">
@@ -8199,7 +8199,7 @@ end</property>
    <object id="3172" template="pathpoints/WaspAttack.tx" type="PathPoint" x="216" y="344"/>
   </objectgroup>
   <objectgroup id="346" name="waspboss">
-   <object id="3177" template="triggers/StopStageScroll.tx" type="Trigger" x="-32" y="144"/>
+   <object id="3177" template="triggers/StopStageScroll.tx" type="Trigger" x="-8" y="224"/>
    <object id="4332" name="startBackgroundExplosion" type="Trigger" x="-44" y="224">
     <properties>
      <property name="action" value="startBackgroundExplosion"/>
@@ -8213,25 +8213,43 @@ end</property>
      <property name="z" type="float" value="-0.1"/>
     </properties>
    </object>
-   <object id="3179" type="Path" x="-80" y="48">
+   <object id="3179" type="Path" x="-80" y="128">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="208,120 192,136 160,152 128,136 112,112"/>
    </object>
-   <object id="3180" type="Path" x="-32" y="192">
+   <object id="3180" type="Path" x="-32" y="272">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="160,-24 176,-8 208,8 240,-8 256,-32"/>
    </object>
-   <object id="3181" type="Path" x="32" y="160">
+   <object id="3181" type="Path" x="32" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="0,8 0,96 0,192"/>
    </object>
-   <object id="3182" type="Path" x="224" y="160">
+   <object id="3182" type="Path" x="224" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="0,8 0,96 0,192"/>
    </object>
-   <object id="3183" type="Path" x="32" y="160">
+   <object id="3183" type="Path" x="32" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="8,0 96,0 208,0"/>
    </object>
-   <object id="3184" type="Path" x="224" y="160">
+   <object id="3184" type="Path" x="224" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="-8,0 -96,0 -208,0"/>
    </object>
-   <object id="3185" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="168">
+   <object id="3185" template="pathpoints/ShootBurstsAtAngle.tx" x="32" y="248">
     <properties>
      <property name="angle" type="float" value="45"/>
      <property name="bullettype" value="FlyBullet"/>
@@ -8239,7 +8257,7 @@ end</property>
      <property name="shotinterval" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3186" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="160">
+   <object id="3186" template="pathpoints/ShootBurstsAtAngle.tx" x="40" y="240">
     <properties>
      <property name="angle" type="float" value="45"/>
      <property name="bullettype" value="FlyBullet"/>
@@ -8247,7 +8265,7 @@ end</property>
      <property name="shotinterval" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3187" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="168">
+   <object id="3187" template="pathpoints/ShootBurstsAtAngle.tx" x="224" y="248">
     <properties>
      <property name="angle" type="float" value="135"/>
      <property name="bullettype" value="FlyBullet"/>
@@ -8255,7 +8273,7 @@ end</property>
      <property name="shotinterval" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3188" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="160">
+   <object id="3188" template="pathpoints/ShootBurstsAtAngle.tx" x="216" y="240">
     <properties>
      <property name="angle" type="float" value="135"/>
      <property name="bullettype" value="FlyBullet"/>
@@ -8263,32 +8281,66 @@ end</property>
      <property name="shotinterval" type="int" value="3"/>
     </properties>
    </object>
-   <object id="3189" template="pathpoints/WaspBoss/ChooseSweepPath.tx" type="PathPoint" x="32" y="160">
+   <object id="3189" template="pathpoints/WaspBoss/ChooseSweepPath.tx" type="PathPoint" x="32" y="240">
     <properties>
+     <property name="action" value="ChooseSweepPath"/>
      <property name="horidiagonalpath" type="object" value="3202"/>
      <property name="horizontalpath" type="object" value="3183"/>
      <property name="verticalpath" type="object" value="3181"/>
      <property name="vertidiagonalpath" type="object" value="3201"/>
     </properties>
    </object>
-   <object id="3190" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="224" y="352"/>
-   <object id="3191" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="32" y="352"/>
-   <object id="3192" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="40" y="248"/>
-   <object id="3193" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="120" y="168"/>
-   <object id="3194" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="136" y="168"/>
-   <object id="3195" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="216" y="248"/>
-   <object id="3196" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="16" y="160"/>
-   <object id="3197" template="pathpoints/WaspBoss/ChooseSweepPath.tx" type="PathPoint" x="224" y="160">
+   <object id="3190" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="224" y="432">
     <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3191" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="32" y="432">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3192" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="40" y="328">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3193" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="120" y="248">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3194" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="136" y="248">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3195" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="216" y="328">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3196" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="16" y="240">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
+   <object id="3197" template="pathpoints/WaspBoss/ChooseSweepPath.tx" type="PathPoint" x="224" y="240">
+    <properties>
+     <property name="action" value="ChooseSweepPath"/>
      <property name="horidiagonalpath" type="object" value="3203"/>
      <property name="horizontalpath" type="object" value="3184"/>
      <property name="verticalpath" type="object" value="3182"/>
      <property name="vertidiagonalpath" type="object" value="3204"/>
     </properties>
    </object>
-   <object id="3198" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="160"/>
+   <object id="3198" template="pathpoints/WaspBoss/ChargeAndLayEggs.tx" x="240" y="240">
+    <properties>
+     <property name="action" value="ChargeAndLayEggs"/>
+    </properties>
+   </object>
    <object id="3199" template="triggers/SpawnCharacters.tx" x="-16" y="224"/>
-   <object id="3200" name="startpoint" x="128" y="96">
+   <object id="3200" name="startpoint" x="128" y="176">
     <properties>
      <property name="leftpath" type="object" value="3179"/>
      <property name="rightpath" type="object" value="3180"/>
@@ -8296,17 +8348,47 @@ end</property>
     </properties>
     <point/>
    </object>
-   <object id="3201" type="Path" x="32" y="160">
+   <object id="3201" type="Path" x="32" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="0,8 0,96 88,8"/>
    </object>
-   <object id="3202" type="Path" x="32" y="160">
+   <object id="3202" type="Path" x="32" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="8,0 96,0 8,88"/>
    </object>
-   <object id="3203" type="Path" x="224" y="160">
+   <object id="3203" type="Path" x="224" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="-8,0 -96,0 -8,88"/>
    </object>
-   <object id="3204" type="Path" x="224" y="160">
+   <object id="3204" type="Path" x="224" y="240">
+    <properties>
+     <property name="speed" type="float" value="5"/>
+    </properties>
     <polyline points="0,8 0,96 -88,8"/>
+   </object>
+   <object id="4337" name="loadBossPart" type="Trigger" x="-56" y="232">
+    <properties>
+     <property name="action" value="loadBossPart"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4338" name="clearEnemiesAndBullets" type="Trigger" x="-64" y="240">
+    <properties>
+     <property name="action" value="clearEnemiesAndBullets"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="4339" name="clearObjects" type="Trigger" x="-64" y="236">
+    <properties>
+     <property name="action" value="clearObjects"/>
+    </properties>
+    <point/>
    </object>
   </objectgroup>
  </group>
