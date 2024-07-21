@@ -99,7 +99,7 @@ tiled.registerMapFormat("Honey Guardian C level", {
                 })
 
                 let speed = path.resolvedProperty('speed') || 1
-                cCode.push(`static const Path path${path.id} = {`,
+                cCode.push(`const Path path${path.id} = {`,
                     `.x = ${path.x}, .y = ${path.y}, .numPoints = ${path.polygon.length}, .points = {`,
                     path.polygon.map((point, i, points) => {
                         let pointData = pointsData[i]
