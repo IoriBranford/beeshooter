@@ -434,8 +434,9 @@ GameObjectDefinition *part2defs[6] = {
     &defAntHole
 };
 
-GameObjectDefinition *bossdefs[3] = {
+GameObjectDefinition *bossdefs[4] = {
     &defWaspBoss,
+    &defFlyBullet,
     &defWaspEgg,
     &defWaspHatch,
 };
