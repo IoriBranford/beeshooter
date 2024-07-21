@@ -121,7 +121,7 @@ GameObjectDefinition defTimeExtendPowerup = {
     .health = 1,
     .spriteDef = &sprPowerup,
     .spriteDepth = -20,
-    .palette = &palWaspBoss,
+    .palette = &palPlayerAndBG,
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .defeatSoundDef = &sndPowerup,
     .update = GOBJ_updatePowerupRise,
@@ -370,7 +370,7 @@ GameObjectDefinition defWaspBossWIP = {
     .spriteDef = &sprWaspBoss,
     .spriteDepth = 10,
     .bulletDef = &defFlyBullet,
-    .palette = &palWaspBoss,
+    .palette = &palWaspAndHoney,
     .bodyW = FIX16(28), .bodyH = FIX16(12),
     .update = GOBJ_updatePathWalker,
     .onDefeat = MIDBOSS_onDefeat
