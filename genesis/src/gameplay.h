@@ -32,6 +32,7 @@ void GAME_addTime(u16 time);
 void GAME_setTimerPaused(bool paused);
 void GAME_end(GameResult r);
 void GAME_loadPart2Sprites();
+void GAME_loadBossPartSprites();
 void GAME_defeatTeam(Team team);
 
 PlayerObject* GAME_player();

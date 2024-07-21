@@ -169,6 +169,11 @@ void GAME_loadPart2Sprites() {
     tileIndex = GOBJDEF_loadPart2EnemyFrames(tileIndex);
 }
 
+void GAME_loadBossPartSprites() {
+    tileIndex = GOBJDEF_freePart2EnemyFrames();
+    tileIndex = GOBJDEF_loadBossFrames(tileIndex);
+}
+
 void GAME_releaseAllObjects() {
     GameObject** objects = (GameObject**) POOL_getFirst(gobjPool);
     u16 num = POOL_getNumAllocated(gobjPool);
