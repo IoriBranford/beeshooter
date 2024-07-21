@@ -23,6 +23,11 @@ extern GameObjectDefinition defPowerup;
 static u16 powerupTimeExtend;
 
 void GOBJ_openHoneypot(GameObject *self, u16 numPowerups) {
+    if (!self->sprite || self->sprite->animInd == ANI_POT_OPEN) {
+        GAME_releaseObject(self);
+        return;
+    }
+
     const GameObjectDefinition *def = self->definition;
     if (def) {
         if (def->defeatSoundDef)
