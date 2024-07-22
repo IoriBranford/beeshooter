@@ -290,7 +290,7 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
 }
 
 void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input) {
-    if (input) {
+    if (input & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START)) {
         showMainMenu(NULL, NULL, 0);
         SND_playDef(&sndChangeSpeedSlow);
     }
