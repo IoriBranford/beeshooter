@@ -215,7 +215,7 @@ void MENU_joyEvent(u16 joy, u16 button, u16 state) {
         MenuAction inputAction = currentMenu->inputAction;
         if (!inputAction)
             inputAction = MENU_defaultInput;
-        inputAction(currentMenu, &currentMenu->items[cursorPos], press);
+        inputAction(currentMenu, &currentMenu->items[cursorPos], state);
     }
 }
 
