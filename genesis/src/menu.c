@@ -18,6 +18,7 @@ void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input)
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
 void askDataReset(const Menu *menu, const MenuItem *item, u16 input);
+void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 input);
 void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input);
 
 void doDataReset(const Menu *menu, const MenuItem *item, u16 input);
@@ -83,9 +84,10 @@ const Menu HISCORES_TABLE = {
 };
 
 const Menu RESET_DATA_MENU = {
-    .x = 2, .y = 10,
-    .name = "RESET YOUR NAME,\nHIGH SCORES, AND\nBUTTON CONFIG?",
-    .length = 2,
+    .x = 2, .y = 4,
+    .name = "RESET YOUR NAME,\nHIGH SCORES, AND\nBUTTON CONFIG?\n\nLEFT+C+START:\nRESET\n\nSTART OR\nOTHER BUTTONS:\nCANCEL",
+    .inputAction = MENU_dataResetInput,
+    .length = 0,
     .items = {
         {
             .x = 2, .y = 8,
@@ -123,6 +125,8 @@ static const char *HISCORE_CURSOR = "^";
 
 #define FLASHING_PALETTE PAL2
 #define FLASHING_COLOR ((FLASHING_PALETTE<<4) + 13)
+
+#define DATA_RESET_BUTTONS (BUTTON_LEFT|BUTTON_C|BUTTON_START)
 
 static const Menu *currentMenu;
 static u16 cursorPos;
@@ -346,6 +350,14 @@ void doDataReset(const Menu *menu, const MenuItem *item, u16 input) {
     USERDATA_reset();
     SND_playDef(&sndBugKill2);
     showOptionsMenu(NULL, NULL, 0);
+}
+
+void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 input) {
+    if (input == DATA_RESET_BUTTONS) {
+        doDataReset(menu, item, input);
+    } else if (input & (~DATA_RESET_BUTTONS | BUTTON_START)) {
+        returnToOptionsMenu(menu, item, input);
+    }
 }
 
 void hideNameCursor(u8 nameX, u8 nameY) {
