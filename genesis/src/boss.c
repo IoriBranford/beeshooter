@@ -155,10 +155,17 @@ void BOSS_updateDefeat(GameObject *self) {
         SND_playDef(&sndBugKill2);
         GOBJ_createFromDef(&defAcidBloodMedium, self->centerX, self->centerY);
         GAME_releaseObject(self);
-        GAME_end(RESULT_WIN);
+        PlayerObject *player = GAME_player();
+        PLAYER_startEndBonusTally(player);
+        return;
     }
+    self->centerX += self->velX;
     self->centerY += self->velY;
+    if (abs(self->velX) <= 1)
+        self->velX *= 2;
+    self->velX = -self->velX;
     GOBJ_updateBody(self);
+    GOBJ_updateSprite(self);
     ++self->shootTimer;
 }
 
@@ -167,6 +174,7 @@ void BOSS_onDefeat(GameObject *self) {
     GAME_defeatTeam(TEAM_ENEMY);
     GAME_defeatTeam(TEAM_ENEMYSHOT);
 
+    self->velX = FIX16(1);
     self->velY = FIX16(.125);
     const GameObjectDefinition *def = self->definition;
     if (def) {
