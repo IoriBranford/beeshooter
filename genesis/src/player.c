@@ -20,6 +20,11 @@ const fix16 STARTENTERX = GAME_BOUNDW >> 1;
 const fix16 STARTENTERY = GAME_BOUNDH + FIX16(16);
 const fix16 ENTERVELY = FIX16(-4);
 const fix16 STARTFIGHTY = GAME_BOUNDH - FIX16(28);
+const fix16 STARTWINY = -FIX16(28);
+#define WIN_BONUS_PER_LIFE 10000
+#define WIN_BONUS_PER_SECOND 100
+#define WIN_BONUS_FRAMES_PER_LIFE 15
+#define WIN_BONUS_FRAMES_PER_SECOND 1
 const u8 ENTERINVUL = 240;
 const u8 POWERUP_INVUL = 60;
 const u8 MERCY_INVUL = 60;
@@ -305,4 +310,43 @@ void PLAYER_init(PlayerObject *self) {
     SPR_setDepth(self->sprite, self->definition->spriteDepth);
     PLAYER_setWeapon(self, WEAPON_A);
     PLAYER_spawn(self);
+}
+
+void PLAYER_updateEndBonusTally(PlayerObject *self) {
+    u32 timeLeft = GAME_timeLeft();
+    if (self->lives) {
+        if (++self->shootTimer >= WIN_BONUS_FRAMES_PER_LIFE) {
+            GAME_scorePoints(WIN_BONUS_PER_LIFE);
+            HUD_updateLives(--self->lives);
+            self->shootTimer = 0;
+        }
+    } else if (timeLeft) {
+        if (++self->shootTimer >= WIN_BONUS_FRAMES_PER_SECOND) {
+            GAME_scorePoints(WIN_BONUS_PER_SECOND);
+            timeLeft = GAME_addTime(-60);
+            self->shootTimer = 0;
+        }
+    }
+
+    if (self->centerY > STARTWINY) {
+        self->centerX = STARTENTERX;
+        self->centerY += ENTERVELY;
+        GOBJ_updateBody((GameObject*)self);
+        GOBJ_updateSprite((GameObject*)self);
+        PLAYER_updateSpriteFrameTimer(self);
+    } else if (!timeLeft && !self->lives) {
+        self->update = NULL;
+        GAME_end(RESULT_WIN);
+    }
+}
+
+void PLAYER_startEndBonusTally(PlayerObject *self) {
+    GAME_disableExtends();
+    SPR_setAutoAnimation(self->sprite, false);
+    SPR_setAnimationLoop(self->sprite, true);
+    SPR_setAnim(self->sprite, self->weapon == WEAPON_B ? ANI_PLAYER_FLYB : ANI_PLAYER_FLYA);
+    PLAYER_initSpriteFrameTimer(self);
+    SPR_setVisibility(self->sprite, VISIBLE);
+    self->shootTimer = 0;
+    self->update = (ObjectCallback*)PLAYER_updateEndBonusTally;
 }

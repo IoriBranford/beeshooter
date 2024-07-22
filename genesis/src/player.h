@@ -27,4 +27,6 @@ void PLAYER_giveInvul(PlayerObject *self, u8 invul);
 
 void PLAYER_takeDamage(PlayerObject *self, u16 damage);
 
+void PLAYER_startEndBonusTally(PlayerObject *self);
+
 #endif
