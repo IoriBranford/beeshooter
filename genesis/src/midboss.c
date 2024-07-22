@@ -77,9 +77,15 @@ void MIDBOSS_updateDefeat(GameObject *self) {
         GOBJ_createFromDef(&defBloodMedium, self->centerX, self->centerY);
         GAME_releaseObject(self);
         LEVEL_setVelY(FIX32(-.75));
+        return;
     }
+    self->centerX += self->velX;
     self->centerY += self->velY;
+    if (abs(self->velX) <= 1)
+        self->velX *= 2;
+    self->velX = -self->velX;
     GOBJ_updateBody(self);
+    GOBJ_updateSprite(self);
     reinforceTimer = reinforceTimer + 1;
 }
 
@@ -88,6 +94,7 @@ void MIDBOSS_onDefeat(GameObject *self) {
     GAME_setTimerPaused(true);
     GAME_defeatTeam(TEAM_ENEMY);
     GAME_defeatTeam(TEAM_ENEMYSHOT);
+    self->velX = FIX16(1);
     self->velY = FIX16(.125);
     const GameObjectDefinition *def = self->definition;
     if (def) {
