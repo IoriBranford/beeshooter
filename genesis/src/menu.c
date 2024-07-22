@@ -146,12 +146,30 @@ void MENU_moveCursor(const Menu *menu, s8 dy) {
     VDP_drawText(MENU_CURSOR, x, y + item->y);
 }
 
+static void drawMultiLine(const char *s, u8 x, u8 y, u8 dy) {
+    char *out = string;
+    dy = max(1, dy);
+    for (char *c = s; *c; ++c) {
+        if (*c == '\n') {
+            *out = '\0';
+            VDP_drawText(string, x, y);
+            y += dy;
+            out = string;
+        } else {
+            *out = *c;
+            ++out;
+        }
+    }
+    *out = '\0';
+    VDP_drawText(string, x, y);
+}
+
 void MENU_show(const Menu *menu) {
     currentMenu = menu;
 
     u8 x = menu->x, y = menu->y;
     if (menu->name)
-        VDP_drawText(menu->name, x, y);
+        drawMultiLine(menu->name, x, y, 2);
 
     for (int i = 0; i < menu->length; ++i) {
         const MenuItem *item = &menu->items[i];
