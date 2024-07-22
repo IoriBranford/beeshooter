@@ -36,10 +36,12 @@ int title() {
         if (imageX) {
             VDP_setHorizontalScroll(BG_B, imageX -= 16);
             if (!imageX) {
+                MENU_initFlashingPalette();
                 MENU_show(&MAIN_MENU);
                 JOY_setEventHandler(MENU_joyEvent);
             }
         }
+        MENU_updateCurrent();
         SYS_doVBlankProcess();
     }
 

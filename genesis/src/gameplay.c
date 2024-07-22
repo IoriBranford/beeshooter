@@ -209,6 +209,7 @@ void GAME_end(GameResult r) {
     
     u32 name = USERDATA_getName();
     u8 rank = USERDATA_saveScore(name, score);
+    MENU_initFlashingPalette();
     MENU_showHighScoreEntry(rank);
     JOY_setEventHandler(MENU_joyEvent);
 }
@@ -322,7 +323,7 @@ int gameplay() {
     while(running)
     {
         if (result) {
-            MENU_updateHighScoreEntry();
+            MENU_updateCurrent();
         } else if (paused) {
         } else {
             if (player.update)
