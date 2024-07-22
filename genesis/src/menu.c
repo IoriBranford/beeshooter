@@ -83,17 +83,17 @@ const Menu HISCORES_TABLE = {
 };
 
 const Menu RESET_DATA_MENU = {
-    .x = 2, .y = 14,
-    .name = "RESET ALL DATA?",
+    .x = 2, .y = 10,
+    .name = "RESET YOUR NAME,\nHIGH SCORES, AND\nBUTTON CONFIG?",
     .length = 2,
     .items = {
         {
-            .x = 2, .y = 2,
+            .x = 2, .y = 8,
             .name = "NO",
             .activateAction = returnToOptionsMenu
         },
         {
-            .x = 2, .y = 4,
+            .x = 2, .y = 10,
             .name = "YES",
             .activateAction = doDataReset
         }
