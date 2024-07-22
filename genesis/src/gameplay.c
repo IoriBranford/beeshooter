@@ -13,7 +13,7 @@
 #include "hud.h"
 
 #define GAMETIME 3600
-static const u32 MAXSCORE = 9999999;
+#define MAXSCORE 9999999
 
 static const u32 EXTEND_SCORES[] = {
     10000,
@@ -28,7 +28,7 @@ static const u32 EXTEND_SCORES[] = {
     1000000,
     1200000,
     1500000,
-    9999999
+    MAXSCORE + 1
 };
 
 static u16 timeLeft;
@@ -91,14 +91,26 @@ void GAME_scorePoints(u32 points) {
     score = min(MAXSCORE, newScore);
 }
 
-void GAME_addTime(u16 time) {
-    timeLeft += time;
+void GAME_disableExtends() {
+    extendScoreIndex = (sizeof(EXTEND_SCORES) / sizeof(EXTEND_SCORES[0])) - 1;
+}
+
+u16 GAME_timeLeft() {
+    return timeLeft;
+}
+
+u16 GAME_addTime(s16 time) {
+    if (time >= 0 || timeLeft >= -time)
+        timeLeft += time;
+    else
+        timeLeft = 0;
     timerMinutes = timeLeft / 3600;
     timerSeconds = (timeLeft / 60) % 60;
     timerFrames = timeLeft % 60;
     HUD_updateTimerMinutes(timerMinutes);
     HUD_updateTimerSeconds(timerSeconds);
     HUD_updateTimerFrames(timerFrames);
+    return timeLeft;
 }
 
 void GAME_setTimerPaused(bool paused) {
