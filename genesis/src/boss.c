@@ -152,7 +152,7 @@ void BOSS_updateDefeat(GameObject *self) {
             GOBJ_createFromDef(&defAcidBloodSmall, self->bodyX0 + (random() % width), self->bodyY0 + (random() % height));
         }
     } else {
-        SND_playDef(&sndBugKill2);
+        SND_playDef(&sndBossKill);
         GOBJ_createFromDef(&defAcidBloodMedium, self->centerX, self->centerY);
         GAME_releaseObject(self);
         PlayerObject *player = GAME_player();

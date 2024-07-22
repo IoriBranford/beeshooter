@@ -77,6 +77,7 @@ void LEVEL_updateBackgroundExplosion() {
 }
 
 void LEVEL_startBackgroundExplosion() {
+    SND_playDef(&sndRocksBreak);
     VDP_setScrollingMode(HSCROLL_LINE, VSCROLL_PLANE);
 }
 

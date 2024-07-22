@@ -17,3 +17,5 @@ WAV wavBugKill2 "wav/bugkill2.wav" XGM
 WAV wavBreakPot "wav/breakpot.wav" XGM
 WAV wavPowerup "wav/powerup.wav" XGM
 WAV wavBonus "wav/bonus.wav" XGM
+WAV wavRocksBreak "wav/rocksbreak.wav" XGM
+WAV wavBossKill "wav/monsterscream.wav" XGM

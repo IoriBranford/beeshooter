@@ -28,6 +28,8 @@ extern SoundDefinition
     sndBugKill1,
     sndBugKill2,
     sndBreakPot,
+    sndRocksBreak,
+    sndBossKill,
     sndPowerup,
     sndBonus;
 

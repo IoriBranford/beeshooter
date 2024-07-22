@@ -80,6 +80,16 @@ SoundDefinition sndBreakPot = {
     .channel = SOUND_PCM_CH3,
     .priority = 8
 };
+SoundDefinition sndRocksBreak = {
+    DATA_AND_LENGTH(wavRocksBreak),
+    .channel = SOUND_PCM_CH3,
+    .priority = 15
+};
+SoundDefinition sndBossKill = {
+    DATA_AND_LENGTH(wavBossKill),
+    .channel = SOUND_PCM_CH3,
+    .priority = 15
+};
 SoundDefinition sndPowerup = {
     DATA_AND_LENGTH(wavPowerup),
     .channel = SOUND_PCM_CH2,
@@ -106,6 +116,8 @@ static SoundDefinition *SOUNDDEFS[] = {
     &sndBugKill1,
     &sndBugKill2,
     &sndBreakPot,
+    &sndRocksBreak,
+    &sndBossKill,
     &sndPowerup,
     &sndBonus,
     0
