@@ -200,7 +200,6 @@ void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input) {
         MENU_moveCursor(menu, 1);
     if (input & (BUTTON_LEFT|BUTTON_RIGHT)) {
         MENU_moveMenuItem(menu, item, input);
-        SND_playDef(&sndChangeWeapon);
     }
     if (input & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START))
         MENU_activateMenuItem(menu, item, input);
@@ -285,8 +284,11 @@ void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
         config = GJOY_changeConfig(-1);
     if (input & BUTTON_RIGHT)
         config = GJOY_changeConfig(1);
-    MENU_showButtonConfig(menu, item, config);
-    USERDATA_saveButtonConfig(config);
+    if (input & (BUTTON_LEFT|BUTTON_RIGHT)) {
+        SND_playDef(&sndChangeWeapon);
+        MENU_showButtonConfig(menu, item, config);
+        USERDATA_saveButtonConfig(config);
+    }
 }
 
 void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input) {
