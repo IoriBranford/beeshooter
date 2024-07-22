@@ -158,6 +158,10 @@ void USERDATA_clearScores() {
     SRAM_disable();
 }
 
+void USERDATA_reset() {
+    clearData(&userData);
+}
+
 u32 USERDATA_getName() {
     return userData.name;
 }
