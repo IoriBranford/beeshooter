@@ -17,10 +17,10 @@ void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input)
 void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input);
 
 void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
-void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input);
+void askDataReset(const Menu *menu, const MenuItem *item, u16 input);
 void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input);
 
-void clearHighScores(const Menu *menu, const MenuItem *item, u16 input);
+void doDataReset(const Menu *menu, const MenuItem *item, u16 input);
 
 const Menu MAIN_MENU = {
     .x = 4, .y = 14,
@@ -57,8 +57,8 @@ const Menu OPTIONS_MENU = {
         },
         {
             .x = 2, .y = 12,
-            .name = "CLEAR HIGH SCORES",
-            .activateAction = showHighScoreClear,
+            .name = "RESET ALL DATA",
+            .activateAction = askDataReset,
         },
         {
             .x = 2, .y = 14,
@@ -82,9 +82,9 @@ const Menu HISCORES_TABLE = {
     }
 };
 
-const Menu CLEAR_HISCORES_MENU = {
+const Menu RESET_DATA_MENU = {
     .x = 2, .y = 14,
-    .name = "CLEAR HIGH SCORES?",
+    .name = "RESET ALL DATA?",
     .length = 2,
     .items = {
         {
@@ -95,7 +95,7 @@ const Menu CLEAR_HISCORES_MENU = {
         {
             .x = 2, .y = 4,
             .name = "YES",
-            .activateAction = clearHighScores
+            .activateAction = doDataReset
         }
     }
 };
@@ -316,14 +316,14 @@ void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input) {
     drawHighScores(menu->x + item->x, menu->y + item->y, item->y, 0);
 }
 
-void showHighScoreClear(const Menu *menu, const MenuItem *item, u16 input) {
+void askDataReset(const Menu *menu, const MenuItem *item, u16 input) {
     VDP_clearTextArea(0, 0, 32, 28);
-    MENU_show(&CLEAR_HISCORES_MENU);
+    MENU_show(&RESET_DATA_MENU);
     SND_playDef(&sndChangeSpeedFast);
 }
 
-void clearHighScores(const Menu *menu, const MenuItem *item, u16 input) {
-    USERDATA_clearScores();
+void doDataReset(const Menu *menu, const MenuItem *item, u16 input) {
+    USERDATA_reset();
     SND_playDef(&sndBugKill2);
     showOptionsMenu(NULL, NULL, 0);
 }
