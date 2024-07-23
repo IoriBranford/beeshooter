@@ -13,7 +13,7 @@ extern const u8 wavPlayerDie[37120];
 extern const u8 wavEnemyShot[2048];
 extern const u8 wavLiquidShot[3328];
 extern const u8 wavBugKill1[4352];
-extern const u8 wavBugKill2[15104];
+extern const u8 wavBugKill2[8448];
 extern const u8 wavBreakPot[9472];
 extern const u8 wavPowerup[12800];
 extern const u8 wavBonus[25344];
