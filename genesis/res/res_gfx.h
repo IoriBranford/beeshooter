@@ -34,6 +34,7 @@ extern const SpriteDefinition sprAcidBullet;
 extern const SpriteDefinition sprWasp;
 extern const SpriteDefinition sprBeetle;
 extern const SpriteDefinition sprAntHole;
+extern const SpriteDefinition sprBGFragment;
 extern const SpriteDefinition sprWaspBoss;
 extern const SpriteDefinition sprWaspEgg;
 
