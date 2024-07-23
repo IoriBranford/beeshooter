@@ -85,7 +85,7 @@ GameObjectDefinition defPlayerBlood = {
 GameObjectDefinition defAnt = {
     .teams = 1<<TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
-    .defeatPoints = 125,
+    .defeatPoints = 150,
     .spriteDef = &sprAnt,
     .spriteDepth = -1,
     .palette = &palAnt,
@@ -276,7 +276,7 @@ GameObjectDefinition defAcidAntBullet = {
 GameObjectDefinition defAcidAnt = {
     .teams = 1<<TEAM_ENEMY,
     .health = 1, .speed = FIX16(2),
-    .defeatPoints = 250,
+    .defeatPoints = 300,
     .spriteDef = &sprAnt,
     .spriteDepth = -1,
     .palette = &palAcidAndBeetle,
