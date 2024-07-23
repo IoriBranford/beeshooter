@@ -92,6 +92,12 @@ void GOBJ_initSprite(GameObject *self) {
     SPR_setDepth(self->sprite, def->spriteDepth);
 }
 
+void GOBJ_setRandomFrame(GameObject *self) {
+    if (!self->sprite)
+        GOBJ_initSprite(self);
+    SPR_setFrame(self->sprite, random() % self->sprite->animation->numFrame);
+}
+
 bool GOBJ_isAllocated(GameObject *self) {
     return (self->internalState & OBJ_ALLOCATED) != 0;
 }
