@@ -114,6 +114,7 @@ void BOSS_startReturnToTop(GameObject *self) {
 }
 
 void BOSS_layEgg(GameObject *self) {
+    ++numChildren;
     GOBJ_createFromDef(&defWaspEgg, self->centerX, self->centerY);
 }
 
@@ -130,7 +131,7 @@ void BOSS_updateCharge(GameObject *self) {
 }
 
 void BOSS_chargeAndLayEggs(GameObject *self) {
-    numChildren = LAY_EGGS_COUNT;
+    numChildren = 0;
     ENEMY_chargeAtPlayer(self);
     self->update = (ObjectCallback*)BOSS_updateCharge;
     GOBJ_startShooting(self, LAY_EGGS_COUNT, LAY_EGGS_INTERVAL);
