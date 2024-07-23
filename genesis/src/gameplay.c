@@ -91,6 +91,12 @@ void GAME_scorePoints(u32 points) {
     score = min(MAXSCORE, newScore);
 }
 
+void GAME_giveBonus(u32 points) {
+    GAME_scorePoints(points);
+    HUD_initBonus(points);
+    SND_playDef(&sndBonus);
+}
+
 void GAME_disableExtends() {
     extendScoreIndex = (sizeof(EXTEND_SCORES) / sizeof(EXTEND_SCORES[0])) - 1;
 }
