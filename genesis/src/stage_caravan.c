@@ -681,7 +681,7 @@ extern LevelObjectGroup room1powerup;
 extern const LevelObject lobj2254;
 const LevelObject lobj2254 = {
     .definition = &defHoneyPot,
-    .x = 80, .y = 3752,
+    .x = 80, .y = 3756,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room1powerup, .path = 0,
@@ -1296,7 +1296,7 @@ extern LevelObjectGroup room2powerup;
 extern const LevelObject lobj2298;
 const LevelObject lobj2298 = {
     .definition = &defHoneyPot,
-    .x = 136, .y = 3568,
+    .x = 136, .y = 3572,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room2powerup, .path = 0,
@@ -4226,7 +4226,7 @@ const LevelObject lobj2396 = {
 };
 const LevelObject lobj2399 = {
     .definition = &defHoneyPot,
-    .x = 128, .y = 2472,
+    .x = 128, .y = 2476,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room7alien1, .path = 0,
@@ -5509,7 +5509,7 @@ extern const LevelObject lobj2467;
 extern const LevelObject lobj2466;
 const LevelObject lobj2467 = {
     .definition = &defHoneyPot,
-    .x = 120, .y = 2264,
+    .x = 120, .y = 2268,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
@@ -5517,7 +5517,7 @@ const LevelObject lobj2467 = {
 };
 const LevelObject lobj2466 = {
     .definition = &defHoneyPot,
-    .x = 136, .y = 2256,
+    .x = 136, .y = 2260,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room8powerup, .path = 0,
@@ -5537,7 +5537,7 @@ extern const LevelObject lobj2470;
 extern const LevelObject lobj2469;
 const LevelObject lobj2471 = {
     .definition = &defHoneyPot,
-    .x = 128, .y = 2176,
+    .x = 128, .y = 2180,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
@@ -5545,7 +5545,7 @@ const LevelObject lobj2471 = {
 };
 const LevelObject lobj2470 = {
     .definition = &defHoneyPot,
-    .x = 144, .y = 2168,
+    .x = 144, .y = 2172,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
@@ -5553,7 +5553,7 @@ const LevelObject lobj2470 = {
 };
 const LevelObject lobj2469 = {
     .definition = &defHoneyPot,
-    .x = 120, .y = 2160,
+    .x = 120, .y = 2164,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &room9powerup, .path = 0,
@@ -7719,7 +7719,7 @@ extern LevelObjectGroup r11powerup;
 extern const LevelObject lobj2626;
 const LevelObject lobj2626 = {
     .definition = &defHoneyPot,
-    .x = 120, .y = 1656,
+    .x = 120, .y = 1660,
     .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r11powerup, .path = 0,
@@ -8438,7 +8438,7 @@ extern LevelObjectGroup r12powerup;
 extern const LevelObject lobj2707;
 const LevelObject lobj2707 = {
     .definition = &defReinforcedHoneyPot,
-    .x = 128, .y = 1360,
+    .x = 128, .y = 1364,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r12powerup, .path = 0,
@@ -10711,7 +10711,7 @@ extern const LevelObject lobj3069;
 extern const LevelObject lobj3070;
 const LevelObject lobj3069 = {
     .definition = &defHoneyPot,
-    .x = 168, .y = 592,
+    .x = 168, .y = 596,
     .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
@@ -10719,7 +10719,7 @@ const LevelObject lobj3069 = {
 };
 const LevelObject lobj3070 = {
     .definition = &defHoneyPot,
-    .x = 88, .y = 592,
+    .x = 88, .y = 596,
     .palette = &palWaspAndHoney,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup, .path = 0,
@@ -10914,7 +10914,7 @@ extern LevelObjectGroup r16powerup2;
 extern const LevelObject lobj3085;
 const LevelObject lobj3085 = {
     .definition = &defReinforcedHoneyPot,
-    .x = 128, .y = 512,
+    .x = 128, .y = 516,
     .palette = 0,
     .animInd = 0, .flags = 32768,
     .group = &r16powerup2, .path = 0,

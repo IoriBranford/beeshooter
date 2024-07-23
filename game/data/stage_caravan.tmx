@@ -4306,7 +4306,7 @@ self.speed = 0.75</property>
    </object>
   </objectgroup>
   <objectgroup id="237" name="room1powerup">
-   <object id="2254" template="enemies/HoneyPot.tx" x="80" y="3752"/>
+   <object id="2254" template="enemies/HoneyPot.tx" x="80" y="3756" width="16" height="16"/>
    <object id="2255" template="triggers/SpawnCharacters.tx" x="-20" y="3768"/>
   </objectgroup>
   <objectgroup id="238" name="room2ants1">
@@ -4456,7 +4456,7 @@ self.speed = 0.75</property>
    </object>
   </objectgroup>
   <objectgroup id="240" name="room2powerup">
-   <object id="2298" template="enemies/HoneyPot.tx" x="136" y="3568"/>
+   <object id="2298" template="enemies/HoneyPot.tx" x="136" y="3572" width="16" height="16"/>
    <object id="2299" template="triggers/SpawnCharacters.tx" x="-80" y="3576"/>
   </objectgroup>
   <objectgroup id="241" name="r3fly1">
@@ -5377,7 +5377,7 @@ for i = 1,5 do
 end</property>
     </properties>
    </object>
-   <object id="2399" template="enemies/HoneyPot.tx" x="128" y="2472"/>
+   <object id="2399" template="enemies/HoneyPot.tx" x="128" y="2476" width="16" height="16"/>
    <object id="3941" template="pathpoints/SetSpriteAnim.tx" type="PathPoint" x="128" y="2536">
     <properties>
      <property name="anim" value="ANI_ALIEN_GUN_STAND"/>
@@ -5964,14 +5964,14 @@ end</property>
   </objectgroup>
   <objectgroup id="258" name="room8powerup">
    <object id="2465" template="triggers/SpawnCharacters.tx" x="-32" y="2272"/>
-   <object id="2466" template="enemies/HoneyPot.tx" x="136" y="2256"/>
-   <object id="2467" template="enemies/HoneyPot.tx" x="120" y="2264"/>
+   <object id="2466" template="enemies/HoneyPot.tx" x="136" y="2260" width="16" height="16"/>
+   <object id="2467" template="enemies/HoneyPot.tx" x="120" y="2268" width="16" height="16"/>
   </objectgroup>
   <objectgroup id="259" name="room9powerup">
    <object id="2468" template="triggers/SpawnCharacters.tx" x="-16" y="2184"/>
-   <object id="2469" template="enemies/HoneyPot.tx" x="120" y="2160"/>
-   <object id="2470" template="enemies/HoneyPot.tx" x="144" y="2168"/>
-   <object id="2471" template="enemies/HoneyPot.tx" x="128" y="2176"/>
+   <object id="2469" template="enemies/HoneyPot.tx" x="120" y="2164" width="16" height="16"/>
+   <object id="2470" template="enemies/HoneyPot.tx" x="144" y="2172" width="16" height="16"/>
+   <object id="2471" template="enemies/HoneyPot.tx" x="128" y="2180" width="16" height="16"/>
   </objectgroup>
   <objectgroup id="260" name="room9alienmind">
    <object id="2472" template="enemies/AlienMind.tx" x="128" y="1984"/>
@@ -6883,7 +6883,7 @@ end</property>
    <object id="4141" template="pathpoints/EnterForeground.tx" x="8" y="1696"/>
   </objectgroup>
   <objectgroup id="285" name="r11powerup">
-   <object id="2626" template="enemies/HoneyPot.tx" x="120" y="1656">
+   <object id="2626" template="enemies/HoneyPot.tx" x="120" y="1660" width="16" height="16">
     <properties>
      <property name="palette" value="palWaspAndHoney"/>
     </properties>
@@ -7074,7 +7074,7 @@ end</property>
   </objectgroup>
   <objectgroup id="299" name="r12powerup">
    <object id="2706" template="triggers/SpawnCharacters.tx" x="-40" y="1368"/>
-   <object id="2707" template="enemies/ReinforcedHoneyPot.tx" x="128" y="1360"/>
+   <object id="2707" template="enemies/ReinforcedHoneyPot.tx" x="128" y="1364" width="16" height="16"/>
   </objectgroup>
   <objectgroup id="395" name="r13acidantsfromholes">
    <object id="4254" template="enemies/AcidAnt.tx" gid="2147484131" x="24" y="1200" rotation="270"/>
@@ -7913,12 +7913,12 @@ end</property>
   </objectgroup>
   <objectgroup id="331" name="r16powerup">
    <object id="3068" template="triggers/SpawnCharacters.tx" x="-32" y="608"/>
-   <object id="3069" template="enemies/HoneyPot.tx" x="168" y="592">
+   <object id="3069" template="enemies/HoneyPot.tx" x="168" y="596" width="16" height="16">
     <properties>
      <property name="palette" value="palWaspAndHoney"/>
     </properties>
    </object>
-   <object id="3070" template="enemies/HoneyPot.tx" x="88" y="592">
+   <object id="3070" template="enemies/HoneyPot.tx" x="88" y="596" width="16" height="16">
     <properties>
      <property name="palette" value="palWaspAndHoney"/>
     </properties>
@@ -7974,7 +7974,7 @@ end</property>
   </objectgroup>
   <objectgroup id="333" name="r16powerup2">
    <object id="3084" template="triggers/SpawnCharacters.tx" x="-16" y="520"/>
-   <object id="3085" template="enemies/ReinforcedHoneyPot.tx" x="128" y="512"/>
+   <object id="3085" template="enemies/ReinforcedHoneyPot.tx" x="128" y="516" width="16" height="16"/>
   </objectgroup>
   <objectgroup id="334" name="r17powerup">
    <object id="3086" template="triggers/SpawnCharacters.tx" x="-40" y="424"/>
