@@ -73,17 +73,17 @@ void HUD_updateScore(u32 score) {
 }
 
 void HUD_updateTimerMinutes(u16 minutes) {
-    bcdsnprint(string, 1, u16ToBCD(minutes), ' ');
+    bcdsnprint(string, 1, u16ToBCD(minutes), '0');
     VDP_drawText(string, 17, 1);
 }
 
 void HUD_updateTimerSeconds(u16 seconds) {
-    bcdsnprint(string, 2, u16ToBCD(seconds), ' ');
+    bcdsnprint(string, 2, u16ToBCD(seconds), '0');
     VDP_drawText(string, 19, 1);
 }
 
 void HUD_updateTimerFrames(u16 frames) {
-    bcdsnprint(string, 2, u16ToBCD(frames), ' ');
+    bcdsnprint(string, 2, u16ToBCD(frames), '0');
     VDP_drawText(string, 22, 1);
 }
 
