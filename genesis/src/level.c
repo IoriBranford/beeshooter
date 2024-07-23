@@ -27,9 +27,14 @@ typedef struct PaletteUsage {
 } PaletteUsage;
 PaletteUsage paletteUsage[PALETTE_USAGE_SLOTS];
 
-static const LevelObject *doubleKillBonusEnemies[2];
-static fix32 doubleKillBonusEnemiesDefeatedAt[2];
-static u32 doubleKillBonusPoints;
+#define MAX_ACTIVE_DOUBLE_KILL_BONUSES 2
+typedef struct DoubleKillBonus {
+    u32 points;
+    const LevelObject *enemies[2];
+    fix32 defeatedAt[2];
+} DoubleKillBonus;
+
+static DoubleKillBonus doubleKillBonuses[MAX_ACTIVE_DOUBLE_KILL_BONUSES];
 
 #define BG_EXPLODE_LINES 80
 #define BG_EXPLODE_FIRST_LINE (224-BG_EXPLODE_LINES)
@@ -104,7 +109,7 @@ void LEVEL_init(u16 tileIndex) {
         paletteUsage[i].cameraY = cameraY;
     }
 
-    LEVEL_postDoubleKillBonus(NULL, NULL, 0);
+    memset(doubleKillBonuses, 0, MAX_ACTIVE_DOUBLE_KILL_BONUSES * sizeof(DoubleKillBonus));
     
     memset(bgExplodeLinesScrollX, 0, sizeof(bgExplodeLinesScrollX));
     memset(bgExplodeLinesPosX, 0, sizeof(bgExplodeLinesPosX));
@@ -227,47 +232,62 @@ GameObject* LEVEL_createObject(const LevelObject *lobj) {
 }
 
 void LEVEL_postDoubleKillBonus(const LevelObject *enemy0, const LevelObject *enemy1, u32 bonusPoints) {
-    doubleKillBonusEnemies[0] = enemy0;
-    doubleKillBonusEnemies[1] = enemy1;
-    doubleKillBonusEnemiesDefeatedAt[0] = -1;
-    doubleKillBonusEnemiesDefeatedAt[1] = -1;
-    doubleKillBonusPoints = bonusPoints;
+    for (int i = 0; i < MAX_ACTIVE_DOUBLE_KILL_BONUSES; ++i) {
+        DoubleKillBonus *bonus = &doubleKillBonuses[i];
+        if (!bonus->points) {
+            bonus->enemies[0] = enemy0;
+            bonus->enemies[1] = enemy1;
+            bonus->defeatedAt[0] = -1;
+            bonus->defeatedAt[1] = -1;
+            bonus->points = bonusPoints;
+            break;
+        }
+    }
 }
 
 void LEVEL_cancelDoubleKillBonusOnEnemyEscape(GameObject *enemy) {
-    if (!doubleKillBonusPoints)
-        return;
     const LevelObject *lobj = enemy->levelObject;
     if (!lobj)
         return;
-    if (lobj == doubleKillBonusEnemies[0] || lobj == doubleKillBonusEnemies[1])
-        LEVEL_postDoubleKillBonus(NULL, NULL, 0);
+    for (int i = 0; i < MAX_ACTIVE_DOUBLE_KILL_BONUSES; ++i) {
+        DoubleKillBonus *bonus = &doubleKillBonuses[i];
+        if (bonus->points) {
+            if (lobj == bonus->enemies[0] || lobj == bonus->enemies[1]) {
+                bonus->points = 0;
+                break;
+            }
+        }
+    }
 }
 
 void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy) {
-    if (!doubleKillBonusPoints)
-        return;
-
     const LevelObject *lobj = enemy->levelObject;
     if (!lobj)
         return;
 
-    if (lobj == doubleKillBonusEnemies[0]) {
-        doubleKillBonusEnemiesDefeatedAt[0] = cameraY;
-        if (doubleKillBonusEnemiesDefeatedAt[1] < 0)
-            return;
-    } else if (lobj == doubleKillBonusEnemies[1]) {
-        doubleKillBonusEnemiesDefeatedAt[1] = cameraY;
-        if (doubleKillBonusEnemiesDefeatedAt[0] < 0)
-            return;
-    } else {
-        return;
-    }
+    for (int i = 0; i < MAX_ACTIVE_DOUBLE_KILL_BONUSES; ++i) {
+        DoubleKillBonus *bonus = &doubleKillBonuses[i];
+        if (!bonus->points)
+            continue;
 
-    if (abs(doubleKillBonusEnemiesDefeatedAt[0] - doubleKillBonusEnemiesDefeatedAt[1]) < abs(cameraVelY)*30) {
-        GAME_scorePoints(doubleKillBonusPoints);
-        HUD_initBonus(doubleKillBonusPoints);
-        SND_playDef(&sndBonus);
+        if (lobj == bonus->enemies[0]) {
+            bonus->defeatedAt[0] = cameraY;
+            if (bonus->defeatedAt[1] < 0)
+                break;
+        } else if (lobj == bonus->enemies[1]) {
+            bonus->defeatedAt[1] = cameraY;
+            if (bonus->defeatedAt[0] < 0)
+                break;
+        } else {
+            continue;
+        }
+
+        if (abs(bonus->defeatedAt[0] - bonus->defeatedAt[1]) < abs(cameraVelY)*30) {
+            GAME_scorePoints(bonus->points);
+            HUD_initBonus(bonus->points);
+            SND_playDef(&sndBonus);
+        }
+        bonus->points = 0;
+        break;
     }
-    LEVEL_postDoubleKillBonus(NULL, NULL, 0);
 }
