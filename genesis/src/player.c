@@ -329,7 +329,6 @@ void PLAYER_updateEndBonusTally(PlayerObject *self) {
     }
 
     if (self->centerY > STARTWINY) {
-        self->centerX = STARTENTERX;
         self->centerY += ENTERVELY;
         GOBJ_updateBody((GameObject*)self);
         GOBJ_updateSprite((GameObject*)self);
