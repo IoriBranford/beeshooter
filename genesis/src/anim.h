@@ -45,4 +45,13 @@ enum AniBeetle {
     ANI_BEETLE_EAT
 };
 
+enum AniWaspBoss {
+    ANI_WASPBOSS_FLY,
+    ANI_WASPBOSS_PIECE0,
+    ANI_WASPBOSS_PIECE1,
+    ANI_WASPBOSS_PIECE2,
+    ANI_WASPBOSS_PIECE3,
+    ANI_WASPBOSS_PIECE4,
+};
+
 #endif
