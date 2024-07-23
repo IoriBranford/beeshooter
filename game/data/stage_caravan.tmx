@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4340">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4382">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -16,6 +16,7 @@
  <tileset firstgid="564" source="tilesets/Wasp.tsx"/>
  <tileset firstgid="576" source="tilesets/Tick.tsx"/>
  <tileset firstgid="578" source="tilesets/WaspEgg.tsx"/>
+ <tileset firstgid="581" source="tilesets/BGFragment.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -8206,7 +8207,7 @@ end</property>
     </properties>
     <point/>
    </object>
-   <object id="3178" template="enemies/WaspBoss.tx" x="128" y="440">
+   <object id="3178" template="enemies/WaspBoss.tx" x="128" y="440" visible="0">
     <properties>
      <property name="collidable" type="bool" value="false"/>
      <property name="startpoint" type="object" value="3200"/>
@@ -8390,6 +8391,48 @@ end</property>
     </properties>
     <point/>
    </object>
+   <object id="4340" template="enemies/BGFragment.tx" x="72" y="404"/>
+   <object id="4358" template="enemies/BGFragment.tx" x="80" y="388"/>
+   <object id="4366" template="enemies/BGFragment.tx" x="80" y="420"/>
+   <object id="4375" template="enemies/BGFragment.tx" x="88" y="436"/>
+   <object id="4359" template="enemies/BGFragment.tx" x="88" y="372"/>
+   <object id="4349" template="enemies/BGFragment.tx" x="136" y="404"/>
+   <object id="4350" template="enemies/BGFragment.tx" x="144" y="388"/>
+   <object id="4367" template="enemies/BGFragment.tx" x="144" y="420"/>
+   <object id="4376" template="enemies/BGFragment.tx" x="152" y="436"/>
+   <object id="4360" template="enemies/BGFragment.tx" x="152" y="372"/>
+   <object id="4341" template="enemies/BGFragment.tx" x="88" y="404"/>
+   <object id="4357" template="enemies/BGFragment.tx" x="96" y="388"/>
+   <object id="4368" template="enemies/BGFragment.tx" x="96" y="420"/>
+   <object id="4377" template="enemies/BGFragment.tx" x="104" y="436"/>
+   <object id="4361" template="enemies/BGFragment.tx" x="104" y="372"/>
+   <object id="4348" template="enemies/BGFragment.tx" x="152" y="404"/>
+   <object id="4351" template="enemies/BGFragment.tx" x="160" y="388"/>
+   <object id="4369" template="enemies/BGFragment.tx" x="160" y="420"/>
+   <object id="4378" template="enemies/BGFragment.tx" x="168" y="436"/>
+   <object id="4362" template="enemies/BGFragment.tx" x="168" y="372"/>
+   <object id="4342" template="enemies/BGFragment.tx" x="104" y="404"/>
+   <object id="4356" template="enemies/BGFragment.tx" x="112" y="388"/>
+   <object id="4370" template="enemies/BGFragment.tx" x="112" y="420"/>
+   <object id="4379" template="enemies/BGFragment.tx" x="120" y="436"/>
+   <object id="4363" template="enemies/BGFragment.tx" x="120" y="372"/>
+   <object id="4347" template="enemies/BGFragment.tx" x="168" y="404"/>
+   <object id="4352" template="enemies/BGFragment.tx" x="176" y="388"/>
+   <object id="4371" template="enemies/BGFragment.tx" x="176" y="420"/>
+   <object id="4343" template="enemies/BGFragment.tx" x="104" y="404"/>
+   <object id="4355" template="enemies/BGFragment.tx" x="112" y="388"/>
+   <object id="4372" template="enemies/BGFragment.tx" x="112" y="420"/>
+   <object id="4380" template="enemies/BGFragment.tx" x="120" y="436"/>
+   <object id="4364" template="enemies/BGFragment.tx" x="120" y="372"/>
+   <object id="4346" template="enemies/BGFragment.tx" x="168" y="404"/>
+   <object id="4353" template="enemies/BGFragment.tx" x="176" y="388"/>
+   <object id="4373" template="enemies/BGFragment.tx" x="176" y="420"/>
+   <object id="4344" template="enemies/BGFragment.tx" x="120" y="404"/>
+   <object id="4354" template="enemies/BGFragment.tx" x="128" y="388"/>
+   <object id="4374" template="enemies/BGFragment.tx" x="128" y="420"/>
+   <object id="4381" template="enemies/BGFragment.tx" x="136" y="436"/>
+   <object id="4365" template="enemies/BGFragment.tx" x="136" y="372"/>
+   <object id="4345" template="enemies/BGFragment.tx" x="184" y="404"/>
   </objectgroup>
  </group>
  <group id="394" name="stagemd_unused">

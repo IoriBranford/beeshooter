@@ -12061,12 +12061,390 @@ static const Path *waspboss_paths[] = {
     &path3204
 };
 extern const LevelObject lobj3178;
+extern const LevelObject lobj4378;
+extern const LevelObject lobj4376;
+extern const LevelObject lobj4381;
+extern const LevelObject lobj4379;
+extern const LevelObject lobj4380;
+extern const LevelObject lobj4377;
+extern const LevelObject lobj4375;
+extern const LevelObject lobj4371;
+extern const LevelObject lobj4373;
+extern const LevelObject lobj4369;
+extern const LevelObject lobj4367;
+extern const LevelObject lobj4374;
+extern const LevelObject lobj4372;
+extern const LevelObject lobj4370;
+extern const LevelObject lobj4368;
+extern const LevelObject lobj4366;
+extern const LevelObject lobj4345;
+extern const LevelObject lobj4346;
+extern const LevelObject lobj4347;
+extern const LevelObject lobj4348;
+extern const LevelObject lobj4349;
+extern const LevelObject lobj4344;
+extern const LevelObject lobj4343;
+extern const LevelObject lobj4342;
+extern const LevelObject lobj4341;
+extern const LevelObject lobj4340;
+extern const LevelObject lobj4352;
+extern const LevelObject lobj4353;
+extern const LevelObject lobj4351;
+extern const LevelObject lobj4350;
+extern const LevelObject lobj4354;
+extern const LevelObject lobj4356;
+extern const LevelObject lobj4355;
+extern const LevelObject lobj4357;
+extern const LevelObject lobj4358;
+extern const LevelObject lobj4362;
+extern const LevelObject lobj4360;
+extern const LevelObject lobj4365;
+extern const LevelObject lobj4364;
+extern const LevelObject lobj4363;
+extern const LevelObject lobj4361;
+extern const LevelObject lobj4359;
 extern const LevelObject lobj3200;
 const LevelObject lobj3178 = {
     .definition = &defWaspBoss,
     .x = 128, .y = 440,
     .palette = 0,
     .animInd = 0, .flags = 0,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4378 = {
+    .definition = &defBGFragment,
+    .x = 168, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4376 = {
+    .definition = &defBGFragment,
+    .x = 152, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4381 = {
+    .definition = &defBGFragment,
+    .x = 136, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4379 = {
+    .definition = &defBGFragment,
+    .x = 120, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4380 = {
+    .definition = &defBGFragment,
+    .x = 120, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4377 = {
+    .definition = &defBGFragment,
+    .x = 104, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4375 = {
+    .definition = &defBGFragment,
+    .x = 88, .y = 436,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4371 = {
+    .definition = &defBGFragment,
+    .x = 176, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4373 = {
+    .definition = &defBGFragment,
+    .x = 176, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4369 = {
+    .definition = &defBGFragment,
+    .x = 160, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4367 = {
+    .definition = &defBGFragment,
+    .x = 144, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4374 = {
+    .definition = &defBGFragment,
+    .x = 128, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4372 = {
+    .definition = &defBGFragment,
+    .x = 112, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4370 = {
+    .definition = &defBGFragment,
+    .x = 112, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4368 = {
+    .definition = &defBGFragment,
+    .x = 96, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4366 = {
+    .definition = &defBGFragment,
+    .x = 80, .y = 420,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4345 = {
+    .definition = &defBGFragment,
+    .x = 184, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4346 = {
+    .definition = &defBGFragment,
+    .x = 168, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4347 = {
+    .definition = &defBGFragment,
+    .x = 168, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4348 = {
+    .definition = &defBGFragment,
+    .x = 152, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4349 = {
+    .definition = &defBGFragment,
+    .x = 136, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4344 = {
+    .definition = &defBGFragment,
+    .x = 120, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4343 = {
+    .definition = &defBGFragment,
+    .x = 104, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4342 = {
+    .definition = &defBGFragment,
+    .x = 104, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4341 = {
+    .definition = &defBGFragment,
+    .x = 88, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4340 = {
+    .definition = &defBGFragment,
+    .x = 72, .y = 404,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4352 = {
+    .definition = &defBGFragment,
+    .x = 176, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4353 = {
+    .definition = &defBGFragment,
+    .x = 176, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4351 = {
+    .definition = &defBGFragment,
+    .x = 160, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4350 = {
+    .definition = &defBGFragment,
+    .x = 144, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4354 = {
+    .definition = &defBGFragment,
+    .x = 128, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4356 = {
+    .definition = &defBGFragment,
+    .x = 112, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4355 = {
+    .definition = &defBGFragment,
+    .x = 112, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4357 = {
+    .definition = &defBGFragment,
+    .x = 96, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4358 = {
+    .definition = &defBGFragment,
+    .x = 80, .y = 388,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4362 = {
+    .definition = &defBGFragment,
+    .x = 168, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4360 = {
+    .definition = &defBGFragment,
+    .x = 152, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4365 = {
+    .definition = &defBGFragment,
+    .x = 136, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4364 = {
+    .definition = &defBGFragment,
+    .x = 120, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4363 = {
+    .definition = &defBGFragment,
+    .x = 120, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4361 = {
+    .definition = &defBGFragment,
+    .x = 104, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
+    .group = &waspboss, .path = 0,
+    .pathIndex = 0, .child = 0, .interval = 0
+};
+const LevelObject lobj4359 = {
+    .definition = &defBGFragment,
+    .x = 88, .y = 372,
+    .palette = 0,
+    .animInd = 0, .flags = 32768,
     .group = &waspboss, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
 };
@@ -12080,11 +12458,53 @@ const LevelObject lobj3200 = {
 };
 static const LevelObject *waspboss_objects[] = {
     &lobj3178,
+    &lobj4378,
+    &lobj4376,
+    &lobj4381,
+    &lobj4379,
+    &lobj4380,
+    &lobj4377,
+    &lobj4375,
+    &lobj4371,
+    &lobj4373,
+    &lobj4369,
+    &lobj4367,
+    &lobj4374,
+    &lobj4372,
+    &lobj4370,
+    &lobj4368,
+    &lobj4366,
+    &lobj4345,
+    &lobj4346,
+    &lobj4347,
+    &lobj4348,
+    &lobj4349,
+    &lobj4344,
+    &lobj4343,
+    &lobj4342,
+    &lobj4341,
+    &lobj4340,
+    &lobj4352,
+    &lobj4353,
+    &lobj4351,
+    &lobj4350,
+    &lobj4354,
+    &lobj4356,
+    &lobj4355,
+    &lobj4357,
+    &lobj4358,
+    &lobj4362,
+    &lobj4360,
+    &lobj4365,
+    &lobj4364,
+    &lobj4363,
+    &lobj4361,
+    &lobj4359,
     &lobj3200
 };
 LevelObjectGroup waspboss = {
     .numPaths = 10, .paths = waspboss_paths,
-    .numObjects = 2, .objects = waspboss_objects
+    .numObjects = 44, .objects = waspboss_objects
 };
 const Trigger stage_caravan_triggers[] = {
 /*   0 */ { .group = &room1ants1, .action = unpauseTimer, .count = 0, .x = -48, .y = 3976 },

@@ -24,6 +24,7 @@ extern GameObjectDefinition defAntHole;
 extern GameObjectDefinition defBeetle;
 extern GameObjectDefinition defWaspShooter;
 extern GameObjectDefinition defWaspBoss;
+extern GameObjectDefinition defBGFragment;
 void unpauseTimer(const Trigger *trigger);
 void spawnCharacters(const Trigger *trigger);
 void spawnNextCharacters(const Trigger *trigger);
