@@ -375,6 +375,7 @@ GameObjectDefinition defBGFragment = {
     .spriteDepth = -20,
     .palette = &palPlayerAndBG,
     .defeatSoundDef = &sndBreakPot,
+    .corpseDef = &defHoneyBlood,
     .bodyW = FIX16(8), .bodyH = FIX16(8),
     .init = GOBJ_initExplosionFragment,
     .update = GOBJ_updateFaller,
