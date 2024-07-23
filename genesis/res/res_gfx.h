@@ -36,5 +36,6 @@ extern const SpriteDefinition sprAntHole;
 extern const SpriteDefinition sprBGFragment;
 extern const SpriteDefinition sprWaspBoss;
 extern const SpriteDefinition sprWaspEgg;
+extern const SpriteDefinition sprBonusLetter;
 
 #endif // _RES_RES_GFX_H_

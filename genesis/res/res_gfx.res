@@ -42,3 +42,5 @@ SPRITE sprAntHole "enemy/AntHole.png" 2 3
 SPRITE sprBGFragment "enemy/BGFragment.png" 2 3 NONE 3
 SPRITE sprWaspBoss "enemy/WaspBoss.png" 16 16 NONE 3
 SPRITE sprWaspEgg "enemy/WaspEgg.png" 1 1 NONE 3
+
+SPRITE sprBonusLetter "enemy/BonusLetters.png" 2 2
