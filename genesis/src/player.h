@@ -15,6 +15,7 @@ typedef struct PlayerObject {
     GameObject;
     u8 weapon, lives;
     u16 buttonsPressed;
+    u16 stingTimer;
 } PlayerObject;
 
 void PLAYER_init(PlayerObject *self);

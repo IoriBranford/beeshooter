@@ -30,6 +30,8 @@ const u8 POWERUP_INVUL = 60;
 const u8 MERCY_INVUL = 60;
 #define BULLETSPEED FIX16(16)
 #define BULLETDIAGONALSPEED FIX16(0.707106781 * 16)
+#define STING_OFFSET_Y FIX16(12)
+#define STING_INTERVAL 3
 
 extern GameObjectDefinition
     defPlayer,
@@ -223,6 +225,10 @@ void PLAYER_updatePlay(PlayerObject *self) {
         self->invulTimer--;
         SPR_setVisibility(self->sprite, (self->invulTimer & 1) ? HIDDEN : VISIBLE);
     }
+    if (!--self->stingTimer) {
+        self->stingTimer = STING_INTERVAL;
+        GOBJ_createFromDef(&defPlayerSting, self->centerX, self->centerY + STING_OFFSET_Y);
+    }
     PLAYER_joyUpdateHeld(self, JOY_readJoypad(JOY_1));
     PLAYER_joyUpdatePressed(self);
     GOBJ_updateSprite((GameObject*)self);
@@ -234,6 +240,7 @@ void PLAYER_updateEnter(PlayerObject *self) {
     self->centerY += ENTERVELY;
     if (self->centerY <= STARTFIGHTY) {
         self->centerY = STARTFIGHTY;
+        self->stingTimer = STING_INTERVAL;
         self->update = (ObjectCallback*)PLAYER_updatePlay;
     }
     GOBJ_updateSprite((GameObject*)self);

@@ -47,6 +47,13 @@ GameObjectDefinition defPlayerShot = {
     .corpseDef = &defHit,
     .update = BULLET_update
 };
+GameObjectDefinition defPlayerSting = {
+    .teams = 1<<TEAM_PLAYERSHOT,
+    .health = 1,
+    .bodyW = FIX16(1),
+    .bodyH = FIX16(1),
+    .update = GAME_releaseObject
+};
 GameObjectDefinition defHoneyBlood = {
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,

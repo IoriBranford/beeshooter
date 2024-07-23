@@ -40,6 +40,7 @@ u16 GOBJDEF_loadBossFrames(u16 tileIndex);
 u16 GOBJDEF_freeBossFrames();
 
 extern GameObjectDefinition
+    defPlayerSting,
     defPlayerBlood,
     defBloodSmall,
     defBloodMedium,
