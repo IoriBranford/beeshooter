@@ -3,12 +3,13 @@
 
 #include "level.h"
 
-#define stage_caravan_numTriggers (220)
+#define stage_caravan_numTriggers (225)
 extern const Trigger stage_caravan_triggers[];
 
-#define stage_caravan_numGroups (105)
+#define stage_caravan_numGroups (106)
 extern LevelObjectGroup *stage_caravan_groups[];
 
+extern GameObjectDefinition defBonusLetter;
 extern GameObjectDefinition defAnt;
 extern GameObjectDefinition defHoneyPot;
 extern GameObjectDefinition defFly;

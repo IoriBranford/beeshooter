@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="398" nextobjectid="4382">
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="399" nextobjectid="4392">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
@@ -17,6 +17,7 @@
  <tileset firstgid="576" source="tilesets/Tick.tsx"/>
  <tileset firstgid="578" source="tilesets/WaspEgg.tsx"/>
  <tileset firstgid="581" source="tilesets/BGFragment.tsx"/>
+ <tileset firstgid="585" source="tilesets/BonusLetters.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -4181,6 +4182,18 @@ self.speed = 0.75</property>
   </group>
  </group>
  <group id="231" name="stagemd">
+  <objectgroup id="398" name="bonusLetters">
+   <object id="4382" name="H" type="BonusLetter" gid="585" x="40" y="3840" width="16" height="16"/>
+   <object id="4383" template="triggers/SpawnNextCharacters.tx" x="-60" y="3848"/>
+   <object id="4384" name="O" type="BonusLetter" gid="586" x="192" y="3056" width="16" height="16"/>
+   <object id="4385" template="triggers/SpawnNextCharacters.tx" x="-4" y="3064"/>
+   <object id="4386" name="N" type="BonusLetter" gid="587" x="24" y="2432" width="16" height="16"/>
+   <object id="4387" template="triggers/SpawnNextCharacters.tx" x="-28" y="2440"/>
+   <object id="4388" name="E" type="BonusLetter" gid="588" x="72" y="1648" width="16" height="16"/>
+   <object id="4389" template="triggers/SpawnNextCharacters.tx" x="-144" y="1656"/>
+   <object id="4390" name="Y" type="BonusLetter" gid="589" x="184" y="800" width="16" height="16"/>
+   <object id="4391" template="triggers/SpawnNextCharacters.tx" x="-48" y="808"/>
+  </objectgroup>
   <objectgroup id="233" name="room1ants1">
    <object id="2180" template="triggers/SpawnCharacters.tx" x="-32" y="3976"/>
    <object id="3575" template="triggers/UnpauseTimer.tx" type="Trigger" x="-48" y="3976"/>
