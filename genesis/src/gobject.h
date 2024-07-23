@@ -108,6 +108,7 @@ void GOBJ_init(GameObject *self);
 void GOBJ_initSprite(GameObject *self);
 void GOBJ_updateSprite(GameObject *self);
 void GOBJ_releaseSprite(GameObject *self);
+void GOBJ_initExplosionFragment(GameObject *self);
 
 void GOBJ_dealDamage(GameObject *self, u16 damage);
 void GOBJ_defeat(GameObject *self);

@@ -545,3 +545,17 @@ void GOBJ_updateSpark(GameObject *self) {
     if (SPR_getAnimationWillBeDone(self->sprite))
         GAME_releaseObject(self);
 }
+
+#define FORCE_Y FIX16(8)
+#define EXPLOSION_X (GAME_BOUNDW>>1)
+#define EXPLOSION_Y (GAME_BOUNDH)
+
+void GOBJ_initExplosionFragment(GameObject *self) {
+    GOBJ_setRandomFrame(self);
+    self->velX = (self->centerX - EXPLOSION_X)>>6;
+    self->velY = (self->centerY - EXPLOSION_Y)>>4;
+    if (self->velY <= 0)
+        self->velY = min(0, -FORCE_Y - self->velY);
+    else
+        self->velY = max(0, FORCE_Y - self->velY);
+}

@@ -360,6 +360,17 @@ GameObjectDefinition defWaspShooter = {
     .bulletDef = &defWaspBullet,
     .shootFunction = ENEMY_shootAtPlayer
 };
+GameObjectDefinition defBGFragment = {
+    .teams = 1<<TEAM_ENEMY,
+    .health = 1,
+    .spriteDef = &sprBGFragment,
+    .spriteDepth = -20,
+    .palette = &palPlayerAndBG,
+    .defeatSoundDef = &sndBreakPot,
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
+    .init = GOBJ_initExplosionFragment,
+    .update = GOBJ_updateFaller,
+};
 GameObjectDefinition defWaspBoss = {
     .teams = 1<<TEAM_ENEMY | 1<<TEAM_ENEMYSHOT,
     .speed = FIX16(4),
@@ -436,9 +447,10 @@ GameObjectDefinition *part2defs[6] = {
     &defAntHole
 };
 
-GameObjectDefinition *bossdefs[4] = {
+GameObjectDefinition *bossdefs[5] = {
     &defWaspBoss,
     &defFlyBullet,
+    &defBGFragment,
     &defWaspEgg,
     &defWaspHatch,
 };
