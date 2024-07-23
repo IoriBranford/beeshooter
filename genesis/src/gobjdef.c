@@ -47,6 +47,13 @@ GameObjectDefinition defPlayerShot = {
     .corpseDef = &defHit,
     .update = BULLET_update
 };
+GameObjectDefinition defHoneyBlood = {
+    .spriteDef = &sprBloodSmall,
+    .spriteDepth = -50,
+    .palette = &palPlayerAndBG,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateSpark
+};
 GameObjectDefinition defBloodSmall = {
     .spriteDef = &sprBloodSmall,
     .spriteDepth = -50,
@@ -416,7 +423,20 @@ GameObjectDefinition defWaspHatch = {
     .update = ENEMY_updateWaspHatching,
     .onDefeat = ENEMY_defeatBossChild
 };
-GameObjectDefinition *commondefs[7] = {
+GameObjectDefinition defBonusLetter = {
+    .teams = 1<<TEAM_ENEMY,
+    .health = 30,
+    .spriteDef = &sprBonusLetter,
+    .spriteDepth = -1,
+    .palette = &palPlayerAndBG,
+    .bodyW = FIX16(8), .bodyH = FIX16(8),
+    .corpseDef = &defHoneyBlood,
+    .init = ENEMY_initBonusLetter,
+    .update = ENEMY_updateBonusLetter,
+    .onDefeat = ENEMY_defeatBonusLetter
+};
+
+GameObjectDefinition *commondefs[8] = {
     &defPlayer,
     &defPlayerShot,
     &defHit,
@@ -425,6 +445,7 @@ GameObjectDefinition *commondefs[7] = {
     &defPowerup,
     &defHoneyPot,
     // &defPlayerBlood,
+    &defBonusLetter
 };
 
 GameObjectDefinition *part1defs[8] = {
@@ -490,6 +511,7 @@ u16 GOBJDEF_loadCommonFrames(u16 tileIndex) {
     defAcidBloodMedium.aniFrameTiles = defBloodMedium.aniFrameTiles;
     defPlayerBlood.aniFrameTiles = defBloodMedium.aniFrameTiles;
     defReinforcedHoneyPot.aniFrameTiles = defHoneyPot.aniFrameTiles;
+    defHoneyBlood.aniFrameTiles = defBloodSmall.aniFrameTiles;
     return tileIndex;
 }
 
@@ -501,6 +523,7 @@ void GOBJDEF_freeCommonFrames() {
     defAcidBloodMedium.aniFrameTiles = NULL;
     defPlayerBlood.aniFrameTiles = NULL;
     defReinforcedHoneyPot.aniFrameTiles = NULL;
+    defHoneyBlood.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(commondefs) / sizeof(GameObjectDefinition*), commondefs);
 }
 
