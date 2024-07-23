@@ -68,22 +68,22 @@ void HUD_updateResult(GameResult result) {
 }
 
 void HUD_updateScore(u32 score) {
-    bcdsnprint(string, 7, u32ToBCD(score));
+    bcdsnprint(string, 7, u32ToBCD(score), '0');
     VDP_drawText(string, 8, 1);
 }
 
 void HUD_updateTimerMinutes(u16 minutes) {
-    bcdsnprint(string, 1, u16ToBCD(minutes));
+    bcdsnprint(string, 1, u16ToBCD(minutes), ' ');
     VDP_drawText(string, 17, 1);
 }
 
 void HUD_updateTimerSeconds(u16 seconds) {
-    bcdsnprint(string, 2, u16ToBCD(seconds));
+    bcdsnprint(string, 2, u16ToBCD(seconds), ' ');
     VDP_drawText(string, 19, 1);
 }
 
 void HUD_updateTimerFrames(u16 frames) {
-    bcdsnprint(string, 2, u16ToBCD(frames));
+    bcdsnprint(string, 2, u16ToBCD(frames), ' ');
     VDP_drawText(string, 22, 1);
 }
 
@@ -139,7 +139,7 @@ void HUD_updateSpeed(fix16 speed) {
 void HUD_initBonus(u16 points) {
     bonusTimer = 120;
     VDP_drawText("BONUS!", 3, 3);
-    bcdsnprint(string, 5, u16ToBCD(points));
+    bcdsnprint(string, 5, u16ToBCD(points), ' ');
     VDP_drawText(string, 10, 3);
 }
 

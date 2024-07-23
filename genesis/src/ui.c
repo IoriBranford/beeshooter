@@ -1,11 +1,19 @@
 #include "ui.h"
 #include <genesis.h>
 
-void bcdsnprint(char *s, u32 n, u32 bcd) {
+void bcdsnprint(char *s, u32 n, u32 bcd, char pad) {
     s[n] = '\0';
-    for (int i = n-1; i >= 0; --i) {
-        s[i] = '0' + (bcd & 0xF);
-        bcd >>= 4;
+    int i = n-1;
+    if (bcd) {
+        for (; bcd && i >= 0; --i) {
+            s[i] = '0' + (bcd & 0xF);
+            bcd >>= 4;
+        }
+    } else {
+        s[i--] = '0';
+    }
+    for (; i >= 0; --i) {
+        s[i] = pad;
     }
 }
 

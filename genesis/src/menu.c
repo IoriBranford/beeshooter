@@ -339,7 +339,7 @@ void drawHighScore(u8 x, u8 y, u8 rank, const HighScore *score, bool flashing) {
     memcpy(nameString, (const char*)&score->name, HISCORE_NAME_LENGTH);
     string[HISCORE_NAME_START+HISCORE_NAME_LENGTH] = ' ';
     char *scoreString = &string[HISCORE_SCORE_START];
-    bcdsnprint(scoreString, HISCORE_SCORE_LENGTH, score->bcdPoints);
+    bcdsnprint(scoreString, HISCORE_SCORE_LENGTH, score->bcdPoints, ' ');
 
     if (flashing)
         drawFlashingText(string, x, y);
