@@ -2,6 +2,7 @@
 #include "gameplay.h"
 #include "gobject.h"
 #include "gobjdef.h"
+#include "enemy.h"
 #include "sounddef.h"
 #include "userdata.h"
 #include "menu.h"
@@ -305,6 +306,8 @@ int gameplay() {
     PLAYER_init(&player);
     JOY_setEventHandler(gameplay_joyEvent);
 
+    ENEMY_resetLetterBonus();
+    
     gobjPool = OBJ_createObjectPool(80, sizeof(GameObject));
     score = lastFrameScore = 0;
     extendScoreIndex = 0;

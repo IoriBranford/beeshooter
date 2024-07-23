@@ -10,6 +10,18 @@
 
 #define EGG_HATCH_TIME 45
 
+#define NUM_BONUS_LETTERS 5
+
+static u16 LETTER_BONUSES[] = {
+    2500,
+    5000,
+    10000,
+    25000,
+    50000
+};
+
+static u8 nextLetterBonusIndex = 0;
+
 void ENEMY_shootAtPlayer(GameObject *self) {
     const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
     GameObject *player = (GameObject*)GAME_livePlayer();
@@ -220,4 +232,30 @@ void ENEMY_updateWaspHatching(GameObject *self) {
         SPR_setAnim(self->sprite, ANI_WASP_FLY);
         ENEMY_chargeAtPlayer(self);
     }
+}
+
+void ENEMY_resetLetterBonus() {
+    nextLetterBonusIndex = 0;
+}
+
+void ENEMY_initBonusLetter(GameObject *self) {
+    GOBJ_initSprite(self);
+    SPR_setFrame(self->sprite, nextLetterBonusIndex);
+}
+
+void ENEMY_updateBonusLetter(GameObject *self) {
+    u16 maxHealth = self->definition->health;
+    if (self->health == maxHealth) {
+        SPR_setVisibility(self->sprite, HIDDEN);
+    } else {
+        u32 thisFrame = getTick()/5;
+        SPR_setVisibility(self->sprite, thisFrame % self->health == 0 ? VISIBLE : HIDDEN);
+    }
+    GOBJ_updateIdleOnStage(self);
+}
+
+void ENEMY_defeatBonusLetter(GameObject *self) {
+    GOBJ_defaultDefeatAction(self);
+    if (nextLetterBonusIndex < NUM_BONUS_LETTERS)
+        GAME_giveBonus(LETTER_BONUSES[nextLetterBonusIndex++]);
 }

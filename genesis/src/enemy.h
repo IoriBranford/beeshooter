@@ -29,4 +29,9 @@ void ENEMY_updateWaspHatching(GameObject *self);
 void ENEMY_defeatBossChild(GameObject *self);
 void BOSS_onDefeat(GameObject *self);
 
+void ENEMY_resetLetterBonus();
+void ENEMY_initBonusLetter(GameObject *self);
+void ENEMY_updateBonusLetter(GameObject *self);
+void ENEMY_defeatBonusLetter(GameObject *self);
+
 #endif
