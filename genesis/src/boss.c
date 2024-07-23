@@ -153,9 +153,25 @@ void BOSS_updateDefeat(GameObject *self) {
             GOBJ_createFromDef(&defAcidBloodSmall, self->bodyX0 + (random() % width), self->bodyY0 + (random() % height));
         }
     } else {
+        fix16 x = self->centerX, y = self->centerY;
+        bool hflip = (self->sprite->attribut & TILE_ATTR_HFLIP_MASK) != 0;
         SND_playDef(&sndBossKill);
-        GOBJ_createFromDef(&defAcidBloodMedium, self->centerX, self->centerY);
         GAME_releaseObject(self);
+        GOBJ_createFromDef(&defAcidBloodMedium, x, y);
+        fix16 pieceVelX = FIX16(-2.5);
+        fix16 pieceAccelX = FIX16(1);
+        if (hflip) {
+            pieceAccelX = -pieceAccelX;
+            pieceVelX = -pieceVelX;
+        }
+        for (s16 anim = ANI_WASPBOSS_PIECE0; anim <= ANI_WASPBOSS_PIECE4; ++anim) {
+            GameObject *piece = GOBJ_createFromDef(&defWaspBossPiece, x, y);
+            SPR_setAnim(piece->sprite, anim);
+            SPR_setHFlip(piece->sprite, hflip);
+            piece->velX = pieceVelX;
+            piece->velY = FIX16(-3) - abs(pieceVelX);
+            pieceVelX += pieceAccelX;
+        }
         PlayerObject *player = GAME_player();
         PLAYER_startEndBonusTally(player);
         return;
