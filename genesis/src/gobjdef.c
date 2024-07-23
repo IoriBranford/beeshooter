@@ -423,6 +423,14 @@ GameObjectDefinition defWaspHatch = {
     .update = ENEMY_updateWaspHatching,
     .onDefeat = ENEMY_defeatBossChild
 };
+GameObjectDefinition defWaspBossPiece = {
+    .spriteDef = &sprWaspBoss,
+    .spriteDepth = -50,
+    .palette = &palWaspAndHoney,
+    .init = GOBJ_initSprite,
+    .update = GOBJ_updateFaller,
+    .bodyW = FIX16(64), .bodyH = FIX16(64),
+};
 GameObjectDefinition defBonusLetter = {
     .teams = 1<<TEAM_ENEMY,
     .health = 30,
@@ -564,12 +572,14 @@ u16 GOBJDEF_freePart2EnemyFrames() {
 u16 GOBJDEF_loadBossFrames(u16 tileIndex) {
     levelObjectTileStart = tileIndex;
     tileIndex = GOBJDEF_loadSpriteFrames(tileIndex, sizeof(bossdefs) / sizeof(GameObjectDefinition*), bossdefs);
+    defWaspBossPiece.aniFrameTiles = defWaspBoss.aniFrameTiles;
     defWaspShooter.aniFrameTiles = defWaspHatch.aniFrameTiles;
     defPlayerShot.corpseDef = &defAcidHit;
     return tileIndex;
 }
 
 u16 GOBJDEF_freeBossFrames() {
+    defWaspBossPiece.aniFrameTiles = NULL;
     defWaspShooter.aniFrameTiles = NULL;
     GOBJDEF_freeSpriteFrames(sizeof(bossdefs) / sizeof(GameObjectDefinition*), bossdefs);
     return levelObjectTileStart;

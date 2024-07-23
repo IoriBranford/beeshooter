@@ -59,6 +59,7 @@ extern GameObjectDefinition
     defAlienPillager,
     defAcidAntBullet,
     defBeetleBullet,
+    defWaspBossPiece,
     defWaspEgg,
     defWaspHatch;
 
