@@ -180,7 +180,7 @@ void MENU_moveCursor(const Menu *menu, s8 dy) {
 static void drawMultiLine(const char *s, u8 x, u8 y, u8 dy) {
     char *out = string;
     dy = max(1, dy);
-    for (char *c = s; *c; ++c) {
+    for (const char *c = s; *c; ++c) {
         if (*c == '\n') {
             *out = '\0';
             VDP_drawText(string, x, y);
