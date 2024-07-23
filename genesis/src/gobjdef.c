@@ -363,6 +363,7 @@ GameObjectDefinition defWaspShooter = {
 GameObjectDefinition defBGFragment = {
     .teams = 1<<TEAM_ENEMY,
     .health = 1,
+    .defeatPoints = 250,
     .spriteDef = &sprBGFragment,
     .spriteDepth = -20,
     .palette = &palPlayerAndBG,
