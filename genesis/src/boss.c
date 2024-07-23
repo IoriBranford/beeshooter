@@ -139,7 +139,7 @@ void BOSS_chargeAndLayEggs(GameObject *self) {
 
 void ENEMY_defeatBossChild(GameObject *self) {
     if (numChildren && !--numChildren)
-        GOBJ_createFromDef(&defTimeExtendPowerup, self->centerX, self->centerY);
+        GOBJ_createFromDef(&defPowerup, self->centerX, self->centerY);
     GOBJ_defaultDefeatAction(self);
 }
 
