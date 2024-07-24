@@ -25,8 +25,8 @@ void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input);
 void doDataReset(const Menu *menu, const MenuItem *item, u16 input);
 
 const Menu MAIN_MENU = {
-    .x = 4, .y = 14,
-    .name = "HONEY SOLDIER MD",
+    .x = 2, .y = 14,
+    .name = "HONEY SOLDIER MD\n\n\n\n\n\n(C) 2022-2024 IORI BRANFORD",
     .length = 3,
     .items = {
         {
