@@ -5,20 +5,20 @@
 
 typedef struct Menu Menu;
 typedef struct MenuItem MenuItem;
-typedef void (*MenuAction)(const Menu *menu, const MenuItem *item, u16 input);
+typedef void (*MenuInput)(const Menu *menu, const MenuItem *item, u16 pressed, u16 down);
 typedef void (*MenuUpdate)(const Menu *menu, const MenuItem *item);
 
 struct MenuItem {
     u8 x, y;
     const char *name;
-    MenuAction activateAction;
-    MenuAction moveAction;
+    MenuInput activateAction;
+    MenuInput moveAction;
 };
 
 struct Menu {
     u8 x, y;
     const char *name;
-    MenuAction inputAction;
+    MenuInput inputAction;
     MenuUpdate update;
     u16 length;
     MenuItem items[];

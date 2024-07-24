@@ -6,7 +6,7 @@
 
 static bool waitingToStart;
 
-void startGame(const Menu *menu, const MenuItem *item, u16 input) {
+void startGame(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     waitingToStart = false;
     SND_playDef(&sndExtend);
 }

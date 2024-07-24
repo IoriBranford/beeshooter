@@ -7,22 +7,22 @@
 #include "res_gfx.h"
 #include "sounddef.h"
 
-void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input);
-void startGame(const Menu *menu, const MenuItem *item, u16 input);
-void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
-void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 input);
-void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input);
+void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void startGame(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
 
-void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input);
-void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input);
+void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
 void MENU_updateHighScoreEntry(const Menu *menu, const MenuItem *item);
 
-void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input);
-void askDataReset(const Menu *menu, const MenuItem *item, u16 input);
-void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 input);
-void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input);
+void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void askDataReset(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
+void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
 
-void doDataReset(const Menu *menu, const MenuItem *item, u16 input);
+void doDataReset(const Menu *menu, const MenuItem *item, u16 pressed, u16 held);
 
 const Menu MAIN_MENU = {
     .x = 2, .y = 14,
@@ -212,29 +212,29 @@ void MENU_show(const Menu *menu) {
     MENU_moveCursor(menu, 0);
 }
 
-void MENU_moveMenuItem(const Menu *menu, const MenuItem *item, u16 input) {
-    MenuAction moveAction = item->moveAction;
+void MENU_moveMenuItem(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    MenuInput moveAction = item->moveAction;
     if (moveAction)
-        moveAction(menu, item, input);
+        moveAction(menu, item, pressed, held);
 }
 
-void MENU_activateMenuItem(const Menu *menu, const MenuItem *item, u16 input) {
-    MenuAction activateAction = item->activateAction;
+void MENU_activateMenuItem(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    MenuInput activateAction = item->activateAction;
     if (activateAction)
-        activateAction(menu, item, input);
+        activateAction(menu, item, pressed, held);
 }
 
-void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 input) {
-    if (input & BUTTON_UP)
+void MENU_defaultInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    if (pressed & BUTTON_UP)
         MENU_moveCursor(menu, -1);
-    if (input & BUTTON_DOWN)
+    if (pressed & BUTTON_DOWN)
         MENU_moveCursor(menu, 1);
-    if (input & (BUTTON_LEFT|BUTTON_RIGHT)) {
-        MENU_moveMenuItem(menu, item, input);
+    if (pressed & (BUTTON_LEFT|BUTTON_RIGHT)) {
+        MENU_moveMenuItem(menu, item, pressed, held);
     }
-    if (input & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START))
-        MENU_activateMenuItem(menu, item, input);
-    if (input & (BUTTON_UP|BUTTON_DOWN))
+    if (pressed & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START))
+        MENU_activateMenuItem(menu, item, pressed, held);
+    if (pressed & (BUTTON_UP|BUTTON_DOWN))
         SND_playDef(&sndEnemyShot);
 }
 
@@ -243,20 +243,20 @@ void MENU_joyEvent(u16 joy, u16 button, u16 state) {
         return;
     u16 press = button & state;
     if (press) {
-        MenuAction inputAction = currentMenu->inputAction;
+        MenuInput inputAction = currentMenu->inputAction;
         if (!inputAction)
             inputAction = MENU_defaultInput;
-        inputAction(currentMenu, &currentMenu->items[cursorPos], state);
+        inputAction(currentMenu, &currentMenu->items[cursorPos], button, state);
     }
 }
 
-void showMainMenu(const Menu *menu, const MenuItem *item, u16 input) {
+void showMainMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&MAIN_MENU);
 }
 
-void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 input) {
-    showMainMenu(menu, item, input);
+void returnToMainMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    showMainMenu(menu, item, pressed, held);
     SND_playDef(&sndChangeSpeedSlow);
 }
 
@@ -293,38 +293,38 @@ void MENU_showButtonConfig(const Menu *menu, const MenuItem *item, u16 config) {
     }
 }
 
-void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
+void showOptionsMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&OPTIONS_MENU);
     MENU_showButtonConfig(&OPTIONS_MENU, OPTIONS_BUTTON_CONFIG_ITEM, GJOY_getConfig());
 }
 
-void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
-    showOptionsMenu(menu, item, input);
+void enterOptionsMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    showOptionsMenu(menu, item, pressed, held);
     SND_playDef(&sndChangeSpeedFast);
 }
 
-void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 input) {
-    showOptionsMenu(menu, item, input);
+void returnToOptionsMenu(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    showOptionsMenu(menu, item, pressed, held);
     SND_playDef(&sndChangeSpeedSlow);
 }
 
-void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 input) {
+void changeButtonConfig(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     u16 config = GJOY_getConfig();
-    if (input & BUTTON_LEFT)
+    if (pressed & BUTTON_LEFT)
         config = GJOY_changeConfig(-1);
-    if (input & BUTTON_RIGHT)
+    if (pressed & BUTTON_RIGHT)
         config = GJOY_changeConfig(1);
-    if (input & (BUTTON_LEFT|BUTTON_RIGHT)) {
+    if (pressed & (BUTTON_LEFT|BUTTON_RIGHT)) {
         SND_playDef(&sndChangeWeapon);
         MENU_showButtonConfig(menu, item, config);
         USERDATA_saveButtonConfig(config);
     }
 }
 
-void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 input) {
-    if (input & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START)) {
-        showMainMenu(NULL, NULL, 0);
+void MENU_highScoreTableInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    if (pressed & (BUTTON_A|BUTTON_B|BUTTON_C|BUTTON_START)) {
+        showMainMenu(NULL, NULL, 0, 0);
         SND_playDef(&sndChangeSpeedSlow);
     }
 }
@@ -357,7 +357,7 @@ void drawHighScores(u8 x, u8 y, u8 dy, u8 flashingRank) {
     }
 }
 
-void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input) {
+void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&HISCORES_TABLE);
     SND_playDef(&sndChangeSpeedFast);
@@ -368,23 +368,23 @@ void showHighScoreTable(const Menu *menu, const MenuItem *item, u16 input) {
     drawHighScores(menu->x + item->x, menu->y + item->y, item->y, 0);
 }
 
-void askDataReset(const Menu *menu, const MenuItem *item, u16 input) {
+void askDataReset(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     VDP_clearTextArea(0, 0, 32, 28);
     MENU_show(&RESET_DATA_MENU);
     SND_playDef(&sndChangeSpeedFast);
 }
 
-void doDataReset(const Menu *menu, const MenuItem *item, u16 input) {
+void doDataReset(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     USERDATA_reset();
     SND_playDef(&sndBugKill2);
-    showOptionsMenu(NULL, NULL, 0);
+    showOptionsMenu(NULL, NULL, 0, 0);
 }
 
-void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 input) {
-    if (input == DATA_RESET_BUTTONS) {
-        doDataReset(menu, item, input);
-    } else if (input & (~DATA_RESET_BUTTONS | BUTTON_START)) {
-        returnToOptionsMenu(menu, item, input);
+void MENU_dataResetInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
+    if (held == DATA_RESET_BUTTONS) {
+        doDataReset(menu, item, 0, 0);
+    } else if (pressed & (~DATA_RESET_BUTTONS | BUTTON_START)) {
+        returnToOptionsMenu(menu, item, 0, 0);
     }
 }
 
@@ -452,9 +452,9 @@ void MENU_showHighScoreEntry(u8 rank) {
     }
 }
 
-void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input) {
+void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 pressed, u16 held) {
     if (tickWhenHighScoreEntryDone) {
-        if (input & (BUTTON_START))
+        if (pressed & (BUTTON_START))
             GAME_close();
         return;
     }
@@ -464,19 +464,19 @@ void MENU_highScoreEntryInput(const Menu *menu, const MenuItem *item, u16 input)
     u8 nameX = menu->x + HISCORE_NAME_START;
     u8 nameY = menu->y + item->y*(highScoreRank-1);
 
-    if (input & BUTTON_LEFT)
+    if (pressed & BUTTON_LEFT)
         moveNameCursor(nameX, nameY, -1);
-    if (input & BUTTON_RIGHT)
+    if (pressed & BUTTON_RIGHT)
         moveNameCursor(nameX, nameY, 1);
-    if (input & BUTTON_UP)
+    if (pressed & BUTTON_UP)
         changeLetter(nameX, nameY, cursorPos, -1, false);
-    if (input & BUTTON_DOWN)
+    if (pressed & BUTTON_DOWN)
         changeLetter(nameX, nameY, cursorPos, 1, false);
-    if (input & (BUTTON_UP|BUTTON_DOWN))
+    if (pressed & (BUTTON_UP|BUTTON_DOWN))
         SND_playDef(&sndChangeWeapon);
-    if (input & (BUTTON_LEFT|BUTTON_RIGHT))
+    if (pressed & (BUTTON_LEFT|BUTTON_RIGHT))
         SND_playDef(&sndEnemyShot);
-    if (input & (BUTTON_START)) {
+    if (pressed & (BUTTON_START)) {
         hideNameCursor(nameX, nameY);
         USERDATA_updateScoreName(highScoreRank-1, highScoreName);
         tickWhenHighScoreEntryDone = getTick();
