@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 . ./make-vars-genesis.sh
 
 MAKE=${MAKE:=make}
 ROM_HEADER=src/boot/rom_head.c
-ROM_HEADER_TITLE=$(printf '%-48s' "${GAME_TITLE^^}")
+GAME_TITLE_UPPER=$(echo "${GAME_TITLE}" | tr [a-z] [A-Z])
+ROM_HEADER_TITLE=$(printf '%-48s' "${GAME_TITLE_UPPER}")
 
 cd genesis
 
