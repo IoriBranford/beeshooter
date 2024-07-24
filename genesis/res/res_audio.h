@@ -19,6 +19,6 @@ extern const u8 wavPowerup[12800];
 extern const u8 wavBonus[25344];
 extern const u8 wavRocksBreak[52224];
 extern const u8 wavBossKill[45056];
-extern const u8 bgm[79616];
+extern const u8 bgm[77824];
 
 #endif // _RES_RES_AUDIO_H_
