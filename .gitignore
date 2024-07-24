@@ -16,6 +16,7 @@ tags
 [._]*.un~
 history.db
 
+*.bin
 *.zip
 *.love
 *.exe
