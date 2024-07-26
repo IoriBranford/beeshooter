@@ -1,8 +1,6 @@
 # Honey Soldier MD Postmortem
 
-## Intro
-
-This is a postmortem of Honey Soldier MD, the port of Honey Guardian to Sega Genesis/Megadrive
+This week I released my first Sega Genesis game, Honey Soldier MD. I want to document my development experience in the hope that it will be useful and inspiring to other developers.
 
 ## Background
 
