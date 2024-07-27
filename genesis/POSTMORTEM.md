@@ -28,7 +28,11 @@ Altogether these tools provided a development experience that studios of the tim
 
 ## The work
 
-Translating game engine and logic from Lua to C
+Lua is not much more complex or feature-rich than C, so the translation of the game code was not too difficult.
+
+The Lua-exclusive features most used in the original code are:
+- The table data structure, a composite of C++'s vector and unordered_map, or JavaScript's array and object, or Python's list and dictionary. Every object in the game is a table.
+- The coroutine. Used for scripted behaviors like the player's death and respawn.
 
 Exporting Tiled map to C code
 
