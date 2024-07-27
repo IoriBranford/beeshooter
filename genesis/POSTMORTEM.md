@@ -8,14 +8,23 @@ Decades ago, my parents bought me a Sega Genesis model 1, my first console. It w
 
 In 2022 I made [Honey Soldier](https://www.ioribranford.com/honeysoldier) for the [Gunner Parade game jam](https://itch.io/jam/gunner-parade-22). The presentation was in my usual "between Genesis and Saturn" style without regard for their actual technical limitations. Still, I had been Genesis-curious for some time, and two years later, I happened to notice SGDK was in version 2.00. As I looked over the many features and conveniences it offered, the idea of porting Honey Soldier began to form.
 
-## Getting started
+## Development environment
 
-Setting up SGDK and tools
-Combined with Aseprite and Tiled, unlocked a development experience that even Sega could have only dreamed of at the time.
+SGDK is provided in source and Windows binary form on [GitHub](https://github.com/Stephane-D/SGDK). Its key components are a resource compiling tool and a C API and toolchain.
 
-Starting the project
+On Windows, it is easily installed by following the [wiki](https://github.com/Stephane-D/SGDK/wiki) instructions. For Linux, there is [MARSDEV](https://github.com/andwn/marsdev), a cross-platform toolchain which has the option to build SGDK and should work on Mac OS as well.
 
-Tools used
+For working in VS Code, there is the extension [Genesis Code](https://marketplace.visualstudio.com/items?itemName=zerasul.genesis-code). I used it to create the project, with came with skeleton code and all the needed project configurations.
+
+Probably the best Genesis development emulator is [BlastEm](https://www.retrodev.com/blastem/), which supports GDB remote debugging. The Genesis Code extension has a "Gens path" setting, which should be set to the BlastEm executable path. 
+
+[Aseprite](https://www.aseprite.org/) is the current king of pixel graphic tools. Its many conveniences make creating for Genesis and other retro consoles a breeze.
+
+As with the original game, the level was made in [Tiled](https://www.mapeditor.org/). A custom plugin exported the level data to C source code, since the Genesis lacks a file system and the standard XML or JSON format would be too big and slow for the Genesis to parse.
+
+Any performance issues can be investigated with [md-profiler](https://github.com/Tails8521/md-profiler) and a special [profiling version of BlastEm](https://github.com/Tails8521/blastem).
+
+Altogether these tools provided a development experience that studios of the time, maybe even Sega themselves, could have only dreamed of.
 
 ## The work
 
