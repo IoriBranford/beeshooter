@@ -1,6 +1,6 @@
 # Honey Soldier MD Postmortem
 
-This week I released my first Sega Genesis game, Honey Soldier MD. I want to document my development experience in the hope that it will be useful and inspiring to other developers.
+Last week I released my first Sega Genesis game, Honey Soldier MD. I want to document my development experience in the hope that it will be useful and inspiring to other developers.
 
 ## Background
 
