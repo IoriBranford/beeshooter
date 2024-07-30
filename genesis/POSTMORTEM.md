@@ -39,7 +39,7 @@ At its simplest, all you have to do is
 2. Set each Map's scroll position during gameplay.
 3. Free the Maps at the end of gameplay.
 
-And this was all I needed. I also played with scrolling horizontal lines for some extra flair when the boss appears.
+And this was all I needed. For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide).
 
 ### Object module
 
