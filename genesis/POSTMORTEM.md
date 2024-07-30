@@ -20,7 +20,7 @@ Probably the best Genesis development emulator is [BlastEm](https://www.retrodev
 
 [Aseprite](https://www.aseprite.org/) is the current king of pixel graphic tools. Its many conveniences make creating for Genesis and other retro consoles a breeze.
 
-As with the original game, the level was made in [Tiled](https://www.mapeditor.org/). A custom plugin exported the level data to C source code, since the Genesis lacks a file system and the standard XML or JSON format would be too big and slow for the Genesis to parse.
+The original game's level was made in [Tiled](https://www.mapeditor.org/). I wrote a Tiled plugin to export the level data to C source code. This solution gave me the most control over the output, plus the Genesis lacks a file system and the standard XML or JSON format would be too big and slow for the Genesis to parse.
 
 Any performance issues can be investigated with [md-profiler](https://github.com/Tails8521/md-profiler) and a special [profiling version of BlastEm](https://github.com/Tails8521/blastem).
 
