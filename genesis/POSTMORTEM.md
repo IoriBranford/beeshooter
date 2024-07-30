@@ -26,13 +26,38 @@ Any performance issues can be investigated with [md-profiler](https://github.com
 
 Altogether these tools provided a development experience that studios of the time, maybe even Sega themselves, could have only dreamed of.
 
-## The work
+## The code
 
-Lua is not much more complex or feature-rich than C, so the translation of the game code was not too difficult.
+The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
 
-The Lua-exclusive features most used in the original code are:
-- The table data structure, a composite of C++'s vector and unordered_map, or JavaScript's array and object, or Python's list and dictionary. Every object in the game is a table.
-- The coroutine. Used for scripted behaviors like the player's death and respawn.
+### Map module
+
+An easy tile map engine for rendering the world into the Genesis' two tile planes: background and foreground. The engine streams new map data from ROM into each plane as you scroll it, supporting worlds larger than the hardware limit (4096 tiles of 8x8 pixels per plane).
+
+At its simplest, all you have to do is
+1. Create Map objects from compiled map layer resources, assigning each Map to one of the two planes.
+2. Set each Map's scroll position during gameplay.
+3. Free the Maps at the end of gameplay.
+
+And this was all I needed. I also played with scrolling horizontal lines for some extra flair when the boss appears.
+
+### Object module
+
+Convenient pool allocation for temporary objects such as enemies and bullets. Key operations are creating and releasing an object and updating all objects.
+
+It was here that I learned about the [anonymous struct](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs) language extension, which enables data inheritance of structs. With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects.
+
+```c
+// Example from object.h
+struct entity_
+{
+    Object;
+    fix16 posX;
+    fix16 posY;
+    Sprite* sprite;
+    ...
+};
+```
 
 Exporting Tiled map to C code
 
