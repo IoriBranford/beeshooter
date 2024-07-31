@@ -32,7 +32,7 @@ The most obvious major task was reimplementing the game in C. SGDK comes with so
 
 ### Map module
 
-An easy tile map engine for rendering the world into the Genesis' two tile planes: background and foreground. The engine streams new map data from ROM into each plane as you scroll it, supporting worlds larger than the hardware limit (4096 tiles of 8x8 pixels per plane).
+An easy tile map engine for rendering the world into the Genesis' two tile planes: background and foreground. The engine streams new map data from ROM into each plane as you scroll it, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
 
 At its simplest, all you have to do is
 1. Create Map objects from compiled map layer resources, assigning each Map to one of the two planes.
