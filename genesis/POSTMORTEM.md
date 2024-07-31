@@ -45,7 +45,7 @@ And this was all I needed. For some extra flair when the boss appears, I also pl
 
 Convenient pool allocation for temporary objects such as enemies and bullets. Key operations are creating and releasing an object and updating all objects.
 
-It was here that I learned about the [anonymous struct](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs) language extension, which enables data inheritance of structs. With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects.
+It was here that I learned about the [anonymous struct](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C extension enabling data inheritance of structs. It is enabled in gcc with the `-fms-extensions` argument. With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects.
 
 ```c
 // Example from object.h
@@ -57,6 +57,8 @@ struct entity_
     Sprite* sprite;
     ...
 };
+struct entity_ e;
+e.update = &updateEntity; // update is a field in Object
 ```
 
 Exporting Tiled map to C code
