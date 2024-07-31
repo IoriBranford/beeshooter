@@ -26,6 +26,28 @@ Any performance issues can be investigated with [md-profiler](https://github.com
 
 Altogether these tools provided a development experience that studios of the time, maybe even Sega themselves, could have only dreamed of.
 
+## Asset pipeline
+
+The original asset files are PNG images, MP3 sounds, and Ogg music, but the Genesis predates those formats. SGDK comes with the rescomp tool for compiling many types of assets into Genesis-compatible data.
+
+In one or more resource files, list your asset files and import parameters. Whenever you build the game, rescomp automatically makes C object code and header files out of the listed assets. In your source code, include these header files and you can access the assets.
+
+## Audio
+
+SGDK provides five audio drivers. They vary in supported sound quality, number of available channels, and whether they play FM synth music. You can switch between drivers to support different audio needs in each game phase.
+
+My first choice was XGM2, the latest driver with FM music support. Though easy to use, it seemed to be a work in progress still. What did not work for me was the priority feature: when sending two sounds with different priorities to play on the same channel, the priorities seemed to have no effect. A higher-priority sound could be cut off by a lower-priority one, or would refuse to cut off a lower-priority one.
+
+I tried switching to the older XGM driver. Its way of playing sounds is a little more roundabout. First assign each sound an integer ID, then pass an integer ID to play a sound. But priorities worked as they were supposed to.
+
+For each audio asset, you specify a driver to play it with. My musician [Tytanium654](https://tytanium654.neocities.org/) provided the Deflemask project file for his song [Funk Buster](https://www.youtube.com/watch?v=QGkhsiXLJEg), from which I exported a [VGM](https://vgmrips.net) file, which rescomp compiles into XGM music data. The MP3 sounds only had to be converted to WAVs in [Audacity](https://www.audacityteam.org), and rescomp automatically downsamples WAVs to a supported sample rate.
+
+Probably the biggest audio problem I faced was the music volume. The song was originally made for standalone listening; in-game, it tended to drown out lower sound effects. Additional complicating factors were the lack of volume controls in the XGM driver and rescomp not supporting volumes set in VGM files. Per Tytanium's suggestion, I grabbed a copy of the [Furnace](https://tildearrow.org/furnace/) tracker and lowered the level of Operator 4 on each instrument. A reduction of around -10 per instrument sounded about right.
+
+## Graphics
+
+Converting graphics to 16 colors with Aseprite
+
 ## The code
 
 The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
@@ -62,10 +84,6 @@ e.update = &updateEntity; // update is a field in Object
 ```
 
 Exporting Tiled map to C code
-
-Converting graphics to 16 colors with Aseprite
-
-Importing sounds and music
 
 Adapting the UI
 
