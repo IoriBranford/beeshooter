@@ -14,7 +14,7 @@ In 2022 I made [Honey Soldier](https://www.ioribranford.com/honeysoldier) for th
 
 Technically, porting Honey Soldier was the most natural choice for a first Genesis project. Besides being one of my stronger titles, it is small enough to port in a relatively short time (for game development, that is). And many of its specs matched the Genesis specs or at least were not too much of a leap, such as viewport resolution (256x224) and background tile size (16x16, a multiple of Genesis' 8x8).
 
-I did not go into the port with specific goals in mind. I just started playing with SGDK and had Honey Soldier's files on hand to work with. But once I got going, it was hard to stop. Something about SGDK was powerfully addicting - maybe how quick and easy it was to do most things with it, and how it worked together so well with my usual tools.
+I did not go into the port with specific goals in mind. I just started playing with SGDK and had Honey Soldier's files on hand to work with. But once I got going, it was hard to stop. Something about developing with SGDK was powerfully addicting - maybe how quick and easy it was to do most things with it, and how it worked together so well with my other game tools. In any case, it was a prime opportunity to get another finished project on my belt, and I used that momentum to get it done.
 
 <!-- I think what excited me was how relatively quick and simple it was to do things with SGDK and other tools, as well as the prospect of seeing how my "16-bit inspired" game could work on an actual 16-bit machine.
 
