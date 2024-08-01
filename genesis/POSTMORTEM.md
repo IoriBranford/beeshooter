@@ -109,7 +109,7 @@ Bullet sprite angles
 
 ## The results
 
-How long it took
+The port took seven weeks.
 
 ## Conclusion
 
