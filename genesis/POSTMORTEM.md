@@ -8,6 +8,16 @@ Decades ago, my parents bought me a Sega Genesis model 1, my first console. It w
 
 In 2022 I made [Honey Soldier](https://www.ioribranford.com/honeysoldier) for the [Gunner Parade game jam](https://itch.io/jam/gunner-parade-22). As usual, the presentation was loosely inspired by 90's console games without regard for their actual hardware limitations. Still, I had been Genesis-curious for some time, and two years later, I happened to notice SGDK was in version 2.00. As I looked over the many features and conveniences it offered, the idea of porting Honey Soldier began to form.
 
+## Why
+
+Technically, porting Honey Soldier was the most natural choice for a first Genesis project. Besides being one of my stronger titles, it is small enough to port in a relatively short time (for game development, that is). And many of its specs matched the Genesis specs or at least were not too much of a leap, such as viewport resolution (256x224) and background tile size (16x16, a multiple of Genesis' 8x8).
+
+I did not go into the port with specific goals in mind. I just started playing with SGDK and had Honey Soldier's files on hand to work with. But once I got going, it was hard to stop. Something about SGDK was powerfully addicting - maybe how quick and easy it was to do most things with it, and how it worked together so well with my usual tools.
+
+<!-- I think what excited me was how relatively quick and simple it was to do things with SGDK and other tools, as well as the prospect of seeing how my "16-bit inspired" game could work on an actual 16-bit machine.
+
+But then, who's going to play it? What value is there in developing for a platform the majority of gamers have sold off, thrown out, or left to gather dust 30 years ago, if they were even alive then? -->
+
 ## Development environment
 
 SGDK is provided in source and Windows binary form on [GitHub](https://github.com/Stephane-D/SGDK). Its key components are a resource compiling tool and a C API and toolchain.
