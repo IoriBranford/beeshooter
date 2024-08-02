@@ -2,7 +2,7 @@
 
 Last week I released my first Sega Genesis game, Honey Soldier MD. I want to document my development experience in the hope that it will be useful and inspiring to other developers.
 
-Readers with experience in C programming and game development will get the most out of this article.
+Readers with experience in C programming, vector math, trigonometry, and game development will get the most out of this article.
 
 ## Background
 
