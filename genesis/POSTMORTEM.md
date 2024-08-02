@@ -54,7 +54,7 @@ I tried switching to the older XGM driver. Its way of playing sounds is a little
 
 For each audio asset, you specify a driver to play it with. My musician [Tytanium654](https://tytanium654.neocities.org/) provided the Deflemask project file for his song [Funk Buster](https://www.youtube.com/watch?v=QGkhsiXLJEg), from which I exported a [VGM](https://vgmrips.net) file, which rescomp compiles into XGM music data. The MP3 sounds only had to be converted to WAVs in [Audacity](https://www.audacityteam.org), and rescomp automatically downsamples WAVs to a supported sample rate.
 
-Probably the biggest audio problem I faced was the music volume. The song was originally made for standalone listening; in-game, it tended to drown out lower sound effects. Additional complicating factors were the lack of volume controls in the XGM driver and rescomp not supporting volumes set in VGM files. Per Tytanium's suggestion, I grabbed a copy of the [Furnace](https://tildearrow.org/furnace/) tracker and lowered the level of Operator 4 on each instrument. A reduction of around -10 per instrument sounded about right.
+Probably the biggest audio problem I faced was the music volume. The song was originally made for standalone listening; in-game, it tended to drown out lower sound effects. Additional complicating factors were the lack of volume controls in the XGM driver and rescomp not supporting volumes set in VGM files. Per Tytanium's suggestion, I grabbed a copy of the [Furnace](https://tildearrow.org/furnace/) tracker and lowered each instrument's Operator 4 level. A reduction of around -10 each sounded about right.
 
 ## Graphics
 
