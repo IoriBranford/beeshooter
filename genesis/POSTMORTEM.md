@@ -58,7 +58,20 @@ Probably the biggest audio problem I faced was the music volume. The song was or
 
 ## Graphics
 
-Converting graphics to 16 colors with Aseprite
+Out of all the things to port, the graphic assets demanded the most thought and creativity. Converting the assets to the Genesis' 16-color indexed format was only the first step.
+
+There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object, rearranging colors to better organize them (or to make objects palette-swappable), and copying colors between images to keep their palettes in sync. 
+
+Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors the image, a Remap Palette button can fix discolored pixels with one click. Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid catastrophe.
+
+Early on, I dedicated one palette to the background, one to player, powerup, and text, and the other two to everything else. An LRU cache kept track of which objects' colors were in the everything-else palettes. If an object spawned and its colors were not already in a palette, the oldest colors were overwritten.
+
+<!-- Each object ended up using between 3 and 8 colors. -->
+
+
+
+<!-- Rescomp can make image files into several types of graphic resource. The most commonly used graphic type in this port is SPRITE, a free-moving object with animation frames. After that is PALETTE which is the colors extracted from the image -->
+
 
 ## The code
 
