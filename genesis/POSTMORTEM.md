@@ -60,18 +60,17 @@ Probably the biggest audio problem I faced was the music volume. The song was or
 
 Out of all the things to port, the graphic assets demanded the most thought and creativity. Converting the assets to the Genesis' 16-color indexed format was only the first step.
 
-There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object, rearranging colors to better organize them (or to make objects palette-swappable), and copying colors between images to keep their palettes in sync. 
+There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object, rearranging colors to better organize them (or to make objects palette-swappable), and copying colors between images to keep their palettes in sync.
 
-Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors the image, a Remap Palette button can fix discolored pixels with one click. Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid catastrophe.
+<!-- Each object ended up between 3 and 8 colors. -->
 
-Early on, I dedicated one palette to the background, one to player, powerup, and text, and the other two to everything else. An LRU cache kept track of which objects' colors were in the everything-else palettes. If an object spawned and its colors were not already in a palette, the oldest colors were overwritten.
+Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors any pixels, a Remap Palette button can fix them with one click. Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid a catastrophe.
 
-<!-- Each object ended up using between 3 and 8 colors. -->
+Once images have been made Genesis-friendly, you can define several types of resources from them. The most common in this port is SPRITE, a free-moving object with animation frames. Some sprite images were also used as PALETTE resources; PALETTE is an array of the colors from the image palette. The background was exported from Tiled as an image and imported as a TILESET resource and a MAP resource. The font is another TILESET.
 
+Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where each 8x8 tile uses one 16-color palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
-
-<!-- Rescomp can make image files into several types of graphic resource. The most commonly used graphic type in this port is SPRITE, a free-moving object with animation frames. After that is PALETTE which is the colors extracted from the image -->
-
+In game, based on the combinations of objects appearing in the level - not only those placed in the level, but any bullets or effects they would create - I settled on one palette for permanent objects (player, powerup, background, UI) and the other three for temporary objects (enemies, containers, bullets). An LRU cache kept track of which temporary object colors were in the palettes. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
 
 ## The code
 
