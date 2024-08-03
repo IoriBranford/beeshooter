@@ -76,24 +76,24 @@ In game, based on the combinations of objects appearing in the level - not only 
 
 The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
 
-### Map module
+I loaded my background MAP and TILESET resources into a Map object. SGDK's easy tile map engine streams new map data from ROM to memory as you scroll, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
 
-An easy tile map engine for rendering the world into the Genesis' two tile planes: background and foreground. The engine streams new map data from ROM into each plane as you scroll it, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
-
-At its simplest, all you have to do is
-1. Create Map objects from compiled map layer resources, assigning each Map to one of the two planes.
+<!-- At its simplest, all you have to do is
+1. Create Map objects from compiled MAP resources, assigning each Map to one of the two planes.
 2. Set each Map's scroll position during gameplay.
 3. Free the Maps at the end of gameplay.
 
-And this was all I needed. For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide).
+And this was all I needed. For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide). -->
 
-### Object module
+<!-- ### Object module -->
 
-Convenient pool allocation for temporary objects such as enemies and bullets. Key operations are creating and releasing an object and updating all objects.
+SGDK offers an object pool. You can conveniently allocate and manage temporary objects such as enemies and bullets. This module was my introduction to [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), used here to let you inherit from a base Object struct. The most important inherited member is the update callback, called when you update all objects in the pool.
 
-It was here that I learned about the [anonymous struct](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C extension enabling data inheritance of structs. It is enabled in gcc with the `-fms-extensions` argument. With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects.
+<!-- , a C extension enabling data inheritance of structs.  With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects. -->
 
-```c
+<!-- It is enabled in gcc with the `-fms-extensions` argument. -->
+
+<!-- ```c
 // Example from object.h
 struct entity_
 {
@@ -105,9 +105,7 @@ struct entity_
 };
 struct entity_ e;
 e.update = &updateEntity; // update is a field in Object
-```
-
-Exporting Tiled map to C code
+``` -->
 
 Adapting the UI
 
