@@ -32,7 +32,7 @@ Probably the best Genesis development emulator is [BlastEm](https://www.retrodev
 
 [Aseprite](https://www.aseprite.org/) is the current king of pixel graphic tools. Its many conveniences make creating for Genesis and other retro consoles a breeze.
 
-The original game's level was made in [Tiled](https://www.mapeditor.org/). I wrote a Tiled plugin to export the level data to C source code. This solution gave me the most control over the output, plus the Genesis lacks a file system and the standard XML or JSON format would be too big and slow for the Genesis to parse.
+The original game's level was made in [Tiled](https://www.mapeditor.org/). It offers a JavaScript extension API which I used to write an exporter to C source code.
 
 Any performance issues can be investigated with [md-profiler](https://github.com/Tails8521/md-profiler) and a special [profiling version of BlastEm](https://github.com/Tails8521/blastem).
 
@@ -71,6 +71,16 @@ Once images have been made Genesis-friendly, you can define several types of res
 Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where each 8x8 tile uses one 16-color palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
 In game, based on the combinations of objects appearing in the level - not only those placed in the level, but any bullets or effects they would create - I settled on one palette for permanent objects (player, powerup, background, UI) and the other three for temporary objects (enemies, containers, bullets). An LRU cache kept track of which temporary object colors were in the palettes. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
+
+## Level
+
+The level contains background tile layers, enemies and other objects that will appear, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
+
+On the Genesis, of course, either format would take a huge portion of ROM and many seconds to parse at runtime. Fortunately, the background is already handled as TILESET and MAP graphic resources. Now how to get at the objects and triggers?
+
+Rescomp offers an OBJECTS resource type, pulling layers of objects and their properties from TMX files. But my level structure wasn't a fit for this method (or my preference for avoiding repetitive data entry). I had over 100 object layers, each representing a spawn group containing some objects to spawn and one or more spawn triggers, which would mean a 100+ layer long resource file.
+
+<!-- Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of knowing JavaScript, I turned to the Tiled extension API. Although the JavaScript for the Tiled plugin was well over 100 lines, -->
 
 ## The code
 
