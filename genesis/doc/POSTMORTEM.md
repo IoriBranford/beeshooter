@@ -95,6 +95,10 @@ I loaded my background MAP and TILESET resources into a Map object. SGDK's easy 
 
 And this was all I needed. For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide). -->
 
+SGDK's sophisticated sprite engine handles my SPRITE resources. It gives you software sprites to hide some limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. But the sprite engine takes care of that when you have a SPRITE resource larger than 4x4.
+
+The default sprite animation method is convenient but memory-hungry. For each sprite instance, the sprite engine loads a copy of the current animation frame into the video memory, meaning a lot of duplication if you have many instances of the same sprite. This lets you start putting sprites on the screen quickly, but sooner or later you might switch to loading the frames into memory yourself and pointing your sprite instances to them.
+
 <!-- ### Object module -->
 
 SGDK offers an object pool. You can conveniently allocate and manage temporary objects such as enemies and bullets. This module was my introduction to [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), used here to let you inherit from a base Object struct. The most important inherited member is the update callback, called when you update all objects in the pool.
