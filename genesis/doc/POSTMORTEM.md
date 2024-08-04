@@ -94,16 +94,18 @@ Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of k
 
 The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
 
-I loaded my background MAP and TILESET resources into a Map object. SGDK has an easy tile map engine that streams new map data from ROM to memory as you scroll, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
+The easy tile map engine constructs a Map out of MAP and TILESET resources. As you scroll the Map, it streams new map data from ROM into the Genesis' two tile layers: background and foreground, supporting worlds larger than the hardware limit (total of 4096 tiles per layer, 8x8 pixels per tile).
 
 <!-- At its simplest, all you have to do is
 1. Create Map objects from compiled MAP resources, assigning each Map to one of the two planes.
 2. Set each Map's scroll position during gameplay.
 3. Free the Maps at the end of gameplay.
 
-And this was all I needed. For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide). -->
+And this was all I needed. -->
 
-SGDK's sophisticated sprite engine handles my SPRITE resources. It gives you software sprites to hide some limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. But the sprite engine takes care of that when you have a SPRITE resource larger than 4x4.
+For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide).
+
+The sophisticated sprite engine implements software sprites to get around limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. The sprite engine takes care of that when you use SPRITE resources larger than 4x4.
 
 By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. Note the duplicate frames when there are many instances of the same sprite.
 
@@ -113,25 +115,26 @@ It's a quick way to get objects on the screen, but sooner or later you'll want t
 
 <!-- ### Object module -->
 
-SGDK offers a data structure called an object pool. You can conveniently allocate and manage temporary objects such as enemies and bullets. This module is where I first learned of [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C language extension enabling data inheritance. Game objects that you want in the pool will inherit from a base Object struct. The most important inherited member is the update callback, which is called when you update the entire pool.
-
-<!-- , a C extension enabling data inheritance of structs.  With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects. -->
+The provided object pool data structure is convenient for allocating and managing temporary objects such as enemies and bullets. This was my first exposure to [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C language extension enabling data inheritance. Game objects that you want in the pool will inherit from a base Object struct. The most important inherited member is the update callback, called when you update the entire pool.
 
 <!-- It is enabled in gcc with the `-fms-extensions` argument. -->
 
-<!-- ```c
-// Example from object.h
-struct entity_
+```c
+typedef struct GameObject
 {
     Object;
-    fix16 posX;
-    fix16 posY;
+    Vect2D_f16 pos, vel;
     Sprite* sprite;
-    ...
-};
-struct entity_ e;
-e.update = &updateEntity; // update is a field in Object
-``` -->
+    /* etc. */
+} GameObject;
+
+void updateGameObject(GameObject *gobj);
+
+Pool *gobjPool = OBJ_createObjectPool(NUM_OBJECTS, sizeof(GameObject));
+GameObject *gobj = (GameObject*) OBJ_create(gobjPool);
+gobj->update = (ObjectCallback*) &updateGameObject;
+OBJ_updateAll(gobjPool);
+```
 
 Adapting the UI
 
