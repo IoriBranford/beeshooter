@@ -56,6 +56,8 @@ For each audio asset, you specify a driver to play it with. My musician [Tytaniu
 
 Probably the biggest audio problem I faced was the music volume. The song was originally made for standalone listening; in-game, it tended to drown out lower sound effects. Additional complicating factors were the lack of volume controls in the XGM driver and rescomp not supporting volumes set in VGM files. Per Tytanium's suggestion, I grabbed a copy of the [Furnace](https://tildearrow.org/furnace/) tracker and lowered each instrument's Operator 4 level. A reduction of around -10 each sounded about right.
 
+![](lower-instrument-level.png)
+
 ## Graphics
 
 Out of all the things to port, the graphic assets demanded the most thought and creativity. Converting the assets to the Genesis' 16-color indexed format was only the first step.
@@ -64,7 +66,11 @@ There are four 16-color palettes in the Genesis. In order to show many types of 
 
 <!-- Each object ended up between 3 and 8 colors. -->
 
-Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors any pixels, a Remap Palette button can fix them with one click. Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid a catastrophe.
+Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors any pixels, a Remap Palette button can fix them with one click.
+
+![](aseprite.png)
+
+Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid a catastrophe.
 
 Once images have been made Genesis-friendly, you can define several types of resources from them. The most common in this port is SPRITE, a free-moving object with animation frames. Some sprite images were also used as PALETTE resources; PALETTE is an array of the colors from the image palette. The background was exported from Tiled as an image and imported as a TILESET resource and a MAP resource. The font is another TILESET.
 
@@ -97,7 +103,11 @@ And this was all I needed. For some extra flair when the boss appears, I also pl
 
 SGDK's sophisticated sprite engine handles my SPRITE resources. It gives you software sprites to hide some limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. But the sprite engine takes care of that when you have a SPRITE resource larger than 4x4.
 
-The default sprite animation method is convenient but memory-hungry. For each sprite instance, the sprite engine loads a copy of the current animation frame into the video memory, meaning a lot of duplication if you have many instances of the same sprite. This lets you start putting sprites on the screen quickly, but sooner or later you might switch to loading the frames into memory yourself and pointing your sprite instances to them.
+By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. Note the duplicate frames when there are many instances of the same sprite.
+
+![](blastem-auto-upload-tiles.png)
+
+It's a quick way to get objects on the screen, but sooner or later you'll want to manually load the frames into memory and point your sprite instances to them. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
 <!-- ### Object module -->
 
