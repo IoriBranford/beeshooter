@@ -48,7 +48,7 @@ In one or more resource files, list your asset files and import parameters. When
 
 ## Audio
 
-SGDK provides five audio drivers. They vary in supported sound quality, number of available channels, and whether they play FM synth music. You can switch between drivers to support different audio needs in each game phase.
+SGDK provides five audio drivers. They vary in supported sound quality, number of available channels, and support for FM synth music. You can switch between drivers to support different audio needs in each game phase.
 
 My first choice was XGM2, the latest driver with FM music support. Though easy to use, it seemed to be a work in progress still. What did not work for me was the priority feature: when sending two sounds with different priorities to play on the same channel, the priorities seemed to have no effect. A higher-priority sound could be cut off by a lower-priority one, or would refuse to cut off a lower-priority one.
 
