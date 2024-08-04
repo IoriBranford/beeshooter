@@ -32,7 +32,7 @@ Probably the best Genesis development emulator is [BlastEm](https://www.retrodev
 
 [Aseprite](https://www.aseprite.org/) is the current king of pixel graphic tools. Its many conveniences make creating for Genesis and other retro consoles a breeze.
 
-The original game's level was made in [Tiled](https://www.mapeditor.org/). It offers a JavaScript extension API which I used to write an exporter to C source code.
+The original game's level was made in [Tiled](https://www.mapeditor.org/). It offers a JavaScript API which I used to write a plugin exporting the level in the game's level format.
 
 Any performance issues can be investigated with [md-profiler](https://github.com/Tails8521/md-profiler) and a special [profiling version of BlastEm](https://github.com/Tails8521/blastem).
 
@@ -78,9 +78,9 @@ The level contains background tile layers, enemies and other objects that will a
 
 On the Genesis, of course, either format would take a huge portion of ROM and many seconds to parse at runtime. Fortunately, the background is already handled as TILESET and MAP graphic resources. Now how to get at the objects and triggers?
 
-Rescomp offers an OBJECTS resource type, pulling layers of objects and their properties from TMX files. But my level structure wasn't a fit for this method (or my preference for avoiding repetitive data entry). I had over 100 object layers, each representing a spawn group containing some objects to spawn and one or more spawn triggers, which would mean a 100+ layer long resource file.
+Rescomp offers an OBJECTS resource type, pulling layers of objects and their properties from TMX files. But my level's structure made it less than fit for this method. It has over 100 object layers, each representing a group of some objects to spawn and one or more spawn triggers, which would mean a 100+ layer long resource file.
 
-<!-- Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of knowing JavaScript, I turned to the Tiled extension API. Although the JavaScript for the Tiled plugin was well over 100 lines, -->
+Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of knowing some JavaScript, I took the more flexible and powerful option of writing an [export plugin](https://github.com/IoriBranford/beeshooter/blob/genesis/game/data/extensions/export-genesis.js) for Tiled. I wrote out all the groups of objects and triggers as C data structures immediately usable by the game engine, in a similar fashion to how rescomp makes resources (except I output C source code while rescomp outputs binary object code).
 
 ## The code
 
