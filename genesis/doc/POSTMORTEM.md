@@ -86,7 +86,7 @@ Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of k
 
 The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
 
-I loaded my background MAP and TILESET resources into a Map object. SGDK's easy tile map engine streams new map data from ROM to memory as you scroll, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
+I loaded my background MAP and TILESET resources into a Map object. SGDK has an easy tile map engine that streams new map data from ROM to memory as you scroll, supporting worlds larger than the hardware limit (total of 4096 tiles, 8x8 pixels per tile).
 
 <!-- At its simplest, all you have to do is
 1. Create Map objects from compiled MAP resources, assigning each Map to one of the two planes.
@@ -101,7 +101,7 @@ The default sprite animation method is convenient but memory-hungry. For each sp
 
 <!-- ### Object module -->
 
-SGDK offers an object pool. You can conveniently allocate and manage temporary objects such as enemies and bullets. This module was my introduction to [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), used here to let you inherit from a base Object struct. The most important inherited member is the update callback, called when you update all objects in the pool.
+SGDK offers a data structure called an object pool. You can conveniently allocate and manage temporary objects such as enemies and bullets. This module is where I first learned of [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C language extension enabling data inheritance. Game objects that you want in the pool will inherit from a base Object struct. The most important inherited member is the update callback, which is called when you update the entire pool.
 
 <!-- , a C extension enabling data inheritance of structs.  With this mechanism, each object to be stored in the pool inherits the fields of a base type Object. The most important Object field is the update function pointer to be called when updating all objects. -->
 
