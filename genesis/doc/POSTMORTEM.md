@@ -78,8 +78,6 @@ Once images have been made Genesis-friendly, you can define several types of res
 
 Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
-In game, based on the combinations of objects appearing in the level - not only those placed in the level, but any bullets or effects they would create - I settled on one palette for permanent objects (player, powerup, background, UI) and the other three for temporary objects (enemies, containers, bullets). An LRU cache kept track of which temporary object colors were in the palettes. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
-
 ## Level
 
 The level contains background tile layers, enemies and other objects that will appear, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
@@ -112,6 +110,8 @@ By default, sprites animate automatically, but transfer a lot of data in the pro
 ![](blastem-auto-upload-tiles.png)
 
 It's a quick way to get objects on the screen, but sooner or later you'll want to manually load the frames into memory and point your sprite instances to them. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+
+Sprites need their intended colors loaded into the palettes in order to look right. Based on the combinations of objects appearing in the level, I devoted one palette to permanent objects (player, powerup, background, GUI) and the other three to temporary objects (enemies, containers, bullets). I managed the temporary object palettes using an LRU cache. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
 
 <!-- ### Object module -->
 
