@@ -136,7 +136,7 @@ gobj->update = (ObjectCallback*) &updateGameObject;
 OBJ_updateAll(gobjPool);
 ```
 
-Adapting the UI
+The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
 ## Challenges
 
