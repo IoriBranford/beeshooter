@@ -78,6 +78,8 @@ Once images have been made Genesis-friendly, you can define several types of res
 
 Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
+All graphics resources support compression, letting you save ROM space at the expense of some CPU time for decompression. I've learned you should wait to use this until you know you need it and you know how to mitigate the cost. At first I tried AUTO compression on my resources, but this had performance consequences when combined with the default sprite animation system detailed in [Engine](#engine).
+
 # Level
 
 The level contains background tile layers, enemies and other objects that will appear, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
@@ -109,9 +111,11 @@ By default, sprites animate automatically, but transfer a lot of data in the pro
 
 ![](blastem-auto-upload-tiles.png)
 
-It's a quick way to get objects on the screen, but sooner or later you'll want to manually load the frames into memory and point your sprite instances to them. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminiating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
-Sprites need their intended colors loaded into the palettes in order to look right. Based on the combinations of objects appearing in the level, I devoted one palette to permanent objects (player, powerup, background, GUI) and the other three to temporary objects (enemies, containers, bullets). I managed the temporary object palettes using an LRU cache. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
+Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This happened to me before implementing the preloading, because my sprite resources initially had AUTO compression as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except that the mid-game loads might take noticeably long. So I dropped the compression.
+
+Sprites also need their colors loaded into a palette in order to look right. Based on the combinations of objects appearing in the level, I devoted one palette to permanent objects (player, powerup, background, GUI) and the other three to temporary objects (enemies, containers, bullets). I managed the temporary object palettes using an LRU cache. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
 
 <!-- ### Object module -->
 
