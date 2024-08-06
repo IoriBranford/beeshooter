@@ -142,13 +142,15 @@ OBJ_updateAll(gobjPool);
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
-# Challenges
+# Math
+
+The Genesis does not provide hardware rotation, so bullets and some enemies have pre-rotated sprite frames. In most cases, only the desired angles from right (0 degrees) to down (90 degrees) are needed; horizontal and vertical flipping produces the other angles. The beetle enemy, who is not symmetrical like the bullets, also needed a 135-degree frame in order to climb up onto ledges properly.
+
+When enemies must fire bullets at the player, who can be at an arbitrary angle, the 
+
+# Optimizing
 
 Precalculating for performance
-
-Palette sharing
-
-Bullet sprite angles
 
 # The results
 
