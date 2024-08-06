@@ -6,13 +6,13 @@ This June and July, I made Honey Soldier MD, my own Sega Genesis game. I want to
 
 Readers with experience in C programming, vector math, trigonometry, and game development will get the most out of this article.
 
-## Origins
+# Origins
 
 In 2006, Gens emulator developer Stephane Dallongeville released the tools that over time evolved into [SGDK](https://github.com/Stephane-D/SGDK). Since then, the Genesis platform has not only survived but thrived, with even fully-fledged commercial titles like [Earthion](https://twitter.com/yuzokoshiro/status/1813937567743791326) still coming out to this day.
 
 In 2022 I made [Honey Soldier](https://www.ioribranford.com/honeysoldier) for the [Gunner Parade game jam](https://itch.io/jam/gunner-parade-22). It targeted modern PC and mobile platforms, but the presentation was loosely inspired by 90's console games, without regard for their actual hardware limitations. Still, I had been Genesis-curious for some time, and two years later, I happened to notice SGDK was in version 2.00. As I looked over the many features and conveniences it offered, the idea of porting Honey Soldier began to form.
 
-## Why
+# Reasons
 
 Technically, porting Honey Soldier was the most natural choice for a first Genesis project. Besides being one of my stronger titles, it is small enough to port in a relatively short time (for game development, that is). And many of its specs matched the Genesis specs or at least were not too much of a leap, such as viewport resolution (256x224) and background tile size (16x16, a multiple of Genesis' 8x8).
 
@@ -22,7 +22,7 @@ I had no specific goal in mind going into the port. I just started playing with 
 
 But then, who's going to play it? What value is there in developing for a platform the majority of gamers have sold off, thrown out, or left to gather dust 30 years ago, if they were even alive then? -->
 
-## Development environment
+# Tools
 
 SGDK is provided in source and Windows binary form on [GitHub](https://github.com/Stephane-D/SGDK). Its key components are a resource compiling tool and a C API and toolchain.
 
@@ -40,13 +40,13 @@ Any performance issues can be investigated with [md-profiler](https://github.com
 
 Altogether these tools provided a development experience that studios of the time, maybe even Sega themselves, could have only dreamed of.
 
-## Asset pipeline
+# Asset pipeline
 
 The original asset files are PNG images, MP3 sounds, and Ogg music, but the Genesis predates those formats. SGDK comes with the rescomp tool for compiling many types of assets into Genesis-compatible data.
 
 In one or more resource files, list your asset files and import parameters. Whenever you build the game, rescomp automatically makes C object code and header files out of the listed assets. In your source code, include these header files and you can access the assets.
 
-## Audio
+# Audio
 
 SGDK provides five audio drivers. They vary in supported sound quality, number of available channels, and support for FM synth music. You can switch between drivers to support different audio needs in each game phase.
 
@@ -60,7 +60,7 @@ Probably the biggest audio problem I faced was the music volume. The song was or
 
 ![](lower-instrument-level.png)
 
-## Graphics
+# Graphics
 
 Out of all the things to port, the graphic assets demanded the most thought and creativity. Converting the assets to the Genesis' 16-color indexed format was only the first step.
 
@@ -78,7 +78,7 @@ Once images have been made Genesis-friendly, you can define several types of res
 
 Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
-## Level
+# Level
 
 The level contains background tile layers, enemies and other objects that will appear, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
 
@@ -88,9 +88,9 @@ Rescomp offers an OBJECTS resource type, pulling layers of objects and their pro
 
 Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of knowing some JavaScript, I took the more flexible and powerful option of writing an [export plugin](https://github.com/IoriBranford/beeshooter/blob/genesis/game/data/extensions/export-genesis.js) for Tiled. I wrote out all the groups of objects and triggers as C data structures immediately usable by the game engine, in a similar fashion to how rescomp makes resources (except I output C source code while rescomp outputs binary object code).
 
-## The code
+# Engine
 
-The most obvious major task was reimplementing the game in C. SGDK comes with some handy modules to start a game engine with.
+SGDK comes with some handy modules to start a game engine with.
 
 The easy tile map engine constructs a Map out of MAP and TILESET resources. As you scroll the Map, it streams new map data from ROM into the Genesis' two tile layers: background and foreground, supporting worlds larger than the hardware limit (total of 4096 tiles per layer, 8x8 pixels per tile).
 
@@ -138,7 +138,7 @@ OBJ_updateAll(gobjPool);
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
-## Challenges
+# Challenges
 
 Precalculating for performance
 
@@ -146,11 +146,11 @@ Palette sharing
 
 Bullet sprite angles
 
-## The results
+# The results
 
 The port took seven weeks.
 
-## Conclusion
+# Conclusion
 
 Takeaways from this project
 
