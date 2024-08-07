@@ -96,7 +96,7 @@ One enemy, the beetle, climbs up diagonally onto ledges and needs an additional 
 
 To pick the rotated animation given a desired direction vector, your first instinct might be getting the angle with arctan2 and converting that to an animation number. SGDK doesn't have an arctan2, so I found an [approximation](https://www.researchgate.net/publication/3321505_Another_Contender_in_the_Arctangent_Race) that was low in error and fairly easy to implement.
 
-Unfortunately, I observed noticeable error around the diagonal angles, where some bullets appeared to fly almost sideways. I didn't investigate deeply, but it could be a mistake in my implementation or that I didn't use a more precise [fixed-point number type](https://github.com/Stephane-D/SGDK/blob/0377311330ed0d64c2132234e88097accc87ba30/inc/types.h#L203).
+Unfortunately, I observed noticeable error around the diagonal angles, where some bullets appeared to fly almost sideways. I didn't investigate deeply, but it could be a mistake in my implementation of the approximate arctan2, or that I didn't use a more precise [fixed-point number type](https://github.com/Stephane-D/SGDK/blob/0377311330ed0d64c2132234e88097accc87ba30/inc/types.h#L203).
 
 After some thought, I arrived at a formula that could replace the arctan2 method for this purpose. When (x, y) is the vector to face and N is the number of rotation animations, the animation number n is
 
