@@ -98,15 +98,12 @@ To pick the rotated animation given a desired direction vector, your first insti
 
 Unfortunately, I observed noticeable error around the diagonal angles, where some bullets appeared to fly almost sideways. I didn't investigate deeply, but it could be a mistake in my implementation of the approximate arctan2, or that I didn't use a more precise [fixed-point number type](https://github.com/Stephane-D/SGDK/blob/0377311330ed0d64c2132234e88097accc87ba30/inc/types.h#L203).
 
-After some thought, I arrived at a formula that could replace the arctan2 method for this purpose. When (x, y) is the vector to face and N is the number of rotation animations, the animation number n is
+After some thought, I arrived at a different formula with no need for an angle. Given N rotation animations from 0-90 degrees inclusive, and the face vector (x, y), the correct animation i is
 
 ```
-n = floor(
-    0                       if y == 0
-    N-1                     if x == 0
-    N/2                     if |x| == |y|
-    N/2 * |y/x| + 0.5       if |x| > |y|
-    N - (N/2 * |x/y| + 0.5) if |x| < |y|
+i = floor(
+    N/2 * |y/x| + 0.5           if |x| >= |y|
+    N - (N/2 * |x/y| + 0.5)     otherwise
 )
 ```
 
