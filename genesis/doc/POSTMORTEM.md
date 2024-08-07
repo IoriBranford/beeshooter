@@ -146,7 +146,11 @@ For some extra flair when the boss appears, I also played with the horizontal sc
 
 The sophisticated sprite engine implements software sprites to get around limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. The sprite engine takes care of that when you use SPRITE resources larger than 4x4.
 
-By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+By default, sprites animate automatically, but with some costs in data transfer time and video memory space. The sprite engine loads a copy of every sprite instance's current frame into the video memory. Note the many duplicate ant sprites.
+
+![](blastem-auto-upload-tiles.png)
+
+It lets you get things moving quickly, but sooner or later, you'll want to [manually preload](https://github.com/IoriBranford/beeshooter/blob/8306c1ac6e40a81e46d97ff0ecd484dfe3508769/genesis/src/gobjdef.c#L497) the frames into memory and point your sprite instances to them. This will free up CPU and video memory for greater object quantity and variety. So that is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
 <!-- Note the duplicate frames when there are many instances of the same sprite.
 
