@@ -16,3 +16,4 @@
 *.sh text eol=lf
 *.mp3 filter=lfs diff=lfs merge=lfs -text
 *.fur filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
