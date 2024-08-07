@@ -110,6 +110,8 @@ n = floor(
 )
 ```
 
+Only bullets used this formula. Enemies rotated by directly setting the animation and flips.
+
 Many games just have round bullet sprites to avoid such calculations. But I wanted to port as faithfully as I could and that felt like a cop-out. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
 
 ## Compression
