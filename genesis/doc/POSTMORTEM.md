@@ -110,7 +110,7 @@ n = floor(
 )
 ```
 
-Many games just have round bullet sprites to avoid such calculations, but I felt like that would be a cop out here. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
+Many games just have round bullet sprites to avoid such calculations. But I wanted to port as faithfully as I could and that felt like a cop-out. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
 
 ## Compression
 
