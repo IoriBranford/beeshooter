@@ -66,6 +66,8 @@ Probably the biggest audio problem I faced was the music volume. The song was or
 
 Out of all the things to port, the graphic assets demanded the most thought and creativity. Converting the assets to the Genesis' 16-color indexed format was only the first step.
 
+## Palette sharing
+
 There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object, rearranging colors to better organize them (or to make objects palette-swappable), and copying colors between images to keep their palettes in sync.
 
 <!-- Each object ended up between 3 and 8 colors. -->
@@ -75,6 +77,8 @@ Aseprite comes to the rescue with its highly manipulatable palette. You can move
 ![](aseprite.png)
 
 Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid a catastrophe.
+
+## Resource types
 
 Once images have been made Genesis-friendly, you can define several types of resources from them. The most common in this port is SPRITE, a free-moving object with animation frames. Some sprite images were also used as PALETTE resources; PALETTE is an array of the colors from the image palette. The background was exported from Tiled as an image and imported as a TILESET resource and a MAP resource. The font is another TILESET.
 
@@ -96,6 +100,8 @@ Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of k
 
 SGDK comes with some handy modules to start a game engine with.
 
+## Backgrounds
+
 The easy tile map engine constructs a Map out of MAP and TILESET resources. As you scroll the Map, it streams new map data from ROM into the Genesis' two tile layers: background and foreground, supporting worlds larger than the hardware limit (total of 4096 tiles per layer, 8x8 pixels per tile).
 
 <!-- At its simplest, all you have to do is
@@ -107,19 +113,27 @@ And this was all I needed. -->
 
 For some extra flair when the boss appears, I also played with the horizontal scanline scrolling mode. The Genesis can horizontally scroll full plane, per row (8px tall), or per scanline, and vertically scroll full plane or per column (16px wide).
 
+## Sprites
+
 The sophisticated sprite engine implements software sprites to get around limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. The sprite engine takes care of that when you use SPRITE resources larger than 4x4.
 
-By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminiating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
 <!-- Note the duplicate frames when there are many instances of the same sprite.
 
 ![](blastem-auto-upload-tiles.png) -->
 
-Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This happened to me before implementing the preloading, because my sprite resources initially had AUTO compression as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except that the mid-game loads might take noticeably long. So I dropped the compression.
+Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This is why my performance tanked early on, because my sprite resources initially had AUTO compression as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except that the mid-game sprite loads might take noticeably long. So I dropped the compression.
 
-Sprites also need their colors loaded into a palette in order to look right. Based on the combinations of objects appearing in the level, I devoted one palette to permanent objects (player, powerup, background, GUI) and the other three to temporary objects (enemies, containers, bullets). I managed the temporary object palettes using an LRU cache. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
+## Palettes
 
-<!-- ### Object module -->
+Backgrounds and sprites also need their colors loaded into palettes in order to look right. Based on the combinations of objects appearing in the level, I devoted one palette to permanent objects (player, powerup, background, GUI) and the other three to temporary objects (enemies, containers, bullets).
+
+I managed the temporary object palettes using an LRU cache. If an object spawned and its colors were not already in a palette, the least recently used colors were overwritten.
+
+To save some video memory, I animated flashing bullets with palette cycling - swapping the colors of the bullet back and forth in the palette - instead of real animation frames.
+
+## Game objects 
 
 The provided object pool data structure is convenient for allocating and managing temporary objects such as enemies and bullets. This was my first exposure to [anonymous structs](https://learn.microsoft.com/en-us/cpp/cpp/anonymous-class-types?view=msvc-170#anonymous-structs), a C language extension enabling data inheritance. Game objects that you want in the pool will inherit from a base Object struct. The most important inherited member is the update callback, called when you update the entire pool.
 
@@ -141,6 +155,8 @@ GameObject *gobj = (GameObject*) OBJ_create(gobjPool);
 gobj->update = (ObjectCallback*) &updateGameObject;
 OBJ_updateAll(gobjPool);
 ```
+
+## GUI
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
