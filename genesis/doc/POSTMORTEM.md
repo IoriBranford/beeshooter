@@ -107,11 +107,11 @@ For some extra flair when the boss appears, I also played with the horizontal sc
 
 The sophisticated sprite engine implements software sprites to get around limitations of Genesis hardware sprites. For example, the maximum hardware sprite size is 4x4 tiles; a larger object must be made of multiple hardware sprites. The sprite engine takes care of that when you use SPRITE resources larger than 4x4.
 
-By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. Note the duplicate frames when there are many instances of the same sprite.
+By default, sprites animate automatically, but transfer a lot of data in the process. The sprite engine loads a copy of every sprite instance's current frame into the video memory. It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminiating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
-![](blastem-auto-upload-tiles.png)
+<!-- Note the duplicate frames when there are many instances of the same sprite.
 
-It's a quick way to get objects moving onscreen, but sooner or later, you'll want to manually preload the frames into memory and point your sprite instances to them, eliminiating the constant data transfer and freeing up CPU. This is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+![](blastem-auto-upload-tiles.png) -->
 
 Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This happened to me before implementing the preloading, because my sprite resources initially had AUTO compression as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except that the mid-game loads might take noticeably long. So I dropped the compression.
 
