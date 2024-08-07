@@ -84,6 +84,34 @@ Once images have been made Genesis-friendly, you can define several types of res
 
 Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
 
+## Sprite rotation
+
+The Genesis does not provide hardware rotation, so bullets and some enemies have pre-rotated sprite animations. Most objects such as bullets only needed angles from 0 degrees (right) to 90 degrees (down) inclusive. Horizontal and vertical flipping produces the other angles.
+
+One enemy, the beetle, climbs up diagonally onto ledges and needs an additional 135-degree angle. There is no way to flip the 45-degree angle to produce it, because he is not symmetrical about the direction axis.
+
+![](AcidBullet.png) ![](Beetle.png)
+
+To pick the rotated animation given a desired direction vector, your first instinct might be getting the angle with arctan2 and converting that to an animation number. SGDK doesn't have an arctan2, so I found an [approximation](https://www.researchgate.net/publication/3321505_Another_Contender_in_the_Arctangent_Race) that was low in error and fairly easy to implement.
+
+Unfortunately, I observed noticeable error around the diagonal angles, where some bullets appeared to fly almost sideways. I didn't investigate deeply, but it could be a mistake in my implementation or that I didn't use a more precise [fixed-point number type](https://github.com/Stephane-D/SGDK/blob/0377311330ed0d64c2132234e88097accc87ba30/inc/types.h#L203).
+
+After some thought, I arrived at a formula that could replace the arctan2 method for this purpose. When (x, y) is the vector to face and N is the number of rotation animations, the animation number n is
+
+```
+n = floor(
+    0                       if y == 0
+    N-1                     if x == 0
+    N/2                     if |x| == |y|
+    N/2 * |y/x| + 0.5       if |x| > |y|
+    N - (N/2 * |x/y| + 0.5) if |x| < |y|
+)
+```
+
+Many games just have round bullet sprites to avoid such calculations, but I felt like that would be a cop out here. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
+
+## Compression
+
 All graphics resources support compression, letting you save ROM space at the expense of some CPU time for decompression. I've learned you should wait to use this until you know you need it and you know how to mitigate the cost. At first I tried AUTO compression on my resources, but this had performance consequences when combined with the default sprite animation system detailed in [Engine](#engine).
 
 # Level
@@ -162,9 +190,7 @@ The GUI is a simple one made mostly of text. SGDK has text drawing functions whi
 
 # Math
 
-The Genesis does not provide hardware rotation, so bullets and some enemies have pre-rotated sprite frames. In most cases, only the desired angles from right (0 degrees) to down (90 degrees) are needed; horizontal and vertical flipping produces the other angles. The beetle enemy, who is not symmetrical like the bullets, also needed a 135-degree frame in order to climb up onto ledges properly.
 
-When enemies must fire bullets at the player, who can be at an arbitrary angle, the 
 
 # Optimizing
 
