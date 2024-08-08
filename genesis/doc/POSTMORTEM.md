@@ -115,7 +115,7 @@ Many games just have round bullet sprites to avoid such calculations. But that f
 
 ## Compression
 
-All graphics resources support compression, letting you save ROM space at the expense of some CPU time for decompression. I've learned you should wait to use this until you know you need it and you know how to mitigate the cost. At first I tried AUTO compression on my resources, but this had performance consequences when combined with the default sprite animation system detailed in [Engine](#engine).
+All graphics resources support compression, letting you save ROM space at the expense of some CPU time for decompression. I've learned you should wait to use this until you know you need it and you know how to mitigate the cost. At first I tried AUTO compression on my resources, but this had performance consequences when combined with the default sprite animation system detailed in [Sprites](#sprites).
 
 # Level
 
