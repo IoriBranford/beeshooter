@@ -119,11 +119,11 @@ All graphics resources support compression, letting you save ROM space at the ex
 
 # Level
 
-The level contains background tile layers, enemies and other objects that will appear, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
+The level contains background tile layers, enemies and other objects that will appear, movement path lines, actions at path points, and triggers that make object spawns and other game events happen when the camera reaches them. There are two copies in the project: one in Tiled's native TMX format for editing, and one in Lua code for the game to load.
 
-On the Genesis, of course, either format would take a huge portion of ROM and many seconds to parse at runtime. Fortunately, the background is already handled as TILESET and MAP graphic resources. Now how to get at the objects and triggers?
+On the Genesis, of course, either format would take a huge portion of ROM and many seconds to parse at runtime. Fortunately, the background is already handled as TILESET and MAP graphic resources. Now how to get at the other elements?
 
-Rescomp offers an OBJECTS resource type, pulling layers of objects and their properties from TMX files. But my level's structure made it less than fit for this method. It has over 100 object layers, each representing a group of some objects to spawn and one or more spawn triggers, which would mean a 100+ layer long resource file.
+Rescomp offers an OBJECTS resource type, pulling layers of objects and their properties from TMX files. But my level's structure made it less than fit for this method. It has over 100 object layers each representing a spawn group. A spawn group contains objects to spawn, the spawn trigger(s), and the objects' paths and path actions. The resource file to get these would accordingly be 100+ layers long.
 
 Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of knowing some JavaScript, I took the more flexible and powerful option of writing an [export plugin](https://github.com/IoriBranford/beeshooter/blob/genesis/game/data/extensions/export-genesis.js) for Tiled. I wrote out all the groups of objects and triggers as C data structures immediately usable by the game engine, in a similar fashion to how rescomp makes resources (except I output C source code while rescomp outputs binary object code).
 
