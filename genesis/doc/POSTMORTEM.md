@@ -107,9 +107,11 @@ i = floor(
 )
 ```
 
-Only bullets used this formula. Enemies rotated by directly setting the animation and flips.
+Only bullets used this formula; enemies directly set a rotation animation and flip flags.
 
-Many games just have round bullet sprites to avoid such calculations. But that felt like a cop-out as I wanted to port faithfully to the best of my ability. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
+Why add 0.5? To minimize the divergence of the sprite angle from the true angle. Without it, the maximum divergence would be the full angle difference between two rotation sprites - if a bullet's rotation sprites were every 45 degrees, then a bullet facing 44 degrees would look like one facing 0 degrees. Adding 0.5 halves that divergence.
+
+Many games just have round bullet sprites to avoid such calculations. But that felt like a cop-out and contrary to the goal of porting faithfully to the best of my ability. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
 
 ## Compression
 
