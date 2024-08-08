@@ -191,13 +191,22 @@ OBJ_updateAll(gobjPool);
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
-# Math
+# Optimization
 
+If you're used to developing for modern systems, a big hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. It is still "blazingly fast" for its time, when you know how to use more of the fast operations and fewer of the slow ones.
 
+When you see performance drop, you can log a trace using the [profiling version of BlastEm](https://github.com/Tails8521/blastem). [md-profiler](https://github.com/Tails8521/md-profiler) can convert the trace to a JSON file, which you can feed to Google Chrome's [tracing ui](chrome://tracing/).
 
-# Optimizing
+An easy and classic optimization is eliminating multiplication and division in favor of shifting where possible. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
 
-Precalculating for performance
+But what about cases like moving to a destination point, which requires normalizing a distance vector of arbitrary length to get a velocity? Another benefit of the Tiled export plugin was that I could precalculate when exporting.
+
+- I precalculated the segment lengths and unit vectors for movement paths. Assigning speeds to the paths (or to a single segment, by setting the speed on a path point) let me precalculate velocities too.
+- I preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid costly searches at runtime.
+
+Compute and store object bounding boxes once per frame
+
+Replacing sprintf with BCD printing
 
 # The results
 
