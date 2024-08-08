@@ -4,7 +4,7 @@ Decades ago, my parents bought me a Sega Genesis model 1. It was love at first s
 
 This summer, I made Honey Soldier MD, my own Sega Genesis game. I want to document my development experience in the hope that it will be useful and inspiring to other developers.
 
-Readers with experience in C programming, vector math, trigonometry, and game development will get the most out of this article.
+Readers with experience in C programming, vector math, trigonometry, and game development will get the most out of this piece.
 
 # Origins
 
@@ -70,15 +70,13 @@ Out of all the things to port, the graphic assets demanded the most thought and 
 
 ## Palette sharing
 
-There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object, rearranging colors to better organize them (or to make objects palette-swappable), and copying colors between images to keep their palettes in sync.
-
-<!-- Each object ended up between 3 and 8 colors. -->
+There are four 16-color palettes in the Genesis. In order to show many types of variously-colored objects at once - background, player, enemies, bullets, powerups - objects must share palettes with other objects that appear alongside them. This means further reducing colors per object (each object ended up with between 2 and 8), rearranging colors to better organize them (or to make multiple palettes applicable to the same sprite), and copying colors between images to keep their palettes in sync.
 
 Aseprite comes to the rescue with its highly manipulatable palette. You can move, copy, paste, and sort the colors however you need. If your change discolors any pixels, a Remap Palette button can fix them with one click.
 
 ![](aseprite.png)
 
-Imagine what 90's game artists with primitive paint tools would suffer if such palette changes occurred mid-development. It would have taken careful planning from the start with tight limits on art and level design to avoid a catastrophe.
+Imagine if 90's game artists had to do such a thing with their primitive paint tools mid-development. Good designers would have carefully planned their projects from the start with tight limits on art and level design to avoid such catastrophe.
 
 ## Resource types
 
@@ -109,7 +107,7 @@ i = floor(
 
 Only bullets used this formula; enemies directly set a rotation animation and flip flags.
 
-Why add 0.5? To minimize the divergence of the sprite angle from the true angle. Without it, the maximum divergence would be the full angle difference between two rotation sprites - if a bullet's rotation sprites were every 45 degrees, then a bullet facing 44 degrees would look like one facing 0 degrees. Adding 0.5 halves that divergence.
+Why add 0.5? To minimize the divergence of the sprite angle from the true angle. Without it, the maximum divergence would be the full angle difference between two rotation sprites - if a bullet's rotation sprites were every 45 degrees, then a bullet facing 44 degrees would appear to face 0. Adding 0.5 halves that divergence.
 
 Many games just have round bullet sprites to avoid such calculations. But that felt like a cop-out and contrary to the goal of porting faithfully to the best of my ability. Of course, if I were on a schedule, it would be smartest to at least start with round bullets and add rotation if time and CPU budget allowed.
 
