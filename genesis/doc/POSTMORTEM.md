@@ -154,11 +154,7 @@ By default, sprites animate automatically, but with some costs in data transfer 
 
 It lets you get things moving quickly, but sooner or later, you'll want to [manually preload](https://github.com/IoriBranford/beeshooter/blob/8306c1ac6e40a81e46d97ff0ecd484dfe3508769/genesis/src/gobjdef.c#L497) the frames into memory and point your sprite instances to them. This will free up CPU and video memory for greater object quantity and variety. So that is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
-<!-- Note the duplicate frames when there are many instances of the same sprite.
-
-![](blastem-auto-upload-tiles.png) -->
-
-Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This is why my performance tanked early on, because my sprite resources initially had AUTO compression as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except that the mid-game sprite loads might take noticeably long. So I dropped the compression.
+Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This happened to me early on because of AUTO compression on my sprite resources as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except the mid-game sprite loads would likely cause noticeable hiccups. So I dropped the compression.
 
 ## Palettes
 
