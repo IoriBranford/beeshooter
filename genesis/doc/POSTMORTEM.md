@@ -191,20 +191,21 @@ The GUI is a simple one made mostly of text. SGDK has text drawing functions whi
 
 # Optimization
 
-If you're used to developing for modern systems, a big hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. It is still "blazingly fast" for its time, when you know how to use more of the fast operations and fewer of the slow ones.
+If you're used to developing for modern systems, a big hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. For its time it can still be "blazingly fast", as they say, provided you know how to use more of the fast operations and fewer of the slow ones.
 
-When you see performance drop, you can log a trace using the [profiling version of BlastEm](https://github.com/Tails8521/blastem). [md-profiler](https://github.com/Tails8521/md-profiler) can convert the trace to a JSON file, which you can feed to Google Chrome's [tracing ui](chrome://tracing/).
+When you see performance drop, you can log a trace using the [profiling version of BlastEm](https://github.com/Tails8521/blastem). [md-profiler](https://github.com/Tails8521/md-profiler) can convert the trace to a JSON file, which you can feed to Google Chrome's [tracing ui](chrome://tracing/). Even when profiling a release build with many of the function calls inlined, it's not hard to tell which parts of the graph correspond to what parts of the code.
 
-An easy and classic optimization is eliminating multiplication and division in favor of shifting where possible. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
+An easy and classic optimization is eliminating multiplication and division (modulo included) in favor of shifting where possible. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
 
-But what about cases like moving to a destination point, which requires normalizing a distance vector of arbitrary length to get a velocity? Another benefit of the Tiled export plugin was that I could precalculate when exporting.
+But what about cases like moving to a destination point, a very common game action that involves normalizing a distance vector of arbitrary length to get a velocity?
 
-- I precalculated the segment lengths and unit vectors for movement paths. Assigning speeds to the paths (or to a single segment, by setting the speed on a path point) let me precalculate velocities too.
-- I preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid costly searches at runtime.
+Another benefit of the Tiled export plugin is that it can precalculate as it exports. I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. (Adding speed to distance traveled would also have worked, if you prefer.) I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
 
-Compute and store object bounding boxes once per frame
+As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. All I really needed to do for good performance was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
 
-Replacing sprintf with BCD printing
+One of the more hidden performance pitfalls is printing numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated modulos to get each decimal digit. Profiling confirmed this with a built-in modulo function appearing multiple times per sprintf call.
+
+The solution is binary-coded decimal numbers. Converting to a BCD involves fewer divides and modulos, and printing it is much cheaper (but at time of writing you have to DIY).
 
 # The results
 
