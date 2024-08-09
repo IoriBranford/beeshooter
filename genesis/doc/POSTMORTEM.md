@@ -209,9 +209,11 @@ One of the more hidden performance pitfalls is printing score and other numeric 
 
 The solution is binary-coded decimal numbers. Making an integer BCD involves only one or two divmods, and printing is done with cheaper bitwise ands and shifts (though you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing).
 
-# The results
+# Results
 
-The port took seven weeks.
+After seven weeks of work, I was satisfied with the port and called it done.
+
+It faithfully reproduced the original game in look, sound, feel, and play. The only noticeable differences were minor.
 
 # Conclusion
 
