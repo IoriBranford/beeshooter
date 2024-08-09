@@ -207,7 +207,7 @@ An easy and classic optimization is minimizing multiplication and division (modu
 
 But what about cases like moving to a destination point, a very common game action that involves normalizing a distance vector of arbitrary length to get a velocity?
 
-Another benefit of the Tiled export plugin is that it can precalculate as it exports. In it I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. (Adding speed to distance traveled would also have worked, if you prefer.) I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
+Another benefit of the Tiled export plugin is that it can precalculate as it exports. In it I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
 
 When moving to a variable destination like the player position, normalizing is unavoidable, in particular the division. But when it comes to getting the distance, SGDK offers a distance estimate function which was good enough for me, using only adding and shifting.
 
