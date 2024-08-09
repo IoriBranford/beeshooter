@@ -82,7 +82,9 @@ Imagine if 90's game artists had to do such a thing with their primitive paint t
 
 Once images have been made Genesis-friendly, you can define several types of resources from them. The most common in this port is SPRITE, a free-moving object with animation frames. Some sprite images were also used as PALETTE resources; PALETTE is an array of the colors from the image palette. The background was exported from Tiled as an image and imported as a TILESET resource and a MAP resource. The font is another TILESET.
 
-Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting hooksnfangs' cover illustration to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
+Finally there is one IMAGE resource for the title picture. IMAGE is meant for a full-screen graphic using all four palettes. The image must be convertible to a tile map where all colors in each 8x8 tile are from a single palette. I explored options for converting the [cover illustration by hooksnfangs](https://www.deviantart.com/hooksnfangs/art/Honey-Gaurdian-Cover-922444826) to fit in those constraints, but realized the editing work to accomplish it was prohibitive (never mind making it look good in the Genesis color space). Instead I traced a portion of the hero Jenny in 16 colors as best I could.
+
+![](title-art.jpg)![](title-jenny-traced.png)
 
 ## Sprite rotation
 
