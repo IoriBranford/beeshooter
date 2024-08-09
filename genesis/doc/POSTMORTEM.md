@@ -127,7 +127,7 @@ Having the [dubious](https://www.youtube.com/watch?v=aXOChLn5ZdQ) privilege of k
 
 # Engine
 
-SGDK comes with some handy modules to start a game engine with.
+SGDK comes with more than enough handy modules to start a game engine with.
 
 ## Backgrounds
 
@@ -191,15 +191,15 @@ In the original Lua code, object behaviors were written as coroutines. I could e
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
-## High scores
+## High score save
 
 Users' data such as high scores are written to SRAM (static RAM). You have to enable SRAM writing before you write to it. I found no info on any dangers of leaving SRAM write enabled, such as possible data corruption from a hardware fault. Still I always disabled SRAM writing afterwards to be safe.
 
-If you hope to publish on a real Genesis cartridge, you should know SRAM's initial values are unpredictable. Some emulators fill it with zeroes, some with a non-0 value that certain games depend on. The way I handle this is to sanity-check every data value on boot. If even one field is an out-of-range value, consider the data uninitialized and reset it to default values. Provided the user data has a decent amount of fields, the odds of every initial value being valid are microscopic.
+One gotcha with SRAM is that initial values are unpredictable. Even an emulator may fill it with zeroes, or with a nonzero value that certain games depend on, or with random values to be true to the hardware. The way I handle this is to define valid ranges for the data values and sanity-check the values on boot. If even one field is an out-of-range value, consider all data uninitialized and reset it all to defaults. Provided a decent amount of data fields and not too large valid ranges, the odds of every initial value being valid can be near zero.
 
 # Optimization
 
-If you're used to developing for modern systems, a big hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. For its time it can still be "blazingly fast", as they say, provided you know how to use more of the fast operations and fewer of the slow ones.
+If you're used to developing for modern systems, one hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. For its age it can still be "blazingly fast", as they say, provided you know what the faster operations are and find algorithms that use them.
 
 When you see performance drop, you can log a trace using the [profiling version of BlastEm](https://github.com/Tails8521/blastem). [md-profiler](https://github.com/Tails8521/md-profiler) can convert the trace to a JSON file, which you can feed to Google Chrome's [tracing ui](chrome://tracing/). Even when profiling a release build with many of the function calls inlined, it's not hard to tell which parts of the graph correspond to what parts of the code.
 
@@ -209,9 +209,9 @@ But what about cases like moving to a destination point, a very common game acti
 
 Another benefit of the Tiled export plugin is that it can precalculate as it exports. In it I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
 
-When moving to a variable destination like the player position, normalizing is unavoidable, in particular the division. But when it comes to getting the distance, SGDK offers a distance estimate function which was good enough for me, using only adding and shifting.
+When moving to a variable destination like the player position, normalizing is unavoidable, in particular the division. But for getting the distance, SGDK offers an approximate distance function using only adding and shifting. Whatever inaccuracy it had didn't noticeably throw off the speed or direction of the movement.
 
-As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. All I really needed to do for good performance was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
+As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. To make it performant enough, all I really needed to do was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
 
 One of the more hidden performance pitfalls is printing score and other numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated divides and modulos to get decimal digits. Profiling confirmed this with a divmod (combined divide and modulo) function appearing multiple times per sprintf call.
 
