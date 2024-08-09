@@ -96,7 +96,7 @@ To pick the rotated animation given a desired direction vector, your first insti
 
 Unfortunately, I observed noticeable error around the diagonal angles, where some bullets appeared to fly almost sideways. I didn't investigate deeply, but it could be a mistake in my implementation of the approximate arctan2, or that I didn't use a more precise [fixed-point number type](https://github.com/Stephane-D/SGDK/blob/0377311330ed0d64c2132234e88097accc87ba30/inc/types.h#L203).
 
-After some thought, I arrived at a different [formula](https://github.com/IoriBranford/beeshooter/blob/b558c1e877fdaf8e6618a40fb2cbd64b7878c7b8/genesis/src/bullet.c#L46) with no need for an angle. Given N rotation animations from 0-90 degrees inclusive, and the face vector (x, y), the correct animation i is
+After some thought, I arrived at a different [formula](https://github.com/IoriBranford/beeshooter/blob/genesis/genesis/src/bullet.c#L46) with no need for an angle. Given N rotation animations from 0-90 degrees inclusive, and the face vector (x, y), the correct animation i is
 
 ```
 i = floor(
@@ -152,7 +152,7 @@ By default, sprites animate automatically, but with some costs in data transfer 
 
 ![](blastem-auto-upload-tiles.png)
 
-It lets you get things moving quickly, but sooner or later, you'll want to [manually preload](https://github.com/IoriBranford/beeshooter/blob/8306c1ac6e40a81e46d97ff0ecd484dfe3508769/genesis/src/gobjdef.c#L497) the frames into memory and point your sprite instances to them. This will free up CPU and video memory for greater object quantity and variety. So that is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
+It lets you get things moving quickly, but sooner or later, you'll want to [manually preload](https://github.com/IoriBranford/beeshooter/blob/genesis/genesis/src/gobjdef.c#L497) the frames into memory and point your sprite instances to them. This will free up CPU and video memory for greater object quantity and variety. So that is what I eventually did, dividing the sprite resources into "common", "stage part 1", "stage part 2", and "stage boss" groups and placing level triggers to load each group as needed.
 
 Preloading is even more necessary if you compress your sprite resources. Otherwise the default auto animation decompresses every new animation frame, hurting the game performance even further. This happened to me early on because of AUTO compression on my sprite resources as mentioned in [Graphics](#graphics). Preloading alone would fix most of the problem except the mid-game sprite loads would likely cause noticeable hiccups. So I dropped the compression.
 
@@ -187,7 +187,7 @@ gobj->update = (ObjectCallback*) &updateGameObject;
 OBJ_updateAll(gobjPool);
 ```
 
-In the original Lua code, object behaviors were written as coroutines. I could express a whole sequence of actions in a single function, for example [a boss' death](https://github.com/IoriBranford/beeshooter/blob/00b1d84d3f479b14cc66961b5af894d88db510f6/game/code/BeeShooter/Character/EnemyShip.lua#L611-L624). C doesn't have coroutines, but you can break up a coroutine into functions and replace the coroutine's local variables with object struct variables. [The same boss death in C](https://github.com/IoriBranford/beeshooter/blob/00b1d84d3f479b14cc66961b5af894d88db510f6/genesis/src/boss.c#L147-L207) is one start function and one update loop function.
+In the original Lua code, object behaviors were written as coroutines. I could express a whole sequence of actions in a single function, for example [a boss' death](https://github.com/IoriBranford/beeshooter/blob/genesis/game/code/BeeShooter/Character/EnemyShip.lua#L611-L624). C doesn't have coroutines, but you can break up a coroutine into functions and replace the coroutine's local variables with object struct variables. [The same boss death in C](https://github.com/IoriBranford/beeshooter/blob/genesis/genesis/src/boss.c#L147-L207) is one start function and one update loop function.
 
 ## GUI
 
@@ -217,13 +217,13 @@ When moving to a variable destination like the player position, normalizing is u
 
 ## Collision checking
 
-As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. To make it performant enough, all I really needed to do was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
+As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. To make it performant enough, all I really needed to do was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/genesis/genesis/src/gobject.c#L147).
 
 ## Number printing
 
 One of the more hidden performance pitfalls is printing score and other numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated divides and modulos to get decimal digits. Profiling confirmed this with a divmod (combined divide and modulo) function appearing multiple times per sprintf call.
 
-The solution is binary-coded decimal numbers. SGDK has integer-to-BCD using only one or two divmods. Printing is done with cheaper bitwise ands and shifts although you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing.
+The solution is binary-coded decimal numbers. SGDK has integer-to-BCD using only one or two divmods. Printing is done with cheaper bitwise ands and shifts although you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/genesis/genesis/src/ui.c#L4) at time of writing.
 
 ## What isn't optimized
 
