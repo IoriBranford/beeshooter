@@ -239,6 +239,4 @@ I had an amazing time developing with SGDK. Stephane's goal was ["to have a free
 
 # Conclusion
 
-Takeaways from this project
-
-What next
+This port was a great exercise for my development skills, and I would absolutely do more work for the Genesis given a professional opportunity. I've been in touch with a publisher to explore a potential cartridge release. I can't say if or when, but the ideas and possibilities are exciting...
