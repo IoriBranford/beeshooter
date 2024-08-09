@@ -223,6 +223,12 @@ One of the more hidden performance pitfalls is printing score and other numeric 
 
 The solution is binary-coded decimal numbers. SGDK has integer-to-BCD using only one or two divmods. Printing is done with cheaper bitwise ands and shifts although you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing.
 
+## What couldn't be optimized
+
+Some areas originally had such huge numbers of enemies or bullets, no optimization would let them run at full speed unchanged. I accepted slowdown in parts where it added some dramatic or climactic effect, such as the midboss fight or the boss entrance, or where enemies fire a lot of bullets and you might appreciate having more of a chance to dodge them all.
+
+Where neither of those applied, I did reduce the enemy counts. To compensate, I increased the score value of remaining enemies, and added secret shootable bonus items in the level, a staple of these caravan shooter games that I somehow never thought to include before.
+
 # Results
 
 After seven weeks of work, I was satisfied with the port and called it done.
