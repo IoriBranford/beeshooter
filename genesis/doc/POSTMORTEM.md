@@ -215,7 +215,7 @@ As in most games, the hottest of the hot loops would have to be the collision lo
 
 One of the more hidden performance pitfalls is printing score and other numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated divides and modulos to get decimal digits. Profiling confirmed this with a divmod (combined divide and modulo) function appearing multiple times per sprintf call.
 
-The solution is binary-coded decimal numbers. Making an integer BCD involves only one or two divmods, and printing is done with cheaper bitwise ands and shifts (though you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing).
+The solution is binary-coded decimal numbers. SGDK has integer-to-BCD using only one or two divmods. Printing is done with cheaper bitwise ands and shifts although you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing.
 
 # Results
 
