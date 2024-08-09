@@ -205,13 +205,19 @@ When you see performance drop, you can log a trace using the [profiling version 
 
 An easy and classic optimization is minimizing multiplication and division (modulo included) in favor of bit shifting. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
 
+## Vector normalization
+
 But what about cases like moving to a destination point, a very common game action that involves normalizing a distance vector of arbitrary length to get a velocity?
 
 Another benefit of the Tiled export plugin is that it can precalculate as it exports. In it I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
 
 When moving to a variable destination like the player position, normalizing is unavoidable, in particular the division. But for getting the distance, SGDK offers an approximate distance function using only adding and shifting. Whatever inaccuracy it had didn't noticeably throw off the speed or direction of the movement.
 
+## Collision checking
+
 As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. To make it performant enough, all I really needed to do was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
+
+## Number printing
 
 One of the more hidden performance pitfalls is printing score and other numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated divides and modulos to get decimal digits. Profiling confirmed this with a divmod (combined divide and modulo) function appearing multiple times per sprintf call.
 
