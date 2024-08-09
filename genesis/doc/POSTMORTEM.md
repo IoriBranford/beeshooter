@@ -231,9 +231,11 @@ Where neither of those applied, I did reduce the enemy counts. To compensate, I 
 
 # Results
 
-After seven weeks of work, I was satisfied with the port and called it done.
+After seven weeks of work, I called the port done and released it to itch.io.
 
-It faithfully reproduced the original game in look, sound, feel, and play. The only noticeable differences were minor.
+It achieved a faithful reproduction of the original game in look, sound, feel, and play. Most differences were minor and harmless. As for the big obvious ones, either they came with some benefit of their own or I added something to make up for them.
+
+Evaluation of SGDK
 
 # Conclusion
 
