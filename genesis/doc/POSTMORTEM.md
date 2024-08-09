@@ -233,7 +233,7 @@ Where neither of those applied, I did reduce the enemy counts. To compensate, I 
 
 # Results
 
-After seven weeks of work, I called the port done and released it to itch.io. It achieved a faithful reproduction of the original game in look, sound, feel, and play. Most differences were minor and harmless, like color changes for palette sharing. As for the big obvious ones, either they came with some benefit of their own or I added something to make up for them.
+After seven weeks of work, I called the port done and released it to itch.io. It achieved a [faithful reproduction](https://www.youtube.com/watch?v=gG7S_n4_B04) of the original game in look, sound, feel, and play. Most differences were minor and harmless, like color changes for palette sharing. As for the big obvious ones, either they came with some benefit of their own or I added something to make up for them.
 
 I had an amazing time developing with SGDK. Stephane's goal was ["to have a free and fully functional development kit but still to keep it as small as possible"](https://www.patreon.com/posts/sgdk-history-26594202) and SGDK scores high on all these points. It simplifies and accelerates the Genesis development process, making it quick and easy to implement all the core functionality you take for granted as a player. It is full-featured without feeling bloated - providing more than everything you need to make a quality Genesis game, with multiple options having clear tradeoffs between costs and capabilities so choice paralysis was rare. No wonder the Genesis games since its release [number in the hundreds](https://segaretro.org/List_of_Sega_Mega_Drive_homebrew_games) from all over the world...and they're [still growing](https://www.youtube.com/watch?v=qM9VcDM3qdI).
 
