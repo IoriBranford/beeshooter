@@ -195,17 +195,19 @@ If you're used to developing for modern systems, a big hurdle to clear on the Ge
 
 When you see performance drop, you can log a trace using the [profiling version of BlastEm](https://github.com/Tails8521/blastem). [md-profiler](https://github.com/Tails8521/md-profiler) can convert the trace to a JSON file, which you can feed to Google Chrome's [tracing ui](chrome://tracing/). Even when profiling a release build with many of the function calls inlined, it's not hard to tell which parts of the graph correspond to what parts of the code.
 
-An easy and classic optimization is eliminating multiplication and division (modulo included) in favor of shifting where possible. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
+An easy and classic optimization is minimizing multiplication and division (modulo included) in favor of bit shifting. Historically, integer multiplication and division have been the slowest arithmetic operations. Where a factor or divisor is a power of 2, do a shift instead.
 
 But what about cases like moving to a destination point, a very common game action that involves normalizing a distance vector of arbitrary length to get a velocity?
 
-Another benefit of the Tiled export plugin is that it can precalculate as it exports. I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. (Adding speed to distance traveled would also have worked, if you prefer.) I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
+Another benefit of the Tiled export plugin is that it can precalculate as it exports. In it I precalculated lengths and unit vectors of path segments; assigning speeds to paths and path points let me precalculate velocities too. Then moving an object to a path point involved only adding velocity to object position and subtracting speed from distance left to travel. (Adding speed to distance traveled would also have worked, if you prefer.) I also preassigned objects to whatever paths they were on, starting at whatever path point they were on, to avoid searches at runtime.
+
+When moving to a variable destination like the player position, normalizing is unavoidable, in particular the division. But when it comes to getting the distance, SGDK offers a distance estimate function which was good enough for me, using only adding and shifting.
 
 As in most games, the hottest of the hot loops would have to be the collision loop, a simple O(n^2) check of everything against all of its opponents. I briefly tried some fancy stuff with space partitioning but couldn't get it right in the time I was willing to devote. All I really needed to do for good performance was calculate objects' extents after every move for the quickest possible [AABB check](https://github.com/IoriBranford/beeshooter/blob/ba17ce7c3060e906844f164bcd5fd7362812c28c/genesis/src/gobject.c#L147).
 
-One of the more hidden performance pitfalls is printing numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated modulos to get each decimal digit. Profiling confirmed this with a built-in modulo function appearing multiple times per sprintf call.
+One of the more hidden performance pitfalls is printing score and other numeric values with sprintf. But it makes sense when you think about how sprintf must work: repeated divides and modulos to get decimal digits. Profiling confirmed this with a divmod (combined divide and modulo) function appearing multiple times per sprintf call.
 
-The solution is binary-coded decimal numbers. Converting to a BCD involves fewer divides and modulos, and printing it is much cheaper (but at time of writing you have to DIY).
+The solution is binary-coded decimal numbers. Making an integer BCD involves only one or two divmods, and printing is done with cheaper bitwise ands and shifts (though you have to [DIY](https://github.com/IoriBranford/beeshooter/blob/fb4fb2a5c1e9329be9fbcd4fcba89f8bd36985b2/genesis/src/ui.c#L4) at time of writing).
 
 # The results
 
