@@ -105,7 +105,7 @@ i = floor(
 )
 ```
 
-Only bullets used this formula; enemies directly set a rotation animation and flip flags.
+Only bullets used this formula; enemies knew exactly which angle to face where, and set the appropriate animation and flip flags directly.
 
 Why add 0.5? To minimize the divergence of the sprite angle from the true angle. Without it, the maximum divergence would be the full angle difference between two rotation sprites - if a bullet's rotation sprites were every 45 degrees, then a bullet facing 44 degrees would appear to face 0. Adding 0.5 halves that divergence.
 
