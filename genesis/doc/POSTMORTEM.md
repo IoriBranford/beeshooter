@@ -185,6 +185,8 @@ gobj->update = (ObjectCallback*) &updateGameObject;
 OBJ_updateAll(gobjPool);
 ```
 
+In the original Lua code, object behaviors were written as coroutines. I could express a whole sequence of actions in a single function, for example [a boss' death](https://github.com/IoriBranford/beeshooter/blob/00b1d84d3f479b14cc66961b5af894d88db510f6/game/code/BeeShooter/Character/EnemyShip.lua#L611-L624). C doesn't have coroutines, but you can break up a coroutine into functions and replace the coroutine's local variables with object struct variables. [The same boss death in C](https://github.com/IoriBranford/beeshooter/blob/00b1d84d3f479b14cc66961b5af894d88db510f6/genesis/src/boss.c#L147-L207) is one start function and one update loop function.
+
 ## GUI
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
