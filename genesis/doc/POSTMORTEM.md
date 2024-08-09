@@ -191,6 +191,12 @@ In the original Lua code, object behaviors were written as coroutines. I could e
 
 The GUI is a simple one made mostly of text. SGDK has text drawing functions which are specialized tile drawing functions, converting characters to tiles in a built-in 8x8px font tileset. You can overwrite the font tileset with your own, and apply tile properties like palette and flipping to the letters using the more advanced text drawing function. It's up to you to adapt these functions to draw larger fonts if you need them to.
 
+## High scores
+
+Users' data such as high scores are written to SRAM (static RAM). You have to enable SRAM writing before you write to it. I found no info on any dangers of leaving SRAM write enabled, such as possible data corruption from a hardware fault. Still I always disabled SRAM writing afterwards to be safe.
+
+If you hope to publish on a real Genesis cartridge, you should know SRAM's initial values are unpredictable. Some emulators fill it with zeroes, some with a non-0 value that certain games depend on. The way I handle this is to sanity-check every data value on boot. If even one field is an out-of-range value, consider the data uninitialized and reset it to default values. Provided the user data has a decent amount of fields, the odds of every initial value being valid are microscopic.
+
 # Optimization
 
 If you're used to developing for modern systems, a big hurdle to clear on the Genesis is its [CPU](https://en.wikipedia.org/wiki/Motorola_68000): 7.6 MHz, one core, no cache, no pipeline, no FPU. For its time it can still be "blazingly fast", as they say, provided you know how to use more of the fast operations and fewer of the slow ones.
