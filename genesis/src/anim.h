@@ -1,0 +1,57 @@
+#ifndef _ANIM_H
+#define _ANIM_H
+
+enum AniPlayer {
+    ANI_PLAYER_FLYA,
+    ANI_PLAYER_FLYB,
+    ANI_PLAYER_DIE
+};
+
+enum AniAnts {
+    ANI_ANT_RIGHT,
+    ANI_ANT_DOWN
+};
+
+enum AniHoneyPot {
+    ANI_POT_CLOSED,
+    ANI_POT_OPEN
+};
+
+enum AniBigAnt {
+    ANI_BIGANT_RIGHT,
+    ANI_BIGANT_DOWN
+};
+
+enum AniAliens {
+    ANI_ALIEN_GUN_RUN,
+    ANI_ALIEN_GUN_STAND,
+    ANI_ALIEN_CLAW_RUN,
+    ANI_ALIEN_CLAW_STAND,
+    ANI_ALIEN_GUN_DIE,
+    ANI_ALIEN_CLAW_DIE,
+};
+
+enum AniWasp {
+    ANI_WASP_FLY,
+    ANI_WASP_BIRTH
+};
+
+enum AniBeetle {
+    ANI_BEETLE_0,
+    ANI_BEETLE_45,
+    ANI_BEETLE_90,
+    ANI_BEETLE_135,
+    ANI_BEETLE_BACK,
+    ANI_BEETLE_EAT
+};
+
+enum AniWaspBoss {
+    ANI_WASPBOSS_FLY,
+    ANI_WASPBOSS_PIECE0,
+    ANI_WASPBOSS_PIECE1,
+    ANI_WASPBOSS_PIECE2,
+    ANI_WASPBOSS_PIECE3,
+    ANI_WASPBOSS_PIECE4,
+};
+
+#endif

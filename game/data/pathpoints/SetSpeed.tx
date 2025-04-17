@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
- <object name="SetSpeed" class="PathPoint">
+ <object name="SetSpeed" type="PathPoint">
   <properties>
    <property name="action" value="PathPoint_SetSpeed"/>
-   <property name="speed" type="int" value="1"/>
+   <property name="speed" type="float" value="1"/>
   </properties>
   <point/>
  </object>

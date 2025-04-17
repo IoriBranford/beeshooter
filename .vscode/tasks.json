@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "type": "shell",
+    "command": "make",
+    "args": ["-f", "${env:GDK}/makefile.gen"],
+    "options": {
+        "cwd": "${workspaceFolder}/genesis"
+    },
+    "windows": {
+        "command": "${env:GDK}\\bin\\make",
+        "args": ["-f", "${env:GDK}\\makefile.gen"]
+    },
+    "tasks": [
+        {
+            "label": "Debug build",
+            "group": {
+                "kind": "build",
+            },
+            "args": ["debug"]
+        },
+        {
+            "label": "Clean build",
+            "group": {
+                "kind": "build"
+            },
+            "args": ["clean"]
+        },
+        {
+            "label": "Release build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Start debug server",
+            "command": "${config:gens.path}",
+            "args": ["-D", "out${pathSeparator}rom.bin"],
+            "problemMatcher": "$gcc",
+            "isBackground": true
+        },
+        {
+            "label": "Build and start debug server",
+            "command": "${env:GDK}${pathSeparator}bin${pathSeparator}make -f ${env:GDK}${pathSeparator}makefile.gen debug && ${config:gens.path} -D out${pathSeparator}rom.bin",
+            "problemMatcher": "$gcc",
+            "isBackground": true
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="SetInvul" type="PathPoint">
+  <properties>
+   <property name="action" value="setInvul"/>
+   <property name="time" type="int" value="0"/>
+  </properties>
+  <point/>
+ </object>
+</template>

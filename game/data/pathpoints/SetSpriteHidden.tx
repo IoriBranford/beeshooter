@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="SetSpriteHidden" type="PathPoint">
+  <properties>
+   <property name="action" value="setSpriteHidden"/>
+  </properties>
+  <point/>
+ </object>
+</template>

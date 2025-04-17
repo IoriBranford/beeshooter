@@ -40,6 +40,7 @@ publish win-64
 # publish linux-armhf
 publish data
 publish web
+publish genesis
 # publish demo-win-32
 # publish demo-win-64
 # publish demo-osx

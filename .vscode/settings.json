@@ -1,4 +1,9 @@
 {
+    "files.associations": {
+        "*.lua": "lua",
+        "*.h": "c",
+        "*.c": "c"
+    },
     "Lua.workspace.library": [
         "${3rd}/love2d/library"
     ],

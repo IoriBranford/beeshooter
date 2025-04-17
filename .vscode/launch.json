@@ -39,8 +39,43 @@
                 "command": "love"
             },
             "args": ["${workspaceFolder}/game", "--startpoint", "${input:startpoint}"],
-            
         },
+        {
+            "name": "Debug Genesis",
+            "request": "launch",
+            "type": "cppdbg",
+            "program": "${workspaceRoot}${pathSeparator}genesis${pathSeparator}out${pathSeparator}rom.out",
+            "miDebuggerServerAddress": "localhost:1234", // BlastEm debug port
+            "sourceFileMap": {
+                "d:\\apps\\sgdk\\src\\": "${env:GDK}${pathSeparator}src${pathSeparator}",
+            },
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/genesis",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "launchCompleteCommand": "exec-continue",
+            "windows": {
+                "miDebuggerPath": "${env:GDK}${pathSeparator}bin${pathSeparator}gdb.exe",
+            },
+            "setupCommands": [
+                {
+                    "text": "set directories '${workspaceFolder};$cwd;$cdir'"
+                }
+            ],
+            // "preLaunchTask": "Build and start debug server"
+        },
+        {
+            "name": "Run Genesis",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${config:gens.path}",
+            "args": ["rom.bin"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}${pathSeparator}genesis${pathSeparator}out",
+            "environment": []
+        }
     ],
     "inputs": [
         {
