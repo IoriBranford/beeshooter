@@ -36,7 +36,7 @@ function BonusText:coroutine()
     self:setPosition(self.x0, self.y0)
     local hue = 0
     local velhue = math.pi/3
-    local showtime = 60
+    local showtime = 90
     for _ = 1, showtime do
         hue = self:updateHue(hue, velhue)
         yield()
