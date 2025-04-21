@@ -11,9 +11,10 @@ function BonusText:init()
     self:setHidden(true)
 end
 
-function BonusText:start(points)
+function BonusText:start(points, message)
     self.thread = coroutine.create(self.coroutine)
-    self.sprite.string = string.format("SECRET BONUS!\n%d", points)
+    message = message or string.format("SECRET BONUS!\n\n%d", points)
+    self.sprite.string = message
 end
 
 function BonusText:fixedupdate()
