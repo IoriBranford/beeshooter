@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="BeehiveObjects" tilewidth="16" tileheight="32" tilecount="16" columns="16" objectalignment="center">
- <image source="BeehiveObjects.png" width="256" height="32"/>
+<tileset version="1.11" tiledversion="1.11.2" name="BeehiveObjects" tilewidth="16" tileheight="32" tilecount="17" columns="17" objectalignment="center">
+ <image source="BeehiveObjects.png" width="272" height="32"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
    <object id="1" name="hitbox" x="0" y="12" width="16" height="16">
@@ -28,6 +28,10 @@
     <ellipse/>
    </object>
   </objectgroup>
+  <animation>
+   <frame tileid="4" duration="300"/>
+   <frame tileid="16" duration="100"/>
+  </animation>
  </tile>
  <tile id="7">
   <objectgroup draworder="index" id="2">

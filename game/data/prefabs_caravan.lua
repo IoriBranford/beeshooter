@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.11.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -187,9 +187,9 @@ return {
       tileheight = 32,
       spacing = 0,
       margin = 0,
-      columns = 16,
+      columns = 17,
       image = "tilesets/BeehiveObjects.png",
-      imagewidth = 256,
+      imagewidth = 272,
       imageheight = 32,
       objectalignment = "center",
       tilerendersize = "tile",
@@ -205,7 +205,7 @@ return {
       },
       properties = {},
       wangsets = {},
-      tilecount = 16,
+      tilecount = 17,
       tiles = {
         {
           id = 0,
@@ -332,6 +332,16 @@ return {
                 visible = true,
                 properties = {}
               }
+            }
+          },
+          animation = {
+            {
+              tileid = 4,
+              duration = 300
+            },
+            {
+              tileid = 16,
+              duration = 100
             }
           }
         },
@@ -499,7 +509,7 @@ return {
     },
     {
       name = "FlyBullet",
-      firstgid = 22,
+      firstgid = 23,
       class = "",
       tilewidth = 16,
       tileheight = 8,
@@ -571,7 +581,7 @@ return {
     },
     {
       name = "Ant",
-      firstgid = 24,
+      firstgid = 25,
       class = "",
       tilewidth = 16,
       tileheight = 16,
@@ -684,7 +694,7 @@ return {
     },
     {
       name = "Aliens",
-      firstgid = 28,
+      firstgid = 29,
       class = "",
       tilewidth = 24,
       tileheight = 16,
@@ -947,7 +957,7 @@ return {
     },
     {
       name = "AlienMind",
-      firstgid = 46,
+      firstgid = 47,
       class = "",
       tilewidth = 32,
       tileheight = 48,
@@ -1040,7 +1050,7 @@ return {
     },
     {
       name = "Fly",
-      firstgid = 50,
+      firstgid = 51,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -1168,7 +1178,7 @@ return {
     },
     {
       name = "KillSmall",
-      firstgid = 66,
+      firstgid = 67,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -1263,7 +1273,7 @@ return {
     },
     {
       name = "KillMedium",
-      firstgid = 81,
+      firstgid = 82,
       class = "",
       tilewidth = 64,
       tileheight = 64,
@@ -1362,7 +1372,7 @@ return {
     },
     {
       name = "AcidBullet",
-      firstgid = 97,
+      firstgid = 98,
       class = "",
       tilewidth = 16,
       tileheight = 8,
@@ -1537,7 +1547,7 @@ return {
     },
     {
       name = "Tick",
-      firstgid = 101,
+      firstgid = 102,
       class = "",
       tilewidth = 24,
       tileheight = 32,
@@ -1609,7 +1619,7 @@ return {
     },
     {
       name = "WaspEgg",
-      firstgid = 103,
+      firstgid = 104,
       class = "",
       tilewidth = 8,
       tileheight = 8,
@@ -1685,7 +1695,7 @@ return {
     },
     {
       name = "Wasp",
-      firstgid = 106,
+      firstgid = 107,
       class = "",
       tilewidth = 40,
       tileheight = 30,
@@ -1902,7 +1912,7 @@ return {
     },
     {
       name = "Splats",
-      firstgid = 118,
+      firstgid = 119,
       class = "",
       tilewidth = 24,
       tileheight = 24,
@@ -1931,7 +1941,7 @@ return {
     },
     {
       name = "WaspBossPieces",
-      firstgid = 134,
+      firstgid = 135,
       class = "",
       tilewidth = 32,
       tileheight = 32,
@@ -1960,7 +1970,7 @@ return {
     },
     {
       name = "WaspBossWings",
-      firstgid = 138,
+      firstgid = 139,
       class = "",
       tilewidth = 64,
       tileheight = 64,
@@ -2007,7 +2017,7 @@ return {
     },
     {
       name = "WaspBoss",
-      firstgid = 141,
+      firstgid = 142,
       class = "",
       tilewidth = 100,
       tileheight = 100,
@@ -2109,7 +2119,7 @@ return {
     },
     {
       name = "Beehive",
-      firstgid = 144,
+      firstgid = 145,
       class = "",
       tilewidth = 16,
       tileheight = 16,
@@ -2462,7 +2472,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 66,
+          gid = 67,
           visible = true,
           properties = {
             ["color"] = "#ffc800c8",
@@ -2479,7 +2489,7 @@ return {
           width = 64,
           height = 64,
           rotation = 0,
-          gid = 81,
+          gid = 82,
           visible = true,
           properties = {
             ["color"] = "#ffc800c8",
@@ -2515,7 +2525,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 378,
+          gid = 379,
           visible = true,
           properties = {}
         }
@@ -2726,7 +2736,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 22,
+          gid = 23,
           visible = true,
           properties = {
             ["z"] = 20
@@ -2742,7 +2752,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 22,
+          gid = 23,
           visible = true,
           properties = {
             ["z"] = 20
@@ -2758,7 +2768,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 97,
+          gid = 98,
           visible = true,
           properties = {
             ["z"] = 20
@@ -2774,7 +2784,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 97,
+          gid = 98,
           visible = true,
           properties = {
             ["z"] = 20
@@ -2790,7 +2800,7 @@ return {
           width = 16,
           height = 8,
           rotation = 0,
-          gid = 99,
+          gid = 100,
           visible = true,
           properties = {
             ["z"] = 15
@@ -2822,7 +2832,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 24,
+          gid = 25,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2838,7 +2848,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483672,
+          gid = 2147483673,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -2855,7 +2865,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 28,
+          gid = 29,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2871,7 +2881,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 28,
+          gid = 29,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2889,7 +2899,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483676,
+          gid = 2147483677,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2905,7 +2915,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 34,
+          gid = 35,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2921,7 +2931,7 @@ return {
           width = 24,
           height = 16,
           rotation = 0,
-          gid = 2147483682,
+          gid = 2147483683,
           visible = true,
           properties = {
             ["z"] = 1
@@ -2937,7 +2947,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 50,
+          gid = 51,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2971,7 +2981,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 2147483698,
+          gid = 2147483699,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -2989,7 +2999,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 26,
+          gid = 27,
           visible = true,
           properties = {
             ["z"] = 1
@@ -3005,7 +3015,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 26,
+          gid = 27,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -3023,7 +3033,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483674,
+          gid = 2147483675,
           visible = true,
           properties = {
             ["z"] = 1
@@ -3039,7 +3049,7 @@ return {
           width = 16,
           height = 16,
           rotation = 0,
-          gid = 2147483674,
+          gid = 2147483675,
           visible = true,
           properties = {
             ["collidable"] = false,
@@ -3057,7 +3067,7 @@ return {
           width = 16,
           height = 16,
           rotation = 90,
-          gid = 26,
+          gid = 27,
           visible = true,
           properties = {
             ["z"] = 1
@@ -3073,7 +3083,7 @@ return {
           width = 16,
           height = 16,
           rotation = -90,
-          gid = 2147483674,
+          gid = 2147483675,
           visible = true,
           properties = {
             ["z"] = 1
@@ -3089,7 +3099,7 @@ return {
           width = 24,
           height = 32,
           rotation = 0,
-          gid = 101,
+          gid = 102,
           visible = true,
           properties = {
             ["bitepoint"] = 0,
@@ -3111,7 +3121,7 @@ return {
           width = 8,
           height = 8,
           rotation = 0,
-          gid = 103,
+          gid = 104,
           visible = true,
           properties = {
             ["z"] = 1
@@ -3127,7 +3137,7 @@ return {
           width = 40,
           height = 30,
           rotation = 0,
-          gid = 108,
+          gid = 109,
           visible = true,
           properties = {}
         }
@@ -3157,7 +3167,7 @@ return {
           width = 100,
           height = 100,
           rotation = 0,
-          gid = 141,
+          gid = 142,
           visible = false,
           properties = {}
         },
@@ -3171,7 +3181,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 134,
+          gid = 135,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -3190,7 +3200,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 135,
+          gid = 136,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -3209,7 +3219,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 136,
+          gid = 137,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -3228,7 +3238,7 @@ return {
           width = 32,
           height = 32,
           rotation = 0,
-          gid = 137,
+          gid = 138,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -3247,7 +3257,7 @@ return {
           width = 64,
           height = 64,
           rotation = 0,
-          gid = 138,
+          gid = 139,
           visible = true,
           properties = {
             ["applyspawnertransform"] = true,
@@ -3282,7 +3292,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 118,
+          gid = 119,
           visible = true,
           properties = {
             ["color"] = "#40aa00aa",
@@ -3299,7 +3309,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 118,
+          gid = 119,
           visible = true,
           properties = {
             ["color"] = "#40555500",
@@ -3316,7 +3326,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 118,
+          gid = 119,
           visible = true,
           properties = {
             ["color"] = "#40aa00aa",
@@ -3333,7 +3343,7 @@ return {
           width = 24,
           height = 24,
           rotation = 0,
-          gid = 118,
+          gid = 119,
           visible = true,
           properties = {
             ["color"] = "#40aa00aa",
