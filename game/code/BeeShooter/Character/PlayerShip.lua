@@ -276,10 +276,15 @@ function PlayerShip:giveLife()
     Audio.play(self.lifesound)
 end
 
-function PlayerShip:giveSecretBonus(points)
+function PlayerShip:notifySecretBonus(points, message)
     Audio.play(self.bonussound)
-    self:scorePoints(points)
     self.bonus = points
+    self.bonusmessage = message
+end
+
+function PlayerShip:giveSecretBonus(points, message)
+    self:scorePoints(points)
+    self:notifySecretBonus(points, message)
 end
 
 function PlayerShip:incPowerLevel()
@@ -318,10 +323,10 @@ function PlayerShip:updateHud(hud)
         or self.weapon == "B" and 2
     hud.weapons:selectButton(weapon)
 
-    local bonus = self.bonus
-    if bonus then
+    if self.bonus then
+        hud.status.bonus:start(self.bonus, self.bonusmessage)
         self.bonus = nil
-        hud.status.bonus:start(bonus)
+        self.bonusmessage = nil
     end
     hud.status.bonus:fixedupdate()
 end
