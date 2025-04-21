@@ -26,6 +26,9 @@ local defaulttime = 0 -- os.time({
 -- }
 
 local MaxHighScores = 10
+local HighScoresVersion = 1
+local FileName = "highscores"
+local BackupFileName = "highscores.bak"
 
 ---@class HighScore
 ---@field score integer
@@ -74,16 +77,30 @@ local function getScores(difficulty, character)
     return highscores
 end
 
+function HighScores.backup()
+	local data = love.filesystem.read("data", FileName)
+	---@cast data love.FileData
+	if data then
+		love.filesystem.write(BackupFileName, data)
+	end
+end
+
 function HighScores.load()
-    if love.filesystem.getInfo("highscores") then
-        local f, err = love.filesystem.load("highscores")
-        if type(f) == "function" then
-            highscores = f()
-        else
-            print(err)
-            return
-        end
-    end
+	local fileinfo = love.filesystem.getInfo(FileName)
+	local err
+	if fileinfo then
+		local ok, f
+		ok, f, err = pcall(love.filesystem.load, FileName)
+		if type(f) == "function" then
+			highscores = f()
+		elseif not ok then
+			err = f
+		end
+	end
+
+	if err then
+		err = string.format("Error reading high score file.\n  %s", err)
+	end
 
 	-- convert from old single scoreboard
 	-- if not highscores.campaign then
@@ -124,15 +141,35 @@ function HighScores.load()
 	local allboards = {
 		highscores
 	}
+
 	for _, scores in pairs(allboards) do
+		for i = #scores, 1, -1 do
+			local score = scores[i]
+			local version = score.version or 0
+			if version < HighScoresVersion then
+				err = "Your high score file has scores from an old version which will be discarded."
+				for j = i+1, #scores do
+					scores[j] = scores[j+1]
+				end
+			end
+		end
 		for i = #scores+1, MaxHighScores do
 			scores[i] = {
-				-- version = "0.0.0",
+				-- gameversion = "0.0.0",
+				version = HighScoresVersion,
 				score = 0,
 				timestamp = defaulttime,
 				-- endmap = "demonrealm.lua"
 			}
 		end
+	end
+
+	if err then
+		HighScores.backup()
+		local backupfilepath = string.format("%s/%s", love.filesystem.getSaveDirectory(), BackupFileName)
+		local message = string.format("%s\n\nIt has been backed up to:\n  %s", err, backupfilepath)
+		love.window.showMessageBox("Notice", message)
+		HighScores.save()
 	end
 
 	-- if steam and steam.initialized then
@@ -181,7 +218,7 @@ local function comparehighscores(a, b)
 	return false
 end
 
-function HighScores.put(score, version, character, difficulty, endmap)
+function HighScores.put(score, gameversion, character, difficulty, endmap)
 	-- if not allowedendmaps[endmap] then
 	-- 	--print("No scores on map", endmap)
 	-- 	return
@@ -192,7 +229,8 @@ function HighScores.put(score, version, character, difficulty, endmap)
 	end
 
 	local newscore = {
-		-- version = version,
+		gameversion = gameversion,
+		version = HighScoresVersion,
 		score = math.ceil(score),
 		timestamp = os.time(),
 		-- endmap = endmap
@@ -211,10 +249,10 @@ function HighScores.save()
 	end
 	local code = "return "..pl_pretty.write(highscores)
 	--DEBUG
-	--love.filesystem.write("highscores.lua", code)
+	love.filesystem.write("highscores.lua", code)
 
 	local f = loadstring(code)
-	love.filesystem.write("highscores", string.dump(f, true))
+	love.filesystem.write(FileName, string.dump(f, true))
 end
 
 function HighScores.getScore(i, difficulty, character)
