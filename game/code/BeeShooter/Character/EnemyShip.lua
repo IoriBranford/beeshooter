@@ -159,6 +159,34 @@ function EnemyShip:Decal()
     self:Idler()
 end
 
+function EnemyShip:HiddenBonus()
+    while not self:isSpriteOnScreen() do
+        Body.setVelocity(self, 0, self.stage.vely)
+        yield()
+    end
+    while self:isSpriteOnScreen() do
+        local healthpercent = self.health/self.maxhealth
+        local flashspeed = math.pi / max(2, min(self.health, 30))
+        self.sprite.alpha = (1 - healthpercent) * sin(self.age * flashspeed)
+        Body.setVelocity(self, 0, self.stage.vely)
+        yield()
+    end
+    self:markDisappear()
+end
+
+function EnemyShip:notifyHiddenBonus()
+    self:defaultDefeat()
+    local bonusletters = self.player.bonusletters or {"_", "_", "_", "_", "_"}
+    self.player.bonusletters = bonusletters
+    local i = self.bonusletterindex or 0
+    if 1 <= i and i <= #bonusletters then
+        bonusletters[i] = self.name
+    end
+    local points = self.defeatpoints or 0
+    local message = string.format("SECRET ITEM!\n\n%s  %5d", table.concat(bonusletters, ""), points)
+    self.player:notifySecretBonus(points, message)
+end
+
 function EnemyShip:Idler()
     while not self:isSpriteOnScreen() do
         Body.setVelocity(self, 0, self.stage.vely)
