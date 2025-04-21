@@ -93,12 +93,25 @@ function Stage.doStageSpawn(stagespawn)
     if not characters then
         return
     end
-    local stagey = stage.y
-    for _, character in ipairs(characters) do
-        character.y = character.y + stagey
+    Stage.spawnNCharacters(stagespawn, #characters)
+end
+
+function Stage.spawnNCharacters(stagespawn, n)
+    local characters = stagespawn.characters
+    if not characters then
+        return
     end
-    Stage.addCharacters(stagespawn.characters)
-    stagespawn.characters = nil
+    local numspawned = stagespawn.numspawned or 0
+    local i1 = numspawned + 1
+    local i2 = min(numspawned + n, #characters)
+    local stagey = stage.y
+    for i = i1, i2 do
+        local character = characters[i]
+        character.y = character.y + stagey
+        Stage.addCharacter(character)
+        numspawned = numspawned + 1
+    end
+    stagespawn.numspawned = numspawned
 end
 
 function Stage.init(startpoint)
