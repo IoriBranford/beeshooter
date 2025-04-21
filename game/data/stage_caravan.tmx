@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="399" nextobjectid="4392">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="400" nextobjectid="4402">
  <editorsettings>
   <chunksize width="16" height="14"/>
-  <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
+  <export target="stage_caravan.lua" format="lua"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/Beehive.tsx"/>
  <tileset firstgid="481" source="tilesets/Ant.tsx"/>
@@ -449,7 +449,7 @@ A brief chance to practice controls</text>
     </data>
    </layer>
   </group>
-  <group id="9" name="spawns" visible="0">
+  <group id="9" name="spawns">
    <objectgroup id="38" name="room1ants1">
     <object id="415" template="triggers/SpawnCharacters.tx" x="-32" y="3976"/>
     <object id="416" template="enemies/Ant.tx" gid="2147484129" x="264" y="4016"/>
@@ -4179,9 +4179,41 @@ self.speed = 0.75</property>
     <object id="1452" template="enemies/WaspEgg.tx" x="168" y="-1776"/>
     <object id="1453" template="enemies/WaspEgg.tx" x="168" y="-1776"/>
    </objectgroup>
+   <objectgroup id="399" name="bonusletters">
+    <object id="4392" name="H" type="BonusLetter1" gid="585" x="40" y="3840" width="16" height="16">
+     <properties>
+      <property name="bonusletterindex" type="int" value="1"/>
+     </properties>
+    </object>
+    <object id="4393" template="triggers/SpawnNextCharacters.tx" x="-60" y="3848"/>
+    <object id="4394" name="O" type="BonusLetter2" gid="586" x="192" y="3056" width="16" height="16">
+     <properties>
+      <property name="bonusletterindex" type="int" value="2"/>
+     </properties>
+    </object>
+    <object id="4395" template="triggers/SpawnNextCharacters.tx" x="-4" y="3064"/>
+    <object id="4396" name="N" type="BonusLetter3" gid="587" x="24" y="2432" width="16" height="16">
+     <properties>
+      <property name="bonusletterindex" type="int" value="3"/>
+     </properties>
+    </object>
+    <object id="4397" template="triggers/SpawnNextCharacters.tx" x="-28" y="2440"/>
+    <object id="4398" name="E" type="BonusLetter4" gid="588" x="72" y="1648" width="16" height="16">
+     <properties>
+      <property name="bonusletterindex" type="int" value="4"/>
+     </properties>
+    </object>
+    <object id="4399" template="triggers/SpawnNextCharacters.tx" x="-144" y="1656"/>
+    <object id="4400" name="Y" type="BonusLetter5" gid="589" x="184" y="800" width="16" height="16">
+     <properties>
+      <property name="bonusletterindex" type="int" value="5"/>
+     </properties>
+    </object>
+    <object id="4401" template="triggers/SpawnNextCharacters.tx" x="-48" y="808"/>
+   </objectgroup>
   </group>
  </group>
- <group id="231" name="stagemd">
+ <group id="231" name="stagemd" visible="0">
   <objectgroup id="398" name="bonusLetters">
    <object id="4382" name="H" type="BonusLetter" gid="585" x="40" y="3840" width="16" height="16"/>
    <object id="4383" template="triggers/SpawnNextCharacters.tx" x="-60" y="3848"/>
@@ -8448,7 +8480,7 @@ end</property>
    <object id="4345" template="enemies/BGFragment.tx" x="184" y="404"/>
   </objectgroup>
  </group>
- <group id="394" name="stagemd_unused">
+ <group id="394" name="stagemd_unused" visible="0">
   <objectgroup id="303" name="r13fly2" visible="0">
    <object id="2749" template="triggers/SpawnCharacters.tx" x="-72" y="1184">
     <properties>
