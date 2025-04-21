@@ -13,6 +13,11 @@ function Trigger:spawnCharacters()
     Stage.doStageSpawn(self.layer)
 end
 
+function Trigger:spawnNextCharacters()
+    local Stage = require "BeeShooter.Stage"
+    Stage.spawnNCharacters(self.layer, self.count or 1)
+end
+
 function Trigger:stopStageScroll()
     local Stage = require "BeeShooter.Stage"
     Stage.setVelY(0)
