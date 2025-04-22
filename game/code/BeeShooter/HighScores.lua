@@ -250,7 +250,7 @@ function HighScores.save()
 	end
 	local code = "return "..pl_pretty.write(highscores)
 	--DEBUG
-	love.filesystem.write("highscores.lua", code)
+	-- love.filesystem.write("highscores.lua", code)
 
 	local f = loadstring(code)
 	love.filesystem.write(FileName, string.dump(f, true))
