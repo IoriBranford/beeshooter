@@ -148,7 +148,7 @@ function HighScores.load()
 			local version = score.version or 0
 			if version < HighScoresVersion then
 				err = "Your high score file has scores from an old version which will be discarded."
-				for j = i+1, #scores do
+				for j = i, #scores do
 					scores[j] = scores[j+1]
 				end
 			end
