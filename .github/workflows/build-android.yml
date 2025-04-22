@@ -13,7 +13,7 @@ jobs:
         with:
           lfs: true
       - id: build
-        uses: ioribranford/docker-build-love-android@11.4
+        uses: ioribranford/docker-build-love-android@11.5
         env:
           ENV_SCRIPT: "make-vars-android.sh"
           KEYSTORE_ALIAS: ${{ secrets.KEYSTORE_ALIAS }}
