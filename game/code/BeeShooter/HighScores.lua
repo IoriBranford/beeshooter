@@ -143,16 +143,17 @@ function HighScores.load()
 	}
 
 	for _, scores in pairs(allboards) do
-		for i = #scores, 1, -1 do
-			local score = scores[i]
-			local version = score.version or 0
-			if version < HighScoresVersion then
-				err = "Your high score file has scores from an old version which will be discarded."
-				for j = i, #scores do
-					scores[j] = scores[j+1]
-				end
-			end
-		end
+		---- TODO if scoring potential is lower than old version
+		-- for i = #scores, 1, -1 do
+		-- 	local score = scores[i]
+		-- 	local version = score.version or 0
+		-- 	if version < HighScoresVersion then
+		-- 		err = "Your high score file has scores from an old version which will be discarded."
+		-- 		for j = i, #scores do
+		-- 			scores[j] = scores[j+1]
+		-- 		end
+		-- 	end
+		-- end
 		for i = #scores+1, MaxHighScores do
 			scores[i] = {
 				-- gameversion = "0.0.0",
