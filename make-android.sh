@@ -43,7 +43,7 @@ then
 	sed -i -r \
 		-e "s/(compileSdk) [0-9]+/\\1 $ANDROID_SDK_VERSION/" \
 		-e "s/(targetSdk) [0-9]+/\\1 $ANDROID_SDK_VERSION/" \
-		$BUILD_GRADLE
+		app/build.gradle love/build.gradle
 fi
 
 ANDROID_MANIFEST=app/src/main/AndroidManifest.xml
