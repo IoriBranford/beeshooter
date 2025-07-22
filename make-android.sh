@@ -26,32 +26,20 @@ cd love-android
 
 BUILD_GRADLE=app/build.gradle
 
-set_gradle_property() {
-	FILE="$1"
-	KEY="$2"
-	VALUE="$3"
-	sed -i -r -e "s#${KEY} .+#${KEY} ${VALUE}#" ${FILE}
-}
-
 # give your package a unique name
-set_gradle_property $BUILD_GRADLE applicationId "'$APPLICATION_ID'"
-
 # change the version
-set_gradle_property $BUILD_GRADLE versionCode $VERSION_CODE
-if [ ! -z "$VERSION_NAME" ]
-then
-	set_gradle_property $BUILD_GRADLE versionName "'$VERSION_NAME'"
-fi
+# change the title
+sed -i -r \
+  -e "s/^#(app.name)=.+/\\1=$GAME_TITLE/" \
+  -e "s/^app.name_byte_array/#&/" \
+  -e "s/^(app.application_id)=.+/\\1=$APPLICATION_ID/" \
+  -e "s/^(app.version_code)=.+/\\1=$VERSION_CODE/" \
+  -e "s/^(app.version_name)=.+/\\1=$VERSION_NAME/" \
+  gradle.properties
 
 ANDROID_MANIFEST=app/src/main/AndroidManifest.xml
 git checkout $ANDROID_MANIFEST
 
-# change the title
-xmlstarlet ed -L \
-	-u "/manifest/@package" 							-v "$APPLICATION_ID.executable" 	\
-	-u "/manifest/application/@android:label" 			-v "$GAME_TITLE" 				\
-	-u "/manifest/application/activity/@android:label" 	-v "$GAME_TITLE" 				\
-	$ANDROID_MANIFEST
 
 # override the activity if you have special needs
 if [ ! -z "$ANDROID_ACTIVITY" ]
