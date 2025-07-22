@@ -14,4 +14,5 @@ export PACKAGE_TYPES="assemble bundle"
 export APP_TYPES="embed"
 export RECORD_TYPES="noRecord"
 export BUILD_TYPES="release"
-export ANDROID_SDK_VERSION=35
+export ANDROID_SDK_VERSION=36
+export ANDROID_NDK_VERSION=27.3.13750724
