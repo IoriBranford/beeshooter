@@ -37,6 +37,7 @@ bin*/
 .gradle/
 love-android/
 game-apk/
+apks*/
 apktool
 appimagetool
 public/
