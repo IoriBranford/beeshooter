@@ -12,7 +12,7 @@ GAME_ASSET_PATH=love-android/app/src/embed/assets
 if [ -d "$GAME_DIR" ]
 then
 	mkdir -p $GAME_ASSET_PATH
-	cp -r "$GAME_DIR/*" $GAME_ASSET_PATH
+	cp -r $GAME_DIR/* $GAME_ASSET_PATH
 fi
 
 PROJECT=${PROJECT:=${PWD##*/}}
