@@ -37,6 +37,14 @@ sed -i -r \
   -e "s/^(app.version_name)=.+/\\1=$VERSION_NAME/" \
   gradle.properties
 
+# change the NDK version
+if [ ! -z "$ANDROID_NDK_VERSION" ]
+then
+	sed -i -r \
+		-e "s/(ndkVersion) .+/\\1 '$ANDROID_NDK_VERSION'/" \
+		app/build.gradle love/build.gradle
+fi
+
 # change the SDK version
 if [ ! -z "$ANDROID_SDK_VERSION" ]
 then
