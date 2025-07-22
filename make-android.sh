@@ -37,9 +37,17 @@ sed -i -r \
   -e "s/^(app.version_name)=.+/\\1=$VERSION_NAME/" \
   gradle.properties
 
+# change the SDK version
+if [ ! -z "$ANDROID_SDK_VERSION" ]
+then
+	sed -i -r \
+		-e "s/(compileSdk) [0-9]+/\\1 $ANDROID_SDK_VERSION/" \
+		-e "s/(targetSdk) [0-9]+/\\1 $ANDROID_SDK_VERSION/" \
+		$BUILD_GRADLE
+fi
+
 ANDROID_MANIFEST=app/src/main/AndroidManifest.xml
 git checkout $ANDROID_MANIFEST
-
 
 # override the activity if you have special needs
 if [ ! -z "$ANDROID_ACTIVITY" ]
