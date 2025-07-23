@@ -155,7 +155,7 @@ function Stage.init(startpoint)
                         end
                     end
                 end
-            end)
+            end, "replace")
             love.graphics.setStencilTest("greater", 0)
         end)
         drawbeforedecals.z = Z.GroundDecal-(1/256)
