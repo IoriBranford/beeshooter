@@ -1,8 +1,8 @@
 #!/bin/sh
 set -e
 
-LOVE_ANDROID_COMMIT="8e61af76693185579a82acc3b53b8a4fa66f3209"
-LOVE_ANDROID_URL="https://github.com/love2d/love-android.git"
+LOVE_ANDROID_COMMIT="c0a738d26e0108eeb7026daa07285faf1db35649" # 11.x-sdk36
+LOVE_ANDROID_URL="https://github.com/IoriBranford/love-android.git"
 
 if [ ! -d love-android ]
 then
