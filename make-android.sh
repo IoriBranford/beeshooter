@@ -3,7 +3,9 @@ set -e
 
 . ./make-vars-android.sh
 
-# see https://github.com/love2d/love-android/wiki/Game-Packaging
+# based on https://github.com/love2d/love-android/wiki/Game-Packaging
+# requires JDK, Android SDK, ANDROID_HOME environment variable
+# and xmlstarlet to change icons or activity class
 
 cp -r android/* love-android
 
@@ -21,6 +23,7 @@ GAME_TITLE_NOSPACE=${GAME_TITLE_NOSPACE:="$(echo ${GAME_TITLE} | sed -e 's/\s\+/
 APPLICATION_ID=${APPLICATION_ID:=org.unknown.${GAME_TITLE_NOSPACE}}
 SCREEN_ORIENTATION=${SCREEN_ORIENTATION:=landscape}
 VERSION_CODE=${VERSION_CODE:=1}
+APKSIGNER=${APKSIGNER:="$(find $ANDROID_HOME/build-tools -name apksigner | sort -Vr | head -n1)"}
 
 cd love-android
 
@@ -91,7 +94,7 @@ GAME_AAB=${GAME_AAB:="${GAME_TITLE_NOSPACE}.aab"}
 
 if [ ! -z "$KEYSTORE_FILE" ] && [ ! -z "$KEYSTORE_ALIAS" ] && [ ! -z "$KEYSTORE_PASSWORD" ]
 then
-	apksigner sign --ks "$KEYSTORE_FILE" \
+	$APKSIGNER sign --ks "$KEYSTORE_FILE" \
 		--ks-key-alias $KEYSTORE_ALIAS \
 		--ks-pass env:KEYSTORE_PASSWORD --key-pass env:KEYSTORE_PASSWORD \
 		--out $GAME_APK $LOVE_APK
