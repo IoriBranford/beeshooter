@@ -10,7 +10,7 @@
 
 int title();
 
-int main()
+int main(bool hardReset)
 {
     VDP_setScreenWidth256();
     SPR_init();
