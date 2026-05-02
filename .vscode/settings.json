@@ -20,5 +20,6 @@
         "class"
     ],
     "Lua.runtime.version": "LuaJIT",
+    "clangd.arguments": ["--query-driver", "${env:MARSDEV}/m68k-elf/bin/m68k-elf-gcc"],
     "workbench.colorTheme": "Bee Theme"
 }
