@@ -56,13 +56,13 @@ void BULLET_updateSpriteDirectionXY(GameObject *self, fix16 dx, fix16 dy) {
     } else if (abs(dy) == abs(dx)) {
         anim = numAnim >> 1;
     } else if (abs(dy) < abs(dx)) {
-        fix16 ratio = abs(fix16Div(dy, dx));
+        fix16 ratio = abs(F16_div(dy, dx));
         fix16 fAnim = FIX16(0.5) + (ratio * numAnim >> 1);
-        anim = fix16ToInt(fAnim);
+        anim = F16_toInt(fAnim);
     } else {
-        fix16 ratio = abs(fix16Div(dx, dy));
+        fix16 ratio = abs(F16_div(dx, dy));
         fix16 fAnim = FIX16(0.5) + (ratio * numAnim >> 1);
-        anim = fix16ToInt(FIX16(numAnim) - fAnim);
+        anim = F16_toInt(FIX16(numAnim) - fAnim);
     }
 
     SPR_setAnim(self->sprite, anim);
@@ -92,19 +92,19 @@ GameObject* BULLET_shootAtVelocity(fix16 centerX, fix16 centerY, fix16 velX, fix
 }
 
 GameObject* BULLET_shootAtVector(fix16 centerX, fix16 centerY, fix16 dx, fix16 dy, const GameObjectDefinition *def) {
-    fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(dx), fix16ToInt(dy)));
+    fix16 dist = FIX16(getApproximatedDistance(F16_toInt(dx), F16_toInt(dy)));
     fix16 velX = 0, velY = 0;
     if (dist) {
         fix16 speed = def->speed;
-        velX = fix16Mul(fix16Div(dx, dist), speed);
-        velY = fix16Mul(fix16Div(dy, dist), speed);
+        velX = F16_mul(F16_div(dx, dist), speed);
+        velY = F16_mul(F16_div(dy, dist), speed);
     }
     return BULLET_shootAtVelocity(centerX, centerY, velX, velY, def);
 }
 
 GameObject* BULLET_shootAtAngleSpeed(fix16 centerX, fix16 centerY, u16 angle, fix16 speed, const GameObjectDefinition *def) {
-    fix16 velX = fix16Mul(speed, cosFix16(angle));
-    fix16 velY = fix16Mul(speed, sinFix16(angle));
+    fix16 velX = F16_mul(speed, cosFix16(angle));
+    fix16 velY = F16_mul(speed, sinFix16(angle));
     return BULLET_shootAtVelocity(centerX, centerY, velX, velY, def);
 }
 

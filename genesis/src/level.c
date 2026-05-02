@@ -60,7 +60,7 @@ void LEVEL_updateBackgroundExplosion() {
             posX += velX;
         }
         bgExplodeLinesPosX[l] = posX;
-        bgExplodeLinesScrollX[l] = fix16ToInt(posX);
+        bgExplodeLinesScrollX[l] = F16_toInt(posX);
     }
 
     for (u32 l = 1; l < BG_EXPLODE_LINES; l += 2) {
@@ -75,7 +75,7 @@ void LEVEL_updateBackgroundExplosion() {
             posX += velX;
         }
         bgExplodeLinesPosX[l] = posX;
-        bgExplodeLinesScrollX[l] = fix16ToInt(posX);
+        bgExplodeLinesScrollX[l] = F16_toInt(posX);
     }
 
     VDP_setHorizontalScrollLine(BG_PLANE, BG_EXPLODE_FIRST_LINE, bgExplodeLinesScrollX, BG_EXPLODE_LINES, DMA_QUEUE);
@@ -102,7 +102,7 @@ void LEVEL_init(u16 tileIndex) {
     VDP_setScrollingMode(HSCROLL_PLANE, VSCROLL_PLANE);
     VDP_loadTileSet(&bgTileset, tileIndex, DMA);
     bg = MAP_create(&bgMap, BG_PLANE, TILE_ATTR_FULL(PAL_PLAYER_AND_BG, false, false, false, tileIndex));
-    MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
+    MAP_scrollTo(bg, 0, F32_toRoundedInt(cameraY));
 
     for (int i = 0; i < PALETTE_USAGE_SLOTS; ++i) {
         paletteUsage[i].palette = NULL;
@@ -136,7 +136,7 @@ void LEVEL_update() {
     if (VDP_getHorizontalScrollingMode() == HSCROLL_LINE)
         LEVEL_updateBackgroundExplosion();
     // else
-    MAP_scrollTo(bg, 0, fix32ToRoundedInt(cameraY));
+    MAP_scrollTo(bg, 0, F32_toRoundedInt(cameraY));
 
     for (int i = PAL0; i <= PAL1; ++i) {
         PAL_update(i, paletteUsage[i].palette);
@@ -149,11 +149,11 @@ void LEVEL_destroy() {
 }
 
 fix16 LEVEL_toScreenY(fix32 yWorld) {
-    return fix32ToFix16(yWorld - cameraY);
+    return F32_toFix16(yWorld - cameraY);
 }
 
 fix32 LEVEL_toWorldY(fix16 yScreen) {
-    return fix16ToFix32(yScreen) + cameraY;
+    return F16_toFix32(yScreen) + cameraY;
 }
 
 fix32 LEVEL_cameraVelY() {

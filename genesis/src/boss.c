@@ -6,6 +6,7 @@
 #include "player.h"
 #include "item.h"
 #include <genesis.h>
+#include <maths.h>
 
 #define LAY_EGGS_COUNT 4
 #define LAY_EGGS_INTERVAL 10
@@ -71,10 +72,10 @@ void BOSS_startSweepPath(GameObject *self) {
     fix16 toPlayerY = player->centerY - self->centerY;
     fix16 det = faceX * toPlayerY - toPlayerX;
     fix16 dot = faceX * toPlayerX + toPlayerY;
-    u32 dist = getApproximatedDistance(fix16ToInt(toPlayerX), fix16ToInt(toPlayerY));
+    u32 dist = getApproximatedDistance(F16_toInt(toPlayerX), F16_toInt(toPlayerY));
     bool usediagonal =
         self->health<<1 <= self->definition->health &&
-        dot >= fix16Mul(FIX16(1.414213562373095), cosFix16(512/3)*dist);
+        dot >= F16_mul(FIX16(1.414213562373095), cosFix16(512/3)*dist);
     const Path *path;
 
     if (det < 0) {

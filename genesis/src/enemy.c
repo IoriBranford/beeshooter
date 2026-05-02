@@ -7,6 +7,7 @@
 #include "anim.h"
 #include "sprite.h"
 #include <genesis.h>
+#include <maths.h>
 
 #define EGG_HATCH_TIME 45
 
@@ -175,9 +176,9 @@ void ENEMY_chargeAtPlayer(GameObject *self) {
         velX = player->centerX - self->centerX;
         velY = player->centerY - self->centerY;
         if (velX || velY) {
-            fix16 dist = FIX16(getApproximatedDistance(fix16ToInt(velX), fix16ToInt(velY)));
-            velX = fix16Mul(fix16Div(velX, dist), CHARGESPEED);
-            velY = fix16Mul(fix16Div(velY, dist), CHARGESPEED);
+            fix16 dist = FIX16(getApproximatedDistance(F16_toInt(velX), F16_toInt(velY)));
+            velX = F16_mul(F16_div(velX, dist), CHARGESPEED);
+            velY = F16_mul(F16_div(velY, dist), CHARGESPEED);
         }
         if (!velX && !velY)
             velY = CHARGESPEED;
@@ -206,8 +207,8 @@ static const u16 BEETLE_SHOT_ANGLES[BEETLE_SHOT_COUNT] = {
 void ENEMY_beetleShoot(GameObject *self) {
     u16 angle = BEETLE_SHOT_ANGLES[self->shotsLeft-1];
     fix16 speed = BEETLE_SHOT_SPEEDS[self->shotsLeft-1];
-    fix16 velX = fix16Mul(speed, cosFix16(angle));
-    fix16 velY = fix16Mul(speed, sinFix16(angle));
+    fix16 velX = F16_mul(speed, cosFix16(angle));
+    fix16 velY = F16_mul(speed, sinFix16(angle));
     if (self->sprite->attribut & TILE_ATTR_HFLIP_MASK) {
         velX = -velX;
     }

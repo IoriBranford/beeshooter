@@ -58,8 +58,8 @@ void GOBJ_openReinforcedHoneypot(GameObject *self) {
 }
 
 void GOBJ_updatePowerupDescend(GameObject *self) {
-    fix32 movedDistY = fix16ToFix32(self->centerY - POWERUP_RISE_DESTY);
-    self->velX = fix16Mul(cosFix16(fix32ToInt(movedDistY * 512 / POWERUP_SWAY_PERIOD)), self->speed);
+    fix32 movedDistY = F16_toFix32(self->centerY - POWERUP_RISE_DESTY);
+    self->velX = F16_mul(cosFix16(F32_toInt(movedDistY * 512 / POWERUP_SWAY_PERIOD)), self->speed);
     self->centerX += self->velX;
     self->centerY += self->velY;
     GOBJ_updateBody(self);

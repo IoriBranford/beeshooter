@@ -102,8 +102,8 @@ void PLAYER_shoot(PlayerObject *self) {
                 (shot->animAndFlags & TILE_ATTR_VFLIP_MASK) != 0,
                 (shot->animAndFlags & TILE_ATTR_HFLIP_MASK) != 0);
             bullet->sprite = SPR_addSpriteEx(bulletSpriteDef,
-                fix16ToRoundedInt(bullet->centerX - FIX16(bulletSpriteDef->w>>1)),
-                fix16ToRoundedInt(bullet->centerY - FIX16(bulletSpriteDef->h>>1)),
+                F16_toRoundedInt(bullet->centerX - FIX16(bulletSpriteDef->w>>1)),
+                F16_toRoundedInt(bullet->centerY - FIX16(bulletSpriteDef->h>>1)),
                 attr, 0);
             bullet->sprite->data = (u32)shotAniFrame;
             SPR_setFrameChangeCallback(bullet->sprite, SPR_defaultFrameChange);
@@ -266,7 +266,7 @@ void PLAYER_spawn(PlayerObject *self) {
 
 void PLAYER_updateDie(PlayerObject *self) {
     if (SPR_getVisibility(self->sprite) != HIDDEN)
-        if (SPR_getAnimationDone(self->sprite))
+        if (SPR_isAnimationDone(self->sprite))
             SPR_setVisibility(self->sprite, HIDDEN);
     if (--self->invulTimer <= 1) {
         if (self->lives) {
@@ -310,7 +310,7 @@ void PLAYER_init(PlayerObject *self) {
     self->buttonsPressed = 0;
     self->sprite = SPR_addSpriteEx(
         &sprPlayer,
-        fix16ToInt(STARTENTERX), fix16ToInt(STARTENTERY),
+        F16_toInt(STARTENTERX), F16_toInt(STARTENTERY),
         TILE_ATTR(PAL_PLAYER_AND_BG, TRUE, FALSE, FALSE), 0);
     self->sprite->data = (u32)self;
     SPR_setFrameChangeCallback(self->sprite, PLAYERsprite_onFrameChange);

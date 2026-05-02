@@ -16,13 +16,13 @@ u16 approximateAtan2(fix16 y, fix16 x) {
     const fix16 C = FIX16(.28125);
     const u16 radToAng = 163; // 512/pi
 
-    fix16 yx = fix16Mul(y, x) * radToAng;
-    fix16 ysq = fix16Mul(y, y);
-    fix16 xsq = fix16Mul(x, x);
+    fix16 yx = F16_mul(y, x) * radToAng;
+    fix16 ysq = F16_mul(y, y);
+    fix16 xsq = F16_mul(x, x);
 
     s16 a;
     if (abs(y) < abs(x)) {
-        a = fix16ToInt(fix16Div(yx, ysq + fix16Mul(C, xsq)));
+        a = F16_toInt(F16_div(yx, ysq + F16_mul(C, xsq)));
         if (x < 0) {
             // O4 or O5
             a += 512;
@@ -32,7 +32,7 @@ u16 approximateAtan2(fix16 y, fix16 x) {
                 a += 1024;
         }
     } else {
-        a = fix16ToInt(fix16Div(yx, xsq + fix16Mul(C, ysq)));
+        a = F16_toInt(F16_div(yx, xsq + F16_mul(C, ysq)));
         if (y < 0) {
             // O6 or O7
             a += 768;

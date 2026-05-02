@@ -99,7 +99,7 @@ Vect2D_f16 GOBJ_getAnchorPoint(GameObject *self, int ax, int ay);
 bool GOBJ_isRectOverlapping(GameObject *self, fix16 x, fix16 y, fix16 w, fix16 h);
 bool GOBJ_isHitting(GameObject *self, GameObject *other);
 bool GOBJ_isBodyOnScreen(GameObject *self);
-bool GOBJ_isBodyOffSideOrBottom(GameObject *self);
+int GOBJ_isBodyOffSideOrBottom(GameObject *self);
 bool GOBJ_isBodyOffBottom(GameObject *self);
 void GOBJ_updateBody(GameObject *self);
 

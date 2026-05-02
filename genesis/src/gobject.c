@@ -79,7 +79,7 @@ void GOBJ_initSprite(GameObject *self) {
     u16 paletteSlot = LEVEL_getPaletteSlot(palette);
     attr |= TILE_ATTR(paletteSlot, false, false, false);
     Vect2D_f16 tl = GOBJ_getAnchorPoint(self, -1, -1);
-    s16 sprX = fix16ToRoundedInt(tl.x), sprY = fix16ToRoundedInt(tl.y);
+    s16 sprX = F16_toRoundedInt(tl.x), sprY = F16_toRoundedInt(tl.y);
     if (def->aniFrameTiles) {
         self->sprite = SPR_addSpriteEx(spriteDef, sprX, sprY, attr, 0);
         self->sprite->data = (u32)def->aniFrameTiles;
@@ -178,8 +178,8 @@ bool GOBJ_isSpriteOffSideOrBottom(GameObject *self) {
     return result;
 }
 
-bool GOBJ_isBodyOffSideOrBottom(GameObject *self) {
-    bool result = 0;
+int GOBJ_isBodyOffSideOrBottom(GameObject *self) {
+    int result = 0;
     result |= (self->bodyX0 >= GAME_BOUNDW) << DIR_RIGHT;
     result |= (self->bodyY0 >= GAME_BOUNDH) << DIR_DOWN;
     result |= (self->bodyX1 <= 0) << DIR_LEFT;
@@ -203,8 +203,8 @@ void GOBJ_updateSprite(GameObject *self) {
     Sprite *sprite = self->sprite;
     if (sprite) {
         SPR_setPosition(sprite,
-            fix16ToRoundedInt(self->centerX) - (sprite->definition->w >> 1),
-            fix16ToRoundedInt(self->centerY) - (sprite->definition->h >> 1));
+            F16_toRoundedInt(self->centerX) - (sprite->definition->w >> 1),
+            F16_toRoundedInt(self->centerY) - (sprite->definition->h >> 1));
     } else {
         // const SpriteDefinition *spriteDef = GOBJ_spriteDef(self);
         if (GOBJ_isBodyOnScreen(self)) {
@@ -318,7 +318,7 @@ void GOBJ_updateSpawning(GameObject *self) {
 
 void GOBJ_followStage(GameObject *self) {
     self->velX = 0;
-    self->velY = -fix32ToFix16(LEVEL_cameraVelY());
+    self->velY = -F32_toFix16(LEVEL_cameraVelY());
     self->centerY += self->velY;
 }
 
@@ -337,10 +337,10 @@ void GOBJ_startMovement(GameObject *self, fix16 destX, fix16 destY, fix16 speed)
     fix16 velX = 0, velY = 0;
     fix16 distX = destX - self->centerX;
     fix16 distY = destY - self->centerY;
-    fix16 dist = (distX || distY) ? FIX16(getApproximatedDistance(fix16ToInt(distX), fix16ToInt(distY))) : 0;
+    fix16 dist = (distX || distY) ? FIX16(getApproximatedDistance(F16_toInt(distX), F16_toInt(distY))) : 0;
     if (dist > speed) {
-        velX = fix16Mul(fix16Div(distX, dist), speed);
-        velY = fix16Mul(fix16Div(distY, dist), speed);
+        velX = F16_mul(F16_div(distX, dist), speed);
+        velY = F16_mul(F16_div(distY, dist), speed);
     } else {
         velX = 0;
         velY = 0;
@@ -378,14 +378,14 @@ void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
     const Trigger *pathParentTrigger =
         self->definition->pathParent == PATHPARENT_TRIGGER
         ? self->parentTrigger : NULL;
-    fix16 velX = 0, velY = pathParentTrigger ? 0 : -fix32ToFix16(LEVEL_cameraVelY());
+    fix16 velX = 0, velY = pathParentTrigger ? 0 : -F32_toFix16(LEVEL_cameraVelY());
     fix16 speed = 0;
     fix16 dist = 0;
     const Path *path = self->path;
     if (!path || pathIndex >= path->numPoints) {
         pathIndex = 0xFFFF;
         dist = 0x7FFF;
-        velY = -fix32ToFix16(LEVEL_cameraVelY());
+        velY = -F32_toFix16(LEVEL_cameraVelY());
     } else {
         const PathPoint *pathPoint = &path->points[pathIndex];
         speed = pathPoint->speedTo;
@@ -400,9 +400,9 @@ void GOBJ_startTowardsPathPoint(GameObject *self, u16 pathIndex) {
             fix16 distY = destY - self->centerY;
             if (distX || distY) {
                 dist = getApproximatedDistance(distX, distY);
-                fix16 invTime = fix16Div(speed, dist);
-                velX += fix16Mul(distX, invTime);
-                velY += fix16Mul(distY, invTime);
+                fix16 invTime = F16_div(speed, dist);
+                velX += F16_mul(distX, invTime);
+                velY += F16_mul(distY, invTime);
             }
         } else {
             velX += pathPoint->xVelTo;
@@ -505,7 +505,7 @@ void GOBJ_updatePathWalker(GameObject *self) {
     if (!GOBJ_isAllocated(self))
         return;
     GOBJ_updateBody(self);
-    bool offscreen = GOBJ_isBodyOffSideOrBottom(self);
+    int offscreen = GOBJ_isBodyOffSideOrBottom(self);
     if (offscreen) {
         if ((offscreen & (1<<DIR_DOWN)) || !self->path || self->pathIndex >= self->path->numPoints) {
             GOBJ_escape(self);

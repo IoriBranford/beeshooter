@@ -19,7 +19,7 @@ u16 approximateAtan(fix16 x) {
 
     const fix16 C = FIX16(172.492); // pi/4 * 512/pi + .273*512/pi
     const fix16 D = FIX16(44.492); // .273*512/pi
-    s16 atan = fix16ToInt(fix16Mul(x, C - fix16Mul(abs(x), D)));
+    s16 atan = F16_toInt(F16_mul(x, C - F16_mul(abs(x), D)));
     if (atan < 0)
         return 1024 + atan;
     return atan;
