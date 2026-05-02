@@ -159,26 +159,31 @@ return `{
                     } else {
                         definition = '0 /* to be assigned */'
                     }
-                    let anim = Math.sin(object.rotation)
-                    anim = (anim < 0) && Math.floor(anim) || Math.ceil(anim)
                     let flags = 0
                     if ((object.resolvedProperty('z') || 0) >= 0)
                         flags += 0x08000
-                    if (anim > 0) {
-                        if (object.tileFlippedVertically)
-                            flags += 0x00800
-                        if (object.tileFlippedHorizontally)
-                            flags += 0x01000
-                    } else if (anim < 0) {
-                        if (!object.tileFlippedVertically)
-                            flags += 0x00800
-                        if (!object.tileFlippedHorizontally)
-                            flags += 0x01000
-                    } else {
-                        if (object.tileFlippedVertically)
-                            flags += 0x01000
-                        if (object.tileFlippedHorizontally)
-                            flags += 0x00800
+                    let anim = object.resolvedProperty('anim') || 'rotation';
+                    if (anim == 'rotation') {
+                        anim = Math.sin(object.rotation)
+                        anim = (anim < 0) && Math.floor(anim) || Math.ceil(anim)
+                        if (anim > 0) {
+                            if (object.tileFlippedVertically)
+                                flags += 0x00800
+                            if (object.tileFlippedHorizontally)
+                                flags += 0x01000
+                        } else if (anim < 0) {
+                            if (!object.tileFlippedVertically)
+                                flags += 0x00800
+                            if (!object.tileFlippedHorizontally)
+                                flags += 0x01000
+                        } else {
+                            if (object.tileFlippedVertically)
+                                flags += 0x01000
+                            if (object.tileFlippedHorizontally)
+                                flags += 0x00800
+                        }
+                    } else if (anim == "tileId") {
+                        anim = object.tile.id;
                     }
                     anim = Math.abs(anim)
 
