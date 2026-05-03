@@ -245,7 +245,6 @@ void ENEMY_resetLetterBonus() {
 
 void ENEMY_initBonusLetter(GameObject *self) {
     GOBJ_initSprite(self);
-    SPR_setFrame(self->sprite, nextLetterBonusIndex);
 }
 
 void ENEMY_updateBonusLetter(GameObject *self) {
@@ -256,13 +255,19 @@ void ENEMY_updateBonusLetter(GameObject *self) {
         u32 thisFrame = getTick()/5;
         SPR_setVisibility(self->sprite, thisFrame % self->health == 0 ? VISIBLE : HIDDEN);
     }
+
+    // FIXME anim is getting set back to 0 by something
+    SPR_setAnim(self->sprite, self->levelObject->animInd);
+
     GOBJ_updateIdleOnStage(self);
 }
 
 void ENEMY_defeatBonusLetter(GameObject *self) {
-    u8 i = nextLetterBonusIndex++;
-    if (i < NUM_BONUS_LETTERS) {
+    u8 i = self->levelObject->animInd;
+    if (i < NUM_BONUS_LETTERS)
         letterBonusString[i] = BONUS_LETTERS[i];
+    i = nextLetterBonusIndex++;
+    if (i < NUM_BONUS_LETTERS) {
         GAME_giveBonus(letterBonusString, 
             LETTER_BONUSES[i]);
     }

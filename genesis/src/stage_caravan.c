@@ -17,7 +17,7 @@ const LevelObject lobj4384 = {
     .definition = &defBonusLetter,
     .x = 192, .y = 3056,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 1, .flags = 32768,
     .group = &bonusLetters, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
 };
@@ -25,7 +25,7 @@ const LevelObject lobj4386 = {
     .definition = &defBonusLetter,
     .x = 24, .y = 2432,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 2, .flags = 32768,
     .group = &bonusLetters, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
 };
@@ -33,7 +33,7 @@ const LevelObject lobj4388 = {
     .definition = &defBonusLetter,
     .x = 72, .y = 1648,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 3, .flags = 32768,
     .group = &bonusLetters, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
 };
@@ -41,7 +41,7 @@ const LevelObject lobj4390 = {
     .definition = &defBonusLetter,
     .x = 184, .y = 800,
     .palette = 0,
-    .animInd = 0, .flags = 32768,
+    .animInd = 4, .flags = 32768,
     .group = &bonusLetters, .path = 0,
     .pathIndex = 0, .child = 0, .interval = 0
 };

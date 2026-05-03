@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="400" nextobjectid="4402">
+<map version="1.11" tiledversion="1.12.1" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="400" nextobjectid="4402">
  <editorsettings>
   <chunksize width="16" height="14"/>
   <export target="stage_caravan.lua" format="lua"/>
@@ -9,15 +9,15 @@
  <tileset firstgid="485" source="tilesets/AntBig.tsx"/>
  <tileset firstgid="488" source="tilesets/AntBigParts.tsx"/>
  <tileset firstgid="490" source="tilesets/BeehiveObjects.tsx"/>
- <tileset firstgid="506" source="tilesets/Fly.tsx"/>
- <tileset firstgid="522" source="tilesets/Aliens.tsx"/>
- <tileset firstgid="540" source="tilesets/Beetle.tsx"/>
- <tileset firstgid="560" source="tilesets/AlienMind.tsx"/>
- <tileset firstgid="564" source="tilesets/Wasp.tsx"/>
- <tileset firstgid="576" source="tilesets/Tick.tsx"/>
- <tileset firstgid="578" source="tilesets/WaspEgg.tsx"/>
- <tileset firstgid="581" source="tilesets/BGFragment.tsx"/>
- <tileset firstgid="585" source="tilesets/BonusLetters.tsx"/>
+ <tileset firstgid="507" source="tilesets/Fly.tsx"/>
+ <tileset firstgid="523" source="tilesets/Aliens.tsx"/>
+ <tileset firstgid="541" source="tilesets/Beetle.tsx"/>
+ <tileset firstgid="561" source="tilesets/AlienMind.tsx"/>
+ <tileset firstgid="565" source="tilesets/Wasp.tsx"/>
+ <tileset firstgid="577" source="tilesets/Tick.tsx"/>
+ <tileset firstgid="579" source="tilesets/WaspEgg.tsx"/>
+ <tileset firstgid="582" source="tilesets/BGFragment.tsx"/>
+ <tileset firstgid="586" source="tilesets/BonusLetters.tsx"/>
  <objectgroup id="15" name="comments" locked="1">
   <object id="44" x="-256" y="0" width="256" height="224">
    <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">18</text>
@@ -106,133 +106,133 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="14" width="16" height="14">
-   eJxjYBgFo2BwgTmMDAw70fAsRuL1zgXi7Wh4JpFmgNTOB+IFaHgh1Bxi9O/Fom4/Dv0AZ0URlQ==
+   eJxjYBgFo2BwgTmMDAw70fAsRuL1zmVkYNiOhmcSaQZI7XxGBoYFaHgh1Bxi9O/Fom4/Dv0AZ0URlQ==
   </chunk>
      <chunk x="0" y="28" width="16" height="14">
    eJxjYBgFo2BgwRMy9DxCYjMxQsxoIxKD9TIi9CswQsx4zEAcBumVQ9IPM4ORSIysFwCR2RJD
   </chunk>
      <chunk x="16" y="28" width="16" height="14">
-   eJxjYBgFgwn04ZGbxohf7wyg/Bo88lsYcZsB0rsNiIvw6C/EYQZMbzuQHYJHfzAQt6KZgaw3k4Gw/eloZiDrJdZ+ZDOQ9ZJiP4xG1kuq/SAaAFDsHtU=
+   eJxjYBgFgwn04ZGbxohf7wxGBoY1eOS3MOI2A6R3GyMDQxEe/YU4zIDpbWdgYAjBoz+YgYGhFc2MGUh6MxkI25+OZgayXmLtRzYDWS8p9sNoZL2k2g8yAwBQ7B7V
   </chunk>
      <chunk x="0" y="42" width="16" height="14">
-   eJxjYBgF1AKtQNwGxO0kysFAOhBnAHEmiXKj9g9d+wHZ/Bl1
+   eJxjYBgF1AKtDAwMbQwMDO0kysFAOgMDQwYDA0MmiXKj9jMM2fAHANn8GXU=
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
-   eJxrZ2BgyATidihdxIAbFAJxOhC3ItHIekH0fTz6H6LpTcei9y8e/f+xmIGuV5oRt35ZRkwziNWLywxS9GIzg1S96GaQoxfZjMEGgoE4AwcOIUI/KI224cD40jYMLAbiJTjwUhL8QSwAAF4LLjA=
+   eJzNksEJgDAQBCd1iFVpD9Gn9qApRK1LLESUgEKIuZCIDxeWfc3AwRmgBcy1PXI6QAODsy5rd43wm8fqALtH+CPg8NlCyXypno5UVnLksCFHLus73rCu42+pgEZoncDbHx2Fxn77zgTMQpcP7vNzAl4LLjA=
   </chunk>
      <chunk x="0" y="56" width="16" height="14">
-   eJxjYECAdCDOAOJMBkyATw4GWoG4DYjbSZQbtX/UfmrY/wRqxyMS5WCAiZGB4TGIwUiaHAwoAOUYgVgOixpccgBgriU/
+   eJxjYECAdAYGhgwGBoZMJDFi5GCglYGBoY2BgaGdRLlR+0fDn4EK6e8JNI09IlEOBpgYGRgegxiMpMnBgAIjAwMjIwODHBY1uOQAYK4lPw==
   </chunk>
      <chunk x="16" y="56" width="16" height="14">
-   eJxjYECAQiBuI4CLGHCDYCDOIIBD8Oin1P7FQLyEAF6KRz8loJUIt8NwOxb96QyEww6GM2lg/0MS7L+PRf9/IH5AJP6LRb8sIwPDPwbisDQjFgMoBMhpF18axQWQ0y6+NIoOAPGHQ/4=
+   eJxjYECAQgYGhjYCuIgBNwhmYGDIIIBD8Oin1P7FDAwMSwjgpQy0Aa1EuB2G27HoTyci7GA4kwb2PyTB/vtY9P9nYGB4QCT+i0W/LCMDwz8G4rA0IxkRRAAgp118aRQXQE67+NIoOgAA8YdD/g==
   </chunk>
      <chunk x="-16" y="70" width="16" height="14">
-   eJxjYBgF5IJCCvUHj9o/oPY/pFD/fwr1yzIyMAAA4mcEvA==
+   eJxjYBgF5IJCCoMumEL9o/YzUAQeUqj/P4X6ZRkZGADiZwS8
   </chunk>
      <chunk x="0" y="70" width="16" height="14">
-   eJxjYBjZoA2Ki0jQU4ikLwOKQ0jQH4ykb9R+6th/nwT9D5H0PYDivyTo/4+k7x8USzMSr1+WEaEPAG+fH9A=
+   eJxjYBjZoA2Ki0jQU4ikLwOKQ0jQH4ykb9R+BqqE/30S9D9E0vcAiv+SoP8/kr5/UCzNSLx+WUaEPgBvnx/Q
   </chunk>
      <chunk x="16" y="70" width="16" height="14">
-   eJxjYBjZoIhC/SGj9g+o/fcp1P+XQv3SjJTpBwAHmQS9
+   eJxjYBjZoIhC/SGj9g9o+N+nUP9fCvVLM1KmHwAHmQS9
   </chunk>
      <chunk x="0" y="84" width="16" height="14">
-   eJxjYBi+4AkQP6JAPxMjkGAkX78CUK8cBfpHwfAHAEEnAgs=
+   eJxjYBi+4AkDA8MjCvQzMTIwMIAwmUCBkYFBjgL9o4Bh2AMAQScCCw==
   </chunk>
      <chunk x="-16" y="98" width="16" height="14">
-   eJxjYBi54AmF+pkYKdOvQKH+UTBwAJR22ijQD0o7j4E0APHXA1k=
+   eJxjYBi54AmF+pkYKdOvQKH+UcAwYACUdtoo0A9KO48ZGBgA8dcDWQ==
   </chunk>
      <chunk x="0" y="98" width="16" height="14">
-   eJxjYBjaoA2KyQWPofgJklnoGB9gZIRgJkaEWeiYGLMVGBFmoWN8ZuMCMDsfETAbF4DZyYBHDT4As1OOTP30Arjihdg0hSteCMU7DAMA6I4oUw==
+   eJxjYBjaoA2KyQWPofgJklnoGB9gZIRgJkaEWeiYGLMVoOZgw/jMxgVgdj4iYDYuALOTAY8afABmpxyZ+hnoBHDFC7FpCle8EIp3GAYA6I4oUw==
   </chunk>
      <chunk x="16" y="98" width="16" height="14">
-   eJxjYBgFlIA2CvU/plA/IyOFBowCigAo/h9RoB8AUSQC1A==
+   eJxjYBgFlIA2CoPvMYX6GRkpNGAUMFACQPH/iAL9AFEkAtQ=
   </chunk>
      <chunk x="-16" y="112" width="16" height="14">
-   eJxjYCAPKDAyMDAykql5FIyCUQAGAHZOACQ=
+   eJxjYCAPKDAyMDAykql5FIyCUcAAAgB2TgAk
   </chunk>
      <chunk x="0" y="112" width="16" height="14">
-   eJxjZGRgYMSBmYD4MQN+jA8o4DEbhqkFngBxGxX0w+hHJOqHhRUx+rHJKaCFOQNS2MDMhJuLJ9xg5sghqUGORwY0OWIAcjySqncU4AcAD8oW2w==
+   eJxjZGRgYMSBmRgZGB4z4Mf4gAIes2GYWuAJAwNDGxX0w+hHJOqHhRUx+h/hCSuYOQxIYQMzE24unnCDmSOHpAY5HhnQ5IgByPFIqt5RwIAXAAAPyhbb
   </chunk>
      <chunk x="16" y="112" width="16" height="14">
-   eJx7zAAEjAxkA0agXjkK9I+CUTCSAQCMagEG
+   eJx7zMDAwMDIQDZgZGRgkKNA/ygYBQwjGAAAjGoBBg==
   </chunk>
      <chunk x="-16" y="126" width="16" height="14">
-   eJxjYBgF5IInFOpnYqRMvwKF+kfBwAMASHwBCQ==
+   eJxjYBgF5IInFAYdEyNl+hUo1D8KGAYcAABIfAEJ
   </chunk>
      <chunk x="0" y="126" width="16" height="14">
-   eJzlUUEKwDAI0z6k+No9tO1D1gxlIt3m2HGBQAUTYyX6N7aP+j45JtsLzdC5IDNRYTzy2dDfdTYgs65B31y26IN+Vq5w7MJnNvPJwLSWR5xPymOxi/mUi7we9WaOJPRAzIr/e7qv7xe3r91hdV9gB6/gFy0=
+   eJzlUtsJwDAIPDtIybQdNM0g5URBbEMs/eyBEIj30AT4N46P/BPAANBfcIb5skSATXioZ2M/fVlEE2BP/B6yZR32i9UTdBa7dy/qVOBcz9OCTklD7rO4ju5pAXJnPtSoIGfl/lbvG/s9q/8LfaeJ9wWv4Bct
   </chunk>
      <chunk x="16" y="126" width="16" height="14">
-   eJxjYBgFlIBHlBrASJl2OQr1j4KBBQA4XAED
+   eJxjYBgFlIBHlAYfI2Xa5SjUPwoYBhQAADhcAQM=
   </chunk>
      <chunk x="-16" y="140" width="16" height="14">
-   eJxjYBgFo2BkgicU6mdipEy/AlA/AHpeAQk=
+   eJxjYBgFo2BkgicU6mdipEy/AiMDAwB6XgEJ
   </chunk>
      <chunk x="0" y="140" width="16" height="14">
-   eJylU0EOwCAIAx+y+No9dO4hk00S1gGarEkvgrYlSPSgML1QeZx1cucGdYT0n86Zd+8I3kAPHu67QZ/n4YNJlsyDaK/MIdP+g5n2NDvFsxeszD/LYLPvQEWWQf2Lxwa0NQvU0f1gYBm7gf2oE+2H/gfsR50sX3V8Xa9bHqk=
+   eJylU1sOgDAIKx7EeFoPqjuIQV3CKgMSm/AzHm0JAx4sggGbvG8CiAAr5Rla35w3r++YzGANHu5eqWv4IPESaVDuyh4i7j/IuFPvwe6r+488WO87RcVDMxpPCpuzYJ5+H3qzNtSbzuB65pndR/8PXM88kT+dwfUXr1seqQ==
   </chunk>
      <chunk x="16" y="140" width="16" height="14">
    eJxjYBgFo2DogkeUGsBImXY5CvUDALU+AQM=
   </chunk>
      <chunk x="-16" y="154" width="16" height="14">
-   eJxjYBgFQxE8AeJHFOhnYgQSjOTrVwDqlaNA/yiAAACAcQIL
+   eJxjYBgFQxE8YWBgeESBfiZGBgYGECYTKDAyMMhRoH8UMIABAIBxAgs=
   </chunk>
      <chunk x="0" y="154" width="16" height="14">
-   eJxjYBgcoA0NkyL/CIgfo2F0gC7/BEkvAyMQoWF0gC7PxAg1A0jLYVH/BIn9CIt7FKBmYNMLAjDzYe7DBhRwiCObj8t9xAAFCvSOAuIAANEYE4E=
+   eJztjkEKwCAMBCd9iPhaH1p9iBRMKYsBi5ceOrCndcfANyiSN/0JVImifXtsMTCJov1hw2GQJu/df/8h5OGYbS/c7/cROCLcH923Qt7Y/rBEB9EYE4E=
   </chunk>
      <chunk x="16" y="154" width="16" height="14">
-   eJxjYBgF1ACPyNT3BKaXkTz9TIwQvXJk6legQO8ooBwAAB98Aw0=
+   eJxjYBgF1ACPyNT3BKaXkTz9TCB9jAwMcmTqV6BA7yhgoBgAAB98Aw0=
   </chunk>
      <chunk x="0" y="168" width="16" height="14">
-   eJxjYKAMtAFxOxn6WqF6M4A4kwz96VC9o/aTZ/+TYWT/IwrsfwziMJKun4kRopcRSMuRoV+BEaIXABwtGDc=
+   eJxjYKAMtDEwMLSToa8VqjeDgYEhkwz96VC9o/aTF/5PhpH9jyiw/zGIw0i6fiZGiF5GRgYGOTL0KzBC9AIAHC0YNw==
   </chunk>
      <chunk x="0" y="182" width="16" height="14">
-   eJxjYBgeoBWI26C4nQz5dCDOgOJMMuRH7cdv/hMk+Uej9sMBAHsiK48=
+   eJxjYBgeoJWBgaENitvJkE9nYGDIgOJMMuRH7ccfvk+Q5B8NQPg/GaT2AwB7IiuP
   </chunk>
      <chunk x="0" y="196" width="16" height="14">
-   eJxjYICAdCDOgOJMBkxASP4JELdB8SMy5EftH9n2MzEyMDxmgGAGRtLlFYBijFAsR4b8QAEAZ74wkQ==
+   eJxjYICAdAYGhgwozmTABITknzAwMLRB8SMy5EftH9nhz8TIwPCYAYIZGEmXV2BkYGCEYjky5AcKAABnvjCR
   </chunk>
      <chunk x="-16" y="224" width="16" height="14">
-   eJxjYBgFo2BogkeUGsBImXY5CvWDAAC5RgED
+   eJxjYBgFo2BogkeUGsBImXY5CvWDzAAAuUYBAw==
   </chunk>
      <chunk x="0" y="224" width="16" height="14">
-   eJxjYKAdeALEbUD8iEz9TIwMDI9BDEby9CsA9TECsdwA6R8qoA0PJgRAcfsYD4alAZzmQcMYF4alAWzmgQChuFHAY94TNLXIZuNKswpoZiEDZLOJSbMgswCYBB1y
+   eJzVkksKgDAUAyceRDxtD2p7EAlSeIt+pCDiQKCbzKIv8B4FSMC52N8E2Q+t9Q+BBPtH/b+QBpnh2+ZBysyn+497qRto+czsNvWGLZ9dkejubTb67IpE95PN2nUBmAQdcg==
   </chunk>
      <chunk x="16" y="224" width="16" height="14">
    eJxjYBgFo2DogjYK9T+mUD8jI2X6Adn/AWw=
   </chunk>
      <chunk x="-16" y="238" width="16" height="14">
-   eJxjYCAfPKFALwgwMVKmX4FC/ZSCNgr1P6ZQP+MA+3+kxz+lABR+AI3gBGA=
+   eJxjYCAfPGGgDDAxUqZfgUL9lII2CvU/plA/4wD7f6THPwOFABR+AI3gBGA=
   </chunk>
      <chunk x="0" y="238" width="16" height="14">
-   eJydk1EOgCAMQzsPYjwtB0UOIkQMSx2kuuR9LEBHS0gYdRhgnd0g1VkpldT5Wm3WZrcOa0WUQMPf22tF8PmmmSdaM9g/xKxm/tWs+d4p6BUyRh7cK8Blwb2C9/vXv5JNXuyJ1jiL5bvaexZn8fiK/sezdgGKUzWc
+   eJydk1EKwCAMQ9MdZOy0PajbQYZMWQjtqAvkQ4rRPNHx6jDAhndDSSeAC4APr6qftdmTo1mR+1zF9+asyLq/Z7YkK7P2R5FV1r/KWu/NvH3BjXjoumIQC11XzH3tZ/8KG35XVTRTFp/vOmbKlFnMXtH/mLMbilM1nA==
   </chunk>
      <chunk x="16" y="238" width="16" height="14">
-   eJxjYBgFAwkeUWoAI2Xa5SjUPwooAwD3zQED
+   eJxjYBgFAwkeUWoAI2Xa5SjUPwoYKAIA980BAw==
   </chunk>
      <chunk x="-16" y="252" width="16" height="14">
-   eJxjYCAfMDFSoBkIFCjUPwpGwVAHAHDOACU=
+   eJxjYCAfMDFSoJmBgUGBQv2jYBQwDHEAAHDOACU=
   </chunk>
      <chunk x="0" y="252" width="16" height="14">
-   eJx7zMDA8BiIGRiBCIjlGBkwABMjRA0IPwHiNigGa8OjDwYUGBHq0M0iFaCbRQlQoFD/KBhcAJQm24lU24rGBunLAOJMIvWnI5mRDtUHsv8RCfaD9AEAYaUQXw==
+   eJztjcEJgDAQBOcsJNidWoixT2MhspqAnCAJ/sSBhXvs7CUgARiYQTBudHZ2lA2IOYf24BX63FH8Vit+6w3a+vkOEVgqu7O75Y3AVOkPlw3d8vR/bfgvbwdhpRBf
   </chunk>
      <chunk x="16" y="252" width="16" height="14">
    eJxjYKAMPKJQPwMjZdrlKNQ/CkY2aKdQfyaF+gGYKwHz
   </chunk>
      <chunk x="-16" y="266" width="16" height="14">
-   eJxjYBi5oJVC/emj9lMEnlCon4mRMv0KFOqnhvsBgSMEtA==
+   eJxjYBi5oJVC/emj9lMEnlAYfkyMlOlXoFA/NdwPAIEjBLQ=
   </chunk>
      <chunk x="0" y="266" width="16" height="14">
-   eJytkosJwzAMROUOErxd22QO57Om7UGio1IRagJR6MGDEDiffDIRUWcq0xhKdElPpsj3I318iRku+oucAeWAz+fPwhKzf/Nfwjvo/1f+yEwmv8t5XvhXXT60MpvJxy7agd/u1s7t759lj152t7Y3Paf+Wk5l8xvF3p3ma28p+O4gdKy9RWeHtOM7s0PaMdgBkY0l6Q==
+   eJzFktENwkAMQ98xSNXtgDJHD1iz7SDIKEFRxMeFHyxFuh/Hjn0AB7ABO0BjCGdgtfdJnAatwTTIX22HMBd4Wb/b3Gv0j/7F5sp/9BfgFvQP25fRraOoLzyAZ9BXF+8eE2K30Xe+f7YeM2K3Mbf+xdvI7c7bi//O9T03+ar8O0EZe25V74Jn/It3wTOW7xeRjSXp
   </chunk>
      <chunk x="16" y="266" width="16" height="14">
-   eJxrZ6AMZFKov32E208paGOgzA8ZDJT5YTDY/4gC/Y9BBCP5+hmBeuUo0A8A08cI+g==
+   eJxrZ6AMZFKov32E208paKPQDxkU+mEw2P+IAv2PQQQj+foZGRkY5CjQDwDTxwj6
   </chunk>
      <chunk x="-16" y="280" width="16" height="14">
-   eJxjYCAfKDBSoHkUjIJRwAAAb0MAIg==
+   eJxjYCAfKDBSoHkUjAKGUQAAb0MAIg==
   </chunk>
      <chunk x="0" y="280" width="16" height="14">
-   eJxjZGRgkANiYsETIG6D4kfEa4MDJqBdjxkgmIEEe2FAAaiHEYrxuXuouHMUjGwAAC3iCeI=
+   eJxjZGRgkGNkIBo8YWBgaIPiRwykAyZGBobHDBDMQIK9MKDAyMDACMX43D1U3DkKGEY0AAAt4gni
   </chunk>
     </data>
    </layer>
@@ -242,115 +242,115 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="14" width="16" height="14">
-   eJxjYBgFo2AUwEAAHjl/IvRvZGRgmMyIKT4VKLYZizgAl1gDMA==
+   eJxjYBgFo2AUMEBBAJ6g8CcimDYyMjBMZsQUn8rIwLAZizgAl1gDMA==
   </chunk>
      <chunk x="0" y="28" width="16" height="14">
-   eJxjYMAEGxkZGDah4c2MWBSiAVaomnQgzkDDmVA17DjMAenlh7JbgdgGyLeFYjsgbofK8eIwAyTOB8QHofZHAdVEQ3EMI8T+w1A1/Jja4fphZlQA9VRCcRUjQi8u/dpALIqkBhcWA2Jd7EEANkOHAMamFxbuyOEGCrM2Bgi2wRKOyGHIiyXcQGEGi7soLOGIHAYwvyOHGyjMDjFAcAVaOGILA2L8ji8MhioAAGrHJL8=
+   eJzVkbsNwjAQQN8ViCqkCkuEbBAYJKQHNgB6YB5gApLFkOWzsIIvoeWkJ1nn+8jP8B13gceApzAZM63ZAfsBB62Zi92b6/kC1AJrZSNw07vMmOHyC+Cl+xuBrdKK399rTdiT6g8zjgIn5SyfXqu/BIqoxmIJVIY/N2M1QTXiPfbmnF3x1AmPscMs4c05C3/XJDzmibfH3pyzDk+c6w0H5Q9vH3Pwr/EGasckvw==
   </chunk>
      <chunk x="0" y="42" width="16" height="14">
-   eJxjYBg+gJWRgYENiNkZSZODAW0g1gFiXRLlRsEoIBcAAOccATM=
+   eJztybERABAQALB8gWGw/3oqA7zSfdrwjxb0YETuromFnbxSPDrnHAEz
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
-   eJxjYBgFowABWBkZGNhwYHZGwvq1gVgHB9alobtBgJUI9+HzAy8RdvDjkcPnd1xhAAAtJAN7
+   eJxjYBgFowABWBkZGNhwYHZGwiGlzcDAoIMD69LB7QwEAD4/8BJhBz8eOXx+xxUGAC0kA3s=
   </chunk>
      <chunk x="16" y="56" width="16" height="14">
-   eJxjYBgcgJWReLXsWNTykmAXPxYxbSDWIRLrkmDXKBgF+AAAX3kCOw==
+   eJxjYBgcgJWReLXsWNTykmAXPxYxbQYGBh0isS4Jdo2CUcCABwAAX3kCOw==
   </chunk>
      <chunk x="-16" y="70" width="16" height="14">
-   eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg==
+   eJxjYBi6gJWRMv3a1HLIKBgFDOQBAIBDADI=
   </chunk>
      <chunk x="0" y="70" width="16" height="14">
-   eJxjYBhYwMYIweyMxOthZUTo02GAYF0S7NRmQOgbBaNgIAEANCMBMw==
+   eJxjYBhYwMYIweyMxOthheoBYR0GCNYlwU5tqB4QHgWjgGEAAQA0IwEz
   </chunk>
      <chunk x="16" y="70" width="16" height="14">
-   eJxjYBhYwM5ImX5d6jhjFIyCAQEAlz8ANg==
+   eJxjYBhYwM5ImX5dajlkFIwCBvoDAJc/ADY=
   </chunk>
      <chunk x="0" y="84" width="16" height="14">
-   eJxjYMANWBkZGNgZ8SggAHiBmJ987QzaQKxLgf5RMAoGOwAAiEUAgw==
+   eJxjYMANWBkZGNgZGcgGvAwMDPzka2fQZmBg0KVA/ygYBQyDHAAAiEUAgw==
   </chunk>
      <chunk x="-16" y="98" width="16" height="14">
-   eJxjYCAfsDJSoBkIeCnTzqBNof5RQD4AxT0bBfEPins+CuynVD8o7ehQoJ9aAAAj2ADZ
+   eJxjYCAfsDJSoJmBgYGXMu0M2hTqHwWUxT0bI2Vxz0eB/ZTqB6UdHQr0UwsAACPYANk=
   </chunk>
      <chunk x="0" y="98" width="16" height="14">
-   eJxjY2RgYANidiAmB/AhYTZGTEzIXB0oFkUzC5+52MzURjILHWMzG2YWMQCf2bgAK4XhCrNTlzztRANscUZK/OGKM0LpAoaJ0Y8P44oXQmkKhvEBfPFOKP6JBQCeZgm+
+   eJxjY2RgYGNkYGBnZCAL8CFhkDnomJC5OlAsimYWPnOxmamNZBY6xmY2zCxiAD6zcQFWCsMVZqcuA20BtjgjJf5wxRmhdAHDfESagQvjihdCaQqG8QF88U4o/okFAJ5mCb4=
   </chunk>
      <chunk x="16" y="98" width="16" height="14">
-   eJxjYBjagJ2RMv061HHGiAVsjJTFAR8Q81NgP6X6QfGvS4F+SgEA+DEA1w==
+   eJxjYBjagJ2RMv061HLICAVsjJTFAR8DAwM/BfZTqh8U/7oU6KcUAAD4MQDX
   </chunk>
      <chunk x="0" y="112" width="16" height="14">
-   eJxjYKAOYGVkYGCDYnZG0vXzAjEfEsZmBise87WBWAeIRaH6+bHo48Mih8scXRxuE0OTIwbAzEQ3dxSMAgD8DALS
+   eJxjYKAOYGVkYGCDYnZG0vXzMjAw8CFhbGbA7MAmp83AwKDDwMAgCtXPj0UfHxY5XObo4nCbGJocMQBmJrq5o4BhxAMA/AwC0g==
   </chunk>
      <chunk x="-16" y="126" width="16" height="14">
-   eJxjYBi6gJWRMv3a1HHGKBgFZAMAgEMAMg==
+   eJxjYBi6gJWRMv3a1HLIKBgFDOQBAIBDADI=
   </chunk>
      <chunk x="0" y="126" width="16" height="14">
-   eJzFkcEOgCAMQ+GAngYn+Qng/3/PEWmyLFvEkyS96F67Qgj/niM+OuM+k8R8Z12s8iGTWHllz9NYw8jwdmsrtzu7TaaK3ZD11nGyec1jH2TBx/MAW40u8IG35UGKTUb3Fvy7JvFd9tDdaYNHjvQoxpzHy754h+HM6W66r75Lj8e/nTeS/A2OTwdE
+   eJzFkUEOgCAMBNeDegJP8onq/79niGyyaajiSRIu0Ol2APh3LdO912mcmaX+ALAD2D5kJgC5ZddlAM5ORjSbtdwjmK0yRWZj1ptjZWttlnnM9Yl6kC0dF/bJDz2SY+mhtfbw1knO1cO7pwHexJebdyO8+vIf6BXxzPS+/i0jnncjf6T8BY5PB0Q=
   </chunk>
      <chunk x="16" y="126" width="16" height="14">
-   eJxjYBjagJ2RMv261HHGKBgFZAEAif8ANg==
+   eJxjYBjagJ2RMv261HLIKBgFDKQDAIn/ADY=
   </chunk>
      <chunk x="-16" y="140" width="16" height="14">
-   eJxjYBgFo2BgACsjZfq1qeOMAQUAKoMAMg==
+   eJxjYBgFo2BgACsjZfq1qeWQAQQAKoMAMg==
   </chunk>
      <chunk x="0" y="140" width="16" height="14">
-   eJxjYEAAbSAWBWJ+BkzAysjAwAekxYBYF4s8DPAyQNSxMaJiYvQi68eGsbkLmxvxYXZG8uwmxg2U6oeFPy699Ao/kD06aBjmLvTwQ49jPhxu1EZyB7IedHvw+U8bi7uoBVgZMdMsPowcDsSkO1xpEQAmjwkS
+   eJy9ksEOgCAMQx8H9SSe8CfE//89sxAiTkaIGpv0xMq6bnBiAwKwcMfgwAMrsGNjJtWN7soebamvsear5rHFyT3r3ePhrT7nb2n/yk/6RMVg5Kd37A2PMlt+LzVR9WnNJ3/o+q8gs+ubbbHMoefurFs8ACaPCRI=
   </chunk>
      <chunk x="16" y="140" width="16" height="14">
-   eJxjYBgFo4B8wM5ImX5d6jhjyAIAOn8ANg==
+   eJxjYBgFo4B8wM5IWejpjvDABwA6fwA2
   </chunk>
      <chunk x="-16" y="154" width="16" height="14">
-   eJxjYBg4wMpImV4+CuzmBWIxCvXzU6BfG4h1KdA/CoYHAACW/QCy
+   eJxjYBg4wMpImV4+CuzmZWBgEKNQPz8F+rUZGBh0KdA/ChiGBQAAlv0Asg==
   </chunk>
      <chunk x="0" y="154" width="16" height="14">
-   eJxjZWRg4GOgDIsBsQ4aFiVBXpcBE/AiyfNjkdfGo5cY/TAzcAFtqBvF8NhBCGhToHcUDA3ABsw/7Iyk62NlhOgFAEy9BPo=
+   eJxjZWRg4GOgDIsxMDDooGFREuR1GTABL5I8PxZ5bTx6idEPM4MBj5wo1O247CAEtCnQOwoYhgRgY2RgYGckXR8rI0QvAEy9BPo=
   </chunk>
      <chunk x="16" y="154" width="16" height="14">
-   eJxjZ2SgCPBTpp2BD4jZKXCDKIVm8AKxGBDrkmm/NgV6R8EoAACTjwEB
+   eJxjZ2SgCPBTpp2Bj4GBgZ0CN4hSaAYvAwODGAMDgy6Z9mtToHcUMIx4AACTjwEB
   </chunk>
      <chunk x="0" y="168" width="16" height="14">
-   eJzTYWBg0GUgHWgDsQ4Z+kbBKBgFCAAAVzIAsQ==
+   eJzTYWBg0GUgHWgzMDDokKFvFIyCUcAABwBXMgCx
   </chunk>
      <chunk x="0" y="182" width="16" height="14">
-   eJxjYKAOYGVkYGCDYnZG0uW1gVgHinWxmE9IfhSMgqEIAKm0AZk=
+   eJxjYKAOYGVkYGCDYnZG0uW1GRgYdKBYl4F0+VEwChiGIAAAqbQBmQ==
   </chunk>
      <chunk x="0" y="210" width="16" height="14">
-   eJxjYBgFo2AU0AKwMjIwsAExOyNuNQAGFQAW
+   eJxjYBgFo2AUMNAAsDIyMLAxMjCwM+JWAwAGFQAW
   </chunk>
      <chunk x="-16" y="224" width="16" height="14">
-   eJxjYBg4wMZImX5eCu0f1T+w+nUp1D/QgJXC9KsNxAAADQDB
+   eJxjYBg4wMZImX5eCu0f1T+w4adLof6BBqwUpl9tBgYGAAANAME=
   </chunk>
      <chunk x="0" y="224" width="16" height="14">
-   eJxjYMANtIFYB4h18ahhY0RgdkY8CnEAPjRMilmsjJj6sZmFC+PTO1SwGAMkjnBhUQL68cUtCMDSAC7zSAXI5omiybGSmJa08ZhNyF8wQEnaZWBADRNyzAIASqIJJA==
+   eJxjYMANtBkYGHQYGBh08ahhY0RgdkYGkgEfGibFLFZGTP3YzMKF8ekdKlgMGke4sCgB/fjiFjkN4DKPVKCNZhYDWnySEv8gs3CZTchfMEBJ2gUB5DAhxywASqIJJA==
   </chunk>
      <chunk x="16" y="224" width="16" height="14">
-   eJxjYBhYwMZImX5+Cu0f1T+w+nUo1D/UAQAWjgCd
+   eJxjYBhYwMZImX5+Cu0f1T+w4adDof6hDgAWjgCd
   </chunk>
      <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBi6gI2RMv061HEG2YCVQvfzUmi/NoX6BxoMh/ADAACIALA=
+   eJxjYBi6gI2RMv06DAMLWCl0Py+F9mszDG3AOgzCDwAAiACw
   </chunk>
      <chunk x="0" y="238" width="16" height="14">
-   eJyVk8EOgCAMQ8sBPYkn+Qnl/3/PkUBY6kBY8g6EtbE1AMAtPIVLCMLm+uxCb7SXheU/8rP8q0conmleDu+aNvzsWdm1dtQT72kiWh98nkHnXc0/m3fln+Q58M1peXjy5750F4k0dS+qO9ZZXfC3nerO6pRn9D5Wh71e6KsLng==
+   eJyVU0EOgCAMKwfxJJ70E+r/v2dMWGyaitCkB7KtrCUAwAHgrNwAFAA5fXNO+ARrOTr9lp7TD41SNa/+cUzpnS0/fc47z7Zy0j7mTnnouYfsd9R/r9+RN3mwGJ9OI+6JWpa8OIvwxbtFT9R0zmWhu61Uc5kqWv9jFKp1A+irC54=
   </chunk>
      <chunk x="16" y="238" width="16" height="14">
-   eJxjYKAMsDNSpp+fQvsHWr8uhfpHwcCCgU4/AAnOAIE=
+   eJxjYKAMsDNSpp+fYWjr16VQ/yhgGFAw0OkHAAnOAIE=
   </chunk>
      <chunk x="0" y="252" width="16" height="14">
-   eJxjYCAfaFOgdxQMfcDKiMpmA2J2Rtzq0fXyIbHFgLQOEOsSaTco7YkisYnVh27GQAMAvE0Bkw==
+   eJxjYCAfaFOgdxQMfcDKiMpmY2RgYGckXi8fEluMgYFBh4GBQZdIu0FpTxSJTaw+dDMGGgAAvE0Bkw==
   </chunk>
      <chunk x="16" y="252" width="16" height="14">
-   eJzTZRgFIxmwM1Kmn59C+ynVr0uh/oEGAPB/AIE=
+   eJzTZRgFIxmwM1Kmn59hYPXrUqh/oAEA8H8AgQ==
   </chunk>
      <chunk x="-16" y="266" width="16" height="14">
-   eJxjYBg4wMpImX5t6jhjFAxRMBzSDwCnRgBj
+   eJxjYBg4wMpImX5tajlkFAxJwDoM0g8Ap0YAYw==
   </chunk>
      <chunk x="0" y="266" width="16" height="14">
-   eJxjYKAMsDFCMDsjphwrDnFkoAPFulj08jFAMCEzsNkL00uqGdj0kmKGNgPEP6JI+sQYUP3IyogIN1yAF0k/Pw47dPC4A59+YgC99ONKO8Tqx5Z2SNGPC+DSjxx3+NIDLv3IcQdyNwBiBwX+
+   eJxjYKAMsDFCMDsjphwrDnFkoAPFulj08jFAMCEzGPDoJdUMbHpJMUMb6h9RJH1iaH4E2QELN1yAF0k/Pw47QJgc/cQAeulnw5FGiNWPLe3Q0v3IcYcvPeDSjxx3IHcDAGIHBf4=
   </chunk>
      <chunk x="16" y="266" width="16" height="14">
-   eJxjYBgFlAA2RgYGdkby9esAsS7VXDMKhhoAANZqAGk=
+   eJxjYBgFlAA2RgYGdkby9eswMDDojkYBw0gFANZqAGk=
   </chunk>
      <chunk x="0" y="280" width="16" height="14">
-   eJxjYMAOeIGYD4r5cajBByjVrw3EOlCsS4b+UTAKhgIAAGvJASE=
+   eJxjYMAOeBkYGPigmJ+BdECpfm0GBgYdKNYlQ/8oGAUMQwAAAGvJASE=
   </chunk>
     </data>
    </layer>
@@ -360,58 +360,58 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="42" width="16" height="14">
-   eJxjYBhewJGRgcGZkXQ5GKgFytfjUINPbhSMAnIAAHnRAwk=
+   eJxjYBhewJGRgcGZkXQ5GKhlZGCoZyRdbhSMAgYyAAB50QMJ
   </chunk>
      <chunk x="16" y="42" width="16" height="14">
-   eJxjYBgFo4C6wJGRgcEJDTszEq+/Fqi2Dg3Xk6B/KAEAa6AEjQ==
+   eJxjYBgFo4C6wJGRgcEJDTszEq+/lpGBoQ4N15OgfygBAGugBI0=
   </chunk>
      <chunk x="0" y="84" width="16" height="14">
-   eJxjYMANHBkZGJwZ8SggAOKBehMp0F8L1FtPgf5RMAoGOwAABSMCRw==
+   eJxjYMANHBkZGJwZGcgG8YwMDIkU6K9lZGCop0D/KBgFDIMcAAAFIwJH
   </chunk>
      <chunk x="0" y="98" width="16" height="14">
-   eJxjYBgFtACOjAwMTkDszEie/lqgvjogridTP70AzJ/YMDF+B/nTHogNgdgB6mcQPwGIlbCY54jFfPSwgvGRzXKAyscj2UVM2OIym1rxAgCfAxGU
+   eJxjYBgFtACOjAwMTowMDM6M5OmvZWRgqGNkYKgnUz+9/YkNE+P3WkYGBntGBgZDRgYGB6ifQfwERgYGJSzmIdsHMx89rGB8ZLNAZoPk45HsIiZscZlNrXgBAJ8DEZQ=
   </chunk>
      <chunk x="0" y="112" width="16" height="14">
-   eJxjYKAOcGRkYHCCYmdG0vXXAvXUAbE9ECvhMMORCPNh5tQzYupTBGIHNDlS3IZu7igYBZQCAKIOCFs=
+   eJxjYKAOcGRkYHCCYmdG0vXXMjIw1DEyMNgzMjAo4TDDkQjzYebUM2LqU2RkYHBAkyPFbejmjoJRwEAhAACiDghb
   </chunk>
      <chunk x="0" y="126" width="16" height="14">
-   eJxjYBgFowA7cGRkYHBmJF+vIhArkWlGLVCPPRAbAnEimW4AmVEHxPVk6qcHAAC8EAQh
+   eJxjYBgFowA7cGRkYHBmJF+vIiMDgxKZZtQyMjDYMzIwGDIyMCSS6QaQGXWMDAz1ZOqnBwAAvBAEIQ==
   </chunk>
      <chunk x="0" y="140" width="16" height="14">
-   eJxjYKANcGRkYHCCYmdG0vXHA/UYQnEiifpBdisi6Vci0Q21QLX2QJyAhEl1A8wMByCuA+J6Mv1Aqtux2U+q3chmkKt3OABHMsMeBuKJSDcA89UMMw==
+   eJxjYKANcGRkYHCCYmdG0vXHMzIwGEJxIiPpdisi6Vci0Q21jAwM9owMDAlImFQ3wMxwYGRgqGNkYKgn0w+kuh2b/aTajWwGuXqHA3AkM+xhAJSGCaUbAPPVDDM=
   </chunk>
      <chunk x="0" y="154" width="16" height="14">
-   eJxjYMAOHBkZGBSBWAmInRlxKMIDaoF66oDYHogTydCPbE49BfpHwSigJXAiM3+A8hdILwDEAAR1
+   eJzt07ERABAUBNG9UmjEoBKFoHXzM4EEI/PyvexgLQqcwAuy2FYFTRAE5aCfd/pF/308lA7/Yf+ydgDEAAR1
   </chunk>
      <chunk x="0" y="168" width="16" height="14">
-   eJyrY2RgqAdiUkEtUE8dGfpGwSgYBQgAALqCAf0=
+   eJyrY2RgqGdkIBnUMjIw1JGhbxSMglHAAAcAuoIB/Q==
   </chunk>
      <chunk x="0" y="182" width="16" height="14">
-   eJxjYKAOcGRkYHCCYmdG0uVrgWJ1UFxPhvwoGAVDEQAABG4GEQ==
+   eJxjYKAOcGRkYHCCYmdG0uVrGRkY6qC4ngz5UTAKGIYgAAAEbgYR
   </chunk>
      <chunk x="0" y="210" width="16" height="14">
-   eJxjYBgFo2AU0AI4MjIwOAGxMyNuNQAclQDK
+   eJxjYBgFo2AUMNAAODIyMDgxMjA4M+JWAwAclQDK
   </chunk>
      <chunk x="0" y="224" width="16" height="14">
-   eJxjYMANahkZGOqAuJ4RjyIaAEegfc4U2BkP1KsExE5omBgzQXYrAnECEBui4UQi9MdD1SagYQciwzEeze4EEuwGAVicwbA91Axi9eMyj15pgNK4rx2A9EoJAAAXERC2
+   eJzFktEJgDAMRN+Noht0Aq0O0jqIdnUpVCgFIVKoB/d5eSEXeNcpuARJDJUX7B3MIJgFW2PLzMyeBFHgGh+ysV3J116NdwwNO35g1509XsoMa/7vH/Cd3ed9R/9rj24XERC2
   </chunk>
      <chunk x="-16" y="238" width="16" height="14">
-   eJxjYBi6wImRMv11FOofBaOAUgAA/FUAww==
+   eJxjYBi6wImRMv11FOofBaOAgUIAAPxVAMM=
   </chunk>
      <chunk x="0" y="238" width="16" height="14">
-   eJxjYBhY4MTIwODMSL7+OqDeegr0jwIIcGRExIUjGXFSy4iIi3ggVsJhBrI9xJiFrgddjhgAco8DBemkloZpDADu4wvF
+   eJxjYBhY4MTIwODMSL7+OkYGhnoK9I8CCHBkRMSFIxlxUsuIiIt4RgYGJRxmINvDQIRZ6HrQ5YgBIPc4UJBOQHbSKo0BAO7jC8U=
   </chunk>
      <chunk x="0" y="252" width="16" height="14">
-   eJxjYBgFo4A84MhImV5FCvTXAvXaU6AfZsZAAwCSEQHj
+   eJxjYBgFo4A84MhImV5FCvTXMjIw2FOgH2bGQAMAkhEB4w==
   </chunk>
      <chunk x="16" y="252" width="16" height="14">
    eJxjYBgFIxk4M1KmP3GA9ddTqH+gAQCmCwGJ
   </chunk>
      <chunk x="-16" y="266" width="16" height="14">
-   eJxjYBg44MhImf5aCvWPglEw0AAAJxwAwQ==
+   eJxjYBg44MhImf5aCvWPglHAMMAAACccAME=
   </chunk>
      <chunk x="0" y="266" width="16" height="14">
-   eJxjYKAMODFCsDMjefrrGCG4nkz9o2AU0BM4MlKW5msZUdM8AGZrBVE=
+   eJxjYKAMODFCsDMjefrrGCG4nkz9o2AUMNAROELTO7lpvhaa3mFpHgBmawVR
   </chunk>
     </data>
    </layer>
@@ -421,10 +421,10 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="14" width="16" height="14">
-   eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1gVgUi14xINYlQn8r1AwdNAzS245FPQBeGwPM
+   eJxjYBgFo4C6gJWRgYENDbMzEq+XjwE7JsYMXhx6QZifCPu1GRgYRLHoFWNgYNAlQn8r1AwdNAzS245FPQBeGwPM
   </chunk>
      <chunk x="0" y="28" width="16" height="14">
-   eJxjYMAErUDchobbsagbBaNgFFAGAKPKAyU=
+   eJxjYMAErQwMDG1ouB2LulEwCkYBA0UAAKPKAyU=
   </chunk>
     </data>
    </layer>
@@ -434,7 +434,7 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="14" width="16" height="14">
-   eJxjYBgFo4A2wJGRgcGZkXy9ikCsBMROJJoD05sAxQ5AXE+C/lqg2jogtidDL7o5hPQCAKHtBng=
+   eJxjYBgFo4A2wJGRgcGZkXy9iowMDEqMDAxOJJoD05sAxQ6MDAz1JOivZWRgqGNkYLAnQy+6OYT0AgCh7QZ4
   </chunk>
     </data>
    </layer>
@@ -444,12 +444,12 @@ A brief chance to practice controls</text>
     </properties>
     <data encoding="base64" compression="zlib">
      <chunk x="0" y="28" width="16" height="14">
-   eJxjYEAF6Qy4QSYeORhoxSPXToR+Su0fqgBfuKEDbOGIL9zQwXAOx6EGAK6JBIk=
+   eJxjYEAF6Qy4QSYDYdCKR66dCP2U2j9UAb5wIyYc8YXbSApHhiEGAK6JBIk=
   </chunk>
     </data>
    </layer>
   </group>
-  <group id="9" name="spawns">
+  <group id="9" name="spawns" visible="0">
    <objectgroup id="38" name="room1ants1">
     <object id="415" template="triggers/SpawnCharacters.tx" x="-32" y="3976"/>
     <object id="416" template="enemies/Ant.tx" gid="2147484129" x="264" y="4016"/>
@@ -1147,7 +1147,7 @@ end</property>
    <objectgroup id="32" name="room7alien2">
     <object id="284" template="triggers/SpawnCharacters.tx" x="-80" y="2448"/>
     <object id="293" template="enemies/AlienGunner.tx" x="48" y="2440"/>
-    <object id="296" template="enemies/AlienGunner.tx" gid="2147484170" x="208" y="2440" rotation="0"/>
+    <object id="296" template="enemies/AlienGunner.tx" gid="2147484171" x="208" y="2440" rotation="0"/>
     <object id="292" type="Path" x="48" y="2440">
      <polyline points="0,0 8,16 16,40"/>
     </object>
@@ -1176,11 +1176,11 @@ end</property>
    <objectgroup id="33" name="room7alien3">
     <object id="298" template="triggers/SpawnCharacters.tx" x="-56" y="2432"/>
     <object id="338" template="enemies/AlienPillager.tx" x="-8" y="2496"/>
-    <object id="343" template="enemies/AlienPillager.tx" gid="2147484176" x="264" y="2496" rotation="0"/>
+    <object id="343" template="enemies/AlienPillager.tx" gid="2147484177" x="264" y="2496" rotation="0"/>
     <object id="339" template="enemies/AlienPillager.tx" x="-16" y="2512"/>
-    <object id="342" template="enemies/AlienPillager.tx" gid="2147484176" x="272" y="2512" rotation="0"/>
+    <object id="342" template="enemies/AlienPillager.tx" gid="2147484177" x="272" y="2512" rotation="0"/>
     <object id="340" template="enemies/AlienPillager.tx" x="-24" y="2528"/>
-    <object id="341" template="enemies/AlienPillager.tx" gid="2147484176" x="280" y="2528" rotation="0"/>
+    <object id="341" template="enemies/AlienPillager.tx" gid="2147484177" x="280" y="2528" rotation="0"/>
     <object id="344" type="Path" x="-24" y="2528">
      <polyline points="0,0 72,-64 104,-64 120,-48"/>
     </object>
@@ -1234,21 +1234,21 @@ end</property>
     <object id="533" template="enemies/AlienPillagerScrape.tx" x="120" y="2368"/>
     <object id="542" template="enemies/AlienPillagerScrape.tx" x="120" y="2312"/>
     <object id="537" template="enemies/AlienPillagerScrape.tx" x="112" y="2336"/>
-    <object id="535" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2360" rotation="0"/>
-    <object id="544" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="136" y="2320" rotation="0"/>
-    <object id="539" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2336" rotation="0"/>
+    <object id="535" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="144" y="2360" rotation="0"/>
+    <object id="544" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="136" y="2320" rotation="0"/>
+    <object id="539" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="144" y="2336" rotation="0"/>
     <object id="534" template="enemies/AlienPillagerScrape.tx" x="104" y="2352"/>
     <object id="541" template="enemies/AlienPillagerScrape.tx" x="88" y="2304"/>
     <object id="538" template="enemies/AlienPillagerScrape.tx" x="96" y="2320"/>
-    <object id="536" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2344" rotation="0"/>
-    <object id="543" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="168" y="2304" rotation="0"/>
-    <object id="540" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="160" y="2320" rotation="0"/>
+    <object id="536" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="152" y="2344" rotation="0"/>
+    <object id="543" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="168" y="2304" rotation="0"/>
+    <object id="540" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="160" y="2320" rotation="0"/>
     <object id="545" template="triggers/SpawnCharacters.tx" x="-32" y="2376"/>
    </objectgroup>
    <objectgroup id="43" name="room8alien2">
     <object id="481" template="triggers/SpawnCharacters.tx" x="-56" y="2360"/>
-    <object id="511" template="enemies/AlienGunner.tx" gid="522" x="80" y="2352" rotation="0"/>
-    <object id="516" template="enemies/AlienGunner.tx" gid="2147484170" x="176" y="2352" rotation="0"/>
+    <object id="511" template="enemies/AlienGunner.tx" gid="523" x="80" y="2352" rotation="0"/>
+    <object id="516" template="enemies/AlienGunner.tx" gid="2147484171" x="176" y="2352" rotation="0"/>
     <object id="512" type="Path" x="88" y="2352">
      <polyline points="-8,0 -8,16 -40,48 -104,48"/>
     </object>
@@ -1275,8 +1275,8 @@ end</property>
     </object>
    </objectgroup>
    <objectgroup id="45" name="room8alien3" visible="0">
-    <object id="527" template="enemies/AlienGunner.tx" gid="522" x="-16" y="2392" rotation="0"/>
-    <object id="528" template="enemies/AlienGunner.tx" gid="2147484170" x="272" y="2392" rotation="0"/>
+    <object id="527" template="enemies/AlienGunner.tx" gid="523" x="-16" y="2392" rotation="0"/>
+    <object id="528" template="enemies/AlienGunner.tx" gid="2147484171" x="272" y="2392" rotation="0"/>
     <object id="529" type="Path" x="-16" y="2392">
      <polyline points="0,0 64,0 96,-32 96,-48 80,-64 80,-88 96,-104 96,-152 64,-184 64,-248 112,-296"/>
     </object>
@@ -1306,8 +1306,8 @@ end</property>
     <object id="500" template="triggers/SpawnCharacters.tx" x="-72" y="2264"/>
     <object id="501" template="enemies/AlienGunner.tx" x="80" y="2256"/>
     <object id="520" template="enemies/AlienGunner.tx" x="72" y="2240"/>
-    <object id="518" template="enemies/AlienGunner.tx" gid="2147484170" x="184" y="2248" rotation="0"/>
-    <object id="523" template="enemies/AlienGunner.tx" gid="2147484170" x="192" y="2232" rotation="0"/>
+    <object id="518" template="enemies/AlienGunner.tx" gid="2147484171" x="184" y="2248" rotation="0"/>
+    <object id="523" template="enemies/AlienGunner.tx" gid="2147484171" x="192" y="2232" rotation="0"/>
     <object id="502" type="Path" x="96" y="2248">
      <polyline points="-16,8 16,40"/>
     </object>
@@ -1985,8 +1985,8 @@ self.speed = 0.75</property>
      <property name="allenemiesdefeatedbonus" type="int" value="25000"/>
      <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
     </properties>
-    <object id="1266" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="56" y="1320" rotation="90"/>
-    <object id="1903" template="enemies/BeetleFromBelow.tx" gid="550" x="200" y="1320" rotation="-90"/>
+    <object id="1266" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="56" y="1320" rotation="90"/>
+    <object id="1903" template="enemies/BeetleFromBelow.tx" gid="551" x="200" y="1320" rotation="-90"/>
     <object id="1267" template="triggers/SpawnCharacters.tx" x="-48" y="1288"/>
     <object id="1279" template="enemies/Path.tx" x="56" y="1320">
      <polyline points="0,0 0,-16 0,-24 0,-144 -16,-160 -112,-160"/>
@@ -2106,7 +2106,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="178" name="r13fly3">
     <object id="1687" template="triggers/SpawnCharacters.tx" x="-48" y="1152"/>
-    <object id="1688" template="enemies/WaspShooter.tx" gid="2147484218" x="224" y="1224" rotation="0">
+    <object id="1688" template="enemies/WaspShooter.tx" gid="2147484219" x="224" y="1224" rotation="0">
      <properties>
       <property name="speed" type="float" value="3"/>
      </properties>
@@ -2151,7 +2151,7 @@ self.speed = 0.75</property>
       <property name="disabled" type="bool" value="true"/>
      </properties>
     </object>
-    <object id="1698" template="enemies/WaspShooter.tx" gid="2147484218" x="208" y="1192" rotation="0">
+    <object id="1698" template="enemies/WaspShooter.tx" gid="2147484219" x="208" y="1192" rotation="0">
      <properties>
       <property name="speed" type="float" value="3"/>
      </properties>
@@ -2196,12 +2196,12 @@ self.speed = 0.75</property>
      <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
     </properties>
     <object id="1278" template="triggers/SpawnCharacters.tx" x="-24" y="1072"/>
-    <object id="1277" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="104" y="1096" width="48" height="48" rotation="90">
+    <object id="1277" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="104" y="1096" width="48" height="48" rotation="90">
      <properties>
       <property name="speed" type="float" value="1.25"/>
      </properties>
     </object>
-    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="216" y="1096" rotation="90">
+    <object id="1299" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="216" y="1096" rotation="90">
      <properties>
       <property name="speed" type="float" value="1.25"/>
       <property name="z" type="float" value="-1"/>
@@ -2654,7 +2654,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="129" name="r14wasp1a" visible="0">
     <object id="1340" template="triggers/SpawnCharacters.tx" x="-64" y="1064"/>
-    <object id="1341" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="1128" rotation="0"/>
+    <object id="1341" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="1128" rotation="0"/>
     <object id="1342" template="enemies/Path.tx" x="136" y="1128">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -2676,7 +2676,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="128" name="r14wasp1b" visible="0">
     <object id="1334" template="triggers/SpawnCharacters.tx" x="-72" y="1056"/>
-    <object id="1335" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="1136" rotation="0"/>
+    <object id="1335" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="1136" rotation="0"/>
     <object id="1337" template="pathpoints/StartEnterForeground.tx" x="120" y="1136">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2698,7 +2698,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="137" name="r14wasp2a" visible="0">
     <object id="1398" template="triggers/SpawnCharacters.tx" x="-48" y="992"/>
-    <object id="1399" template="enemies/WaspShooter.tx" gid="570" x="24" y="1072" rotation="0"/>
+    <object id="1399" template="enemies/WaspShooter.tx" gid="571" x="24" y="1072" rotation="0"/>
     <object id="1401" template="pathpoints/StartEnterForeground.tx" x="24" y="1072">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2720,7 +2720,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="136" name="r14wasp2b">
     <object id="1392" template="triggers/SpawnCharacters.tx" x="-56" y="1032"/>
-    <object id="1393" template="enemies/WaspShooter.tx" gid="570" x="120" y="1096" rotation="0"/>
+    <object id="1393" template="enemies/WaspShooter.tx" gid="571" x="120" y="1096" rotation="0"/>
     <object id="1395" template="pathpoints/StartEnterForeground.tx" x="120" y="1096">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2742,7 +2742,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="132" name="r14wasp3a">
     <object id="1368" template="triggers/SpawnCharacters.tx" x="-88" y="976"/>
-    <object id="1369" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="1056" rotation="0"/>
+    <object id="1369" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="1056" rotation="0"/>
     <object id="1371" template="pathpoints/StartEnterForeground.tx" x="136" y="1056">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2764,7 +2764,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="133" name="r14wasp3b" visible="0">
     <object id="1374" template="triggers/SpawnCharacters.tx" x="-96" y="936"/>
-    <object id="1375" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="1032" rotation="0"/>
+    <object id="1375" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="1032" rotation="0"/>
     <object id="1377" template="pathpoints/StartEnterForeground.tx" x="232" y="1032">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2786,7 +2786,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="127" name="r14wasp4a">
     <object id="1328" template="triggers/SpawnCharacters.tx" x="-88" y="872"/>
-    <object id="1329" template="enemies/WaspShooter.tx" gid="570" x="24" y="960" rotation="0"/>
+    <object id="1329" template="enemies/WaspShooter.tx" gid="571" x="24" y="960" rotation="0"/>
     <object id="1331" template="pathpoints/StartEnterForeground.tx" x="24" y="960">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2808,7 +2808,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="218" name="r14wasp4b" visible="0">
     <object id="2054" template="triggers/SpawnCharacters.tx" x="-72" y="880"/>
-    <object id="2055" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="952" rotation="0"/>
+    <object id="2055" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="952" rotation="0"/>
     <object id="2056" template="pathpoints/StartEnterForeground.tx" x="136" y="952">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2830,7 +2830,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="220" name="r14wasp4c" visible="0">
     <object id="2076" template="triggers/SpawnCharacters.tx" x="-104" y="864"/>
-    <object id="2077" template="enemies/WaspShooter.tx" gid="570" x="24" y="984" rotation="0"/>
+    <object id="2077" template="enemies/WaspShooter.tx" gid="571" x="24" y="984" rotation="0"/>
     <object id="2078" template="pathpoints/StartEnterForeground.tx" x="24" y="984">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2854,7 +2854,7 @@ self.speed = 0.75</property>
     <object id="2116" template="triggers/SpawnCharacters.tx" x="-88" y="808" rotation="0">
      <point/>
     </object>
-    <object id="2117" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="896" rotation="0"/>
+    <object id="2117" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="896" rotation="0"/>
     <object id="2118" template="pathpoints/StartEnterForeground.tx" x="232" y="896" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2884,7 +2884,7 @@ self.speed = 0.75</property>
     <object id="2109" template="triggers/SpawnCharacters.tx" x="-104" y="816" rotation="0">
      <point/>
     </object>
-    <object id="2110" template="enemies/WaspShooter.tx" gid="570" x="120" y="888" rotation="0"/>
+    <object id="2110" template="enemies/WaspShooter.tx" gid="571" x="120" y="888" rotation="0"/>
     <object id="2111" template="pathpoints/StartEnterForeground.tx" x="120" y="888" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2914,7 +2914,7 @@ self.speed = 0.75</property>
     <object id="2102" template="triggers/SpawnCharacters.tx" x="-72" y="800" rotation="0">
      <point/>
     </object>
-    <object id="2103" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="920" rotation="0"/>
+    <object id="2103" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="920" rotation="0"/>
     <object id="2104" template="pathpoints/StartEnterForeground.tx" x="232" y="920" rotation="0">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2942,8 +2942,8 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="221" name="r14wasp6a">
     <object id="2083" template="triggers/SpawnCharacters.tx" x="-120" y="760"/>
-    <object id="2084" template="enemies/WaspShooter.tx" gid="570" x="24" y="832" rotation="0"/>
-    <object id="2129" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="832" rotation="0"/>
+    <object id="2084" template="enemies/WaspShooter.tx" gid="571" x="24" y="832" rotation="0"/>
+    <object id="2129" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="832" rotation="0"/>
     <object id="2085" template="pathpoints/StartEnterForeground.tx" x="24" y="832">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -2983,8 +2983,8 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="228" name="r14wasp6b" visible="0">
     <object id="2133" template="triggers/SpawnCharacters.tx" x="-120" y="728"/>
-    <object id="2134" template="enemies/WaspShooter.tx" gid="570" x="24" y="848" rotation="0"/>
-    <object id="2135" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="848" rotation="0"/>
+    <object id="2134" template="enemies/WaspShooter.tx" gid="571" x="24" y="848" rotation="0"/>
+    <object id="2135" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="848" rotation="0"/>
     <object id="2136" template="pathpoints/StartEnterForeground.tx" x="24" y="848">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -3024,8 +3024,8 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="230" name="Copy of r14wasp6a">
     <object id="2159" template="triggers/SpawnCharacters.tx" x="-8" y="728"/>
-    <object id="2160" template="enemies/WaspShooter.tx" gid="570" x="136" y="800" rotation="0"/>
-    <object id="2161" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="800" rotation="0"/>
+    <object id="2160" template="enemies/WaspShooter.tx" gid="571" x="136" y="800" rotation="0"/>
+    <object id="2161" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="800" rotation="0"/>
     <object id="2162" template="pathpoints/StartEnterForeground.tx" x="136" y="800">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -3065,8 +3065,8 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="229" name="Copy of r14wasp6b" visible="0">
     <object id="2146" template="triggers/SpawnCharacters.tx" x="-8" y="680"/>
-    <object id="2147" template="enemies/WaspShooter.tx" gid="570" x="136" y="800" rotation="0"/>
-    <object id="2148" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="800" rotation="0"/>
+    <object id="2147" template="enemies/WaspShooter.tx" gid="571" x="136" y="800" rotation="0"/>
+    <object id="2148" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="800" rotation="0"/>
     <object id="2149" template="pathpoints/StartEnterForeground.tx" x="136" y="800">
      <properties>
       <property name="time" type="int" value="30"/>
@@ -3266,7 +3266,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="175" name="r17fly1b">
     <object id="1666" template="triggers/SpawnCharacters.tx" x="-104" y="408"/>
-    <object id="1667" template="enemies/WaspShooter.tx" gid="2147484218" x="208" y="472" rotation="0"/>
+    <object id="1667" template="enemies/WaspShooter.tx" gid="2147484219" x="208" y="472" rotation="0"/>
     <object id="1668" template="enemies/Path.tx" x="208" y="472">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -3310,7 +3310,7 @@ self.speed = 0.75</property>
    </objectgroup>
    <objectgroup id="174" name="r17fly2b">
     <object id="1659" template="triggers/SpawnCharacters.tx" x="-120" y="384"/>
-    <object id="1660" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="496" rotation="0"/>
+    <object id="1660" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="496" rotation="0"/>
     <object id="1661" template="enemies/Path.tx" x="232" y="496">
      <polyline points="0,0 0,-32 0,-40 0,-8"/>
     </object>
@@ -3333,7 +3333,7 @@ self.speed = 0.75</property>
    <objectgroup id="180" name="r17wasp1">
     <object id="1705" template="triggers/SpawnCharacters.tx" x="-104" y="344"/>
     <object id="1706" template="enemies/WaspBackground.tx" x="16" y="456" rotation="0"/>
-    <object id="1713" template="enemies/WaspBackground.tx" gid="2147484212" x="240" y="456" rotation="0"/>
+    <object id="1713" template="enemies/WaspBackground.tx" gid="2147484213" x="240" y="456" rotation="0"/>
     <object id="1707" template="enemies/Path.tx" x="16" y="456">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -3358,7 +3358,7 @@ self.speed = 0.75</property>
    <objectgroup id="182" name="r17wasp3">
     <object id="1727" template="triggers/SpawnCharacters.tx" x="-104" y="328"/>
     <object id="1728" template="enemies/WaspBackground.tx" x="56" y="408" rotation="0"/>
-    <object id="1729" template="enemies/WaspBackground.tx" gid="2147484212" x="200" y="408" rotation="0"/>
+    <object id="1729" template="enemies/WaspBackground.tx" gid="2147484213" x="200" y="408" rotation="0"/>
     <object id="1730" template="enemies/Path.tx" x="56" y="408">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -3383,7 +3383,7 @@ self.speed = 0.75</property>
    <objectgroup id="184" name="r17wasp5">
     <object id="1749" template="triggers/SpawnCharacters.tx" x="-104" y="312"/>
     <object id="1750" template="enemies/WaspBackground.tx" x="112" y="384" rotation="0"/>
-    <object id="1751" template="enemies/WaspBackground.tx" gid="2147484212" x="144" y="384" rotation="0"/>
+    <object id="1751" template="enemies/WaspBackground.tx" gid="2147484213" x="144" y="384" rotation="0"/>
     <object id="1752" template="enemies/Path.tx" x="112" y="384">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -3408,7 +3408,7 @@ self.speed = 0.75</property>
    <objectgroup id="185" name="r17wasp7">
     <object id="1760" template="triggers/SpawnCharacters.tx" x="-104" y="296"/>
     <object id="1761" template="enemies/WaspBackground.tx" x="80" y="360" rotation="0"/>
-    <object id="1762" template="enemies/WaspBackground.tx" gid="2147484212" x="176" y="360" rotation="0"/>
+    <object id="1762" template="enemies/WaspBackground.tx" gid="2147484213" x="176" y="360" rotation="0"/>
     <object id="1763" template="enemies/Path.tx" x="80" y="360">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -3433,7 +3433,7 @@ self.speed = 0.75</property>
    <objectgroup id="187" name="r17wasp9">
     <object id="1782" template="triggers/SpawnCharacters.tx" x="-104" y="280"/>
     <object id="1783" template="enemies/WaspBackground.tx" x="40" y="384" rotation="0"/>
-    <object id="1784" template="enemies/WaspBackground.tx" gid="2147484212" x="216" y="384" rotation="0"/>
+    <object id="1784" template="enemies/WaspBackground.tx" gid="2147484213" x="216" y="384" rotation="0"/>
     <object id="1785" template="enemies/Path.tx" x="40" y="384">
      <polyline points="0,0 0,-32 0,-40"/>
     </object>
@@ -4095,7 +4095,7 @@ self.speed = 0.75</property>
     <object id="589" template="enemies/Path.tx" x="128" y="-1144">
      <polyline points="0,0 0,-32 0,-128"/>
     </object>
-    <object id="590" template="enemies/Beetle.tx" gid="545" x="128" y="-1144" width="48" height="48"/>
+    <object id="590" template="enemies/Beetle.tx" gid="546" x="128" y="-1144" width="48" height="48"/>
     <object id="591" template="enemies/PathPoint.tx" x="128" y="-1176">
      <properties>
       <property name="subscript" value="BeetleSpray(self)"/>
@@ -4180,31 +4180,31 @@ self.speed = 0.75</property>
     <object id="1453" template="enemies/WaspEgg.tx" x="168" y="-1776"/>
    </objectgroup>
    <objectgroup id="399" name="bonusletters">
-    <object id="4392" name="H" type="BonusLetter1" gid="585" x="40" y="3840" width="16" height="16">
+    <object id="4392" name="H" type="BonusLetter1" gid="586" x="40" y="3840" width="16" height="16">
      <properties>
       <property name="bonusletterindex" type="int" value="1"/>
      </properties>
     </object>
     <object id="4393" template="triggers/SpawnNextCharacters.tx" x="-60" y="3848"/>
-    <object id="4394" name="O" type="BonusLetter2" gid="586" x="192" y="3056" width="16" height="16">
+    <object id="4394" name="O" type="BonusLetter2" gid="587" x="192" y="3056" width="16" height="16">
      <properties>
       <property name="bonusletterindex" type="int" value="2"/>
      </properties>
     </object>
     <object id="4395" template="triggers/SpawnNextCharacters.tx" x="-4" y="3064"/>
-    <object id="4396" name="N" type="BonusLetter3" gid="587" x="24" y="2432" width="16" height="16">
+    <object id="4396" name="N" type="BonusLetter3" gid="588" x="24" y="2432" width="16" height="16">
      <properties>
       <property name="bonusletterindex" type="int" value="3"/>
      </properties>
     </object>
     <object id="4397" template="triggers/SpawnNextCharacters.tx" x="-28" y="2440"/>
-    <object id="4398" name="E" type="BonusLetter4" gid="588" x="72" y="1648" width="16" height="16">
+    <object id="4398" name="E" type="BonusLetter4" gid="589" x="72" y="1648" width="16" height="16">
      <properties>
       <property name="bonusletterindex" type="int" value="4"/>
      </properties>
     </object>
     <object id="4399" template="triggers/SpawnNextCharacters.tx" x="-144" y="1656"/>
-    <object id="4400" name="Y" type="BonusLetter5" gid="589" x="184" y="800" width="16" height="16">
+    <object id="4400" name="Y" type="BonusLetter5" gid="590" x="184" y="800" width="16" height="16">
      <properties>
       <property name="bonusletterindex" type="int" value="5"/>
      </properties>
@@ -4213,17 +4213,37 @@ self.speed = 0.75</property>
    </objectgroup>
   </group>
  </group>
- <group id="231" name="stagemd" visible="0">
+ <group id="231" name="stagemd">
   <objectgroup id="398" name="bonusLetters">
-   <object id="4382" name="H" type="BonusLetter" gid="585" x="40" y="3840" width="16" height="16"/>
+   <object id="4382" name="H" type="BonusLetter" gid="586" x="40" y="3840" width="16" height="16">
+    <properties>
+     <property name="anim" value="tileId"/>
+    </properties>
+   </object>
    <object id="4383" template="triggers/SpawnNextCharacters.tx" x="-60" y="3848"/>
-   <object id="4384" name="O" type="BonusLetter" gid="586" x="192" y="3056" width="16" height="16"/>
+   <object id="4384" name="O" type="BonusLetter" gid="587" x="192" y="3056" width="16" height="16">
+    <properties>
+     <property name="anim" value="tileId"/>
+    </properties>
+   </object>
    <object id="4385" template="triggers/SpawnNextCharacters.tx" x="-4" y="3064"/>
-   <object id="4386" name="N" type="BonusLetter" gid="587" x="24" y="2432" width="16" height="16"/>
+   <object id="4386" name="N" type="BonusLetter" gid="588" x="24" y="2432" width="16" height="16">
+    <properties>
+     <property name="anim" value="tileId"/>
+    </properties>
+   </object>
    <object id="4387" template="triggers/SpawnNextCharacters.tx" x="-28" y="2440"/>
-   <object id="4388" name="E" type="BonusLetter" gid="588" x="72" y="1648" width="16" height="16"/>
+   <object id="4388" name="E" type="BonusLetter" gid="589" x="72" y="1648" width="16" height="16">
+    <properties>
+     <property name="anim" value="tileId"/>
+    </properties>
+   </object>
    <object id="4389" template="triggers/SpawnNextCharacters.tx" x="-144" y="1656"/>
-   <object id="4390" name="Y" type="BonusLetter" gid="589" x="184" y="800" width="16" height="16"/>
+   <object id="4390" name="Y" type="BonusLetter" gid="590" x="184" y="800" width="16" height="16">
+    <properties>
+     <property name="anim" value="tileId"/>
+    </properties>
+   </object>
    <object id="4391" template="triggers/SpawnNextCharacters.tx" x="-48" y="808"/>
   </objectgroup>
   <objectgroup id="233" name="room1ants1">
@@ -5443,7 +5463,7 @@ end</property>
   <objectgroup id="252" name="room7alien2">
    <object id="2400" template="triggers/SpawnCharacters.tx" x="-80" y="2448"/>
    <object id="2401" template="enemies/AlienGunner.tx" x="48" y="2440"/>
-   <object id="2402" template="enemies/AlienGunner.tx" gid="2147484170" x="208" y="2440" rotation="0"/>
+   <object id="2402" template="enemies/AlienGunner.tx" gid="2147484171" x="208" y="2440" rotation="0"/>
    <object id="2403" type="Path" x="48" y="2440">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -5510,11 +5530,11 @@ end</property>
   <objectgroup id="253" name="room7alien3">
    <object id="2407" template="triggers/SpawnCharacters.tx" x="-56" y="2432"/>
    <object id="2408" template="enemies/AlienPillager.tx" x="-8" y="2496"/>
-   <object id="2409" template="enemies/AlienPillager.tx" gid="2147484176" x="264" y="2496" rotation="0"/>
+   <object id="2409" template="enemies/AlienPillager.tx" gid="2147484177" x="264" y="2496" rotation="0"/>
    <object id="2410" template="enemies/AlienPillager.tx" x="-16" y="2512"/>
-   <object id="2411" template="enemies/AlienPillager.tx" gid="2147484176" x="272" y="2512" rotation="0"/>
+   <object id="2411" template="enemies/AlienPillager.tx" gid="2147484177" x="272" y="2512" rotation="0"/>
    <object id="2412" template="enemies/AlienPillager.tx" x="-24" y="2528"/>
-   <object id="2413" template="enemies/AlienPillager.tx" gid="2147484176" x="280" y="2528" rotation="0"/>
+   <object id="2413" template="enemies/AlienPillager.tx" gid="2147484177" x="280" y="2528" rotation="0"/>
    <object id="2414" type="Path" x="-24" y="2528">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -5619,15 +5639,15 @@ end</property>
    <object id="2426" template="enemies/AlienPillagerScrape.tx" x="112" y="2368"/>
    <object id="2427" template="enemies/AlienPillagerScrape.tx" x="112" y="2312"/>
    <object id="2428" template="enemies/AlienPillagerScrape.tx" x="104" y="2336"/>
-   <object id="2429" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2360" rotation="0"/>
-   <object id="2430" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="144" y="2320" rotation="0"/>
-   <object id="2431" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="152" y="2336" rotation="0"/>
+   <object id="2429" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="152" y="2360" rotation="0"/>
+   <object id="2430" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="144" y="2320" rotation="0"/>
+   <object id="2431" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="152" y="2336" rotation="0"/>
    <object id="2432" template="enemies/AlienPillagerScrape.tx" x="96" y="2352"/>
    <object id="2433" template="enemies/AlienPillagerScrape.tx" x="80" y="2304"/>
    <object id="2434" template="enemies/AlienPillagerScrape.tx" x="88" y="2320"/>
-   <object id="2435" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="160" y="2344" rotation="0"/>
-   <object id="2436" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="176" y="2304" rotation="0"/>
-   <object id="2437" template="enemies/AlienPillagerScrape.tx" gid="2147484180" x="168" y="2320" rotation="0"/>
+   <object id="2435" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="160" y="2344" rotation="0"/>
+   <object id="2436" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="176" y="2304" rotation="0"/>
+   <object id="2437" template="enemies/AlienPillagerScrape.tx" gid="2147484181" x="168" y="2320" rotation="0"/>
    <object id="3962" template="enemies/Path.tx" x="112" y="2368">
     <polyline points="0,0 8,0"/>
    </object>
@@ -5819,8 +5839,8 @@ end</property>
   </objectgroup>
   <objectgroup id="255" name="room8alien2">
    <object id="2439" template="triggers/SpawnCharacters.tx" x="-56" y="2360"/>
-   <object id="2440" template="enemies/AlienGunner.tx" gid="522" x="80" y="2352" rotation="0"/>
-   <object id="2441" template="enemies/AlienGunner.tx" gid="2147484170" x="176" y="2352" rotation="0"/>
+   <object id="2440" template="enemies/AlienGunner.tx" gid="523" x="80" y="2352" rotation="0"/>
+   <object id="2441" template="enemies/AlienGunner.tx" gid="2147484171" x="176" y="2352" rotation="0"/>
    <object id="2442" type="Path" x="88" y="2352">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -5849,8 +5869,8 @@ end</property>
    </object>
   </objectgroup>
   <objectgroup id="256" name="room8alien3" visible="0">
-   <object id="2446" template="enemies/AlienGunner.tx" gid="522" x="-16" y="2392" rotation="0"/>
-   <object id="2447" template="enemies/AlienGunner.tx" gid="2147484170" x="272" y="2392" rotation="0"/>
+   <object id="2446" template="enemies/AlienGunner.tx" gid="523" x="-16" y="2392" rotation="0"/>
+   <object id="2447" template="enemies/AlienGunner.tx" gid="2147484171" x="272" y="2392" rotation="0"/>
    <object id="2448" type="Path" x="-16" y="2392">
     <polyline points="0,0 64,0 96,-32 96,-48 80,-64 80,-88 96,-104 96,-152 64,-184 64,-248 112,-296"/>
    </object>
@@ -5880,8 +5900,8 @@ end</property>
    <object id="2452" template="triggers/SpawnCharacters.tx" x="-72" y="2264"/>
    <object id="2453" template="enemies/AlienGunner.tx" x="80" y="2256"/>
    <object id="2454" template="enemies/AlienGunner.tx" x="72" y="2240"/>
-   <object id="2455" template="enemies/AlienGunner.tx" gid="2147484170" x="184" y="2248" rotation="0"/>
-   <object id="2456" template="enemies/AlienGunner.tx" gid="2147484170" x="192" y="2232" rotation="0"/>
+   <object id="2455" template="enemies/AlienGunner.tx" gid="2147484171" x="184" y="2248" rotation="0"/>
+   <object id="2456" template="enemies/AlienGunner.tx" gid="2147484171" x="192" y="2232" rotation="0"/>
    <object id="2457" type="Path" x="96" y="2248">
     <properties>
      <property name="speed" type="float" value="2"/>
@@ -6034,15 +6054,15 @@ end</property>
   </objectgroup>
   <objectgroup id="393" name="r9aliensfromalienmind">
    <object id="4019" template="enemies/Fly.tx" x="140" y="2036"/>
-   <object id="4020" template="enemies/Fly.tx" gid="2147484154" x="116" y="2036" rotation="0"/>
+   <object id="4020" template="enemies/Fly.tx" gid="2147484155" x="116" y="2036" rotation="0"/>
    <object id="4021" template="enemies/AlienPillager.tx" x="132" y="2044"/>
-   <object id="4022" template="enemies/AlienPillager.tx" gid="2147484176" x="124" y="2044" rotation="0"/>
+   <object id="4022" template="enemies/AlienPillager.tx" gid="2147484177" x="124" y="2044" rotation="0"/>
    <object id="4023" template="enemies/AlienGunner.tx" x="136" y="2040">
     <properties>
      <property name="path" type="object" value="2478"/>
     </properties>
    </object>
-   <object id="4024" template="enemies/AlienGunner.tx" gid="2147484170" x="120" y="2040" rotation="0">
+   <object id="4024" template="enemies/AlienGunner.tx" gid="2147484171" x="120" y="2040" rotation="0">
     <properties>
      <property name="path" type="object" value="2477"/>
     </properties>
@@ -7233,8 +7253,8 @@ end</property>
     <property name="allenemiesdefeatedbonus" type="int" value="25000"/>
     <property name="allenemiesdefeatedbonuswindow" type="int" value="30"/>
    </properties>
-   <object id="2727" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="56" y="1320" rotation="90"/>
-   <object id="2728" template="enemies/BeetleFromBelow.tx" gid="550" x="200" y="1320" rotation="-90"/>
+   <object id="2727" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="56" y="1320" rotation="90"/>
+   <object id="2728" template="enemies/BeetleFromBelow.tx" gid="551" x="200" y="1320" rotation="-90"/>
    <object id="2729" template="triggers/SpawnCharacters.tx" x="-48" y="1288"/>
    <object id="2730" template="enemies/Path.tx" x="56" y="1320">
     <properties>
@@ -7358,7 +7378,7 @@ end</property>
   </objectgroup>
   <objectgroup id="304" name="r13fly3">
    <object id="2758" template="triggers/SpawnCharacters.tx" x="-48" y="1152"/>
-   <object id="2759" template="enemies/WaspShooter.tx" gid="2147484218" x="224" y="1224" rotation="0">
+   <object id="2759" template="enemies/WaspShooter.tx" gid="2147484219" x="224" y="1224" rotation="0">
     <properties>
      <property name="speed" type="float" value="3"/>
     </properties>
@@ -7403,12 +7423,12 @@ end</property>
      <property name="count" type="int" value="50000"/>
     </properties>
    </object>
-   <object id="2777" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="104" y="1096" width="48" height="48" rotation="90">
+   <object id="2777" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="104" y="1096" width="48" height="48" rotation="90">
     <properties>
      <property name="speed" type="float" value="1.25"/>
     </properties>
    </object>
-   <object id="2778" template="enemies/BeetleFromBelow.tx" gid="2147484198" x="216" y="1096" rotation="90">
+   <object id="2778" template="enemies/BeetleFromBelow.tx" gid="2147484199" x="216" y="1096" rotation="90">
     <properties>
      <property name="speed" type="float" value="1.25"/>
      <property name="z" type="float" value="-1"/>
@@ -7663,7 +7683,7 @@ end</property>
   </objectgroup>
   <objectgroup id="313" name="r14wasp2b">
    <object id="2930" template="triggers/SpawnCharacters.tx" x="-56" y="1032"/>
-   <object id="2931" template="enemies/WaspShooter.tx" gid="570" x="120" y="1096" rotation="0"/>
+   <object id="2931" template="enemies/WaspShooter.tx" gid="571" x="120" y="1096" rotation="0"/>
    <object id="2932" template="pathpoints/StartEnterForeground.tx" x="120" y="1096">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -7683,7 +7703,7 @@ end</property>
   </objectgroup>
   <objectgroup id="314" name="r14wasp3a">
    <object id="2937" template="triggers/SpawnCharacters.tx" x="-88" y="976"/>
-   <object id="2938" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="1056" rotation="0"/>
+   <object id="2938" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="1056" rotation="0"/>
    <object id="2939" template="pathpoints/StartEnterForeground.tx" x="136" y="1056">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -7703,7 +7723,7 @@ end</property>
   </objectgroup>
   <objectgroup id="316" name="r14wasp4a">
    <object id="2951" template="triggers/SpawnCharacters.tx" x="-88" y="872"/>
-   <object id="2952" template="enemies/WaspShooter.tx" gid="570" x="24" y="960" rotation="0"/>
+   <object id="2952" template="enemies/WaspShooter.tx" gid="571" x="24" y="960" rotation="0"/>
    <object id="2953" template="pathpoints/StartEnterForeground.tx" x="24" y="960">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -7725,7 +7745,7 @@ end</property>
    <object id="2972" template="triggers/SpawnCharacters.tx" x="-88" y="808" rotation="0">
     <point/>
    </object>
-   <object id="2973" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="896" rotation="0"/>
+   <object id="2973" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="896" rotation="0"/>
    <object id="2974" template="pathpoints/StartEnterForeground.tx" x="232" y="896" rotation="0">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -7750,8 +7770,8 @@ end</property>
   </objectgroup>
   <objectgroup id="322" name="r14wasp6a">
    <object id="2993" template="triggers/SpawnCharacters.tx" x="-120" y="760"/>
-   <object id="2994" template="enemies/WaspShooter.tx" gid="570" x="24" y="832" rotation="0"/>
-   <object id="2995" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="832" rotation="0"/>
+   <object id="2994" template="enemies/WaspShooter.tx" gid="571" x="24" y="832" rotation="0"/>
+   <object id="2995" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="832" rotation="0"/>
    <object id="2996" template="pathpoints/StartEnterForeground.tx" x="24" y="832">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -7787,8 +7807,8 @@ end</property>
   </objectgroup>
   <objectgroup id="324" name="Copy of r14wasp6a">
    <object id="3019" template="triggers/SpawnCharacters.tx" x="-8" y="728"/>
-   <object id="3020" template="enemies/WaspShooter.tx" gid="570" x="136" y="800" rotation="0"/>
-   <object id="3021" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="800" rotation="0"/>
+   <object id="3020" template="enemies/WaspShooter.tx" gid="571" x="136" y="800" rotation="0"/>
+   <object id="3021" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="800" rotation="0"/>
    <object id="3022" template="pathpoints/StartEnterForeground.tx" x="136" y="800">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8061,7 +8081,7 @@ end</property>
   </objectgroup>
   <objectgroup id="336" name="r17fly1b">
    <object id="3097" template="triggers/SpawnCharacters.tx" x="-104" y="408"/>
-   <object id="3098" template="enemies/WaspShooter.tx" gid="2147484218" x="208" y="472" rotation="0"/>
+   <object id="3098" template="enemies/WaspShooter.tx" gid="2147484219" x="208" y="472" rotation="0"/>
    <object id="3099" template="enemies/Path.tx" x="208" y="472">
     <polyline points="0,0 0,-32 0,-40 0,-8"/>
    </object>
@@ -8101,7 +8121,7 @@ end</property>
   </objectgroup>
   <objectgroup id="338" name="r17fly2b">
    <object id="3111" template="triggers/SpawnCharacters.tx" x="-120" y="384"/>
-   <object id="3112" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="496" rotation="0"/>
+   <object id="3112" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="496" rotation="0"/>
    <object id="3113" template="enemies/Path.tx" x="232" y="496">
     <polyline points="0,0 0,-32 0,-40 0,-8"/>
    </object>
@@ -8122,7 +8142,7 @@ end</property>
   <objectgroup id="339" name="r17wasp1">
    <object id="3118" template="triggers/SpawnCharacters.tx" x="-104" y="344"/>
    <object id="3119" template="enemies/WaspBackground.tx" x="16" y="456" rotation="0"/>
-   <object id="3120" template="enemies/WaspBackground.tx" gid="2147484212" x="240" y="456" rotation="0"/>
+   <object id="3120" template="enemies/WaspBackground.tx" gid="2147484213" x="240" y="456" rotation="0"/>
    <object id="3121" template="enemies/Path.tx" x="16" y="456">
     <polyline points="0,0 0,-32 0,-40"/>
    </object>
@@ -8147,7 +8167,7 @@ end</property>
   <objectgroup id="340" name="r17wasp3">
    <object id="3129" template="triggers/SpawnCharacters.tx" x="-104" y="332"/>
    <object id="3130" template="enemies/WaspBackground.tx" x="56" y="408" rotation="0"/>
-   <object id="3131" template="enemies/WaspBackground.tx" gid="2147484212" x="200" y="408" rotation="0"/>
+   <object id="3131" template="enemies/WaspBackground.tx" gid="2147484213" x="200" y="408" rotation="0"/>
    <object id="3132" template="enemies/Path.tx" x="56" y="408">
     <polyline points="0,0 0,-32 0,-40"/>
    </object>
@@ -8172,7 +8192,7 @@ end</property>
   <objectgroup id="341" name="r17wasp5">
    <object id="3140" template="triggers/SpawnCharacters.tx" x="-104" y="320"/>
    <object id="3141" template="enemies/WaspBackground.tx" x="112" y="384" rotation="0"/>
-   <object id="3142" template="enemies/WaspBackground.tx" gid="2147484212" x="144" y="384" rotation="0"/>
+   <object id="3142" template="enemies/WaspBackground.tx" gid="2147484213" x="144" y="384" rotation="0"/>
    <object id="3143" template="enemies/Path.tx" x="112" y="384">
     <polyline points="0,0 0,-32 0,-40"/>
    </object>
@@ -8197,7 +8217,7 @@ end</property>
   <objectgroup id="342" name="r17wasp7">
    <object id="3151" template="triggers/SpawnCharacters.tx" x="-104" y="308"/>
    <object id="3152" template="enemies/WaspBackground.tx" x="80" y="360" rotation="0"/>
-   <object id="3153" template="enemies/WaspBackground.tx" gid="2147484212" x="176" y="360" rotation="0"/>
+   <object id="3153" template="enemies/WaspBackground.tx" gid="2147484213" x="176" y="360" rotation="0"/>
    <object id="3154" template="enemies/Path.tx" x="80" y="360">
     <polyline points="0,0 0,-32 0,-40"/>
    </object>
@@ -8222,7 +8242,7 @@ end</property>
   <objectgroup id="343" name="r17wasp9">
    <object id="3162" template="triggers/SpawnCharacters.tx" x="-104" y="296"/>
    <object id="3163" template="enemies/WaspBackground.tx" x="40" y="384" rotation="0"/>
-   <object id="3164" template="enemies/WaspBackground.tx" gid="2147484212" x="216" y="384" rotation="0"/>
+   <object id="3164" template="enemies/WaspBackground.tx" gid="2147484213" x="216" y="384" rotation="0"/>
    <object id="3165" template="enemies/Path.tx" x="40" y="384">
     <polyline points="0,0 0,-32 0,-40"/>
    </object>
@@ -8523,7 +8543,7 @@ end</property>
      <property name="disabled" type="bool" value="true"/>
     </properties>
    </object>
-   <object id="2768" template="enemies/WaspShooter.tx" gid="2147484218" x="208" y="1192" rotation="0">
+   <object id="2768" template="enemies/WaspShooter.tx" gid="2147484219" x="208" y="1192" rotation="0">
     <properties>
      <property name="speed" type="float" value="3"/>
     </properties>
@@ -8645,7 +8665,7 @@ end</property>
   </objectgroup>
   <objectgroup id="310" name="r14wasp1a" visible="0">
    <object id="2909" template="triggers/SpawnCharacters.tx" x="-64" y="1064"/>
-   <object id="2910" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="1128" rotation="0"/>
+   <object id="2910" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="1128" rotation="0"/>
    <object id="2911" template="enemies/Path.tx" x="136" y="1128">
     <polyline points="0,0 0,-32 0,-40 0,-8"/>
    </object>
@@ -8667,7 +8687,7 @@ end</property>
   </objectgroup>
   <objectgroup id="311" name="r14wasp1b" visible="0">
    <object id="2916" template="triggers/SpawnCharacters.tx" x="-72" y="1056"/>
-   <object id="2917" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="1136" rotation="0"/>
+   <object id="2917" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="1136" rotation="0"/>
    <object id="2918" template="pathpoints/StartEnterForeground.tx" x="120" y="1136">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8689,7 +8709,7 @@ end</property>
   </objectgroup>
   <objectgroup id="312" name="r14wasp2a" visible="0">
    <object id="2923" template="triggers/SpawnCharacters.tx" x="-48" y="992"/>
-   <object id="2924" template="enemies/WaspShooter.tx" gid="570" x="24" y="1072" rotation="0"/>
+   <object id="2924" template="enemies/WaspShooter.tx" gid="571" x="24" y="1072" rotation="0"/>
    <object id="2925" template="pathpoints/StartEnterForeground.tx" x="24" y="1072">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8711,7 +8731,7 @@ end</property>
   </objectgroup>
   <objectgroup id="315" name="r14wasp3b" visible="0">
    <object id="2944" template="triggers/SpawnCharacters.tx" x="-96" y="936"/>
-   <object id="2945" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="1032" rotation="0"/>
+   <object id="2945" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="1032" rotation="0"/>
    <object id="2946" template="pathpoints/StartEnterForeground.tx" x="232" y="1032">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8733,7 +8753,7 @@ end</property>
   </objectgroup>
   <objectgroup id="317" name="r14wasp4b" visible="0">
    <object id="2958" template="triggers/SpawnCharacters.tx" x="-72" y="880"/>
-   <object id="2959" template="enemies/WaspShooter.tx" gid="2147484218" x="136" y="952" rotation="0"/>
+   <object id="2959" template="enemies/WaspShooter.tx" gid="2147484219" x="136" y="952" rotation="0"/>
    <object id="2960" template="pathpoints/StartEnterForeground.tx" x="136" y="952">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8755,7 +8775,7 @@ end</property>
   </objectgroup>
   <objectgroup id="318" name="r14wasp4c" visible="0">
    <object id="2965" template="triggers/SpawnCharacters.tx" x="-104" y="864"/>
-   <object id="2966" template="enemies/WaspShooter.tx" gid="570" x="24" y="984" rotation="0"/>
+   <object id="2966" template="enemies/WaspShooter.tx" gid="571" x="24" y="984" rotation="0"/>
    <object id="2967" template="pathpoints/StartEnterForeground.tx" x="24" y="984">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8779,7 +8799,7 @@ end</property>
    <object id="2979" template="triggers/SpawnCharacters.tx" x="-104" y="816" rotation="0">
     <point/>
    </object>
-   <object id="2980" template="enemies/WaspShooter.tx" gid="570" x="120" y="888" rotation="0"/>
+   <object id="2980" template="enemies/WaspShooter.tx" gid="571" x="120" y="888" rotation="0"/>
    <object id="2981" template="pathpoints/StartEnterForeground.tx" x="120" y="888" rotation="0">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8809,7 +8829,7 @@ end</property>
    <object id="2986" template="triggers/SpawnCharacters.tx" x="-72" y="800" rotation="0">
     <point/>
    </object>
-   <object id="2987" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="920" rotation="0"/>
+   <object id="2987" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="920" rotation="0"/>
    <object id="2988" template="pathpoints/StartEnterForeground.tx" x="232" y="920" rotation="0">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8837,8 +8857,8 @@ end</property>
   </objectgroup>
   <objectgroup id="323" name="r14wasp6b" visible="0">
    <object id="3006" template="triggers/SpawnCharacters.tx" x="-120" y="728"/>
-   <object id="3007" template="enemies/WaspShooter.tx" gid="570" x="24" y="848" rotation="0"/>
-   <object id="3008" template="enemies/WaspShooter.tx" gid="2147484218" x="120" y="848" rotation="0"/>
+   <object id="3007" template="enemies/WaspShooter.tx" gid="571" x="24" y="848" rotation="0"/>
+   <object id="3008" template="enemies/WaspShooter.tx" gid="2147484219" x="120" y="848" rotation="0"/>
    <object id="3009" template="pathpoints/StartEnterForeground.tx" x="24" y="848">
     <properties>
      <property name="time" type="int" value="30"/>
@@ -8878,8 +8898,8 @@ end</property>
   </objectgroup>
   <objectgroup id="325" name="Copy of r14wasp6b" visible="0">
    <object id="3032" template="triggers/SpawnCharacters.tx" x="-8" y="680"/>
-   <object id="3033" template="enemies/WaspShooter.tx" gid="570" x="136" y="800" rotation="0"/>
-   <object id="3034" template="enemies/WaspShooter.tx" gid="2147484218" x="232" y="800" rotation="0"/>
+   <object id="3033" template="enemies/WaspShooter.tx" gid="571" x="136" y="800" rotation="0"/>
+   <object id="3034" template="enemies/WaspShooter.tx" gid="2147484219" x="232" y="800" rotation="0"/>
    <object id="3035" template="pathpoints/StartEnterForeground.tx" x="136" y="800">
     <properties>
      <property name="time" type="int" value="30"/>
