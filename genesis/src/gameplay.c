@@ -92,9 +92,9 @@ void GAME_scorePoints(u32 points) {
     score = min(MAXSCORE, newScore);
 }
 
-void GAME_giveBonus(u32 points) {
+void GAME_giveBonus(const char *bonusString, u32 points) {
     GAME_scorePoints(points);
-    HUD_initBonus(points);
+    HUD_initBonus(bonusString, points);
     SND_playDef(&sndBonus);
 }
 

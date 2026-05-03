@@ -19,7 +19,7 @@ void HUD_updateLives(u8 lives);
 void HUD_updateWeaponLevel(u8 playerHealth);
 void HUD_updateWeaponSelect(u8 weapon);
 void HUD_updateSpeed(fix16 speed);
-void HUD_initBonus(u16 points);
+void HUD_initBonus(const char *bonusString, u16 points);
 void HUD_updateBonus();
 void HUD_updateObjectCount(int n);
 void HUD_updateFPS(u32 fps);

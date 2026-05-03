@@ -283,7 +283,7 @@ void LEVEL_updateDoubleKillBonusOnEnemyDefeat(GameObject *enemy) {
         }
 
         if (abs(bonus->defeatedAt[0] - bonus->defeatedAt[1]) < abs(cameraVelY)*30) {
-            GAME_giveBonus(bonus->points);
+            GAME_giveBonus(NULL, bonus->points);
         }
         bonus->points = 0;
         break;

@@ -1,4 +1,5 @@
 #include "enemy.h"
+#include "level.h"
 #include "gobject.h"
 #include "gobjdef.h"
 #include "bullet.h"
@@ -22,6 +23,8 @@ static u16 LETTER_BONUSES[] = {
 };
 
 static u8 nextLetterBonusIndex = 0;
+static const char *BONUS_LETTERS = "HONEY";
+static char letterBonusString[] = "_____";
 
 void ENEMY_shootAtPlayer(GameObject *self) {
     const GameObjectDefinition *bulletDef = self->definition ? self->definition->bulletDef : NULL;
@@ -237,6 +240,7 @@ void ENEMY_updateWaspHatching(GameObject *self) {
 
 void ENEMY_resetLetterBonus() {
     nextLetterBonusIndex = 0;
+    memset(letterBonusString, '_', NUM_BONUS_LETTERS);
 }
 
 void ENEMY_initBonusLetter(GameObject *self) {
@@ -256,7 +260,11 @@ void ENEMY_updateBonusLetter(GameObject *self) {
 }
 
 void ENEMY_defeatBonusLetter(GameObject *self) {
+    u8 i = nextLetterBonusIndex++;
+    if (i < NUM_BONUS_LETTERS) {
+        letterBonusString[i] = BONUS_LETTERS[i];
+        GAME_giveBonus(letterBonusString, 
+            LETTER_BONUSES[i]);
+    }
     GOBJ_defaultDefeatAction(self);
-    if (nextLetterBonusIndex < NUM_BONUS_LETTERS)
-        GAME_giveBonus(LETTER_BONUSES[nextLetterBonusIndex++]);
 }

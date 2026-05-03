@@ -136,9 +136,9 @@ void HUD_updateSpeed(fix16 speed) {
     VDP_drawText(string, 30, 26);
 }
 
-void HUD_initBonus(u16 points) {
+void HUD_initBonus(const char *bonusString, u16 points) {
     bonusTimer = 120;
-    VDP_drawText("BONUS!", 3, 3);
+    VDP_drawText(bonusString ? bonusString : "BONUS!", 3, 3);
     bcdsnprint(string, 5, u16ToBCD(points), ' ');
     VDP_drawText(string, 10, 3);
 }
