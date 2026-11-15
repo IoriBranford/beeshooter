@@ -3,23 +3,21 @@ if not hassteam then
 	return false
 end
 
-local SteamAccount = { type = "steam" }
-
-local initialized
+local SteamAccount = { type = "steam", initialized = false }
 
 function SteamAccount.init()
-    initialized = luasteam.Init()
+    SteamAccount.initialized = luasteam.Init()
 end
 
 function SteamAccount.update()
-    if not initialized then return end
+    if not SteamAccount.initialized then return end
     luasteam.RunCallbacks()
 end
 
 function SteamAccount.quit()
-    if initialized then
+    if SteamAccount.initialized then
         luasteam.Shutdown()
-        initialized = nil
+        SteamAccount.initialized = false
     end
 end
 
