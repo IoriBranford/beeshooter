@@ -38,6 +38,7 @@ local BackupFileName = "highscores.bak"
 ---@class HighScore
 ---@field score integer
 ---@field timestamp integer
+---@field version integer
 
 local highscores = {} ---@type HighScore[]
 
@@ -271,68 +272,10 @@ function HighScores.getLocalScores()
 	return getScores()
 end
 
-function HighScores.countOnlineScores()
-	if Account.type == "steam" and Account.initialized then
-		local leaderboardname = leaderboardName()
-		local leaderboard = onlinescoreboards[leaderboardname]
-		return leaderboard and steam.UserStats.GetLeaderboardEntryCount(leaderboard)
-	end
-end
-
 local Detail = {
 	"Time", "Version",
 	["Time"] = 1, ["Version"] = 2
 }
-
-local function readSteamScores(data, e)
-	if e then
-		print(e)
-		return
-	end
-	local scores = {}
-	local me = steam.User.GetSteamID()
-	for i = 0, data.m_cEntryCount - 1 do
-		local ok, entry, details = steam.UserStats.GetDownloadedLeaderboardEntry(
-			data.m_hSteamLeaderboardEntries, i, #Detail)
-		if ok then
-			local timestamp, version = details[Detail.Time], details[Detail.Version]
-			local userid = entry.m_steamIDUser
-			if me == userid then
-				scores.userindex = i
-			end
-			local username = steam.Friends.GetFriendPersonaName(userid)
-			--if username == "" or username == "[unknown]" then
-			--	username = tostring(userid)
-			--end
-			scores[i] = {
-				name = username,
-				rank = entry.m_nGlobalRank,
-				score = entry.m_nScore,
-				version = version,
-				timestamp = timestamp
-			}
-		end
-	end
-	return scores
-end
-
-function HighScores.steam_download(leaderboard, position, numbefore, numafter, callback)
-	steam.UserStats.DownloadLeaderboardEntries(leaderboard,
-		position, numbefore, numafter,
-		function(d, e)
-			callback(readSteamScores(d, e))
-		end)
-end
-
-function HighScores.steam_uploadBest(leaderboard, score)
-	local details = {
-		[Detail.Time] = score.timestamp,
-		[Detail.Version] = score.version
-	}
-	steam.UserStats.UploadLeaderboardScore(leaderboard,
-		steam.k_ELeaderboardUploadScoreMethodKeepBest,
-		score.score, details, #Detail, function(data, err) end)
-end
 
 function HighScores.uploadBest()
 	local leaderboardname = leaderboardName()
@@ -345,27 +288,12 @@ function HighScores.uploadBest()
 		return false, "No score entry "..leaderboardname
 	end
 
-	if Account.initialized and Account.type == "steam" then
-		return getSteamLeaderboardThen(HighScores.steam_uploadBest, score)
-	end
-	return false, "No online score service"
-end
-
-local SteamPositions = {
-	TOP = steam.k_ELeaderBoardDataRequestGlobal,
-	SELF = steam.k_ELeaderBoardDataRequestGlobalAroundUser,
-	FRIENDS = steam.k_ELeaderBoardDataRequestFriends
-}
-
-function HighScores.download(position, numbefore, numafter, callback)
-	if Account.initialized and Account.type == "steam" then
-		if not SteamPositions[position] then
-			return false, "Unknown position "..position
-		end
-		return getSteamLeaderboardThen(HighScores.steam_download,
-			SteamPositions[position], numbefore, numafter, callback)
-	end
-	return false, "No online score service available."
+	local details = {
+		[Detail.Time] = score.timestamp,
+		[Detail.Version] = score.version
+	}
+	Account.uploadScore(leaderboardname, score.score, details)
+	return true
 end
 
 return HighScores
