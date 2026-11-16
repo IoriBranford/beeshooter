@@ -200,7 +200,7 @@ Linux</property>
     <object id="461" name="High Scores" x="8" y="8" width="144" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">ONLINE HIGH SCORES</text>
     </object>
-    <object id="514" name="Mode" x="172" y="8" width="76" height="8">
+    <object id="514" name="onlinescoresmode" x="172" y="8" width="76" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">GLOBAL</text>
     </object>
     <object id="504" x="28" y="196" width="16" height="8">
@@ -300,18 +300,6 @@ Exit</text>
     <object id="484" name="time1" x="168" y="32" width="80" height="8">
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
-    <object id="494" name="name1" x="40" y="24" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
-    <object id="501" name="name5" x="40" y="88" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
-    <object id="495" name="name2" x="40" y="40" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
-    <object id="500" name="name6" x="40" y="104" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
     <object id="485" name="time2" x="168" y="48" width="80" height="8">
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
@@ -339,19 +327,31 @@ Exit</text>
     <object id="493" name="time10" x="168" y="176" width="80" height="8">
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
+    <object id="494" name="name1" x="40" y="24" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
+    <object id="495" name="name2" x="40" y="40" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
     <object id="496" name="name3" x="40" y="56" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
-    <object id="498" name="name7" x="40" y="120" width="128" height="16">
-     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
-    </object>
-    <object id="503" name="name9" x="40" y="152" width="128" height="16">
      <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
     </object>
     <object id="497" name="name4" x="40" y="72" width="128" height="16">
      <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
     </object>
+    <object id="501" name="name5" x="40" y="88" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
+    <object id="500" name="name6" x="40" y="104" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
+    <object id="498" name="name7" x="40" y="120" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
     <object id="499" name="name8" x="40" y="136" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
+    </object>
+    <object id="503" name="name9" x="40" y="152" width="128" height="16">
      <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">NameNameNameNameName</text>
     </object>
     <object id="502" name="name10" x="40" y="168" width="128" height="16">
