@@ -1,8 +1,13 @@
 local pl_pretty = require("pl.pretty")
--- local hassteam, steam = pcall(require, "luasteam")
--- if not hassteam then
--- 	steam = nil
--- end
+local Account         = require("System.Account")
+local hassteam, steam
+if Account.type == "steam" then
+	hassteam, steam = pcall(require, "luasteam")
+	if not hassteam then
+		print(steam)
+		steam = nil
+	end
+end
 
 local defaulttime = 0 -- os.time({
 -- 	year = 2000,
@@ -36,34 +41,36 @@ local BackupFileName = "highscores.bak"
 
 local highscores = {} ---@type HighScore[]
 
--- local onlinescoreboards = {}
+local onlinescoreboards = {}
 
 local HighScores = {}
 local disablesave = false -- TODO re-enable when out of beta
 
--- local function leaderboardName(difficulty, character)
--- 	return string.format("%s %s", difficulty, character)
--- end
+local function leaderboardName()
+	-- return string.format("%s %s")
+	return "2 minutes"
+end
 
--- local function onSteamReceiveCurrentStats_findLeaderboards(d, e)
--- 	steam.userStats.onUserStatsReceived = function() end
--- 	--local hasstats = d.result == 1
--- 	for _, difficulty in pairs({"NORMAL", "HARD", "DEMONIC"}) do
--- 		for _, character in pairs({"Amy", "Snow"}) do
--- 			local leaderboardname = leaderboardName(difficulty, character)
--- 			steam.userStats.findLeaderboard(leaderboardname, function(d, e)
--- 				if e or not d.leaderboardFound then
--- 					print("No leaderboard", leaderboardname)
--- 				else
--- 					onlinescoreboards[leaderboardname] = d.steamLeaderboard
--- 					HighScores.uploadBest(difficulty, character)
--- 				end
--- 			end)
--- 		end
--- 	end
--- end
+local function getSteamLeaderboardThen(operation, ...)
+	local leaderboardname = leaderboardName()
+	local leaderboard = onlinescoreboards[leaderboardname]
+	if leaderboard then
+		operation(leaderboard, ...)
+	else
+		local a,b,c,d,e,f,g,h = ...
+		steam.UserStats.FindLeaderboard(leaderboardname, function(data, err)
+			if err or 0 == data.m_bLeaderboardFound then
+				print("No leaderboard", leaderboardname)
+			else
+				leaderboard = data.m_hSteamLeaderboard
+                onlinescoreboards[leaderboardname] = leaderboard
+				operation(leaderboard, a,b,c,d,e,f,g,h)
+			end
+		end)
+	end
+end
 
-local function getScores(difficulty, character)
+local function getScores()
 	-- if not highscores.campaign[difficulty] then
 	-- 	print("No scores for difficulty", difficulty)
 	-- 	return
@@ -123,7 +130,7 @@ function HighScores.load()
 	-- 		local score = highscores[i]
 	-- 		local difficulty = score.difficulty or "NORMAL"
 	-- 		local character = score.character or "Amy"
-	-- 		local newscores = getScores(difficulty, character)
+	-- 		local newscores = getScores()
 	-- 		if newscores then
 	-- 			newscores[#newscores+1] = {
 	-- 				version = score.version,
@@ -173,10 +180,9 @@ function HighScores.load()
 		HighScores.save()
 	end
 
-	-- if steam and steam.initialized then
-	-- 	steam.userStats.onUserStatsReceived = onSteamReceiveCurrentStats_findLeaderboards
-	-- 	steam.userStats.requestCurrentStats()
-	-- end
+	if Account.type == "steam" and Account.initialized then
+		return getSteamLeaderboardThen(HighScores.uploadBest)
+	end
 end
 
 -- local mapnumbers = {
@@ -224,7 +230,7 @@ function HighScores.put(score, gameversion, character, difficulty, endmap)
 	-- 	--print("No scores on map", endmap)
 	-- 	return
 	-- end
-	local scores = getScores(difficulty, character)
+	local scores = getScores()
 	if not scores then
 		return
 	end
@@ -240,7 +246,7 @@ function HighScores.put(score, gameversion, character, difficulty, endmap)
         scores[#scores] = newscore
         table.sort(scores, comparehighscores)
         HighScores.save()
-        -- HighScores.uploadBest(difficulty, character)
+        HighScores.uploadBest()
     end
 end
 
@@ -256,168 +262,110 @@ function HighScores.save()
 	love.filesystem.write(FileName, string.dump(f, true))
 end
 
-function HighScores.getScore(i, difficulty, character)
-	local scores = getScores(difficulty, character)
+function HighScores.getScore(i)
+	local scores = getScores()
 	return scores and scores[i]
 end
 
-function HighScores.getLocalScores(difficulty, character)
-	return getScores(difficulty, character)
+function HighScores.getLocalScores()
+	return getScores()
 end
 
--- function HighScores.countOnlineScores(difficulty, character)
--- 	if steam and steam.initialized then
--- 		local leaderboardname = leaderboardName(difficulty, character)
--- 		local leaderboard = onlinescoreboards[leaderboardname]
--- 		return leaderboard and steam.userStats.getLeaderboardEntryCount(leaderboard)
--- 	end
--- end
+function HighScores.countOnlineScores()
+	if Account.type == "steam" and Account.initialized then
+		local leaderboardname = leaderboardName()
+		local leaderboard = onlinescoreboards[leaderboardname]
+		return leaderboard and steam.UserStats.GetLeaderboardEntryCount(leaderboard)
+	end
+end
 
--- local function steamLeaderboardOperation(difficulty, character, operation, ...)
--- 	if not HighScores["steam_"..operation] then
--- 		return false, "No operation "..operation
--- 	end
--- 	operation = HighScores["steam_"..operation]
+local Detail = {
+	"Time", "Version",
+	["Time"] = 1, ["Version"] = 2
+}
 
--- 	if not steam then
--- 		return false, "Steam unavailable"
--- 	end
+local function readSteamScores(data, e)
+	if e then
+		print(e)
+		return
+	end
+	local scores = {}
+	local me = steam.User.GetSteamID()
+	for i = 0, data.m_cEntryCount - 1 do
+		local ok, entry, details = steam.UserStats.GetDownloadedLeaderboardEntry(
+			data.m_hSteamLeaderboardEntries, i, #Detail)
+		if ok then
+			local timestamp, version = details[Detail.Time], details[Detail.Version]
+			local userid = entry.m_steamIDUser
+			if me == userid then
+				scores.userindex = i
+			end
+			local username = steam.Friends.GetFriendPersonaName(userid)
+			--if username == "" or username == "[unknown]" then
+			--	username = tostring(userid)
+			--end
+			scores[i] = {
+				name = username,
+				rank = entry.m_nGlobalRank,
+				score = entry.m_nScore,
+				version = version,
+				timestamp = timestamp
+			}
+		end
+	end
+	return scores
+end
 
--- 	local a,b,c,d,e,f,g,h = ...
--- 	local function doOperation(data)
--- 		steam.userStats.onUserStatsReceived = function() end
--- 		if data and data.result > 2 then
--- 			print("requestCurrentStats error", data.result)
--- 			return
--- 		end
+function HighScores.steam_download(leaderboard, position, numbefore, numafter, callback)
+	steam.UserStats.DownloadLeaderboardEntries(leaderboard,
+		position, numbefore, numafter,
+		function(d, e)
+			callback(readSteamScores(d, e))
+		end)
+end
 
--- 		local leaderboardname = leaderboardName(difficulty, character)
--- 		local leaderboard = onlinescoreboards[leaderboardname]
--- 		if leaderboard then
--- 			operation(leaderboard, a,b,c,d,e,f,g,h)
--- 		else
--- 			steam.userStats.findLeaderboard(leaderboardname, function(data, err)
--- 				if err or not data.leaderboardFound then
--- 					print("No leaderboard", leaderboardname)
--- 				else
--- 					local leaderboard = data.steamLeaderboard
--- 					onlinescoreboards[leaderboardname] = leaderboard
--- 					operation(leaderboard, a,b,c,d,e,f,g,h)
--- 				end
--- 			end)
--- 		end
--- 	end
+function HighScores.steam_uploadBest(leaderboard, score)
+	local details = {
+		[Detail.Time] = score.timestamp,
+		[Detail.Version] = score.version
+	}
+	steam.UserStats.UploadLeaderboardScore(leaderboard,
+		steam.k_ELeaderboardUploadScoreMethodKeepBest,
+		score.score, details, #Detail, function(data, err) end)
+end
 
--- 	if steam.initialized then
--- 		doOperation()
--- 	else
--- 		steam.initialized = steam.init()
--- 		if steam.initialized then
--- 			steam.userStats.onUserStatsReceived = doOperation
--- 			steam.userStats.requestCurrentStats()
--- 		else
--- 			return false, "Could not connect to Steam leaderboards.\n\nPlease start Steam and login to your account, then press Retry."
--- 		end
--- 	end
--- 	return true
--- end
+function HighScores.uploadBest()
+	local leaderboardname = leaderboardName()
+	local scores = getScores()
+	if not scores then
+		return false, "No scoreboard "..leaderboardname
+	end
+	local score = scores[1]
+	if not score or not score.score or score.score <= 0 then
+		return false, "No score entry "..leaderboardname
+	end
 
--- local function readSteamScores(data, e)
--- 	if e then
--- 		return
--- 	end
--- 	local scores = {}
--- 	local me = steam.user.getSteamID()
--- 	for i = 1, #data do
--- 		local d = data[i]
--- 		local details = d.details
--- 		local endmap, version, timestamp = details:match("m([^;]+);v([^;]+);t([^;]+)")
--- 		local userid = d.steamIDUser
--- 		if me == userid then
--- 			scores.userindex = i
--- 		end
--- 		local username = steam.friends.getFriendPersonaName(userid)
--- 		--if username == "" or username == "[unknown]" then
--- 		--	username = tostring(userid)
--- 		--end
--- 		scores[i] = {
--- 			name = username,
--- 			rank = d.globalRank,
--- 			score = d.score,
--- 			endmap = endmap,
--- 			version = version,
--- 			timestamp = timestamp
--- 		}
--- 	end
--- 	return scores
--- end
+	if Account.initialized and Account.type == "steam" then
+		return getSteamLeaderboardThen(HighScores.steam_uploadBest, score)
+	end
+	return false, "No online score service"
+end
 
--- function HighScores.steam_download(leaderboard, position, numbefore, numafter, callback)
--- 	if position == "Friends" then
--- 		steam.userStats.downloadLeaderboardEntries(leaderboard,
--- 			position, function(d, e)
--- 				callback(readSteamScores(d, e))
--- 		end)
--- 	else
--- 		steam.userStats.downloadLeaderboardEntries(leaderboard,
--- 			position, numbefore, numafter,
--- 			function(d, e)
--- 				callback(readSteamScores(d, e))
--- 			end)
--- 	end
--- end
+local SteamPositions = {
+	TOP = steam.k_ELeaderBoardDataRequestGlobal,
+	SELF = steam.k_ELeaderBoardDataRequestGlobalAroundUser,
+	FRIENDS = steam.k_ELeaderBoardDataRequestFriends
+}
 
--- function HighScores.steam_uploadBest(leaderboard, score)
--- 	local details = string.format("m%s;v%s;t%d",
--- 		score.endmap or "?",
--- 		score.version or "?",
--- 		score.timestamp or "?")
-
--- 	local padsize = 4 - (#details % 4)
--- 	if padsize < 4 then
--- 		local padder = string.format("%%-%ds", #details + padsize)
--- 		details = string.format(padder, details)
--- 	end
--- 	if #details > 256 then
--- 		details = nil
--- 	end
-
--- 	steam.userStats.uploadLeaderboardScore(leaderboard, "KeepBest",
--- 		score.score, details, function(data, err) end)
--- end
-
--- function HighScores.uploadBest(difficulty, character)
--- 	local leaderboardname = leaderboardName(difficulty, character)
--- 	local scores = getScores(difficulty, character)
--- 	if not scores then
--- 		return false, "No scoreboard "..leaderboardname
--- 	end
--- 	local score = scores[1]
--- 	if not score or not score.score or score.score <= 0 then
--- 		return false, "No score entry "..leaderboardname
--- 	end
-
--- 	if steam then
--- 		return steamLeaderboardOperation(difficulty, character, "uploadBest", score)
--- 	end
--- 	return false, "No online score service"
--- end
-
--- local SteamPositions = {
--- 	TOP = "Global",
--- 	SELF = "GlobalAroundUser",
--- 	FRIENDS = "Friends"
--- }
-
--- function HighScores.download(difficulty, character, position, numbefore, numafter, callback)
--- 	if steam then
--- 		if not SteamPositions[position] then
--- 			return false, "Unknown position "..position
--- 		end
--- 		return steamLeaderboardOperation(difficulty, character, "download",
--- 			SteamPositions[position], numbefore, numafter, callback)
--- 	end
--- 	return false, "No online score service available."
--- end
+function HighScores.download(position, numbefore, numafter, callback)
+	if Account.initialized and Account.type == "steam" then
+		if not SteamPositions[position] then
+			return false, "Unknown position "..position
+		end
+		return getSteamLeaderboardThen(HighScores.steam_download,
+			SteamPositions[position], numbefore, numafter, callback)
+	end
+	return false, "No online score service available."
+end
 
 return HighScores
