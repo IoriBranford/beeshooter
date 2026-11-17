@@ -3,14 +3,10 @@ set -e
 
 . ./make-vars.sh
 
-PROJECT=${PROJECT:=${PWD##*/}}
-GAME_TITLE=${GAME_TITLE:=${PROJECT}${GAME_TYPE}}
 OUT_DIR=${OUT_DIR:="${GAME_TITLE}"}
-GAME_TYPE=${GAME_TYPE:=game}
-GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
 GAME_EXE=game-win/${GAME_TITLE}.exe
 #PROJECT_ZIP=${PROJECT}-win${ARCH_BITS}.zip
-
+GAME_RUN=${GAME_RUN:="$GAME_TITLE.bat"}
 ARCH_BITS=${ARCH_BITS:=64}
 if [ ${ARCH_BITS} = 64 ]
 then
@@ -36,11 +32,11 @@ RCEDIT_URL=https://github.com/electron/rcedit/releases/download/v1.1.1/${RCEDIT}
 getZip () {
 	ZIP=$1
 	URL=$2
-	wget -N ${URL}
+	curl -LkO ${URL}
 	unzip -o ${ZIP} -d .
 }
 
-./make-game.sh
+rm -rf game-win
 mkdir -p game-win
 
 if ! [ -d ${LOVE_DIR} ]
@@ -55,7 +51,7 @@ then
 fi
 if ! [ -f ${RCEDIT} ]
 then
-	wget -N ${RCEDIT_URL}
+	curl -LkO ${RCEDIT_URL}
 fi
 case $(uname | tr '[:upper:]' '[:lower:]') in
 	windows*|mingw*|msys*|cygwin*)
@@ -67,6 +63,12 @@ esac
 ${WINE} ./${RCEDIT} ${LOVE_EXE} --set-icon "$ICO"
 
 cat ${LOVE_EXE} ${GAME_ASSET} > $GAME_EXE
+
+if [ ! -z "$CCDATA" ] && [ -d $CCDATA ]
+then
+	cp -r "$CCDATA" game-win
+fi
+
 cp ${LOVE_DIR}/*.dll game-win
 
 if [ -e gme.dll ]
@@ -90,22 +92,26 @@ then
 else
 	STEAM_DLL=steam_api.dll
 fi
-LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v1.2.0/win${ARCH_BITS}_luasteam.dll
+LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v6.0.0/win${ARCH_BITS}_luasteam.dll
 
-if [ -e $STEAM_DLL ]
+if [ ! -z "$STEAM" ]
 then
-	curl -Lk -o game-win/luasteam.dll $LUASTEAM_DLL
-	cp $STEAM_DLL game-win
-fi
+	OUT_DIR="$OUT_DIR-steam"
+	if [ -e $STEAM_DLL ]
+	then
+		curl -Lk -o game-win/luasteam.dll $LUASTEAM_DLL
+		cp $STEAM_DLL game-win
+	fi
 
-if [ -e steam_appid.txt ]
-then
-	cp steam_appid.txt game-win
+	if [ -e steam_appid.txt ]
+	then
+		cp steam_appid.txt game-win
+	fi
 fi
 
 if [ -e README.md ]
 then
 	cp README.md game-win
 fi
-
+rm -rf "$OUT_DIR"
 mv game-win "${OUT_DIR}"
