@@ -6,26 +6,27 @@ GAME_TYPE=${GAME_TYPE:=game}
 GAME_ASSET=${GAME_ASSET:=${GAME_TYPE}.love}
 WEB_DIR=public
 
-./make-game.sh
-
-LoveJsVersion="1a6e4c7553b264a8205d63e8b598b8e6798265cb"
+LoveJsVersion="87c5645cfb7b70a0b58e9ab0d656e0fb4c0960d7"
 LoveJsZip="${LoveJsVersion}.zip"
 LoveJsUrl="https://github.com/2dengine/love.js/archive/${LoveJsZip}"
 
-if [ ! -e $LoveJsZip ]
+if [ ! -f $LoveJsZip ]
 then
     curl -Lk -o $LoveJsZip $LoveJsUrl
 fi
 
-if [ ! -e love.js-$LoveJsVersion ]
+if [ ! -d love.js ]
 then
     unzip $LoveJsZip -d .
+    mv love.js-$LoveJsVersion love.js
 fi
 
 rm -rf $WEB_DIR
-mkdir -p $WEB_DIR/$LOVE_VERSION
-
-cp -r love.js-$LoveJsVersion/$LOVE_VERSION/release $WEB_DIR/$LOVE_VERSION/release
-cp love.js-$LoveJsVersion/*.js love.js-$LoveJsVersion/*.css love.js-$LoveJsVersion/fetch.lua $WEB_DIR
-cp love-js/index.html $WEB_DIR/index.html
+mkdir -p $WEB_DIR
+cp -r love.js/* $WEB_DIR
 cp $GAME_ASSET $WEB_DIR/nogame.love
+
+sed -i -E \
+    -e "/<base href/d" \
+    -e "s/\"player.js\"/'player.js?g=nogame.love\&arg=[]'/" \
+    $WEB_DIR/index.html
