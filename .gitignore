@@ -22,6 +22,7 @@ history.db
 *.exe
 *.dll
 *.so
+*.so.*
 *.dylib
 *.AppImage
 *.AppDir
@@ -36,11 +37,18 @@ squashfs-root
 bin*/
 .gradle/
 love-android/
+love-*-win*/
 game-apk/
 apks*/
 apktool
 appimagetool
 public/
+zip/
+*-x86_64*/
+Honey Guardian*/
+
+node_modules/
+love.js*/
 
 **/ignore/**/*
 
@@ -60,5 +68,8 @@ steamcmd/
 
 *.log
 
-node_modules
-love.js*/
+*.bak
+
+*.mp4
+*.mkv
+*.ogv
