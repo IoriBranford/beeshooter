@@ -2373,7 +2373,7 @@ return {
               draworder = "topdown",
               id = 66,
               name = "onlinescores",
-              class = "BeeShooter.Gui.HighScoreMenu",
+              class = "BeeShooter.Gui.OnlineHighScoreMenu",
               visible = true,
               opacity = 1,
               offsetx = 0,
