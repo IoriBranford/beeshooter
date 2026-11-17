@@ -51,9 +51,9 @@ local function readScores(data, e)
 	end
 	local scores = {}
 	local me = steam.User.GetSteamID()
-	for i = 0, data.m_cEntryCount - 1 do
+	for i = 1, data.m_cEntryCount do
 		local ok, entry, details = steam.UserStats.GetDownloadedLeaderboardEntry(
-			data.m_hSteamLeaderboardEntries, i, SteamAccount.NumScoreDetails)
+			data.m_hSteamLeaderboardEntries, i-1, SteamAccount.NumScoreDetails)
 		if ok then
 			local userid = entry.m_steamIDUser
 			if me == userid then
@@ -72,8 +72,8 @@ local function readScores(data, e)
 end
 
 local SteamPositions = {
-	TOP = steam.k_ELeaderBoardDataRequestGlobal,
-	SELF = steam.k_ELeaderBoardDataRequestGlobalAroundUser,
+	WORLD = steam.k_ELeaderBoardDataRequestGlobal,
+	ME = steam.k_ELeaderBoardDataRequestGlobalAroundUser,
 	FRIENDS = steam.k_ELeaderBoardDataRequestFriends
 }
 
@@ -86,10 +86,10 @@ function SteamAccount.initLeaderboard(name)
     end)
 end
 
-function SteamAccount.downloadScores(leaderboard, position, numbefore, numafter, callback)
+function SteamAccount.downloadScores(leaderboard, mode, i, j, callback)
     findLeaderboardAnd(leaderboard,
         steam.UserStats.DownloadLeaderboardEntries,
-		SteamPositions[position], numbefore, numafter,
+		SteamPositions[mode], i, j,
 		function(d, e)
 			callback(readScores(d, e))
 		end)
