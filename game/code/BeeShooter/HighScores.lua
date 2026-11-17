@@ -40,6 +40,10 @@ local BackupFileName = "highscores.bak"
 ---@field timestamp integer
 ---@field version integer
 
+---@class OnlineHighScore:HighScore
+---@field name string
+---@field rank integer
+
 local highscores = {} ---@type HighScore[]
 
 local onlinescoreboards = {}
@@ -294,6 +298,19 @@ function HighScores.uploadBest()
 	}
 	Account.uploadScore(leaderboardname, score.score, details)
 	return true
+end
+
+function HighScores.download(mode, i, j, callback)
+	Account.downloadScores(leaderboardName(), mode, i, j,
+		function(scores, err)
+			if scores then
+				for _, score in pairs(scores) do
+					score.timestamp = score.details[Detail.Time]
+					score.version = score.details[Detail.Version]
+				end
+			end
+			callback(scores, err)
+		end)
 end
 
 return HighScores
