@@ -50,9 +50,10 @@ end
 return {
     controls = require "BeeShooter.Controls",
     cli = [[
-    --rotation                              (number default -1)	Screen orientation in degrees clockwise
-    --startpoint (optional string)          Name of stage start point
-    --drawbodies                            Draw physical bodies
+    --rotation                      (number default -1)	Screen orientation in degrees clockwise
+    --startpoint (optional string)  Name of stage start point
+    --drawbodies                    Draw physical bodies
+    --mockaccount                   Fake a game platform account
 ]],
         --drawai                                Draw AI information
         --exhibit                               Exhibit mode - disable options menu and quit
@@ -85,6 +86,8 @@ return {
         joy_pausemenu = "start",
         joy_namingscheme = "XBOX",
 
-        touch_changebutton = "BOTH"
+        touch_changebutton = "BOTH",
+
+		mockaccount = false
     }
 }

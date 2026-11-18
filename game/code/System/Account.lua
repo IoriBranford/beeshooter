@@ -1,3 +1,9 @@
+local Config = require "System.Config"
+
+if Config.mockaccount then
+    return require "System.Account.Mock"
+end
+
 local account = require "System.Account.Steam"
 if account then return account end
 

@@ -1,13 +1,5 @@
 local pl_pretty = require("pl.pretty")
-local Account         = require("System.Account")
-local hassteam, steam
-if Account.type == "steam" then
-	hassteam, steam = pcall(require, "luasteam")
-	if not hassteam then
-		print(steam)
-		steam = nil
-	end
-end
+local Account
 
 local defaulttime = 0 -- os.time({
 -- 	year = 2000,
@@ -54,25 +46,6 @@ local disablesave = false -- TODO re-enable when out of beta
 local function leaderboardName()
 	-- return string.format("%s %s")
 	return "2 minutes"
-end
-
-local function getSteamLeaderboardThen(operation, ...)
-	local leaderboardname = leaderboardName()
-	local leaderboard = onlinescoreboards[leaderboardname]
-	if leaderboard then
-		operation(leaderboard, ...)
-	else
-		local a,b,c,d,e,f,g,h = ...
-		steam.UserStats.FindLeaderboard(leaderboardname, function(data, err)
-			if err or 0 == data.m_bLeaderboardFound then
-				print("No leaderboard", leaderboardname)
-			else
-				leaderboard = data.m_hSteamLeaderboard
-                onlinescoreboards[leaderboardname] = leaderboard
-				operation(leaderboard, a,b,c,d,e,f,g,h)
-			end
-		end)
-	end
 end
 
 local function getScores()
@@ -185,8 +158,9 @@ function HighScores.load()
 		HighScores.save()
 	end
 
-	if Account.type == "steam" and Account.initialized then
-		return getSteamLeaderboardThen(HighScores.uploadBest)
+	Account = require("System.Account")
+	if Account.initialized then
+		HighScores.uploadBest()
 	end
 end
 
@@ -296,11 +270,13 @@ function HighScores.uploadBest()
 		[Detail.Time] = score.timestamp,
 		[Detail.Version] = score.version
 	}
+	Account = require("System.Account")
 	Account.uploadScore(leaderboardname, score.score, details)
 	return true
 end
 
 function HighScores.download(mode, i, j, callback)
+	Account = require("System.Account")
 	Account.downloadScores(leaderboardName(), mode, i, j,
 		function(scores, err)
 			if scores then
