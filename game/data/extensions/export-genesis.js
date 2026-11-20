@@ -18,8 +18,8 @@ let toFix16 = (n) => Math.floor(n * 64)
 let toFastFix16 = (n) => Math.floor(n * 256)
 let toFastFix32 = (n) => Math.floor(n * 65536)
 
-tiled.registerMapFormat("Honey Guardian C level", {
-    name: "Honey Guardian C level",
+tiled.registerMapFormat("Honey Soldier C level", {
+    name: "Honey Soldier C level",
     extension: "c",
 
     /**

@@ -2,7 +2,7 @@
 <map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" backgroundcolor="#3a1d04" nextlayerid="400" nextobjectid="4402">
  <editorsettings>
   <chunksize width="16" height="14"/>
-  <export target="../../genesis/src/stage_caravan.c" format="Honey Guardian C level"/>
+  <export target="../../genesis/src/stage_caravan.c" format="Honey Soldier C level"/>
  </editorsettings>
  <tileset firstgid="1" source="tilesets/Beehive.tsx"/>
  <tileset firstgid="481" source="tilesets/Ant.tsx"/>
