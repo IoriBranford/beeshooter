@@ -5,9 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Run",
+            "type": "lua-local",
+            "request": "launch",
+            "scriptRoots": ["game"],
+            "program": {
+                "command": "love"
+            },
+            "args": ["${workspaceFolder}/game"]
+        },
+        {
             "name": "Debug",
             "type": "lua-local",
             "request": "launch",
+            "scriptRoots": ["game"],
             "program": {
                 "command": "love"
             },
@@ -17,6 +28,7 @@
             "name": "Debug Android",
             "type": "lua-local",
             "request": "launch",
+            "scriptRoots": ["game"],
             "program": {
                 "command": "love"
             },
