@@ -41,21 +41,21 @@ function OnlineHighScoreMenu:refresh()
     if self.scores then
         self:showScores(self.scores, self.displaypos)
     else
-        self:download(self.downloadpos)
+        self:download(self.mode, self.downloadpos, self.displaypos)
     end
 end
 
 local function trim(scores)
     local n = #scores
-    if n > 10 then
-        local endtrim = scores[n].rank % 10
+    local endtrim = n > 10 and (scores[n].rank % 10) or 0
+    if endtrim > 0 then
         for i = n, n-endtrim+1, -1 do
             scores[i] = nil
         end
         n = #scores
     end
-    if n > 10 then
-        local starttrim = n % 10
+    local starttrim = n > 10 and (n % 10) or 0
+    if starttrim > 0 then
         for i = 1, n-starttrim do
             scores[i] = scores[i+starttrim]
         end
@@ -86,8 +86,10 @@ function OnlineHighScoreMenu:download(mode, dlpos, disppos)
                 if n <= 0 then
                     self:showDownloadStatus("No scores")
                 else
-                    trim(scores)
-                    self:showScores(scores)
+                    if self.mode ~= "FRIENDS" then
+                        trim(scores)
+                    end
+                    self:showScores(scores, disppos)
                 end
             else
                 err = err and "Download error!\n\n"..err or "Download error!"
@@ -134,18 +136,19 @@ function OnlineHighScoreMenu:scroll(dir)
     if not scores then return end
 
     local i = self.displaypos + (dir < 0 and -10 or 10)
-    if i < 1 then
+    if i < 0 then
         if scores[1].rank > 1 then
             self:download(self.mode,
                 self.downloadpos - self.downloadcount,
-                self.downloadcount - 9)
+                self.downloadcount - 10)
         end
-    elseif i > #scores then
+    elseif i >= #scores then
         local lastrank = Account.countScores("2 minutes")
-        if scores[#scores].rank < lastrank then
+        if self.mode ~= "FRIENDS"
+        and scores[#scores].rank < lastrank then
             self:download(self.mode,
                 self.downloadpos + self.downloadcount,
-                1)
+                0)
         end
     else
         self:showScores(self.scores, i)
@@ -172,9 +175,9 @@ function OnlineHighScoreMenu:keypressed(key)
     elseif key == Config.key_down then
         self:scroll(10)
     elseif key == Config.key_left then
-        self:download(PrevMode[self.mode], 0, 1)
+        self:download(PrevMode[self.mode], 0, 0)
     elseif key == Config.key_right then
-        self:download(NextMode[self.mode], 0, 1)
+        self:download(NextMode[self.mode], 0, 0)
     elseif key == "escape" then
         self:closeMenu()
     end
