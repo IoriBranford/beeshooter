@@ -1,4 +1,5 @@
 local fixedupdate = require "fixedupdate"
+local tablex      = require "pl.tablex"
 local MockAccount = {
     type = "mock",
     initialized = false,
@@ -35,7 +36,7 @@ end
 
 
 function MockAccount.update()
-    fixedupdate(MockAccount.mockupdaterate, 1,
+    cbtimer = fixedupdate(MockAccount.mockupdaterate, 1,
         cbtimer, love.timer.getDelta(), runCallbacks)
 end
 
@@ -105,10 +106,14 @@ end
 
 function MockAccount.uploadScore(leaderboard, score, details, callback)
     local lb = leaderboards[leaderboard]
-    if lb == nil then MockAccount.initLeaderboard(leaderboard) end
+    if lb == false then
+        MockAccount.initLeaderboard(leaderboard)
+        lb = leaderboards[leaderboard]
+    end
 
     callbacks[#callbacks+1] = function()
-        local err = MockAccount.mockerrors["uploadScore"]
+        local err = MockAccount.mockerrors["uploadScore"] or
+            lb == nil and "No such leaderboard "..leaderboard
         callback(err and {error = err} or
             addScore(lb, score, details))
     end
@@ -118,10 +123,12 @@ local function getScores(lb, i, j)
     i = math.max(1, i)
     j = math.min(j, #lb)
     local scores = {}
-    for _ = i, j do
-        scores[#scores+1] = lb[i]
-        if lb[i].name == MockAccount.mockusername then
-            scores.userindex = i
+    for rank = i, j do
+        local sc = tablex.copy(lb[rank])
+        sc.rank = rank
+        scores[#scores+1] = sc
+        if sc.name == MockAccount.mockusername then
+            scores.userindex = #scores
         end
     end
     return scores
@@ -149,18 +156,32 @@ local function getUserFriendScores(lb)
     local scores = { urank and lb[urank] }
     for _, friend in ipairs(MockAccount.mockfriends) do
         local frank = lb[friend]
-        scores[#scores+1] = frank and lb[frank]
+        if frank then
+            local sc = tablex.copy(lb[frank])
+            sc.rank = frank
+            scores[#scores+1] = sc
+        end
     end
     table.sort(scores, compScores)
+    for i, sc in ipairs(scores) do
+        if sc.name == MockAccount.mockusername then
+            scores.userindex = i
+            break
+        end
+    end
     return scores
 end
 
 function MockAccount.downloadScores(leaderboard, mode, i, j, callback)
     local lb = leaderboards[leaderboard]
-    if lb == nil then MockAccount.initLeaderboard(leaderboard) end
+    if lb == false then
+        MockAccount.initLeaderboard(leaderboard)
+        lb = leaderboards[leaderboard]
+    end
 
     callbacks[#callbacks+1] = function()
-        local err = MockAccount.mockerrors["downloadScores"]
+        local err = MockAccount.mockerrors["downloadScores"] or
+            lb == nil and "No such leaderboard "..leaderboard
         local scores
         if mode == "WORLD" then
             scores = getScores(lb, i, j)
