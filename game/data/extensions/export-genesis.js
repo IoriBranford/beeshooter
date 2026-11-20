@@ -269,6 +269,10 @@ return `const LevelObject lobj${object.id} = {
         }
 
         let stage = map.layers.find((layer) => layer.name == 'stagemd')
+        if (!stage) {
+            tiled.alert("No stagemd");
+            return;
+        }
         let objectGroups = buildLevelObjectGroups(stage.layers, [])
         /**
          * @type MapObject[]
