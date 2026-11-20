@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="67" nextobjectid="520">
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="68" nextobjectid="527">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -17,7 +17,7 @@
  <tileset firstgid="109" source="tilesets/WaspBoss.tsx"/>
  <group id="38" name="normalui">
   <group id="61" name="titlescreen">
-   <imagelayer id="29" name="art" visible="0">
+   <imagelayer id="29" name="art">
     <image source="titleart.png" width="256" height="224"/>
    </imagelayer>
    <objectgroup id="31" name="mainmenu" class="BeeShooter.Gui.Menu" visible="0">
@@ -25,20 +25,28 @@
      <property name="backaction" value="quitGame"/>
      <property name="initialbutton" type="int" value="1"/>
     </properties>
-    <object id="188" name="Start" type="BeeShooter.Gui.Button" x="96" y="128" width="64" height="8">
+    <object id="188" name="Start" type="BeeShooter.Gui.Button" x="24" y="120" width="128" height="8">
      <properties>
       <property name="action" value="startGame"/>
       <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start</text>
     </object>
+    <object id="520" name="Start" type="BeeShooter.Gui.Button" x="32" y="136" width="128" height="8">
+     <properties>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.optionmenu"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Options</text>
+    </object>
     <object id="189" name="Title" x="64" y="16" width="128" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
     </object>
-    <object id="192" name="Copyright" x="16" y="200" width="224" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2025 IoriBranford</text>
+    <object id="192" name="Copyright" x="16" y="216" width="224" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="center" valign="center">(C) 2022-2026 IoriBranford</text>
     </object>
-    <object id="190" name="Quit" type="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
+    <object id="190" name="Quit" type="BeeShooter.Gui.Button" x="64" y="200" width="128" height="8">
      <properties>
       <property name="action" value="quitGame"/>
       <property name="platforms">Windows
@@ -48,7 +56,7 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
     </object>
-    <object id="221" name="High Scores" type="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
+    <object id="221" name="High Scores" type="BeeShooter.Gui.Button" x="48" y="168" width="128" height="8">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.highscores"/>
@@ -56,7 +64,15 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
     </object>
-    <object id="369" name="Help" type="BeeShooter.Gui.Button" x="96" y="144" width="88" height="8">
+    <object id="521" name="Online Scores" type="BeeShooter.Gui.Button" x="56" y="184" width="128" height="8">
+     <properties>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.onlinescores"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Online Scores</text>
+    </object>
+    <object id="369" name="Help" type="BeeShooter.Gui.Button" x="40" y="152" width="128" height="8">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.help.controls"/>
@@ -64,7 +80,32 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">How to Play</text>
     </object>
-    <object id="191" name="cursor" type="Gui.Cursor" x="80" y="128" width="8" height="8">
+    <object id="191" name="cursor" type="Gui.Cursor" x="8" y="120" width="8" height="8">
+     <properties>
+      <property name="offsetx" type="float" value="-16"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+    </object>
+   </objectgroup>
+   <objectgroup id="67" name="optionmenu" class="BeeShooter.Gui.Menu" visible="0">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+     <property name="closeaction" value="saveOptions"/>
+     <property name="initialbutton" type="int" value="1"/>
+     <property name="openaction" value="refreshOptions"/>
+    </properties>
+    <object id="522" name="backing" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#e0000000"/>
+     </properties>
+    </object>
+    <object id="525" name="Close" type="BeeShooter.Gui.Button" x="96" y="200" width="64" height="8">
+     <properties>
+      <property name="action" value="closeMenu"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Back</text>
+    </object>
+    <object id="526" name="cursor" type="Gui.Cursor" x="80" y="200" width="8" height="8">
      <properties>
       <property name="offsetx" type="float" value="-16"/>
      </properties>
@@ -999,7 +1040,7 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OFF</text>
     </object>
    </objectgroup>
-   <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+   <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu" visible="0">
     <properties>
      <property name="backaction" value="closeMenu"/>
     </properties>
@@ -1117,7 +1158,7 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
    </objectgroup>
-   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
+   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen" visible="0">
     <objectgroup draworder="index" id="21" name="controls" class="BeeShooter.Gui.Menu">
      <properties>
       <property name="backaction" value="closeMenu"/>
@@ -1442,7 +1483,7 @@ You lose if Jenny's lives or timer run out.</text>
     </group>
    </group>
   </group>
-  <group id="59" name="gamescreen">
+  <group id="59" name="gamescreen" visible="0">
    <objectgroup id="65" name="gameoverred">
     <object id="459" x="0" y="0" width="256" height="224">
      <properties>
