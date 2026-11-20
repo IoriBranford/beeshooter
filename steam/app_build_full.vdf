@@ -12,6 +12,6 @@
 	"depots"
 	{
 		"5664421" "depot_build_win-64.vdf"
-		"5664422" "depot_build_linux-x86_64.vdf"
+		// "5664422" "depot_build_linux-x86_64.vdf"
 	}
 }
