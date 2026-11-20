@@ -1,7 +1,7 @@
 "DepotBuildConfig"
 {
 	// Set your assigned depot ID here
-	"DepotID" "HSAPPID1"
+	"DepotID" "5664421"
 
 	// Set a root for all content.
 	// All relative paths specified below (LocalPath in FileMapping entries, and FileExclusion paths)

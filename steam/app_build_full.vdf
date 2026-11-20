@@ -1,6 +1,6 @@
 "appbuild"
 {
-	"appid"	"HSAPPID0"
+	"appid"	"5664420"
 	"desc" "Full game"
 	"buildoutput" "buildoutput" // build output folder for .log, .csm & .csd files, relative to location of this file
 	"contentroot" ".." // root content folder, relative to location of this file
@@ -11,7 +11,7 @@
 
 	"depots"
 	{
-		"HSAPPID1" "depot_build_win-64.vdf"
-		"HSAPPID2" "depot_build_linux-x86_64.vdf"
+		"5664421" "depot_build_win-64.vdf"
+		"5664422" "depot_build_linux-x86_64.vdf"
 	}
 }
