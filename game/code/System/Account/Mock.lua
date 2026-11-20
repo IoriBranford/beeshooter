@@ -3,17 +3,17 @@ local tablex      = require "pl.tablex"
 local MockAccount = {
     type = "mock",
     initialized = false,
-    mockerrors = {},
+    mockerrors = {}, ---@type table<string,string>
     mockupdaterate = 1,
     mockusername = "MockUserName",
-    mockfriends = {}
+    mockfriends = {} ---@type string[]
 }
 
 for i = 1, 25 do
     MockAccount.mockfriends[#MockAccount.mockfriends+1] = "ユーザー"..(i*i)
 end
 
-local callbacks = {}
+local callbacks = {} ---@type function[]
 local cbtimer = 0
 local function runCallbacks()
     if #callbacks > 0 then
@@ -24,7 +24,24 @@ local function runCallbacks()
     end
 end
 
----@type table<string,boolean|table>
+---@class LeaderboardEntry
+---@field name string
+---@field score number
+---@field time integer
+---@field details integer[]?
+
+---@class LeaderboardDownloadEntry:LeaderboardEntry
+---@field rank integer
+
+---@class LeaderboardDownload
+---@field [integer] LeaderboardDownloadEntry
+---@field userindex integer?
+
+---@class Leaderboard
+---@field [integer] LeaderboardEntry
+---@field [string] integer
+
+---@type table<string,Leaderboard|false>
 local leaderboards = {
     ["2 minutes"] = false,
 }
@@ -49,9 +66,10 @@ function MockAccount.initLeaderboard(leaderboard)
     end
 
     local t = os.time()
-    lb = {}
+    lb = {} ---@type Leaderboard
     for i = 1, 1000 do
         t = t - 60
+        ---@type LeaderboardEntry
         local entry = {
             time = t,
             score = 1001 - i,
@@ -74,15 +92,25 @@ local function compScores(a, b)
         a.score == b.score and a.time > b.time
 end
 
+---@class LeaderboardUploadResult
+---@field success boolean
+---@field leaderboard Leaderboard
+---@field score number
+---@field scorechanged boolean
+---@field rank integer
+---@field previousrank integer
+
 local function addScore(lb, score, details)
     local oldrank = lb[MockAccount.mockusername]
     local oldentry = oldrank and lb[oldrank]
+    ---@type LeaderboardEntry
     local newentry = {
         time = os.time(),
         score = score,
         name = MockAccount.mockusername,
         details = details
     }
+    ---@type LeaderboardUploadResult
     local result = {
         success = true,
         leaderboard = lb,
@@ -104,6 +132,13 @@ local function addScore(lb, score, details)
     return result
 end
 
+---@class ErrorResult
+---@field error string
+
+---@param leaderboard string
+---@param score number
+---@param details integer[]?
+---@param callback fun(res: LeaderboardUploadResult|ErrorResult)
 function MockAccount.uploadScore(leaderboard, score, details, callback)
     local lb = leaderboards[leaderboard]
     if lb == false then
@@ -119,10 +154,14 @@ function MockAccount.uploadScore(leaderboard, score, details, callback)
     end
 end
 
+---@param lb Leaderboard
+---@param i integer meaning depends on mode
+---@param j integer meaning depends on mode
+---@return LeaderboardDownload
 local function getScores(lb, i, j)
     i = math.max(1, i)
     j = math.min(j, #lb)
-    local scores = {}
+    local scores = {} ---@type LeaderboardDownload
     for rank = i, j do
         local sc = tablex.copy(lb[rank])
         sc.rank = rank
@@ -136,7 +175,11 @@ end
 
 local function getScoresAroundUser(lb, before, after)
     local rank = lb[MockAccount.mockusername]
-    if not rank then return nil end
+    if not rank then
+        return nil, "No score yet"
+        -- before, after = math.min(before, after), math.max(before, after)
+        -- return getScores(lb, 1, after - before)
+    end
 
     local i, j = rank + before, rank + after
     if i < 1 then
@@ -151,9 +194,11 @@ local function getScoresAroundUser(lb, before, after)
     return getScores(lb, i, j)
 end
 
+---@param lb Leaderboard
+---@return LeaderboardDownload
 local function getUserFriendScores(lb)
     local urank = lb[MockAccount.mockusername]
-    local scores = { urank and lb[urank] }
+    local scores = { urank and lb[urank] } ---@type LeaderboardDownload
     for _, friend in ipairs(MockAccount.mockfriends) do
         local frank = lb[friend]
         if frank then
@@ -172,12 +217,18 @@ local function getUserFriendScores(lb)
     return scores
 end
 
+---@param leaderboard string
+---@param mode "WORLD"|"ME"|"FRIENDS"
+---@param i integer meaning depends on mode
+---@param j integer meaning depends on mode
+---@param callback fun(scores: LeaderboardDownload?, err: string?)
 function MockAccount.downloadScores(leaderboard, mode, i, j, callback)
     local lb = leaderboards[leaderboard]
     if lb == false then
         MockAccount.initLeaderboard(leaderboard)
         lb = leaderboards[leaderboard]
     end
+    ---@cast lb Leaderboard
 
     callbacks[#callbacks+1] = function()
         local err = MockAccount.mockerrors["downloadScores"] or
@@ -186,11 +237,11 @@ function MockAccount.downloadScores(leaderboard, mode, i, j, callback)
         if mode == "WORLD" then
             scores = getScores(lb, i, j)
         elseif mode == "ME" then
-            scores = getScoresAroundUser(lb, i, j)
+            scores, err = getScoresAroundUser(lb, i, j)
         elseif mode == "FRIENDS" then
             scores = getUserFriendScores(lb)
         end
-        callback(err and {error = err} or scores)
+        callback(scores, err)
     end
 end
 

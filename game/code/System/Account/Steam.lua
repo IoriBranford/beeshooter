@@ -102,17 +102,14 @@ function SteamAccount.uploadScore(leaderboard, score, details, callback)
 		score.score, details, SteamAccount.NumScoreDetails,
         function(data, ioerr)
             if callback then
-                data = ioerr and {
-                    error = "IO error"
-                } or {
+                callback(not ioerr and  {
                     success = data.m_bSuccess ~= 0,
                     leaderboard = leaderboard,
                     score = data.m_nScore,
                     scorechanged = data.m_bScoreChanged ~= 0,
                     rank = data.m_nGlobalRankNew,
                     previousrank = data.m_nGlobalRankPrevious
-                }
-                callback(data)
+                }, ioerr and "IO error")
             end
         end)
 end
