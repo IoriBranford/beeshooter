@@ -28,7 +28,7 @@ function NullAccount.uploadScore()
 	return false, "No online score service"
 end
 
-function NullAccount.downloadScore()
+function NullAccount.downloadScores()
 	return false, "No online score service available."
 end
 
