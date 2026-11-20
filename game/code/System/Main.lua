@@ -8,6 +8,7 @@ local Time   = require "System.Time"
 local Controls= require "System.Controls"
 local cute = require "cute"
 local haslldebugger, lldebugger = pcall(require, "lldebugger")
+local Account
 if not haslldebugger then
     lldebugger = nil
 end
@@ -98,6 +99,7 @@ function love.quit()
     end
     Audio.stop()
     Config.save()
+    Account.quit()
 	if profile then
 		local filename = os.date("profile_%Y-%m-%d_%H-%M-%S")..".txt"
 		love.filesystem.write(filename, profile.report())
@@ -152,6 +154,10 @@ function love.run()
 		-- lldebugger.off()
 	end
 
+    Config.mockaccount = args.mockaccount
+    Account = require("System.Account")
+    Account.init()
+
     if love.load then
         love.load(args)--love.arg.parseGameArguments(arg), arg)
     end
@@ -197,6 +203,8 @@ function love.run()
         end
 
         if love.update then
+            Account.update()
+
             if variableupdate then
                 love.update(dsecs, fixedfrac)
             elseif numfixed > 0 then

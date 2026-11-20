@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="66" nextobjectid="460">
+<map version="1.11" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" infinite="1" nextlayerid="68" nextobjectid="527">
  <editorsettings>
   <export target="gui_gameplay.lua" format="lua"/>
  </editorsettings>
@@ -7,38 +7,46 @@
  <tileset firstgid="9" source="tilesets/MoveCursor.tsx"/>
  <tileset firstgid="10" source="tilesets/Jenny.tsx"/>
  <tileset firstgid="19" source="tilesets/BeehiveObjects.tsx"/>
- <tileset firstgid="35" source="tilesets/Ant.tsx"/>
- <tileset firstgid="39" source="tilesets/KillSmall.tsx"/>
- <tileset firstgid="54" source="tilesets/JennyKill.tsx"/>
- <tileset firstgid="67" source="tilesets/Fly.tsx"/>
- <tileset firstgid="83" source="tilesets/FlyBullet.tsx"/>
- <tileset firstgid="85" source="tilesets/Controls.tsx"/>
- <tileset firstgid="104" source="tilesets/AlienMind.tsx"/>
- <tileset firstgid="108" source="tilesets/WaspBoss.tsx"/>
+ <tileset firstgid="36" source="tilesets/Ant.tsx"/>
+ <tileset firstgid="40" source="tilesets/KillSmall.tsx"/>
+ <tileset firstgid="55" source="tilesets/JennyKill.tsx"/>
+ <tileset firstgid="68" source="tilesets/Fly.tsx"/>
+ <tileset firstgid="84" source="tilesets/FlyBullet.tsx"/>
+ <tileset firstgid="86" source="tilesets/Controls.tsx"/>
+ <tileset firstgid="105" source="tilesets/AlienMind.tsx"/>
+ <tileset firstgid="109" source="tilesets/WaspBoss.tsx"/>
  <group id="38" name="normalui">
   <group id="61" name="titlescreen">
    <imagelayer id="29" name="art">
     <image source="titleart.png" width="256" height="224"/>
    </imagelayer>
-   <objectgroup id="31" name="mainmenu" class="BeeShooter.Gui.Menu">
+   <objectgroup id="31" name="mainmenu" class="BeeShooter.Gui.Menu" visible="0">
     <properties>
      <property name="backaction" value="quitGame"/>
      <property name="initialbutton" type="int" value="1"/>
     </properties>
-    <object id="188" name="Start" type="BeeShooter.Gui.Button" x="96" y="128" width="64" height="8">
+    <object id="188" name="Start" type="BeeShooter.Gui.Button" x="24" y="120" width="128" height="8">
      <properties>
       <property name="action" value="startGame"/>
       <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Start</text>
     </object>
+    <object id="520" name="Start" type="BeeShooter.Gui.Button" x="32" y="136" width="128" height="8">
+     <properties>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.optionmenu"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Options</text>
+    </object>
     <object id="189" name="Title" x="64" y="16" width="128" height="8">
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HONEY SOLDIER</text>
     </object>
-    <object id="192" name="Copyright" x="16" y="200" width="224" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2025 IoriBranford</text>
+    <object id="192" name="Copyright" x="16" y="216" width="224" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="center" valign="center">(C) 2022-2026 IoriBranford</text>
     </object>
-    <object id="190" name="Quit" type="BeeShooter.Gui.Button" x="96" y="176" width="64" height="8">
+    <object id="190" name="Quit" type="BeeShooter.Gui.Button" x="64" y="200" width="128" height="8">
      <properties>
       <property name="action" value="quitGame"/>
       <property name="platforms">Windows
@@ -48,7 +56,7 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Quit</text>
     </object>
-    <object id="221" name="High Scores" type="BeeShooter.Gui.Button" x="96" y="160" width="88" height="8">
+    <object id="221" name="High Scores" type="BeeShooter.Gui.Button" x="48" y="168" width="128" height="8">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.highscores"/>
@@ -56,7 +64,15 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">High Scores</text>
     </object>
-    <object id="369" name="Help" type="BeeShooter.Gui.Button" x="96" y="144" width="88" height="8">
+    <object id="521" name="Online Scores" type="BeeShooter.Gui.Button" x="56" y="184" width="128" height="8">
+     <properties>
+      <property name="action" value="openMenu"/>
+      <property name="guipath" value="titlescreen.onlinescores"/>
+      <property name="pressedsound" type="file" value="sounds/enemyshot1.mp3"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Online Scores</text>
+    </object>
+    <object id="369" name="Help" type="BeeShooter.Gui.Button" x="40" y="152" width="128" height="8">
      <properties>
       <property name="action" value="openMenu"/>
       <property name="guipath" value="titlescreen.help.controls"/>
@@ -64,14 +80,39 @@ Linux</property>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">How to Play</text>
     </object>
-    <object id="191" name="cursor" type="Gui.Cursor" x="80" y="128" width="8" height="8">
+    <object id="191" name="cursor" type="Gui.Cursor" x="8" y="120" width="8" height="8">
      <properties>
       <property name="offsetx" type="float" value="-16"/>
      </properties>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
     </object>
    </objectgroup>
-   <objectgroup id="41" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+   <objectgroup id="67" name="optionmenu" class="BeeShooter.Gui.Menu" visible="0">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+     <property name="closeaction" value="saveOptions"/>
+     <property name="initialbutton" type="int" value="1"/>
+     <property name="openaction" value="refreshOptions"/>
+    </properties>
+    <object id="522" name="backing" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#e0000000"/>
+     </properties>
+    </object>
+    <object id="525" name="Close" type="BeeShooter.Gui.Button" x="96" y="200" width="64" height="8">
+     <properties>
+      <property name="action" value="closeMenu"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">Back</text>
+    </object>
+    <object id="526" name="cursor" type="Gui.Cursor" x="80" y="200" width="8" height="8">
+     <properties>
+      <property name="offsetx" type="float" value="-16"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+    </object>
+   </objectgroup>
+   <objectgroup id="41" name="highscores" class="BeeShooter.Gui.HighScoreMenu" visible="0">
     <properties>
      <property name="backaction" value="closeMenu"/>
      <property name="initialbutton" type="int" value="1"/>
@@ -82,7 +123,7 @@ Linux</property>
      </properties>
     </object>
     <object id="216" name="High Scores" x="16" y="16" width="224" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">HIGH SCORES</text>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">YOUR HIGH SCORES</text>
     </object>
     <object id="219" name="Close" type="BeeShooter.Gui.Button" x="96" y="200" width="64" height="8">
      <properties>
@@ -187,7 +228,180 @@ Linux</property>
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
    </objectgroup>
-   <group id="42" name="help" class="BeeShooter.Gui.HelpScreen">
+   <objectgroup id="66" name="onlinescores" class="BeeShooter.Gui.OnlineHighScoreMenu">
+    <properties>
+     <property name="backaction" value="closeMenu"/>
+     <property name="initialbutton" type="int" value="1"/>
+    </properties>
+    <object id="460" name="backing" x="0" y="0" width="256" height="224">
+     <properties>
+      <property name="color" type="color" value="#e0000000"/>
+     </properties>
+    </object>
+    <object id="461" name="High Scores" x="32" y="8" width="192" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">ONLINE HIGH SCORES</text>
+    </object>
+    <object id="519" name="downloadstatus" x="8" y="96" width="240" height="32">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">Downloading</text>
+    </object>
+    <object id="514" name="onlinescoresmode" x="88" y="192" width="80" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">WORLD</text>
+    </object>
+    <object id="508" x="16" y="192" width="16" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="center" valign="center">-10</text>
+    </object>
+    <object id="507" x="16" y="200" width="16" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="center" valign="center">+10</text>
+    </object>
+    <object id="509" x="168" y="192" width="8" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">▶</text>
+    </object>
+    <object id="510" x="20" y="208" width="8" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">▼</text>
+    </object>
+    <object id="512" x="20" y="184" width="8" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">▲</text>
+    </object>
+    <object id="511" x="80" y="192" width="8" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">◀</text>
+    </object>
+    <object id="505" name="Exit" x="32" y="208" width="192" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">Fire/Esc/Back: Exit</text>
+    </object>
+    <object id="464" name="score1" x="184" y="24" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="465" name="score2" x="184" y="40" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="466" name="score3" x="184" y="56" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="467" name="score4" x="184" y="72" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="468" name="score5" x="184" y="88" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="469" name="score6" x="184" y="104" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="470" name="score7" x="184" y="120" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="471" name="score8" x="184" y="136" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="472" name="score9" x="184" y="152" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="473" name="score10" x="184" y="168" width="64" height="8">
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="right" valign="center">0000000</text>
+    </object>
+    <object id="474" name="rank1" x="4" y="24" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="475" name="rank2" x="4" y="40" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="476" name="rank3" x="4" y="56" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="477" name="rank4" x="4" y="72" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="478" name="rank5" x="4" y="88" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="479" name="rank6" x="4" y="104" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="480" name="rank7" x="4" y="120" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="481" name="rank8" x="4" y="136" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="482" name="rank9" x="4" y="152" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="483" name="rank10" x="4" y="168" width="32" height="16">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">9999999.</text>
+    </object>
+    <object id="484" name="time1" x="168" y="32" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="485" name="time2" x="168" y="48" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="486" name="time3" x="168" y="64" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="487" name="time4" x="168" y="80" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="488" name="time5" x="168" y="96" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="489" name="time6" x="168" y="112" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="490" name="time7" x="168" y="128" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="491" name="time8" x="168" y="144" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="492" name="time9" x="168" y="160" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="493" name="time10" x="168" y="176" width="80" height="8">
+     <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
+    </object>
+    <object id="494" name="name1" x="40" y="24" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="495" name="name2" x="40" y="40" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="496" name="name3" x="40" y="56" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="497" name="name4" x="40" y="72" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="501" name="name5" x="40" y="88" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="500" name="name6" x="40" y="104" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="498" name="name7" x="40" y="120" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="499" name="name8" x="40" y="136" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="503" name="name9" x="40" y="152" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="502" name="name10" x="40" y="168" width="128" height="16">
+     <text fontfamily="Silver" pixelsize="19" wrap="1" color="#ffffff">酱香可可可爱爱莉酱mWs</text>
+    </object>
+    <object id="515" name="Change" type="BeeShooter.Gui.Button" x="176" y="232" width="64" height="8">
+     <properties>
+      <property name="action" value="changeLeaderboardMode"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">change</text>
+    </object>
+    <object id="516" name="cursor" type="Gui.Cursor" x="160" y="232" width="8" height="8">
+     <properties>
+      <property name="offsetx" type="float" value="-16"/>
+     </properties>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff">▶</text>
+    </object>
+   </objectgroup>
+   <group id="42" name="help" class="BeeShooter.Gui.HelpScreen" visible="0">
     <objectgroup draworder="index" id="43" name="controls" class="BeeShooter.Gui.Menu">
      <properties>
       <property name="backaction" value="closeMenu"/>
@@ -233,12 +447,12 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">MOVEMENT</text>
       </object>
-      <object id="296" gid="87" x="80" y="80" width="16" height="16"/>
-      <object id="376" gid="87" x="144" y="40" width="16" height="16"/>
-      <object id="374" gid="87" x="208" y="80" width="16" height="16"/>
-      <object id="375" gid="87" x="208" y="80" width="16" height="16"/>
-      <object id="373" gid="87" x="144" y="120" width="16" height="16"/>
-      <object id="377" gid="88" x="96" y="40" width="16" height="16"/>
+      <object id="296" gid="88" x="80" y="80" width="16" height="16"/>
+      <object id="376" gid="88" x="144" y="40" width="16" height="16"/>
+      <object id="374" gid="88" x="208" y="80" width="16" height="16"/>
+      <object id="375" gid="88" x="208" y="80" width="16" height="16"/>
+      <object id="373" gid="88" x="144" y="120" width="16" height="16"/>
+      <object id="377" gid="89" x="96" y="40" width="16" height="16"/>
       <object id="292" type="BeeShooter.Gui.Button" x="208" y="84" width="16" height="8">
        <properties>
         <property name="action" value="endGame"/>
@@ -264,13 +478,13 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">←</text>
       </object>
       <object id="294" gid="10" x="128" y="88" width="32" height="32"/>
-      <object id="378" gid="92" x="120" y="40" width="16" height="16"/>
-      <object id="379" gid="91" x="32" y="80" width="16" height="16"/>
-      <object id="380" gid="95" x="56" y="80" width="16" height="16"/>
-      <object id="381" gid="94" x="120" y="120" width="16" height="16"/>
-      <object id="382" gid="90" x="96" y="120" width="16" height="16"/>
-      <object id="383" gid="89" x="160" y="80" width="16" height="16"/>
-      <object id="384" gid="93" x="184" y="80" width="16" height="16"/>
+      <object id="378" gid="93" x="120" y="40" width="16" height="16"/>
+      <object id="379" gid="92" x="32" y="80" width="16" height="16"/>
+      <object id="380" gid="96" x="56" y="80" width="16" height="16"/>
+      <object id="381" gid="95" x="120" y="120" width="16" height="16"/>
+      <object id="382" gid="91" x="96" y="120" width="16" height="16"/>
+      <object id="383" gid="90" x="160" y="80" width="16" height="16"/>
+      <object id="384" gid="94" x="184" y="80" width="16" height="16"/>
       <object id="393" type="BeeShooter.Gui.Button" x="144" y="80" width="16" height="16">
        <properties>
         <property name="action" value="endGame"/>
@@ -314,12 +528,12 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">SHOOTING</text>
       </object>
-      <object id="306" gid="35" x="152" y="56" width="16" height="16"/>
-      <object id="307" gid="35" x="168" y="56" width="16" height="16"/>
-      <object id="308" gid="39" x="152" y="56" width="32" height="32"/>
-      <object id="309" gid="39" x="168" y="56" width="32" height="32"/>
-      <object id="310" gid="102" x="64" y="112" width="16" height="16"/>
-      <object id="386" gid="87" x="112" y="112" width="16" height="16"/>
+      <object id="306" gid="36" x="152" y="56" width="16" height="16"/>
+      <object id="307" gid="36" x="168" y="56" width="16" height="16"/>
+      <object id="308" gid="40" x="152" y="56" width="32" height="32"/>
+      <object id="309" gid="40" x="168" y="56" width="32" height="32"/>
+      <object id="310" gid="103" x="64" y="112" width="16" height="16"/>
+      <object id="386" gid="88" x="112" y="112" width="16" height="16"/>
       <object id="387" x="112" y="116" width="16" height="8">
        <properties>
         <property name="action" value="endGame"/>
@@ -390,8 +604,8 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
       </object>
-      <object id="389" gid="101" x="40" y="112" width="16" height="16"/>
-      <object id="390" gid="87" x="88" y="112" width="16" height="16"/>
+      <object id="389" gid="102" x="40" y="112" width="16" height="16"/>
+      <object id="390" gid="88" x="88" y="112" width="16" height="16"/>
       <object id="391" x="88" y="116" width="16" height="8">
        <properties>
         <property name="action" value="endGame"/>
@@ -429,8 +643,8 @@ Move Jenny with the D-Pad, Left Stick, or arrow keys.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING SPEED</text>
       </object>
-      <object id="416" gid="103" x="32" y="80" width="16" height="16"/>
-      <object id="417" gid="87" x="80" y="80" width="16" height="16"/>
+      <object id="416" gid="104" x="32" y="80" width="16" height="16"/>
+      <object id="417" gid="88" x="80" y="80" width="16" height="16"/>
       <object id="418" x="80" y="84" width="16" height="8">
        <properties>
         <property name="action" value="endGame"/>
@@ -517,10 +731,10 @@ If Jenny has no more weapon levels, she loses a life.</text>
       <object id="356" name="weaponB" type="Gui.Button" gid="1" x="200" y="64" width="16" height="16"/>
       <object id="357" name="weaponB" type="Gui.Button" gid="1" x="152" y="112" width="16" height="16"/>
       <object id="358" gid="13" x="200" y="112" width="32" height="32"/>
-      <object id="359" gid="54" x="200" y="128" width="64" height="64"/>
-      <object id="360" gid="67" x="56" y="72" width="32" height="32"/>
-      <object id="361" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
-      <object id="362" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
+      <object id="359" gid="55" x="200" y="128" width="64" height="64"/>
+      <object id="360" gid="68" x="56" y="72" width="32" height="32"/>
+      <object id="361" gid="84" x="88" y="104" width="16" height="8" rotation="45"/>
+      <object id="362" gid="84" x="72" y="88" width="16" height="8" rotation="45"/>
      </objectgroup>
      <objectgroup id="55" name="extends">
       <object id="422" name="title" x="8" y="16" width="240" height="8">
@@ -584,7 +798,7 @@ You lose if Jenny's lives or timer run out.</text>
     </group>
    </group>
   </group>
-  <group id="60" name="gamescreen">
+  <group id="60" name="gamescreen" visible="0">
    <objectgroup id="64" name="gameoverred">
     <object id="458" x="0" y="0" width="256" height="224">
      <properties>
@@ -680,7 +894,7 @@ You lose if Jenny's lives or timer run out.</text>
    </objectgroup>
   </group>
  </group>
- <group id="10" name="touchui">
+ <group id="10" name="touchui" visible="0">
   <group id="58" name="titlescreen">
    <imagelayer id="39" name="art">
     <image source="titleart.png" width="256" height="224"/>
@@ -826,7 +1040,7 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OFF</text>
     </object>
    </objectgroup>
-   <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu">
+   <objectgroup id="40" name="highscores" class="BeeShooter.Gui.HighScoreMenu" visible="0">
     <properties>
      <property name="backaction" value="closeMenu"/>
     </properties>
@@ -944,7 +1158,7 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Teeny Tiny Pixls" pixelsize="5" wrap="1" color="#ffffff" halign="right" valign="center">1970/01/01 00:00:00</text>
     </object>
    </objectgroup>
-   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen">
+   <group id="19" name="help" class="BeeShooter.Gui.HelpScreen" visible="0">
     <objectgroup draworder="index" id="21" name="controls" class="BeeShooter.Gui.Menu">
      <properties>
       <property name="backaction" value="closeMenu"/>
@@ -1029,7 +1243,7 @@ You lose if Jenny's lives or timer run out.</text>
       </object>
       <object id="70" gid="10" x="160" y="104" width="32" height="32"/>
       <object id="71" gid="9" x="224" y="104" width="8" height="8"/>
-      <object id="184" gid="85" x="72" y="104" width="16" height="16"/>
+      <object id="184" gid="86" x="72" y="104" width="16" height="16"/>
      </objectgroup>
      <objectgroup id="24" name="shoot">
       <object id="83" name="instruction" type="BeeShooter.Gui.Button" x="8" y="152" width="240" height="48">
@@ -1063,11 +1277,11 @@ You lose if Jenny's lives or timer run out.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">SHOOTING</text>
       </object>
-      <object id="149" gid="35" x="152" y="56" width="16" height="16"/>
-      <object id="150" gid="35" x="168" y="56" width="16" height="16"/>
-      <object id="151" gid="39" x="152" y="56" width="32" height="32"/>
-      <object id="152" gid="39" x="168" y="56" width="32" height="32"/>
-      <object id="183" gid="85" x="72" y="104" width="16" height="16"/>
+      <object id="149" gid="36" x="152" y="56" width="16" height="16"/>
+      <object id="150" gid="36" x="168" y="56" width="16" height="16"/>
+      <object id="151" gid="40" x="152" y="56" width="32" height="32"/>
+      <object id="152" gid="40" x="168" y="56" width="32" height="32"/>
+      <object id="183" gid="86" x="72" y="104" width="16" height="16"/>
      </objectgroup>
      <objectgroup id="25" name="change">
       <object id="87" template="gui/HexButton56.tx" type="BeeShooter.Gui.Button" x="72" y="72"/>
@@ -1130,7 +1344,7 @@ You lose if Jenny's lives or timer run out.</text>
        </properties>
        <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center">CHANGING WEAPON</text>
       </object>
-      <object id="182" gid="85" x="68" y="112" width="16" height="16"/>
+      <object id="182" gid="86" x="68" y="112" width="16" height="16"/>
      </objectgroup>
      <objectgroup id="26" name="powerup">
       <object id="129" gid="23" x="104" y="56" width="16" height="32"/>
@@ -1205,10 +1419,10 @@ If Jenny has no more weapon levels, she loses a life.</text>
       <object id="159" name="weaponB" type="Gui.Button" gid="1" x="200" y="64" width="16" height="16"/>
       <object id="168" name="weaponB" type="Gui.Button" gid="1" x="152" y="112" width="16" height="16"/>
       <object id="170" gid="13" x="200" y="112" width="32" height="32"/>
-      <object id="172" gid="54" x="200" y="128" width="64" height="64"/>
-      <object id="173" gid="67" x="56" y="72" width="32" height="32"/>
-      <object id="174" gid="83" x="88" y="104" width="16" height="8" rotation="45"/>
-      <object id="175" gid="83" x="72" y="88" width="16" height="8" rotation="45"/>
+      <object id="172" gid="55" x="200" y="128" width="64" height="64"/>
+      <object id="173" gid="68" x="56" y="72" width="32" height="32"/>
+      <object id="174" gid="84" x="88" y="104" width="16" height="8" rotation="45"/>
+      <object id="175" gid="84" x="72" y="88" width="16" height="8" rotation="45"/>
      </objectgroup>
      <objectgroup id="56" name="extends">
       <object id="425" name="title" x="8" y="16" width="240" height="8">
@@ -1269,7 +1483,7 @@ You lose if Jenny's lives or timer run out.</text>
     </group>
    </group>
   </group>
-  <group id="59" name="gamescreen">
+  <group id="59" name="gamescreen" visible="0">
    <objectgroup id="65" name="gameoverred">
     <object id="459" x="0" y="0" width="256" height="224">
      <properties>

@@ -22,7 +22,7 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}/game", "--debug"]
+            "args": ["${workspaceFolder}/game", "--debug", "--mockaccount"]
         },
         {
             "name": "Debug Android",
