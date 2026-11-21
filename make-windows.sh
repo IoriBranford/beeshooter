@@ -100,12 +100,7 @@ then
 	then
 		curl -Lk -o luasteam.dll $LUASTEAM_DLL
 	fi
-	cp $STEAM_DLL game-win
-
-	if [ -e steam_appid.txt ]
-	then
-		cp steam_appid.txt game-win
-	fi
+	cp $STEAM_DLL luasteam.dll steam_appid.txt game-win
 fi
 
 if [ -e README.md ]
