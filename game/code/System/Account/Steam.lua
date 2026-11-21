@@ -46,11 +46,15 @@ local function findLeaderboardAnd(name, operation, ...)
 	end
 end
 
+---@param data LeaderboardScoresDownloaded_t
+---@param e any
+---@return LeaderboardDownload?
+---@return string
 local function readScores(data, e)
 	if e then
 		return nil, "IO error"
 	end
-	local scores = {}
+	local scores = {} ---@type LeaderboardDownload
 	local me = steam.User.GetSteamID()
 	for i = 1, data.m_cEntryCount do
 		local ok, entry, details = steam.UserStats.GetDownloadedLeaderboardEntry(
@@ -87,6 +91,11 @@ function SteamAccount.initLeaderboard(name)
     end)
 end
 
+---@param leaderboard string
+---@param mode "WORLD"|"ME"|"FRIENDS"
+---@param i integer meaning depends on mode
+---@param j integer meaning depends on mode
+---@param callback fun(scores: LeaderboardDownload?, err: string?)
 function SteamAccount.downloadScores(leaderboard, mode, i, j, callback)
     findLeaderboardAnd(leaderboard,
         steam.UserStats.DownloadLeaderboardEntries,
@@ -96,11 +105,17 @@ function SteamAccount.downloadScores(leaderboard, mode, i, j, callback)
 		end)
 end
 
+---@param leaderboard string
+---@param score number
+---@param details integer[]?
+---@param callback fun(res: LeaderboardUploadResult|false, err: string)
 function SteamAccount.uploadScore(leaderboard, score, details, callback)
 	findLeaderboardAnd(leaderboard,
 		steam.UserStats.UploadLeaderboardScore,
 		steam.k_ELeaderboardUploadScoreMethodKeepBest,
 		score, details, SteamAccount.NumScoreDetails,
+		---@param data LeaderboardScoreUploaded_t
+		---@param ioerr any
         function(data, ioerr)
             if callback then
                 callback(not ioerr and  {
