@@ -79,18 +79,18 @@ sed -i -r -e "s/^export LUA_PATH=\"/&\$APPDIR\/share\/luajit-2.1\/?.lua;/" AppRu
 sed -i -r -e "s/bin\/love/bin\/$GAME_EXE/" AppRun
 popd
 
-STEAM_DLL=linux${ARCH_BITS}/libsteam_api.so
-LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v6.0.0/linux${ARCH_BITS}_luasteam.so
-
 if [ ! -z "$STEAM" ] 
 then
 	OUT_DIR="$OUT_DIR-steam"
-fi
-if [ ! -z "$STEAM" ] && [ -e $STEAM_DLL ]
-then
+	STEAM_DLL=$(./get-steamworks.sh linux$ARCH_BITS)
+	LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v6.0.0/linux${ARCH_BITS}_luasteam.so
+
 	cp $STEAM_DLL $GAME_APPDIR/lib
 
-	curl -Lk -o luasteam.so $LUASTEAM_DLL
+	if [ ! -f luasteam.so ]
+	then
+		curl -Lk -o luasteam.so $LUASTEAM_DLL
+	fi
 	mkdir -p $GAME_APPDIR/lib/lua/5.1
 	cp luasteam.so $GAME_APPDIR/lib/lua/5.1
 fi
