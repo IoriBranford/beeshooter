@@ -120,4 +120,8 @@ function SteamAccount.countScores(leaderboardname)
     return leaderboard and steam.UserStats.GetLeaderboardEntryCount(leaderboard) or 0
 end
 
+function SteamAccount.achieve(achievement)
+	return steam.UserStats.SetAchievement(achievement)
+end
+
 return SteamAccount

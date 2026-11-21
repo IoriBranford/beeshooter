@@ -17,19 +17,21 @@ function NullAccount.init() print("no account to init") end
 function NullAccount.update() end
 function NullAccount.quit() end
 
-function NullAccount.initLeaderboard()
+function NullAccount.initLeaderboard(name)
 end
 
-function NullAccount.countScores()
+function NullAccount.countScores(leaderboardname)
     return 0
 end
 
-function NullAccount.uploadScore()
+function NullAccount.uploadScore(leaderboard, score, details, callback)
 	return false, "No online score service"
 end
 
-function NullAccount.downloadScores()
+function NullAccount.downloadScores(leaderboard, mode, i, j, callback)
 	return false, "No online score service available."
 end
+
+function NullAccount.achieve(achievement) end
 
 return NullAccount
