@@ -100,7 +100,7 @@ function SteamAccount.uploadScore(leaderboard, score, details, callback)
 	findLeaderboardAnd(leaderboard,
 		steam.UserStats.UploadLeaderboardScore,
 		steam.k_ELeaderboardUploadScoreMethodKeepBest,
-		score.score, details, SteamAccount.NumScoreDetails,
+		score, details, SteamAccount.NumScoreDetails,
         function(data, ioerr)
             if callback then
                 callback(not ioerr and  {
