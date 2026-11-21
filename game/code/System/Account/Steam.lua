@@ -73,9 +73,9 @@ local function readScores(data, e)
 end
 
 local SteamPositions = {
-	WORLD = steam.k_ELeaderBoardDataRequestGlobal,
-	ME = steam.k_ELeaderBoardDataRequestGlobalAroundUser,
-	FRIENDS = steam.k_ELeaderBoardDataRequestFriends
+	WORLD = steam.k_ELeaderboardDataRequestGlobal,
+	ME = steam.k_ELeaderboardDataRequestGlobalAroundUser,
+	FRIENDS = steam.k_ELeaderboardDataRequestFriends
 }
 
 function SteamAccount.initLeaderboard(name)
