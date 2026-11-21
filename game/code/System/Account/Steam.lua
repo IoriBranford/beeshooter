@@ -1,4 +1,5 @@
 local hassteam, steam = pcall(require, "luasteam")
+---@cast steam Steam
 if not hassteam then
 	return false
 end

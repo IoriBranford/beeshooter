@@ -1,0 +1,212 @@
+---@class Steam.Matchmaking
+---@field OnFavoritesListChanged? fun(data: FavoritesListChanged_t)
+---@field OnLobbyInvite? fun(data: LobbyInvite_t)
+---@field OnLobbyEnter? fun(data: LobbyEnter_t)
+---@field OnLobbyDataUpdate? fun(data: LobbyDataUpdate_t)
+---@field OnLobbyChatUpdate? fun(data: LobbyChatUpdate_t)
+---@field OnLobbyChatMsg? fun(data: LobbyChatMsg_t)
+---@field OnLobbyGameCreated? fun(data: LobbyGameCreated_t)
+---@field OnLobbyMatchList? fun(data: LobbyMatchList_t)
+---@field OnLobbyKicked? fun(data: LobbyKicked_t)
+---@field OnLobbyCreated? fun(data: LobbyCreated_t)
+---@field OnFavoritesListAccountsUpdated? fun(data: FavoritesListAccountsUpdated_t)
+local Matchmaking = {}
+
+---@return integer
+function Matchmaking.GetFavoriteGameCount() end
+
+---@param iGame integer
+---@return boolean
+---@return integer -- Value of: pnAppID
+---@return integer -- Value of: pnIP
+---@return integer -- Value of: pnConnPort
+---@return integer -- Value of: pnQueryPort
+---@return integer -- Value of: punFlags
+---@return integer -- Value of: pRTime32LastPlayedOnServer
+function Matchmaking.GetFavoriteGame(iGame) end
+
+---@param nAppID integer -- AppId_t
+---@param nIP integer
+---@param nConnPort integer
+---@param nQueryPort integer
+---@param unFlags integer
+---@param rTime32LastPlayedOnServer integer
+---@return integer
+function Matchmaking.AddFavoriteGame(nAppID, nIP, nConnPort, nQueryPort, unFlags, rTime32LastPlayedOnServer) end
+
+---@param nAppID integer -- AppId_t
+---@param nIP integer
+---@param nConnPort integer
+---@param nQueryPort integer
+---@param unFlags integer
+---@return boolean
+function Matchmaking.RemoveFavoriteGame(nAppID, nIP, nConnPort, nQueryPort, unFlags) end
+
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Matchmaking.RequestLobbyList(callback) end
+
+---@param pchKeyToMatch string?
+---@param pchValueToMatch string?
+---@param eComparisonType integer -- ELobbyComparison
+function Matchmaking.AddRequestLobbyListStringFilter(pchKeyToMatch, pchValueToMatch, eComparisonType) end
+
+---@param pchKeyToMatch string?
+---@param nValueToMatch integer
+---@param eComparisonType integer -- ELobbyComparison
+function Matchmaking.AddRequestLobbyListNumericalFilter(pchKeyToMatch, nValueToMatch, eComparisonType) end
+
+---@param pchKeyToMatch string?
+---@param nValueToBeCloseTo integer
+function Matchmaking.AddRequestLobbyListNearValueFilter(pchKeyToMatch, nValueToBeCloseTo) end
+
+---@param nSlotsAvailable integer
+function Matchmaking.AddRequestLobbyListFilterSlotsAvailable(nSlotsAvailable) end
+
+---@param eLobbyDistanceFilter integer -- ELobbyDistanceFilter
+function Matchmaking.AddRequestLobbyListDistanceFilter(eLobbyDistanceFilter) end
+
+---@param cMaxResults integer
+function Matchmaking.AddRequestLobbyListResultCountFilter(cMaxResults) end
+
+---@param steamIDLobby uint64 -- CSteamID
+function Matchmaking.AddRequestLobbyListCompatibleMembersFilter(steamIDLobby) end
+
+---@param iLobby integer
+---@return uint64 -- CSteamID
+function Matchmaking.GetLobbyByIndex(iLobby) end
+
+---@param eLobbyType integer -- ELobbyType
+---@param cMaxMembers integer
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Matchmaking.CreateLobby(eLobbyType, cMaxMembers, callback) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Matchmaking.JoinLobby(steamIDLobby, callback) end
+
+---@param steamIDLobby uint64 -- CSteamID
+function Matchmaking.LeaveLobby(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param steamIDInvitee uint64 -- CSteamID
+---@return boolean
+function Matchmaking.InviteUserToLobby(steamIDLobby, steamIDInvitee) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return integer
+function Matchmaking.GetNumLobbyMembers(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param iMember integer
+---@return uint64 -- CSteamID
+function Matchmaking.GetLobbyMemberByIndex(steamIDLobby, iMember) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param pchKey string?
+---@return string
+function Matchmaking.GetLobbyData(steamIDLobby, pchKey) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param pchKey string?
+---@param pchValue string?
+---@return boolean
+function Matchmaking.SetLobbyData(steamIDLobby, pchKey, pchValue) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return integer
+function Matchmaking.GetLobbyDataCount(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param iLobbyData integer
+---@param cchKeyBufferSize integer? size of the buffer for pchKey; if nil then the buffer will be NULL
+---@param cchValueBufferSize integer? size of the buffer for pchValue; if nil then the buffer will be NULL
+---@return boolean
+---@return string -- Value of: pchKey
+---@return string -- Value of: pchValue
+function Matchmaking.GetLobbyDataByIndex(steamIDLobby, iLobbyData, cchKeyBufferSize, cchValueBufferSize) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param pchKey string?
+---@return boolean
+function Matchmaking.DeleteLobbyData(steamIDLobby, pchKey) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param steamIDUser uint64 -- CSteamID
+---@param pchKey string?
+---@return string
+function Matchmaking.GetLobbyMemberData(steamIDLobby, steamIDUser, pchKey) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param pchKey string?
+---@param pchValue string?
+function Matchmaking.SetLobbyMemberData(steamIDLobby, pchKey, pchValue) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param pvMsgBody string?
+---@param cubMsgBody integer size of the input array pvMsgBody
+---@return boolean
+function Matchmaking.SendLobbyChatMsg(steamIDLobby, pvMsgBody, cubMsgBody) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param iChatID integer
+---@param cubData integer? size of the buffer for pvData; if nil then the buffer will be NULL
+---@return integer
+---@return uint64 -- Value of: pSteamIDUser
+---@return string -- Value of: pvData
+---@return integer -- Value of: peChatEntryType
+function Matchmaking.GetLobbyChatEntry(steamIDLobby, iChatID, cubData) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return boolean
+function Matchmaking.RequestLobbyData(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param unGameServerIP integer
+---@param unGameServerPort integer
+---@param steamIDGameServer uint64 -- CSteamID
+function Matchmaking.SetLobbyGameServer(steamIDLobby, unGameServerIP, unGameServerPort, steamIDGameServer) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return boolean
+---@return integer -- Value of: punGameServerIP
+---@return integer -- Value of: punGameServerPort
+---@return uint64 -- Value of: psteamIDGameServer
+function Matchmaking.GetLobbyGameServer(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param cMaxMembers integer
+---@return boolean
+function Matchmaking.SetLobbyMemberLimit(steamIDLobby, cMaxMembers) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return integer
+function Matchmaking.GetLobbyMemberLimit(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param eLobbyType integer -- ELobbyType
+---@return boolean
+function Matchmaking.SetLobbyType(steamIDLobby, eLobbyType) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param bLobbyJoinable boolean
+---@return boolean
+function Matchmaking.SetLobbyJoinable(steamIDLobby, bLobbyJoinable) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@return uint64 -- CSteamID
+function Matchmaking.GetLobbyOwner(steamIDLobby) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param steamIDNewOwner uint64 -- CSteamID
+---@return boolean
+function Matchmaking.SetLobbyOwner(steamIDLobby, steamIDNewOwner) end
+
+---@param steamIDLobby uint64 -- CSteamID
+---@param steamIDLobbyDependent uint64 -- CSteamID
+---@return boolean
+function Matchmaking.SetLinkedLobby(steamIDLobby, steamIDLobbyDependent) end
+
+Steam.Matchmaking = Matchmaking

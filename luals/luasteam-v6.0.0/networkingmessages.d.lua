@@ -1,0 +1,34 @@
+---@class Steam.NetworkingMessages
+---@field OnSteamNetworkingMessagesSessionRequest? fun(data: SteamNetworkingMessagesSessionRequest_t)
+---@field OnSteamNetworkingMessagesSessionFailed? fun(data: SteamNetworkingMessagesSessionFailed_t)
+local NetworkingMessages = {}
+
+---@param identityRemote SteamNetworkingIdentity
+---@param pubData string?
+---@param cubData integer size of the input array pubData
+---@param nSendFlags integer
+---@param nRemoteChannel integer
+---@return integer -- EResult
+function NetworkingMessages.SendMessageToUser(identityRemote, pubData, cubData, nSendFlags, nRemoteChannel) end
+
+---@param identityRemote SteamNetworkingIdentity
+---@return boolean
+function NetworkingMessages.AcceptSessionWithUser(identityRemote) end
+
+---@param identityRemote SteamNetworkingIdentity
+---@return boolean
+function NetworkingMessages.CloseSessionWithUser(identityRemote) end
+
+---@param identityRemote SteamNetworkingIdentity
+---@param nLocalChannel integer
+---@return boolean
+function NetworkingMessages.CloseChannelWithUser(identityRemote, nLocalChannel) end
+
+---@param identityRemote SteamNetworkingIdentity
+---@return integer -- ESteamNetworkingConnectionState
+---@return SteamNetConnectionInfo_t -- Value of: pConnectionInfo
+---@return SteamNetConnectionRealTimeStatus_t -- Value of: pQuickStatus
+function NetworkingMessages.GetSessionConnectionInfo(identityRemote) end
+
+Steam.NetworkingMessages_SteamAPI = NetworkingMessages
+Steam.GameServerNetworkingMessages_SteamAPI = NetworkingMessages

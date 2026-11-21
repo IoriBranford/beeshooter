@@ -1,0 +1,226 @@
+---@class Steam.Inventory
+---@field OnSteamInventoryResultReady? fun(data: SteamInventoryResultReady_t)
+---@field OnSteamInventoryFullUpdate? fun(data: SteamInventoryFullUpdate_t)
+---@field OnSteamInventoryDefinitionUpdate? fun(data: SteamInventoryDefinitionUpdate_t)
+---@field OnSteamInventoryEligiblePromoItemDefIDs? fun(data: SteamInventoryEligiblePromoItemDefIDs_t)
+---@field OnSteamInventoryStartPurchaseResult? fun(data: SteamInventoryStartPurchaseResult_t)
+---@field OnSteamInventoryRequestPricesResult? fun(data: SteamInventoryRequestPricesResult_t)
+local Inventory = {}
+
+---@param resultHandle integer -- SteamInventoryResult_t
+---@return integer -- EResult
+function Inventory.GetResultStatus(resultHandle) end
+
+---@param resultHandle integer -- SteamInventoryResult_t
+---@param punOutItemsArraySize integer? size of the buffer for pOutItemsArray; if nil then the buffer will be NULL
+---@return boolean
+---@return SteamItemDetails_t[] -- Value of: pOutItemsArray
+---@return integer -- Value of: punOutItemsArraySize
+function Inventory.GetResultItems(resultHandle, punOutItemsArraySize) end
+
+---@param resultHandle integer -- SteamInventoryResult_t
+---@param unItemIndex integer
+---@param pchPropertyName string?
+---@param punValueBufferSizeOut integer? size of the buffer for pchValueBuffer; if nil then the buffer will be NULL
+---@return boolean
+---@return string -- Value of: pchValueBuffer
+---@return integer -- Value of: punValueBufferSizeOut
+function Inventory.GetResultItemProperty(resultHandle, unItemIndex, pchPropertyName, punValueBufferSizeOut) end
+
+---@param resultHandle integer -- SteamInventoryResult_t
+---@return integer
+function Inventory.GetResultTimestamp(resultHandle) end
+
+---@param resultHandle integer -- SteamInventoryResult_t
+---@param steamIDExpected uint64 -- CSteamID
+---@return boolean
+function Inventory.CheckResultSteamID(resultHandle, steamIDExpected) end
+
+---@param resultHandle integer -- SteamInventoryResult_t
+function Inventory.DestroyResult(resultHandle) end
+
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.GetAllItems() end
+
+---@param pInstanceIDs uint64[]?
+---@param unCountInstanceIDs integer size of the input array pInstanceIDs
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.GetItemsByID(pInstanceIDs, unCountInstanceIDs) end
+
+---@param pBuffer string?
+---@param unBufferSize integer size of the input array pBuffer
+---@param bRESERVED_MUST_BE_FALSE boolean
+---@return boolean
+---@return integer -- Value of: pOutResultHandle
+function Inventory.DeserializeResult(pBuffer, unBufferSize, bRESERVED_MUST_BE_FALSE) end
+
+---@param pArrayItemDefs integer[]?
+---@param punArrayQuantity integer[]?
+---@param unArrayLength integer size of the input arrays pArrayItemDefs and punArrayQuantity
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.GenerateItems(pArrayItemDefs, punArrayQuantity, unArrayLength) end
+
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.GrantPromoItems() end
+
+---@param itemDef integer -- SteamItemDef_t
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.AddPromoItem(itemDef) end
+
+---@param pArrayItemDefs integer[]?
+---@param unArrayLength integer size of the input array pArrayItemDefs
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.AddPromoItems(pArrayItemDefs, unArrayLength) end
+
+---@param itemConsume uint64 -- SteamItemInstanceID_t
+---@param unQuantity integer
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.ConsumeItem(itemConsume, unQuantity) end
+
+---@param pArrayGenerate integer[]?
+---@param punArrayGenerateQuantity integer[]?
+---@param unArrayGenerateLength integer size of the input arrays pArrayGenerate and punArrayGenerateQuantity
+---@param pArrayDestroy uint64[]?
+---@param punArrayDestroyQuantity integer[]?
+---@param unArrayDestroyLength integer size of the input arrays pArrayDestroy and punArrayDestroyQuantity
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.ExchangeItems(pArrayGenerate, punArrayGenerateQuantity, unArrayGenerateLength, pArrayDestroy, punArrayDestroyQuantity, unArrayDestroyLength) end
+
+---@param itemIdSource uint64 -- SteamItemInstanceID_t
+---@param unQuantity integer
+---@param itemIdDest uint64 -- SteamItemInstanceID_t
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.TransferItemQuantity(itemIdSource, unQuantity, itemIdDest) end
+
+function Inventory.SendItemDropHeartbeat() end
+
+---@param dropListDefinition integer -- SteamItemDef_t
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.TriggerItemDrop(dropListDefinition) end
+
+---@param steamIDTradePartner uint64 -- CSteamID
+---@param pArrayGive uint64[]?
+---@param pArrayGiveQuantity integer[]?
+---@param nArrayGiveLength integer size of the input arrays pArrayGive and pArrayGiveQuantity
+---@param pArrayGet uint64[]?
+---@param pArrayGetQuantity integer[]?
+---@param nArrayGetLength integer size of the input arrays pArrayGet and pArrayGetQuantity
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.TradeItems(steamIDTradePartner, pArrayGive, pArrayGiveQuantity, nArrayGiveLength, pArrayGet, pArrayGetQuantity, nArrayGetLength) end
+
+---@return boolean
+function Inventory.LoadItemDefinitions() end
+
+---@param punItemDefIDsArraySize integer? size of the buffer for pItemDefIDs; if nil then the buffer will be NULL
+---@return boolean
+---@return integer[] -- Value of: pItemDefIDs
+---@return integer -- Value of: punItemDefIDsArraySize
+function Inventory.GetItemDefinitionIDs(punItemDefIDsArraySize) end
+
+---@param iDefinition integer -- SteamItemDef_t
+---@param pchPropertyName string?
+---@param punValueBufferSizeOut integer? size of the buffer for pchValueBuffer; if nil then the buffer will be NULL
+---@return boolean
+---@return string -- Value of: pchValueBuffer
+---@return integer -- Value of: punValueBufferSizeOut
+function Inventory.GetItemDefinitionProperty(iDefinition, pchPropertyName, punValueBufferSizeOut) end
+
+---@param steamID uint64 -- CSteamID
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Inventory.RequestEligiblePromoItemDefinitionsIDs(steamID, callback) end
+
+---@param steamID uint64 -- CSteamID
+---@param punItemDefIDsArraySize integer? size of the buffer for pItemDefIDs; if nil then the buffer will be NULL
+---@return boolean
+---@return integer[] -- Value of: pItemDefIDs
+---@return integer -- Value of: punItemDefIDsArraySize
+function Inventory.GetEligiblePromoItemDefinitionIDs(steamID, punItemDefIDsArraySize) end
+
+---@param pArrayItemDefs integer[]?
+---@param punArrayQuantity integer[]?
+---@param unArrayLength integer size of the input arrays pArrayItemDefs and punArrayQuantity
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Inventory.StartPurchase(pArrayItemDefs, punArrayQuantity, unArrayLength, callback) end
+
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Inventory.RequestPrices(callback) end
+
+---@return integer
+function Inventory.GetNumItemsWithPrices() end
+
+---@param unArrayLength integer? size of the buffer for pArrayItemDefs, pCurrentPrices, pBasePrices; if nil then the buffer will be NULL
+---@return boolean
+---@return integer[] -- Value of: pArrayItemDefs
+---@return uint64[] -- Value of: pCurrentPrices
+---@return uint64[] -- Value of: pBasePrices
+function Inventory.GetItemsWithPrices(unArrayLength) end
+
+---@param iDefinition integer -- SteamItemDef_t
+---@return boolean
+---@return uint64 -- Value of: pCurrentPrice
+---@return uint64 -- Value of: pBasePrice
+function Inventory.GetItemPrice(iDefinition) end
+
+---@return uint64 -- SteamInventoryUpdateHandle_t
+function Inventory.StartUpdateProperties() end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@param nItemID uint64 -- SteamItemInstanceID_t
+---@param pchPropertyName string?
+---@return boolean
+function Inventory.RemoveProperty(handle, nItemID, pchPropertyName) end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@param nItemID uint64 -- SteamItemInstanceID_t
+---@param pchPropertyName string?
+---@param pchPropertyValue string?
+---@return boolean
+function Inventory.SetPropertyString(handle, nItemID, pchPropertyName, pchPropertyValue) end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@param nItemID uint64 -- SteamItemInstanceID_t
+---@param pchPropertyName string?
+---@param bValue boolean
+---@return boolean
+function Inventory.SetPropertyBool(handle, nItemID, pchPropertyName, bValue) end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@param nItemID uint64 -- SteamItemInstanceID_t
+---@param pchPropertyName string?
+---@param nValue uint64
+---@return boolean
+function Inventory.SetPropertyInt64(handle, nItemID, pchPropertyName, nValue) end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@param nItemID uint64 -- SteamItemInstanceID_t
+---@param pchPropertyName string?
+---@param flValue number
+---@return boolean
+function Inventory.SetPropertyFloat(handle, nItemID, pchPropertyName, flValue) end
+
+---@param handle uint64 -- SteamInventoryUpdateHandle_t
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.SubmitUpdateProperties(handle) end
+
+---@param pchItemToken string?
+---@return boolean
+---@return integer -- Value of: pResultHandle
+function Inventory.InspectItem(pchItemToken) end
+
+Steam.Inventory = Inventory
+Steam.GameServerInventory = Inventory
