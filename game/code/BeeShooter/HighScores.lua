@@ -281,7 +281,7 @@ function HighScores.download(mode, i, j, callback)
 	Account.downloadScores(leaderboardName(), mode, i, j,
 		function(scores, err)
 			if scores then
-				for _, score in pairs(scores) do
+				for _, score in ipairs(scores) do
 					score.timestamp = score.details[Detail.Time]
 					score.version = score.details[Detail.Version]
 				end
