@@ -89,7 +89,11 @@ function OnlineHighScoreMenu:download(mode, dlpos, disppos)
                     if self.mode ~= "FRIENDS" then
                         trim(scores)
                     end
-                    self:showScores(scores, disppos)
+                    if #scores > 0 then
+                        self:showScores(scores, disppos)
+                    else
+                        self:showDownloadStatus("No scores")
+                    end
                 end
             else
                 err = err and "Download error!\n\n"..err or "Download error!"
