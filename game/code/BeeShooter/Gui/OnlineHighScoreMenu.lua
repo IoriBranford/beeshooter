@@ -71,7 +71,7 @@ function OnlineHighScoreMenu:download(mode, dlpos, disppos)
     self.downloadpos = dlpos
     self.displaypos = disppos
     self:showDownloadStatus("Downloading...")
-    local i, j
+    local i, j = 0, 0
     if mode == "WORLD" then
         i = dlpos + 1
         j = dlpos + self.downloadcount
