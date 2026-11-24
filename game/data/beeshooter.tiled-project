@@ -4,11 +4,15 @@
     ],
     "extensionsPath": "extensions",
     "folders": [
-        "."
+        ".",
+        "../../steam"
+    ],
+    "properties": [
     ],
     "propertyTypes": [
         {
             "color": "#ffa0a0a4",
+            "drawFill": true,
             "id": 5,
             "members": [
                 {
@@ -77,6 +81,7 @@
         },
         {
             "color": "#ffa0a0a4",
+            "drawFill": true,
             "id": 6,
             "members": [
                 {
@@ -115,6 +120,7 @@
         },
         {
             "color": "#ffa0a0a4",
+            "drawFill": true,
             "id": 4,
             "members": [
                 {
@@ -153,6 +159,7 @@
         },
         {
             "color": "#ff00ffff",
+            "drawFill": true,
             "id": 3,
             "members": [
             ],
@@ -165,6 +172,7 @@
         },
         {
             "color": "#ff00ffff",
+            "drawFill": true,
             "id": 2,
             "members": [
             ],
@@ -177,6 +185,7 @@
         },
         {
             "color": "#ff00ff00",
+            "drawFill": true,
             "id": 1,
             "members": [
                 {
