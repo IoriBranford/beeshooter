@@ -1,3 +1,3 @@
 ﻿api_name (required; must match an api_name from the definitions CSV),field (name or description),english
-AllLetters,name,Spelling Bee
-AllLetters,description,Break all the secret letters in one run
+Spelling_Bee,name,Spelling Bee
+Spelling_Bee,description,Break all the secret letters in one run
