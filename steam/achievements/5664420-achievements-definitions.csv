@@ -1,2 +1,2 @@
 ﻿"api_name (required, unique; the name your game passes to the API)",setid (optional; the id of a set that already exists),"permission (one of Client, GameServer, OfficialGameServer)",spoiler (true or false),archived (true or false),"progress_stat_name (optional; the name of a stat that already exists, blank for no progress bar)","progress_stat_min (number, no lower than the stat's own min)","progress_stat_max (number, above min and no higher than the stat's own max)"
-Spelling_Bee,,Client,true,false,,0,0
+Spelling_Bee,,Client,false,false,,0,0
