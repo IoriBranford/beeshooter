@@ -942,7 +942,7 @@ You lose if Jenny's lives or timer run out.</text>
      <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">OPTION</text>
     </object>
     <object id="193" name="Copyright" x="16" y="200" width="224" height="8">
-     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2025 IoriBranford</text>
+     <text fontfamily="Press Start 2P" pixelsize="8" wrap="1" color="#ffffff" halign="center" valign="center">© 2022-2026 IoriBranford</text>
     </object>
    </objectgroup>
    <objectgroup id="57" name="optionmenu" class="BeeShooter.Gui.Menu">

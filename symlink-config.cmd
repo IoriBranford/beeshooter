@@ -1,1 +1,1 @@
-mklink config.lua "%APPDATA%\LOVE\Honey Guardian\config.lua"
+mklink config.lua "%APPDATA%\LOVE\Honey Soldier\config.lua"

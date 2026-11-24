@@ -1,0 +1,92 @@
+---@class Steam.MatchmakingServers
+local MatchmakingServers = {}
+
+---@param iApp integer -- AppId_t
+---@param ppchFilters MatchMakingKeyValuePair_t[]
+---@param nFilters integer size of the input array ppchFilters
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestInternetServerList(iApp, ppchFilters, nFilters, pRequestServersResponse) end
+
+---@param iApp integer -- AppId_t
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestLANServerList(iApp, pRequestServersResponse) end
+
+---@param iApp integer -- AppId_t
+---@param ppchFilters MatchMakingKeyValuePair_t[]
+---@param nFilters integer size of the input array ppchFilters
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestFriendsServerList(iApp, ppchFilters, nFilters, pRequestServersResponse) end
+
+---@param iApp integer -- AppId_t
+---@param ppchFilters MatchMakingKeyValuePair_t[]
+---@param nFilters integer size of the input array ppchFilters
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestFavoritesServerList(iApp, ppchFilters, nFilters, pRequestServersResponse) end
+
+---@param iApp integer -- AppId_t
+---@param ppchFilters MatchMakingKeyValuePair_t[]
+---@param nFilters integer size of the input array ppchFilters
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestHistoryServerList(iApp, ppchFilters, nFilters, pRequestServersResponse) end
+
+---@param iApp integer -- AppId_t
+---@param ppchFilters MatchMakingKeyValuePair_t[]
+---@param nFilters integer size of the input array ppchFilters
+---@param pRequestServersResponse ISteamMatchmakingServerListResponse
+---@return HServerListRequest
+function MatchmakingServers.RequestSpectatorServerList(iApp, ppchFilters, nFilters, pRequestServersResponse) end
+
+---@param hServerListRequest HServerListRequest
+function MatchmakingServers.ReleaseRequest(hServerListRequest) end
+
+---@param hRequest HServerListRequest
+function MatchmakingServers.CancelQuery(hRequest) end
+
+---@param hRequest HServerListRequest
+function MatchmakingServers.RefreshQuery(hRequest) end
+
+---@param hRequest HServerListRequest
+---@return boolean
+function MatchmakingServers.IsRefreshing(hRequest) end
+
+---@param hRequest HServerListRequest
+---@return integer
+function MatchmakingServers.GetServerCount(hRequest) end
+
+---@param hRequest HServerListRequest
+---@param iServer integer
+function MatchmakingServers.RefreshServer(hRequest, iServer) end
+
+---@param unIP integer
+---@param usPort integer
+---@param pRequestServersResponse ISteamMatchmakingPingResponse
+---@return integer -- HServerQuery
+function MatchmakingServers.PingServer(unIP, usPort, pRequestServersResponse) end
+
+---@param unIP integer
+---@param usPort integer
+---@param pRequestServersResponse ISteamMatchmakingPlayersResponse
+---@return integer -- HServerQuery
+function MatchmakingServers.PlayerDetails(unIP, usPort, pRequestServersResponse) end
+
+---@param unIP integer
+---@param usPort integer
+---@param pRequestServersResponse ISteamMatchmakingRulesResponse
+---@return integer -- HServerQuery
+function MatchmakingServers.ServerRules(unIP, usPort, pRequestServersResponse) end
+
+---@param unIP integer
+---@param usPort integer
+---@param pRequestServersResponse ISteamMatchmakingServerFriendsResponse
+---@return integer -- HServerQuery
+function MatchmakingServers.ServerFriends(unIP, usPort, pRequestServersResponse) end
+
+---@param hServerQuery integer -- HServerQuery
+function MatchmakingServers.CancelServerQuery(hServerQuery) end
+
+Steam.MatchmakingServers = MatchmakingServers

@@ -45,7 +45,8 @@ appimagetool
 public/
 zip/
 *-x86_64*/
-Honey Guardian*/
+Honey Soldier*/
+sdk/
 
 node_modules/
 love.js*/

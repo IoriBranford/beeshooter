@@ -1,0 +1,92 @@
+---@class Steam.RemotePlay
+---@field OnSteamRemotePlaySessionConnected? fun(data: SteamRemotePlaySessionConnected_t)
+---@field OnSteamRemotePlaySessionDisconnected? fun(data: SteamRemotePlaySessionDisconnected_t)
+---@field OnSteamRemotePlayTogetherGuestInvite? fun(data: SteamRemotePlayTogetherGuestInvite_t)
+---@field OnSteamRemotePlaySessionAvatarLoaded? fun(data: SteamRemotePlaySessionAvatarLoaded_t)
+local RemotePlay = {}
+
+---@return integer
+function RemotePlay.GetSessionCount() end
+
+---@param iSessionIndex integer
+---@return integer -- RemotePlaySessionID_t
+function RemotePlay.GetSessionID(iSessionIndex) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return boolean
+function RemotePlay.BSessionRemotePlayTogether(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return uint64 -- CSteamID
+function RemotePlay.GetSessionSteamID(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return integer
+function RemotePlay.GetSessionGuestID(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return integer
+function RemotePlay.GetSmallSessionAvatar(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return integer
+function RemotePlay.GetMediumSessionAvatar(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return integer
+function RemotePlay.GetLargeSessionAvatar(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return string
+function RemotePlay.GetSessionClientName(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return integer -- ESteamDeviceFormFactor
+function RemotePlay.GetSessionClientFormFactor(unSessionID) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@return boolean
+---@return integer -- Value of: pnResolutionX
+---@return integer -- Value of: pnResolutionY
+function RemotePlay.BGetSessionClientResolution(unSessionID) end
+
+---@return boolean
+function RemotePlay.ShowRemotePlayTogetherUI() end
+
+---@param steamIDFriend uint64 -- CSteamID
+---@return boolean
+function RemotePlay.BSendRemotePlayTogetherInvite(steamIDFriend) end
+
+---@return boolean
+function RemotePlay.BEnableRemotePlayTogetherDirectInput() end
+
+function RemotePlay.DisableRemotePlayTogetherDirectInput() end
+
+---@param unMaxEvents integer? size of the buffer for pInput; if nil then the buffer will be NULL
+---@return integer
+---@return RemotePlayInput_t[] -- Value of: pInput
+function RemotePlay.GetInput(unMaxEvents) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@param bVisible boolean
+function RemotePlay.SetMouseVisibility(unSessionID, bVisible) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@param flNormalizedX number
+---@param flNormalizedY number
+function RemotePlay.SetMousePosition(unSessionID, flNormalizedX, flNormalizedY) end
+
+---@param nWidth integer
+---@param nHeight integer
+---@param nHotX integer
+---@param nHotY integer
+---@param pBGRA string?
+---@param nPitch integer
+---@return integer -- RemotePlayCursorID_t
+function RemotePlay.CreateMouseCursor(nWidth, nHeight, nHotX, nHotY, pBGRA, nPitch) end
+
+---@param unSessionID integer -- RemotePlaySessionID_t
+---@param unCursorID integer -- RemotePlayCursorID_t
+function RemotePlay.SetMouseCursor(unSessionID, unCursorID) end
+
+Steam.RemotePlay = RemotePlay

@@ -6654,7 +6654,7 @@ return {
                   rotation = 0,
                   opacity = 1,
                   visible = true,
-                  text = "© 2022-2025 IoriBranford",
+                  text = "© 2022-2026 IoriBranford",
                   fontfamily = "Press Start 2P",
                   pixelsize = 8,
                   wrap = true,

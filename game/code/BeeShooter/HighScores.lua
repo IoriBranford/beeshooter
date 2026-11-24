@@ -36,6 +36,11 @@ local BackupFileName = "highscores.bak"
 ---@field name string
 ---@field rank integer
 
+local Detail = {
+	"Time", "Version",
+	["Time"] = 1, ["Version"] = 2
+}
+
 local highscores = {} ---@type HighScore[]
 
 local onlinescoreboards = {}
@@ -159,6 +164,7 @@ function HighScores.load()
 	end
 
 	Account = require("System.Account")
+	Account.NumScoreDetails = #Detail
 	if Account.initialized then
 		HighScores.uploadBest()
 	end
@@ -250,11 +256,6 @@ function HighScores.getLocalScores()
 	return getScores()
 end
 
-local Detail = {
-	"Time", "Version",
-	["Time"] = 1, ["Version"] = 2
-}
-
 function HighScores.uploadBest()
 	local leaderboardname = leaderboardName()
 	local scores = getScores()
@@ -280,7 +281,7 @@ function HighScores.download(mode, i, j, callback)
 	Account.downloadScores(leaderboardName(), mode, i, j,
 		function(scores, err)
 			if scores then
-				for _, score in pairs(scores) do
+				for _, score in ipairs(scores) do
 					score.timestamp = score.details[Detail.Time]
 					score.version = score.details[Detail.Version]
 				end

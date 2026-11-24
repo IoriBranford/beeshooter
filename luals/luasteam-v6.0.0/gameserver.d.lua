@@ -1,0 +1,159 @@
+---@class Steam.GameServer
+---@field OnSteamServersConnected? fun(data: SteamServersConnected_t)
+---@field OnSteamServerConnectFailure? fun(data: SteamServerConnectFailure_t)
+---@field OnSteamServersDisconnected? fun(data: SteamServersDisconnected_t)
+---@field OnValidateAuthTicketResponse? fun(data: ValidateAuthTicketResponse_t)
+---@field OnGSClientApprove? fun(data: GSClientApprove_t)
+---@field OnGSClientDeny? fun(data: GSClientDeny_t)
+---@field OnGSClientKick? fun(data: GSClientKick_t)
+---@field OnGSClientAchievementStatus? fun(data: GSClientAchievementStatus_t)
+---@field OnGSPolicyResponse? fun(data: GSPolicyResponse_t)
+---@field OnGSGameplayStats? fun(data: GSGameplayStats_t)
+---@field OnGSClientGroupStatus? fun(data: GSClientGroupStatus_t)
+---@field OnGSReputation? fun(data: GSReputation_t)
+---@field OnAssociateWithClanResult? fun(data: AssociateWithClanResult_t)
+---@field OnComputeNewPlayerCompatibilityResult? fun(data: ComputeNewPlayerCompatibilityResult_t)
+local GameServer = {}
+
+---@param pszProduct string?
+function GameServer.SetProduct(pszProduct) end
+
+---@param pszGameDescription string?
+function GameServer.SetGameDescription(pszGameDescription) end
+
+---@param pszModDir string?
+function GameServer.SetModDir(pszModDir) end
+
+---@param bDedicated boolean
+function GameServer.SetDedicatedServer(bDedicated) end
+
+---@param pszToken string?
+function GameServer.LogOn(pszToken) end
+
+function GameServer.LogOnAnonymous() end
+
+function GameServer.LogOff() end
+
+---@return boolean
+function GameServer.BLoggedOn() end
+
+---@return boolean
+function GameServer.BSecure() end
+
+---@return uint64 -- CSteamID
+function GameServer.GetSteamID() end
+
+---@return boolean
+function GameServer.WasRestartRequested() end
+
+---@param cPlayersMax integer
+function GameServer.SetMaxPlayerCount(cPlayersMax) end
+
+---@param cBotplayers integer
+function GameServer.SetBotPlayerCount(cBotplayers) end
+
+---@param pszServerName string?
+function GameServer.SetServerName(pszServerName) end
+
+---@param pszMapName string?
+function GameServer.SetMapName(pszMapName) end
+
+---@param bPasswordProtected boolean
+function GameServer.SetPasswordProtected(bPasswordProtected) end
+
+---@param unSpectatorPort integer
+function GameServer.SetSpectatorPort(unSpectatorPort) end
+
+---@param pszSpectatorServerName string?
+function GameServer.SetSpectatorServerName(pszSpectatorServerName) end
+
+function GameServer.ClearAllKeyValues() end
+
+---@param pKey string?
+---@param pValue string?
+function GameServer.SetKeyValue(pKey, pValue) end
+
+---@param pchGameTags string?
+function GameServer.SetGameTags(pchGameTags) end
+
+---@param pchGameData string?
+function GameServer.SetGameData(pchGameData) end
+
+---@param pszRegion string?
+function GameServer.SetRegion(pszRegion) end
+
+---@param bActive boolean
+function GameServer.SetAdvertiseServerActive(bActive) end
+
+---@param cbMaxTicket integer? size of the buffer for pTicket; if nil then the buffer will be NULL
+---@param pSnid SteamNetworkingIdentity
+---@return integer -- HAuthTicket
+---@return string -- Value of: pTicket
+---@return integer -- Value of: pcbTicket
+function GameServer.GetAuthSessionTicket(cbMaxTicket, pSnid) end
+
+---@param pAuthTicket string?
+---@param cbAuthTicket integer size of the input array pAuthTicket
+---@param steamID uint64 -- CSteamID
+---@return integer -- EBeginAuthSessionResult
+function GameServer.BeginAuthSession(pAuthTicket, cbAuthTicket, steamID) end
+
+---@param steamID uint64 -- CSteamID
+function GameServer.EndAuthSession(steamID) end
+
+---@param hAuthTicket integer -- HAuthTicket
+function GameServer.CancelAuthTicket(hAuthTicket) end
+
+---@param steamID uint64 -- CSteamID
+---@param appID integer -- AppId_t
+---@return integer -- EUserHasLicenseForAppResult
+function GameServer.UserHasLicenseForApp(steamID, appID) end
+
+---@param steamIDUser uint64 -- CSteamID
+---@param steamIDGroup uint64 -- CSteamID
+---@return boolean
+function GameServer.RequestUserGroupStatus(steamIDUser, steamIDGroup) end
+
+function GameServer.GetGameplayStats() end
+
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function GameServer.GetServerReputation(callback) end
+
+---@return SteamIPAddress_t -- SteamIPAddress_t
+function GameServer.GetPublicIP() end
+
+---@param pData string?
+---@param cbData integer size of the input array pData
+---@param srcIP integer
+---@param srcPort integer
+---@return boolean
+function GameServer.HandleIncomingPacket(pData, cbData, srcIP, srcPort) end
+
+---@param cbMaxOut integer? size of the buffer for pOut; if nil then the buffer will be NULL
+---@return integer
+---@return string -- Value of: pOut
+---@return integer -- Value of: pNetAdr
+---@return integer -- Value of: pPort
+function GameServer.GetNextOutgoingPacket(cbMaxOut) end
+
+---@param steamIDClan uint64 -- CSteamID
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function GameServer.AssociateWithClan(steamIDClan, callback) end
+
+---@param steamIDNewPlayer uint64 -- CSteamID
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function GameServer.ComputeNewPlayerCompatibility(steamIDNewPlayer, callback) end
+
+---@return uint64 -- CSteamID
+function GameServer.CreateUnauthenticatedUserConnection() end
+
+---@param steamIDUser uint64 -- CSteamID
+---@param pchPlayerName string?
+---@param uScore integer
+---@return boolean
+function GameServer.BUpdateUserData(steamIDUser, pchPlayerName, uScore) end
+
+Steam.GameServer = GameServer

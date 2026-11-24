@@ -1,0 +1,163 @@
+---@class Steam.Utils
+---@field OnIPCountry? fun(data: IPCountry_t)
+---@field OnLowBatteryPower? fun(data: LowBatteryPower_t)
+---@field OnSteamAPICallCompleted? fun(data: SteamAPICallCompleted_t)
+---@field OnSteamShutdown? fun(data: SteamShutdown_t)
+---@field OnCheckFileSignature? fun(data: CheckFileSignature_t)
+---@field OnGamepadTextInputDismissed? fun(data: GamepadTextInputDismissed_t)
+---@field OnAppResumingFromSuspend? fun(data: AppResumingFromSuspend_t)
+---@field OnFloatingGamepadTextInputDismissed? fun(data: FloatingGamepadTextInputDismissed_t)
+---@field OnFilterTextDictionaryChanged? fun(data: FilterTextDictionaryChanged_t)
+local Utils = {}
+
+---@return integer
+function Utils.GetSecondsSinceAppActive() end
+
+---@return integer
+function Utils.GetSecondsSinceComputerActive() end
+
+---@return integer -- EUniverse
+function Utils.GetConnectedUniverse() end
+
+---@return integer
+function Utils.GetServerRealTime() end
+
+---@return string
+function Utils.GetIPCountry() end
+
+---@param iImage integer
+---@return boolean
+---@return integer -- Value of: pnWidth
+---@return integer -- Value of: pnHeight
+function Utils.GetImageSize(iImage) end
+
+---@param iImage integer
+---@param nDestBufferSize integer? size of the buffer for pubDest; if nil then the buffer will be NULL
+---@return boolean
+---@return string -- Value of: pubDest
+function Utils.GetImageRGBA(iImage, nDestBufferSize) end
+
+---@return integer
+function Utils.GetCurrentBatteryPower() end
+
+---@return integer
+function Utils.GetAppID() end
+
+---@param eNotificationPosition integer -- ENotificationPosition
+function Utils.SetOverlayNotificationPosition(eNotificationPosition) end
+
+---@param hSteamAPICall uint64
+---@return boolean
+---@return boolean -- Value of: pbFailed
+function Utils.IsAPICallCompleted(hSteamAPICall) end
+
+---@param hSteamAPICall uint64
+---@return integer -- ESteamAPICallFailure
+function Utils.GetAPICallFailureReason(hSteamAPICall) end
+
+---@param hSteamAPICall uint64
+---@param cubCallback integer? size of the buffer for pCallback; if nil then the buffer will be NULL
+---@param iCallbackExpected integer
+---@return boolean
+---@return string -- Value of: pCallback
+---@return boolean -- Value of: pbFailed
+function Utils.GetAPICallResult(hSteamAPICall, cubCallback, iCallbackExpected) end
+
+---@return integer
+function Utils.GetIPCCallCount() end
+
+---@return boolean
+function Utils.IsOverlayEnabled() end
+
+---@return boolean
+function Utils.BOverlayNeedsPresent() end
+
+---@param szFileName string?
+---@param callback fun(data: table?, io_fail: boolean)?
+---@return uint64 -- SteamAPICall_t handle; result delivered via the callback when Steam.RunCallbacks() is called
+function Utils.CheckFileSignature(szFileName, callback) end
+
+---@param eInputMode integer -- EGamepadTextInputMode
+---@param eLineInputMode integer -- EGamepadTextInputLineMode
+---@param pchDescription string?
+---@param unCharMax integer
+---@param pchExistingText string?
+---@return boolean
+function Utils.ShowGamepadTextInput(eInputMode, eLineInputMode, pchDescription, unCharMax, pchExistingText) end
+
+---@return integer
+function Utils.GetEnteredGamepadTextLength() end
+
+---@param cchText integer? size of the buffer for pchText; if nil then the buffer will be NULL
+---@return boolean
+---@return string -- Value of: pchText
+function Utils.GetEnteredGamepadTextInput(cchText) end
+
+---@return string
+function Utils.GetSteamUILanguage() end
+
+---@return boolean
+function Utils.IsSteamRunningInVR() end
+
+---@param nHorizontalInset integer
+---@param nVerticalInset integer
+function Utils.SetOverlayNotificationInset(nHorizontalInset, nVerticalInset) end
+
+---@return boolean
+function Utils.IsSteamInBigPictureMode() end
+
+function Utils.StartVRDashboard() end
+
+---@return boolean
+function Utils.IsVRHeadsetStreamingEnabled() end
+
+---@param bEnabled boolean
+function Utils.SetVRHeadsetStreamingEnabled(bEnabled) end
+
+---@return boolean
+function Utils.IsSteamChinaLauncher() end
+
+---@param unFilterOptions integer
+---@return boolean
+function Utils.InitFilterText(unFilterOptions) end
+
+---@param eContext integer -- ETextFilteringContext
+---@param sourceSteamID uint64 -- CSteamID
+---@param pchInputMessage string?
+---@param nByteSizeOutFilteredText integer? size of the buffer for pchOutFilteredText; if nil then the buffer will be NULL
+---@return integer
+---@return string -- Value of: pchOutFilteredText
+function Utils.FilterText(eContext, sourceSteamID, pchInputMessage, nByteSizeOutFilteredText) end
+
+---@param eProtocol integer -- ESteamIPv6ConnectivityProtocol
+---@return integer -- ESteamIPv6ConnectivityState
+function Utils.GetIPv6ConnectivityState(eProtocol) end
+
+---@param eKeyboardMode integer -- EFloatingGamepadTextInputMode
+---@param nTextFieldXPosition integer
+---@param nTextFieldYPosition integer
+---@param nTextFieldWidth integer
+---@param nTextFieldHeight integer
+---@return boolean
+function Utils.ShowFloatingGamepadTextInput(eKeyboardMode, nTextFieldXPosition, nTextFieldYPosition, nTextFieldWidth, nTextFieldHeight) end
+
+---@param bLauncherMode boolean
+function Utils.SetGameLauncherMode(bLauncherMode) end
+
+---@return boolean
+function Utils.DismissFloatingGamepadTextInput() end
+
+---@return boolean
+function Utils.DismissGamepadTextInput() end
+
+---@return integer -- ESteamHardwareType
+function Utils.IsRunningOnSteamHardware() end
+
+---@return integer -- ESteamHardwareDefaultConfig
+function Utils.GetSteamHardwareDefaultConfig() end
+
+---@return boolean
+function Utils.IsRunningUnderProton() end
+
+Steam.Utils = Utils
+Steam.GameServerUtils = Utils

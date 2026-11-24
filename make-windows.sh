@@ -86,27 +86,21 @@ then
 	fi
 fi
 
-if [ ${ARCH_BITS} = 64 ]
-then
-	STEAM_DLL=steam_api64.dll
-else
-	STEAM_DLL=steam_api.dll
-fi
-LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v6.0.0/win${ARCH_BITS}_luasteam.dll
-
 if [ ! -z "$STEAM" ]
 then
+	if [ ${ARCH_BITS} = 64 ]
+	then
+		STEAM_DLL=$(./get-steamworks.sh win64)
+	else
+		STEAM_DLL=$(./get-steamworks.sh)
+	fi
+	LUASTEAM_DLL=https://github.com/uspgamedev/luasteam/releases/download/v6.0.0/win${ARCH_BITS}_luasteam.dll
 	OUT_DIR="$OUT_DIR-steam"
-	if [ -e $STEAM_DLL ]
+	if [ ! -f luasteam.dll ]
 	then
-		curl -Lk -o game-win/luasteam.dll $LUASTEAM_DLL
-		cp $STEAM_DLL game-win
+		curl -Lk -o luasteam.dll $LUASTEAM_DLL
 	fi
-
-	if [ -e steam_appid.txt ]
-	then
-		cp steam_appid.txt game-win
-	fi
+	cp $STEAM_DLL luasteam.dll steam_appid.txt game-win
 fi
 
 if [ -e README.md ]

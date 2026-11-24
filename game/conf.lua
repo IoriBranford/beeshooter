@@ -1,5 +1,5 @@
 function love.conf(t)
-    t.identity = "Honey Guardian"                    -- The name of the save directory (string)
+    t.identity = "Honey Soldier"                    -- The name of the save directory (string)
     t.appendidentity = false            -- Search files in source directory before save directory (boolean)
     t.version = "11.4"                  -- The LÖVE version this game was made for (string)
     t.console = false                   -- Attach a console (boolean, Windows only)

@@ -5,7 +5,8 @@
         "*.c": "c"
     },
     "Lua.workspace.library": [
-        "${3rd}/love2d/library"
+        "${3rd}/love2d/library",
+        "${workspaceRoot}/luals/luasteam-v6.0.0"
     ],
     "Lua.workspace.checkThirdParty": false,
     "Lua.runtime.path": [

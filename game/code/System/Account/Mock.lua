@@ -245,4 +245,6 @@ function MockAccount.downloadScores(leaderboard, mode, i, j, callback)
     end
 end
 
+function MockAccount.achieve(achievement) end
+
 return MockAccount

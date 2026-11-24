@@ -18,7 +18,8 @@ fi
 git tag $VERSION
 
 export GAME_TYPE=""
-./make-game.sh && ./make-windows.sh && ./make-linux.sh
+./make-game.sh && ./make-windows.sh
+#  && ./make-linux.sh
 
 steamcmd $* +login "$ACCOUNT" \
 	+run_app_build "$PWD/steam/app_build_full.vdf" \
