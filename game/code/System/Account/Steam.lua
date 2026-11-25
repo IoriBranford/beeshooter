@@ -33,14 +33,14 @@ local function findLeaderboardAnd(name, operation, ...)
 	if leaderboard then
 		operation(leaderboard, ...)
 	else
-		local a,b,c,d,e,f,g,h = ...
+		local args = {...}
 		steam.UserStats.FindLeaderboard(name, function(data, err)
 			if err or 0 == data.m_bLeaderboardFound then
 				print("No leaderboard", name)
 			else
 				leaderboard = data.m_hSteamLeaderboard
                 leaderboards[name] = leaderboard
-				operation(leaderboard, a,b,c,d,e,f,g,h)
+				operation(leaderboard, table.unpack(args))
 			end
 		end)
 	end
