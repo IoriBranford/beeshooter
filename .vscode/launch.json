@@ -12,6 +12,9 @@
             "program": {
                 "command": "love"
             },
+            "linux": {
+                "env": {"LD_LIBRARY_PATH": "${workspaceFolder}:sdk/redistributable_bin/linux64"}
+            },
             "args": ["${workspaceFolder}/game"]
         },
         {
@@ -22,7 +25,10 @@
             "program": {
                 "command": "love"
             },
-            "args": ["${workspaceFolder}/game", "--debug", "--mockaccount"]
+            "linux": {
+                "env": {"LD_LIBRARY_PATH": "${workspaceFolder}:sdk/redistributable_bin/linux64"}
+            },
+            "args": ["${workspaceFolder}/game", "--debug"]
         },
         {
             "name": "Debug Android",
