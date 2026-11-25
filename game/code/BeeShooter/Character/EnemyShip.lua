@@ -183,7 +183,12 @@ function EnemyShip:notifyHiddenBonus()
         bonusletters[i] = self.name
     end
     local points = self.defeatpoints or 0
-    local message = string.format("SECRET ITEM!\n\n%s  %5d", table.concat(bonusletters, ""), points)
+    local letterstr = table.concat(bonusletters, "")
+    if letterstr == "BONUS" then
+        local Account = require("System.Account")
+        print("Spelling Bee", Account.achieve("Spelling_Bee"))
+    end
+    local message = string.format("SECRET ITEM!\n\n%s  %5d", letterstr, points)
     self.player:notifySecretBonus(points, message)
 end
 
