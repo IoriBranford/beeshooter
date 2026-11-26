@@ -256,6 +256,11 @@ function PlayerShip:win()
     local timeleft = Stage.getTimeLeft()
     tallyBonuses(self, timeleft)
     HighScores.put(self.score)
+    Stage.Stats:print()
+    if Stage.Stats.flyerskilled >= Stage.Stats.flyersspawned then
+        local Account = require "System.Account"
+        print("Queen_of_the_Skies", Account.achieve("Queen_of_the_Skies"))
+    end
     GamePhase.openGameOverMenu()
 end
 
