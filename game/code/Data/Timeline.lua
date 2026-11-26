@@ -1,3 +1,4 @@
+---@class Timeline
 local Timeline = {}
 Timeline.__index = Timeline
 
