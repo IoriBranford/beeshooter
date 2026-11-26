@@ -5,7 +5,7 @@
     "extensionsPath": "extensions",
     "folders": [
         ".",
-        "../../steam"
+        "../../steam/achievements"
     ],
     "properties": [
     ],
