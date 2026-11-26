@@ -11,6 +11,7 @@ local Trigger      = require "BeeShooter.Trigger"
 local CharacterGroup        = require "BeeShooter.Character.Group"
 local Z                     = require "BeeShooter.Z"
 local HC                    = require "HC"
+local Stats                 = require "Data.Stats"
 local PlayerShip
 
 local t_sort = table.sort
@@ -20,13 +21,14 @@ local s_format = string.format
 
 local Stage = {
     CameraWidth = 256,
-    CameraHeight = 224
+    CameraHeight = 224,
+    Stats = nil ---@type Stats
 }
 
 local scene ---@type Scene
 local camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 local stage
-local player ---@type Character
+local player ---@type PlayerShip
 local teams  ---@type table
 local everyone ---@type table
 local currentflyers
@@ -109,6 +111,10 @@ function Stage.spawnNCharacters(stagespawn, n)
 end
 
 function Stage.init(startpoint)
+    Stage.Stats = Stats {
+        flyersspawned = 0,
+        flyerskilled = 0
+    }
     spriteshader = love.graphics.newShader("shaders/sprite.glsl")
     PlayerShip   = require "BeeShooter.Character.PlayerShip"
     scene = Scene.new()
@@ -237,6 +243,10 @@ function Stage.addCharacter(object)
         gametimerstate = "running"
     end
     everyone[#everyone+1] = character
+    if character.isflyer then
+        Stage.Stats:inc("flyersspawned")
+        Stage.Stats:print("flyersspawned")
+    end
     return character
 end
 local addCharacter = Stage.addCharacter
@@ -256,6 +266,7 @@ function Stage.quit()
     everyone = nil
     stagespawntimeline = nil
     currentflyers = nil
+    Stage.Stats = nil
     HC.removeAll()
 end
 

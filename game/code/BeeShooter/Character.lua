@@ -31,6 +31,7 @@ local co_status = coroutine.status
 ---@field shoottimer number?
 ---@field shootinterval number?
 ---@field shootcount number?
+---@field isflyer boolean
 local Character = class()
 
 local DefaultHitbox = {
@@ -217,6 +218,11 @@ function Character:defeat()
         return
     end
     self.defeated = true
+    if self.isflyer then
+        local Stage = require "BeeShooter.Stage"
+        Stage.Stats:inc("flyerskilled")
+        Stage.Stats:print("flyerskilled")
+    end
     self:setNextCoroutines(self.scriptdefeat or self.defaultDefeat)
 end
 
