@@ -135,8 +135,14 @@ function SteamAccount.countScores(leaderboardname)
     return leaderboard and steam.UserStats.GetLeaderboardEntryCount(leaderboard) or 0
 end
 
-function SteamAccount.achieve(achievement)
-	return steam.UserStats.SetAchievement(achievement)
+function SteamAccount.achieve(...)
+	local results = {}
+	for i = 1, select("#", ...) do
+		local achievement = select(i, ...)
+		results[achievement] = steam.UserStats.SetAchievement(achievement)
+	end
+	local stored = steam.UserStats.StoreStats()
+	return stored, results
 end
 
 return SteamAccount
