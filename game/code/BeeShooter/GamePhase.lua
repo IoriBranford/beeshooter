@@ -19,12 +19,12 @@ function GamePhase.loadphase(startpoint)
     local isAsset = Assets.isAsset
     local getAsset = Assets.get
     paused = false
-    Database.load("data/db_ships.csv")
-    Database.load("data/db_bullets.csv")
-    Database.load("data/db_items.csv")
-    Database.load("data/db_statics.csv")
-    Database.load("data/db_playerweapons.csv")
-    Database.load("data/db_playersounds.csv")
+    Database.load("data/db-ships.csv")
+    Database.load("data/db-bullets.csv")
+    Database.load("data/db-items.csv")
+    Database.load("data/db-statics.csv")
+    Database.load("data/db-playerweapons.csv")
+    Database.load("data/db-playersounds.csv")
     Database.loadMapObjects("data/prefabs_Jenny.lua")
     Database.loadMapObjects("data/prefabs_caravan.lua")
     Database.forEach(function(_, properties)
