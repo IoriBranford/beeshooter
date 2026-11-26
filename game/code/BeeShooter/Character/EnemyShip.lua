@@ -184,7 +184,7 @@ function EnemyShip:notifyHiddenBonus()
     end
     local points = self.defeatpoints or 0
     local letterstr = table.concat(bonusletters, "")
-    if letterstr == "BONUS" then
+    if letterstr == "HONEY" then
         local Account = require("System.Account")
         print("Spelling Bee", Account.achieve("Spelling_Bee"))
     end
