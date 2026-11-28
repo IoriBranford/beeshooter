@@ -272,7 +272,11 @@ function HighScores.uploadBest()
 		[Detail.Version] = score.version
 	}
 	Account = require("System.Account")
-	Account.uploadScore(leaderboardname, score.score, details)
+	Account.uploadScore(leaderboardname, score.score, details, function(result)
+		if result.success then
+			print("Buzz_In", Account.achieve("Buzz_In"))
+		end
+	end)
 	return true
 end
 
