@@ -50,6 +50,7 @@ function PlayerShip:init()
     self.speed = self.slowspeed
     self.weapon = nil
     self.nextlifeindex = 1
+    self.tookdamage = nil
     return self
 end
 
@@ -195,6 +196,7 @@ function PlayerShip:timeout()
 end
 
 function PlayerShip:defaultDefeat()
+    self.tookdamage = true
     self.power = self.power - 1
     if self.power > 0 and self.health > self.maxhealth - PlayerShip.InstantKillDamage then
         self.defeated = false
@@ -257,6 +259,10 @@ function PlayerShip:win()
     tallyBonuses(self, timeleft)
     HighScores.put(self.score)
     Stage.Stats:print()
+    if not self.tookdamage then
+        local Account = require "System.Account"
+        print("No_Damage", Account.achieve("No_Damage"))
+    end
     if Stage.Stats.flyerskilled >= Stage.Stats.flyersspawned then
         local Account = require "System.Account"
         print("Queen_of_the_Skies", Account.achieve("Queen_of_the_Skies"))
