@@ -253,6 +253,7 @@ local function fixedupdateDamage(self)
     local hitdamageself = self.hitdamageself or 0
     local myteam = self.team
     local myenemy = self.enemyteams
+    local stung
     if myteam and myenemy and self.collidable and self:isSpriteOnScreen() then
         Body.respondToCollisions(self, function(_, enemy)
             if not enemy.collidable then
@@ -265,7 +266,12 @@ local function fixedupdateDamage(self)
                 return
             end
             damage = damage + enemy.hitdamageenemy + hitdamageself
+            stung = stung or enemy.issting and enemy.hitdamageenemy > 0
         end)
+    end
+    if stung then
+        local Account = require "System.Account"
+        print("Butthurt", Account.achieve("Butthurt"))
     end
     self.health = self.health - damage
     if self.health < 1 then
