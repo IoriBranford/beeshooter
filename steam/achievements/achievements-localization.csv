@@ -1,0 +1,11 @@
+api_name (required; must match an api_name from the definitions CSV),field (name or description),english
+Spelling_Bee,name,Spelling Bee
+Spelling_Bee,description,Break all the secret letters in one run
+Queen_of_the_Skies,name,Queen of the Skies
+Queen_of_the_Skies,description,Kill all winged enemies in one run
+Just_In_Time,name,Just In Time
+Just_In_Time,description,Kill the midboss or boss with 1 second or less on the clock
+No_Damage,name,No Damage
+No_Damage,description,Win without losing a powerup or a life
+Buzz_In,name,Buzz In
+Buzz_In,description,Put a score on the Steam leaderboard for the first time

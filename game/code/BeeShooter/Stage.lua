@@ -11,6 +11,7 @@ local Trigger      = require "BeeShooter.Trigger"
 local CharacterGroup        = require "BeeShooter.Character.Group"
 local Z                     = require "BeeShooter.Z"
 local HC                    = require "HC"
+local Stats                 = require "Data.Stats"
 local PlayerShip
 
 local t_sort = table.sort
@@ -20,16 +21,16 @@ local s_format = string.format
 
 local Stage = {
     CameraWidth = 256,
-    CameraHeight = 224
+    CameraHeight = 224,
+    Stats = nil ---@type Stats
 }
 
 local scene ---@type Scene
 local camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 local stage
-local player ---@type Character
+local player ---@type PlayerShip
 local teams  ---@type table
 local everyone ---@type table
-local flyingspawntimeline ---@type Timeline
 local currentflyers
 local stagespawntimeline ---@type Timeline
 local clearred, cleargreen, clearblue = 0, 0, 0
@@ -83,11 +84,6 @@ local function readMapObjectLayer(objectlayer)
     return objectlayer
 end
 
-local function doFlyingSpawn(flyingspawn)
-    currentflyers = flyingspawn.characters
-    Stage.addCharacters(flyingspawn.characters)
-end
-
 function Stage.doStageSpawn(stagespawn)
     local characters = stagespawn.characters
     if not characters then
@@ -115,13 +111,16 @@ function Stage.spawnNCharacters(stagespawn, n)
 end
 
 function Stage.init(startpoint)
+    Stage.Stats = Stats {
+        flyersspawned = 0,
+        flyerskilled = 0
+    }
     spriteshader = love.graphics.newShader("shaders/sprite.glsl")
     PlayerShip   = require "BeeShooter.Character.PlayerShip"
     scene = Scene.new()
     camera = {x = 0, y = 0, width = Stage.CameraWidth, height = Stage.CameraHeight}
 
     stagespawntimeline = Timeline.new()
-    flyingspawntimeline = Timeline.new()
 
     local map = Tiled.load("data/stage_caravan.lua")
     local backgroundcolor = map.backgroundcolor
@@ -193,14 +192,6 @@ function Stage.init(startpoint)
         stage.y = stagey
     end
 
-    local flyingspawns = map.layers.flyingspawns
-    if flyingspawns then
-        for i, flyingspawn in ipairs(flyingspawns) do
-            readMapObjectLayer(flyingspawn)
-            flyingspawntimeline:addEvent(i, doFlyingSpawn, flyingspawn)
-        end
-    end
-
     everyone = {}
     teams = {
         PlayerShip = {},
@@ -252,6 +243,10 @@ function Stage.addCharacter(object)
         gametimerstate = "running"
     end
     everyone[#everyone+1] = character
+    if character.isflyer then
+        Stage.Stats:inc("flyersspawned")
+        Stage.Stats:print("flyersspawned")
+    end
     return character
 end
 local addCharacter = Stage.addCharacter
@@ -270,8 +265,8 @@ function Stage.quit()
     teams = nil
     everyone = nil
     stagespawntimeline = nil
-    flyingspawntimeline = nil
     currentflyers = nil
+    Stage.Stats = nil
     HC.removeAll()
 end
 
@@ -328,9 +323,6 @@ function Stage.fixedupdate()
         prune(currentflyers)
     end
     stagespawntimeline:advance(stagevely)
-    if not currentflyers or #currentflyers <= 0 then
-        flyingspawntimeline:advance(1)
-    end
 
     if gametimerstate == "running" and gametimer > 0 then
         gametimer = gametimer - 1

@@ -32,6 +32,8 @@ function NullAccount.downloadScores(leaderboard, mode, i, j, callback)
 	return false, "No online score service available."
 end
 
-function NullAccount.achieve(achievement) end
+function NullAccount.achieve(achievement)
+    return false, "No achievements available"
+end
 
 return NullAccount

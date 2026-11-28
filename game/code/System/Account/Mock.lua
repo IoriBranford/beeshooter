@@ -245,6 +245,9 @@ function MockAccount.downloadScores(leaderboard, mode, i, j, callback)
     end
 end
 
-function MockAccount.achieve(achievement) end
+function MockAccount.achieve(achievement)
+    local err = MockAccount.mockerrors["achieve"]
+    return not err, err
+end
 
 return MockAccount

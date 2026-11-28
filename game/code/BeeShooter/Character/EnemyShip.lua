@@ -183,7 +183,12 @@ function EnemyShip:notifyHiddenBonus()
         bonusletters[i] = self.name
     end
     local points = self.defeatpoints or 0
-    local message = string.format("SECRET ITEM!\n\n%s  %5d", table.concat(bonusletters, ""), points)
+    local letterstr = table.concat(bonusletters, "")
+    if letterstr == "HONEY" then
+        local Account = require("System.Account")
+        print("Spelling Bee", Account.achieve("Spelling_Bee"))
+    end
+    local message = string.format("SECRET ITEM!\n\n%s  %5d", letterstr, points)
     self.player:notifySecretBonus(points, message)
 end
 
@@ -619,6 +624,10 @@ local function dropDyingEffects(self)
 end
 
 function EnemyShip:defeatMidBoss()
+    if Stage.getTimeLeft() <= 60 then
+        local Account = require "System.Account"
+        print("Just_In_Time", Account.achieve("Just_In_Time"))
+    end
     self.player:giveInvincibleTime(240)
     Stage.pauseTimerUntilNextEnemy()
     Stage.addToTimer(60*60)
@@ -637,6 +646,10 @@ end
 EnemyShip.defeatAlienMind = EnemyShip.defeatMidBoss
 
 function EnemyShip:defeatBoss()
+    if Stage.getTimeLeft() <= 60 then
+        local Account = require "System.Account"
+        print("Just_In_Time", Account.achieve("Just_In_Time"))
+    end
     self.player:giveInvincibleTime(240)
     Stage.stop()
     self:giveDefeatPoints()

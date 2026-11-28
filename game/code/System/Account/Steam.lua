@@ -33,14 +33,14 @@ local function findLeaderboardAnd(name, operation, ...)
 	if leaderboard then
 		operation(leaderboard, ...)
 	else
-		local args = {...}
+		local args = {n = select("#", ...), ...}
 		steam.UserStats.FindLeaderboard(name, function(data, err)
 			if err or 0 == data.m_bLeaderboardFound then
 				print("No leaderboard", name)
 			else
 				leaderboard = data.m_hSteamLeaderboard
                 leaderboards[name] = leaderboard
-				operation(leaderboard, table.unpack(args))
+				operation(leaderboard, table.unpack(args, 1, args.n))
 			end
 		end)
 	end
@@ -135,8 +135,14 @@ function SteamAccount.countScores(leaderboardname)
     return leaderboard and steam.UserStats.GetLeaderboardEntryCount(leaderboard) or 0
 end
 
-function SteamAccount.achieve(achievement)
-	return steam.UserStats.SetAchievement(achievement)
+function SteamAccount.achieve(...)
+	local results = {}
+	for i = 1, select("#", ...) do
+		local achievement = select(i, ...)
+		results[achievement] = steam.UserStats.SetAchievement(achievement)
+	end
+	local stored = steam.UserStats.StoreStats()
+	return stored, results
 end
 
 return SteamAccount
