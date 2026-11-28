@@ -47,6 +47,7 @@ zip/
 *-x86_64*/
 Honey Soldier*/
 sdk/
+tmp/
 
 node_modules/
 love.js*/
